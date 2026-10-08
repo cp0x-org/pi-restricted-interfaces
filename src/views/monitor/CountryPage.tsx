@@ -72,7 +72,7 @@ export default function CountryPage() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Typography variant="h3" gutterBottom>
+      <Typography variant="h3" component="h1" gutterBottom>
         What works from my country
       </Typography>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 3, maxWidth: 900 }}>
@@ -197,7 +197,7 @@ export default function CountryPage() {
               The suffix after the dot is the basis of the verdict: observed (live probe from this country through a verified proxy),
               confirmed (code, live check or docs), reported (press or users), ToS (Terms of Service only) or inferred (nothing found;
               closed code may hide more). Rules are described on the{' '}
-              <Link component={RouterLink} to="/methodology" underline="hover">
+              <Link component={RouterLink} to="/methodology" underline="always">
                 methodology
               </Link>{' '}
               page.

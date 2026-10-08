@@ -23,7 +23,7 @@ import {
   Status,
   TOS_US,
   VPN_STATUS
-} from 'types/restrictions';
+} from '../types/restrictions';
 
 // ---------------------------------------------------------------------------- dataset validation
 
@@ -91,6 +91,7 @@ function entry(raw: unknown, index: number): InterfaceEntry {
   return {
     id,
     name: str(raw.name, w('name')),
+    description: typeof raw.description === 'string' ? raw.description : '',
     category: str(raw.category, w('category')),
     category_group: oneOf(CATEGORY_GROUPS, raw.category_group, w('category_group')),
     chains: str(raw.chains, w('chains')),

@@ -116,6 +116,8 @@ export interface Observation {
 export interface InterfaceEntry {
   id: string;
   name: string;
+  /** One paragraph about what the protocol is (shown on the interface page, used for SEO). */
+  description: string;
   category: string;
   category_group: CategoryGroup;
   chains: string;

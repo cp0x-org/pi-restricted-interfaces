@@ -23,7 +23,7 @@ CONF_OK = ("high", "medium", "low")
 GROUPS = ("dex", "aggregator", "perps", "lending", "staking", "yield", "bridge", "prediction", "wallet", "other")
 TAGS = ("evm", "solana", "bitcoin", "sui", "starknet", "cosmos", "hyperliquid", "other")
 COMPUTED = ("level", "fork_ready", "category_group", "chain_tags")
-REQUIRED = ("id", "name", "category", "chains", "url", "frontend_repo", "repo_state", "repo_status", "repo_last_commit",
+REQUIRED = ("id", "name", "description", "category", "chains", "url", "frontend_repo", "repo_state", "repo_status", "repo_last_commit",
             "networks", "geo_site", "geo_feature", "vpn", "screening", "asset_filter", "tos", "fork_notes", "live", "geo_endpoints",
             "evidence", "confidence", "alternatives")
 OBS_STATES = ("ok", "blocked", "close_only", "feature_limited", "challenge", "error", "unknown")
@@ -180,6 +180,8 @@ def validate(data):
             raise Invalid(f"duplicate id {iid}")
         ids.add(iid)
         w = iid + "."
+        if not isinstance(i["description"], str) or not 80 <= len(i["description"]) <= 600:
+            raise Invalid(f"{iid}: description must be one paragraph of 80-600 characters")
         if not re.match(r"^https://\S+$", i["url"]):
             raise Invalid(f"{iid}: url must be a single https URL without spaces")
         check_enum(w + "repo_state", i["repo_state"], REPO_OK)
@@ -357,7 +359,7 @@ def latest_observations(obs):
 
 
 # ----------------------------------------------------------------------------- csv / ui
-CSV_COLS = ["id", "name", "category", "category_group", "chains", "chain_tags", "url", "frontend_repo", "repo_state", "repo_status",
+CSV_COLS = ["id", "name", "description", "category", "category_group", "chains", "chain_tags", "url", "frontend_repo", "repo_state", "repo_status",
             "repo_last_commit", "level", "geo_site", "geo_site_countries", "geo_site_close_only", "geo_site_method",
             "geo_feature", "geo_feature_countries", "geo_feature_scope", "vpn", "vpn_note", "screening", "screening_provider",
             "screening_layer", "screening_fail", "screening_fail_note", "asset_filter", "tos_url", "tos_updated", "tos_us",
@@ -366,7 +368,7 @@ CSV_COLS = ["id", "name", "category", "category_group", "chains", "chain_tags", 
 
 
 def csv_row(i):
-    return [i["id"], i["name"], i["category"], category_group(i), i["chains"], " ".join(chain_tags(i)), i["url"],
+    return [i["id"], i["name"], i["description"], i["category"], category_group(i), i["chains"], " ".join(chain_tags(i)), i["url"],
             i["frontend_repo"] or "", i["repo_state"], i["repo_status"], i["repo_last_commit"] or "", level(i),
             i["geo_site"]["s"], " ".join(i["geo_site"]["countries"]), " ".join(i["geo_site"]["close_only"]), i["geo_site"]["method"],
             i["geo_feature"]["s"], " ".join(i["geo_feature"]["countries"]), i["geo_feature"]["scope"],

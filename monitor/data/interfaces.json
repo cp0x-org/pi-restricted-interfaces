@@ -15,6 +15,7 @@
     {
       "id": "uniswap",
       "name": "Uniswap",
+      "description": "Uniswap is a decentralized exchange protocol where tokens are swapped against automated market maker (AMM) liquidity pools instead of an order book. Uniswap Labs runs the official web app, which routes trades across Uniswap v2, v3 and v4 pools on Ethereum and many layer-2 and EVM networks; liquidity providers earn swap fees and the protocol is governed by UNI holders.",
       "category": "DEX",
       "chains": "EVM, Solana",
       "networks": [
@@ -93,6 +94,7 @@
     {
       "id": "sushiswap",
       "name": "SushiSwap",
+      "description": "SushiSwap is a community-run decentralized exchange that started in 2020 as a fork of Uniswap v2. Today it combines classic and concentrated-liquidity AMM pools with a swap aggregator and cross-chain swaps on dozens of EVM networks, plus perpetuals routed to Hyperliquid; SUSHI is its governance token.",
       "category": "DEX",
       "chains": "EVM (+ perps via Hyperliquid)",
       "networks": [
@@ -203,6 +205,7 @@
     {
       "id": "pancakeswap",
       "name": "PancakeSwap",
+      "description": "PancakeSwap is the largest decentralized exchange on BNB Chain and also runs on Ethereum, Arbitrum, Base and other networks. Besides AMM swaps with v2 and v3 concentrated-liquidity pools, it offers yield farms, perpetuals and prediction games, with CAKE as its token.",
       "category": "DEX",
       "chains": "BNB, EVM, Solana",
       "networks": [
@@ -277,6 +280,7 @@
     {
       "id": "curve",
       "name": "Curve",
+      "description": "Curve Finance is an automated market maker built for low-slippage trading between assets that should trade near the same price, such as stablecoins and liquid-staking tokens. It also issues the crvUSD stablecoin and runs Llamalend lending markets; CRV holders lock tokens as veCRV to vote on how pool rewards are distributed.",
       "category": "DEX",
       "chains": "EVM",
       "networks": [
@@ -366,6 +370,7 @@
     {
       "id": "balancer",
       "name": "Balancer",
+      "description": "Balancer is an AMM protocol whose pools can hold several tokens in custom weights, working as self-balancing portfolios and as liquidity infrastructure for other protocols. Balancer v3 adds programmable pool hooks, and governance runs through BAL locked as veBAL.",
       "category": "DEX",
       "chains": "EVM",
       "networks": [
@@ -435,6 +440,7 @@
     {
       "id": "cowswap",
       "name": "CoW Swap",
+      "description": "CoW Swap is the trading interface of CoW Protocol, where users sign swap intents and independent solvers compete in batch auctions to settle them. Opposite orders can be matched directly as a coincidence of wants or routed through on-chain liquidity, which protects traders from MEV and means failed orders cost no gas.",
       "category": "DEX / intents",
       "chains": "EVM",
       "networks": [
@@ -529,6 +535,7 @@
     {
       "id": "1inch",
       "name": "1inch",
+      "description": "1inch is a DEX aggregator that splits each swap across many liquidity sources to get a better price, with an intent-based Fusion mode in which resolvers fill orders without the user paying gas. It also offers limit orders, cross-chain swaps and its own wallet; 1INCH is the governance token.",
       "category": "DEX aggregator",
       "chains": "EVM, Solana",
       "networks": [
@@ -598,6 +605,7 @@
     {
       "id": "kyberswap",
       "name": "KyberSwap",
+      "description": "KyberSwap is the DEX aggregator and liquidity platform of Kyber Network. It routes swaps across many decentralized exchanges on more than a dozen EVM networks and adds limit orders and zap tools for opening and managing liquidity positions.",
       "category": "DEX aggregator",
       "chains": "EVM",
       "networks": [
@@ -683,6 +691,7 @@
     {
       "id": "quickswap",
       "name": "QuickSwap",
+      "description": "QuickSwap is a decentralized exchange that began as a Uniswap v2 fork on Polygon and now runs concentrated-liquidity pools, farming and perpetuals on Polygon and several other EVM networks. QUICK is its governance token.",
       "category": "DEX",
       "chains": "Polygon, EVM",
       "networks": [
@@ -773,6 +782,7 @@
     {
       "id": "aerodrome",
       "name": "Aerodrome",
+      "description": "Aerodrome is the main AMM and liquidity hub on Base. It follows the ve(3,3) model inherited from Velodrome: AERO emissions go to the pools that veAERO holders vote for, and protocols pay incentives to voters to attract liquidity to their tokens.",
       "category": "DEX",
       "chains": "Base",
       "networks": [
@@ -866,6 +876,7 @@
     {
       "id": "velodrome",
       "name": "Velodrome",
+      "description": "Velodrome is the central AMM and liquidity marketplace of Optimism and other OP Superchain networks. Using the ve(3,3) model, veVELO holders vote where VELO emissions go and collect the fees and incentives of the pools they back.",
       "category": "DEX",
       "chains": "Optimism, Superchain",
       "networks": [
@@ -965,6 +976,7 @@
     {
       "id": "ambient",
       "name": "Ambient Finance",
+      "description": "Ambient Finance, formerly CrocSwap, is a decentralized exchange that keeps every pool inside a single smart contract and combines concentrated and full-range (ambient) liquidity in the same pool. It is deployed on Ethereum, Scroll, Blast and other EVM networks.",
       "category": "DEX",
       "chains": "EVM (Scroll, Blast, Ethereum...)",
       "networks": [
@@ -1048,6 +1060,7 @@
     {
       "id": "velora",
       "name": "Velora (ex-ParaSwap)",
+      "description": "Velora, formerly ParaSwap, is a DEX aggregator and intent-based trading protocol. It routes swaps across many liquidity sources on Ethereum and major EVM networks, and its Delta mode lets users sign orders that agents execute on their behalf.",
       "category": "DEX aggregator",
       "chains": "EVM",
       "networks": [
@@ -1122,6 +1135,7 @@
     {
       "id": "matcha",
       "name": "Matcha (0x)",
+      "description": "Matcha is a DEX aggregator built by 0x on top of the 0x Swap API. It finds prices across many liquidity sources on EVM networks and Solana and supports limit orders and gasless swaps.",
       "category": "DEX aggregator",
       "chains": "EVM, Solana",
       "networks": [
@@ -1191,6 +1205,7 @@
     {
       "id": "jumper",
       "name": "Jumper (LI.FI)",
+      "description": "Jumper is a cross-chain swap and bridge aggregator powered by LI.FI. It compares bridges and DEXs to move and swap assets between EVM chains, Solana, Bitcoin and Sui in a single flow.",
       "category": "Bridge / aggregator",
       "chains": "EVM, Solana, BTC, Sui",
       "networks": [
@@ -1277,6 +1292,7 @@
     {
       "id": "raydium",
       "name": "Raydium",
+      "description": "Raydium is an automated market maker on Solana with standard and concentrated-liquidity pools, a token launchpad, and perpetual futures provided through Orderly Network.",
       "category": "DEX",
       "chains": "Solana",
       "networks": [],
@@ -1352,6 +1368,7 @@
     {
       "id": "jupiter",
       "name": "Jupiter",
+      "description": "Jupiter is the main swap aggregator on Solana, routing trades across Solana DEXs, and also offers perpetuals, limit and DCA orders and a launchpad; JUP is its governance token.",
       "category": "DEX aggregator",
       "chains": "Solana",
       "networks": [],
@@ -1425,6 +1442,7 @@
     {
       "id": "orca",
       "name": "Orca",
+      "description": "Orca is a concentrated-liquidity decentralized exchange on Solana, built around its Whirlpools pools and focused on simple swaps and liquidity provision.",
       "category": "DEX",
       "chains": "Solana",
       "networks": [],
@@ -1537,6 +1555,7 @@
     {
       "id": "meteora",
       "name": "Meteora",
+      "description": "Meteora is a Solana liquidity protocol with dynamic liquidity market maker (DLMM) pools, dynamic AMM pools and yield vaults, widely used for new token launches.",
       "category": "DEX",
       "chains": "Solana",
       "networks": [],
@@ -1611,6 +1630,7 @@
     {
       "id": "dydx",
       "name": "dYdX",
+      "description": "dYdX is a decentralized perpetual futures exchange that runs on its own Cosmos-based blockchain, dYdX Chain, with an order book operated by the chain's validators; the DYDX token secures and governs the network.",
       "category": "Perps",
       "chains": "dYdX Chain",
       "networks": [],
@@ -1706,6 +1726,7 @@
     {
       "id": "gmx",
       "name": "GMX",
+      "description": "GMX is a decentralized perpetual and spot exchange on Arbitrum and Avalanche. Traders open leveraged positions against liquidity pools (GM pools) priced by oracles rather than against an order book, and liquidity providers earn trading fees.",
       "category": "Perps",
       "chains": "Arbitrum, Avalanche, Botanix",
       "networks": [
@@ -1763,6 +1784,7 @@
     {
       "id": "hyperliquid",
       "name": "Hyperliquid",
+      "description": "Hyperliquid is a layer-1 blockchain with a fully on-chain order book for perpetual futures and spot trading, plus the HyperEVM smart-contract environment; HYPE is its native token.",
       "category": "Perps",
       "chains": "Hyperliquid L1",
       "networks": [],
@@ -1823,6 +1845,7 @@
     {
       "id": "drift",
       "name": "Drift (-> Velocity)",
+      "description": "Drift is a perpetual futures, spot and lending exchange on Solana that combines an order book with AMM liquidity. According to this snapshot it rebranded as Velocity after an exploit in April 2026.",
       "category": "Perps",
       "chains": "Solana",
       "networks": [],
@@ -1905,6 +1928,7 @@
     {
       "id": "gtrade",
       "name": "gTrade (Gains)",
+      "description": "gTrade is the leveraged trading platform of Gains Network, offering synthetic perpetuals on crypto, forex, stocks and commodities on Arbitrum, Base, Polygon and ApeChain, with liquidity supplied by gToken vaults.",
       "category": "Perps",
       "chains": "Arbitrum, Base, Polygon, ApeChain",
       "networks": [
@@ -1965,6 +1989,7 @@
     {
       "id": "lighter",
       "name": "Lighter",
+      "description": "Lighter is a perpetual futures exchange built as a zk-rollup: order matching and liquidations run off-chain and are verified on-chain with zero-knowledge proofs.",
       "category": "Perps",
       "chains": "Lighter (zk L2)",
       "networks": [],
@@ -2033,6 +2058,7 @@
     {
       "id": "aave",
       "name": "Aave",
+      "description": "Aave is one of the largest decentralized lending protocols. Users supply assets to earn interest and borrow against over-collateralized positions in pools on Ethereum and many layer-2 and EVM networks; Aave also issues the GHO stablecoin, and AAVE holders govern the protocol.",
       "category": "Lending",
       "chains": "EVM",
       "networks": [
@@ -2129,6 +2155,7 @@
     {
       "id": "compound",
       "name": "Compound III",
+      "description": "Compound III (Comet) is a lending protocol in which each market lends one base asset, such as USDC or ETH, against several collateral assets. It is a redesign of the earlier Compound money markets and is governed by COMP holders.",
       "category": "Lending",
       "chains": "EVM",
       "networks": [
@@ -2194,6 +2221,7 @@
     {
       "id": "morpho",
       "name": "Morpho",
+      "description": "Morpho is a lending protocol built on immutable, isolated markets, each with one collateral asset and one loan asset. Curated Morpho Vaults allocate deposits across these markets, and many other apps build on Morpho as lending infrastructure.",
       "category": "Lending",
       "chains": "EVM",
       "networks": [
@@ -2264,6 +2292,7 @@
     {
       "id": "spark",
       "name": "Spark",
+      "description": "Spark is the lending and savings arm of the Sky (formerly MakerDAO) ecosystem. SparkLend, based on Aave v3, lends USDS and DAI at rates set by Sky governance, and Spark Savings passes the Sky Savings Rate to depositors.",
       "category": "Lending / savings",
       "chains": "EVM",
       "networks": [
@@ -2332,6 +2361,7 @@
     {
       "id": "sky",
       "name": "Sky (ex-Maker)",
+      "description": "Sky, formerly MakerDAO, issues the USDS and DAI stablecoins backed by crypto and real-world assets. Its app offers the Sky Savings Rate, token rewards and upgrades from DAI and MKR, and SKY holders govern the protocol.",
       "category": "Savings / lending",
       "chains": "Ethereum, L2",
       "networks": [
@@ -2473,6 +2503,7 @@
     {
       "id": "venus",
       "name": "Venus",
+      "description": "Venus is the main lending and borrowing protocol on BNB Chain, a Compound-style money market that is also deployed on Ethereum, Arbitrum and other networks. It issues the VAI stablecoin and is governed by XVS holders.",
       "category": "Lending",
       "chains": "BNB, EVM",
       "networks": [
@@ -2552,6 +2583,7 @@
     {
       "id": "euler",
       "name": "Euler",
+      "description": "Euler is a modular lending protocol. Its Euler Vault Kit lets anyone deploy lending vaults, and the Ethereum Vault Connector links them so that one account can use positions in several vaults as collateral; Euler v2 relaunched in 2024 after the 2023 exploit of v1.",
       "category": "Lending",
       "chains": "EVM",
       "networks": [
@@ -2660,6 +2692,7 @@
     {
       "id": "fluid",
       "name": "Fluid",
+      "description": "Fluid, built by Instadapp, combines lending and a DEX on top of a shared liquidity layer. Its vaults allow high loan-to-value borrowing, and Fluid DEX can use collateral and debt positions as trading liquidity.",
       "category": "Lending / DEX",
       "chains": "EVM, Solana",
       "networks": [
@@ -2716,6 +2749,7 @@
     {
       "id": "kamino",
       "name": "Kamino",
+      "description": "Kamino is a lending, liquidity and leverage protocol on Solana that combines a money market with automated concentrated-liquidity vaults and leveraged yield strategies.",
       "category": "Lending",
       "chains": "Solana",
       "networks": [],
@@ -2767,6 +2801,7 @@
     {
       "id": "marginfi",
       "name": "marginfi (-> Project 0)",
+      "description": "marginfi is a lending and borrowing protocol on Solana with a risk-based margin system; according to this snapshot its app is being retired in favor of Project 0.",
       "category": "Lending",
       "chains": "Solana",
       "networks": [],
@@ -2829,6 +2864,7 @@
     {
       "id": "liquity",
       "name": "Liquity V2 (liquity.app)",
+      "description": "Liquity V2 is an immutable borrowing protocol where users open positions (troves) against ETH and liquid-staking tokens to mint the BOLD stablecoin at an interest rate they choose themselves. Liquity AG runs no official frontend; interfaces are operated by third parties.",
       "category": "CDP / stablecoin",
       "chains": "Ethereum",
       "networks": [
@@ -2890,6 +2926,7 @@
     {
       "id": "notional",
       "name": "Notional",
+      "description": "Notional is a fixed-rate lending and leveraged-yield protocol on Ethereum and Arbitrum. Its leveraged vaults let users borrow at fixed or variable rates to run yield strategies.",
       "category": "Lending / leverage",
       "chains": "EVM",
       "networks": [
@@ -2976,6 +3013,7 @@
     {
       "id": "lido",
       "name": "Lido",
+      "description": "Lido is the largest liquid-staking protocol on Ethereum. Users stake ETH and receive stETH, a token that accrues staking rewards while remaining usable across DeFi; the validators are run by a curated set of node operators.",
       "category": "Liquid staking",
       "chains": "Ethereum",
       "networks": [
@@ -3047,6 +3085,7 @@
     {
       "id": "rocketpool",
       "name": "Rocket Pool",
+      "description": "Rocket Pool is a decentralized liquid-staking protocol for Ethereum. Anyone can run a node with a smaller ETH bond than a solo validator, and stakers receive rETH, which grows in value with staking rewards.",
       "category": "Liquid staking",
       "chains": "Ethereum",
       "networks": [
@@ -3100,6 +3139,7 @@
     {
       "id": "eigenlayer",
       "name": "EigenLayer (EigenCloud)",
+      "description": "EigenLayer, now part of EigenCloud, is a restaking protocol on Ethereum. It lets stakers restake ETH, liquid-staking tokens and EIGEN to secure additional services (AVSs) in exchange for extra rewards, at the risk of slashing.",
       "category": "Restaking",
       "chains": "Ethereum",
       "networks": [
@@ -3163,6 +3203,7 @@
     {
       "id": "etherfi",
       "name": "ether.fi",
+      "description": "ether.fi is a liquid restaking protocol: users stake ETH for eETH or weETH, which are natively restaked through EigenLayer. The app also offers Liquid vaults with managed DeFi strategies and a crypto payment card.",
       "category": "Restaking / vaults",
       "chains": "EVM",
       "networks": [
@@ -3243,6 +3284,7 @@
     {
       "id": "pendle",
       "name": "Pendle",
+      "description": "Pendle is a yield-trading protocol that splits yield-bearing tokens into principal tokens (PT) and yield tokens (YT), so users can lock in a fixed yield or trade on future variable yield; Boros extends the model to funding rates.",
       "category": "Yield",
       "chains": "EVM",
       "networks": [
@@ -3321,6 +3363,7 @@
     {
       "id": "ethena",
       "name": "Ethena",
+      "description": "Ethena issues USDe, a synthetic dollar backed by crypto collateral hedged with short perpetual futures positions. Staking USDe yields sUSDe, which earns the funding and staking income of that hedge.",
       "category": "Synthetic dollar",
       "chains": "EVM",
       "networks": [
@@ -3437,6 +3480,7 @@
     {
       "id": "yearn",
       "name": "Yearn",
+      "description": "Yearn is a yield aggregator whose vaults automatically move deposits between lending, liquidity and staking strategies to optimize returns. YFI holders govern the protocol.",
       "category": "Yield vaults",
       "chains": "EVM",
       "networks": [
@@ -3496,6 +3540,7 @@
     {
       "id": "beefy",
       "name": "Beefy",
+      "description": "Beefy is a multichain yield optimizer. Its vaults auto-compound rewards from farms and liquidity pools across dozens of EVM networks, saving users the gas and effort of harvesting manually.",
       "category": "Yield vaults",
       "chains": "EVM",
       "networks": [
@@ -3571,6 +3616,7 @@
     {
       "id": "convex",
       "name": "Convex",
+      "description": "Convex Finance boosts rewards for Curve liquidity providers and CRV stakers. It pools CRV locked as veCRV so depositors earn boosted CRV without locking their own tokens, and CVX holders direct Convex's Curve votes.",
       "category": "Yield",
       "chains": "Ethereum",
       "networks": [
@@ -3627,6 +3673,7 @@
     {
       "id": "jito",
       "name": "Jito",
+      "description": "Jito is a liquid-staking protocol on Solana. Its JitoSOL token earns staking rewards plus MEV tips captured through the Jito validator client.",
       "category": "Liquid staking",
       "chains": "Solana",
       "networks": [],
@@ -3680,6 +3727,7 @@
     {
       "id": "across",
       "name": "Across",
+      "description": "Across is an intent-based cross-chain bridge. Relayers front funds to users on the destination chain within seconds and are repaid later from a shared liquidity pool, with UMA's optimistic oracle securing the settlement.",
       "category": "Bridge",
       "chains": "EVM, Solana",
       "networks": [
@@ -3750,6 +3798,7 @@
     {
       "id": "stargate",
       "name": "Stargate",
+      "description": "Stargate is a cross-chain liquidity transfer protocol built on LayerZero. It moves native assets such as USDC, USDT and ETH between EVM chains using unified liquidity pools.",
       "category": "Bridge",
       "chains": "EVM (LayerZero)",
       "networks": [
@@ -3815,6 +3864,7 @@
     {
       "id": "synapse",
       "name": "Synapse",
+      "description": "Synapse is a cross-chain bridge and messaging protocol that moves assets between EVM chains through liquidity pools and its interchain messaging network.",
       "category": "Bridge",
       "chains": "EVM",
       "networks": [
@@ -3881,6 +3931,7 @@
     {
       "id": "hop",
       "name": "Hop",
+      "description": "Hop is a bridge for moving tokens between Ethereum and its rollups, using bonders who front liquidity and intermediate hTokens on each chain. According to this snapshot its official domain no longer serves the app, while the contracts keep working.",
       "category": "Bridge",
       "chains": "EVM",
       "networks": [
@@ -3991,6 +4042,7 @@
     {
       "id": "portalbridge",
       "name": "Portal Bridge (Wormhole)",
+      "description": "Portal Bridge is the token bridge interface for the Wormhole cross-chain messaging protocol, moving assets between Ethereum and other EVM chains, Solana, Sui, Aptos and more, secured by Wormhole's guardian network.",
       "category": "Bridge",
       "chains": "EVM, Solana, Sui, Aptos and more (Wormhole)",
       "networks": [
@@ -4055,6 +4107,7 @@
     {
       "id": "relay",
       "name": "Relay",
+      "description": "Relay is an intent-based bridging and cross-chain payments protocol. Solvers fill bridge and swap requests instantly on the destination chain across many EVM and non-EVM networks and are repaid afterwards.",
       "category": "Bridge / intents",
       "chains": "EVM, Solana, BTC...",
       "networks": [
@@ -4121,6 +4174,7 @@
     {
       "id": "polymarket",
       "name": "Polymarket",
+      "description": "Polymarket is a prediction market where users buy and sell shares on the outcomes of real-world events. Trades are matched in an off-chain order book and settled in USDC on Polygon, with outcomes resolved through UMA's optimistic oracle.",
       "category": "Prediction market",
       "chains": "Polygon",
       "networks": [
@@ -4210,6 +4264,7 @@
     {
       "id": "safe",
       "name": "Safe{Wallet}",
+      "description": "Safe, formerly Gnosis Safe, is a smart-account wallet that can require several owners to approve each transaction (multisig). Safe{Wallet} is its official interface, with built-in swaps, staking and third-party apps on many EVM networks.",
       "category": "Wallet / multisig",
       "chains": "EVM",
       "networks": [
@@ -4283,6 +4338,7 @@
     {
       "id": "ens",
       "name": "ENS",
+      "description": "ENS, the Ethereum Name Service, maps human-readable .eth names to wallet addresses, websites and other records. Names are NFTs registered for a yearly fee, and the protocol is governed by the ENS DAO.",
       "category": "Naming",
       "chains": "Ethereum",
       "networks": [
@@ -4336,6 +4392,7 @@
     {
       "id": "snapshot",
       "name": "Snapshot",
+      "description": "Snapshot is an off-chain voting platform where DAOs run gasless proposals and votes. Votes are signed messages weighted by token holdings or other strategies and are stored off-chain.",
       "category": "Governance",
       "chains": "EVM, Starknet",
       "networks": [

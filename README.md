@@ -33,6 +33,33 @@ schema, the static scanner and the evidence verifier, [`monitor/docs/roadmap.md`
 monitor architecture (live probes, proxies, mock wallet, scoring, alerts) and
 [`monitor/prompts/auditor-agent.md`](monitor/prompts/auditor-agent.md) for the LLM auditor prompt.
 
+## SEO and deployment
+
+`pnpm build` prerenders every public route from `src/data/interfaces.json` (Vite plugin in `vite.config.mts`, code in
+`src/seo/prerender.ts`), so crawlers and link previews get real HTML without running JavaScript:
+
+- `index.html` and `monitor.html` (catalog table with links to every interface), `methodology.html`, and
+  `monitor/<id>.html` for each interface: own `<title>`, meta description, canonical, Open Graph/Twitter tags, JSON-LD
+  (`Dataset` + `WebSite` on the catalog, `WebPage` + `BreadcrumbList` on interface pages) and a static copy of the content;
+- `404.html` (`noindex`), `robots.txt`, `sitemap.xml`, `og-image.png`.
+
+The app replaces the static content when it starts, and `src/seo/usePageMeta.ts` keeps `<head>` in sync during
+client-side navigation.
+
+Set the public origin before building, otherwise `sitemap.xml`, canonical URLs and `og:url` are skipped (the build warns):
+
+```bash
+VITE_SITE_URL=https://your.domain pnpm build
+docker build --build-arg VITE_SITE_URL=https://your.domain .
+```
+
+Serve the routes as clean URLs without a single-page rewrite, so that `/monitor/aave` returns `monitor/aave.html` and
+unknown paths return `404.html` with status 404:
+
+- Docker: `serve dist -c ../serve.json` (already in the `Dockerfile`; `serve.json` enables clean URLs, disables directory listing, and caches `/assets` for a year);
+- nginx: `try_files $uri $uri.html =404; error_page 404 /404.html;`;
+- Netlify, Cloudflare Pages and GitHub Pages serve `.html` clean URLs and `404.html` out of the box.
+
 ## Getting Started
 
 ```bash

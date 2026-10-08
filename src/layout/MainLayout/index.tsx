@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { Link as RouterLink, Outlet, useLocation } from 'react-router-dom';
 
 // material-ui
 import { styled, useTheme } from '@mui/material/styles';
@@ -48,7 +48,8 @@ const AntTabs = styled(Tabs)(({ theme }) => ({
 }));
 
 // style constant
-const AntTab = styled((props: TabProps) => <Tab disableRipple {...props} />)(({ theme }) => ({
+// Tabs are real links (crawlable, open in a new tab, announce aria-current) styled as the original tab bar.
+const AntTab = styled((props: TabProps<typeof RouterLink>) => <Tab disableRipple component={RouterLink} {...props} />)(({ theme }) => ({
   textTransform: 'none',
   minWidth: 0,
   fontWeight: theme.typography.fontWeightRegular,
@@ -89,13 +90,8 @@ export default function MainLayout() {
     { label: 'Methodology', path: 'methodology', iconPosition: 'top' }
   ];
 
-  const navigate = useNavigate();
   const location = useLocation();
   const currentTabIndex = tabs.findIndex((tab) => location.pathname.includes(tab.path));
-
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    navigate(`/${tabs[newValue].path}`);
-  };
 
   useEffect(() => {
     window.history.scrollRestoration = 'manual';
@@ -119,6 +115,25 @@ export default function MainLayout() {
 
   return (
     <Box sx={{ display: 'flex' }}>
+      <Box
+        component="a"
+        href="#main-content"
+        sx={{
+          position: 'absolute',
+          left: 8,
+          top: -48,
+          zIndex: (t) => t.zIndex.appBar + 1,
+          px: 2,
+          py: 1,
+          borderRadius: 1,
+          bgcolor: 'primary.main',
+          color: 'background.default',
+          fontWeight: 600,
+          '&:focus': { top: 8 }
+        }}
+      >
+        Skip to content
+      </Box>
       {/* header */}
       <AppBar enableColorOnDark position="fixed" color="inherit" elevation={0} sx={{ bgcolor: 'background.default' }}>
         <Toolbar sx={{ p: isHorizontal ? 1.25 : 2 }}>
@@ -138,25 +153,18 @@ export default function MainLayout() {
           }}
         >
           <MainCard>
-            <AntTabs value={currentTabIndex === -1 ? false : currentTabIndex} onChange={handleChange} centered>
+            <AntTabs value={currentTabIndex === -1 ? false : currentTabIndex} centered role="navigation" aria-label="Sections">
               {tabs.map((tab, index) => (
                 <AntTab
                   wrapped={true}
                   key={tab.path}
                   label={tab.label}
-                  onClick={() => {
-                    const tabPath = `/${tab.path}`;
-                    // клик на активный таб
-                    if (currentTabIndex === index) {
-                      navigate(tabPath, { replace: true, state: { refresh: Date.now() } });
-                    } else {
-                      navigate(tabPath);
-                    }
-                  }}
+                  to={`/${tab.path}`}
+                  aria-current={currentTabIndex === index ? 'page' : undefined}
                 />
               ))}
             </AntTabs>
-            <Box sx={{ pt: 3 }}>
+            <Box id="main-content" tabIndex={-1} sx={{ pt: 3, outline: 'none' }}>
               <Outlet />
             </Box>
           </MainCard>

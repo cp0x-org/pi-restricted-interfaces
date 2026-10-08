@@ -6,7 +6,7 @@ import AppLogo from 'assets/images/cp0x-logo.svg';
 export default function Logo() {
   return (
     <Box display="flex" flexDirection="column" alignItems="center" gap={1}>
-      <img src={AppLogo} alt="logo" width={40} />
+      <img src={AppLogo} alt="cp0x" width={40} />
     </Box>
   );
 }

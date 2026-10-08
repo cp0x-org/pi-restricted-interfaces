@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { Link as RouterLink, useParams } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -22,6 +23,8 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SubCard from 'ui-component/cards/SubCard';
 
 import { dataset, interfacesById } from 'data/dataset';
+import { interfaceMeta, notFoundMeta } from 'seo/meta';
+import { siteUrl, usePageMeta } from 'seo/usePageMeta';
 import { tokenLabel } from 'data/countries';
 import { evidenceLinks } from 'utils/restrictions';
 import CountryTokenChips from './components/CountryTokenChips';
@@ -57,11 +60,12 @@ export default function InterfacePage() {
   const theme = useTheme();
   const { id } = useParams<{ id: string }>();
   const entry = id ? interfacesById.get(id) : undefined;
+  usePageMeta(useMemo(() => (entry ? interfaceMeta(entry, dataset.meta, siteUrl()) : notFoundMeta()), [entry]));
 
   if (!entry) {
     return (
       <Box sx={{ textAlign: 'center', py: 6 }}>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" component="h1" gutterBottom>
           Interface not found
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
@@ -95,6 +99,11 @@ export default function InterfacePage() {
             <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
               {entry.category} · {entry.chains}
             </Typography>
+            {entry.description && (
+              <Typography variant="body1" sx={{ mt: 1.5, maxWidth: 720 }}>
+                {entry.description}
+              </Typography>
+            )}
             {entry.networks.length > 0 && (
               <Stack direction="row" spacing={0.5} sx={{ mt: 1, flexWrap: 'wrap', rowGap: 0.5 }}>
                 {entry.networks.map((n) => (
@@ -172,7 +181,9 @@ export default function InterfacePage() {
               </Grid>
               <Grid size={{ xs: 6 }}>
                 <Stack spacing={0.5}>
-                  <Typography variant="h5">{entry.confidence}</Typography>
+                  <Typography variant="h5" component="p">
+                    {entry.confidence}
+                  </Typography>
                   <Typography variant="body2" sx={{ color: theme.palette.grey[500] }}>
                     Confidence
                   </Typography>
@@ -180,7 +191,9 @@ export default function InterfacePage() {
               </Grid>
               <Grid size={{ xs: 6 }}>
                 <Stack spacing={0.5}>
-                  <Typography variant="h5">{dataset.meta.generated}</Typography>
+                  <Typography variant="h5" component="p">
+                    {dataset.meta.generated}
+                  </Typography>
                   <Typography variant="body2" sx={{ color: theme.palette.grey[500] }}>
                     Checked
                   </Typography>
@@ -272,7 +285,7 @@ export default function InterfacePage() {
 
       <Grid container spacing={3}>
         <Grid size={{ xs: 12, md: 6 }}>
-          <SubCard title="Fork notes" sx={{ height: '100%' }}>
+          <SubCard title="Fork notes" titleComponent="h2" sx={{ height: '100%' }}>
             <Typography variant="body2" sx={{ whiteSpace: 'pre-line' }}>
               {entry.fork_notes || 'No notes.'}
             </Typography>
@@ -284,7 +297,7 @@ export default function InterfacePage() {
           </SubCard>
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
-          <SubCard title="Live checks" sx={{ height: '100%' }}>
+          <SubCard title="Live checks" titleComponent="h2" sx={{ height: '100%' }}>
             {liveChecks.length === 0 ? (
               <Typography variant="body2" color="text.secondary">
                 No live checks recorded.
@@ -309,7 +322,7 @@ export default function InterfacePage() {
           </SubCard>
         </Grid>
         <Grid size={{ xs: 12 }}>
-          <SubCard title="Live observations by country">
+          <SubCard title="Live observations by country" titleComponent="h2">
             {entry.observations.length === 0 ? (
               <Typography variant="body2" color="text.secondary">
                 Not probed yet. The P3 probe (monitor/scripts/probe.py) records, per country and proxy type, whether the landing page and
@@ -367,7 +380,7 @@ export default function InterfacePage() {
           </SubCard>
         </Grid>
         <Grid size={{ xs: 12 }}>
-          <SubCard title="Evidence">
+          <SubCard title="Evidence" titleComponent="h2">
             <EvidenceList links={links} />
             {entry.frontend_repo && (
               <Typography variant="caption" color="text.secondary" component="div" sx={{ mt: 1.5 }}>

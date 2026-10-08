@@ -16,7 +16,7 @@ function Tile({ value, label, accent = false }: { value: number; label: string; 
   const theme = useTheme();
   return (
     <Stack spacing={0.5}>
-      <Typography variant="h4" sx={accent ? { color: 'primary.main' } : undefined}>
+      <Typography variant="h4" component="p" sx={accent ? { color: 'primary.main' } : undefined}>
         {value}
       </Typography>
       <Typography variant="body2" sx={{ color: theme.palette.grey[500] }}>

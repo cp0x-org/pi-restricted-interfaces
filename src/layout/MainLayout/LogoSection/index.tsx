@@ -13,7 +13,7 @@ export default function LogoSection() {
     <Link
       component={RouterLink}
       to={DASHBOARD_PATH}
-      aria-label="theme-logo"
+      aria-label="cp0x DeFi Interface Restrictions Monitor, home"
       sx={{
         display: 'flex',
         flexDirection: 'column',

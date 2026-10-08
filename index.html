@@ -1,25 +1,33 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>DeFi Interface Restrictions Monitor by cp0x</title>
-        <link rel="icon" href="/favicon.png" />
-        <!-- Meta Tags-->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#16161f" />
-        <meta name="title" content="DeFi Interface Restrictions Monitor by cp0x" />
-        <meta
-            name="description"
-            content="Which official DeFi interfaces geo-block, screen wallets or gate features, where the restriction is enforced, and whether a permissionless fork removes it."
-        />
-        <meta
-            name="keywords"
-            content="defi, geo-blocking, wallet screening, sanctions, permissionless interface, cp0x"
-        />
+        <link rel="icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/og-image.png" />
         <meta name="author" content="cp0x" />
+        <!-- Page-specific tags. Rewritten per route at build time (src/seo/prerender.ts) and at runtime (src/seo/usePageMeta.ts). -->
+        <!--seo:head-->
+        <title>DeFi Interface Restrictions Monitor | cp0x</title>
+        <meta name="description" content="Which official DeFi interfaces geo-block countries, screen wallets or hide features, where the restriction is enforced, and whether a permissionless fork removes it." />
+        <!--/seo:head-->
+        <style>
+            /* Shown until the app starts (static prerendered content), matching the cp0x dark theme. */
+            body { margin: 0; background: #16161f; color: #dddddd; }
+            #prerender { font: 15px/1.55 Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; max-width: 1180px; margin: 0 auto; padding: 24px 16px 48px; }
+            #prerender a { color: #28e5e5; }
+            #prerender header { margin-bottom: 24px; }
+            #prerender h1 { font-size: 26px; color: #eeeeee; }
+            #prerender h2 { font-size: 18px; color: #eeeeee; margin-top: 28px; }
+            #prerender table { width: 100%; border-collapse: collapse; font-size: 14px; }
+            #prerender th, #prerender td { text-align: left; padding: 8px; border-bottom: 1px solid #2e2e38; vertical-align: top; }
+            #prerender small { color: #969696; }
+            body > noscript { display: block; max-width: 1180px; margin: 0 auto; padding: 12px 16px 0; font: 13px/1.5 Roboto, -apple-system, Arial, sans-serif; color: #969696; }
+        </style>
     </head>
     <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <noscript>Filters and sorting need JavaScript; the full catalog is shown below.</noscript>
         <div id="root"></div>
         <!--
           This HTML file is a template.

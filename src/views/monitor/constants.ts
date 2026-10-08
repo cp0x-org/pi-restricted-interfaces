@@ -14,7 +14,7 @@ import {
   Status,
   TosUs,
   VpnStatus
-} from 'types/restrictions';
+} from '../../types/restrictions';
 
 export const DATA_FILE_PATH = 'monitor/data/interfaces.json';
 

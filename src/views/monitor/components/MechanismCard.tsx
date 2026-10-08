@@ -21,7 +21,7 @@ export default function MechanismCard({ title, chip, rows, countries = [] }: Mec
   const visibleRows = rows.filter((r) => r.value !== '' && r.value !== null && r.value !== undefined);
   const visibleCountries = countries.filter((c) => c.tokens.length > 0);
   return (
-    <SubCard title={title} secondary={chip} sx={{ height: '100%' }}>
+    <SubCard title={title} titleComponent="h2" secondary={chip} sx={{ height: '100%' }}>
       <Stack spacing={1.5}>
         {visibleRows.length === 0 && visibleCountries.length === 0 && (
           <Typography variant="body2" color="text.secondary">

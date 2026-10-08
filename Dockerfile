@@ -9,6 +9,10 @@ RUN pnpm install
 
 COPY . .
 
+# Public origin for canonical URLs, og:url and sitemap.xml (docker build --build-arg VITE_SITE_URL=https://...)
+ARG VITE_SITE_URL=
+ENV VITE_SITE_URL=$VITE_SITE_URL
+
 RUN pnpm run build
 
 FROM node:20-alpine
@@ -18,7 +22,10 @@ WORKDIR /app
 RUN npm install -g serve
 
 COPY --from=builder /app/dist ./dist
+COPY serve.json ./serve.json
 
 EXPOSE 4173
 
-CMD ["serve", "-s", "dist", "-l", "4173"]
+# No "-s" (single-page rewrite): every route is a prerendered file (monitor.html, monitor/<id>.html, ...) served via
+# cleanUrls, and unknown paths get dist/404.html with a real 404 status (the app still boots there and handles redirects).
+CMD ["serve", "dist", "-l", "4173", "-c", "../serve.json"]

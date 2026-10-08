@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { Link as RouterLink, useNavigate, useSearchParams } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import FormControl from '@mui/material/FormControl';
@@ -30,6 +30,8 @@ import LaunchIcon from '@mui/icons-material/Launch';
 
 import { dataset, interfaces, networkOptions } from 'data/dataset';
 import { COUNTRY_OPTIONS, countryName, flagEmoji, isCountryCode } from 'data/countries';
+import { monitorMeta } from 'seo/meta';
+import { siteUrl, usePageMeta } from 'seo/usePageMeta';
 import {
   CATEGORY_GROUPS,
   COUNTRY_STATUS,
@@ -120,6 +122,7 @@ function compare(a: InterfaceEntry, b: InterfaceEntry, field: SortableField): nu
 
 export default function MonitorPage() {
   const navigate = useNavigate();
+  usePageMeta(useMemo(() => monitorMeta(dataset.meta, interfaces, siteUrl()), []));
   const [page, setPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(25);
   // Default: interfaces with a cp0x permissionless app first, then by level (D → A) and name.
@@ -270,7 +273,7 @@ export default function MonitorPage() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Typography variant="h3" gutterBottom>
+      <Typography variant="h3" component="h1" gutterBottom>
         Official DeFi interfaces: who restricts what
       </Typography>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 3, maxWidth: 900 }}>
@@ -468,9 +471,17 @@ export default function MonitorPage() {
                   }}
                 >
                   <TableCell>
-                    <Typography variant="subtitle1" component="span" sx={{ fontWeight: 600 }}>
+                    <Link
+                      component={RouterLink}
+                      to={`/monitor/${i.id}`}
+                      onClick={(e) => e.stopPropagation()}
+                      underline="hover"
+                      color="inherit"
+                      variant="subtitle1"
+                      sx={{ fontWeight: 600 }}
+                    >
                       {i.name}
-                    </Typography>
+                    </Link>
                     <Tooltip title={i.networks.join(', ')} arrow placement="top" disableHoverListener={i.networks.length <= 3}>
                       <Typography variant="caption" color="text.secondary" component="div">
                         {i.networks.slice(0, 3).join(', ')}

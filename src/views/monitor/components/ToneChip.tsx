@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Chip, { ChipProps } from '@mui/material/Chip';
+import { Theme, lighten } from '@mui/material/styles';
 import Tooltip from '@mui/material/Tooltip';
 import { CountryStatus, ForkReady, Level, Status, VpnStatus } from 'types/restrictions';
 
@@ -39,7 +40,19 @@ interface ToneChipProps extends Omit<ChipProps, 'color' | 'variant'> {
 
 export default function ToneChip({ tone, tooltip, size = 'small', sx, ...rest }: ToneChipProps) {
   const chip = (
-    <Chip size={size} {...TONE_STYLE[tone]} sx={{ fontWeight: 500, ...(tone === 'unknown' && { opacity: 0.7 }), ...sx }} {...rest} />
+    <Chip
+      size={size}
+      {...TONE_STYLE[tone]}
+      sx={{
+        fontWeight: 500,
+        // WCAG AA contrast on the dark theme: the palette's error.main and success.dark are too dim for 13px chip text
+        ...(tone === 'bad' && { color: (theme: Theme) => lighten(theme.palette.error.main, 0.2) }),
+        ...(tone === 'goodOutlined' && { color: 'success.main', borderColor: 'success.main' }),
+        ...(tone === 'unknown' && { color: 'text.secondary' }),
+        ...sx
+      }}
+      {...rest}
+    />
   );
   return tooltip ? (
     <Tooltip title={tooltip} arrow placement="top">

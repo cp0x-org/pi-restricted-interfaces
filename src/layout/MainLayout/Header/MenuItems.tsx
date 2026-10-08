@@ -25,7 +25,7 @@ const MenuItems = () => {
   if (matchDownMd) return null;
 
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center', ml: 2 }}>
+    <Box component="nav" aria-label="Main" sx={{ display: 'flex', alignItems: 'center', ml: 2 }}>
       <Stack direction="row" spacing={1}>
         {/* Internal link using RouterLink */}
         <Button component={RouterLink} to="/monitor" sx={menuButtonStyle(theme)}>
@@ -33,7 +33,7 @@ const MenuItems = () => {
         </Button>
 
         {/* External links using anchor tags */}
-        <Button href="https://pi.cp0x.com" rel="noopener noreferrer" sx={menuButtonStyle(theme)}>
+        <Button href="https://pi.cp0x.com" rel="noopener" sx={menuButtonStyle(theme)}>
           Permissionless Interfaces
         </Button>
 

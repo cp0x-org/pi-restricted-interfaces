@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useMemo } from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
@@ -15,6 +15,8 @@ import SubCard from 'ui-component/cards/SubCard';
 import { CopyableAddress } from 'components/CopyableAddress';
 
 import { dataset, interfaces } from 'data/dataset';
+import { methodologyMeta } from 'seo/meta';
+import { siteUrl, usePageMeta } from 'seo/usePageMeta';
 import { COUNTRY_STATUS, LAYERS, LEVELS, STATUS } from 'types/restrictions';
 import LevelChip from './components/LevelChip';
 import StatusChip from './components/StatusChip';
@@ -86,16 +88,17 @@ const COUNTRY_RULES: string[] = [
 
 function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <SubCard title={title} sx={{ mb: 3 }}>
+    <SubCard title={title} titleComponent="h2" sx={{ mb: 3 }}>
       {children}
     </SubCard>
   );
 }
 
 export default function MethodologyPage() {
+  usePageMeta(useMemo(() => methodologyMeta(dataset.meta, siteUrl()), []));
   return (
     <Box sx={{ width: '100%' }}>
-      <Typography variant="h3" gutterBottom>
+      <Typography variant="h3" component="h1" gutterBottom>
         Methodology
       </Typography>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 3, maxWidth: 900 }}>
@@ -145,7 +148,9 @@ export default function MethodologyPage() {
             <Stack spacing={1.5}>
               {LAYERS.map((l) => (
                 <Stack key={l} spacing={0.25}>
-                  <Typography variant="subtitle2">{LAYER_LABELS[l]}</Typography>
+                  <Typography variant="subtitle2" component="h3">
+                    {LAYER_LABELS[l]}
+                  </Typography>
                   <Typography variant="body2">{LAYER_DESCRIPTIONS[l]}</Typography>
                 </Stack>
               ))}
@@ -246,7 +251,7 @@ export default function MethodologyPage() {
           <Typography variant="body2">
             Source of truth: <code>{DATA_FILE_PATH}</code> in the project repository, regenerated with <code>pnpm monitor:build</code>.
             Every row links to the code paths, documents or API responses it is based on. Corrections are welcome as pull requests.{' '}
-            <Link href="https://pi.cp0x.com" target="_blank" rel="noopener noreferrer" underline="hover">
+            <Link href="https://pi.cp0x.com" target="_blank" rel="noopener noreferrer" underline="always">
               Permissionless alternatives by cp0x
             </Link>
             .

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 
 // material-ui
 import Card from '@mui/material/Card';
@@ -24,6 +24,8 @@ interface SubCardProps {
   footerSX?: {};
   title?: ReactNode | string;
   actions?: ReactNode | string;
+  /** Element for the title (e.g. 'h2') so pages keep a correct heading outline; the visual style stays h5/h4. */
+  titleComponent?: React.ElementType;
 }
 
 // ==============================|| CUSTOM SUB CARD ||============================== //
@@ -40,6 +42,7 @@ export default function SubCard({
   footerSX = {},
   title,
   actions,
+  titleComponent,
   ...others
 }: SubCardProps) {
   const { mode } = useConfig();
@@ -48,7 +51,17 @@ export default function SubCard({
   return (
     <Card sx={{ border: '1px solid', borderColor: 'divider', ':hover': { boxShadow: defaultShadow }, ...sx }} {...others}>
       {/* card header and action */}
-      {!darkTitle && title && <CardHeader sx={{ p: 2.5 }} title={<Typography variant="h5">{title}</Typography>} action={secondary} />}
+      {!darkTitle && title && (
+        <CardHeader
+          sx={{ p: 2.5 }}
+          title={
+            <Typography variant="h5" component={titleComponent ?? 'h5'}>
+              {title}
+            </Typography>
+          }
+          action={secondary}
+        />
+      )}
       {darkTitle && title && <CardHeader sx={{ p: 2.5 }} title={<Typography variant="h4">{title}</Typography>} action={secondary} />}
 
       {/* content & header divider */}
