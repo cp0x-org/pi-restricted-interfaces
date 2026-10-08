@@ -8,12 +8,12 @@ interface RainbowKitThemeProviderProps {
 }
 
 const RainbowKitThemeProvider = ({ children }: RainbowKitThemeProviderProps) => {
-  const { mode } = useConfig();
+  const { mode, i18n } = useConfig();
 
   const customTheme = getRainbowKitTheme(mode);
 
   return (
-    <RainbowKitProvider theme={customTheme} modalSize="compact">
+    <RainbowKitProvider theme={customTheme} modalSize="compact" locale={i18n === 'zh' ? 'zh-CN' : 'en-US'}>
       {children}
     </RainbowKitProvider>
   );

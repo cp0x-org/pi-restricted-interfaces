@@ -29,7 +29,8 @@ import { UnfoldMore } from '@mui/icons-material';
 import LaunchIcon from '@mui/icons-material/Launch';
 
 import { dataset, interfaces, networkOptions } from 'data/dataset';
-import { COUNTRY_OPTIONS, countryName, flagEmoji, isCountryCode } from 'data/countries';
+import { countryName, countryOptions, flagEmoji, isCountryCode } from 'data/countries';
+import { useI18n } from 'i18n';
 import { monitorMeta } from 'seo/meta';
 import { siteUrl, usePageMeta } from 'seo/usePageMeta';
 import {
@@ -63,15 +64,6 @@ import CountryVerdictCell from './components/CountryVerdictCell';
 import StatTiles from './components/StatTiles';
 import StatusChip from './components/StatusChip';
 import ToneChip, { countryStatusTone, vpnTone } from './components/ToneChip';
-import {
-  CATEGORY_GROUP_LABELS,
-  COUNTRY_STATUS_DESCRIPTIONS,
-  COUNTRY_STATUS_LABELS,
-  LAYER_LABELS,
-  LEVEL_LABELS,
-  MECHANISM_LABELS,
-  VPN_LABELS
-} from './constants';
 
 type SortableField = 'permissionless' | 'country' | 'level' | 'name' | 'category' | 'screening' | 'repo';
 
@@ -122,7 +114,9 @@ function compare(a: InterfaceEntry, b: InterfaceEntry, field: SortableField): nu
 
 export default function MonitorPage() {
   const navigate = useNavigate();
-  usePageMeta(useMemo(() => monitorMeta(dataset.meta, interfaces, siteUrl()), []));
+  const { lang, t, L, path } = useI18n();
+  const loc = t.intlLocale;
+  usePageMeta(useMemo(() => monitorMeta(dataset.meta, interfaces, siteUrl(), lang), [lang]));
   const [page, setPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(25);
   // Default: interfaces with a cp0x permissionless app first, then by level (D → A) and name.
@@ -274,13 +268,10 @@ export default function MonitorPage() {
   return (
     <Box sx={{ width: '100%' }}>
       <Typography variant="h3" component="h1" gutterBottom>
-        Official DeFi interfaces: who restricts what
+        {t.monitor.title}
       </Typography>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 3, maxWidth: 900 }}>
-        Each row is the official web interface of a protocol on EVM networks ({interfaces.length} of {dataset.meta.catalog_total} in the
-        full catalog; Solana, Cosmos and other non-EVM apps stay in the data but are not shown). The level says how hard the restriction is
-        and whether a permissionless fork removes it. Snapshot of {dataset.meta.generated}; every claim is backed by code, a live check or
-        the Terms of Service (see the interface page).
+        {t.monitor.intro(interfaces.length, dataset.meta.catalog_total, dataset.meta.generated)}
       </Typography>
 
       <StatTiles activeLevels={levelFilter} onLevelClick={toggleLevel} />
@@ -290,8 +281,8 @@ export default function MonitorPage() {
           <TextField
             fullWidth
             size="small"
-            label="Search"
-            placeholder="Name or domain"
+            label={t.monitor.search}
+            placeholder={t.monitor.searchPlaceholder}
             value={nameFilter}
             onChange={(e) => {
               setNameFilter(e.target.value);
@@ -301,10 +292,10 @@ export default function MonitorPage() {
         </Grid>
         <Grid size={{ xs: 12, sm: 6, md: 4 }}>
           <FilterSelect
-            label="Category"
+            label={t.monitor.category}
             options={CATEGORY_GROUPS}
             value={groupFilter}
-            getLabel={(g) => CATEGORY_GROUP_LABELS[g]}
+            getLabel={(g) => L.CATEGORY_GROUP_LABELS[g]}
             onChange={(v) => {
               setGroupFilter(v);
               resetPage();
@@ -313,7 +304,7 @@ export default function MonitorPage() {
         </Grid>
         <Grid size={{ xs: 12, sm: 6, md: 4 }}>
           <FilterSelect
-            label="Network"
+            label={t.monitor.network}
             options={networkOptions}
             value={networkFilter}
             onChange={(v) => {
@@ -324,10 +315,10 @@ export default function MonitorPage() {
         </Grid>
         <Grid size={{ xs: 12, sm: 6, md: 4 }}>
           <FilterSelect
-            label="Level"
+            label={t.monitor.level}
             options={LEVELS}
             value={levelFilter}
-            getLabel={(l) => LEVEL_LABELS[l]}
+            getLabel={(l) => L.LEVEL_LABELS[l]}
             onChange={(v) => {
               setLevelFilter(v);
               resetPage();
@@ -337,10 +328,10 @@ export default function MonitorPage() {
         {SHOW_SCREENING_LAYER_FILTER && (
           <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <FilterSelect
-              label="Screening layer"
+              label={t.monitor.screeningLayer}
               options={LAYERS}
               value={layerFilter}
-              getLabel={(l) => LAYER_LABELS[l]}
+              getLabel={(l) => L.LAYER_LABELS[l]}
               onChange={(v) => {
                 setLayerFilter(v);
                 resetPage();
@@ -350,10 +341,10 @@ export default function MonitorPage() {
         )}
         <Grid size={{ xs: 12, sm: 6, md: SHOW_SCREENING_LAYER_FILTER ? 4 : 8 }}>
           <FilterSelect
-            label="Country"
-            options={COUNTRY_OPTIONS}
+            label={t.monitor.country}
+            options={countryOptions(loc)}
             value={countries}
-            getLabel={(c) => `${flagEmoji(c)} ${countryName(c)}`}
+            getLabel={(c) => `${flagEmoji(c)} ${countryName(c, loc)}`}
             onChange={setCountries}
           />
         </Grid>
@@ -361,14 +352,14 @@ export default function MonitorPage() {
           <Grid size={{ xs: 12 }}>
             <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', rowGap: 1 }} alignItems="center">
               <Typography variant="body2" color="text.secondary" sx={{ pr: 0.5 }}>
-                Restricted in {countries.map(flagEmoji).join(' ')}:
+                {t.monitor.restrictedIn(countries.map(flagEmoji).join(' '))}
               </Typography>
               {RESTRICTED_STATUSES.map((st) => (
                 <ToneChip
                   key={st}
                   tone={countryStatusTone(st)}
-                  label={`${COUNTRY_STATUS_LABELS[st]}: ${statusCounts[st]}`}
-                  tooltip={COUNTRY_STATUS_DESCRIPTIONS[st]}
+                  label={`${L.COUNTRY_STATUS_LABELS[st]}: ${statusCounts[st]}`}
+                  tooltip={L.COUNTRY_STATUS_DESCRIPTIONS[st]}
                   onClick={() => toggleStatus(st)}
                   sx={{ ...(statusFilter.includes(st) && { outline: '2px solid', outlineColor: 'secondary.main' }) }}
                 />
@@ -379,14 +370,14 @@ export default function MonitorPage() {
         <Grid size={{ xs: 12 }}>
           <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 0, md: 3 }} alignItems={{ md: 'center' }} sx={{ flexWrap: 'wrap' }}>
             <Typography variant="body2" color="text.secondary" sx={{ pr: 1 }}>
-              Has mechanism:
+              {t.monitor.hasMechanism}
             </Typography>
             <FormGroup row>
               {MECHANISMS.map((kind) => (
                 <FormControlLabel
                   key={kind}
                   control={<Checkbox size="small" checked={mechanismFilter.includes(kind)} onChange={() => toggleMechanism(kind)} />}
-                  label={<Typography variant="body2">{MECHANISM_LABELS[kind]}</Typography>}
+                  label={<Typography variant="body2">{L.MECHANISM_LABELS[kind]}</Typography>}
                 />
               ))}
             </FormGroup>
@@ -401,7 +392,7 @@ export default function MonitorPage() {
                   }}
                 />
               }
-              label={<Typography variant="body2">Open-source frontends only</Typography>}
+              label={<Typography variant="body2">{t.monitor.openOnly}</Typography>}
             />
           </Stack>
         </Grid>
@@ -412,7 +403,7 @@ export default function MonitorPage() {
       <TableContainer component={Paper} sx={{ mb: 2 }}>
         <Table
           size="small"
-          aria-label="interface restrictions table"
+          aria-label={t.monitor.tableLabel}
           sx={{
             minWidth: 1000,
             // tighter cells so that all columns fit the container even with the country column
@@ -422,26 +413,26 @@ export default function MonitorPage() {
         >
           <TableHead>
             <TableRow>
-              <TableCell>{header('name', 'Interface')}</TableCell>
-              {SHOW_CATEGORY_COLUMN && <TableCell>{header('category', 'Category')}</TableCell>}
-              <TableCell>{header('level', 'Level')}</TableCell>
+              <TableCell>{header('name', t.monitor.cols.iface)}</TableCell>
+              {SHOW_CATEGORY_COLUMN && <TableCell>{header('category', t.monitor.cols.category)}</TableCell>}
+              <TableCell sx={{ whiteSpace: 'nowrap' }}>{header('level', t.monitor.cols.level)}</TableCell>
               {countries.length > 0 && (
                 <TableCell>
                   {header(
                     'country',
                     countries.length === 1
-                      ? `${flagEmoji(countries[0])} ${countryName(countries[0])}`
-                      : `${countries.map(flagEmoji).join(' ')} restrictions`
+                      ? `${flagEmoji(countries[0])} ${countryName(countries[0], loc)}`
+                      : t.monitor.multiCountry(countries.map(flagEmoji).join(' '))
                   )}
                 </TableCell>
               )}
-              <TableCell>Geo Block</TableCell>
-              <TableCell>Feature Block</TableCell>
-              <TableCell>{header('screening', 'Wallet screening')}</TableCell>
-              <TableCell>VPN</TableCell>
-              <TableCell>{header('repo', 'Code')}</TableCell>
-              <TableCell>Official app</TableCell>
-              <TableCell>{header('permissionless', 'Permissionless app')}</TableCell>
+              <TableCell>{t.monitor.cols.geo}</TableCell>
+              <TableCell>{t.monitor.cols.feature}</TableCell>
+              <TableCell>{header('screening', t.monitor.cols.screening)}</TableCell>
+              <TableCell>{t.monitor.cols.vpn}</TableCell>
+              <TableCell sx={{ whiteSpace: 'nowrap' }}>{header('repo', t.monitor.cols.code)}</TableCell>
+              <TableCell>{t.monitor.cols.official}</TableCell>
+              <TableCell>{header('permissionless', t.monitor.cols.permissionless)}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -450,18 +441,14 @@ export default function MonitorPage() {
               const closeOnly = i.geo_site.close_only.length;
               const geoCaption =
                 geoCount || closeOnly
-                  ? [geoCount && `${geoCount} ${geoCount === 1 ? 'country' : 'countries'}`, closeOnly && `${closeOnly} close-only`]
-                      .filter(Boolean)
-                      .join(', ')
+                  ? [geoCount && t.monitor.countries(geoCount), closeOnly && t.monitor.closeOnly(closeOnly)].filter(Boolean).join(', ')
                   : undefined;
-              const featureCaption = i.geo_feature.countries.length
-                ? `${i.geo_feature.countries.length} ${i.geo_feature.countries.length === 1 ? 'country' : 'countries'}`
-                : undefined;
+              const featureCaption = i.geo_feature.countries.length ? t.monitor.countries(i.geo_feature.countries.length) : undefined;
               return (
                 <TableRow
                   key={i.id}
                   hover
-                  onClick={() => navigate(`/monitor/${i.id}`)}
+                  onClick={() => navigate(path(`/monitor/${i.id}`))}
                   sx={{
                     cursor: 'pointer',
                     ...(hasPermissionless(i) && {
@@ -473,7 +460,7 @@ export default function MonitorPage() {
                   <TableCell>
                     <Link
                       component={RouterLink}
-                      to={`/monitor/${i.id}`}
+                      to={path(`/monitor/${i.id}`)}
                       onClick={(e) => e.stopPropagation()}
                       underline="hover"
                       color="inherit"
@@ -520,12 +507,12 @@ export default function MonitorPage() {
                   <TableCell>
                     <StatusChip
                       status={i.screening.s}
-                      caption={i.screening.layer ? LAYER_LABELS[i.screening.layer] : undefined}
+                      caption={i.screening.layer ? L.LAYER_LABELS[i.screening.layer] : undefined}
                       tooltip={i.screening.provider || undefined}
                     />
                   </TableCell>
                   <TableCell>
-                    <ToneChip tone={vpnTone(i.vpn.s)} label={VPN_LABELS[i.vpn.s]} tooltip={i.vpn.note || undefined} />
+                    <ToneChip tone={vpnTone(i.vpn.s)} label={L.VPN_LABELS[i.vpn.s]} tooltip={i.vpn.note || undefined} />
                   </TableCell>
                   <TableCell>
                     <RepoLink entry={i} compact />
@@ -553,7 +540,7 @@ export default function MonitorPage() {
               <TableRow>
                 <TableCell colSpan={9 + (SHOW_CATEGORY_COLUMN ? 1 : 0) + (countries.length > 0 ? 1 : 0)}>
                   <Typography variant="body2" color="text.secondary" align="center" sx={{ py: 3 }}>
-                    No interfaces match the current filters.
+                    {t.monitor.empty}
                   </Typography>
                 </TableCell>
               </TableRow>
@@ -564,12 +551,12 @@ export default function MonitorPage() {
 
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 2 }}>
         <Typography variant="body2" color="text.secondary">
-          Showing {paginated.length} of {filtered.length} interfaces
+          {t.monitor.showing(paginated.length, filtered.length)}
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           <FormControl size="small" sx={{ minWidth: 100 }}>
-            <InputLabel id="rows-per-page-label">Rows</InputLabel>
-            <Select labelId="rows-per-page-label" value={rowsPerPage} label="Rows" onChange={handleChangeRowsPerPage}>
+            <InputLabel id="rows-per-page-label">{t.monitor.rows}</InputLabel>
+            <Select labelId="rows-per-page-label" value={rowsPerPage} label={t.monitor.rows} onChange={handleChangeRowsPerPage}>
               {[10, 25, 50, 100].map((n) => (
                 <MenuItem key={n} value={n}>
                   {n}

@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { InterfaceEntry } from 'types/restrictions';
 import { repoShortLabel } from 'utils/restrictions';
-import { REPO_STATE_LABELS } from '../constants';
+import { useI18n } from 'i18n';
 
 interface RepoLinkProps {
   entry: InterfaceEntry;
@@ -16,7 +16,8 @@ interface RepoLinkProps {
 }
 
 export default function RepoLink({ entry, full = false, compact = false }: RepoLinkProps) {
-  const state = REPO_STATE_LABELS[entry.repo_state];
+  const { t, L } = useI18n();
+  const state = L.REPO_STATE_LABELS[entry.repo_state];
   if (compact) {
     if (!entry.frontend_repo) {
       return (
@@ -31,7 +32,7 @@ export default function RepoLink({ entry, full = false, compact = false }: RepoL
           href={entry.frontend_repo}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`Frontend code of ${entry.name}`}
+          aria-label={t.chips.frontendCodeOf(entry.name)}
           onClick={(e) => e.stopPropagation()}
           sx={{ display: 'inline-flex', color: entry.repo_state === 'open' ? 'secondary.main' : 'text.secondary' }}
         >

@@ -1,6 +1,6 @@
 import { Level } from 'types/restrictions';
+import { useI18n } from 'i18n';
 import ToneChip, { levelTone } from './ToneChip';
-import { LEVEL_DESCRIPTIONS, LEVEL_LABELS } from '../constants';
 
 interface LevelChipProps {
   level: Level;
@@ -11,12 +11,13 @@ interface LevelChipProps {
 }
 
 export default function LevelChip({ level, size = 'small', withTooltip = true, onClick, selected }: LevelChipProps) {
+  const { L } = useI18n();
   return (
     <ToneChip
       tone={levelTone(level)}
-      label={LEVEL_LABELS[level]}
+      label={L.LEVEL_LABELS[level]}
       size={size}
-      tooltip={withTooltip ? LEVEL_DESCRIPTIONS[level] : undefined}
+      tooltip={withTooltip ? L.LEVEL_DESCRIPTIONS[level] : undefined}
       onClick={onClick}
       sx={{ fontWeight: 700, minWidth: 36, ...(selected && { outline: '2px solid', outlineColor: 'secondary.main' }) }}
     />

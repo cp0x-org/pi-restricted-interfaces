@@ -1,10 +1,11 @@
-// Page metadata (title, description, canonical path, JSON-LD) shared by the running app (usePageMeta) and by the
-// build-time prerender in vite.config.mts. Keep this file free of browser APIs, import.meta.env and baseUrl imports.
+// Page metadata (title, description, canonical path, hreflang alternates, JSON-LD) for both UI languages, shared by
+// the running app (usePageMeta) and the build-time prerender in vite.config.mts. Keep this file free of browser APIs,
+// import.meta.env and baseUrl imports.
 import type { DatasetMeta, InterfaceEntry } from '../types/restrictions';
-import { LAYER_LABELS, LEVEL_DESCRIPTIONS } from '../views/monitor/constants';
+import { en, Messages } from '../i18n/en';
+import { zh } from '../i18n/zh';
+import { HREFLANG, Lang, LANGS_ALL, OG_LOCALE, localizePath } from '../i18n/paths';
 
-export const SITE_NAME = 'DeFi Interface Restrictions Monitor';
-const SITE_BRAND = 'cp0x';
 export const TWITTER_HANDLE = '@cp0xdotcom';
 export const OG_IMAGE_PATH = '/og-image.png';
 const ORG = {
@@ -14,11 +15,21 @@ const ORG = {
   sameAs: ['https://x.com/cp0xdotcom', 'https://t.me/cp0xdotcom']
 };
 
+export const catalog = (lang: Lang): Messages => (lang === 'zh' ? zh : en);
+
+interface Alternate {
+  hreflang: string;
+  path: string;
+}
+
 export interface PageMeta {
+  lang: Lang;
   title: string;
   description: string;
-  /** Canonical path ('/monitor/aave'); the site origin is added by the caller. */
+  /** Canonical path of this language version ('/zh/monitor/aave'); the site origin is added by the caller. */
   path: string;
+  /** hreflang cluster: every language version plus x-default (English). */
+  alternates: Alternate[];
   noindex?: boolean;
   type?: 'website' | 'article';
   jsonLd?: Record<string, unknown>;
@@ -27,48 +38,71 @@ export interface PageMeta {
 /** Joins the configured site origin and a path; returns the bare path when the origin is unknown. */
 export const absoluteUrl = (siteUrl: string, path: string): string => (siteUrl ? siteUrl.replace(/\/+$/, '') + path : path);
 
-/** Cuts text at a word boundary so meta descriptions stay within what search engines display. */
-function clip(text: string, max = 160): string {
+/** Cuts text at a word (or, for CJK, character) boundary so meta descriptions stay within what search engines display. */
+function clip(text: string, max: number): string {
   const clean = text.replace(/\s+/g, ' ').trim();
   if (clean.length <= max) return clean;
   const cut = clean.slice(0, max - 1);
-  return cut.slice(0, cut.lastIndexOf(' ')).replace(/[,;:.\s-]+$/, '') + '…';
+  const space = cut.lastIndexOf(' ');
+  return (space > max * 0.6 ? cut.slice(0, space) : cut).replace(/[,;:.，；：。\s-]+$/, '') + '…';
 }
 
-/** Short plain-language summary of what an interface restricts, e.g. "geo-blocks 22 countries; screens wallets (own API)". */
-function restrictionSummary(e: InterfaceEntry): string {
+/** hreflang alternates for a language-neutral path ('/monitor/aave'). */
+export const alternatesFor = (basePath: string): Alternate[] => [
+  ...LANGS_ALL.map((l) => ({ hreflang: HREFLANG[l], path: localizePath(basePath, l) })),
+  { hreflang: 'x-default', path: basePath }
+];
+
+export const ogLocale = (lang: Lang): string => OG_LOCALE[lang];
+
+/** Short plain-language summary of what an interface restricts, in the given language. */
+function restrictionSummary(e: InterfaceEntry, lang: Lang): string {
+  const t = catalog(lang);
+  const S = t.seo.summary;
   const parts: string[] = [];
   const geo = e.geo_site;
-  if (geo.s === 'yes') parts.push(geo.countries.length ? `geo-blocks ${geo.countries.length} countries` : 'geo-blocks the site');
-  else if (geo.s === 'reported') parts.push('reported geo-block');
-  else if (geo.s === 'tos_only') parts.push('geo-block only in its ToS');
-  if (geo.close_only.length) parts.push(`close-only in ${geo.close_only.length} more`);
-  if (e.geo_feature.s === 'yes') parts.push('hides features or assets by country');
+  if (geo.s === 'yes') parts.push(geo.countries.length ? S.geoBlocks(geo.countries.length) : S.geoBlocksSite);
+  else if (geo.s === 'reported') parts.push(S.geoReported);
+  else if (geo.s === 'tos_only') parts.push(S.geoTos);
+  if (geo.close_only.length) parts.push(S.closeOnly(geo.close_only.length));
+  if (e.geo_feature.s === 'yes') parts.push(S.feature);
   if (e.screening.s === 'yes' || e.screening.s === 'reported')
-    parts.push(`screens wallets${e.screening.layer ? ` (${LAYER_LABELS[e.screening.layer]})` : ''}`);
-  if (e.vpn.s === 'detect' || e.vpn.s === 'block') parts.push(e.vpn.s === 'block' ? 'blocks VPN users' : 'detects VPN users');
-  return parts.length ? parts.join('; ') : 'no technical restriction found';
+    parts.push(S.screens(e.screening.layer ? t.labels.LAYER_LABELS[e.screening.layer] : ''));
+  if (e.vpn.s === 'detect' || e.vpn.s === 'block') parts.push(e.vpn.s === 'block' ? S.vpnBlock : S.vpnDetect);
+  return parts.length ? parts.join(S.sep) : S.none;
 }
 
-export function monitorMeta(meta: DatasetMeta, interfaces: InterfaceEntry[], siteUrl: string): PageMeta {
+const breadcrumb = (siteUrl: string, items: [string, string][]) => ({
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map(([name, path], n) => ({ '@type': 'ListItem', position: n + 1, name, item: absoluteUrl(siteUrl, path) }))
+});
+
+export function monitorMeta(meta: DatasetMeta, interfaces: InterfaceEntry[], siteUrl: string, lang: Lang = 'en'): PageMeta {
+  const t = catalog(lang);
   const withAlt = interfaces.filter((i) => i.alternatives.length > 0).length;
-  const description = clip(
-    `Which official DeFi interfaces geo-block countries, screen wallets or hide features: ${interfaces.length} EVM apps ranked A–D with evidence, per-country status and ${withAlt} permissionless alternatives.`
-  );
+  const path = localizePath('/monitor', lang);
   return {
-    title: `${SITE_NAME} | ${SITE_BRAND}`,
-    description,
-    path: '/monitor',
+    lang,
+    title: t.pageTitle.monitor,
+    description: clip(t.seo.monitorDescription(interfaces.length, withAlt), t.seo.descriptionMax),
+    path,
+    alternates: alternatesFor('/monitor'),
     jsonLd: {
       '@context': 'https://schema.org',
       '@graph': [
-        { '@type': 'WebSite', name: SITE_NAME, url: absoluteUrl(siteUrl, '/'), publisher: ORG },
+        {
+          '@type': 'WebSite',
+          name: t.seo.siteName,
+          url: absoluteUrl(siteUrl, localizePath('/', lang)),
+          inLanguage: HREFLANG[lang],
+          publisher: ORG
+        },
         {
           '@type': 'Dataset',
-          name: 'Access restrictions in official DeFi interfaces',
-          description:
-            'Catalog of geo-blocking, feature and asset gating, wallet screening and VPN detection in the official web interfaces of DeFi protocols on EVM networks, with the enforcement layer, fork readiness and evidence for every claim.',
-          url: absoluteUrl(siteUrl, '/monitor'),
+          name: t.seo.datasetName,
+          description: t.seo.datasetDescription,
+          url: absoluteUrl(siteUrl, path),
+          inLanguage: HREFLANG[lang],
           creator: ORG,
           dateModified: meta.generated,
           isAccessibleForFree: true,
@@ -87,77 +121,86 @@ export function monitorMeta(meta: DatasetMeta, interfaces: InterfaceEntry[], sit
   };
 }
 
-export function interfaceMeta(e: InterfaceEntry, meta: DatasetMeta, siteUrl: string): PageMeta {
-  const path = `/monitor/${e.id}`;
-  const alt = e.alternatives[0];
+export function interfaceMeta(e: InterfaceEntry, meta: DatasetMeta, siteUrl: string, lang: Lang = 'en'): PageMeta {
+  const t = catalog(lang);
+  const base = `/monitor/${e.id}`;
+  const path = localizePath(base, lang);
   const description = clip(
-    `${e.name}: ${restrictionSummary(e)}. Restriction level ${e.level}.${alt ? ` Permissionless alternative: ${alt.name}.` : ''} Evidence, countries and fork notes.`
+    t.seo.ifaceDescription(e.name, restrictionSummary(e, lang), e.level, e.alternatives[0]?.name ?? ''),
+    t.seo.descriptionMax
   );
   return {
-    title: `${e.name} geo-blocking & wallet screening (level ${e.level}) | ${SITE_BRAND}`,
+    lang,
+    title: t.pageTitle.iface(e.name, e.level),
     description,
     path,
+    alternates: alternatesFor(base),
     type: 'article',
     jsonLd: {
       '@context': 'https://schema.org',
       '@graph': [
         {
           '@type': 'WebPage',
-          name: `${e.name}: access restrictions of the official interface`,
+          name: t.seo.ifacePageName(e.name),
           description,
           url: absoluteUrl(siteUrl, path),
+          inLanguage: HREFLANG[lang],
           dateModified: meta.generated,
-          isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: absoluteUrl(siteUrl, '/') },
+          isPartOf: { '@type': 'WebSite', name: t.seo.siteName, url: absoluteUrl(siteUrl, localizePath('/', lang)) },
           about: {
             '@type': 'WebApplication',
             name: e.name,
             url: e.url,
-            description: e.description,
+            description: lang === 'zh' && e.description_zh ? e.description_zh : e.description,
             applicationCategory: 'FinanceApplication',
             operatingSystem: 'Web'
           }
         },
-        {
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Monitor', item: absoluteUrl(siteUrl, '/monitor') },
-            { '@type': 'ListItem', position: 2, name: e.name, item: absoluteUrl(siteUrl, path) }
-          ]
-        }
+        breadcrumb(siteUrl, [
+          [t.layout.tabs.monitor, localizePath('/monitor', lang)],
+          [e.name, path]
+        ])
       ]
     }
   };
 }
 
-export function methodologyMeta(meta: DatasetMeta, siteUrl: string): PageMeta {
-  const description =
-    'How the monitor checks DeFi interfaces: restriction levels A–D, status values, where screening runs, per-country rules, live proxy probes and limitations.';
+export function methodologyMeta(meta: DatasetMeta, siteUrl: string, lang: Lang = 'en'): PageMeta {
+  const t = catalog(lang);
+  const path = localizePath('/methodology', lang);
+  const description = t.seo.methodologyDescription;
   return {
-    title: `Methodology: how DeFi interface restrictions are checked | ${SITE_BRAND}`,
+    lang,
+    title: t.pageTitle.methodology,
     description,
-    path: '/methodology',
+    path,
+    alternates: alternatesFor('/methodology'),
     type: 'article',
     jsonLd: {
       '@context': 'https://schema.org',
       '@graph': [
-        { '@type': 'WebPage', name: 'Methodology', description, url: absoluteUrl(siteUrl, '/methodology'), dateModified: meta.generated },
         {
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Monitor', item: absoluteUrl(siteUrl, '/monitor') },
-            { '@type': 'ListItem', position: 2, name: 'Methodology', item: absoluteUrl(siteUrl, '/methodology') }
-          ]
-        }
+          '@type': 'WebPage',
+          name: t.method.title,
+          description,
+          url: absoluteUrl(siteUrl, path),
+          inLanguage: HREFLANG[lang],
+          dateModified: meta.generated
+        },
+        breadcrumb(siteUrl, [
+          [t.layout.tabs.monitor, localizePath('/monitor', lang)],
+          [t.method.title, path]
+        ])
       ]
     }
   };
 }
 
-export const notFoundMeta = (): PageMeta => ({
-  title: `Page not found | ${SITE_BRAND}`,
-  description: 'This page does not exist in the DeFi Interface Restrictions Monitor.',
+export const notFoundMeta = (lang: Lang = 'en'): PageMeta => ({
+  lang,
+  title: catalog(lang).pageTitle.notFound,
+  description: catalog(lang).seo.notFoundDescription,
   path: '',
+  alternates: [],
   noindex: true
 });
-
-export const levelSentence = (e: InterfaceEntry): string => `Restriction level ${e.level}: ${LEVEL_DESCRIPTIONS[e.level]}.`;

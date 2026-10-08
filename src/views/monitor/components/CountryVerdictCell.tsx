@@ -1,8 +1,8 @@
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { CountryVerdict } from 'types/restrictions';
+import { useI18n } from 'i18n';
 import CountryStatusChip from './CountryStatusChip';
-import { BASIS_LABELS, OBS_STATE_LABELS, PROXY_TYPE_LABELS } from '../constants';
 
 interface CountryVerdictCellProps {
   verdict: CountryVerdict;
@@ -14,9 +14,10 @@ interface CountryVerdictCellProps {
 
 /** Country verdict chip plus, when the P3 probe has data, a note about the live observation. */
 export default function CountryVerdictCell({ verdict, compact = false, prefix }: CountryVerdictCellProps) {
+  const { t, L } = useI18n();
   const o = verdict.observation;
   if (compact) {
-    const caption = [BASIS_LABELS[verdict.basis], o && `probed ${o.at.slice(0, 10)}`, verdict.conflict && 'conflict']
+    const caption = [L.BASIS_LABELS[verdict.basis], o && t.chips.probed(o.at.slice(0, 10)), verdict.conflict && t.chips.conflict]
       .filter(Boolean)
       .join(' · ');
     return (
@@ -33,7 +34,7 @@ export default function CountryVerdictCell({ verdict, compact = false, prefix }:
           variant="caption"
           color={verdict.conflict ? 'warning.main' : 'text.secondary'}
           component="div"
-          data-basis={BASIS_LABELS[verdict.basis]}
+          data-basis={L.BASIS_LABELS[verdict.basis]}
         >
           {caption}
         </Typography>
@@ -45,12 +46,8 @@ export default function CountryVerdictCell({ verdict, compact = false, prefix }:
       <CountryStatusChip verdict={verdict} />
       {o && (
         <Typography variant="caption" color={verdict.conflict ? 'warning.main' : 'text.secondary'} component="div">
-          probed {o.at.slice(0, 10)} · {PROXY_TYPE_LABELS[o.proxy_type]} · {OBS_STATE_LABELS[o.ui_state]}
-          {verdict.conflict
-            ? o.ui_state === 'ok'
-              ? ' (landing page served: the block is not at the edge)'
-              : ' (disagrees with the static verdict)'
-            : ''}
+          {t.chips.probed(o.at.slice(0, 10))} · {L.PROXY_TYPE_LABELS[o.proxy_type]} · {L.OBS_STATE_LABELS[o.ui_state]}
+          {verdict.conflict ? (o.ui_state === 'ok' ? t.chips.servedNotEdge : t.chips.disagreesShort) : ''}
         </Typography>
       )}
     </>

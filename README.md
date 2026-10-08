@@ -33,15 +33,30 @@ schema, the static scanner and the evidence verifier, [`monitor/docs/roadmap.md`
 monitor architecture (live probes, proxies, mock wallet, scoring, alerts) and
 [`monitor/prompts/auditor-agent.md`](monitor/prompts/auditor-agent.md) for the LLM auditor prompt.
 
+## Languages
+
+The site is published in English and Simplified Chinese. The language is part of the URL: English pages keep their
+paths (`/monitor`, `/monitor/aave`, `/methodology`), Chinese pages live under `/zh` (`/zh/monitor`, `/zh/monitor/aave`,
+`/zh/methodology`). The EN / 中文 dropdown in the header links to the same page in the other language; the last
+choice is remembered and used only for `/` (browsers with a Chinese locale start in Chinese).
+
+Strings live in `src/i18n/en.ts` (reference) and `src/i18n/zh.ts`, which is typed against it, so a missing translation
+fails `pnpm build`; components read them through `useI18n()`, whose `path()` keeps internal links in the current
+language. Protocol descriptions have a `description_zh` field in `monitor/data/interfaces.json`; technical fields quoted
+from sources (mechanism details, providers, fork notes, evidence) stay in English.
+
 ## SEO and deployment
 
 `pnpm build` prerenders every public route from `src/data/interfaces.json` (Vite plugin in `vite.config.mts`, code in
 `src/seo/prerender.ts`), so crawlers and link previews get real HTML without running JavaScript:
 
-- `index.html` and `monitor.html` (catalog table with links to every interface), `methodology.html`, and
-  `monitor/<id>.html` for each interface: own `<title>`, meta description, canonical, Open Graph/Twitter tags, JSON-LD
-  (`Dataset` + `WebSite` on the catalog, `WebPage` + `BreadcrumbList` on interface pages) and a static copy of the content;
-- `404.html` (`noindex`), `robots.txt`, `sitemap.xml`, `og-image.png`.
+- for each language (English at the root, Chinese under `zh/`): `monitor.html` (catalog table with links to every
+  interface), `methodology.html` and `monitor/<id>.html` per interface, plus `index.html` / `zh.html` for `/` and `/zh`.
+  Every page has its own `<title>`, meta description, `<html lang>`, canonical, `hreflang` alternates (`en`, `zh-Hans`,
+  `x-default` → English), Open Graph/Twitter tags with `og:locale`, JSON-LD with `inLanguage` (`Dataset` + `WebSite` on
+  the catalog, `WebPage` + `BreadcrumbList` elsewhere) and a static copy of the content in that language;
+- `404.html` (`noindex`), `robots.txt`, `sitemap.xml` (every language version with `xhtml:link` hreflang alternates),
+  `og-image.png`.
 
 The app replaces the static content when it starts, and `src/seo/usePageMeta.ts` keeps `<head>` in sync during
 client-side navigation.

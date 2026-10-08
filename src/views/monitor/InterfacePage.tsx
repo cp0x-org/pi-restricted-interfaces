@@ -35,16 +35,7 @@ import MechanismCard from './components/MechanismCard';
 import RepoLink from './components/RepoLink';
 import StatusChip from './components/StatusChip';
 import ToneChip, { Tone, vpnTone } from './components/ToneChip';
-import {
-  FAIL_LABELS,
-  LAYER_DESCRIPTIONS,
-  LAYER_LABELS,
-  LEVEL_DESCRIPTIONS,
-  OBS_STATE_LABELS,
-  PROXY_TYPE_LABELS,
-  TOS_US_LABELS,
-  VPN_LABELS
-} from './constants';
+import { localized, useI18n } from 'i18n';
 
 const OBS_TONE: Record<string, Tone> = {
   ok: 'good',
@@ -60,19 +51,21 @@ export default function InterfacePage() {
   const theme = useTheme();
   const { id } = useParams<{ id: string }>();
   const entry = id ? interfacesById.get(id) : undefined;
-  usePageMeta(useMemo(() => (entry ? interfaceMeta(entry, dataset.meta, siteUrl()) : notFoundMeta()), [entry]));
+  const { lang, t, L, path } = useI18n();
+  const T = t.iface;
+  usePageMeta(useMemo(() => (entry ? interfaceMeta(entry, dataset.meta, siteUrl(), lang) : notFoundMeta(lang)), [entry, lang]));
 
   if (!entry) {
     return (
       <Box sx={{ textAlign: 'center', py: 6 }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          Interface not found
+          {T.notFound}
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-          There is no interface with id “{id}” in the catalog.
+          {T.notFoundText(id ?? '')}
         </Typography>
-        <Button component={RouterLink} to="/monitor" startIcon={<ArrowBackIcon />} variant="outlined">
-          Back to the monitor
+        <Button component={RouterLink} to={path('/monitor')} startIcon={<ArrowBackIcon />} variant="outlined">
+          {T.back}
         </Button>
       </Box>
     );
@@ -83,8 +76,8 @@ export default function InterfacePage() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Button component={RouterLink} to="/monitor" startIcon={<ArrowBackIcon />} size="small" sx={{ mb: 2 }}>
-        All interfaces
+      <Button component={RouterLink} to={path('/monitor')} startIcon={<ArrowBackIcon />} size="small" sx={{ mb: 2 }}>
+        {T.all}
       </Button>
 
       <Paper sx={{ p: 3, mb: 3 }}>
@@ -97,11 +90,11 @@ export default function InterfacePage() {
               <LevelChip level={entry.level} size="medium" />
             </Stack>
             <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
-              {entry.category} · {entry.chains}
+              {lang === 'en' ? entry.category : L.CATEGORY_GROUP_LABELS[entry.category_group]} · {entry.chains}
             </Typography>
             {entry.description && (
               <Typography variant="body1" sx={{ mt: 1.5, maxWidth: 720 }}>
-                {entry.description}
+                {localized(lang, entry.description, entry.description_zh)}
               </Typography>
             )}
             {entry.networks.length > 0 && (
@@ -112,7 +105,7 @@ export default function InterfacePage() {
               </Stack>
             )}
             <Typography variant="body2" sx={{ mt: 1.5, maxWidth: 720 }}>
-              {LEVEL_DESCRIPTIONS[entry.level]}
+              {L.LEVEL_DESCRIPTIONS[entry.level]}
             </Typography>
             <Stack direction="row" spacing={1} sx={{ mt: 2, flexWrap: 'wrap', rowGap: 1 }}>
               <Button
@@ -137,7 +130,7 @@ export default function InterfacePage() {
                   color="secondary"
                   startIcon={<GitHubIcon />}
                 >
-                  Frontend code
+                  {T.frontendCode}
                 </Button>
               )}
               {entry.alternatives.map((a) => (
@@ -152,7 +145,7 @@ export default function InterfacePage() {
                   endIcon={<LaunchIcon />}
                   sx={{ textTransform: 'none' }}
                 >
-                  Permissionless alternative: {a.name}
+                  {T.altPrefix} {a.name}
                 </Button>
               ))}
             </Stack>
@@ -165,7 +158,7 @@ export default function InterfacePage() {
                     <ForkChip fork={entry.fork_ready} />
                   </Box>
                   <Typography variant="body2" sx={{ color: theme.palette.grey[500] }}>
-                    Fork readiness
+                    {T.forkReadiness}
                   </Typography>
                 </Stack>
               </Grid>
@@ -175,17 +168,18 @@ export default function InterfacePage() {
                     <RepoLink entry={entry} />
                   </Box>
                   <Typography variant="body2" sx={{ color: theme.palette.grey[500] }}>
-                    Frontend code{entry.repo_last_commit ? ` · last commit ${entry.repo_last_commit}` : ''}
+                    {T.frontendCode}
+                    {entry.repo_last_commit ? T.lastCommit(entry.repo_last_commit) : ''}
                   </Typography>
                 </Stack>
               </Grid>
               <Grid size={{ xs: 6 }}>
                 <Stack spacing={0.5}>
                   <Typography variant="h5" component="p">
-                    {entry.confidence}
+                    {L.CONFIDENCE_LABELS[entry.confidence]}
                   </Typography>
                   <Typography variant="body2" sx={{ color: theme.palette.grey[500] }}>
-                    Confidence
+                    {T.confidence}
                   </Typography>
                 </Stack>
               </Grid>
@@ -195,7 +189,7 @@ export default function InterfacePage() {
                     {dataset.meta.generated}
                   </Typography>
                   <Typography variant="body2" sx={{ color: theme.palette.grey[500] }}>
-                    Checked
+                    {T.checked}
                   </Typography>
                 </Stack>
               </Grid>
@@ -207,40 +201,42 @@ export default function InterfacePage() {
       <Grid container spacing={3} sx={{ mb: 3 }}>
         <Grid size={{ xs: 12, md: 6 }}>
           <MechanismCard
-            title="Geo Block"
+            title={L.MECHANISM_LABELS.geo_site}
             chip={<StatusChip status={entry.geo_site.s} />}
-            rows={[{ label: 'How it is enforced', value: entry.geo_site.method }]}
+            rows={[{ label: T.howEnforced, value: entry.geo_site.method }]}
             countries={[
-              { label: 'Blocked countries', tokens: entry.geo_site.countries },
-              { label: 'Close-only countries', tokens: entry.geo_site.close_only }
+              { label: T.blockedCountries, tokens: entry.geo_site.countries },
+              { label: T.closeOnlyCountries, tokens: entry.geo_site.close_only }
             ]}
           />
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
           <MechanismCard
-            title="Feature Block"
+            title={L.MECHANISM_LABELS.geo_feature}
             chip={<StatusChip status={entry.geo_feature.s} />}
             rows={[
-              { label: 'Scope', value: entry.geo_feature.scope },
-              { label: 'Asset filter', value: entry.asset_filter }
+              { label: T.scope, value: entry.geo_feature.scope },
+              { label: T.assetFilter, value: entry.asset_filter }
             ]}
-            countries={[{ label: 'Affected countries', tokens: entry.geo_feature.countries }]}
+            countries={[{ label: T.affected, tokens: entry.geo_feature.countries }]}
           />
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
           <MechanismCard
-            title="Wallet screening"
+            title={L.MECHANISM_LABELS.screening}
             chip={<StatusChip status={entry.screening.s} />}
             rows={[
-              { label: 'Provider / endpoint', value: entry.screening.provider },
+              { label: T.provider, value: entry.screening.provider },
               {
-                label: 'Where it runs',
-                value: entry.screening.layer ? `${LAYER_LABELS[entry.screening.layer]} — ${LAYER_DESCRIPTIONS[entry.screening.layer]}` : ''
+                label: T.whereRuns,
+                value: entry.screening.layer
+                  ? `${L.LAYER_LABELS[entry.screening.layer]} — ${L.LAYER_DESCRIPTIONS[entry.screening.layer]}`
+                  : ''
               },
               {
-                label: 'Fail mode',
+                label: T.failMode,
                 value: entry.screening.fail
-                  ? `${FAIL_LABELS[entry.screening.fail]}${entry.screening.fail_note ? ` (${entry.screening.fail_note})` : ''}`
+                  ? `${L.FAIL_LABELS[entry.screening.fail]}${entry.screening.fail_note ? ` (${entry.screening.fail_note})` : ''}`
                   : ''
               }
             ]}
@@ -248,59 +244,65 @@ export default function InterfacePage() {
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
           <MechanismCard
-            title="VPN / Tor detection"
-            chip={<ToneChip tone={vpnTone(entry.vpn.s)} label={VPN_LABELS[entry.vpn.s]} />}
-            rows={[{ label: 'Note', value: entry.vpn.note }]}
+            title={L.MECHANISM_LABELS.vpn}
+            chip={<ToneChip tone={vpnTone(entry.vpn.s)} label={L.VPN_LABELS[entry.vpn.s]} />}
+            rows={[{ label: T.note, value: entry.vpn.note }]}
           />
         </Grid>
         <Grid size={{ xs: 12 }}>
           <MechanismCard
-            title="Terms of Service"
+            title={T.tos}
             chip={
               <Chip
                 size="small"
                 variant="outlined"
                 color={entry.tos.us === 'yes' ? 'error' : entry.tos.us === 'partial' ? 'warning' : 'default'}
-                label={`US persons: ${TOS_US_LABELS[entry.tos.us]}${entry.tos.us_scope ? ` (${entry.tos.us_scope})` : ''}`}
+                label={`${T.usPersons}: ${L.TOS_US_LABELS[entry.tos.us]}${entry.tos.us_scope ? ` (${entry.tos.us_scope})` : ''}`}
               />
             }
             rows={[
               {
-                label: 'Document',
+                label: T.document,
                 value: entry.tos.url ? (
                   <Link href={entry.tos.url} target="_blank" rel="noopener noreferrer" underline="hover">
                     {entry.tos.url.replace(/^https?:\/\//, '')}
                   </Link>
                 ) : (
-                  'Not found'
+                  T.notFoundDoc
                 )
               },
-              { label: 'Last updated', value: entry.tos.updated },
-              { label: 'Restricted jurisdictions (as written)', value: entry.tos.restricted }
+              { label: T.lastUpdated, value: entry.tos.updated },
+              { label: T.restrictedAsWritten, value: entry.tos.restricted }
             ]}
-            countries={[{ label: 'Named jurisdictions', tokens: entry.tos.restricted_codes }]}
+            countries={[{ label: T.named, tokens: entry.tos.restricted_codes }]}
           />
         </Grid>
       </Grid>
 
+      {T.dataNote && (
+        <Typography variant="caption" color="text.secondary" component="p" sx={{ mt: -1.5, mb: 2 }}>
+          {T.dataNote}
+        </Typography>
+      )}
+
       <Grid container spacing={3}>
         <Grid size={{ xs: 12, md: 6 }}>
-          <SubCard title="Fork notes" titleComponent="h2" sx={{ height: '100%' }}>
+          <SubCard title={T.forkNotes} titleComponent="h2" sx={{ height: '100%' }}>
             <Typography variant="body2" sx={{ whiteSpace: 'pre-line' }}>
-              {entry.fork_notes || 'No notes.'}
+              {entry.fork_notes || T.noNotes}
             </Typography>
             {entry.repo_status && (
               <Typography variant="caption" color="text.secondary" component="div" sx={{ mt: 1.5 }}>
-                Repository status: {entry.repo_status}
+                {T.repoStatus}: {entry.repo_status}
               </Typography>
             )}
           </SubCard>
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
-          <SubCard title="Live checks" titleComponent="h2" sx={{ height: '100%' }}>
+          <SubCard title={T.liveChecks} titleComponent="h2" sx={{ height: '100%' }}>
             {liveChecks.length === 0 ? (
               <Typography variant="body2" color="text.secondary">
-                No live checks recorded.
+                {T.noLive}
               </Typography>
             ) : (
               <List dense disablePadding>
@@ -312,48 +314,49 @@ export default function InterfacePage() {
               </List>
             )}
             <Typography variant="caption" color="text.secondary" component="div" sx={{ mt: 1.5 }}>
-              Egress: {dataset.meta.live_check_egress}
+              {T.egress}: {dataset.meta.live_check_egress}
             </Typography>
             {entry.geo_endpoints.length > 0 && (
               <Typography variant="caption" color="text.secondary" component="div" sx={{ mt: 1 }}>
-                Probe endpoints: {entry.geo_endpoints.join(', ')}
+                {T.probeEndpoints}: {entry.geo_endpoints.join(', ')}
               </Typography>
             )}
           </SubCard>
         </Grid>
         <Grid size={{ xs: 12 }}>
-          <SubCard title="Live observations by country" titleComponent="h2">
+          <SubCard title={T.observations} titleComponent="h2">
             {entry.observations.length === 0 ? (
               <Typography variant="body2" color="text.secondary">
-                Not probed yet. The P3 probe (monitor/scripts/probe.py) records, per country and proxy type, whether the landing page and
-                the known geo endpoints are served, blocked or challenged.
+                {T.notProbed}
               </Typography>
             ) : (
               <TableContainer>
                 <Table size="small" aria-label="live observations">
                   <TableHead>
                     <TableRow>
-                      <TableCell>Country</TableCell>
-                      <TableCell>Vantage</TableCell>
-                      <TableCell>Target</TableCell>
-                      <TableCell>Result</TableCell>
-                      <TableCell>HTTP</TableCell>
-                      <TableCell>When</TableCell>
+                      <TableCell>{T.obsCols.country}</TableCell>
+                      <TableCell>{T.obsCols.vantage}</TableCell>
+                      <TableCell>{T.obsCols.target}</TableCell>
+                      <TableCell>{T.obsCols.result}</TableCell>
+                      <TableCell>{T.obsCols.http}</TableCell>
+                      <TableCell>{T.obsCols.when}</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
                     {entry.observations.map((o) => (
                       <TableRow key={`${o.country}-${o.region ?? ''}-${o.proxy_type}-${o.kind}-${o.url}`}>
-                        <TableCell sx={{ whiteSpace: 'nowrap' }}>{tokenLabel(o.region ?? o.country)}</TableCell>
-                        <TableCell>{PROXY_TYPE_LABELS[o.proxy_type]}</TableCell>
+                        <TableCell sx={{ whiteSpace: 'nowrap' }}>
+                          {tokenLabel(o.region ?? o.country, t.intlLocale, L.REGION_LABELS)}
+                        </TableCell>
+                        <TableCell>{L.PROXY_TYPE_LABELS[o.proxy_type]}</TableCell>
                         <TableCell sx={{ wordBreak: 'break-all' }}>
                           <Typography variant="caption" color="text.secondary" component="div">
-                            {o.kind === 'site' ? 'landing page' : 'geo endpoint'}
+                            {o.kind === 'site' ? T.landing : T.geoEndpoint}
                           </Typography>
                           {o.url}
                         </TableCell>
                         <TableCell>
-                          <ToneChip tone={OBS_TONE[o.ui_state]} label={OBS_STATE_LABELS[o.ui_state]} tooltip={o.note || undefined} />
+                          <ToneChip tone={OBS_TONE[o.ui_state]} label={L.OBS_STATE_LABELS[o.ui_state]} tooltip={o.note || undefined} />
                           {Object.keys(o.flags).length > 0 && (
                             <Typography variant="caption" color="text.secondary" component="div">
                               {Object.entries(o.flags)
@@ -380,11 +383,11 @@ export default function InterfacePage() {
           </SubCard>
         </Grid>
         <Grid size={{ xs: 12 }}>
-          <SubCard title="Evidence" titleComponent="h2">
+          <SubCard title={T.evidence} titleComponent="h2">
             <EvidenceList links={links} />
             {entry.frontend_repo && (
               <Typography variant="caption" color="text.secondary" component="div" sx={{ mt: 1.5 }}>
-                Paths are relative to the repository root at the default branch on {dataset.meta.generated}.
+                {T.pathsNote(dataset.meta.generated)}
               </Typography>
             )}
           </SubCard>
@@ -392,7 +395,7 @@ export default function InterfacePage() {
         {entry.tos.restricted_codes.length > 0 && entry.geo_site.countries.length === 0 && (
           <Grid size={{ xs: 12 }}>
             <Typography variant="caption" color="text.secondary">
-              Countries named in the ToS: <CountryTokenChips tokens={entry.tos.restricted_codes} max={40} />
+              {T.tosCountries} <CountryTokenChips tokens={entry.tos.restricted_codes} max={40} />
             </Typography>
           </Grid>
         )}

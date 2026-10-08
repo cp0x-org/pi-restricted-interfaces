@@ -16,30 +16,33 @@ const ISO2_SET = new Set(ISO2);
 
 export const isCountryCode = (code: string | undefined | null): code is string => !!code && ISO2_SET.has(code);
 
-let displayNames: Intl.DisplayNames | null | undefined;
+const displayNames = new Map<string, Intl.DisplayNames | null>();
 
-function getDisplayNames(): Intl.DisplayNames | null {
-  if (displayNames !== undefined) return displayNames;
-  try {
-    displayNames = new Intl.DisplayNames(['en'], { type: 'region' });
-  } catch {
-    displayNames = null;
+function getDisplayNames(locale: string): Intl.DisplayNames | null {
+  if (!displayNames.has(locale)) {
+    try {
+      displayNames.set(locale, new Intl.DisplayNames([locale], { type: 'region' }));
+    } catch {
+      displayNames.set(locale, null);
+    }
   }
-  return displayNames;
+  return displayNames.get(locale) ?? null;
 }
 
 const nameCache = new Map<string, string>();
 
-export function countryName(code: string): string {
-  const cached = nameCache.get(code);
+/** Country name in the given UI locale ('en', 'zh-Hans'); falls back to the code. */
+export function countryName(code: string, locale = 'en'): string {
+  const key = `${locale}:${code}`;
+  const cached = nameCache.get(key);
   if (cached) return cached;
   let name = code;
   try {
-    name = getDisplayNames()?.of(code) ?? code;
+    name = getDisplayNames(locale)?.of(code) ?? code;
   } catch {
     name = code;
   }
-  nameCache.set(code, name);
+  nameCache.set(key, name);
   return name;
 }
 
@@ -54,15 +57,17 @@ export const flagEmoji = (code: string): string =>
       )
     : '';
 
-export const regionLabel = (token: CountryToken): string => dataset.meta.regions[token] ?? token.slice(token.indexOf('-') + 1);
+/** Region name: translated label if provided, else the English name from the dataset. */
+export const regionLabel = (token: CountryToken, translated: Record<string, string> = {}): string =>
+  translated[token] ?? dataset.meta.regions[token] ?? token.slice(token.indexOf('-') + 1);
 
 /** 'US' -> '🇺🇸 United States'; 'UA-Crimea' -> '🇺🇦 Crimea and Sevastopol (UA)'. */
-export function tokenLabel(token: CountryToken): string {
+export function tokenLabel(token: CountryToken, locale = 'en', regions: Record<string, string> = {}): string {
   if (isRegionToken(token)) {
     const parent = parentOf(token);
-    return `${flagEmoji(parent)} ${regionLabel(token)} (${parent})`;
+    return `${flagEmoji(parent)} ${regionLabel(token, regions)} (${parent})`;
   }
-  return `${flagEmoji(token)} ${countryName(token)}`;
+  return `${flagEmoji(token)} ${countryName(token, locale)}`;
 }
 
 /** Region subtag of the browser locale ('en-US' -> 'US'), only when it is a real country code. No network. */
@@ -80,5 +85,17 @@ export function defaultCountryFromNavigator(): string | null {
   return null;
 }
 
-/** All countries sorted by English name, for the picker. */
-export const COUNTRY_OPTIONS: readonly string[] = [...ISO2].sort((a, b) => countryName(a).localeCompare(countryName(b)));
+const optionsCache = new Map<string, readonly string[]>();
+
+/** All country codes sorted by their name in the given locale, for pickers and filters. */
+export function countryOptions(locale = 'en'): readonly string[] {
+  let list = optionsCache.get(locale);
+  if (!list) {
+    list = [...ISO2].sort((a, b) => countryName(a, locale).localeCompare(countryName(b, locale), locale));
+    optionsCache.set(locale, list);
+  }
+  return list;
+}
+
+/** All countries sorted by English name (standalone country page). */
+export const COUNTRY_OPTIONS: readonly string[] = countryOptions('en');

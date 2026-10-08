@@ -4,16 +4,17 @@ import { ReactComponent as Cp0xLogo } from '@/assets/images/cp0x-logo.svg';
 import Link from '@mui/material/Link';
 
 // project imports
-import { DASHBOARD_PATH } from 'config';
+import { useI18n } from 'i18n';
 
 // ==============================|| MAIN LOGO ||============================== //
 
 export default function LogoSection() {
+  const { t, path } = useI18n();
   return (
     <Link
       component={RouterLink}
-      to={DASHBOARD_PATH}
-      aria-label="cp0x DeFi Interface Restrictions Monitor, home"
+      to={path('/monitor')}
+      aria-label={t.layout.homeLogo}
       sx={{
         display: 'flex',
         flexDirection: 'column',

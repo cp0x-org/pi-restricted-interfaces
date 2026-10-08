@@ -33,6 +33,7 @@
       "id": "uniswap",
       "name": "Uniswap",
       "description": "Uniswap is a decentralized exchange protocol where tokens are swapped against automated market maker (AMM) liquidity pools instead of an order book. Uniswap Labs runs the official web app, which routes trades across Uniswap v2, v3 and v4 pools on Ethereum and many layer-2 and EVM networks; liquidity providers earn swap fees and the protocol is governed by UNI holders.",
+      "description_zh": "Uniswap 是一个去中心化交易所协议，用户通过自动做市商（AMM）流动性池而非订单簿兑换代币。Uniswap Labs 运营官方网页应用，可在以太坊及众多二层网络和 EVM 网络上的 Uniswap v2、v3、v4 池之间路由交易；流动性提供者赚取交易手续费，协议由 UNI 持有者治理。",
       "category": "DEX",
       "chains": "EVM, Solana",
       "networks": [
@@ -120,6 +121,7 @@
       "id": "sushiswap",
       "name": "SushiSwap",
       "description": "SushiSwap is a community-run decentralized exchange that started in 2020 as a fork of Uniswap v2. Today it combines classic and concentrated-liquidity AMM pools with a swap aggregator and cross-chain swaps on dozens of EVM networks, plus perpetuals routed to Hyperliquid; SUSHI is its governance token.",
+      "description_zh": "SushiSwap 是一个社区运营的去中心化交易所，2020 年作为 Uniswap v2 的分叉起步。如今它在数十个 EVM 网络上结合了经典 AMM 池与集中流动性池、兑换聚合器和跨链兑换，并通过 Hyperliquid 提供永续合约；SUSHI 是其治理代币。",
       "category": "DEX",
       "chains": "EVM (+ perps via Hyperliquid)",
       "networks": [
@@ -239,6 +241,7 @@
       "id": "pancakeswap",
       "name": "PancakeSwap",
       "description": "PancakeSwap is the largest decentralized exchange on BNB Chain and also runs on Ethereum, Arbitrum, Base and other networks. Besides AMM swaps with v2 and v3 concentrated-liquidity pools, it offers yield farms, perpetuals and prediction games, with CAKE as its token.",
+      "description_zh": "PancakeSwap 是 BNB Chain 上最大的去中心化交易所，也部署在以太坊、Arbitrum、Base 等网络。除了基于 v2 和 v3 集中流动性池的 AMM 兑换，它还提供流动性挖矿、永续合约和预测游戏，代币为 CAKE。",
       "category": "DEX",
       "chains": "BNB, EVM, Solana",
       "networks": [
@@ -322,6 +325,7 @@
       "id": "curve",
       "name": "Curve",
       "description": "Curve Finance is an automated market maker built for low-slippage trading between assets that should trade near the same price, such as stablecoins and liquid-staking tokens. It also issues the crvUSD stablecoin and runs Llamalend lending markets; CRV holders lock tokens as veCRV to vote on how pool rewards are distributed.",
+      "description_zh": "Curve Finance 是一个自动做市商，专为价格本应接近的资产之间的低滑点交易而设计，例如稳定币和流动性质押代币。它还发行 crvUSD 稳定币并运营 Llamalend 借贷市场；CRV 持有者将代币锁定为 veCRV，投票决定池奖励的分配。",
       "category": "DEX",
       "chains": "EVM",
       "networks": [
@@ -419,6 +423,7 @@
       "id": "balancer",
       "name": "Balancer",
       "description": "Balancer is an AMM protocol whose pools can hold several tokens in custom weights, working as self-balancing portfolios and as liquidity infrastructure for other protocols. Balancer v3 adds programmable pool hooks, and governance runs through BAL locked as veBAL.",
+      "description_zh": "Balancer 是一个 AMM 协议，其池子可以按自定义权重持有多种代币，既可作为自动再平衡的投资组合，也可作为其他协议的流动性基础设施。Balancer v3 增加了可编程的池钩子（hooks），治理通过锁定为 veBAL 的 BAL 进行。",
       "category": "DEX",
       "chains": "EVM",
       "networks": [
@@ -496,6 +501,7 @@
       "id": "cowswap",
       "name": "CoW Swap",
       "description": "CoW Swap is the trading interface of CoW Protocol, where users sign swap intents and independent solvers compete in batch auctions to settle them. Opposite orders can be matched directly as a coincidence of wants or routed through on-chain liquidity, which protects traders from MEV and means failed orders cost no gas.",
+      "description_zh": "CoW Swap 是 CoW Protocol 的交易界面：用户签署兑换意图，独立的求解者（solver）在批量拍卖中竞争结算。相反方向的订单可以作为“需求巧合”直接撮合，或路由到链上流动性，从而保护交易者免受 MEV 影响，失败的订单也不消耗 gas。",
       "category": "DEX / intents",
       "chains": "EVM",
       "networks": [
@@ -598,6 +604,7 @@
       "id": "1inch",
       "name": "1inch",
       "description": "1inch is a DEX aggregator that splits each swap across many liquidity sources to get a better price, with an intent-based Fusion mode in which resolvers fill orders without the user paying gas. It also offers limit orders, cross-chain swaps and its own wallet; 1INCH is the governance token.",
+      "description_zh": "1inch 是一个 DEX 聚合器，会把每笔兑换拆分到多个流动性来源以获得更好的价格，并提供基于意图的 Fusion 模式，由解析者（resolver）成交订单、用户无需支付 gas。它还提供限价单、跨链兑换和自有钱包；1INCH 是治理代币。",
       "category": "DEX aggregator",
       "chains": "EVM, Solana",
       "networks": [
@@ -676,6 +683,7 @@
       "id": "kyberswap",
       "name": "KyberSwap",
       "description": "KyberSwap is the DEX aggregator and liquidity platform of Kyber Network. It routes swaps across many decentralized exchanges on more than a dozen EVM networks and adds limit orders and zap tools for opening and managing liquidity positions.",
+      "description_zh": "KyberSwap 是 Kyber Network 的 DEX 聚合器和流动性平台。它在十多个 EVM 网络上的众多去中心化交易所之间路由兑换，并提供限价单以及用于建立和管理流动性仓位的 Zap 工具。",
       "category": "DEX aggregator",
       "chains": "EVM",
       "networks": [
@@ -769,6 +777,7 @@
       "id": "quickswap",
       "name": "QuickSwap",
       "description": "QuickSwap is a decentralized exchange that began as a Uniswap v2 fork on Polygon and now runs concentrated-liquidity pools, farming and perpetuals on Polygon and several other EVM networks. QUICK is its governance token.",
+      "description_zh": "QuickSwap 是一个去中心化交易所，最初是 Polygon 上的 Uniswap v2 分叉，如今在 Polygon 及其他多个 EVM 网络上运营集中流动性池、流动性挖矿和永续合约。QUICK 是其治理代币。",
       "category": "DEX",
       "chains": "Polygon, EVM",
       "networks": [
@@ -867,6 +876,7 @@
       "id": "aerodrome",
       "name": "Aerodrome",
       "description": "Aerodrome is the main AMM and liquidity hub on Base. It follows the ve(3,3) model inherited from Velodrome: AERO emissions go to the pools that veAERO holders vote for, and protocols pay incentives to voters to attract liquidity to their tokens.",
+      "description_zh": "Aerodrome 是 Base 上主要的 AMM 和流动性中心。它沿用 Velodrome 的 ve(3,3) 模型：AERO 排放分配给 veAERO 持有者投票支持的池子，各协议向投票者支付激励，以吸引流动性流向自己的代币。",
       "category": "DEX",
       "chains": "Base",
       "networks": [
@@ -968,6 +978,7 @@
       "id": "velodrome",
       "name": "Velodrome",
       "description": "Velodrome is the central AMM and liquidity marketplace of Optimism and other OP Superchain networks. Using the ve(3,3) model, veVELO holders vote where VELO emissions go and collect the fees and incentives of the pools they back.",
+      "description_zh": "Velodrome 是 Optimism 及其他 OP Superchain 网络的核心 AMM 和流动性市场。在 ve(3,3) 模型下，veVELO 持有者投票决定 VELO 排放的去向，并获得所支持池子的手续费和激励。",
       "category": "DEX",
       "chains": "Optimism, Superchain",
       "networks": [
@@ -1075,6 +1086,7 @@
       "id": "ambient",
       "name": "Ambient Finance",
       "description": "Ambient Finance, formerly CrocSwap, is a decentralized exchange that keeps every pool inside a single smart contract and combines concentrated and full-range (ambient) liquidity in the same pool. It is deployed on Ethereum, Scroll, Blast and other EVM networks.",
+      "description_zh": "Ambient Finance（原 CrocSwap）是一个去中心化交易所，把所有池子放在同一个智能合约中，并在同一个池里结合集中流动性和全区间（ambient）流动性。它部署在以太坊、Scroll、Blast 等 EVM 网络上。",
       "category": "DEX",
       "chains": "EVM (Scroll, Blast, Ethereum...)",
       "networks": [
@@ -1166,6 +1178,7 @@
       "id": "velora",
       "name": "Velora (ex-ParaSwap)",
       "description": "Velora, formerly ParaSwap, is a DEX aggregator and intent-based trading protocol. It routes swaps across many liquidity sources on Ethereum and major EVM networks, and its Delta mode lets users sign orders that agents execute on their behalf.",
+      "description_zh": "Velora（原 ParaSwap）是一个 DEX 聚合器和基于意图的交易协议。它在以太坊和主要 EVM 网络上的众多流动性来源之间路由兑换，其 Delta 模式允许用户签署订单，由代理代为执行。",
       "category": "DEX aggregator",
       "chains": "EVM",
       "networks": [
@@ -1248,6 +1261,7 @@
       "id": "matcha",
       "name": "Matcha (0x)",
       "description": "Matcha is a DEX aggregator built by 0x on top of the 0x Swap API. It finds prices across many liquidity sources on EVM networks and Solana and supports limit orders and gasless swaps.",
+      "description_zh": "Matcha 是 0x 基于 0x Swap API 构建的 DEX 聚合器。它在 EVM 网络和 Solana 上的众多流动性来源之间寻找价格，并支持限价单和免 gas 兑换。",
       "category": "DEX aggregator",
       "chains": "EVM, Solana",
       "networks": [
@@ -1326,6 +1340,7 @@
       "id": "jumper",
       "name": "Jumper (LI.FI)",
       "description": "Jumper is a cross-chain swap and bridge aggregator powered by LI.FI. It compares bridges and DEXs to move and swap assets between EVM chains, Solana, Bitcoin and Sui in a single flow.",
+      "description_zh": "Jumper 是由 LI.FI 驱动的跨链兑换和跨链桥聚合器。它比较各个跨链桥和 DEX，在一个流程中完成 EVM 链、Solana、比特币和 Sui 之间的资产转移与兑换。",
       "category": "Bridge / aggregator",
       "chains": "EVM, Solana, BTC, Sui",
       "networks": [
@@ -1423,6 +1438,7 @@
       "id": "gmx",
       "name": "GMX",
       "description": "GMX is a decentralized perpetual and spot exchange on Arbitrum and Avalanche. Traders open leveraged positions against liquidity pools (GM pools) priced by oracles rather than against an order book, and liquidity providers earn trading fees.",
+      "description_zh": "GMX 是 Arbitrum 和 Avalanche 上的去中心化永续合约与现货交易所。交易者针对由预言机定价的流动性池（GM 池）而非订单簿开立杠杆仓位，流动性提供者赚取交易手续费。",
       "category": "Perps",
       "chains": "Arbitrum, Avalanche, Botanix",
       "networks": [
@@ -1488,6 +1504,7 @@
       "id": "gtrade",
       "name": "gTrade (Gains)",
       "description": "gTrade is the leveraged trading platform of Gains Network, offering synthetic perpetuals on crypto, forex, stocks and commodities on Arbitrum, Base, Polygon and ApeChain, with liquidity supplied by gToken vaults.",
+      "description_zh": "gTrade 是 Gains Network 的杠杆交易平台，在 Arbitrum、Base、Polygon 和 ApeChain 上提供加密货币、外汇、股票和大宗商品的合成永续合约，流动性由 gToken 金库提供。",
       "category": "Perps",
       "chains": "Arbitrum, Base, Polygon, ApeChain",
       "networks": [
@@ -1556,6 +1573,7 @@
       "id": "aave",
       "name": "Aave",
       "description": "Aave is one of the largest decentralized lending protocols. Users supply assets to earn interest and borrow against over-collateralized positions in pools on Ethereum and many layer-2 and EVM networks; Aave also issues the GHO stablecoin, and AAVE holders govern the protocol.",
+      "description_zh": "Aave 是最大的去中心化借贷协议之一。用户在以太坊及众多二层网络和 EVM 网络上的资金池中存入资产赚取利息，并以超额抵押的方式借款；Aave 还发行 GHO 稳定币，AAVE 持有者治理协议。",
       "category": "Lending",
       "chains": "EVM",
       "networks": [
@@ -1660,6 +1678,7 @@
       "id": "compound",
       "name": "Compound III",
       "description": "Compound III (Comet) is a lending protocol in which each market lends one base asset, such as USDC or ETH, against several collateral assets. It is a redesign of the earlier Compound money markets and is governed by COMP holders.",
+      "description_zh": "Compound III（Comet）是一个借贷协议，每个市场以一种基础资产（如 USDC 或 ETH）出借，并接受多种抵押资产。它是早期 Compound 货币市场的重新设计，由 COMP 持有者治理。",
       "category": "Lending",
       "chains": "EVM",
       "networks": [
@@ -1733,6 +1752,7 @@
       "id": "morpho",
       "name": "Morpho",
       "description": "Morpho is a lending protocol built on immutable, isolated markets, each with one collateral asset and one loan asset. Curated Morpho Vaults allocate deposits across these markets, and many other apps build on Morpho as lending infrastructure.",
+      "description_zh": "Morpho 是一个建立在不可变、相互隔离的市场之上的借贷协议，每个市场只有一种抵押资产和一种借出资产。经过策展的 Morpho 金库把存款分配到这些市场中，许多其他应用也以 Morpho 作为借贷基础设施。",
       "category": "Lending",
       "chains": "EVM",
       "networks": [
@@ -1811,6 +1831,7 @@
       "id": "spark",
       "name": "Spark",
       "description": "Spark is the lending and savings arm of the Sky (formerly MakerDAO) ecosystem. SparkLend, based on Aave v3, lends USDS and DAI at rates set by Sky governance, and Spark Savings passes the Sky Savings Rate to depositors.",
+      "description_zh": "Spark 是 Sky（原 MakerDAO）生态的借贷和储蓄板块。基于 Aave v3 的 SparkLend 按 Sky 治理设定的利率出借 USDS 和 DAI，Spark Savings 则把 Sky 储蓄利率传递给存款人。",
       "category": "Lending / savings",
       "chains": "EVM",
       "networks": [
@@ -1887,6 +1908,7 @@
       "id": "sky",
       "name": "Sky (ex-Maker)",
       "description": "Sky, formerly MakerDAO, issues the USDS and DAI stablecoins backed by crypto and real-world assets. Its app offers the Sky Savings Rate, token rewards and upgrades from DAI and MKR, and SKY holders govern the protocol.",
+      "description_zh": "Sky（原 MakerDAO）发行由加密资产和现实世界资产支持的 USDS 和 DAI 稳定币。其应用提供 Sky 储蓄利率、代币奖励以及 DAI 和 MKR 的升级，SKY 持有者治理协议。",
       "category": "Savings / lending",
       "chains": "Ethereum, L2",
       "networks": [
@@ -2036,6 +2058,7 @@
       "id": "venus",
       "name": "Venus",
       "description": "Venus is the main lending and borrowing protocol on BNB Chain, a Compound-style money market that is also deployed on Ethereum, Arbitrum and other networks. It issues the VAI stablecoin and is governed by XVS holders.",
+      "description_zh": "Venus 是 BNB Chain 上主要的借贷协议，采用 Compound 式货币市场，也部署在以太坊、Arbitrum 等网络上。它发行 VAI 稳定币，由 XVS 持有者治理。",
       "category": "Lending",
       "chains": "BNB, EVM",
       "networks": [
@@ -2123,6 +2146,7 @@
       "id": "euler",
       "name": "Euler",
       "description": "Euler is a modular lending protocol. Its Euler Vault Kit lets anyone deploy lending vaults, and the Ethereum Vault Connector links them so that one account can use positions in several vaults as collateral; Euler v2 relaunched in 2024 after the 2023 exploit of v1.",
+      "description_zh": "Euler 是一个模块化借贷协议。其 Euler Vault Kit 允许任何人部署借贷金库，Ethereum Vault Connector 将这些金库连接起来，使一个账户可以把多个金库中的仓位用作抵押；在 2023 年 v1 遭攻击后，Euler v2 于 2024 年重新上线。",
       "category": "Lending",
       "chains": "EVM",
       "networks": [
@@ -2266,6 +2290,7 @@
       "id": "fluid",
       "name": "Fluid",
       "description": "Fluid, built by Instadapp, combines lending and a DEX on top of a shared liquidity layer. Its vaults allow high loan-to-value borrowing, and Fluid DEX can use collateral and debt positions as trading liquidity.",
+      "description_zh": "Fluid 由 Instadapp 构建，在共享流动性层之上结合了借贷和 DEX。其金库支持高贷款价值比借款，Fluid DEX 可以把抵押品和债务仓位用作交易流动性。",
       "category": "Lending / DEX",
       "chains": "EVM, Solana",
       "networks": [
@@ -2331,6 +2356,7 @@
       "id": "liquity",
       "name": "Liquity V2 (liquity.app)",
       "description": "Liquity V2 is an immutable borrowing protocol where users open positions (troves) against ETH and liquid-staking tokens to mint the BOLD stablecoin at an interest rate they choose themselves. Liquity AG runs no official frontend; interfaces are operated by third parties.",
+      "description_zh": "Liquity V2 是一个不可变的借款协议，用户以 ETH 和流动性质押代币开立仓位（trove），按自己选择的利率铸造 BOLD 稳定币。Liquity AG 不运营官方前端，界面由第三方运营。",
       "category": "CDP / stablecoin",
       "chains": "Ethereum",
       "networks": [
@@ -2400,6 +2426,7 @@
       "id": "notional",
       "name": "Notional",
       "description": "Notional is a fixed-rate lending and leveraged-yield protocol on Ethereum and Arbitrum. Its leveraged vaults let users borrow at fixed or variable rates to run yield strategies.",
+      "description_zh": "Notional 是以太坊和 Arbitrum 上的固定利率借贷与杠杆收益协议。其杠杆金库允许用户以固定或浮动利率借款来运行收益策略。",
       "category": "Lending / leverage",
       "chains": "EVM",
       "networks": [
@@ -2494,6 +2521,7 @@
       "id": "lido",
       "name": "Lido",
       "description": "Lido is the largest liquid-staking protocol on Ethereum. Users stake ETH and receive stETH, a token that accrues staking rewards while remaining usable across DeFi; the validators are run by a curated set of node operators.",
+      "description_zh": "Lido 是以太坊上最大的流动性质押协议。用户质押 ETH 并获得 stETH，该代币会累积质押奖励，同时可以在 DeFi 中继续使用；验证者由一组经过筛选的节点运营商运行。",
       "category": "Liquid staking",
       "chains": "Ethereum",
       "networks": [
@@ -2573,6 +2601,7 @@
       "id": "rocketpool",
       "name": "Rocket Pool",
       "description": "Rocket Pool is a decentralized liquid-staking protocol for Ethereum. Anyone can run a node with a smaller ETH bond than a solo validator, and stakers receive rETH, which grows in value with staking rewards.",
+      "description_zh": "Rocket Pool 是以太坊的去中心化流动性质押协议。任何人都可以用少于独立验证者所需的 ETH 保证金运行节点，质押者获得随质押奖励增值的 rETH。",
       "category": "Liquid staking",
       "chains": "Ethereum",
       "networks": [
@@ -2634,6 +2663,7 @@
       "id": "eigenlayer",
       "name": "EigenLayer (EigenCloud)",
       "description": "EigenLayer, now part of EigenCloud, is a restaking protocol on Ethereum. It lets stakers restake ETH, liquid-staking tokens and EIGEN to secure additional services (AVSs) in exchange for extra rewards, at the risk of slashing.",
+      "description_zh": "EigenLayer（现属 EigenCloud）是以太坊上的再质押协议。它允许质押者再质押 ETH、流动性质押代币和 EIGEN，为额外服务（AVS）提供安全保障并获得额外奖励，同时承担被罚没的风险。",
       "category": "Restaking",
       "chains": "Ethereum",
       "networks": [
@@ -2705,6 +2735,7 @@
       "id": "etherfi",
       "name": "ether.fi",
       "description": "ether.fi is a liquid restaking protocol: users stake ETH for eETH or weETH, which are natively restaked through EigenLayer. The app also offers Liquid vaults with managed DeFi strategies and a crypto payment card.",
+      "description_zh": "ether.fi 是一个流动性再质押协议：用户质押 ETH 获得 eETH 或 weETH，这些代币会通过 EigenLayer 进行原生再质押。其应用还提供托管 DeFi 策略的 Liquid 金库和加密支付卡。",
       "category": "Restaking / vaults",
       "chains": "EVM",
       "networks": [
@@ -2793,6 +2824,7 @@
       "id": "pendle",
       "name": "Pendle",
       "description": "Pendle is a yield-trading protocol that splits yield-bearing tokens into principal tokens (PT) and yield tokens (YT), so users can lock in a fixed yield or trade on future variable yield; Boros extends the model to funding rates.",
+      "description_zh": "Pendle 是一个收益交易协议，把生息代币拆分为本金代币（PT）和收益代币（YT），让用户可以锁定固定收益或交易未来的浮动收益；Boros 把这一模式扩展到资金费率。",
       "category": "Yield",
       "chains": "EVM",
       "networks": [
@@ -2879,6 +2911,7 @@
       "id": "ethena",
       "name": "Ethena",
       "description": "Ethena issues USDe, a synthetic dollar backed by crypto collateral hedged with short perpetual futures positions. Staking USDe yields sUSDe, which earns the funding and staking income of that hedge.",
+      "description_zh": "Ethena 发行 USDe，这是一种合成美元，由以永续合约空头对冲的加密抵押品支持。质押 USDe 可获得 sUSDe，赚取该对冲产生的资金费率和质押收益。",
       "category": "Synthetic dollar",
       "chains": "EVM",
       "networks": [
@@ -3017,6 +3050,7 @@
       "id": "yearn",
       "name": "Yearn",
       "description": "Yearn is a yield aggregator whose vaults automatically move deposits between lending, liquidity and staking strategies to optimize returns. YFI holders govern the protocol.",
+      "description_zh": "Yearn 是一个收益聚合器，其金库会自动在借贷、流动性和质押策略之间调配存款以优化收益。YFI 持有者治理协议。",
       "category": "Yield vaults",
       "chains": "EVM",
       "networks": [
@@ -3084,6 +3118,7 @@
       "id": "beefy",
       "name": "Beefy",
       "description": "Beefy is a multichain yield optimizer. Its vaults auto-compound rewards from farms and liquidity pools across dozens of EVM networks, saving users the gas and effort of harvesting manually.",
+      "description_zh": "Beefy 是一个多链收益优化器。其金库会自动复投数十个 EVM 网络上农场和流动性池的奖励，为用户省去手动收获的 gas 和精力。",
       "category": "Yield vaults",
       "chains": "EVM",
       "networks": [
@@ -3167,6 +3202,7 @@
       "id": "convex",
       "name": "Convex",
       "description": "Convex Finance boosts rewards for Curve liquidity providers and CRV stakers. It pools CRV locked as veCRV so depositors earn boosted CRV without locking their own tokens, and CVX holders direct Convex's Curve votes.",
+      "description_zh": "Convex Finance 为 Curve 流动性提供者和 CRV 质押者提升奖励。它把 CRV 集中锁定为 veCRV，存款人无需自己锁仓即可获得加成的 CRV，CVX 持有者决定 Convex 在 Curve 上的投票方向。",
       "category": "Yield",
       "chains": "Ethereum",
       "networks": [
@@ -3231,6 +3267,7 @@
       "id": "across",
       "name": "Across",
       "description": "Across is an intent-based cross-chain bridge. Relayers front funds to users on the destination chain within seconds and are repaid later from a shared liquidity pool, with UMA's optimistic oracle securing the settlement.",
+      "description_zh": "Across 是一个基于意图的跨链桥。中继者在几秒内在目标链上向用户垫付资金，之后从共享流动性池中获得偿还，结算由 UMA 的乐观预言机保障。",
       "category": "Bridge",
       "chains": "EVM, Solana",
       "networks": [
@@ -3310,6 +3347,7 @@
       "id": "stargate",
       "name": "Stargate",
       "description": "Stargate is a cross-chain liquidity transfer protocol built on LayerZero. It moves native assets such as USDC, USDT and ETH between EVM chains using unified liquidity pools.",
+      "description_zh": "Stargate 是基于 LayerZero 构建的跨链流动性转移协议，利用统一流动性池在 EVM 链之间转移 USDC、USDT 和 ETH 等原生资产。",
       "category": "Bridge",
       "chains": "EVM (LayerZero)",
       "networks": [
@@ -3383,6 +3421,7 @@
       "id": "synapse",
       "name": "Synapse",
       "description": "Synapse is a cross-chain bridge and messaging protocol that moves assets between EVM chains through liquidity pools and its interchain messaging network.",
+      "description_zh": "Synapse 是一个跨链桥和消息协议，通过流动性池及其跨链消息网络在 EVM 链之间转移资产。",
       "category": "Bridge",
       "chains": "EVM",
       "networks": [
@@ -3457,6 +3496,7 @@
       "id": "hop",
       "name": "Hop",
       "description": "Hop is a bridge for moving tokens between Ethereum and its rollups, using bonders who front liquidity and intermediate hTokens on each chain. According to this snapshot its official domain no longer serves the app, while the contracts keep working.",
+      "description_zh": "Hop 是一个在以太坊及其 rollup 之间转移代币的跨链桥，依靠垫付流动性的担保人（bonder）和各链上的中间代币 hToken 运行。根据本次快照，其官方域名已不再提供应用，但合约仍在运行。",
       "category": "Bridge",
       "chains": "EVM",
       "networks": [
@@ -3589,6 +3629,7 @@
       "id": "portalbridge",
       "name": "Portal Bridge (Wormhole)",
       "description": "Portal Bridge is the token bridge interface for the Wormhole cross-chain messaging protocol, moving assets between Ethereum and other EVM chains, Solana, Sui, Aptos and more, secured by Wormhole's guardian network.",
+      "description_zh": "Portal Bridge 是 Wormhole 跨链消息协议的代币桥界面，在以太坊和其他 EVM 链、Solana、Sui、Aptos 等之间转移资产，由 Wormhole 守护者网络保障安全。",
       "category": "Bridge",
       "chains": "EVM, Solana, Sui, Aptos and more (Wormhole)",
       "networks": [
@@ -3663,6 +3704,7 @@
       "id": "relay",
       "name": "Relay",
       "description": "Relay is an intent-based bridging and cross-chain payments protocol. Solvers fill bridge and swap requests instantly on the destination chain across many EVM and non-EVM networks and are repaid afterwards.",
+      "description_zh": "Relay 是一个基于意图的跨链桥接和跨链支付协议。求解者在众多 EVM 和非 EVM 网络的目标链上即时完成跨链和兑换请求，之后获得偿还。",
       "category": "Bridge / intents",
       "chains": "EVM, Solana, BTC...",
       "networks": [
@@ -3739,6 +3781,7 @@
       "id": "polymarket",
       "name": "Polymarket",
       "description": "Polymarket is a prediction market where users buy and sell shares on the outcomes of real-world events. Trades are matched in an off-chain order book and settled in USDC on Polygon, with outcomes resolved through UMA's optimistic oracle.",
+      "description_zh": "Polymarket 是一个预测市场，用户买卖关于现实世界事件结果的份额。交易在链下订单簿中撮合，并以 USDC 在 Polygon 上结算，结果通过 UMA 的乐观预言机裁定。",
       "category": "Prediction market",
       "chains": "Polygon",
       "networks": [
@@ -3854,6 +3897,7 @@
       "id": "safe",
       "name": "Safe{Wallet}",
       "description": "Safe, formerly Gnosis Safe, is a smart-account wallet that can require several owners to approve each transaction (multisig). Safe{Wallet} is its official interface, with built-in swaps, staking and third-party apps on many EVM networks.",
+      "description_zh": "Safe（原 Gnosis Safe）是一种智能账户钱包，可以要求多位所有者共同批准每笔交易（多签）。Safe{Wallet} 是其官方界面，在众多 EVM 网络上内置兑换、质押和第三方应用。",
       "category": "Wallet / multisig",
       "chains": "EVM",
       "networks": [
@@ -3935,6 +3979,7 @@
       "id": "ens",
       "name": "ENS",
       "description": "ENS, the Ethereum Name Service, maps human-readable .eth names to wallet addresses, websites and other records. Names are NFTs registered for a yearly fee, and the protocol is governed by the ENS DAO.",
+      "description_zh": "ENS（以太坊域名服务）把易读的 .eth 名称映射到钱包地址、网站和其他记录。域名是按年付费注册的 NFT，协议由 ENS DAO 治理。",
       "category": "Naming",
       "chains": "Ethereum",
       "networks": [
@@ -3996,6 +4041,7 @@
       "id": "snapshot",
       "name": "Snapshot",
       "description": "Snapshot is an off-chain voting platform where DAOs run gasless proposals and votes. Votes are signed messages weighted by token holdings or other strategies and are stored off-chain.",
+      "description_zh": "Snapshot 是一个链下投票平台，DAO 在其上进行免 gas 的提案和投票。投票是按代币持有量或其他策略加权的签名消息，存储在链下。",
       "category": "Governance",
       "chains": "EVM, Starknet",
       "networks": [

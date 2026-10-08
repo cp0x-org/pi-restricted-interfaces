@@ -182,6 +182,8 @@ def validate(data):
         w = iid + "."
         if not isinstance(i["description"], str) or not 80 <= len(i["description"]) <= 600:
             raise Invalid(f"{iid}: description must be one paragraph of 80-600 characters")
+        if "description_zh" in i and (not isinstance(i["description_zh"], str) or not 20 <= len(i["description_zh"]) <= 600):
+            raise Invalid(f"{iid}: description_zh must be one paragraph of 20-600 characters")
         if not re.match(r"^https://\S+$", i["url"]):
             raise Invalid(f"{iid}: url must be a single https URL without spaces")
         check_enum(w + "repo_state", i["repo_state"], REPO_OK)

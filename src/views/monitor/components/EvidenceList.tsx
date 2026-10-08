@@ -4,14 +4,16 @@ import ListItem from '@mui/material/ListItem';
 import Typography from '@mui/material/Typography';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { EvidenceLink } from 'types/restrictions';
+import { useI18n } from 'i18n';
 
 const mono = { fontFamily: 'ui-monospace, SFMono-Regular, Menlo, monospace', fontSize: 13, wordBreak: 'break-all' as const };
 
 export default function EvidenceList({ links }: { links: EvidenceLink[] }) {
+  const { t } = useI18n();
   if (links.length === 0) {
     return (
       <Typography variant="body2" color="text.secondary">
-        No evidence recorded.
+        {t.chips.noEvidence}
       </Typography>
     );
   }

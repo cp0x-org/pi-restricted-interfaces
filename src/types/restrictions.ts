@@ -118,6 +118,8 @@ export interface InterfaceEntry {
   name: string;
   /** One paragraph about what the protocol is (shown on the interface page, used for SEO). */
   description: string;
+  /** Simplified Chinese version of the description (optional). */
+  description_zh?: string;
   category: string;
   category_group: CategoryGroup;
   chains: string;

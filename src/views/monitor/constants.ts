@@ -1,6 +1,7 @@
 import {
   Basis,
   CategoryGroup,
+  Confidence,
   ChainTag,
   CountryStatus,
   FailMode,
@@ -194,6 +195,12 @@ export const PROXY_TYPE_LABELS: Record<ProxyType, string> = {
   datacenter: 'datacenter',
   tor: 'Tor',
   direct: 'direct'
+};
+
+export const CONFIDENCE_LABELS: Record<Confidence, string> = {
+  high: 'high',
+  medium: 'medium',
+  low: 'low'
 };
 
 export const MECHANISM_LABELS: Record<MechanismKind, string> = {

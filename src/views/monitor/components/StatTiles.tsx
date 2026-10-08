@@ -6,6 +6,7 @@ import { useTheme } from '@mui/material/styles';
 import { interfaces, levelCounts, openSourceCount, permissionlessCount } from 'data/dataset';
 import { LEVELS, Level } from 'types/restrictions';
 import LevelChip from './LevelChip';
+import { useI18n } from 'i18n';
 
 interface StatTilesProps {
   activeLevels?: Level[];
@@ -27,20 +28,21 @@ function Tile({ value, label, accent = false }: { value: number; label: string; 
 }
 
 export default function StatTiles({ activeLevels = [], onLevelClick }: StatTilesProps) {
+  const { t } = useI18n();
   return (
     <Paper sx={{ p: 2.5, mb: 3 }}>
       <Grid container spacing={2} alignItems="center">
         <Grid size={{ xs: 6, md: 'auto' }} sx={{ pr: { md: 2 } }}>
-          <Tile value={interfaces.length} label="Interfaces" />
+          <Tile value={interfaces.length} label={t.tiles.interfaces} />
         </Grid>
         <Grid size={{ xs: 6, md: 'auto' }} sx={{ pr: { md: 2 } }}>
-          <Tile value={openSourceCount} label="Open frontend" />
+          <Tile value={openSourceCount} label={t.tiles.open} />
         </Grid>
         <Grid size={{ xs: 6, md: 'auto' }} sx={{ pr: { md: 2 } }}>
-          <Tile value={interfaces.length - openSourceCount} label="Closed frontend" />
+          <Tile value={interfaces.length - openSourceCount} label={t.tiles.closed} />
         </Grid>
         <Grid size={{ xs: 6, md: 'auto' }} sx={{ pr: { md: 2 } }}>
-          <Tile value={permissionlessCount} label="Permissionless via cp0x" accent />
+          <Tile value={permissionlessCount} label={t.tiles.permissionless} accent />
         </Grid>
         <Grid size={{ xs: 12, md: 'grow' }}>
           <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', rowGap: 1, justifyContent: { md: 'flex-end' } }} alignItems="center">

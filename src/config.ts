@@ -38,7 +38,8 @@ const config: ConfigProps = {
   outlinedFilled: true,
   mode: ThemeMode.DARK,
   presetColor: 'cp0x',
-  i18n: 'en',
+  // Chinese browsers start in Chinese; the dropdown in the header overrides it (saved in localStorage).
+  i18n: typeof navigator !== 'undefined' && /^zh\b/i.test(navigator.language) ? 'zh' : 'en',
   themeDirection: ThemeDirection.LTR,
   container: false
 };

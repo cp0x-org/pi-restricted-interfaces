@@ -1,7 +1,8 @@
 import { ForkReady } from 'types/restrictions';
+import { useI18n } from 'i18n';
 import ToneChip, { forkTone } from './ToneChip';
-import { FORK_DESCRIPTIONS, FORK_LABELS } from '../constants';
 
 export default function ForkChip({ fork }: { fork: ForkReady }) {
-  return <ToneChip tone={forkTone(fork)} label={FORK_LABELS[fork]} tooltip={FORK_DESCRIPTIONS[fork]} />;
+  const { L } = useI18n();
+  return <ToneChip tone={forkTone(fork)} label={L.FORK_LABELS[fork]} tooltip={L.FORK_DESCRIPTIONS[fork]} />;
 }

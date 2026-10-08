@@ -2,8 +2,8 @@ import { ReactNode } from 'react';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { Status } from 'types/restrictions';
+import { useI18n } from 'i18n';
 import ToneChip, { statusTone } from './ToneChip';
-import { STATUS_DESCRIPTIONS, STATUS_LABELS } from '../constants';
 
 interface StatusChipProps {
   status: Status;
@@ -13,9 +13,10 @@ interface StatusChipProps {
 }
 
 export default function StatusChip({ status, caption, tooltip }: StatusChipProps) {
+  const { L } = useI18n();
   return (
     <Stack direction="row" spacing={0.75} alignItems="center" sx={{ flexWrap: 'wrap' }}>
-      <ToneChip tone={statusTone(status)} label={STATUS_LABELS[status]} tooltip={tooltip ?? STATUS_DESCRIPTIONS[status]} />
+      <ToneChip tone={statusTone(status)} label={L.STATUS_LABELS[status]} tooltip={tooltip ?? L.STATUS_DESCRIPTIONS[status]} />
       {caption && (
         <Typography variant="caption" color="text.secondary" component="span">
           {caption}

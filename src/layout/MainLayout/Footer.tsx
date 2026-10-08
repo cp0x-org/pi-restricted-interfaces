@@ -1,7 +1,9 @@
 import { Stack, Box, Typography, Link } from '@mui/material';
 import { ReactComponent as Cp0xLogo } from '@/assets/images/cp0x-logo.svg';
+import { useI18n } from 'i18n';
 
 export default function Footer() {
+  const { t, path } = useI18n();
   return (
     <Box
       component="footer"
@@ -27,8 +29,8 @@ export default function Footer() {
         }}
       >
         <Link
-          href="/monitor"
-          aria-label="cp0x DeFi Interface Restrictions Monitor, home"
+          href={path('/monitor')}
+          aria-label={t.layout.homeLogo}
           className="logo-wrapper"
           sx={{ textDecoration: 'none', mb: { xs: 1, md: 0 } }}
         >
@@ -112,7 +114,7 @@ export default function Footer() {
             href="https://t.me/cp0xdotcom"
             target="_blank"
             rel="noopener"
-            aria-label="cp0x on Telegram"
+            aria-label={t.layout.telegram}
             className="social-icon"
             sx={{
               color: 'text.secondary',
@@ -131,7 +133,7 @@ export default function Footer() {
             href="https://twitter.com/cp0xdotcom"
             target="_blank"
             rel="noopener"
-            aria-label="cp0x on X (Twitter)"
+            aria-label={t.layout.twitter}
             className="social-icon"
             sx={{
               color: 'text.secondary',
@@ -150,7 +152,7 @@ export default function Footer() {
             href="https://github.com/cp0x-org"
             target="_blank"
             rel="noopener"
-            aria-label="cp0x on GitHub"
+            aria-label={t.layout.github}
             className="social-icon"
             sx={{
               color: 'text.secondary',

@@ -4,6 +4,7 @@ import { Link as RouterLink } from 'react-router-dom';
 // material-ui
 import { Box, IconButton, Drawer, List, ListItemButton, ListItemText, Typography, useTheme } from '@mui/material';
 import { IconMenu2, IconX } from '@tabler/icons-react';
+import { useI18n } from 'i18n';
 
 // types
 interface MobileMenuItemProps {
@@ -15,6 +16,7 @@ interface MobileMenuItemProps {
 const MobileMenu = () => {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
+  const { t, path } = useI18n();
 
   const handleToggleDrawer = () => {
     setOpen(!open);
@@ -22,17 +24,17 @@ const MobileMenu = () => {
 
   const menuItems: MobileMenuItemProps[] = [
     {
-      title: 'Home',
-      path: '/monitor',
+      title: t.layout.home,
+      path: path('/monitor'),
       isExternal: false
     },
     {
-      title: 'Permissionless Interfaces',
+      title: t.layout.permissionless,
       path: 'https://pi.cp0x.com',
       isExternal: true
     },
     {
-      title: 'cp0x Referrals',
+      title: t.layout.referrals,
       path: 'https://cp0x.com',
       isExternal: true
     }
@@ -40,7 +42,7 @@ const MobileMenu = () => {
 
   return (
     <Box sx={{ display: { xs: 'block', md: 'none' } }}>
-      <IconButton color="inherit" onClick={handleToggleDrawer} edge="start" size="large">
+      <IconButton color="inherit" onClick={handleToggleDrawer} edge="start" size="large" aria-label={t.layout.menu}>
         <IconMenu2 />
       </IconButton>
 
@@ -56,7 +58,7 @@ const MobileMenu = () => {
         }}
       >
         <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Typography variant="h6">Menu</Typography>
+          <Typography variant="h6">{t.layout.menu}</Typography>
           <IconButton color="inherit" onClick={handleToggleDrawer} edge="end" size="small">
             <IconX />
           </IconButton>

@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import SubCard from 'ui-component/cards/SubCard';
 import { CountryToken } from 'types/restrictions';
 import CountryTokenChips from './CountryTokenChips';
+import { useI18n } from 'i18n';
 
 export interface MechanismRow {
   label: string;
@@ -18,6 +19,7 @@ interface MechanismCardProps {
 }
 
 export default function MechanismCard({ title, chip, rows, countries = [] }: MechanismCardProps) {
+  const { t } = useI18n();
   const visibleRows = rows.filter((r) => r.value !== '' && r.value !== null && r.value !== undefined);
   const visibleCountries = countries.filter((c) => c.tokens.length > 0);
   return (
@@ -25,7 +27,7 @@ export default function MechanismCard({ title, chip, rows, countries = [] }: Mec
       <Stack spacing={1.5}>
         {visibleRows.length === 0 && visibleCountries.length === 0 && (
           <Typography variant="body2" color="text.secondary">
-            Nothing recorded.
+            {t.chips.nothing}
           </Typography>
         )}
         {visibleRows.map((r) => (

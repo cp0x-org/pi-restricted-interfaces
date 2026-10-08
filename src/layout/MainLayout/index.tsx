@@ -22,6 +22,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab, { TabProps } from '@mui/material/Tab';
 import MainCard from '../../ui-component/cards/MainCard';
 import { SHOW_COUNTRY_PAGE } from 'views/monitor/constants';
+import { useI18n } from 'i18n';
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
@@ -79,18 +80,30 @@ export default function MainLayout() {
   const theme = useTheme();
   const downMD = useMediaQuery(theme.breakpoints.down('md'));
 
-  const { borderRadius, container, miniDrawer, menuOrientation } = useConfig();
+  const { borderRadius, container, miniDrawer, menuOrientation, i18n, onChangeLocale } = useConfig();
   const { menuMaster, menuMasterLoading } = useGetMenuMaster();
   const drawerOpen = menuMaster?.isDashboardDrawerOpened;
 
   // Paths must not be substrings of each other: the active tab is matched with pathname.includes().
+  const { lang, t, path } = useI18n();
+  const location = useLocation();
   const tabs = [
-    { label: 'Monitor', path: 'monitor', iconPosition: 'top' },
-    ...(SHOW_COUNTRY_PAGE ? [{ label: 'By country', path: 'country', iconPosition: 'top' }] : []),
-    { label: 'Methodology', path: 'methodology', iconPosition: 'top' }
+    { label: t.layout.tabs.monitor, path: 'monitor', iconPosition: 'top' },
+    ...(SHOW_COUNTRY_PAGE ? [{ label: t.layout.tabs.country, path: 'country', iconPosition: 'top' }] : []),
+    { label: t.layout.tabs.methodology, path: 'methodology', iconPosition: 'top' }
   ];
 
-  const location = useLocation();
+  // Keep <html lang> in sync with the UI language (screen readers, hyphenation, CJK font selection).
+  useEffect(() => {
+    document.documentElement.lang = t.htmlLang;
+  }, [t.htmlLang]);
+
+  // Remember the language of the page being viewed: "/" redirects to it and RainbowKit follows it.
+  useEffect(() => {
+    if (location.pathname !== '/' && i18n !== lang) onChangeLocale(lang);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lang, location.pathname]);
+
   const currentTabIndex = tabs.findIndex((tab) => location.pathname.includes(tab.path));
 
   useEffect(() => {
@@ -132,7 +145,7 @@ export default function MainLayout() {
           '&:focus': { top: 8 }
         }}
       >
-        Skip to content
+        {t.layout.skip}
       </Box>
       {/* header */}
       <AppBar enableColorOnDark position="fixed" color="inherit" elevation={0} sx={{ bgcolor: 'background.default' }}>
@@ -153,13 +166,13 @@ export default function MainLayout() {
           }}
         >
           <MainCard>
-            <AntTabs value={currentTabIndex === -1 ? false : currentTabIndex} centered role="navigation" aria-label="Sections">
+            <AntTabs value={currentTabIndex === -1 ? false : currentTabIndex} centered role="navigation" aria-label={t.layout.sections}>
               {tabs.map((tab, index) => (
                 <AntTab
                   wrapped={true}
                   key={tab.path}
                   label={tab.label}
-                  to={`/${tab.path}`}
+                  to={path(`/${tab.path}`)}
                   aria-current={currentTabIndex === index ? 'page' : undefined}
                 />
               ))}

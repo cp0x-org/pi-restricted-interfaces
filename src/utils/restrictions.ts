@@ -92,6 +92,7 @@ function entry(raw: unknown, index: number): InterfaceEntry {
     id,
     name: str(raw.name, w('name')),
     description: typeof raw.description === 'string' ? raw.description : '',
+    description_zh: typeof raw.description_zh === 'string' ? raw.description_zh : undefined,
     category: str(raw.category, w('category')),
     category_group: oneOf(CATEGORY_GROUPS, raw.category_group, w('category_group')),
     chains: str(raw.chains, w('chains')),

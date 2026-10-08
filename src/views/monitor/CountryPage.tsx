@@ -13,6 +13,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
+import { useI18n } from 'i18n';
+import { localizePath } from 'i18n/paths';
 
 import { interfaces } from 'data/dataset';
 import { countryName, defaultCountryFromNavigator, flagEmoji, isCountryCode } from 'data/countries';
@@ -32,6 +34,7 @@ interface Row {
 }
 
 export default function CountryPage() {
+  const { lang, path } = useI18n();
   const navigate = useNavigate();
   const { code } = useParams<{ code: string }>();
   const selected = isCountryCode(code) ? code : null;
@@ -42,9 +45,9 @@ export default function CountryPage() {
   useEffect(() => {
     if (!code) {
       const guess = defaultCountryFromNavigator();
-      if (guess) navigate(`/country/${guess}`, { replace: true });
+      if (guess) navigate(localizePath(`/country/${guess}`, lang), { replace: true });
     }
-  }, [code, navigate]);
+  }, [code, navigate, lang]);
 
   const rows = useMemo<Row[]>(() => {
     if (!selected) return [];
@@ -84,7 +87,7 @@ export default function CountryPage() {
       <Paper sx={{ p: 2.5, mb: 3 }}>
         <Grid container spacing={2} alignItems="center">
           <Grid size={{ xs: 12, md: 5 }}>
-            <CountryPicker value={selected} onChange={(c) => navigate(c ? `/country/${c}` : '/country')} autoFocus={!selected} />
+            <CountryPicker value={selected} onChange={(c) => navigate(path(c ? `/country/${c}` : '/country'))} autoFocus={!selected} />
           </Grid>
           <Grid size={{ xs: 12, md: 7 }}>
             {selected && (
@@ -136,7 +139,7 @@ export default function CountryPage() {
               </TableHead>
               <TableBody>
                 {visible.map(({ entry, verdict }) => (
-                  <TableRow key={entry.id} hover onClick={() => navigate(`/monitor/${entry.id}`)} sx={{ cursor: 'pointer' }}>
+                  <TableRow key={entry.id} hover onClick={() => navigate(path(`/monitor/${entry.id}`))} sx={{ cursor: 'pointer' }}>
                     <TableCell>
                       <Typography variant="subtitle1" component="span" sx={{ fontWeight: 600 }}>
                         {entry.name}
@@ -197,7 +200,7 @@ export default function CountryPage() {
               The suffix after the dot is the basis of the verdict: observed (live probe from this country through a verified proxy),
               confirmed (code, live check or docs), reported (press or users), ToS (Terms of Service only) or inferred (nothing found;
               closed code may hide more). Rules are described on the{' '}
-              <Link component={RouterLink} to="/methodology" underline="always">
+              <Link component={RouterLink} to={path('/methodology')} underline="always">
                 methodology
               </Link>{' '}
               page.
