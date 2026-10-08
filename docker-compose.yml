@@ -4,12 +4,12 @@ services:
       context: .
       args:
         # Public origin for canonical URLs, og:url and sitemap.xml, e.g. VITE_SITE_URL=https://your.domain
-        VITE_SITE_URL: ${VITE_SITE_URL:-}
+        VITE_SITE_URL: ${VITE_SITE_URL:-https://restricted.cp0x.com}
     image: cp0x/pi-restricted-interface:${VERSION:-latest}
     # The server runs Linux on x86_64: build and run linux/amd64 even on an Apple Silicon Mac (emulated there).
     platform: linux/amd64
     ports:
-      - "${PORT:-4173}:4173"
+      - "${PORT:-3300}:4173"
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:4173/"]
