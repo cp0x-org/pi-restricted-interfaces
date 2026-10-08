@@ -14,6 +14,10 @@ import {
   LEVELS,
   Level,
   MechanismKind,
+  OBS_KINDS,
+  OBS_STATES,
+  Observation,
+  PROXY_TYPES,
   REPO_STATES,
   STATUS,
   Status,
@@ -51,6 +55,29 @@ function tokens(value: unknown, where: string): CountryToken[] {
   return value;
 }
 
+function observation(raw: unknown, where: string): Observation {
+  if (!isRecord(raw)) throw new Error(`interfaces.json: ${where} is not an object`);
+  const flags: Record<string, string | number | boolean> = {};
+  if (isRecord(raw.flags)) {
+    Object.entries(raw.flags).forEach(([k, v]) => {
+      if (typeof v === 'string' || typeof v === 'number' || typeof v === 'boolean') flags[k] = v;
+    });
+  }
+  return {
+    country: str(raw.country, `${where}.country`),
+    region: strOrNull(raw.region, `${where}.region`),
+    proxy_type: oneOf(PROXY_TYPES, raw.proxy_type, `${where}.proxy_type`),
+    at: str(raw.at, `${where}.at`),
+    kind: oneOf(OBS_KINDS, raw.kind, `${where}.kind`),
+    url: str(raw.url, `${where}.url`),
+    http_status: typeof raw.http_status === 'number' ? raw.http_status : null,
+    final_url: typeof raw.final_url === 'string' ? raw.final_url : '',
+    ui_state: oneOf(OBS_STATES, raw.ui_state, `${where}.ui_state`),
+    flags,
+    note: typeof raw.note === 'string' ? raw.note : ''
+  };
+}
+
 function entry(raw: unknown, index: number): InterfaceEntry {
   if (!isRecord(raw)) throw new Error(`interfaces.json: interfaces[${index}] is not an object`);
   const id = str(raw.id, `interfaces[${index}].id`);
@@ -67,6 +94,7 @@ function entry(raw: unknown, index: number): InterfaceEntry {
     category: str(raw.category, w('category')),
     category_group: oneOf(CATEGORY_GROUPS, raw.category_group, w('category_group')),
     chains: str(raw.chains, w('chains')),
+    networks: isStringArray(raw.networks) ? raw.networks : [],
     chain_tags: (isStringArray(raw.chain_tags) ? raw.chain_tags : []).map((t) => oneOf(CHAIN_TAGS, t, w('chain_tags'))),
     url: str(raw.url, w('url')),
     frontend_repo: strOrNull(raw.frontend_repo, w('frontend_repo')),
@@ -103,6 +131,7 @@ function entry(raw: unknown, index: number): InterfaceEntry {
     },
     fork_notes: str(raw.fork_notes, w('fork_notes')),
     live: isStringArray(raw.live) ? raw.live : [],
+    geo_endpoints: isStringArray(raw.geo_endpoints) ? raw.geo_endpoints : [],
     evidence: isStringArray(raw.evidence) ? raw.evidence : [],
     confidence: oneOf(CONFIDENCE, raw.confidence, w('confidence')),
     alternatives: alternatives.map((a, n) => {
@@ -110,7 +139,8 @@ function entry(raw: unknown, index: number): InterfaceEntry {
       return { name: str(a.name, w('alternatives.name')), url: str(a.url, w('alternatives.url')) };
     }),
     level: oneOf(LEVELS, raw.level, w('level')),
-    fork_ready: oneOf(FORK_READY, raw.fork_ready, w('fork_ready'))
+    fork_ready: oneOf(FORK_READY, raw.fork_ready, w('fork_ready')),
+    observations: (Array.isArray(raw.observations) ? raw.observations : []).map((o, n) => observation(o, `${id}.observations[${n}]`))
   };
 }
 
@@ -138,7 +168,9 @@ export function assertDataset(raw: unknown): Dataset {
       status_values: str(meta.status_values, 'meta.status_values'),
       layer_values: str(meta.layer_values, 'meta.layer_values'),
       country_tokens: str(meta.country_tokens, 'meta.country_tokens'),
-      regions: Object.fromEntries(Object.entries(meta.regions).map(([k, v]) => [k, str(v, `meta.regions.${k}`)]))
+      regions: Object.fromEntries(Object.entries(meta.regions).map(([k, v]) => [k, str(v, `meta.regions.${k}`)])),
+      catalog_total: typeof meta.catalog_total === 'number' ? meta.catalog_total : interfaces.length,
+      scope: typeof meta.scope === 'string' ? meta.scope : 'all interfaces'
     },
     interfaces
   };
@@ -172,7 +204,7 @@ const regionsOf = (list: CountryToken[], cc: string): CountryToken[] => list.fil
  * Precedence: blocked > close_only > feature_limited > regional (enforced) > tos_only > regional (ToS) > unknown > ok.
  * Wallet screening and VPN detection are country-independent and are not folded in.
  */
-export function countryVerdict(e: InterfaceEntry, cc: string): CountryVerdict {
+export function staticCountryVerdict(e: InterfaceEntry, cc: string): CountryVerdict {
   const { geo_site: gs, geo_feature: gf, tos } = e;
   const none: CountryToken[] = [];
 
@@ -223,6 +255,61 @@ export function countryVerdict(e: InterfaceEntry, cc: string): CountryVerdict {
     regions: none
   };
 }
+
+const PROXY_PREFERENCE: Record<Observation['proxy_type'], number> = { residential: 0, isp: 1, mobile: 2, direct: 3, datacenter: 4, tor: 5 };
+
+/** Country-level (not region-specific) observations for `cc`, most trustworthy vantage first, newest first. */
+export function observationsFor(e: InterfaceEntry, cc: string): Observation[] {
+  return e.observations
+    .filter((o) => o.country === cc && o.region === null)
+    .sort((a, b) => PROXY_PREFERENCE[a.proxy_type] - PROXY_PREFERENCE[b.proxy_type] || b.at.localeCompare(a.at));
+}
+
+const observedRestriction = (o: Observation): CountryVerdict['status'] | null =>
+  o.ui_state === 'blocked' || o.ui_state === 'close_only' || o.ui_state === 'feature_limited' ? o.ui_state : null;
+
+const describe = (o: Observation): string =>
+  `${o.kind === 'site' ? 'Landing page' : 'Geo endpoint'} ${o.url} → HTTP ${o.http_status ?? '—'}` +
+  `${o.final_url && o.final_url !== o.url ? ` → ${o.final_url}` : ''}${o.note ? `; ${o.note}` : ''}`;
+
+/**
+ * Static verdict (code, docs, ToS) combined with the latest live observation from the P3 probe:
+ * an observed block wins over any inference; an observed "served" page upgrades ok/unknown to an observed ok;
+ * otherwise the static verdict stays and the observation is attached, flagged as a conflict when they disagree.
+ */
+export function countryVerdict(e: InterfaceEntry, cc: string): CountryVerdict {
+  const base = staticCountryVerdict(e, cc);
+  const obs = observationsFor(e, cc);
+  if (obs.length === 0) return base;
+
+  const blocking = obs.find((o) => observedRestriction(o) !== null);
+  if (blocking) {
+    const observed = observedRestriction(blocking) as CountryVerdict['status'];
+    // The static classification is finer than an HTTP probe (close-only vs blocked, feature-limited vs blocked):
+    // when both agree that something is restricted, keep the static status and let the observation confirm it.
+    const restrictedStatically = base.status === 'blocked' || base.status === 'close_only' || base.status === 'feature_limited';
+    const status = restrictedStatically ? base.status : observed;
+    const detail = restrictedStatically ? `${base.detail} Confirmed live: ${describe(blocking)}` : describe(blocking);
+    return { status, basis: 'observed', detail, regions: [], observation: blocking, conflict: base.status === 'ok' };
+  }
+  const served = obs.find((o) => o.kind === 'site' && o.ui_state === 'ok');
+  if (served) {
+    if (base.status === 'ok' || base.status === 'unknown') {
+      return {
+        status: 'ok',
+        basis: 'observed',
+        detail: 'No edge-level block observed; client-side gates not evaluated',
+        regions: [],
+        observation: served
+      };
+    }
+    return { ...base, observation: served, conflict: base.status === 'blocked' || base.status === 'close_only' };
+  }
+  return { ...base, observation: obs[0] };
+}
+
+/** Country statuses that mean the country is named in a restriction (enforced or only in the ToS). */
+export const RESTRICTED_STATUSES: CountryVerdict['status'][] = ['blocked', 'close_only', 'feature_limited', 'regional', 'tos_only'];
 
 export const countryStatusRank = (status: CountryVerdict['status']): number =>
   ['blocked', 'close_only', 'feature_limited', 'regional', 'tos_only', 'unknown', 'ok'].indexOf(status);

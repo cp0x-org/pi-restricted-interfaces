@@ -8,25 +8,7 @@
     "status_values": "yes | no | reported (public reports, not confirmed in code) | tos_only (only reserved in ToS) | optional (in code, off by default) | unknown",
     "layer_values": "edge (CDN/hosting rule) | frontend (client JS) | own-api (operator backend called by the frontend) | protocol-api (backend that any fork also depends on)",
     "country_tokens": "ISO 3166-1 alpha-2 codes, or sub-national regions as CC-Name (see regions); group words like 'EU/EEA' are expanded explicitly, 'sanctioned'/'FATF' stay in free text",
-    "networks_note": "networks[] = EVM networks the official app lists at the time of the snapshot (from the app / public docs; indicative, not probed)",
-    "alternatives_source": "https://pi.cp0x.com — permissionless interfaces by cp0x (card list in the site bundle, checked 2026-10-08)",
-    "regions": {
-      "UA-Crimea": "Crimea and Sevastopol",
-      "UA-DPR": "Donetsk region (DPR)",
-      "UA-LPR": "Luhansk region (LPR)",
-      "UA-Kherson": "Kherson region",
-      "UA-Zaporizhzhia": "Zaporizhzhia region",
-      "US-NY": "New York",
-      "CA-ON": "Ontario",
-      "CA-BC": "British Columbia",
-      "CA-AB": "Alberta",
-      "CA-QC": "Quebec",
-      "GE-Abkhazia": "Abkhazia",
-      "GE-SouthOssetia": "South Ossetia",
-      "CY-North": "Northern Cyprus"
-    },
-    "catalog_total": 57,
-    "scope": "EVM networks only"
+    "networks_note": "networks[] = EVM networks the official app lists at the time of the snapshot (from the app / public docs; indicative, not probed)"
   },
   "interfaces": [
     {
@@ -100,20 +82,7 @@
         "https://blockworks.com/news/uniswap-labs-blocked-ukraine"
       ],
       "confidence": "high",
-      "alternatives": [
-        {
-          "name": "uni.cp0x.com",
-          "url": "https://uni.cp0x.com"
-        }
-      ],
-      "level": "C",
-      "fork_ready": "yes",
-      "category_group": "dex",
-      "chain_tags": [
-        "evm",
-        "solana"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "sushiswap",
@@ -223,15 +192,7 @@
         "apps/web/src/lib/perps/info/use-legal-check.ts"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "C",
-      "fork_ready": "yes",
-      "category_group": "dex",
-      "chain_tags": [
-        "evm",
-        "hyperliquid"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "pancakeswap",
@@ -305,15 +266,7 @@
         "https://docs.pancakeswap.finance/protocol/developers/contributing/codebase-overview"
       ],
       "confidence": "low",
-      "alternatives": [],
-      "level": "B",
-      "fork_ready": "no_code",
-      "category_group": "dex",
-      "chain_tags": [
-        "evm",
-        "solana"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "curve",
@@ -402,14 +355,7 @@
         "BLACKLISTS-DEPRECATIONS.md"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "A",
-      "fork_ready": "yes",
-      "category_group": "dex",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "balancer",
@@ -473,19 +419,7 @@
         "packages/lib/modules/web3/BlockedAddressModal.tsx"
       ],
       "confidence": "high",
-      "alternatives": [
-        {
-          "name": "balancer.cp0x.com",
-          "url": "https://balancer.cp0x.com"
-        }
-      ],
-      "level": "C",
-      "fork_ready": "yes",
-      "category_group": "dex",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "cowswap",
@@ -579,14 +513,7 @@
         "https://github.com/cowprotocol/services/blob/main/crates/order-validation/src/banned/mod.rs"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "D",
-      "fork_ready": "partial",
-      "category_group": "dex",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "1inch",
@@ -655,15 +582,7 @@
         "https://configs.1inch.io/frontend/legal/1inch_com_terms_of_use.pdf"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "C",
-      "fork_ready": "no_code",
-      "category_group": "aggregator",
-      "chain_tags": [
-        "evm",
-        "solana"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "kyberswap",
@@ -748,14 +667,7 @@
         "apps/kyberswap-interface/src/hooks/useRestrictedTokens.ts"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "C",
-      "fork_ready": "yes",
-      "category_group": "aggregator",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "quickswap",
@@ -845,14 +757,7 @@
         "public/locales/en.json"
       ],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "A",
-      "fork_ready": "stale",
-      "category_group": "dex",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "aerodrome",
@@ -945,14 +850,7 @@
         "https://github.com/aerodrome-finance/docs/blob/main/content/legal.mdx"
       ],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "B",
-      "fork_ready": "no_code",
-      "category_group": "dex",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "velodrome",
@@ -1051,14 +949,7 @@
         "https://github.com/velodrome-finance/docs/blob/main/content/legal.mdx"
       ],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "?",
-      "fork_ready": "no_code",
-      "category_group": "dex",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "ambient",
@@ -1141,14 +1032,7 @@
         "src/App/hooks/useBlacklist.ts"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "D",
-      "fork_ready": "yes",
-      "category_group": "dex",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "velora",
@@ -1222,14 +1106,7 @@
         "https://velora.xyz/tos"
       ],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "?",
-      "fork_ready": "no_code",
-      "category_group": "aggregator",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "matcha",
@@ -1298,15 +1175,7 @@
         "https://www.theblock.co/post/137962/dex-aggregator-matcha-geoblocks-trades-from-russia"
       ],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "B",
-      "fork_ready": "no_code",
-      "category_group": "aggregator",
-      "chain_tags": [
-        "evm",
-        "solana"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "jumper",
@@ -1392,17 +1261,436 @@
         "https://li.fi/legal/terms-and-conditions/"
       ],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "D",
-      "fork_ready": "partial",
-      "category_group": "bridge",
-      "chain_tags": [
-        "bitcoin",
-        "evm",
-        "solana",
-        "sui"
+      "alternatives": []
+    },
+    {
+      "id": "raydium",
+      "name": "Raydium",
+      "category": "DEX",
+      "chains": "Solana",
+      "networks": [],
+      "url": "https://raydium.io",
+      "frontend_repo": "https://github.com/raydium-io/raydium-ui-v3-public",
+      "repo_state": "open_stale",
+      "repo_status": "open-snapshot (6 commits)",
+      "repo_last_commit": "2025-06-11",
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": "none in the snapshot"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "US"
+        ],
+        "scope": "Perps (Orderly white-label): US + 15 sanctioned"
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "no",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://raydium.io/docs/disclaimer/",
+        "updated": "unknown",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "BY, CF, CD, KP, Crimea, DPR, LPR, CU, IR, LY, SO, SD, SS, SY, US, YE, ZW",
+        "restricted_codes": [
+          "BY",
+          "CF",
+          "CD",
+          "KP",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR",
+          "CU",
+          "IR",
+          "LY",
+          "SO",
+          "SD",
+          "SS",
+          "SY",
+          "US",
+          "YE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "Snapshot code is clean (disclaimer modal only). Needs a live crawl of production.",
+      "live": [
+        "WebFetch (US): normal page"
       ],
-      "observations": []
+      "geo_endpoints": [],
+      "evidence": [
+        "src/components/AppLayout/components/DisclaimerModal.tsx",
+        "src/pages/docs/disclaimer.tsx",
+        "https://docs.raydium.io/products/perps"
+      ],
+      "confidence": "medium",
+      "alternatives": []
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "category": "DEX aggregator",
+      "chains": "Solana",
+      "networks": [],
+      "url": "https://jup.ag",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed (jup-ag/plugin = widget)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://hub.jup.ag/docs/terms-of-use",
+        "updated": "unknown",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "US, CN, SG, MM, CI, CU, Crimea, CD, IR, IQ, LY, ML, NI, KP, SO, SD, SY, YE, ZW",
+        "restricted_codes": [
+          "US",
+          "CN",
+          "SG",
+          "MM",
+          "CI",
+          "CU",
+          "UA-Crimea",
+          "CD",
+          "IR",
+          "IQ",
+          "LY",
+          "ML",
+          "NI",
+          "KP",
+          "SO",
+          "SD",
+          "SY",
+          "YE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "Closed. Jupiter Plugin/API is an option.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://hub.jup.ag/docs/terms-of-use"
+      ],
+      "confidence": "medium",
+      "alternatives": []
+    },
+    {
+      "id": "orca",
+      "name": "Orca",
+      "category": "DEX",
+      "chains": "Solana",
+      "networks": [],
+      "url": "https://www.orca.so",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "AF",
+          "BY",
+          "BA",
+          "MM",
+          "BI",
+          "CF",
+          "CG",
+          "CU",
+          "GN",
+          "GW",
+          "HT",
+          "IR",
+          "IQ",
+          "LB",
+          "LY",
+          "ML",
+          "NI",
+          "KP",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "VE",
+          "YE",
+          "ZW",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR"
+        ],
+        "close_only": [],
+        "method": "UI blocked per the docs list (US was blocked in 2023, not on the list now)"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [],
+        "scope": "newly blocked regions: close-only"
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "third-party (unnamed), at wallet connect",
+        "layer": "own-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://www.orca.so/terms-of-use",
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "see geo_site",
+        "restricted_codes": [
+          "AF",
+          "BY",
+          "BA",
+          "MM",
+          "BI",
+          "CF",
+          "CG",
+          "CU",
+          "GN",
+          "GW",
+          "HT",
+          "IR",
+          "IQ",
+          "LB",
+          "LY",
+          "ML",
+          "NI",
+          "KP",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "VE",
+          "YE",
+          "ZW",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR"
+        ]
+      },
+      "fork_notes": "Closed. Whirlpools SDK is open.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://docs.orca.so/support/blocked-regions",
+        "https://docs.orca.so/trade/availability-and-restrictions"
+      ],
+      "confidence": "medium",
+      "alternatives": []
+    },
+    {
+      "id": "meteora",
+      "name": "Meteora",
+      "category": "DEX",
+      "chains": "Solana",
+      "networks": [],
+      "url": "https://app.meteora.ag",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.meteora.ag/resources/legal/terms-of-service",
+        "updated": "unknown",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "VG, US, CN, MM, CI, CU, Crimea, CD, IR, IQ, LY, ML, NI, KP, SO, SD, SY, YE, ZW, RU",
+        "restricted_codes": [
+          "VG",
+          "US",
+          "CN",
+          "MM",
+          "CI",
+          "CU",
+          "UA-Crimea",
+          "CD",
+          "IR",
+          "IQ",
+          "LY",
+          "ML",
+          "NI",
+          "KP",
+          "SO",
+          "SD",
+          "SY",
+          "YE",
+          "ZW",
+          "RU"
+        ]
+      },
+      "fork_notes": "Closed.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://docs.meteora.ag/resources/legal/terms-of-service"
+      ],
+      "confidence": "high",
+      "alternatives": []
+    },
+    {
+      "id": "dydx",
+      "name": "dYdX",
+      "category": "Perps",
+      "chains": "dYdX Chain",
+      "networks": [],
+      "url": "https://dydx.trade",
+      "frontend_repo": "https://github.com/dydxprotocol/v4-web",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-07-31",
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "US",
+          "CA",
+          "AF",
+          "BY",
+          "CF",
+          "CU",
+          "CD",
+          "ER",
+          "IR",
+          "IQ",
+          "CI",
+          "LB",
+          "LR",
+          "LY",
+          "ML",
+          "MM",
+          "NI",
+          "KP",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "VE",
+          "ZW"
+        ],
+        "close_only": [],
+        "method": "indexer: geo-origin-status header + HTTP 403 GEOBLOCKED (US, CA + OFAC list); the frontend sets isPerpetualsGeoBlocked"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [],
+        "scope": "CLOSE_ONLY / FIRST_STRIKE_CLOSE_ONLY statuses; UK: perpetuals (ToS)"
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "Elliptic (indexer comlink /v4/compliance/screen)",
+        "layer": "protocol-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://dydx.exchange/v4-terms",
+        "updated": "2026-03-12",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "US, CA, UK(perps), IR, CU, KP, SY, MM, Crimea, DPR, LPR",
+        "restricted_codes": [
+          "US",
+          "CA",
+          "GB",
+          "IR",
+          "CU",
+          "KP",
+          "SY",
+          "MM",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR"
+        ]
+      },
+      "fork_notes": "Enforcement is in the public indexer. A fork must run its own indexer (open source v4-chain/indexer, compliance can be disabled). Otherwise it inherits the 403s.",
+      "live": [
+        "indexer /v4/compliance/screen: SDN -> {status: BLOCKED, reason: COMPLIANCE_PROVIDER}; control -> COMPLIANT"
+      ],
+      "geo_endpoints": [
+        "https://indexer.dydx.trade/v4/height"
+      ],
+      "evidence": [
+        "src/bonsai/calculators/compliance.ts",
+        "src/bonsai/rest/compliance.ts",
+        "https://github.com/dydxprotocol/v4-chain/blob/main/indexer/services/comlink/src/lib/compliance-and-geo-check.ts",
+        "https://docs.dydx.xyz/interaction/integration/integration-compliance"
+      ],
+      "confidence": "high",
+      "alternatives": []
     },
     {
       "id": "gmx",
@@ -1459,14 +1747,149 @@
         "landing/src/pages/TermsAndConditions/TermsAndConditions.tsx"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "A",
-      "fork_ready": "yes",
-      "category_group": "perps",
-      "chain_tags": [
-        "evm"
+      "alternatives": []
+    },
+    {
+      "id": "hyperliquid",
+      "name": "Hyperliquid",
+      "category": "Perps",
+      "chains": "Hyperliquid L1",
+      "networks": [],
+      "url": "https://app.hyperliquid.xyz",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "US",
+          "CA-ON"
+        ],
+        "close_only": [],
+        "method": "IP check (US, Ontario, sanctioned jurisdictions — the latter not enumerated); info API has legalCheck {user} -> restrictions/ipAllowed"
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "legalCheck takes the user address",
+        "layer": "protocol-api",
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://app.hyperliquid.xyz/terms",
+        "updated": "2026-06-15 (secondary)",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "US, Ontario + sanctioned",
+        "restricted_codes": [
+          "US",
+          "CA-ON"
+        ]
+      },
+      "fork_notes": "Builder-code frontends (Sushi and others) call legalCheck themselves. The API does not block a fork from trading, but the check exists.",
+      "live": [
+        "WebFetch (US): metadata only, no JS"
       ],
-      "observations": []
+      "geo_endpoints": [],
+      "evidence": [
+        "sushi-labs/sushiswap apps/web/src/lib/perps/info/use-legal-check.ts",
+        "https://www.datawallet.com/crypto/is-hyperliquid-available-in-the-usa"
+      ],
+      "confidence": "low",
+      "alternatives": []
+    },
+    {
+      "id": "drift",
+      "name": "Drift (-> Velocity)",
+      "category": "Perps",
+      "chains": "Solana",
+      "networks": [],
+      "url": "https://app.drift.trade",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed (velocity-exchange/velocity-common = shared lib)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "AG",
+          "DZ",
+          "BD",
+          "BO",
+          "BY",
+          "BI",
+          "MM",
+          "CI",
+          "CU",
+          "CD",
+          "EC",
+          "IR",
+          "IQ",
+          "LR",
+          "LY",
+          "ML",
+          "MA",
+          "NP",
+          "KP",
+          "SO",
+          "SD",
+          "SY",
+          "US",
+          "VE",
+          "YE",
+          "ZW"
+        ],
+        "close_only": [],
+        "method": "client-side: geolocation.drift-labs.workers.dev -> GEOBLOCK_LIST"
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.velocity.exchange/protocol/legal-and-regulations/terms-of-use",
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "unknown (text loaded from S3)",
+        "restricted_codes": []
+      },
+      "fork_notes": "Geo-check is client-side and fail-open. Rebranded to Velocity after the 2026-04 exploit. URL note: now app.velocity.exchange.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "geo_endpoints": [
+        "https://geolocation.drift-labs.workers.dev/"
+      ],
+      "evidence": [
+        "velocity-exchange/velocity-common: common-ts/src/utils/geoblock/index.ts, common-ts/src/constants/geoblockList.ts, react/src/hooks/useGeoBlocking.tsx"
+      ],
+      "confidence": "medium",
+      "alternatives": []
     },
     {
       "id": "gtrade",
@@ -1526,14 +1949,75 @@
         "https://gains.trade/terms-of-service"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "A?",
-      "fork_ready": "no_code",
-      "category_group": "perps",
-      "chain_tags": [
-        "evm"
+      "alternatives": []
+    },
+    {
+      "id": "lighter",
+      "name": "Lighter",
+      "category": "Perps",
+      "chains": "Lighter (zk L2)",
+      "networks": [],
+      "url": "https://app.lighter.xyz",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "ToS: IP logging for enforcement"
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://lighter.xyz/terms",
+        "updated": "2025-12-29",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "US, CA, UK, CN, KP, RU, UA, CU, IR, VE, SY (+SD, BY, MM)",
+        "restricted_codes": [
+          "US",
+          "CA",
+          "GB",
+          "CN",
+          "KP",
+          "RU",
+          "UA",
+          "CU",
+          "IR",
+          "VE",
+          "SY",
+          "SD",
+          "BY",
+          "MM"
+        ]
+      },
+      "fork_notes": "Closed. SDKs are open.",
+      "live": [
+        "WebFetch (US): normal page"
       ],
-      "observations": []
+      "geo_endpoints": [],
+      "evidence": [
+        "https://lighter.xyz/terms"
+      ],
+      "confidence": "high",
+      "alternatives": []
     },
     {
       "id": "aave",
@@ -1624,19 +2108,7 @@
         "https://governance.aave.com/t/address-blocking-and-trm-labs/9301"
       ],
       "confidence": "high",
-      "alternatives": [
-        {
-          "name": "aave.cp0x.com",
-          "url": "https://aave.cp0x.com"
-        }
-      ],
-      "level": "C",
-      "fork_ready": "yes",
-      "category_group": "lending",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "compound",
@@ -1701,14 +2173,7 @@
         "src/contexts/Web3Context.tsx"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "C",
-      "fork_ready": "yes",
-      "category_group": "lending",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "morpho",
@@ -1778,14 +2243,7 @@
           "name": "morpho.cp0x.com",
           "url": "https://morpho.cp0x.com"
         }
-      ],
-      "level": "C",
-      "fork_ready": "no_code",
-      "category_group": "lending",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      ]
     },
     {
       "id": "spark",
@@ -1848,19 +2306,7 @@
         "https://cointelegraph.com/news/makerdao-spark-protocol-block-vpn-users-controversy"
       ],
       "confidence": "medium",
-      "alternatives": [
-        {
-          "name": "spark.cp0x.com",
-          "url": "https://spark.cp0x.com"
-        }
-      ],
-      "level": "C",
-      "fork_ready": "no_code",
-      "category_group": "lending",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "sky",
@@ -1996,19 +2442,7 @@
         "apps/webapp/src/hooks/authentication/useRestrictedAddressCheck.md"
       ],
       "confidence": "high",
-      "alternatives": [
-        {
-          "name": "sky.cp0x.com",
-          "url": "https://sky.cp0x.com"
-        }
-      ],
-      "level": "D",
-      "fork_ready": "yes",
-      "category_group": "lending",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "venus",
@@ -2087,14 +2521,7 @@
         "apps/evm/src/clients/api/queries/useGetPools/applyCountryCodeToPools/index.ts"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "B",
-      "fork_ready": "yes",
-      "category_group": "lending",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "euler",
@@ -2197,46 +2624,7 @@
         "docs/address-screening.md"
       ],
       "confidence": "high",
-      "alternatives": [
-        {
-          "name": "euler.cp0x.com",
-          "url": "https://euler.cp0x.com"
-        }
-      ],
-      "level": "D",
-      "fork_ready": "yes",
-      "category_group": "lending",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": [
-        {
-          "country": "US",
-          "region": null,
-          "proxy_type": "isp",
-          "at": "2026-10-08T15:54:15Z",
-          "kind": "geo_endpoint",
-          "url": "https://app.euler.finance/api/ping",
-          "http_status": 403,
-          "final_url": "https://app.euler.finance/api/ping",
-          "ui_state": "unknown",
-          "flags": {},
-          "note": "HTTP 403 without geo wording (WAF/anti-bot?)"
-        },
-        {
-          "country": "US",
-          "region": null,
-          "proxy_type": "isp",
-          "at": "2026-10-08T15:53:48Z",
-          "kind": "site",
-          "url": "https://app.euler.finance",
-          "http_status": 200,
-          "final_url": "https://app.euler.finance",
-          "ui_state": "ok",
-          "flags": {},
-          "note": "page served (client-side gates not evaluated)"
-        }
-      ]
+      "alternatives": []
     },
     {
       "id": "fluid",
@@ -2292,15 +2680,120 @@
       "geo_endpoints": [],
       "evidence": [],
       "confidence": "low",
-      "alternatives": [],
-      "level": "?",
-      "fork_ready": "no_code",
-      "category_group": "lending",
-      "chain_tags": [
-        "evm",
-        "solana"
+      "alternatives": []
+    },
+    {
+      "id": "kamino",
+      "name": "Kamino",
+      "category": "Lending",
+      "chains": "Solana",
+      "networks": [],
+      "url": "https://kamino.com",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "manual address blacklist (2025-12, Jupiter Lend case, not sanctions)",
+      "tos": {
+        "url": null,
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "ToS not found",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed; klend SDK is open. URL note: app.kamino.finance -> 302.",
+      "live": [
+        "WebFetch (US): JS shell"
       ],
-      "observations": []
+      "geo_endpoints": [],
+      "evidence": [],
+      "confidence": "low",
+      "alternatives": []
+    },
+    {
+      "id": "marginfi",
+      "name": "marginfi (-> Project 0)",
+      "category": "Lending",
+      "chains": "Solana",
+      "networks": [],
+      "url": "https://app.marginfi.com",
+      "frontend_repo": "https://github.com/mrgnlabs/mrgn-ts/tree/main/apps/marginfi-v2-ui",
+      "repo_state": "open_stale",
+      "repo_status": "open-deprecated (Project 0 closed)",
+      "repo_last_commit": "2026-06-03",
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "VE",
+          "CU",
+          "IR",
+          "KP",
+          "SY"
+        ],
+        "close_only": [],
+        "method": "Next middleware req.geo -> redirect marginfi.com"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "US"
+        ],
+        "scope": "US: /looper -> /not-allowed; Arena: US + 5 -> 'Arena Restricted'"
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://www.0.xyz/terms-of-use",
+        "updated": "2026-05-13",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic + restriction by wallet/IP/risk",
+        "restricted_codes": []
+      },
+      "fork_notes": "marginfi UI is archived. Project 0 is closed. URL note: retired -> app.0.xyz.",
+      "live": [
+        "WebFetch (US): retirement notice -> app.0.xyz"
+      ],
+      "geo_endpoints": [],
+      "evidence": [
+        "apps/marginfi-v2-ui/src/middleware.ts",
+        "apps/marginfi-v2-trading/src/middleware.ts"
+      ],
+      "confidence": "medium",
+      "alternatives": []
     },
     {
       "id": "liquity",
@@ -2356,19 +2849,7 @@
         "frontend/app/src/env.ts"
       ],
       "confidence": "medium",
-      "alternatives": [
-        {
-          "name": "liquity.cp0x.com",
-          "url": "https://liquity.cp0x.com"
-        }
-      ],
-      "level": "B",
-      "fork_ready": "yes",
-      "category_group": "lending",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "notional",
@@ -2454,14 +2935,7 @@
         "packages/notionable/src/account/communities.ts"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "D",
-      "fork_ready": "yes",
-      "category_group": "lending",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "lido",
@@ -2532,14 +3006,7 @@
         "features/earn/shared/hooks/use-earn-geo-gate.ts"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "C",
-      "fork_ready": "yes",
-      "category_group": "staking",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "rocketpool",
@@ -2592,14 +3059,7 @@
       "geo_endpoints": [],
       "evidence": [],
       "confidence": "low",
-      "alternatives": [],
-      "level": "?",
-      "fork_ready": "no_code",
-      "category_group": "staking",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "eigenlayer",
@@ -2662,14 +3122,7 @@
         "https://decrypt.co/228642/eigen-token-airdrop-plan-ethereum-restaking-protocol-eigenlayer"
       ],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "B",
-      "fork_ready": "no_code",
-      "category_group": "staking",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "etherfi",
@@ -2749,14 +3202,7 @@
         "https://www.ether.fi/legal/terms-of-use"
       ],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "A?",
-      "fork_ready": "no_code",
-      "category_group": "staking",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "pendle",
@@ -2834,14 +3280,7 @@
         "https://docs.pendle.finance/pendle-v2/TermsOfUse"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "A?",
-      "fork_ready": "no_code",
-      "category_group": "yield",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "ethena",
@@ -2952,33 +3391,7 @@
         "https://docs.ethena.fi/resources/terms-of-service"
       ],
       "confidence": "high",
-      "alternatives": [
-        {
-          "name": "ethena.cp0x.com",
-          "url": "https://ethena.cp0x.com"
-        }
-      ],
-      "level": "D",
-      "fork_ready": "no_code",
-      "category_group": "yield",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": [
-        {
-          "country": "US",
-          "region": null,
-          "proxy_type": "isp",
-          "at": "2026-10-08T15:54:30Z",
-          "kind": "site",
-          "url": "https://app.ethena.fi",
-          "http_status": 200,
-          "final_url": "https://ethena.fi/restricted",
-          "ui_state": "blocked",
-          "flags": {},
-          "note": "redirect -> https://ethena.fi/restricted"
-        }
-      ]
+      "alternatives": []
     },
     {
       "id": "yearn",
@@ -3037,14 +3450,7 @@
       "geo_endpoints": [],
       "evidence": [],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "A",
-      "fork_ready": "yes",
-      "category_group": "yield",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "beefy",
@@ -3119,14 +3525,7 @@
         "src/features/data/actions/restrictions.ts"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "B",
-      "fork_ready": "yes",
-      "category_group": "yield",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "convex",
@@ -3182,14 +3581,60 @@
       "geo_endpoints": [],
       "evidence": [],
       "confidence": "low",
-      "alternatives": [],
-      "level": "?",
-      "fork_ready": "no_code",
-      "category_group": "yield",
-      "chain_tags": [
-        "evm"
+      "alternatives": []
+    },
+    {
+      "id": "jito",
+      "name": "Jito",
+      "category": "Liquid staking",
+      "chains": "Solana",
+      "networks": [],
+      "url": "https://www.jito.network",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://www.jito.network/docs/jitosol/resources/terms-of-use/",
+        "updated": "2025-04-10",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic UN/OFAC/EU/UK",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed.",
+      "live": [
+        "WebFetch (US): normal page"
       ],
-      "observations": []
+      "geo_endpoints": [],
+      "evidence": [
+        "https://www.jito.network/docs/jitosol/resources/terms-of-use/"
+      ],
+      "confidence": "high",
+      "alternatives": []
     },
     {
       "id": "across",
@@ -3259,15 +3704,7 @@
         "http://web.archive.org/web/20250829200542/https://github.com/across-protocol/frontend"
       ],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "A?",
-      "fork_ready": "no_code",
-      "category_group": "bridge",
-      "chain_tags": [
-        "evm",
-        "solana"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "stargate",
@@ -3332,14 +3769,7 @@
         "https://stargate.finance/terms"
       ],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "A?",
-      "fork_ready": "no_code",
-      "category_group": "bridge",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "synapse",
@@ -3405,14 +3835,7 @@
         "packages/synapse-interface/store/middleware/destinationAddressMiddleware.ts"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "C",
-      "fork_ready": "yes",
-      "category_group": "bridge",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "hop",
@@ -3522,28 +3945,7 @@
         "packages/frontend/src/config/blocklist.ts"
       ],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "D",
-      "fork_ready": "yes",
-      "category_group": "bridge",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": [
-        {
-          "country": "US",
-          "region": null,
-          "proxy_type": "isp",
-          "at": "2026-10-08T15:54:38Z",
-          "kind": "site",
-          "url": "https://app.hop.exchange",
-          "http_status": 400,
-          "final_url": "https://app.hop.exchange",
-          "ui_state": "unknown",
-          "flags": {},
-          "note": "HTTP 400"
-        }
-      ]
+      "alternatives": []
     },
     {
       "id": "portalbridge",
@@ -3607,16 +4009,7 @@
         "wormhole-foundation/wormhole-connect: src/utils/transferValidation.ts, src/consts/wallet.ts"
       ],
       "confidence": "low",
-      "alternatives": [],
-      "level": "C",
-      "fork_ready": "no_code",
-      "category_group": "bridge",
-      "chain_tags": [
-        "evm",
-        "solana",
-        "sui"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "relay",
@@ -3682,16 +4075,7 @@
         "relayprotocol/relay-kit: packages/sdk/src/types/api.ts"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "D",
-      "fork_ready": "no_code",
-      "category_group": "bridge",
-      "chain_tags": [
-        "bitcoin",
-        "evm",
-        "solana"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "polymarket",
@@ -3780,32 +4164,7 @@
         "https://help.polymarket.com/en/articles/13364163-geographic-restrictions"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "D",
-      "fork_ready": "no_code",
-      "category_group": "prediction",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": [
-        {
-          "country": "US",
-          "region": null,
-          "proxy_type": "isp",
-          "at": "2026-10-08T15:56:38Z",
-          "kind": "geo_endpoint",
-          "url": "https://polymarket.com/api/geoblock",
-          "http_status": 200,
-          "final_url": "https://polymarket.com/api/geoblock",
-          "ui_state": "blocked",
-          "flags": {
-            "blocked": true,
-            "country": "US",
-            "region": "VA"
-          },
-          "note": "flag true"
-        }
-      ]
+      "alternatives": []
     },
     {
       "id": "safe",
@@ -3878,14 +4237,7 @@
         "apps/web/src/config/constants.ts"
       ],
       "confidence": "high",
-      "alternatives": [],
-      "level": "C",
-      "fork_ready": "yes",
-      "category_group": "wallet",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "ens",
@@ -3938,14 +4290,7 @@
       "geo_endpoints": [],
       "evidence": [],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "A",
-      "fork_ready": "yes",
-      "category_group": "other",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": []
+      "alternatives": []
     },
     {
       "id": "snapshot",
@@ -4023,15 +4368,7 @@
         "apps/ui/src/views/Terms.vue"
       ],
       "confidence": "medium",
-      "alternatives": [],
-      "level": "A",
-      "fork_ready": "yes",
-      "category_group": "other",
-      "chain_tags": [
-        "evm",
-        "starknet"
-      ],
-      "observations": []
+      "alternatives": []
     }
   ]
 }

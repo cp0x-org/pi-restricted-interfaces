@@ -8,6 +8,12 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import LaunchIcon from '@mui/icons-material/Launch';
@@ -16,6 +22,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SubCard from 'ui-component/cards/SubCard';
 
 import { dataset, interfacesById } from 'data/dataset';
+import { tokenLabel } from 'data/countries';
 import { evidenceLinks } from 'utils/restrictions';
 import CountryTokenChips from './components/CountryTokenChips';
 import EvidenceList from './components/EvidenceList';
@@ -24,8 +31,27 @@ import LevelChip from './components/LevelChip';
 import MechanismCard from './components/MechanismCard';
 import RepoLink from './components/RepoLink';
 import StatusChip from './components/StatusChip';
-import ToneChip, { vpnTone } from './components/ToneChip';
-import { FAIL_LABELS, LAYER_DESCRIPTIONS, LAYER_LABELS, LEVEL_DESCRIPTIONS, TOS_US_LABELS, VPN_LABELS } from './constants';
+import ToneChip, { Tone, vpnTone } from './components/ToneChip';
+import {
+  FAIL_LABELS,
+  LAYER_DESCRIPTIONS,
+  LAYER_LABELS,
+  LEVEL_DESCRIPTIONS,
+  OBS_STATE_LABELS,
+  PROXY_TYPE_LABELS,
+  TOS_US_LABELS,
+  VPN_LABELS
+} from './constants';
+
+const OBS_TONE: Record<string, Tone> = {
+  ok: 'good',
+  blocked: 'bad',
+  close_only: 'warn',
+  feature_limited: 'mild',
+  challenge: 'neutral',
+  error: 'unknown',
+  unknown: 'unknown'
+};
 
 export default function InterfacePage() {
   const theme = useTheme();
@@ -69,6 +95,13 @@ export default function InterfacePage() {
             <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
               {entry.category} · {entry.chains}
             </Typography>
+            {entry.networks.length > 0 && (
+              <Stack direction="row" spacing={0.5} sx={{ mt: 1, flexWrap: 'wrap', rowGap: 0.5 }}>
+                {entry.networks.map((n) => (
+                  <Chip key={n} size="small" variant="outlined" color="default" label={n} />
+                ))}
+              </Stack>
+            )}
             <Typography variant="body2" sx={{ mt: 1.5, maxWidth: 720 }}>
               {LEVEL_DESCRIPTIONS[entry.level]}
             </Typography>
@@ -161,7 +194,7 @@ export default function InterfacePage() {
       <Grid container spacing={3} sx={{ mb: 3 }}>
         <Grid size={{ xs: 12, md: 6 }}>
           <MechanismCard
-            title="Site geo-block"
+            title="Geo Block"
             chip={<StatusChip status={entry.geo_site.s} />}
             rows={[{ label: 'How it is enforced', value: entry.geo_site.method }]}
             countries={[
@@ -172,7 +205,7 @@ export default function InterfacePage() {
         </Grid>
         <Grid size={{ xs: 12, md: 6 }}>
           <MechanismCard
-            title="Feature / asset geo-gate"
+            title="Feature Block"
             chip={<StatusChip status={entry.geo_feature.s} />}
             rows={[
               { label: 'Scope', value: entry.geo_feature.scope },
@@ -268,6 +301,69 @@ export default function InterfacePage() {
             <Typography variant="caption" color="text.secondary" component="div" sx={{ mt: 1.5 }}>
               Egress: {dataset.meta.live_check_egress}
             </Typography>
+            {entry.geo_endpoints.length > 0 && (
+              <Typography variant="caption" color="text.secondary" component="div" sx={{ mt: 1 }}>
+                Probe endpoints: {entry.geo_endpoints.join(', ')}
+              </Typography>
+            )}
+          </SubCard>
+        </Grid>
+        <Grid size={{ xs: 12 }}>
+          <SubCard title="Live observations by country">
+            {entry.observations.length === 0 ? (
+              <Typography variant="body2" color="text.secondary">
+                Not probed yet. The P3 probe (monitor/scripts/probe.py) records, per country and proxy type, whether the landing page and
+                the known geo endpoints are served, blocked or challenged.
+              </Typography>
+            ) : (
+              <TableContainer>
+                <Table size="small" aria-label="live observations">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell>Country</TableCell>
+                      <TableCell>Vantage</TableCell>
+                      <TableCell>Target</TableCell>
+                      <TableCell>Result</TableCell>
+                      <TableCell>HTTP</TableCell>
+                      <TableCell>When</TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {entry.observations.map((o) => (
+                      <TableRow key={`${o.country}-${o.region ?? ''}-${o.proxy_type}-${o.kind}-${o.url}`}>
+                        <TableCell sx={{ whiteSpace: 'nowrap' }}>{tokenLabel(o.region ?? o.country)}</TableCell>
+                        <TableCell>{PROXY_TYPE_LABELS[o.proxy_type]}</TableCell>
+                        <TableCell sx={{ wordBreak: 'break-all' }}>
+                          <Typography variant="caption" color="text.secondary" component="div">
+                            {o.kind === 'site' ? 'landing page' : 'geo endpoint'}
+                          </Typography>
+                          {o.url}
+                        </TableCell>
+                        <TableCell>
+                          <ToneChip tone={OBS_TONE[o.ui_state]} label={OBS_STATE_LABELS[o.ui_state]} tooltip={o.note || undefined} />
+                          {Object.keys(o.flags).length > 0 && (
+                            <Typography variant="caption" color="text.secondary" component="div">
+                              {Object.entries(o.flags)
+                                .map(([k, v]) => `${k}=${String(v)}`)
+                                .join(' ')}
+                            </Typography>
+                          )}
+                        </TableCell>
+                        <TableCell>
+                          {o.http_status ?? '—'}
+                          {o.final_url && o.final_url !== o.url && (
+                            <Typography variant="caption" color="text.secondary" component="div" sx={{ wordBreak: 'break-all' }}>
+                              → {o.final_url}
+                            </Typography>
+                          )}
+                        </TableCell>
+                        <TableCell sx={{ whiteSpace: 'nowrap' }}>{o.at.slice(0, 10)}</TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            )}
           </SubCard>
         </Grid>
         <Grid size={{ xs: 12 }}>

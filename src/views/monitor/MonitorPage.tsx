@@ -1,11 +1,12 @@
 import React, { useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Checkbox from '@mui/material/Checkbox';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Pagination from '@mui/material/Pagination';
@@ -23,16 +24,18 @@ import TableSortLabel from '@mui/material/TableSortLabel';
 import TextField from '@mui/material/TextField';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
+import { alpha } from '@mui/material/styles';
 import { UnfoldMore } from '@mui/icons-material';
+import LaunchIcon from '@mui/icons-material/Launch';
 
-import { dataset, interfaces } from 'data/dataset';
+import { dataset, interfaces, networkOptions } from 'data/dataset';
+import { COUNTRY_OPTIONS, countryName, flagEmoji, isCountryCode } from 'data/countries';
 import {
   CATEGORY_GROUPS,
-  CHAIN_TAGS,
+  COUNTRY_STATUS,
   CategoryGroup,
-  ChainTag,
-  FORK_READY,
-  ForkReady,
+  CountryStatus,
+  CountryVerdict,
   InterfaceEntry,
   LAYERS,
   LEVELS,
@@ -40,26 +43,51 @@ import {
   Level,
   MechanismKind
 } from 'types/restrictions';
-import { compareByLevelThenName, hasMechanism, levelRank } from 'utils/restrictions';
+import {
+  RESTRICTED_STATUSES,
+  basisRank,
+  compareByLevelThenName,
+  countryStatusRank,
+  countryVerdict,
+  hasMechanism,
+  levelRank
+} from 'utils/restrictions';
 import FilterSelect from './components/FilterSelect';
-import ForkChip from './components/ForkChip';
 import LevelChip from './components/LevelChip';
 import RepoLink from './components/RepoLink';
+import ColumnLegend from './components/ColumnLegend';
+import PermissionlessLink from './components/PermissionlessLink';
+import CountryVerdictCell from './components/CountryVerdictCell';
 import StatTiles from './components/StatTiles';
 import StatusChip from './components/StatusChip';
-import ToneChip, { vpnTone } from './components/ToneChip';
+import ToneChip, { countryStatusTone, vpnTone } from './components/ToneChip';
 import {
   CATEGORY_GROUP_LABELS,
-  CHAIN_TAG_LABELS,
-  FORK_LABELS,
+  COUNTRY_STATUS_DESCRIPTIONS,
+  COUNTRY_STATUS_LABELS,
   LAYER_LABELS,
   LEVEL_LABELS,
   MECHANISM_LABELS,
-  TOS_US_LABELS,
   VPN_LABELS
 } from './constants';
 
-type SortableField = 'level' | 'name' | 'category' | 'screening' | 'repo';
+type SortableField = 'permissionless' | 'country' | 'level' | 'name' | 'category' | 'screening' | 'repo';
+
+/** The Category column is hidden for now (the Category filter stays); flip to show it again. */
+const SHOW_CATEGORY_COLUMN = false;
+
+/**
+ * Hidden: "Screening layer" filtered by WHERE the wallet screening runs (frontend JS, the operator's own API,
+ * or the protocol API that every client depends on). The same information is in the caption of the Wallet screening column.
+ */
+const SHOW_SCREENING_LAYER_FILTER = false;
+
+interface CountryHit {
+  cc: string;
+  verdict: CountryVerdict;
+}
+
+const hasPermissionless = (i: InterfaceEntry): boolean => i.alternatives.length > 0;
 type SortOrder = 'asc' | 'desc';
 
 const MECHANISMS: MechanismKind[] = ['geo_site', 'geo_feature', 'screening', 'vpn'];
@@ -68,6 +96,9 @@ const SCREENING_ORDER = ['yes', 'reported', 'optional', 'tos_only', 'unknown', '
 
 function compare(a: InterfaceEntry, b: InterfaceEntry, field: SortableField): number {
   switch (field) {
+    case 'country': // needs the selected country, handled in the component
+    case 'permissionless':
+      return Number(hasPermissionless(b)) - Number(hasPermissionless(a)) || compareByLevelThenName(a, b);
     case 'level':
       return compareByLevelThenName(a, b);
     case 'name':
@@ -91,17 +122,53 @@ export default function MonitorPage() {
   const navigate = useNavigate();
   const [page, setPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(25);
-  const [sortField, setSortField] = useState<SortableField>('level');
+  // Default: interfaces with a cp0x permissionless app first, then by level (D → A) and name.
+  const [sortField, setSortField] = useState<SortableField>('permissionless');
   const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
 
   const [nameFilter, setNameFilter] = useState('');
   const [groupFilter, setGroupFilter] = useState<CategoryGroup[]>([]);
-  const [chainFilter, setChainFilter] = useState<ChainTag[]>([]);
+  const [networkFilter, setNetworkFilter] = useState<string[]>([]);
   const [levelFilter, setLevelFilter] = useState<Level[]>([]);
   const [layerFilter, setLayerFilter] = useState<Layer[]>([]);
-  const [forkFilter, setForkFilter] = useState<ForkReady[]>([]);
   const [mechanismFilter, setMechanismFilter] = useState<MechanismKind[]>([]);
   const [openOnly, setOpenOnly] = useState(false);
+  const [statusFilter, setStatusFilter] = useState<CountryStatus[]>([]);
+
+  // Selected countries live in the URL (?country=UA,US) so the view can be shared and /country/UA links keep working.
+  const [searchParams, setSearchParams] = useSearchParams();
+  const countries = useMemo(
+    () =>
+      Array.from(
+        new Set(
+          (searchParams.get('country') ?? '')
+            .split(',')
+            .map((c) => c.trim().toUpperCase())
+            .filter(isCountryCode)
+        )
+      ),
+    [searchParams]
+  );
+
+  const setCountries = (codes: string[]) => {
+    setSearchParams(
+      (prev) => {
+        const next = new URLSearchParams(prev);
+        if (codes.length > 0) next.set('country', codes.join(','));
+        else next.delete('country');
+        return next;
+      },
+      { replace: true }
+    );
+    setStatusFilter([]);
+    if (codes.length === 0 && sortField === 'country') setSortField('permissionless');
+    setPage(1);
+  };
+
+  const toggleStatus = (st: CountryStatus) => {
+    setStatusFilter((prev) => (prev.includes(st) ? prev.filter((x) => x !== st) : [...prev, st]));
+    setPage(1);
+  };
 
   const resetPage = () => setPage(1);
 
@@ -127,22 +194,64 @@ export default function MonitorPage() {
     resetPage();
   };
 
-  const filtered = useMemo(() => {
+  // For every interface: the selected countries it restricts (statuses from RESTRICTED_STATUSES, narrowed by the status chips).
+  const hits = useMemo<Map<string, CountryHit[]> | null>(() => {
+    if (countries.length === 0) return null;
+    const wanted = statusFilter.length > 0 ? statusFilter : RESTRICTED_STATUSES;
+    return new Map(
+      interfaces.map((i) => [
+        i.id,
+        countries.map((cc) => ({ cc, verdict: countryVerdict(i, cc) })).filter((h) => wanted.includes(h.verdict.status))
+      ])
+    );
+  }, [countries, statusFilter]);
+
+  const baseRows = useMemo(() => {
     const needle = nameFilter.trim().toLowerCase();
-    const rows = interfaces.filter((i) => {
+    return interfaces.filter((i) => {
       if (needle && !i.name.toLowerCase().includes(needle) && !i.id.includes(needle) && !i.url.includes(needle)) return false;
       if (groupFilter.length > 0 && !groupFilter.includes(i.category_group)) return false;
-      if (chainFilter.length > 0 && !i.chain_tags.some((t) => chainFilter.includes(t))) return false;
+      if (networkFilter.length > 0 && !i.networks.some((n) => networkFilter.includes(n))) return false;
       if (levelFilter.length > 0 && !levelFilter.includes(i.level)) return false;
       if (layerFilter.length > 0 && (!i.screening.layer || !layerFilter.includes(i.screening.layer))) return false;
-      if (forkFilter.length > 0 && !forkFilter.includes(i.fork_ready)) return false;
       if (mechanismFilter.length > 0 && !mechanismFilter.every((k) => hasMechanism(i, k))) return false;
       if (openOnly && !i.frontend_repo) return false;
       return true;
     });
-    const sorted = [...rows].sort((a, b) => compare(a, b, sortField));
+  }, [nameFilter, groupFilter, networkFilter, levelFilter, layerFilter, mechanismFilter, openOnly]);
+
+  // Chip counters: interfaces (after the other filters) restricting at least one selected country with that status.
+  const statusCounts = useMemo(() => {
+    const c = Object.fromEntries(COUNTRY_STATUS.map((st) => [st, 0])) as Record<CountryStatus, number>;
+    if (countries.length > 0) {
+      baseRows.forEach((i) => {
+        const statuses = new Set(countries.map((cc) => countryVerdict(i, cc).status));
+        statuses.forEach((st) => (c[st] += 1));
+      });
+    }
+    return c;
+  }, [baseRows, countries]);
+
+  const filtered = useMemo(() => {
+    // With countries selected, only interfaces that restrict at least one of them stay.
+    const rows = hits ? baseRows.filter((i) => (hits.get(i.id) ?? []).length > 0) : baseRows;
+    const worst = (id: string): CountryVerdict | undefined =>
+      (hits?.get(id) ?? [])
+        .map((h) => h.verdict)
+        .sort((x, y) => countryStatusRank(x.status) - countryStatusRank(y.status) || basisRank(x.basis) - basisRank(y.basis))[0];
+    const byCountry = (a: InterfaceEntry, b: InterfaceEntry): number => {
+      const va = worst(a.id);
+      const vb = worst(b.id);
+      if (!va || !vb) return compare(a, b, 'permissionless');
+      return (
+        countryStatusRank(va.status) - countryStatusRank(vb.status) ||
+        basisRank(va.basis) - basisRank(vb.basis) ||
+        compareByLevelThenName(a, b)
+      );
+    };
+    const sorted = [...rows].sort((a, b) => (sortField === 'country' ? byCountry(a, b) : compare(a, b, sortField)));
     return sortOrder === 'asc' ? sorted : sorted.reverse();
-  }, [nameFilter, groupFilter, chainFilter, levelFilter, layerFilter, forkFilter, mechanismFilter, openOnly, sortField, sortOrder]);
+  }, [baseRows, hits, sortField, sortOrder]);
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / rowsPerPage));
   const currentPage = Math.min(page, pageCount);
@@ -165,9 +274,10 @@ export default function MonitorPage() {
         Official DeFi interfaces: who restricts what
       </Typography>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 3, maxWidth: 900 }}>
-        Each row is the official web interface of a protocol. The level says how hard the restriction is and whether a permissionless fork
-        removes it. Snapshot of {dataset.meta.generated}; every claim is backed by code, a live check or the Terms of Service (see the
-        interface page).
+        Each row is the official web interface of a protocol on EVM networks ({interfaces.length} of {dataset.meta.catalog_total} in the
+        full catalog; Solana, Cosmos and other non-EVM apps stay in the data but are not shown). The level says how hard the restriction is
+        and whether a permissionless fork removes it. Snapshot of {dataset.meta.generated}; every claim is backed by code, a live check or
+        the Terms of Service (see the interface page).
       </Typography>
 
       <StatTiles activeLevels={levelFilter} onLevelClick={toggleLevel} />
@@ -200,12 +310,11 @@ export default function MonitorPage() {
         </Grid>
         <Grid size={{ xs: 12, sm: 6, md: 4 }}>
           <FilterSelect
-            label="Chains"
-            options={CHAIN_TAGS}
-            value={chainFilter}
-            getLabel={(t) => CHAIN_TAG_LABELS[t]}
+            label="Network"
+            options={networkOptions}
+            value={networkFilter}
             onChange={(v) => {
-              setChainFilter(v);
+              setNetworkFilter(v);
               resetPage();
             }}
           />
@@ -222,30 +331,48 @@ export default function MonitorPage() {
             }}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+        {SHOW_SCREENING_LAYER_FILTER && (
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+            <FilterSelect
+              label="Screening layer"
+              options={LAYERS}
+              value={layerFilter}
+              getLabel={(l) => LAYER_LABELS[l]}
+              onChange={(v) => {
+                setLayerFilter(v);
+                resetPage();
+              }}
+            />
+          </Grid>
+        )}
+        <Grid size={{ xs: 12, sm: 6, md: SHOW_SCREENING_LAYER_FILTER ? 4 : 8 }}>
           <FilterSelect
-            label="Screening layer"
-            options={LAYERS}
-            value={layerFilter}
-            getLabel={(l) => LAYER_LABELS[l]}
-            onChange={(v) => {
-              setLayerFilter(v);
-              resetPage();
-            }}
+            label="Country"
+            options={COUNTRY_OPTIONS}
+            value={countries}
+            getLabel={(c) => `${flagEmoji(c)} ${countryName(c)}`}
+            onChange={setCountries}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-          <FilterSelect
-            label="Fork readiness"
-            options={FORK_READY}
-            value={forkFilter}
-            getLabel={(f) => FORK_LABELS[f]}
-            onChange={(v) => {
-              setForkFilter(v);
-              resetPage();
-            }}
-          />
-        </Grid>
+        {countries.length > 0 && (
+          <Grid size={{ xs: 12 }}>
+            <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', rowGap: 1 }} alignItems="center">
+              <Typography variant="body2" color="text.secondary" sx={{ pr: 0.5 }}>
+                Restricted in {countries.map(flagEmoji).join(' ')}:
+              </Typography>
+              {RESTRICTED_STATUSES.map((st) => (
+                <ToneChip
+                  key={st}
+                  tone={countryStatusTone(st)}
+                  label={`${COUNTRY_STATUS_LABELS[st]}: ${statusCounts[st]}`}
+                  tooltip={COUNTRY_STATUS_DESCRIPTIONS[st]}
+                  onClick={() => toggleStatus(st)}
+                  sx={{ ...(statusFilter.includes(st) && { outline: '2px solid', outlineColor: 'secondary.main' }) }}
+                />
+              ))}
+            </Stack>
+          </Grid>
+        )}
         <Grid size={{ xs: 12 }}>
           <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 0, md: 3 }} alignItems={{ md: 'center' }} sx={{ flexWrap: 'wrap' }}>
             <Typography variant="body2" color="text.secondary" sx={{ pr: 1 }}>
@@ -277,20 +404,41 @@ export default function MonitorPage() {
         </Grid>
       </Grid>
 
+      <ColumnLegend />
+
       <TableContainer component={Paper} sx={{ mb: 2 }}>
-        <Table size="small" sx={{ minWidth: 1000 }} aria-label="interface restrictions table">
+        <Table
+          size="small"
+          aria-label="interface restrictions table"
+          sx={{
+            minWidth: 1000,
+            // tighter cells so that all columns fit the container even with the country column
+            '& .MuiTableCell-root': { px: 1 },
+            '& .MuiTableCell-root:first-of-type': { pl: 2 }
+          }}
+        >
           <TableHead>
             <TableRow>
               <TableCell>{header('name', 'Interface')}</TableCell>
-              <TableCell>{header('category', 'Category')}</TableCell>
+              {SHOW_CATEGORY_COLUMN && <TableCell>{header('category', 'Category')}</TableCell>}
               <TableCell>{header('level', 'Level')}</TableCell>
-              <TableCell>Site geo-block</TableCell>
-              <TableCell>Feature / asset gate</TableCell>
+              {countries.length > 0 && (
+                <TableCell>
+                  {header(
+                    'country',
+                    countries.length === 1
+                      ? `${flagEmoji(countries[0])} ${countryName(countries[0])}`
+                      : `${countries.map(flagEmoji).join(' ')} restrictions`
+                  )}
+                </TableCell>
+              )}
+              <TableCell>Geo Block</TableCell>
+              <TableCell>Feature Block</TableCell>
               <TableCell>{header('screening', 'Wallet screening')}</TableCell>
               <TableCell>VPN</TableCell>
-              <TableCell>ToS: US</TableCell>
-              <TableCell>Fork</TableCell>
-              <TableCell>{header('repo', 'Frontend code')}</TableCell>
+              <TableCell>{header('repo', 'Code')}</TableCell>
+              <TableCell>Official app</TableCell>
+              <TableCell>{header('permissionless', 'Permissionless app')}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -299,28 +447,59 @@ export default function MonitorPage() {
               const closeOnly = i.geo_site.close_only.length;
               const geoCaption =
                 geoCount || closeOnly
-                  ? [geoCount && `${geoCount} countries`, closeOnly && `${closeOnly} close-only`].filter(Boolean).join(', ')
+                  ? [geoCount && `${geoCount} ${geoCount === 1 ? 'country' : 'countries'}`, closeOnly && `${closeOnly} close-only`]
+                      .filter(Boolean)
+                      .join(', ')
                   : undefined;
-              const featureCaption = i.geo_feature.countries.length ? `${i.geo_feature.countries.length} countries` : undefined;
+              const featureCaption = i.geo_feature.countries.length
+                ? `${i.geo_feature.countries.length} ${i.geo_feature.countries.length === 1 ? 'country' : 'countries'}`
+                : undefined;
               return (
-                <TableRow key={i.id} hover onClick={() => navigate(`/monitor/${i.id}`)} sx={{ cursor: 'pointer' }}>
+                <TableRow
+                  key={i.id}
+                  hover
+                  onClick={() => navigate(`/monitor/${i.id}`)}
+                  sx={{
+                    cursor: 'pointer',
+                    ...(hasPermissionless(i) && {
+                      bgcolor: (theme) => alpha(theme.palette.primary.main, 0.06),
+                      '& > td:first-of-type': { boxShadow: (theme) => `inset 3px 0 0 ${theme.palette.primary.main}` }
+                    })
+                  }}
+                >
                   <TableCell>
                     <Typography variant="subtitle1" component="span" sx={{ fontWeight: 600 }}>
                       {i.name}
                     </Typography>
-                    <Typography variant="caption" color="text.secondary" component="div">
-                      {i.url.replace(/^https?:\/\//, '')}
-                    </Typography>
+                    <Tooltip title={i.networks.join(', ')} arrow placement="top" disableHoverListener={i.networks.length <= 3}>
+                      <Typography variant="caption" color="text.secondary" component="div">
+                        {i.networks.slice(0, 3).join(', ')}
+                        {i.networks.length > 3 ? ` +${i.networks.length - 3}` : ''}
+                      </Typography>
+                    </Tooltip>
                   </TableCell>
-                  <TableCell>
-                    <Typography variant="body2">{i.category}</Typography>
-                    <Typography variant="caption" color="text.secondary" component="div">
-                      {i.chains}
-                    </Typography>
-                  </TableCell>
+                  {SHOW_CATEGORY_COLUMN && (
+                    <TableCell>
+                      <Typography variant="body2">{i.category}</Typography>
+                    </TableCell>
+                  )}
                   <TableCell>
                     <LevelChip level={i.level} />
                   </TableCell>
+                  {hits && (
+                    <TableCell data-col="country">
+                      <Stack spacing={0.75}>
+                        {(hits.get(i.id) ?? []).map((h) => (
+                          <CountryVerdictCell
+                            key={h.cc}
+                            verdict={h.verdict}
+                            compact
+                            prefix={countries.length > 1 ? flagEmoji(h.cc) : undefined}
+                          />
+                        ))}
+                      </Stack>
+                    </TableCell>
+                  )}
                   <TableCell>
                     <StatusChip status={i.geo_site.s} caption={geoCaption} tooltip={i.geo_site.method || undefined} />
                   </TableCell>
@@ -338,24 +517,30 @@ export default function MonitorPage() {
                     <ToneChip tone={vpnTone(i.vpn.s)} label={VPN_LABELS[i.vpn.s]} tooltip={i.vpn.note || undefined} />
                   </TableCell>
                   <TableCell>
-                    <Tooltip title={i.tos.us_scope || ''} arrow placement="top" disableHoverListener={!i.tos.us_scope}>
-                      <Typography variant="body2" component="span">
-                        {TOS_US_LABELS[i.tos.us]}
-                      </Typography>
-                    </Tooltip>
+                    <RepoLink entry={i} compact />
+                  </TableCell>
+                  <TableCell onClick={(e) => e.stopPropagation()}>
+                    <Link
+                      href={i.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      underline="hover"
+                      variant="body2"
+                      sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, whiteSpace: 'nowrap' }}
+                    >
+                      {i.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                      <LaunchIcon sx={{ fontSize: 14 }} />
+                    </Link>
                   </TableCell>
                   <TableCell>
-                    <ForkChip fork={i.fork_ready} />
-                  </TableCell>
-                  <TableCell>
-                    <RepoLink entry={i} />
+                    <PermissionlessLink entry={i} />
                   </TableCell>
                 </TableRow>
               );
             })}
             {paginated.length === 0 && (
               <TableRow>
-                <TableCell colSpan={10}>
+                <TableCell colSpan={9 + (SHOW_CATEGORY_COLUMN ? 1 : 0) + (countries.length > 0 ? 1 : 0)}>
                   <Typography variant="body2" color="text.secondary" align="center" sx={{ py: 3 }}>
                     No interfaces match the current filters.
                   </Typography>

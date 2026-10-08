@@ -1,0 +1,7 @@
+node_modules
+dist
+.vite
+.idea
+monitor/repos
+monitor/out
+monitor/data/scan_raw.json

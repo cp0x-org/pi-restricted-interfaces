@@ -14,7 +14,7 @@ import Paper from '@mui/material/Paper';
 import SubCard from 'ui-component/cards/SubCard';
 import { CopyableAddress } from 'components/CopyableAddress';
 
-import { dataset } from 'data/dataset';
+import { dataset, interfaces } from 'data/dataset';
 import { COUNTRY_STATUS, LAYERS, LEVELS, STATUS } from 'types/restrictions';
 import LevelChip from './components/LevelChip';
 import StatusChip from './components/StatusChip';
@@ -80,7 +80,7 @@ const COUNTRY_RULES: string[] = [
   'feature-limited — the country is in the list of a confirmed feature or asset gate, or the interface limits US persons to some products.',
   'regional — only sub-national regions of the country are listed (Crimea, Donetsk, Luhansk, Kherson, Zaporizhzhia, New York, Ontario, …).',
   'ToS only — the country is named in the Terms of Service, or US persons are excluded there, and no enforcement was found.',
-  'unknown — geo-blocking was not assessed (closed code), or a block is confirmed but the country list is not published.',
+  'n/a — geo-blocking was not assessed (closed code), or a block is confirmed but the country list is not published.',
   'no restriction found — none of the above; wallet screening and VPN detection may still apply.'
 ];
 
@@ -100,8 +100,10 @@ export default function MethodologyPage() {
       </Typography>
       <Typography variant="body2" color="text.secondary" sx={{ mb: 3, maxWidth: 900 }}>
         The catalog answers one question per interface: what does the official frontend or backend block, for whom, by which mechanism,
-        where is it enforced, and does a permissionless fork remove it. Snapshot of {dataset.meta.generated}. Only observation: nothing is
-        bypassed, nothing is signed, no transactions are sent.
+        where is it enforced, and does a permissionless fork remove it. Snapshot of {dataset.meta.generated}. The site shows
+        {dataset.meta.scope}: {interfaces.length} of {dataset.meta.catalog_total} interfaces in the full catalog; Solana, Cosmos and other
+        non-EVM apps stay in <code>monitor/data</code> and in the report. Only observation: nothing is bypassed, nothing is signed, no
+        transactions are sent.
       </Typography>
 
       <Section title="Levels">
@@ -169,10 +171,12 @@ export default function MethodologyPage() {
           ))}
         </Stack>
         <Typography variant="body2" sx={{ mt: 2 }}>
-          Rules are applied in this order and the first match wins. Each verdict carries its basis: confirmed (code, live check or official
-          documentation), reported (press or users), ToS (Terms of Service only) or inferred (nothing found; a closed frontend may hide
-          more). Country lists are ISO 3166-1 codes; group terms such as “all of the EU” were expanded explicitly, while “sanctioned
-          jurisdictions” or “FATF high-risk” stay as free text and do not produce a match.
+          Rules are applied in this order and the first match wins. Each verdict carries its basis: observed (live probe from that country
+          through a verified proxy), confirmed (code, live check or official documentation), reported (press or users), ToS (Terms of
+          Service only) or inferred (nothing found; a closed frontend may hide more). A live observation overrides the static rules when it
+          shows a block; a served landing page upgrades “n/a” or “no restriction found” to an observed verdict; any other disagreement is
+          shown as a conflict with both sides visible. Country lists are ISO 3166-1 codes; group terms such as “all of the EU” were expanded
+          explicitly, while “sanctioned jurisdictions” or “FATF high-risk” stay as free text and do not produce a match.
         </Typography>
       </Section>
 
@@ -212,9 +216,17 @@ export default function MethodologyPage() {
         </Typography>
         <CopyableAddress address={dataset.meta.sanctioned_test_address} />
         <Typography variant="body2" sx={{ mt: 1.5 }}>
-          Egress: {dataset.meta.live_check_egress}. Checks ran from a single vantage point and without executing JavaScript, so client-side
-          geo-blocks and blocks for other countries are visible only through the code. Interfaces with closed code (levels A? and ?) need a
-          browser crawl through residential proxies, which is the next milestone of the monitor.
+          Egress of the initial snapshot: {dataset.meta.live_check_egress}. Those checks ran from a single vantage point and without
+          executing JavaScript, so client-side geo-blocks and blocks for other countries were visible only through the code.
+        </Typography>
+        <Typography variant="body2" sx={{ mt: 1.5 }}>
+          Per-country probing (P3): the landing page and the known geo endpoints of every interface are fetched through a residential proxy
+          in the target country, without JavaScript. The vantage is verified first by independent IP-geolocation services (two must agree)
+          and, on Cloudflare-fronted hosts, by the <code>loc=</code> field of <code>/cdn-cgi/trace</code>; a disagreeing vantage is
+          discarded. The result is one of: served, blocked (HTTP 451, a 403 with geo wording, a redirect to a block page, or a geo endpoint
+          answering “restricted”), close-only, feature-limited, or anti-bot challenge (not testable). “Served” only means that no edge-level
+          block was observed: client-side gates, wallet screening and feature gates need the browser and wallet probes of the next
+          milestones. Sanctioned jurisdictions are not probed; their status stays inferred from code and configuration.
         </Typography>
       </Section>
 
@@ -229,7 +241,7 @@ export default function MethodologyPage() {
             delisted them in 2025. Tests use an address that is sanctioned at test time.
           </Typography>
           <Typography variant="body2">
-            Terms of Service rendered on the client could not always be read; those entries carry “unknown” rather than a guess.
+            Terms of Service rendered on the client could not always be read; those entries carry “n/a” rather than a guess.
           </Typography>
           <Typography variant="body2">
             Source of truth: <code>{DATA_FILE_PATH}</code> in the project repository, regenerated with <code>pnpm monitor:build</code>.

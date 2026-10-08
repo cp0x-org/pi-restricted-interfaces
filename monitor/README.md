@@ -3,7 +3,7 @@
 Source of truth: `data/interfaces.json` (schema v2, hand-maintained). Everything else is derived.
 
 ```
-data/interfaces.json ──(build.py)──▶ src/data/interfaces.json   dataset imported by the web app (+ computed level, fork_ready, category_group, chain_tags)
+data/interfaces.json ──(build.py)──▶ src/data/interfaces.json   dataset imported by the web app: EVM interfaces only (--ui-chains evm), + computed level, fork_ready, category_group, chain_tags, observations
                                  ▶ out/report.md               human-readable report (Russian)
                                  ▶ out/interfaces.csv          same table for spreadsheets
 ```
@@ -11,10 +11,15 @@ data/interfaces.json ──(build.py)──▶ src/data/interfaces.json   datase
 ## Commands (from the project root)
 
 ```bash
-pnpm monitor:build    # validate data, regenerate src/data/interfaces.json, out/report.md, out/interfaces.csv
-pnpm monitor:verify   # evidence paths exist in local clones, frontend repos reachable (needs network + repos/)
-pnpm monitor:scan     # ripgrep the cloned frontends for geo/screening signals -> data/scan_raw.json
+pnpm monitor:build          # validate data (+ observations), regenerate src/data/interfaces.json, out/report.md, out/interfaces.csv
+pnpm monitor:verify         # evidence paths exist in local clones, frontend repos reachable (needs network + repos/)
+pnpm monitor:scan           # ripgrep the cloned frontends for geo/screening signals -> data/scan_raw.json
+pnpm monitor:probe -- --countries UA,US   # P3: HTTP probe of every interface from those countries via a proxy -> probe/out/<run>.json
+pnpm monitor:probe:merge -- probe/out/<run>.json   # append a run to data/observations.json
 ```
+
+Proxies for `monitor:probe` are configured through `PROBE_PROXY_URL` (template with `{cc}`), see `docs/probing.md` for providers,
+pricing, credentials format and the full workflow.
 
 Requirements: Python ≥ 3.9 (standard library only), `rg` (ripgrep) for `monitor:scan`, `git` for `monitor:verify`.
 Python is a maintainer tool only; `pnpm build` never runs it. Commit the regenerated files together with the data change.
@@ -36,14 +41,18 @@ git clone --depth 1 --filter=blob:limit=400k https://github.com/<owner>/<repo> m
 | `scripts/build.py` | validation (enums, ISO country tokens, repo consistency), derived fields, report/CSV/UI export |
 | `scripts/scan.py` | static scan of cloned frontends |
 | `scripts/verify.py` | evidence paths and repo reachability |
+| `scripts/probe.py` | P3 per-country HTTP probe through a proxy (vantage verification, site + geo endpoints, `merge` into the store) |
+| `data/observations.json` | append-only store of probe observations; `build.py` exports the latest verified ones to the site |
+| `docs/probing.md` | how to buy and configure proxies, run the probe and read the results (Russian) |
 | `templates/report_template.md` | report skeleton with `{{MAIN_TABLE}}`, `{{MECH_TABLE}}`, `{{LIVE_TABLE}}`, `{{STATS}}`, `{{PROVIDERS}}` |
 | `prompts/auditor-agent.md` | prompt for the LLM auditor used in deep checks (schema of its JSON output) |
 | `docs/roadmap.md` | monitor architecture and milestones M1–M4 (probes, proxies, mock wallet, scoring, alerts) |
-| `out/` | generated snapshot of the report and CSV |
+| `out/` | generated snapshot of the report and CSV (always the full catalog, incl. non-EVM) |
+| `archive/<date>/` | frozen copies of data, CSV, report and observations with a summary table (README.md) |
 
 ## Schema v2 (one entry)
 
-- `id` (slug), `name`, `category` (free text), `chains` (free text), `url`
+- `id` (slug), `name`, `category` (free text), `chains` (free text), `networks[]` (EVM networks the official app lists; indicative, from app/docs), `url`
 - `frontend_repo` (GitHub URL or null, may point at a monorepo subfolder), `repo_state` ∈ `open | open_stale | closed | private_now | archived | none_found`, `repo_status` (note), `repo_last_commit`
 - `geo_site { s, countries[], close_only[], method }` — site-level geo-blocking
 - `geo_feature { s, countries[], scope }` — feature / asset-level geo-gating
@@ -51,13 +60,13 @@ git clone --depth 1 --filter=blob:limit=400k https://github.com/<owner>/<repo> m
 - `screening { s, provider, layer ∈ edge | frontend | own-api | protocol-api | null, fail ∈ open | closed | unknown | n/a | null, fail_note }`
 - `asset_filter` (text)
 - `tos { url, updated, us ∈ yes | no | partial | unknown, us_scope, restricted (text), restricted_codes[] }`
-- `fork_notes`, `live[]`, `evidence[]`, `confidence ∈ high | medium | low`, `alternatives[] { name, url }`
+- `fork_notes`, `live[]`, `geo_endpoints[]` (URLs whose response reveals the server-side geo verdict, probed by P3), `evidence[]`, `confidence ∈ high | medium | low`, `alternatives[] { name, url }`
 
 Status vocabulary `s`: `yes` (confirmed by code, live check or official docs) · `no` · `reported` (press/users, not confirmed in code) · `tos_only` (reserved in the ToS, no enforcement found) · `optional` (in code, off by default) · `unknown`.
 
 Country tokens: ISO 3166-1 alpha-2 codes, or sub-national regions as `CC-Name` (`UA-Crimea`, `US-NY`, `CA-ON`, …; the full list is `REGIONS` in `build.py`). Group words such as "EU/EEA" are expanded explicitly; "sanctioned jurisdictions" or "FATF high-risk" stay in the free-text fields.
 
-Computed by `build.py` (never edit by hand): `level` (A / A? / B / C / D / ?), `fork_ready` (yes / stale / partial / no_code), `category_group`, `chain_tags`.
+Computed by `build.py` (never edit by hand): `level` (A / A? / B / C / D / ?), `fork_ready` (yes / stale / partial / no_code), `category_group`, `chain_tags`, `observations[]` (latest verified probe results per country / proxy type / target).
 
 ## Adding or updating an interface
 

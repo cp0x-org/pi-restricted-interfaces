@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "runs": [
+    {
+      "id": "20261008T155309Z_isp",
+      "started_at": "2026-10-08T15:53:09Z",
+      "finished_at": "2026-10-08T15:56:40Z",
+      "tool": "probe.py/0.1",
+      "proxy_type": "isp",
+      "countries": [
+        "US",
+        "DE"
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "interface_id": "dydx",
+      "kind": "geo_endpoint",
+      "url": "https://indexer.dydx.trade/v4/height",
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "vantage": {
+        "ip_country": "US",
+        "asn": "AS5650",
+        "org": "AS5650 Verizon Business",
+        "verified_by": [
+          "api.country.is",
+          "ipinfo.io",
+          "ifconfig.co"
+        ],
+        "cf_loc": null,
+        "verified": true
+      },
+      "at": "2026-10-08T15:53:38Z",
+      "http_status": 200,
+      "final_url": "https://indexer.dydx.trade/v4/height",
+      "server": "cloudflare",
+      "cf_ray": "a47651cd2dd45347-IAD",
+      "ms": 1867,
+      "ui_state": "ok",
+      "flags": {},
+      "body_sha256": "c314a2b41019883d5c3b89d509bc510a7996f063ee8000cfc06e1f6a7dd7959d",
+      "excerpt": "{\"height\":\"108600031\",\"time\":\"2026-10-08T15:53:37.072Z\"}",
+      "note": "no restriction flag"
+    },
+    {
+      "interface_id": "dydx",
+      "kind": "site",
+      "url": "https://dydx.trade",
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "vantage": {
+        "ip_country": "US",
+        "asn": "AS5650",
+        "org": "AS5650 Verizon Business",
+        "verified_by": [
+          "api.country.is",
+          "ipinfo.io",
+          "ifconfig.co"
+        ],
+        "cf_loc": "US",
+        "verified": true
+      },
+      "at": "2026-10-08T15:53:36Z",
+      "http_status": 200,
+      "final_url": "https://dydx.trade",
+      "server": "cloudflare",
+      "cf_ray": "a47651b1aaf9a684-ATL",
+      "ms": 3752,
+      "ui_state": "ok",
+      "flags": {},
+      "body_sha256": "5d33dbaf2c5578e214f4a553ebd6b16776ca7477002e2ec1ad895c8c342168f3",
+      "excerpt": "dYdX | Leading Decentralized Platform for Crypto Perpetual Trading",
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "interface_id": "ethena",
+      "kind": "site",
+      "url": "https://app.ethena.fi",
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "vantage": {
+        "ip_country": "US",
+        "asn": "AS5650",
+        "org": "AS5650 Verizon Business",
+        "verified_by": [
+          "api.country.is",
+          "ipinfo.io",
+          "ifconfig.co"
+        ],
+        "cf_loc": null,
+        "verified": true
+      },
+      "at": "2026-10-08T15:54:30Z",
+      "http_status": 200,
+      "final_url": "https://ethena.fi/restricted",
+      "server": "Vercel",
+      "cf_ray": null,
+      "ms": 14869,
+      "ui_state": "blocked",
+      "flags": {},
+      "body_sha256": "375bc2a0ca017715e1e2c8109b6c200686c93be7f7a1314fdeb026d7a99d205e",
+      "excerpt": "Products Ecosystem Network Transparency Resources Launch App Access Restricted Unfortunately, Ethena is not available in your country yet or your wallet is linked to high risk activities. Digital Dollars for the Internet Economy © 2026 Ethena Products USDe USDtb Whitelabel Ethena Pay Infrastructure ",
+      "note": "redirect -> https://ethena.fi/restricted"
+    },
+    {
+      "interface_id": "euler",
+      "kind": "geo_endpoint",
+      "url": "https://app.euler.finance/api/ping",
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "vantage": {
+        "ip_country": "US",
+        "asn": "AS5650",
+        "org": "AS5650 Verizon Business",
+        "verified_by": [
+          "api.country.is",
+          "ipinfo.io",
+          "ifconfig.co"
+        ],
+        "cf_loc": null,
+        "verified": true
+      },
+      "at": "2026-10-08T15:54:15Z",
+      "http_status": 403,
+      "final_url": "https://app.euler.finance/api/ping",
+      "server": "cloudflare",
+      "cf_ray": "a476528cee4824ca-IAD",
+      "ms": 26333,
+      "ui_state": "unknown",
+      "flags": {},
+      "body_sha256": "9a782e072d1d01b312c928908fa03419d1268b1c1d4f7d0f4422eeae23b16a11",
+      "excerpt": "Euler Finance",
+      "note": "HTTP 403 without geo wording (WAF/anti-bot?)"
+    },
+    {
+      "interface_id": "euler",
+      "kind": "site",
+      "url": "https://app.euler.finance",
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "vantage": {
+        "ip_country": "US",
+        "asn": "AS5650",
+        "org": "AS5650 Verizon Business",
+        "verified_by": [
+          "api.country.is",
+          "ipinfo.io",
+          "ifconfig.co"
+        ],
+        "cf_loc": "US",
+        "verified": true
+      },
+      "at": "2026-10-08T15:53:48Z",
+      "http_status": 200,
+      "final_url": "https://app.euler.finance",
+      "server": "cloudflare",
+      "cf_ray": "a47651e838ee1625-IAD",
+      "ms": 3880,
+      "ui_state": "ok",
+      "flags": {},
+      "body_sha256": "118824b2b2e48f61c727cea5d36cdac88a590fb86a996cbcd3743687174657e4",
+      "excerpt": "Euler Finance",
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "interface_id": "hop",
+      "kind": "site",
+      "url": "https://app.hop.exchange",
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "vantage": {
+        "ip_country": "US",
+        "asn": "AS5650",
+        "org": "AS5650 Verizon Business",
+        "verified_by": [
+          "api.country.is",
+          "ipinfo.io",
+          "ifconfig.co"
+        ],
+        "cf_loc": "US",
+        "verified": true
+      },
+      "at": "2026-10-08T15:54:38Z",
+      "http_status": 400,
+      "final_url": "https://app.hop.exchange",
+      "server": "cloudflare",
+      "cf_ray": "a476532faedff795-EWR",
+      "ms": 4115,
+      "ui_state": "unknown",
+      "flags": {},
+      "body_sha256": "5e3176197f53ec3ecf11240ffba4bc5830a1429f173705f085513a8eabf80220",
+      "excerpt": "unexpected error",
+      "note": "HTTP 400"
+    },
+    {
+      "interface_id": "polymarket",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "vantage": {
+        "ip_country": "US",
+        "asn": "AS5650",
+        "org": "AS5650 Verizon Business",
+        "verified_by": [
+          "api.country.is",
+          "ipinfo.io",
+          "ifconfig.co"
+        ],
+        "cf_loc": null,
+        "verified": true
+      },
+      "at": "2026-10-08T15:56:38Z",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "server": "cloudflare",
+      "cf_ray": "a47656253e968678-IAD",
+      "ms": 11285,
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "US",
+        "region": "VA"
+      },
+      "body_sha256": "5d1d840d57655d6f4c7d10e59d50301d2e18f490313108036f86e3bf485f9a27",
+      "excerpt": "{\"blocked\":true,\"ip\":\"9.249.113.0\",\"country\":\"US\",\"region\":\"VA\"}",
+      "note": "flag true"
+    },
+    {
+      "interface_id": "polymarket",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "vantage": {
+        "ip_country": "US",
+        "asn": "AS5650",
+        "org": "AS5650 Verizon Business",
+        "verified_by": [
+          "api.country.is",
+          "ipinfo.io",
+          "ifconfig.co"
+        ],
+        "cf_loc": "US",
+        "verified": true
+      },
+      "at": "2026-10-08T15:56:26Z",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "server": "cloudflare",
+      "cf_ray": "a4765385efc5f5ca-IAD",
+      "ms": 101246,
+      "ui_state": "error",
+      "flags": {},
+      "body_sha256": null,
+      "excerpt": "",
+      "note": "timeout: The read operation timed out"
+    },
+    {
+      "interface_id": "sky",
+      "kind": "geo_endpoint",
+      "url": "https://api.sky.money/geo-config",
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "vantage": {
+        "ip_country": "US",
+        "asn": "AS5650",
+        "org": "AS5650 Verizon Business",
+        "verified_by": [
+          "api.country.is",
+          "ipinfo.io",
+          "ifconfig.co"
+        ],
+        "cf_loc": null,
+        "verified": true
+      },
+      "at": "2026-10-08T15:53:40Z",
+      "http_status": null,
+      "final_url": "https://api.sky.money/geo-config",
+      "server": null,
+      "cf_ray": null,
+      "ms": 134,
+      "ui_state": "error",
+      "flags": {},
+      "body_sha256": null,
+      "excerpt": "",
+      "note": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "interface_id": "sky",
+      "kind": "site",
+      "url": "https://app.sky.money",
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "vantage": {
+        "ip_country": "US",
+        "asn": "AS5650",
+        "org": "AS5650 Verizon Business",
+        "verified_by": [
+          "api.country.is",
+          "ipinfo.io",
+          "ifconfig.co"
+        ],
+        "cf_loc": null,
+        "verified": true
+      },
+      "at": "2026-10-08T15:53:39Z",
+      "http_status": null,
+      "final_url": "https://app.sky.money",
+      "server": null,
+      "cf_ray": null,
+      "ms": 258,
+      "ui_state": "error",
+      "flags": {},
+      "body_sha256": null,
+      "excerpt": "",
+      "note": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>"
+    }
+  ]
+}

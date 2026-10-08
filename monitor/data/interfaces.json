@@ -7,7 +7,9 @@
     "live_check_egress": "US datacenter (Polymarket /api/geoblock reported country=US, region=OH; Beefy /geo/country = US)",
     "status_values": "yes | no | reported (public reports, not confirmed in code) | tos_only (only reserved in ToS) | optional (in code, off by default) | unknown",
     "layer_values": "edge (CDN/hosting rule) | frontend (client JS) | own-api (operator backend called by the frontend) | protocol-api (backend that any fork also depends on)",
-    "country_tokens": "ISO 3166-1 alpha-2 codes, or sub-national regions as CC-Name (see regions); group words like 'EU/EEA' are expanded explicitly, 'sanctioned'/'FATF' stay in free text"
+    "country_tokens": "ISO 3166-1 alpha-2 codes, or sub-national regions as CC-Name (see regions); group words like 'EU/EEA' are expanded explicitly, 'sanctioned'/'FATF' stay in free text",
+    "networks_note": "networks[] = EVM networks the official app lists at the time of the snapshot (from the app / public docs; indicative, not probed)",
+    "alternatives_source": "https://pi.cp0x.com — permissionless interfaces by cp0x (card list in the site bundle, checked 2026-10-08)"
   },
   "interfaces": [
     {
@@ -15,6 +17,21 @@
       "name": "Uniswap",
       "category": "DEX",
       "chains": "EVM, Solana",
+      "networks": [
+        "Ethereum",
+        "Unichain",
+        "Base",
+        "Arbitrum",
+        "Optimism",
+        "Polygon",
+        "BNB Chain",
+        "Avalanche",
+        "zkSync",
+        "Blast",
+        "Celo",
+        "Zora",
+        "World Chain"
+      ],
       "url": "https://app.uniswap.org",
       "frontend_repo": "https://github.com/Uniswap/interface/tree/main/apps/web",
       "repo_state": "open",
@@ -55,6 +72,7 @@
       },
       "fork_notes": "Screening and RWA gate are calls to their entry gateway. Remove them in a fork. Routing (Trading API) goes through the same gateway with an API key, which is a dependency.",
       "live": [],
+      "geo_endpoints": [],
       "evidence": [
         "packages/compliance/src/client.ts",
         "packages/compliance/src/screenAddressQuery.ts",
@@ -65,13 +83,32 @@
         "https://blockworks.com/news/uniswap-labs-blocked-ukraine"
       ],
       "confidence": "high",
-      "alternatives": []
+      "alternatives": [
+        {
+          "name": "uni.cp0x.com",
+          "url": "https://uni.cp0x.com"
+        }
+      ]
     },
     {
       "id": "sushiswap",
       "name": "SushiSwap",
       "category": "DEX",
       "chains": "EVM (+ perps via Hyperliquid)",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Optimism",
+        "Polygon",
+        "BNB Chain",
+        "Avalanche",
+        "Gnosis",
+        "Linea",
+        "Scroll",
+        "Blast",
+        "30+ more"
+      ],
       "url": "https://www.sushi.com",
       "frontend_repo": "https://github.com/sushi-labs/sushiswap/tree/master/apps/web",
       "repo_state": "open",
@@ -151,6 +188,9 @@
       },
       "fork_notes": "Everything is client-side. Removed in a fork with no backend dependencies. Perps depend on the Hyperliquid API (IP check on their side).",
       "live": [],
+      "geo_endpoints": [
+        "https://www.sushi.com/api/geolocation"
+      ],
       "evidence": [
         "apps/web/src/lib/wagmi/components/sanctioned-address-dialog.tsx",
         "apps/web/src/lib/robinhood/restricted-countries.ts",
@@ -165,6 +205,16 @@
       "name": "PancakeSwap",
       "category": "DEX",
       "chains": "BNB, EVM, Solana",
+      "networks": [
+        "BNB Chain",
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "zkSync",
+        "Linea",
+        "opBNB",
+        "Polygon zkEVM"
+      ],
       "url": "https://pancakeswap.finance",
       "frontend_repo": null,
       "repo_state": "private_now",
@@ -216,6 +266,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://forklog.com/en/pancakeswap-to-block-users-from-ten-jurisdictions/amp",
         "https://docs.pancakeswap.finance/protocol/developers/contributing/codebase-overview"
@@ -228,6 +279,19 @@
       "name": "Curve",
       "category": "DEX",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Optimism",
+        "Base",
+        "Polygon",
+        "Avalanche",
+        "Fantom",
+        "Gnosis",
+        "Fraxtal",
+        "BNB Chain",
+        "Sonic"
+      ],
       "url": "https://www.curve.finance",
       "frontend_repo": "https://github.com/curvefi/curve-frontend",
       "repo_state": "open",
@@ -291,6 +355,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "packages/evm-ui/src/widgets/Legal/components/tabs/Terms.tsx",
         "BLACKLISTS-DEPRECATIONS.md"
@@ -303,6 +368,16 @@
       "name": "Balancer",
       "category": "DEX",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Avalanche",
+        "Gnosis",
+        "Optimism",
+        "Polygon",
+        "Sonic"
+      ],
       "url": "https://balancer.fi",
       "frontend_repo": "https://github.com/balancer/frontend-monorepo/tree/main/apps/frontend-v3",
       "repo_state": "open",
@@ -343,19 +418,34 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "packages/lib/shared/services/hypernative/checkAddressReputation.ts",
         "packages/lib/modules/web3/UserAccountProvider.tsx",
         "packages/lib/modules/web3/BlockedAddressModal.tsx"
       ],
       "confidence": "high",
-      "alternatives": []
+      "alternatives": [
+        {
+          "name": "balancer.cp0x.com",
+          "url": "https://balancer.cp0x.com"
+        }
+      ]
     },
     {
       "id": "cowswap",
       "name": "CoW Swap",
       "category": "DEX / intents",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Gnosis",
+        "Arbitrum",
+        "Base",
+        "Avalanche",
+        "Polygon",
+        "BNB Chain"
+      ],
       "url": "https://swap.cow.fi",
       "frontend_repo": "https://github.com/cowprotocol/cowswap/tree/develop/apps/cowswap-frontend",
       "repo_state": "open",
@@ -426,6 +516,7 @@
       },
       "fork_notes": "The frontend geo filter is trivial to remove, but banned users are rejected by the CoW orderbook API itself. A fork does not bypass that.",
       "live": [],
+      "geo_endpoints": [],
       "evidence": [
         "apps/cowswap-frontend/src/modules/rwa/state/geoDataAtom.ts",
         "libs/core/src/cms/consts.ts",
@@ -440,7 +531,21 @@
       "name": "1inch",
       "category": "DEX aggregator",
       "chains": "EVM, Solana",
-      "url": "https://1inch.com (app.1inch.io -> 302)",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Optimism",
+        "Polygon",
+        "BNB Chain",
+        "Avalanche",
+        "Gnosis",
+        "zkSync",
+        "Linea",
+        "Sonic",
+        "Unichain"
+      ],
+      "url": "https://1inch.com",
       "frontend_repo": null,
       "repo_state": "closed",
       "repo_status": "closed",
@@ -478,10 +583,11 @@
         "restricted": "generic 'Prohibited Localities'",
         "restricted_codes": []
       },
-      "fork_notes": "Closed. The alternative is our own UI on top of the 1inch API (needs a key, ToS screening on their side).",
+      "fork_notes": "Closed. The alternative is our own UI on top of the 1inch API (needs a key, ToS screening on their side). URL note: app.1inch.io -> 302.",
       "live": [
         "WebFetch (US): 302 -> 1inch.com, normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://help.1inch.com/en/articles/6588963-1inch-address-screening",
         "https://configs.1inch.io/frontend/legal/1inch_com_terms_of_use.pdf"
@@ -494,6 +600,22 @@
       "name": "KyberSwap",
       "category": "DEX aggregator",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Optimism",
+        "Base",
+        "Polygon",
+        "BNB Chain",
+        "Avalanche",
+        "Linea",
+        "Scroll",
+        "zkSync",
+        "Mantle",
+        "Blast",
+        "Sonic",
+        "Berachain"
+      ],
       "url": "https://kyberswap.com",
       "frontend_repo": "https://github.com/KyberNetwork/kyberswap-interface/tree/main/apps/kyberswap-interface",
       "repo_state": "open",
@@ -549,6 +671,7 @@
       "live": [
         "Blackjack: sanctioned -> blacklisted:true (reason 2, since 2023-12); control -> blacklisted:false"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "apps/kyberswap-interface/src/services/blackjack.ts",
         "apps/kyberswap-interface/src/utils/sendTransaction.ts",
@@ -562,6 +685,14 @@
       "name": "QuickSwap",
       "category": "DEX",
       "chains": "Polygon, EVM",
+      "networks": [
+        "Polygon",
+        "Polygon zkEVM",
+        "Manta Pacific",
+        "Immutable zkEVM",
+        "X Layer",
+        "Soneium"
+      ],
       "url": "https://dapp.quickswap.exchange",
       "frontend_repo": "https://github.com/QuickSwap/interface-v2",
       "repo_state": "open_stale",
@@ -631,6 +762,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "src/constants/index.ts",
         "public/locales/en.json"
@@ -643,6 +775,9 @@
       "name": "Aerodrome",
       "category": "DEX",
       "chains": "Base",
+      "networks": [
+        "Base"
+      ],
       "url": "https://aerodrome.finance",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -721,6 +856,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://github.com/aerodrome-finance/docs/blob/main/content/legal.mdx"
       ],
@@ -732,6 +868,17 @@
       "name": "Velodrome",
       "category": "DEX",
       "chains": "Optimism, Superchain",
+      "networks": [
+        "Optimism",
+        "Mode",
+        "Lisk",
+        "Fraxtal",
+        "Ink",
+        "Soneium",
+        "Unichain",
+        "Swell",
+        "Superchain"
+      ],
       "url": "https://velodrome.finance",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -808,6 +955,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://github.com/velodrome-finance/docs/blob/main/content/legal.mdx"
       ],
@@ -819,6 +967,13 @@
       "name": "Ambient Finance",
       "category": "DEX",
       "chains": "EVM (Scroll, Blast, Ethereum...)",
+      "networks": [
+        "Ethereum",
+        "Scroll",
+        "Blast",
+        "Swell",
+        "Plume"
+      ],
       "url": "https://ambient.finance",
       "frontend_repo": "https://github.com/CrocSwap/ambient-ts-app",
       "repo_state": "open",
@@ -881,6 +1036,7 @@
       "live": [
         "WebFetch (US): app crashed with 'Something went wrong' (JS)"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "netlify.toml",
         "src/ambient-utils/constants/blacklist.ts",
@@ -894,6 +1050,18 @@
       "name": "Velora (ex-ParaSwap)",
       "category": "DEX aggregator",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Optimism",
+        "Polygon",
+        "BNB Chain",
+        "Avalanche",
+        "Gnosis",
+        "zkSync",
+        "Linea"
+      ],
       "url": "https://app.velora.xyz",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -944,6 +1112,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://velora.xyz/tos"
       ],
@@ -955,6 +1124,21 @@
       "name": "Matcha (0x)",
       "category": "DEX aggregator",
       "chains": "EVM, Solana",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Optimism",
+        "Polygon",
+        "BNB Chain",
+        "Avalanche",
+        "Blast",
+        "Linea",
+        "Scroll",
+        "Mantle",
+        "Unichain",
+        "Berachain"
+      ],
       "url": "https://matcha.xyz",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -997,6 +1181,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://www.theblock.co/post/137962/dex-aggregator-matcha-geoblocks-trades-from-russia"
       ],
@@ -1008,7 +1193,21 @@
       "name": "Jumper (LI.FI)",
       "category": "Bridge / aggregator",
       "chains": "EVM, Solana, BTC, Sui",
-      "url": "https://jumper.xyz (jumper.exchange -> 302)",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Optimism",
+        "Polygon",
+        "BNB Chain",
+        "Avalanche",
+        "Gnosis",
+        "Linea",
+        "Scroll",
+        "zkSync",
+        "30+ more"
+      ],
+      "url": "https://jumper.xyz",
       "frontend_repo": "https://github.com/jumperexchange/jumper-exchange",
       "repo_state": "open",
       "repo_status": "open (may lag prod)",
@@ -1063,10 +1262,11 @@
           "UA-Zaporizhzhia"
         ]
       },
-      "fork_notes": "Frontend is clean, but routes come from the LI.FI API, which screens addresses (and LI.FI's ToS excludes US persons).",
+      "fork_notes": "Frontend is clean, but routes come from the LI.FI API, which screens addresses (and LI.FI's ToS excludes US persons). URL note: jumper.exchange -> 302.",
       "live": [
         "LI.FI /v1/quote: SDN fromAddress -> 422, control -> quote OK"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "src/components/TermsOfBusiness/lists.tsx",
         "https://li.fi/legal/terms-and-conditions/"
@@ -1079,6 +1279,7 @@
       "name": "Raydium",
       "category": "DEX",
       "chains": "Solana",
+      "networks": [],
       "url": "https://raydium.io",
       "frontend_repo": "https://github.com/raydium-io/raydium-ui-v3-public",
       "repo_state": "open_stale",
@@ -1139,6 +1340,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "src/components/AppLayout/components/DisclaimerModal.tsx",
         "src/pages/docs/disclaimer.tsx",
@@ -1152,6 +1354,7 @@
       "name": "Jupiter",
       "category": "DEX aggregator",
       "chains": "Solana",
+      "networks": [],
       "url": "https://jup.ag",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -1212,6 +1415,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://hub.jup.ag/docs/terms-of-use"
       ],
@@ -1223,6 +1427,7 @@
       "name": "Orca",
       "category": "DEX",
       "chains": "Solana",
+      "networks": [],
       "url": "https://www.orca.so",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -1321,6 +1526,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://docs.orca.so/support/blocked-regions",
         "https://docs.orca.so/trade/availability-and-restrictions"
@@ -1333,6 +1539,7 @@
       "name": "Meteora",
       "category": "DEX",
       "chains": "Solana",
+      "networks": [],
       "url": "https://app.meteora.ag",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -1394,6 +1601,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://docs.meteora.ag/resources/legal/terms-of-service"
       ],
@@ -1405,6 +1613,7 @@
       "name": "dYdX",
       "category": "Perps",
       "chains": "dYdX Chain",
+      "networks": [],
       "url": "https://dydx.trade",
       "frontend_repo": "https://github.com/dydxprotocol/v4-web",
       "repo_state": "open",
@@ -1482,6 +1691,9 @@
       "live": [
         "indexer /v4/compliance/screen: SDN -> {status: BLOCKED, reason: COMPLIANCE_PROVIDER}; control -> COMPLIANT"
       ],
+      "geo_endpoints": [
+        "https://indexer.dydx.trade/v4/height"
+      ],
       "evidence": [
         "src/bonsai/calculators/compliance.ts",
         "src/bonsai/rest/compliance.ts",
@@ -1496,6 +1708,11 @@
       "name": "GMX",
       "category": "Perps",
       "chains": "Arbitrum, Avalanche, Botanix",
+      "networks": [
+        "Arbitrum",
+        "Avalanche",
+        "Botanix"
+      ],
       "url": "https://app.gmx.io",
       "frontend_repo": "https://github.com/gmx-io/gmx-interface",
       "repo_state": "open",
@@ -1536,6 +1753,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "landing/src/pages/TermsAndConditions/TermsAndConditions.tsx"
       ],
@@ -1547,6 +1765,7 @@
       "name": "Hyperliquid",
       "category": "Perps",
       "chains": "Hyperliquid L1",
+      "networks": [],
       "url": "https://app.hyperliquid.xyz",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -1593,6 +1812,7 @@
       "live": [
         "WebFetch (US): metadata only, no JS"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "sushi-labs/sushiswap apps/web/src/lib/perps/info/use-legal-check.ts",
         "https://www.datawallet.com/crypto/is-hyperliquid-available-in-the-usa"
@@ -1605,7 +1825,8 @@
       "name": "Drift (-> Velocity)",
       "category": "Perps",
       "chains": "Solana",
-      "url": "https://app.drift.trade (-> app.velocity.exchange)",
+      "networks": [],
+      "url": "https://app.drift.trade",
       "frontend_repo": null,
       "repo_state": "closed",
       "repo_status": "closed (velocity-exchange/velocity-common = shared lib)",
@@ -1668,9 +1889,12 @@
         "restricted": "unknown (text loaded from S3)",
         "restricted_codes": []
       },
-      "fork_notes": "Geo-check is client-side and fail-open. Rebranded to Velocity after the 2026-04 exploit.",
+      "fork_notes": "Geo-check is client-side and fail-open. Rebranded to Velocity after the 2026-04 exploit. URL note: now app.velocity.exchange.",
       "live": [
         "WebFetch (US): normal page"
+      ],
+      "geo_endpoints": [
+        "https://geolocation.drift-labs.workers.dev/"
       ],
       "evidence": [
         "velocity-exchange/velocity-common: common-ts/src/utils/geoblock/index.ts, common-ts/src/constants/geoblockList.ts, react/src/hooks/useGeoBlocking.tsx"
@@ -1683,6 +1907,12 @@
       "name": "gTrade (Gains)",
       "category": "Perps",
       "chains": "Arbitrum, Base, Polygon, ApeChain",
+      "networks": [
+        "Arbitrum",
+        "Base",
+        "Polygon",
+        "ApeChain"
+      ],
       "url": "https://gains.trade",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -1725,6 +1955,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://gains.trade/terms-of-service"
       ],
@@ -1736,6 +1967,7 @@
       "name": "Lighter",
       "category": "Perps",
       "chains": "Lighter (zk L2)",
+      "networks": [],
       "url": "https://app.lighter.xyz",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -1791,6 +2023,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://lighter.xyz/terms"
       ],
@@ -1802,6 +2035,23 @@
       "name": "Aave",
       "category": "Lending",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Optimism",
+        "Base",
+        "Polygon",
+        "Avalanche",
+        "BNB Chain",
+        "Gnosis",
+        "Scroll",
+        "zkSync",
+        "Linea",
+        "Sonic",
+        "Celo",
+        "Mantle",
+        "Soneium"
+      ],
       "url": "https://app.aave.com",
       "frontend_repo": "https://github.com/aave/interface",
       "repo_state": "open",
@@ -1861,6 +2111,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "pages/api/preflight-compliance.ts",
         "src/components/AddressBlocked.tsx",
@@ -1868,13 +2119,30 @@
         "https://governance.aave.com/t/address-blocking-and-trm-labs/9301"
       ],
       "confidence": "high",
-      "alternatives": []
+      "alternatives": [
+        {
+          "name": "aave.cp0x.com",
+          "url": "https://aave.cp0x.com"
+        }
+      ]
     },
     {
       "id": "compound",
       "name": "Compound III",
       "category": "Lending",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Polygon",
+        "Optimism",
+        "Scroll",
+        "Mantle",
+        "Linea",
+        "Unichain",
+        "Ronin"
+      ],
       "url": "https://app.compound.finance",
       "frontend_repo": "https://github.com/compound-finance/webb3-frontend",
       "repo_state": "open",
@@ -1915,6 +2183,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "src/helpers/sanctions.ts",
         "src/contexts/Web3Context.tsx"
@@ -1927,6 +2196,18 @@
       "name": "Morpho",
       "category": "Lending",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Base",
+        "Arbitrum",
+        "Optimism",
+        "Polygon",
+        "Unichain",
+        "World Chain",
+        "Katana",
+        "Plume",
+        "Sonic"
+      ],
       "url": "https://app.morpho.org",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -1967,6 +2248,7 @@
       "live": [
         "WebFetch (US): normal page, meta x-geo-country=US"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://docs.morpho.org/interface/warnings/",
         "https://github.com/morpho-org/morpho-lite-apps"
@@ -1984,7 +2266,16 @@
       "name": "Spark",
       "category": "Lending / savings",
       "chains": "EVM",
-      "url": "https://app.spark.fi (-> app.spark.finance)",
+      "networks": [
+        "Ethereum",
+        "Base",
+        "Arbitrum",
+        "Gnosis",
+        "Optimism",
+        "Unichain",
+        "Avalanche"
+      ],
+      "url": "https://app.spark.fi",
       "frontend_repo": null,
       "repo_state": "private_now",
       "repo_status": "private-now (marsfoundation/spark-app, sparkdotfi/spark-app -> 404)",
@@ -2022,21 +2313,34 @@
         "restricted": "generic; ToS 2.6: by IP, ISP, VPN, device, address",
         "restricted_codes": []
       },
-      "fork_notes": "Find the last public spark-app commit (mirrors/forks on GitHub).",
+      "fork_notes": "Find the last public spark-app commit (mirrors/forks on GitHub). URL note: now app.spark.finance.",
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://cointelegraph.com/news/makerdao-spark-protocol-block-vpn-users-controversy"
       ],
       "confidence": "medium",
-      "alternatives": []
+      "alternatives": [
+        {
+          "name": "spark.cp0x.com",
+          "url": "https://spark.cp0x.com"
+        }
+      ]
     },
     {
       "id": "sky",
       "name": "Sky (ex-Maker)",
       "category": "Savings / lending",
       "chains": "Ethereum, L2",
+      "networks": [
+        "Ethereum",
+        "Base",
+        "Arbitrum",
+        "Optimism",
+        "Unichain"
+      ],
       "url": "https://app.sky.money",
       "frontend_repo": "https://github.com/jetstreamgg/tarmac/tree/development/apps/webapp",
       "repo_state": "open",
@@ -2149,6 +2453,9 @@
       "live": [
         "api.sky.money/geo-config (US): isRegionRestricted=false, all modules enabled"
       ],
+      "geo_endpoints": [
+        "https://api.sky.money/geo-config"
+      ],
       "evidence": [
         "apps/webapp/src/lib/authCheck.ts",
         "apps/webapp/src/modules/ui/context/ConnectedContext.tsx",
@@ -2156,14 +2463,29 @@
         "apps/webapp/src/hooks/authentication/useRestrictedAddressCheck.md"
       ],
       "confidence": "high",
-      "alternatives": []
+      "alternatives": [
+        {
+          "name": "sky.cp0x.com",
+          "url": "https://sky.cp0x.com"
+        }
+      ]
     },
     {
       "id": "venus",
       "name": "Venus",
       "category": "Lending",
       "chains": "BNB, EVM",
-      "url": "https://app.venus.io (-> venus.io)",
+      "networks": [
+        "BNB Chain",
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "opBNB",
+        "zkSync",
+        "Optimism",
+        "Unichain"
+      ],
+      "url": "https://app.venus.io",
       "frontend_repo": "https://github.com/VenusProtocol/venus-protocol-interface/tree/main/apps/evm",
       "repo_state": "open",
       "repo_status": "open",
@@ -2215,10 +2537,11 @@
           "UA-Zaporizhzhia"
         ]
       },
-      "fork_notes": "Country from a free IP API, list from their API. Remove in a fork.",
+      "fork_notes": "Country from a free IP API, list from their API. Remove in a fork. URL note: now venus.io.",
       "live": [
         "WebFetch (US): 302 -> venus.io, JS shell"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "apps/evm/src/clients/api/queries/useGetIpLocation/getIpLocation/index.ts",
         "apps/evm/src/clients/api/queries/useGetPools/applyCountryCodeToPools/index.ts"
@@ -2231,6 +2554,19 @@
       "name": "Euler",
       "category": "Lending",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Base",
+        "Arbitrum",
+        "Avalanche",
+        "BNB Chain",
+        "Sonic",
+        "Berachain",
+        "BOB",
+        "Swell",
+        "Unichain",
+        "Linea"
+      ],
       "url": "https://app.euler.finance",
       "frontend_repo": "https://github.com/euler-xyz/euler-lite",
       "repo_state": "open",
@@ -2304,6 +2640,9 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [
+        "https://app.euler.finance/api/ping"
+      ],
       "evidence": [
         "server/middleware/geo-gate.ts",
         "server/utils/screening.ts",
@@ -2311,13 +2650,24 @@
         "docs/address-screening.md"
       ],
       "confidence": "high",
-      "alternatives": []
+      "alternatives": [
+        {
+          "name": "euler.cp0x.com",
+          "url": "https://euler.cp0x.com"
+        }
+      ]
     },
     {
       "id": "fluid",
       "name": "Fluid",
       "category": "Lending / DEX",
       "chains": "EVM, Solana",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Polygon"
+      ],
       "url": "https://fluid.io",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -2358,6 +2708,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [],
       "confidence": "low",
       "alternatives": []
@@ -2367,7 +2718,8 @@
       "name": "Kamino",
       "category": "Lending",
       "chains": "Solana",
-      "url": "https://kamino.com (app.kamino.finance -> 302)",
+      "networks": [],
+      "url": "https://kamino.com",
       "frontend_repo": null,
       "repo_state": "closed",
       "repo_status": "closed",
@@ -2403,10 +2755,11 @@
         "restricted": "ToS not found",
         "restricted_codes": []
       },
-      "fork_notes": "Closed; klend SDK is open.",
+      "fork_notes": "Closed; klend SDK is open. URL note: app.kamino.finance -> 302.",
       "live": [
         "WebFetch (US): JS shell"
       ],
+      "geo_endpoints": [],
       "evidence": [],
       "confidence": "low",
       "alternatives": []
@@ -2416,7 +2769,8 @@
       "name": "marginfi (-> Project 0)",
       "category": "Lending",
       "chains": "Solana",
-      "url": "https://app.marginfi.com (retired -> app.0.xyz)",
+      "networks": [],
+      "url": "https://app.marginfi.com",
       "frontend_repo": "https://github.com/mrgnlabs/mrgn-ts/tree/main/apps/marginfi-v2-ui",
       "repo_state": "open_stale",
       "repo_status": "open-deprecated (Project 0 closed)",
@@ -2460,10 +2814,11 @@
         "restricted": "generic + restriction by wallet/IP/risk",
         "restricted_codes": []
       },
-      "fork_notes": "marginfi UI is archived. Project 0 is closed.",
+      "fork_notes": "marginfi UI is archived. Project 0 is closed. URL note: retired -> app.0.xyz.",
       "live": [
         "WebFetch (US): retirement notice -> app.0.xyz"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "apps/marginfi-v2-ui/src/middleware.ts",
         "apps/marginfi-v2-trading/src/middleware.ts"
@@ -2476,6 +2831,9 @@
       "name": "Liquity V2 (liquity.app)",
       "category": "CDP / stablecoin",
       "chains": "Ethereum",
+      "networks": [
+        "Ethereum"
+      ],
       "url": "https://liquity.app",
       "frontend_repo": "https://github.com/liquity/bold/tree/main/frontend/app",
       "repo_state": "open",
@@ -2516,18 +2874,28 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "frontend/app/src/comps/Blocking/Blocking.tsx",
         "frontend/app/src/env.ts"
       ],
       "confidence": "medium",
-      "alternatives": []
+      "alternatives": [
+        {
+          "name": "liquity.cp0x.com",
+          "url": "https://liquity.cp0x.com"
+        }
+      ]
     },
     {
       "id": "notional",
       "name": "Notional",
       "category": "Lending / leverage",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum"
+      ],
       "url": "https://notional.finance",
       "frontend_repo": "https://github.com/notional-finance/notional-monorepo",
       "repo_state": "open",
@@ -2595,6 +2963,9 @@
       "live": [
         "WebFetch (US): metadata only (block is client-side)"
       ],
+      "geo_endpoints": [
+        "https://api.notional.finance/geoip"
+      ],
       "evidence": [
         "packages/shared/notionable-hooks/src/use-geoip-block.ts",
         "packages/notionable/src/account/communities.ts"
@@ -2607,6 +2978,9 @@
       "name": "Lido",
       "category": "Liquid staking",
       "chains": "Ethereum",
+      "networks": [
+        "Ethereum"
+      ],
       "url": "https://stake.lido.fi",
       "frontend_repo": "https://github.com/lidofinance/ethereum-staking-widget",
       "repo_state": "open",
@@ -2658,6 +3032,9 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [
+        "https://stake.lido.fi/api/geo"
+      ],
       "evidence": [
         "utilsApi/geo-handler.ts",
         "REMOTE_CONFIG_MANIFEST.json",
@@ -2672,6 +3049,9 @@
       "name": "Rocket Pool",
       "category": "Liquid staking",
       "chains": "Ethereum",
+      "networks": [
+        "Ethereum"
+      ],
       "url": "https://stake.rocketpool.net",
       "frontend_repo": null,
       "repo_state": "none_found",
@@ -2712,6 +3092,7 @@
       "live": [
         "WebFetch (US): JS shell"
       ],
+      "geo_endpoints": [],
       "evidence": [],
       "confidence": "low",
       "alternatives": []
@@ -2721,6 +3102,9 @@
       "name": "EigenLayer (EigenCloud)",
       "category": "Restaking",
       "chains": "Ethereum",
+      "networks": [
+        "Ethereum"
+      ],
       "url": "https://app.eigenlayer.xyz",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -2769,6 +3153,7 @@
       "live": [
         "WebFetch (US): HTTP 500"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://decrypt.co/228642/eigen-token-airdrop-plan-ethereum-restaking-protocol-eigenlayer"
       ],
@@ -2780,7 +3165,15 @@
       "name": "ether.fi",
       "category": "Restaking / vaults",
       "chains": "EVM",
-      "url": "https://www.ether.fi/app (app.ether.fi -> 302)",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Linea",
+        "Scroll",
+        "Blast"
+      ],
+      "url": "https://www.ether.fi/app",
       "frontend_repo": null,
       "repo_state": "closed",
       "repo_status": "closed",
@@ -2836,10 +3229,11 @@
           "ZW"
         ]
       },
-      "fork_notes": "Closed.",
+      "fork_notes": "Closed. URL note: app.ether.fi -> 302.",
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://www.ether.fi/legal/terms-of-use"
       ],
@@ -2851,6 +3245,16 @@
       "name": "Pendle",
       "category": "Yield",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "BNB Chain",
+        "Mantle",
+        "Sonic",
+        "Berachain",
+        "Optimism"
+      ],
       "url": "https://app.pendle.finance",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -2907,6 +3311,7 @@
       "live": [
         "WebFetch (US): 'Failed to load app' (JS)"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://docs.pendle.finance/pendle-v2/TermsOfUse"
       ],
@@ -2918,6 +3323,15 @@
       "name": "Ethena",
       "category": "Synthetic dollar",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Optimism",
+        "Mantle",
+        "BNB Chain",
+        "many L2s via LayerZero"
+      ],
       "url": "https://app.ethena.fi",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -3007,18 +3421,33 @@
       "live": [
         "WebFetch (US): 302 -> /restricted (geo-block confirmed)"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://ethena.fi/restricted",
         "https://docs.ethena.fi/resources/terms-of-service"
       ],
       "confidence": "high",
-      "alternatives": []
+      "alternatives": [
+        {
+          "name": "ethena.cp0x.com",
+          "url": "https://ethena.cp0x.com"
+        }
+      ]
     },
     {
       "id": "yearn",
       "name": "Yearn",
       "category": "Yield vaults",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Polygon",
+        "Optimism",
+        "Katana",
+        "Sonic"
+      ],
       "url": "https://yearn.fi",
       "frontend_repo": "https://github.com/yearn/yearn.fi",
       "repo_state": "open",
@@ -3059,6 +3488,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [],
       "confidence": "medium",
       "alternatives": []
@@ -3068,6 +3498,19 @@
       "name": "Beefy",
       "category": "Yield vaults",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Optimism",
+        "Polygon",
+        "BNB Chain",
+        "Avalanche",
+        "Gnosis",
+        "Linea",
+        "Sonic",
+        "30+ more"
+      ],
       "url": "https://app.beefy.com",
       "frontend_repo": "https://github.com/beefyfinance/beefy-v2",
       "repo_state": "open",
@@ -3114,6 +3557,9 @@
       "live": [
         "api.beefy.finance/geo/country (US) -> {country: US}"
       ],
+      "geo_endpoints": [
+        "https://api.beefy.finance/geo/country"
+      ],
       "evidence": [
         "src/config/restrictions.json",
         "src/features/data/selectors/restrictions.ts",
@@ -3127,6 +3573,12 @@
       "name": "Convex",
       "category": "Yield",
       "chains": "Ethereum",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Polygon",
+        "Fraxtal"
+      ],
       "url": "https://curve.convexfinance.com",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -3167,6 +3619,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [],
       "confidence": "low",
       "alternatives": []
@@ -3176,6 +3629,7 @@
       "name": "Jito",
       "category": "Liquid staking",
       "chains": "Solana",
+      "networks": [],
       "url": "https://www.jito.network",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -3216,6 +3670,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://www.jito.network/docs/jitosol/resources/terms-of-use/"
       ],
@@ -3227,7 +3682,24 @@
       "name": "Across",
       "category": "Bridge",
       "chains": "EVM, Solana",
-      "url": "https://across.to (app.across.to -> 302)",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Optimism",
+        "Base",
+        "Polygon",
+        "zkSync",
+        "Linea",
+        "Scroll",
+        "Blast",
+        "Mode",
+        "Lisk",
+        "Unichain",
+        "Ink",
+        "Soneium",
+        "World Chain"
+      ],
+      "url": "https://across.to",
       "frontend_repo": null,
       "repo_state": "private_now",
       "repo_status": "private-now (across-protocol/frontend public until ~2025-08; frontend-v1 = legacy 2023)",
@@ -3263,10 +3735,11 @@
         "restricted": "generic comprehensive US sanctions",
         "restricted_codes": []
       },
-      "fork_notes": "Across API is open (suggested-fees, available-routes). Our own UI on top of it is realistic.",
+      "fork_notes": "Across API is open (suggested-fees, available-routes). Our own UI on top of it is realistic. URL note: app.across.to -> 302.",
       "live": [
         "/api/suggested-fees with SDN recipient -> normal quote"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://across.to/terms-of-service",
         "http://web.archive.org/web/20250829200542/https://github.com/across-protocol/frontend"
@@ -3279,6 +3752,19 @@
       "name": "Stargate",
       "category": "Bridge",
       "chains": "EVM (LayerZero)",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Optimism",
+        "Base",
+        "Polygon",
+        "BNB Chain",
+        "Avalanche",
+        "Linea",
+        "Scroll",
+        "Mantle",
+        "50+ more via LayerZero"
+      ],
       "url": "https://stargate.finance",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -3319,6 +3805,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://stargate.finance/terms"
       ],
@@ -3330,6 +3817,18 @@
       "name": "Synapse",
       "category": "Bridge",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Optimism",
+        "Base",
+        "Polygon",
+        "BNB Chain",
+        "Avalanche",
+        "Blast",
+        "Scroll",
+        "Linea"
+      ],
       "url": "https://bridge.synapseprotocol.com",
       "frontend_repo": "https://github.com/synapsecns/sanguine/tree/master/packages/synapse-interface",
       "repo_state": "open",
@@ -3370,6 +3869,7 @@
       "live": [
         "screener: SDN -> {risk: true}; control -> {risk: false}"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "packages/synapse-interface/utils/screenAddress.ts",
         "packages/synapse-interface/contexts/UserProvider.tsx",
@@ -3383,6 +3883,17 @@
       "name": "Hop",
       "category": "Bridge",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Optimism",
+        "Base",
+        "Polygon",
+        "Gnosis",
+        "Arbitrum Nova",
+        "Linea",
+        "Polygon zkEVM"
+      ],
       "url": "https://app.hop.exchange",
       "frontend_repo": "https://github.com/hop-protocol/hop/tree/master/packages/frontend",
       "repo_state": "open",
@@ -3469,6 +3980,7 @@
       "live": [
         "WebFetch: app.hop.exchange -> 400; hop.exchange -> spam"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "packages/frontend/netlify.toml",
         "packages/frontend/src/config/blocklist.ts"
@@ -3480,7 +3992,18 @@
       "id": "portalbridge",
       "name": "Portal Bridge (Wormhole)",
       "category": "Bridge",
-      "chains": "Multi",
+      "chains": "EVM, Solana, Sui, Aptos and more (Wormhole)",
+      "networks": [
+        "Ethereum",
+        "BNB Chain",
+        "Polygon",
+        "Avalanche",
+        "Arbitrum",
+        "Optimism",
+        "Base",
+        "Scroll",
+        "Mantle"
+      ],
       "url": "https://portalbridge.com",
       "frontend_repo": null,
       "repo_state": "archived",
@@ -3521,6 +4044,7 @@
       "live": [
         "WebFetch (US): metadata only"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "XLabs/portal-bridge-ui: apps/connect/src/providers/sanctions.ts",
         "wormhole-foundation/wormhole-connect: src/utils/transferValidation.ts, src/consts/wallet.ts"
@@ -3533,6 +4057,19 @@
       "name": "Relay",
       "category": "Bridge / intents",
       "chains": "EVM, Solana, BTC...",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Optimism",
+        "Polygon",
+        "BNB Chain",
+        "Avalanche",
+        "Linea",
+        "Scroll",
+        "zkSync",
+        "50+ more"
+      ],
       "url": "https://relay.link",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -3573,6 +4110,7 @@
       "live": [
         "api.relay.link/sanctioned: SDN -> {sanctioned: true}; control -> false"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "https://docs.relay.link/security/compliance",
         "relayprotocol/relay-kit: packages/sdk/src/types/api.ts"
@@ -3585,6 +4123,9 @@
       "name": "Polymarket",
       "category": "Prediction market",
       "chains": "Polygon",
+      "networks": [
+        "Polygon"
+      ],
       "url": "https://polymarket.com",
       "frontend_repo": null,
       "repo_state": "closed",
@@ -3656,6 +4197,9 @@
       "live": [
         "/api/geoblock (US) -> {blocked: true, country: US, region: OH}; overlay 'Trading is blocked in the United States'"
       ],
+      "geo_endpoints": [
+        "https://polymarket.com/api/geoblock"
+      ],
       "evidence": [
         "https://docs.polymarket.com/developers/CLOB/geoblock",
         "https://help.polymarket.com/en/articles/13364163-geographic-restrictions"
@@ -3668,6 +4212,25 @@
       "name": "Safe{Wallet}",
       "category": "Wallet / multisig",
       "chains": "EVM",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Optimism",
+        "Base",
+        "Polygon",
+        "BNB Chain",
+        "Avalanche",
+        "Gnosis",
+        "zkSync",
+        "Linea",
+        "Scroll",
+        "Celo",
+        "Mantle",
+        "Sonic",
+        "Unichain",
+        "World Chain",
+        "Berachain"
+      ],
       "url": "https://app.safe.global",
       "frontend_repo": "https://github.com/safe-global/safe-wallet-monorepo/tree/main/apps/web",
       "repo_state": "open",
@@ -3708,6 +4271,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "apps/web/src/components/common/GeoblockingProvider/index.tsx",
         "apps/web/src/hooks/useSanctionedAddress.ts",
@@ -3721,6 +4285,9 @@
       "name": "ENS",
       "category": "Naming",
       "chains": "Ethereum",
+      "networks": [
+        "Ethereum"
+      ],
       "url": "https://app.ens.domains",
       "frontend_repo": "https://github.com/ensdomains/ens-app-v3",
       "repo_state": "open",
@@ -3761,6 +4328,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
+      "geo_endpoints": [],
       "evidence": [],
       "confidence": "medium",
       "alternatives": []
@@ -3770,6 +4338,9 @@
       "name": "Snapshot",
       "category": "Governance",
       "chains": "EVM, Starknet",
+      "networks": [
+        "any EVM (off-chain voting)"
+      ],
       "url": "https://snapshot.box",
       "frontend_repo": "https://github.com/snapshot-labs/sx-monorepo/tree/master/apps/ui",
       "repo_state": "open",
@@ -3833,6 +4404,7 @@
       "live": [
         "WebFetch (US): JS shell"
       ],
+      "geo_endpoints": [],
       "evidence": [
         "apps/ui/src/views/Terms.vue"
       ],

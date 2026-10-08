@@ -6,9 +6,20 @@ interface CountryPickerProps {
   value: string | null;
   onChange: (code: string | null) => void;
   autoFocus?: boolean;
+  size?: 'small' | 'medium';
+  /** Stretch to the parent width (filter grid) instead of the standalone 280–420px box. */
+  fullWidth?: boolean;
+  label?: string;
 }
 
-export default function CountryPicker({ value, onChange, autoFocus = false }: CountryPickerProps) {
+export default function CountryPicker({
+  value,
+  onChange,
+  autoFocus = false,
+  size = 'medium',
+  fullWidth = false,
+  label = 'Country'
+}: CountryPickerProps) {
   return (
     <Autocomplete
       options={COUNTRY_OPTIONS}
@@ -17,8 +28,10 @@ export default function CountryPicker({ value, onChange, autoFocus = false }: Co
       getOptionLabel={(code) => `${flagEmoji(code)} ${countryName(code)}`}
       autoHighlight
       openOnFocus
-      sx={{ minWidth: 280, maxWidth: 420 }}
-      renderInput={(params) => <TextField {...params} label="Country" placeholder="Start typing a country" autoFocus={autoFocus} />}
+      size={size}
+      fullWidth={fullWidth}
+      sx={fullWidth ? undefined : { minWidth: 280, maxWidth: 420 }}
+      renderInput={(params) => <TextField {...params} label={label} placeholder="Start typing a country" autoFocus={autoFocus} />}
     />
   );
 }

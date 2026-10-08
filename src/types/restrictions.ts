@@ -89,12 +89,38 @@ export interface Alternative {
   url: string;
 }
 
+export const OBS_STATES = ['ok', 'blocked', 'close_only', 'feature_limited', 'challenge', 'error', 'unknown'] as const;
+export type ObservationState = (typeof OBS_STATES)[number];
+
+export const OBS_KINDS = ['site', 'geo_endpoint'] as const;
+export type ObservationKind = (typeof OBS_KINDS)[number];
+
+export const PROXY_TYPES = ['residential', 'isp', 'mobile', 'datacenter', 'tor', 'direct'] as const;
+export type ProxyType = (typeof PROXY_TYPES)[number];
+
+/** Latest verified live observation from the P3 probe (monitor/scripts/probe.py), one per country/proxy/kind/url. */
+export interface Observation {
+  country: string;
+  region: CountryToken | null;
+  proxy_type: ProxyType;
+  at: string;
+  kind: ObservationKind;
+  url: string;
+  http_status: number | null;
+  final_url: string;
+  ui_state: ObservationState;
+  flags: Record<string, string | number | boolean>;
+  note: string;
+}
+
 export interface InterfaceEntry {
   id: string;
   name: string;
   category: string;
   category_group: CategoryGroup;
   chains: string;
+  /** EVM networks the official app lists (indicative, from app/docs, not probed). */
+  networks: string[];
   chain_tags: ChainTag[];
   url: string;
   frontend_repo: string | null;
@@ -109,11 +135,13 @@ export interface InterfaceEntry {
   tos: Tos;
   fork_notes: string;
   live: string[];
+  geo_endpoints: string[];
   evidence: string[];
   confidence: Confidence;
   alternatives: Alternative[];
   level: Level;
   fork_ready: ForkReady;
+  observations: Observation[];
 }
 
 export interface DatasetMeta {
@@ -126,6 +154,9 @@ export interface DatasetMeta {
   layer_values: string;
   country_tokens: string;
   regions: Record<CountryToken, string>;
+  /** Size of the full catalog in monitor/data; the UI dataset may be a filtered subset (see scope). */
+  catalog_total: number;
+  scope: string;
 }
 
 export interface Dataset {
@@ -137,7 +168,7 @@ export interface Dataset {
 export const COUNTRY_STATUS = ['blocked', 'close_only', 'feature_limited', 'regional', 'tos_only', 'unknown', 'ok'] as const;
 export type CountryStatus = (typeof COUNTRY_STATUS)[number];
 
-export const BASES = ['confirmed', 'reported', 'inferred', 'tos'] as const;
+export const BASES = ['observed', 'confirmed', 'reported', 'tos', 'inferred'] as const;
 export type Basis = (typeof BASES)[number];
 
 export interface CountryVerdict {
@@ -147,6 +178,10 @@ export interface CountryVerdict {
   detail: string;
   /** Sub-national region tokens that triggered a `regional` verdict. */
   regions: CountryToken[];
+  /** The live observation the verdict relies on or was checked against, if any. */
+  observation?: Observation;
+  /** True when the static verdict and the live observation disagree (both are shown). */
+  conflict?: boolean;
 }
 
 export type MechanismKind = 'geo_site' | 'geo_feature' | 'screening' | 'vpn';

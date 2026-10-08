@@ -19,7 +19,8 @@ import { countryName, defaultCountryFromNavigator, flagEmoji, isCountryCode } fr
 import { COUNTRY_STATUS, CountryStatus, CountryVerdict, InterfaceEntry } from 'types/restrictions';
 import { basisRank, countryStatusRank, countryVerdict, levelRank } from 'utils/restrictions';
 import CountryPicker from './components/CountryPicker';
-import CountryStatusChip from './components/CountryStatusChip';
+import PermissionlessLink from './components/PermissionlessLink';
+import CountryVerdictCell from './components/CountryVerdictCell';
 import LevelChip from './components/LevelChip';
 import StatusChip from './components/StatusChip';
 import ToneChip, { countryStatusTone, vpnTone } from './components/ToneChip';
@@ -130,7 +131,7 @@ export default function CountryPage() {
                   <TableCell>Level</TableCell>
                   <TableCell>Wallet screening</TableCell>
                   <TableCell>VPN</TableCell>
-                  <TableCell>Alternative</TableCell>
+                  <TableCell>Permissionless app</TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -145,7 +146,7 @@ export default function CountryPage() {
                       </Typography>
                     </TableCell>
                     <TableCell>
-                      <CountryStatusChip verdict={verdict} />
+                      <CountryVerdictCell verdict={verdict} />
                     </TableCell>
                     <TableCell>
                       <LevelChip level={entry.level} />
@@ -161,17 +162,7 @@ export default function CountryPage() {
                       <ToneChip tone={vpnTone(entry.vpn.s)} label={VPN_LABELS[entry.vpn.s]} tooltip={entry.vpn.note || undefined} />
                     </TableCell>
                     <TableCell onClick={(e) => e.stopPropagation()}>
-                      {entry.alternatives.length === 0 ? (
-                        <Typography variant="caption" color="text.secondary">
-                          —
-                        </Typography>
-                      ) : (
-                        entry.alternatives.map((a) => (
-                          <Link key={a.url} href={a.url} target="_blank" rel="noopener noreferrer" underline="hover" variant="body2">
-                            {a.name}
-                          </Link>
-                        ))
-                      )}
+                      <PermissionlessLink entry={entry} />
                     </TableCell>
                   </TableRow>
                 ))}
@@ -203,8 +194,9 @@ export default function CountryPage() {
               ))}
             </Stack>
             <Typography variant="caption" color="text.secondary" component="div" sx={{ mt: 2 }}>
-              The suffix after the dot is the basis of the verdict: confirmed (code, live check or docs), reported (press or users), ToS
-              (Terms of Service only) or inferred (nothing found; closed code may hide more). Rules are described on the{' '}
+              The suffix after the dot is the basis of the verdict: observed (live probe from this country through a verified proxy),
+              confirmed (code, live check or docs), reported (press or users), ToS (Terms of Service only) or inferred (nothing found;
+              closed code may hide more). Rules are described on the{' '}
               <Link component={RouterLink} to="/methodology" underline="hover">
                 methodology
               </Link>{' '}

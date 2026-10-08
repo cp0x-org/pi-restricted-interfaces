@@ -11,16 +11,16 @@ connectivity (wagmi + RainbowKit) left in place.
 
 ## Pages
 
-- `/monitor` — ranking of all interfaces: level A/A?/B/C/D/?, mechanisms, screening provider and layer, fork readiness, frontend code status; filters by category, chain, level, layer, mechanism and open-source-only
+- `/monitor` — ranking of the interfaces on EVM networks (the full catalog incl. Solana/Cosmos apps stays in `monitor/`): level A/A?/B/C/D/?, mechanisms, screening provider and layer, fork readiness, frontend code status; filters by category, chain, level, layer, mechanism and open-source-only
 - `/monitor/:id` — interface card: repository, each mechanism with countries and fail mode, Terms of Service summary, fork notes, live checks, evidence links pinned to the repository branch
-- `/country/:code` — "what works from my country": per-country status for every interface (blocked, close-only, feature-limited, regional, ToS only, unknown, no restriction found) with the basis of each verdict
+- Country filter on `/monitor` (multi-select, `?country=UA,US`) — keeps only the interfaces that restrict at least one selected country (blocked, close-only, feature-limited, regional or ToS only) and adds a column with each verdict and its basis; chips above the table narrow by restriction type. The standalone `/country` page is hidden (`SHOW_COUNTRY_PAGE` in `src/views/monitor/constants.ts`); `/country/XX` links redirect to `/monitor?country=XX`
 - `/methodology` — levels, status vocabulary, layers, country rules, detection typology, live-check caveats and limitations
 
 ## Data
 
 The dataset lives in [`monitor/data/interfaces.json`](monitor/data/interfaces.json) (schema v2, hand-maintained, every claim backed by evidence).
-The web app imports the generated [`src/data/interfaces.json`](src/data/interfaces.json); the Russian report and the CSV
-snapshot are in [`monitor/out/`](monitor/out/).
+The web app imports the generated [`src/data/interfaces.json`](src/data/interfaces.json), filtered to EVM networks; the Russian report
+and the CSV snapshot in [`monitor/out/`](monitor/out/) cover the whole catalog, and dated frozen copies live in [`monitor/archive/`](monitor/archive/).
 
 ```
 monitor/data/interfaces.json ──(pnpm monitor:build)──▶ src/data/interfaces.json + monitor/out/report.md + monitor/out/interfaces.csv

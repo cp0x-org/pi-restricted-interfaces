@@ -21,6 +21,7 @@ import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
 import Tabs from '@mui/material/Tabs';
 import Tab, { TabProps } from '@mui/material/Tab';
 import MainCard from '../../ui-component/cards/MainCard';
+import { SHOW_COUNTRY_PAGE } from 'views/monitor/constants';
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
@@ -84,7 +85,7 @@ export default function MainLayout() {
   // Paths must not be substrings of each other: the active tab is matched with pathname.includes().
   const tabs = [
     { label: 'Monitor', path: 'monitor', iconPosition: 'top' },
-    { label: 'By country', path: 'country', iconPosition: 'top' },
+    ...(SHOW_COUNTRY_PAGE ? [{ label: 'By country', path: 'country', iconPosition: 'top' }] : []),
     { label: 'Methodology', path: 'methodology', iconPosition: 'top' }
   ];
 

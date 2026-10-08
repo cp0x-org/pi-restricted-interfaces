@@ -16,3 +16,16 @@ export const levelCounts: Record<Level, number> = LEVELS.reduce(
 );
 
 export const openSourceCount = interfaces.filter((i) => i.frontend_repo !== null).length;
+
+/** Interfaces that have a cp0x permissionless alternative (pi.cp0x.com). */
+export const permissionlessCount = interfaces.filter((i) => i.alternatives.length > 0).length;
+
+/** All network names in the dataset, most common first, for the Network filter. */
+export const networkOptions: string[] = Array.from(
+  interfaces.reduce((acc, i) => {
+    i.networks.forEach((n) => acc.set(n, (acc.get(n) ?? 0) + 1));
+    return acc;
+  }, new Map<string, number>())
+)
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .map(([n]) => n);

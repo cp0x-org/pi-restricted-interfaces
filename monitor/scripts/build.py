@@ -24,8 +24,11 @@ GROUPS = ("dex", "aggregator", "perps", "lending", "staking", "yield", "bridge",
 TAGS = ("evm", "solana", "bitcoin", "sui", "starknet", "cosmos", "hyperliquid", "other")
 COMPUTED = ("level", "fork_ready", "category_group", "chain_tags")
 REQUIRED = ("id", "name", "category", "chains", "url", "frontend_repo", "repo_state", "repo_status", "repo_last_commit",
-            "geo_site", "geo_feature", "vpn", "screening", "asset_filter", "tos", "fork_notes", "live", "evidence",
-            "confidence", "alternatives")
+            "networks", "geo_site", "geo_feature", "vpn", "screening", "asset_filter", "tos", "fork_notes", "live", "geo_endpoints",
+            "evidence", "confidence", "alternatives")
+OBS_STATES = ("ok", "blocked", "close_only", "feature_limited", "challenge", "error", "unknown")
+OBS_KINDS = ("site", "geo_endpoint")
+PROXY_TYPES = ("residential", "isp", "mobile", "datacenter", "tor", "direct")
 
 ISO2 = frozenset("""
 AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ
@@ -120,8 +123,10 @@ def chain_tags(i):
     if "hyperliquid" in c:
         tags.add("hyperliquid")
     evm_words = ("evm", "ethereum", "bnb", "polygon", "base", "optimism", "arbitrum", "avalanche", "scroll", "blast",
-                 "l2", "superchain", "apechain", "botanix", "layerzero", "lighter")
-    if any(w in c for w in evm_words):
+                 "l2", "superchain", "apechain", "botanix", "layerzero")
+    if "lighter" in c:
+        tags.add("other")  # Lighter is a non-EVM zk L2
+    elif any(w in c for w in evm_words):
         tags.add("evm")
     if "multi" in c:
         tags.add("other")
@@ -175,6 +180,8 @@ def validate(data):
             raise Invalid(f"duplicate id {iid}")
         ids.add(iid)
         w = iid + "."
+        if not re.match(r"^https://\S+$", i["url"]):
+            raise Invalid(f"{iid}: url must be a single https URL without spaces")
         check_enum(w + "repo_state", i["repo_state"], REPO_OK)
         check_enum(w + "confidence", i["confidence"], CONF_OK)
         repo = i["frontend_repo"]
@@ -204,6 +211,12 @@ def validate(data):
         for a in i["alternatives"]:
             if not isinstance(a, dict) or not a.get("name") or not str(a.get("url", "")).startswith("https://"):
                 raise Invalid(f"{iid}: alternatives items need name + https url")
+        if not isinstance(i["networks"], list) or not all(isinstance(n, str) and n for n in i["networks"]):
+            raise Invalid(f"{iid}: networks must be a list of names")
+        if "evm" in chain_tags(i) and not i["networks"]:
+            warnings.append(f"{iid}: EVM interface without networks[]")
+        if not isinstance(i["geo_endpoints"], list) or not all(isinstance(u, str) and u.startswith("https://") for u in i["geo_endpoints"]):
+            raise Invalid(f"{iid}: geo_endpoints must be a list of https URLs")
         if gs["s"] == "yes" and not gs["countries"]:
             warnings.append(f"{iid}: geo_site.s=yes but no countries listed")
     return warnings
@@ -296,6 +309,53 @@ def render_report(items, template):
     return out, stats, prov_line
 
 
+# ----------------------------------------------------------------------------- observations (P3 probe)
+OBS_REQUIRED = ("interface_id", "kind", "url", "country", "region", "proxy_type", "vantage", "at", "http_status", "final_url",
+                "ui_state", "flags", "note")
+OBS_UI_FIELDS = ("country", "region", "proxy_type", "at", "kind", "url", "http_status", "final_url", "ui_state", "flags", "note")
+
+
+def load_observations(path, ids):
+    """Read monitor/data/observations.json (written by probe.py merge). Returns a validated list."""
+    if not path or not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as fh:
+        store = json.load(fh, object_pairs_hook=OrderedDict)
+    if store.get("schema_version") != 1:
+        raise Invalid("observations: schema_version must be 1")
+    obs = store.get("observations", [])
+    for n, o in enumerate(obs):
+        for k in OBS_REQUIRED:
+            if k not in o:
+                raise Invalid(f"observations[{n}]: missing {k}")
+        if o["interface_id"] not in ids:
+            raise Invalid(f"observations[{n}]: unknown interface {o['interface_id']}")
+        check_enum(f"observations[{n}].kind", o["kind"], OBS_KINDS)
+        check_enum(f"observations[{n}].ui_state", o["ui_state"], OBS_STATES)
+        check_enum(f"observations[{n}].proxy_type", o["proxy_type"], PROXY_TYPES)
+        check_tokens(f"observations[{n}].country", [o["country"]])
+        if o["region"] is not None:
+            check_tokens(f"observations[{n}].region", [o["region"]])
+        if not isinstance(o["vantage"], dict) or "verified" not in o["vantage"]:
+            raise Invalid(f"observations[{n}]: vantage.verified missing")
+    return obs
+
+
+def latest_observations(obs):
+    """Verified, non-error observations; the newest per (interface, country, region, proxy_type, kind, url)."""
+    latest = OrderedDict()
+    for o in obs:
+        if not o["vantage"].get("verified") or o["ui_state"] == "error":
+            continue
+        key = (o["interface_id"], o["country"], o["region"], o["proxy_type"], o["kind"], o["url"])
+        if key not in latest or o["at"] > latest[key]["at"]:
+            latest[key] = o
+    by_iface = {}
+    for key, o in sorted(latest.items(), key=lambda kv: (kv[0][0], kv[0][1], kv[0][2] or "", kv[0][4], kv[0][5], kv[0][3])):
+        by_iface.setdefault(key[0], []).append(OrderedDict((f, o[f]) for f in OBS_UI_FIELDS))
+    return by_iface
+
+
 # ----------------------------------------------------------------------------- csv / ui
 CSV_COLS = ["id", "name", "category", "category_group", "chains", "chain_tags", "url", "frontend_repo", "repo_state", "repo_status",
             "repo_last_commit", "level", "geo_site", "geo_site_countries", "geo_site_close_only", "geo_site_method",
@@ -317,16 +377,24 @@ def csv_row(i):
             " | ".join(i["live"]), " | ".join(i["evidence"]), i["confidence"]]
 
 
-def ui_dataset(data):
+def ui_dataset(data, observations, ui_chains=None):
+    """Dataset for the web app. With ui_chains (e.g. {"evm"}) only interfaces carrying one of those chain tags are exported;
+    the report and CSV always cover the whole catalog."""
     meta = OrderedDict(data["meta"])
     meta["regions"] = OrderedDict(REGIONS)
+    meta["catalog_total"] = len(data["interfaces"])
+    meta["scope"] = "EVM networks only" if ui_chains == {"evm"} else ("chains: " + ", ".join(sorted(ui_chains)) if ui_chains else "all interfaces")
+    by_iface = latest_observations(observations)
     items = []
     for i in data["interfaces"]:
+        if ui_chains and not (set(chain_tags(i)) & ui_chains):
+            continue
         e = OrderedDict(i)
         e["level"] = level(i)
         e["fork_ready"] = fork_ready(i)
         e["category_group"] = category_group(i)
         e["chain_tags"] = chain_tags(i)
+        e["observations"] = by_iface.get(i["id"], [])
         items.append(e)
     return OrderedDict([("meta", meta), ("interfaces", items)])
 
@@ -344,12 +412,15 @@ def main():
     ap.add_argument("template")
     ap.add_argument("outdir")
     ap.add_argument("--ui", help="write the web app dataset (entries + computed fields) to this path")
+    ap.add_argument("--ui-chains", help="comma-separated chain tags to keep in the UI dataset, e.g. evm (report/CSV stay complete)")
+    ap.add_argument("--observations", help="monitor/data/observations.json from probe.py (latest verified ones go to the UI dataset)")
     args = ap.parse_args()
 
     with open(args.src, encoding="utf-8") as fh:
         data = json.load(fh, object_pairs_hook=OrderedDict)
     try:
         warnings = validate(data)
+        observations = load_observations(args.observations, {i["id"] for i in data["interfaces"]})
     except Invalid as e:
         print(f"invalid data: {e}", file=sys.stderr)
         sys.exit(1)
@@ -369,7 +440,10 @@ def main():
         for i in items:
             w.writerow(csv_row(i))
     if args.ui:
-        dump_json(ui_dataset(data), args.ui)
+        ui_chains = set(args.ui_chains.split(",")) if args.ui_chains else None
+        ui = ui_dataset(data, observations, ui_chains)
+        dump_json(ui, args.ui)
+        print(f"ui dataset: {len(ui['interfaces'])} of {len(items)} interfaces ({ui['meta']['scope']})")
 
     print(stats)
     print("providers:", prov_line)
@@ -377,6 +451,9 @@ def main():
     print("fork:", ", ".join(f"{k} — {fr[k]}" for k in ("yes", "stale", "partial", "no_code")))
     print("groups:", dict(Counter(category_group(i) for i in items)))
     print("tags:", dict(Counter(t for i in items for t in chain_tags(i))))
+    if observations:
+        lat = latest_observations(observations)
+        print(f"observations: {len(observations)} stored, {sum(len(v) for v in lat.values())} latest verified across {len(lat)} interfaces")
 
 
 if __name__ == "__main__":

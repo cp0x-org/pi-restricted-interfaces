@@ -8,6 +8,8 @@ import {
   Layer,
   Level,
   MechanismKind,
+  ObservationState,
+  ProxyType,
   RepoState,
   Status,
   TosUs,
@@ -15,6 +17,9 @@ import {
 } from 'types/restrictions';
 
 export const DATA_FILE_PATH = 'monitor/data/interfaces.json';
+
+/** The standalone "By country" page is hidden for now (its country filter lives on the Monitor page). Flip to bring it back. */
+export const SHOW_COUNTRY_PAGE = false;
 
 export const LEVEL_LABELS: Record<Level, string> = {
   D: 'D',
@@ -40,7 +45,7 @@ export const STATUS_LABELS: Record<Status, string> = {
   reported: 'reported',
   tos_only: 'ToS only',
   optional: 'optional',
-  unknown: 'unknown'
+  unknown: 'n/a'
 };
 
 export const STATUS_DESCRIPTIONS: Record<Status, string> = {
@@ -69,8 +74,8 @@ export const LAYER_DESCRIPTIONS: Record<Layer, string> = {
 export const FAIL_LABELS: Record<FailMode, string> = {
   open: 'fail-open',
   closed: 'fail-closed',
-  unknown: 'unknown',
-  'n/a': 'n/a'
+  unknown: 'n/a',
+  'n/a': 'not applicable'
 };
 
 export const VPN_LABELS: Record<VpnStatus, string> = {
@@ -79,7 +84,7 @@ export const VPN_LABELS: Record<VpnStatus, string> = {
   detect: 'detect',
   block: 'block',
   optional: 'optional',
-  unknown: 'unknown'
+  unknown: 'n/a'
 };
 
 export const REPO_STATE_LABELS: Record<RepoState, string> = {
@@ -109,7 +114,7 @@ export const TOS_US_LABELS: Record<TosUs, string> = {
   yes: 'excluded',
   no: 'allowed',
   partial: 'partial',
-  unknown: 'unknown'
+  unknown: 'n/a'
 };
 
 export const COUNTRY_STATUS_LABELS: Record<CountryStatus, string> = {
@@ -118,7 +123,7 @@ export const COUNTRY_STATUS_LABELS: Record<CountryStatus, string> = {
   feature_limited: 'feature-limited',
   regional: 'regional',
   tos_only: 'ToS only',
-  unknown: 'unknown',
+  unknown: 'n/a',
   ok: 'no restriction found'
 };
 
@@ -133,6 +138,7 @@ export const COUNTRY_STATUS_DESCRIPTIONS: Record<CountryStatus, string> = {
 };
 
 export const BASIS_LABELS: Record<Basis, string> = {
+  observed: 'observed',
   confirmed: 'confirmed',
   reported: 'reported',
   inferred: 'inferred',
@@ -140,6 +146,7 @@ export const BASIS_LABELS: Record<Basis, string> = {
 };
 
 export const BASIS_DESCRIPTIONS: Record<Basis, string> = {
+  observed: 'Observed live from this country through a verified proxy (HTTP probe without JavaScript)',
   confirmed: 'Confirmed by code, a live check or official documentation',
   reported: 'Based on press or user reports',
   inferred: 'Inferred from the absence of findings; closed code may hide more',
@@ -170,9 +177,28 @@ export const CHAIN_TAG_LABELS: Record<ChainTag, string> = {
   other: 'Other'
 };
 
+export const OBS_STATE_LABELS: Record<ObservationState, string> = {
+  ok: 'served',
+  blocked: 'blocked',
+  close_only: 'close-only',
+  feature_limited: 'feature-limited',
+  challenge: 'anti-bot challenge',
+  error: 'error',
+  unknown: 'n/a'
+};
+
+export const PROXY_TYPE_LABELS: Record<ProxyType, string> = {
+  residential: 'residential',
+  isp: 'ISP (static residential)',
+  mobile: 'mobile',
+  datacenter: 'datacenter',
+  tor: 'Tor',
+  direct: 'direct'
+};
+
 export const MECHANISM_LABELS: Record<MechanismKind, string> = {
-  geo_site: 'Site geo-block',
-  geo_feature: 'Feature / asset geo-gate',
+  geo_site: 'Geo Block',
+  geo_feature: 'Feature Block',
   screening: 'Wallet screening',
   vpn: 'VPN / Tor detection'
 };

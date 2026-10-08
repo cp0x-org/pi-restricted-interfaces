@@ -54,9 +54,11 @@
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "knip": "knip",
-    "monitor:build": "python3 -I monitor/scripts/build.py monitor/data/interfaces.json monitor/templates/report_template.md monitor/out --ui src/data/interfaces.json",
+    "monitor:build": "python3 -I monitor/scripts/build.py monitor/data/interfaces.json monitor/templates/report_template.md monitor/out --ui src/data/interfaces.json --observations monitor/data/observations.json --ui-chains evm",
     "monitor:verify": "python3 -I monitor/scripts/verify.py monitor/data/interfaces.json monitor/repos",
-    "monitor:scan": "python3 -I monitor/scripts/scan.py monitor/repos monitor/data/scan_raw.json"
+    "monitor:scan": "python3 -I monitor/scripts/scan.py monitor/repos monitor/data/scan_raw.json",
+    "monitor:probe": "python3 -I monitor/scripts/probe.py run monitor/data/interfaces.json monitor/probe/out",
+    "monitor:probe:merge": "python3 -I monitor/scripts/probe.py merge monitor/data/observations.json"
   },
   "eslintConfig": {
     "extends": [
