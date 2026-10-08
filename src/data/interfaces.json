@@ -1,0 +1,4213 @@
+{
+  "meta": {
+    "schema_version": 2,
+    "generated": "2026-10-08",
+    "sanctioned_test_address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+    "sanctioned_test_address_note": "Ronin bridge exploiter (Lazarus Group), OFAC SDN since 2022-04-14. Control address: 0x2222...2222 / 0x1111...1111",
+    "live_check_egress": "US datacenter (Polymarket /api/geoblock reported country=US, region=OH; Beefy /geo/country = US)",
+    "status_values": "yes | no | reported (public reports, not confirmed in code) | tos_only (only reserved in ToS) | optional (in code, off by default) | unknown",
+    "layer_values": "edge (CDN/hosting rule) | frontend (client JS) | own-api (operator backend called by the frontend) | protocol-api (backend that any fork also depends on)",
+    "country_tokens": "ISO 3166-1 alpha-2 codes, or sub-national regions as CC-Name (see regions); group words like 'EU/EEA' are expanded explicitly, 'sanctioned'/'FATF' stay in free text",
+    "regions": {
+      "UA-Crimea": "Crimea and Sevastopol",
+      "UA-DPR": "Donetsk region (DPR)",
+      "UA-LPR": "Luhansk region (LPR)",
+      "UA-Kherson": "Kherson region",
+      "UA-Zaporizhzhia": "Zaporizhzhia region",
+      "US-NY": "New York",
+      "CA-ON": "Ontario",
+      "CA-BC": "British Columbia",
+      "CA-AB": "Alberta",
+      "CA-QC": "Quebec",
+      "GE-Abkhazia": "Abkhazia",
+      "GE-SouthOssetia": "South Ossetia",
+      "CY-North": "Northern Cyprus"
+    }
+  },
+  "interfaces": [
+    {
+      "id": "uniswap",
+      "name": "Uniswap",
+      "category": "DEX",
+      "chains": "EVM, Solana",
+      "url": "https://app.uniswap.org",
+      "frontend_repo": "https://github.com/Uniswap/interface/tree/main/apps/web",
+      "repo_state": "open",
+      "repo_status": "open (release mirror, dev in private repo)",
+      "repo_last_commit": "2026-10-05",
+      "geo_site": {
+        "s": "reported",
+        "countries": [
+          "UA"
+        ],
+        "close_only": [],
+        "method": "Code has no site-level geo-block. 2025 reports said the whole of Ukraine was blocked through 'third-party providers'"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [],
+        "scope": "RWA tokens, LP, migration, Toucan auctions: region gate GatedFeature.ISSUER_SPECIFIC_RWA plus per-token restriction reasons from compliance v2 (server decides by IP)"
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "own compliance v2 API (entry-gateway.backend-prod.api.uniswap.org); TRM Labs historically (2022)",
+        "layer": "own-api",
+        "fail": "open",
+        "fail_note": "an unauthenticated session also counts as not-blocked"
+      },
+      "asset_filter": "featureGatedTokens token deny-list",
+      "tos": {
+        "url": "https://uniswap.org/terms-of-service",
+        "updated": "2024-03-21",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic: comprehensive/regional US sanctions",
+        "restricted_codes": []
+      },
+      "fork_notes": "Screening and RWA gate are calls to their entry gateway. Remove them in a fork. Routing (Trading API) goes through the same gateway with an API key, which is a dependency.",
+      "live": [],
+      "evidence": [
+        "packages/compliance/src/client.ts",
+        "packages/compliance/src/screenAddressQuery.ts",
+        "apps/web/src/hooks/useAccountRiskCheck.ts",
+        "packages/uniswap/src/features/transactions/swap/hooks/useGeoRestrictionMode.ts",
+        "packages/api/src/clients/base/entryGatewayUrls.ts",
+        "https://support.uniswap.org/hc/en-us/articles/8671777747597-Address-Screening-Guide",
+        "https://blockworks.com/news/uniswap-labs-blocked-ukraine"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "C",
+      "fork_ready": "yes",
+      "category_group": "dex",
+      "chain_tags": [
+        "evm",
+        "solana"
+      ]
+    },
+    {
+      "id": "sushiswap",
+      "name": "SushiSwap",
+      "category": "DEX",
+      "chains": "EVM (+ perps via Hyperliquid)",
+      "url": "https://www.sushi.com",
+      "frontend_repo": "https://github.com/sushi-labs/sushiswap/tree/master/apps/web",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-10-03",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "US",
+          "CA",
+          "GB",
+          "CH",
+          "CU",
+          "BY",
+          "IR",
+          "KP",
+          "RU",
+          "SY",
+          "UA",
+          "SS",
+          "SD",
+          "MM",
+          "VE"
+        ],
+        "scope": "Robinhood stock tokens: US, CA, GB, CH, CU, BY, IR, KP, RU, SY, UA, SS, SD, MM, VE (via /api/geolocation). Perps: Hyperliquid legalCheck (ipAllowed)"
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "TRM Labs public API api.trmlabs.com/public/v1/sanctions/screening; a sanctioned wallet gets disconnected",
+        "layer": "frontend",
+        "fail": "open",
+        "fail_note": ""
+      },
+      "asset_filter": "token security / list moderation",
+      "tos": {
+        "url": "https://www.sushi.com/legal/terms-of-service",
+        "updated": "unknown",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "24 named: DZ, BO, BY, Crimea, CU, DPR/LPR, CD, IR, IQ, CI, LR, LY, ML, MM, NP, KP, SO, SD, SY, TN, VE, YE, ZW + sanctioned",
+        "restricted_codes": [
+          "DZ",
+          "BO",
+          "BY",
+          "UA-Crimea",
+          "CU",
+          "UA-DPR",
+          "UA-LPR",
+          "CD",
+          "IR",
+          "IQ",
+          "CI",
+          "LR",
+          "LY",
+          "ML",
+          "MM",
+          "NP",
+          "KP",
+          "SO",
+          "SD",
+          "SY",
+          "TN",
+          "VE",
+          "YE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "Everything is client-side. Removed in a fork with no backend dependencies. Perps depend on the Hyperliquid API (IP check on their side).",
+      "live": [],
+      "evidence": [
+        "apps/web/src/lib/wagmi/components/sanctioned-address-dialog.tsx",
+        "apps/web/src/lib/robinhood/restricted-countries.ts",
+        "apps/web/src/lib/wagmi/systems/checker/stock-token-region.tsx",
+        "apps/web/src/lib/perps/info/use-legal-check.ts"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "C",
+      "fork_ready": "yes",
+      "category_group": "dex",
+      "chain_tags": [
+        "evm",
+        "hyperliquid"
+      ]
+    },
+    {
+      "id": "pancakeswap",
+      "name": "PancakeSwap",
+      "category": "DEX",
+      "chains": "BNB, EVM, Solana",
+      "url": "https://pancakeswap.finance",
+      "frontend_repo": null,
+      "repo_state": "private_now",
+      "repo_status": "private-now (pancakeswap/pancake-frontend was public, docs still link to it; now 404/auth)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "reported",
+        "countries": [
+          "BY",
+          "CU",
+          "CD",
+          "IR",
+          "IQ",
+          "KP",
+          "SD",
+          "SY",
+          "ZW",
+          "UA-Crimea"
+        ],
+        "close_only": [],
+        "method": "IP block announced 2022-03"
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://pancakeswap.finance/terms-of-service",
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "unknown (ToS rendered client-side)",
+        "restricted_codes": []
+      },
+      "fork_notes": "Fork of the last public version of pancake-frontend (an old tag/mirror) is the only route. Needs a browser crawl.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://forklog.com/en/pancakeswap-to-block-users-from-ten-jurisdictions/amp",
+        "https://docs.pancakeswap.finance/protocol/developers/contributing/codebase-overview"
+      ],
+      "confidence": "low",
+      "alternatives": [],
+      "level": "B",
+      "fork_ready": "no_code",
+      "category_group": "dex",
+      "chain_tags": [
+        "evm",
+        "solana"
+      ]
+    },
+    {
+      "id": "curve",
+      "name": "Curve",
+      "category": "DEX",
+      "chains": "EVM",
+      "url": "https://www.curve.finance",
+      "frontend_repo": "https://github.com/curvefi/curve-frontend",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-10-08",
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "ToS reserves technical geo-restriction; none in code"
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "no",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "pool/token blacklist (local + prices.curve.finance), deprecation",
+      "tos": {
+        "url": "https://www.curve.finance/dex/ethereum/legal/?tab=terms",
+        "updated": "2026-06-17",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "SECO list, 22: BY, BI, CF, CG, KP, GN, GW, IR, IQ, LB, LY, ML, MM, SS, RU, SO, SD, SY, UA, VE, YE, ZW",
+        "restricted_codes": [
+          "BY",
+          "BI",
+          "CF",
+          "CG",
+          "KP",
+          "GN",
+          "GW",
+          "IR",
+          "IQ",
+          "LB",
+          "LY",
+          "ML",
+          "MM",
+          "SS",
+          "RU",
+          "SO",
+          "SD",
+          "SY",
+          "UA",
+          "VE",
+          "YE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "Clean; only the content blacklist. Note: the ToS lists Ukraine in full.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "packages/evm-ui/src/widgets/Legal/components/tabs/Terms.tsx",
+        "BLACKLISTS-DEPRECATIONS.md"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "A",
+      "fork_ready": "yes",
+      "category_group": "dex",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "balancer",
+      "name": "Balancer",
+      "category": "DEX",
+      "chains": "EVM",
+      "url": "https://balancer.fi",
+      "frontend_repo": "https://github.com/balancer/frontend-monorepo/tree/main/apps/frontend-v3",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-10-08",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "Hypernative screener (api.hypernative.xyz/screener/reputation, policy OFAC + 3 hops) via /api/wallet-check -> BlockedAddressModal",
+        "layer": "own-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://balancer.fi/terms-of-use",
+        "updated": "2025-11",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic",
+        "restricted_codes": []
+      },
+      "fork_notes": "Screening runs in a Next API route with secret keys. Without them a fork simply doesn't screen.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "packages/lib/shared/services/hypernative/checkAddressReputation.ts",
+        "packages/lib/modules/web3/UserAccountProvider.tsx",
+        "packages/lib/modules/web3/BlockedAddressModal.tsx"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "C",
+      "fork_ready": "yes",
+      "category_group": "dex",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "cowswap",
+      "name": "CoW Swap",
+      "category": "DEX / intents",
+      "chains": "EVM",
+      "url": "https://swap.cow.fi",
+      "frontend_repo": "https://github.com/cowprotocol/cowswap/tree/develop/apps/cowswap-frontend",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-10-07",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "US",
+          "CA",
+          "CN",
+          "RU",
+          "AT",
+          "BE",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LV",
+          "LT",
+          "LU",
+          "MT",
+          "NL",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE"
+        ],
+        "scope": "RWA/tokenized-stock token lists hidden by IP (api.country.is), 50 countries incl. US, CA, CN, RU, all of the EU (list here is partial; full list in code); flag isRwaGeoblockEnabled"
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "orderbook backend: hardcoded list + Chainalysis oracle + Hermod (zeroShadow)",
+        "layer": "protocol-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "RWA lists",
+      "tos": {
+        "url": "https://cow.fi/legal/cowswap-terms",
+        "updated": "2025-07",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic UN/EU/US/UK",
+        "restricted_codes": []
+      },
+      "fork_notes": "The frontend geo filter is trivial to remove, but banned users are rejected by the CoW orderbook API itself. A fork does not bypass that.",
+      "live": [],
+      "evidence": [
+        "apps/cowswap-frontend/src/modules/rwa/state/geoDataAtom.ts",
+        "libs/core/src/cms/consts.ts",
+        "libs/tokens/src/updaters/RestrictedTokensListUpdater/index.tsx",
+        "https://github.com/cowprotocol/services/blob/main/crates/order-validation/src/banned/mod.rs"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "partial",
+      "category_group": "dex",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "1inch",
+      "name": "1inch",
+      "category": "DEX aggregator",
+      "chains": "EVM, Solana",
+      "url": "https://1inch.com (app.1inch.io -> 302)",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "reported",
+        "countries": [],
+        "close_only": [],
+        "method": "2022: US geo-block, since lifted (FAQ now says the US is available)"
+      },
+      "geo_feature": {
+        "s": "tos_only",
+        "countries": [
+          "AE"
+        ],
+        "scope": "UAE: some features"
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "TRM Labs (help center); ToS also names BlockAid, Web3 Antivirus, MetaMask, Innerworks",
+        "layer": "own-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://1inch.com/assets/1inch_com_terms_of_use.pdf",
+        "updated": "2026-09-14",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic 'Prohibited Localities'",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed. The alternative is our own UI on top of the 1inch API (needs a key, ToS screening on their side).",
+      "live": [
+        "WebFetch (US): 302 -> 1inch.com, normal page"
+      ],
+      "evidence": [
+        "https://help.1inch.com/en/articles/6588963-1inch-address-screening",
+        "https://configs.1inch.io/frontend/legal/1inch_com_terms_of_use.pdf"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "C",
+      "fork_ready": "no_code",
+      "category_group": "aggregator",
+      "chain_tags": [
+        "evm",
+        "solana"
+      ]
+    },
+    {
+      "id": "kyberswap",
+      "name": "KyberSwap",
+      "category": "DEX aggregator",
+      "chains": "EVM",
+      "url": "https://kyberswap.com",
+      "frontend_repo": "https://github.com/KyberNetwork/kyberswap-interface/tree/main/apps/kyberswap-interface",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-10-08",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [],
+        "scope": "per-country token restriction, country taken from the browser timezone (the code calls it a 'UX deterrent')"
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "own Blackjack service (blackjack.kyberswap.com/api/v1/check) before each signature",
+        "layer": "own-api",
+        "fail": "open",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://kyberswap.com/files/KyberSwap%20-%20Terms%20of%20Use%20-%2001%20September%202026.pdf",
+        "updated": "2026-09-01",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "IR, KP, MM, CU, VE, BY, RU, VN, VG, Crimea/Sevastopol, uncontrolled DPR/LPR/Kherson/Zaporizhzhia, FATF high-risk",
+        "restricted_codes": [
+          "IR",
+          "KP",
+          "MM",
+          "CU",
+          "VE",
+          "BY",
+          "RU",
+          "VN",
+          "VG",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR",
+          "UA-Kherson",
+          "UA-Zaporizhzhia"
+        ]
+      },
+      "fork_notes": "Blackjack is called from the frontend. Removed in a fork. Aggregator API is a separate dependency.",
+      "live": [
+        "Blackjack: sanctioned -> blacklisted:true (reason 2, since 2023-12); control -> blacklisted:false"
+      ],
+      "evidence": [
+        "apps/kyberswap-interface/src/services/blackjack.ts",
+        "apps/kyberswap-interface/src/utils/sendTransaction.ts",
+        "apps/kyberswap-interface/src/hooks/useRestrictedTokens.ts"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "C",
+      "fork_ready": "yes",
+      "category_group": "aggregator",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "quickswap",
+      "name": "QuickSwap",
+      "category": "DEX",
+      "chains": "Polygon, EVM",
+      "url": "https://dapp.quickswap.exchange",
+      "frontend_repo": "https://github.com/QuickSwap/interface-v2",
+      "repo_state": "open_stale",
+      "repo_status": "open-stale (prod build hash 22dcd56 not in repo)",
+      "repo_last_commit": "2025-04-03",
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": "none in the public code; production diverges"
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "no",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "TOKEN_BLACKLIST / PAIR_BLACKLIST",
+      "tos": {
+        "url": "https://dapp.quickswap.exchange/tos",
+        "updated": "unknown",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "US, UK, TW + ~25 (DZ, BD, BO, BY, BI, MM, CI, Crimea, CU, CD, EC, IR, IQ, LY, ML, MA, LR, NP, KP, SO, SD, SY, VE, ZW, AG)",
+        "restricted_codes": [
+          "US",
+          "GB",
+          "TW",
+          "DZ",
+          "BD",
+          "BO",
+          "BY",
+          "BI",
+          "MM",
+          "CI",
+          "UA-Crimea",
+          "CU",
+          "CD",
+          "EC",
+          "IR",
+          "IQ",
+          "LY",
+          "ML",
+          "MA",
+          "LR",
+          "NP",
+          "KP",
+          "SO",
+          "SD",
+          "SY",
+          "VE",
+          "ZW",
+          "AG"
+        ]
+      },
+      "fork_notes": "Public code is clean but stale.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "src/constants/index.ts",
+        "public/locales/en.json"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "A",
+      "fork_ready": "stale",
+      "category_group": "dex",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "aerodrome",
+      "name": "Aerodrome",
+      "category": "DEX",
+      "chains": "Base",
+      "url": "https://aerodrome.finance",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed (only aerodrome-finance/docs)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "ToS 2026-07 forbids evading 'geofencing'"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "US"
+        ],
+        "scope": "tokenized stocks (2026-08) only for non-US users"
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://github.com/aerodrome-finance/docs/blob/main/content/legal.mdx",
+        "updated": "2026-07-28",
+        "us": "partial",
+        "us_scope": "securities",
+        "restricted": "35: AF, BY, BA, BI, CF, CN, CD, CU, ET, GN, GW, HT, IR, IQ, KP, LB, LY, ML, MD, ME, MM, NI, NE, RU, RS, SO, SS, SD, SY, TN, TR, UA, VE, YE, ZW",
+        "restricted_codes": [
+          "AF",
+          "BY",
+          "BA",
+          "BI",
+          "CF",
+          "CN",
+          "CD",
+          "CU",
+          "ET",
+          "GN",
+          "GW",
+          "HT",
+          "IR",
+          "IQ",
+          "KP",
+          "LB",
+          "LY",
+          "ML",
+          "MD",
+          "ME",
+          "MM",
+          "NI",
+          "NE",
+          "RU",
+          "RS",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "TN",
+          "TR",
+          "UA",
+          "VE",
+          "YE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "Closed. Sugar contracts (velodrome-finance/sugar) let you read data directly.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://github.com/aerodrome-finance/docs/blob/main/content/legal.mdx"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "B",
+      "fork_ready": "no_code",
+      "category_group": "dex",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "velodrome",
+      "name": "Velodrome",
+      "category": "DEX",
+      "chains": "Optimism, Superchain",
+      "url": "https://velodrome.finance",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed (only velodrome-finance/docs, sugar)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://github.com/velodrome-finance/docs/blob/main/content/legal.mdx",
+        "updated": "2025-10-14",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "same 35-country list as Aerodrome (incl. CN, TR, UA, RU)",
+        "restricted_codes": [
+          "AF",
+          "BY",
+          "BA",
+          "BI",
+          "CF",
+          "CN",
+          "CD",
+          "CU",
+          "ET",
+          "GN",
+          "GW",
+          "HT",
+          "IR",
+          "IQ",
+          "KP",
+          "LB",
+          "LY",
+          "ML",
+          "MD",
+          "ME",
+          "MM",
+          "NI",
+          "NE",
+          "RU",
+          "RS",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "TN",
+          "TR",
+          "UA",
+          "VE",
+          "YE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "Closed, same stack as Aerodrome.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://github.com/velodrome-finance/docs/blob/main/content/legal.mdx"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "?",
+      "fork_ready": "no_code",
+      "category_group": "dex",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "ambient",
+      "name": "Ambient Finance",
+      "category": "DEX",
+      "chains": "EVM (Scroll, Blast, Ethereum...)",
+      "url": "https://ambient.finance",
+      "frontend_repo": "https://github.com/CrocSwap/ambient-ts-app",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-10-07",
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "AF",
+          "BY",
+          "MM",
+          "CF",
+          "CU",
+          "CD",
+          "ET",
+          "IR",
+          "IQ",
+          "LB",
+          "LY",
+          "ML",
+          "NI",
+          "KP",
+          "RU",
+          "SO",
+          "SS",
+          "SD",
+          "VE",
+          "YE",
+          "ZW"
+        ],
+        "close_only": [],
+        "method": "Netlify redirect by Country -> /blocked.html (edge)"
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "hardcoded OFAC list (~244 addresses) -> disconnect + redirect to ofac.treasury.gov",
+        "layer": "frontend",
+        "fail": "n/a",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://ambient.finance/terms",
+        "updated": "2023-05-24",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "none named",
+        "restricted_codes": []
+      },
+      "fork_notes": "Geo lives in netlify.toml, screening in a static list. A fork drops both.",
+      "live": [
+        "WebFetch (US): app crashed with 'Something went wrong' (JS)"
+      ],
+      "evidence": [
+        "netlify.toml",
+        "src/ambient-utils/constants/blacklist.ts",
+        "src/App/hooks/useBlacklist.ts"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "yes",
+      "category_group": "dex",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "velora",
+      "name": "Velora (ex-ParaSwap)",
+      "category": "DEX aggregator",
+      "chains": "EVM",
+      "url": "https://app.velora.xyz",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://velora.xyz/tos",
+        "updated": "2025-04-01",
+        "us": "partial",
+        "us_scope": "incentive programs",
+        "restricted": "CU, IR, MM, KP, CN, SY, Crimea, DPR, LPR + sanctioned",
+        "restricted_codes": [
+          "CU",
+          "IR",
+          "MM",
+          "KP",
+          "CN",
+          "SY",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR"
+        ]
+      },
+      "fork_notes": "Closed. Velora API is an option.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://velora.xyz/tos"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "?",
+      "fork_ready": "no_code",
+      "category_group": "aggregator",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "matcha",
+      "name": "Matcha (0x)",
+      "category": "DEX aggregator",
+      "chains": "EVM, Solana",
+      "url": "https://matcha.xyz",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "reported",
+        "countries": [
+          "RU"
+        ],
+        "close_only": [],
+        "method": "'Region Unsupported' for trades (Russia, 2022 reports)"
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://matcha.xyz/terms",
+        "updated": "2025-07-15",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic: US-embargoed",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed. The 0x API is an option.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://www.theblock.co/post/137962/dex-aggregator-matcha-geoblocks-trades-from-russia"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "B",
+      "fork_ready": "no_code",
+      "category_group": "aggregator",
+      "chain_tags": [
+        "evm",
+        "solana"
+      ]
+    },
+    {
+      "id": "jumper",
+      "name": "Jumper (LI.FI)",
+      "category": "Bridge / aggregator",
+      "chains": "EVM, Solana, BTC, Sui",
+      "url": "https://jumper.xyz (jumper.exchange -> 302)",
+      "frontend_repo": "https://github.com/jumperexchange/jumper-exchange",
+      "repo_state": "open",
+      "repo_status": "open (may lag prod)",
+      "repo_last_commit": "2026-07-23",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "LI.FI API (li.quest): /v1/quote for an SDN address -> HTTP 422",
+        "layer": "protocol-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://jumper.xyz/terms-of-business",
+        "updated": "client-side date (unreliable)",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "BY, CI, Crimea, CU, DPR, IR, IQ, Kherson, LR, LY, LPR, MM, KP, RU, SD, SY, VE, Zaporizhzhia",
+        "restricted_codes": [
+          "BY",
+          "CI",
+          "UA-Crimea",
+          "CU",
+          "UA-DPR",
+          "IR",
+          "IQ",
+          "UA-Kherson",
+          "LR",
+          "LY",
+          "UA-LPR",
+          "MM",
+          "KP",
+          "RU",
+          "SD",
+          "SY",
+          "VE",
+          "UA-Zaporizhzhia"
+        ]
+      },
+      "fork_notes": "Frontend is clean, but routes come from the LI.FI API, which screens addresses (and LI.FI's ToS excludes US persons).",
+      "live": [
+        "LI.FI /v1/quote: SDN fromAddress -> 422, control -> quote OK"
+      ],
+      "evidence": [
+        "src/components/TermsOfBusiness/lists.tsx",
+        "https://li.fi/legal/terms-and-conditions/"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "partial",
+      "category_group": "bridge",
+      "chain_tags": [
+        "bitcoin",
+        "evm",
+        "solana",
+        "sui"
+      ]
+    },
+    {
+      "id": "raydium",
+      "name": "Raydium",
+      "category": "DEX",
+      "chains": "Solana",
+      "url": "https://raydium.io",
+      "frontend_repo": "https://github.com/raydium-io/raydium-ui-v3-public",
+      "repo_state": "open_stale",
+      "repo_status": "open-snapshot (6 commits)",
+      "repo_last_commit": "2025-06-11",
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": "none in the snapshot"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "US"
+        ],
+        "scope": "Perps (Orderly white-label): US + 15 sanctioned"
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "no",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://raydium.io/docs/disclaimer/",
+        "updated": "unknown",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "BY, CF, CD, KP, Crimea, DPR, LPR, CU, IR, LY, SO, SD, SS, SY, US, YE, ZW",
+        "restricted_codes": [
+          "BY",
+          "CF",
+          "CD",
+          "KP",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR",
+          "CU",
+          "IR",
+          "LY",
+          "SO",
+          "SD",
+          "SS",
+          "SY",
+          "US",
+          "YE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "Snapshot code is clean (disclaimer modal only). Needs a live crawl of production.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "src/components/AppLayout/components/DisclaimerModal.tsx",
+        "src/pages/docs/disclaimer.tsx",
+        "https://docs.raydium.io/products/perps"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "B",
+      "fork_ready": "stale",
+      "category_group": "dex",
+      "chain_tags": [
+        "solana"
+      ]
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "category": "DEX aggregator",
+      "chains": "Solana",
+      "url": "https://jup.ag",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed (jup-ag/plugin = widget)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://hub.jup.ag/docs/terms-of-use",
+        "updated": "unknown",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "US, CN, SG, MM, CI, CU, Crimea, CD, IR, IQ, LY, ML, NI, KP, SO, SD, SY, YE, ZW",
+        "restricted_codes": [
+          "US",
+          "CN",
+          "SG",
+          "MM",
+          "CI",
+          "CU",
+          "UA-Crimea",
+          "CD",
+          "IR",
+          "IQ",
+          "LY",
+          "ML",
+          "NI",
+          "KP",
+          "SO",
+          "SD",
+          "SY",
+          "YE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "Closed. Jupiter Plugin/API is an option.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://hub.jup.ag/docs/terms-of-use"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "A?",
+      "fork_ready": "no_code",
+      "category_group": "aggregator",
+      "chain_tags": [
+        "solana"
+      ]
+    },
+    {
+      "id": "orca",
+      "name": "Orca",
+      "category": "DEX",
+      "chains": "Solana",
+      "url": "https://www.orca.so",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "AF",
+          "BY",
+          "BA",
+          "MM",
+          "BI",
+          "CF",
+          "CG",
+          "CU",
+          "GN",
+          "GW",
+          "HT",
+          "IR",
+          "IQ",
+          "LB",
+          "LY",
+          "ML",
+          "NI",
+          "KP",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "VE",
+          "YE",
+          "ZW",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR"
+        ],
+        "close_only": [],
+        "method": "UI blocked per the docs list (US was blocked in 2023, not on the list now)"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [],
+        "scope": "newly blocked regions: close-only"
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "third-party (unnamed), at wallet connect",
+        "layer": "own-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://www.orca.so/terms-of-use",
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "see geo_site",
+        "restricted_codes": [
+          "AF",
+          "BY",
+          "BA",
+          "MM",
+          "BI",
+          "CF",
+          "CG",
+          "CU",
+          "GN",
+          "GW",
+          "HT",
+          "IR",
+          "IQ",
+          "LB",
+          "LY",
+          "ML",
+          "NI",
+          "KP",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "VE",
+          "YE",
+          "ZW",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR"
+        ]
+      },
+      "fork_notes": "Closed. Whirlpools SDK is open.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://docs.orca.so/support/blocked-regions",
+        "https://docs.orca.so/trade/availability-and-restrictions"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "no_code",
+      "category_group": "dex",
+      "chain_tags": [
+        "solana"
+      ]
+    },
+    {
+      "id": "meteora",
+      "name": "Meteora",
+      "category": "DEX",
+      "chains": "Solana",
+      "url": "https://app.meteora.ag",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.meteora.ag/resources/legal/terms-of-service",
+        "updated": "unknown",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "VG, US, CN, MM, CI, CU, Crimea, CD, IR, IQ, LY, ML, NI, KP, SO, SD, SY, YE, ZW, RU",
+        "restricted_codes": [
+          "VG",
+          "US",
+          "CN",
+          "MM",
+          "CI",
+          "CU",
+          "UA-Crimea",
+          "CD",
+          "IR",
+          "IQ",
+          "LY",
+          "ML",
+          "NI",
+          "KP",
+          "SO",
+          "SD",
+          "SY",
+          "YE",
+          "ZW",
+          "RU"
+        ]
+      },
+      "fork_notes": "Closed.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://docs.meteora.ag/resources/legal/terms-of-service"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "A?",
+      "fork_ready": "no_code",
+      "category_group": "dex",
+      "chain_tags": [
+        "solana"
+      ]
+    },
+    {
+      "id": "dydx",
+      "name": "dYdX",
+      "category": "Perps",
+      "chains": "dYdX Chain",
+      "url": "https://dydx.trade",
+      "frontend_repo": "https://github.com/dydxprotocol/v4-web",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-07-31",
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "US",
+          "CA",
+          "AF",
+          "BY",
+          "CF",
+          "CU",
+          "CD",
+          "ER",
+          "IR",
+          "IQ",
+          "CI",
+          "LB",
+          "LR",
+          "LY",
+          "ML",
+          "MM",
+          "NI",
+          "KP",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "VE",
+          "ZW"
+        ],
+        "close_only": [],
+        "method": "indexer: geo-origin-status header + HTTP 403 GEOBLOCKED (US, CA + OFAC list); the frontend sets isPerpetualsGeoBlocked"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [],
+        "scope": "CLOSE_ONLY / FIRST_STRIKE_CLOSE_ONLY statuses; UK: perpetuals (ToS)"
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "Elliptic (indexer comlink /v4/compliance/screen)",
+        "layer": "protocol-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://dydx.exchange/v4-terms",
+        "updated": "2026-03-12",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "US, CA, UK(perps), IR, CU, KP, SY, MM, Crimea, DPR, LPR",
+        "restricted_codes": [
+          "US",
+          "CA",
+          "GB",
+          "IR",
+          "CU",
+          "KP",
+          "SY",
+          "MM",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR"
+        ]
+      },
+      "fork_notes": "Enforcement is in the public indexer. A fork must run its own indexer (open source v4-chain/indexer, compliance can be disabled). Otherwise it inherits the 403s.",
+      "live": [
+        "indexer /v4/compliance/screen: SDN -> {status: BLOCKED, reason: COMPLIANCE_PROVIDER}; control -> COMPLIANT"
+      ],
+      "evidence": [
+        "src/bonsai/calculators/compliance.ts",
+        "src/bonsai/rest/compliance.ts",
+        "https://github.com/dydxprotocol/v4-chain/blob/main/indexer/services/comlink/src/lib/compliance-and-geo-check.ts",
+        "https://docs.dydx.xyz/interaction/integration/integration-compliance"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "partial",
+      "category_group": "perps",
+      "chain_tags": [
+        "cosmos"
+      ]
+    },
+    {
+      "id": "gmx",
+      "name": "GMX",
+      "category": "Perps",
+      "chains": "Arbitrum, Avalanche, Botanix",
+      "url": "https://app.gmx.io",
+      "frontend_repo": "https://github.com/gmx-io/gmx-interface",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-10-06",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "no",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://gmx.io/terms-and-conditions",
+        "updated": "2026-08-20",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic US/UK/EU embargo",
+        "restricted_codes": []
+      },
+      "fork_notes": "Clean. Only the ToS.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "landing/src/pages/TermsAndConditions/TermsAndConditions.tsx"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "A",
+      "fork_ready": "yes",
+      "category_group": "perps",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "hyperliquid",
+      "name": "Hyperliquid",
+      "category": "Perps",
+      "chains": "Hyperliquid L1",
+      "url": "https://app.hyperliquid.xyz",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "US",
+          "CA-ON"
+        ],
+        "close_only": [],
+        "method": "IP check (US, Ontario, sanctioned jurisdictions — the latter not enumerated); info API has legalCheck {user} -> restrictions/ipAllowed"
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "legalCheck takes the user address",
+        "layer": "protocol-api",
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://app.hyperliquid.xyz/terms",
+        "updated": "2026-06-15 (secondary)",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "US, Ontario + sanctioned",
+        "restricted_codes": [
+          "US",
+          "CA-ON"
+        ]
+      },
+      "fork_notes": "Builder-code frontends (Sushi and others) call legalCheck themselves. The API does not block a fork from trading, but the check exists.",
+      "live": [
+        "WebFetch (US): metadata only, no JS"
+      ],
+      "evidence": [
+        "sushi-labs/sushiswap apps/web/src/lib/perps/info/use-legal-check.ts",
+        "https://www.datawallet.com/crypto/is-hyperliquid-available-in-the-usa"
+      ],
+      "confidence": "low",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "no_code",
+      "category_group": "perps",
+      "chain_tags": [
+        "hyperliquid"
+      ]
+    },
+    {
+      "id": "drift",
+      "name": "Drift (-> Velocity)",
+      "category": "Perps",
+      "chains": "Solana",
+      "url": "https://app.drift.trade (-> app.velocity.exchange)",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed (velocity-exchange/velocity-common = shared lib)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "AG",
+          "DZ",
+          "BD",
+          "BO",
+          "BY",
+          "BI",
+          "MM",
+          "CI",
+          "CU",
+          "CD",
+          "EC",
+          "IR",
+          "IQ",
+          "LR",
+          "LY",
+          "ML",
+          "MA",
+          "NP",
+          "KP",
+          "SO",
+          "SD",
+          "SY",
+          "US",
+          "VE",
+          "YE",
+          "ZW"
+        ],
+        "close_only": [],
+        "method": "client-side: geolocation.drift-labs.workers.dev -> GEOBLOCK_LIST"
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.velocity.exchange/protocol/legal-and-regulations/terms-of-use",
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "unknown (text loaded from S3)",
+        "restricted_codes": []
+      },
+      "fork_notes": "Geo-check is client-side and fail-open. Rebranded to Velocity after the 2026-04 exploit.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "velocity-exchange/velocity-common: common-ts/src/utils/geoblock/index.ts, common-ts/src/constants/geoblockList.ts, react/src/hooks/useGeoBlocking.tsx"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "no_code",
+      "category_group": "perps",
+      "chain_tags": [
+        "solana"
+      ]
+    },
+    {
+      "id": "gtrade",
+      "name": "gTrade (Gains)",
+      "category": "Perps",
+      "chains": "Arbitrum, Base, Polygon, ApeChain",
+      "url": "https://gains.trade",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "ToS 2.6: denial by IP/ISP/VPN"
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://gains.trade/terms-of-service",
+        "updated": "2023-11-01",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "US + territories",
+        "restricted_codes": [
+          "US"
+        ]
+      },
+      "fork_notes": "Closed.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://gains.trade/terms-of-service"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "A?",
+      "fork_ready": "no_code",
+      "category_group": "perps",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "lighter",
+      "name": "Lighter",
+      "category": "Perps",
+      "chains": "Lighter (zk L2)",
+      "url": "https://app.lighter.xyz",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "ToS: IP logging for enforcement"
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://lighter.xyz/terms",
+        "updated": "2025-12-29",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "US, CA, UK, CN, KP, RU, UA, CU, IR, VE, SY (+SD, BY, MM)",
+        "restricted_codes": [
+          "US",
+          "CA",
+          "GB",
+          "CN",
+          "KP",
+          "RU",
+          "UA",
+          "CU",
+          "IR",
+          "VE",
+          "SY",
+          "SD",
+          "BY",
+          "MM"
+        ]
+      },
+      "fork_notes": "Closed. SDKs are open.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://lighter.xyz/terms"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "A?",
+      "fork_ready": "no_code",
+      "category_group": "perps",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "aave",
+      "name": "Aave",
+      "category": "Lending",
+      "chains": "EVM",
+      "url": "https://app.aave.com",
+      "frontend_repo": "https://github.com/aave/interface",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-10-06",
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "ToS: region-based blocking; none in code (presumably edge)"
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "/api/preflight-compliance -> private COMPLIANCE_API_URL/check/{addr}?surface=v3 (TRM Labs historically, 2022)",
+        "layer": "own-api",
+        "fail": "closed",
+        "fail_note": "status=error -> overlay; skipped in read-only mode"
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://aave.com/terms-of-service",
+        "updated": "2026-09-07",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "18: BY, CI, Crimea, CU, DPR, IR, IQ, Kherson, LR, LY, LPR, MM, KP, RU, SD, SY, VE, Zaporizhzhia",
+        "restricted_codes": [
+          "BY",
+          "CI",
+          "UA-Crimea",
+          "CU",
+          "UA-DPR",
+          "IR",
+          "IQ",
+          "UA-Kherson",
+          "LR",
+          "LY",
+          "UA-LPR",
+          "MM",
+          "KP",
+          "RU",
+          "SD",
+          "SY",
+          "VE",
+          "UA-Zaporizhzhia"
+        ]
+      },
+      "fork_notes": "IMPORTANT: a naive fork/IPFS build without the API route will lock out EVERY user (fail-closed). Remove the `AddressBlocked` wrapper in pages/_app.page.tsx.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "pages/api/preflight-compliance.ts",
+        "src/components/AddressBlocked.tsx",
+        "src/hooks/compliance/service-compliance.ts",
+        "https://governance.aave.com/t/address-blocking-and-trm-labs/9301"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "C",
+      "fork_ready": "yes",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "compound",
+      "name": "Compound III",
+      "category": "Lending",
+      "chains": "EVM",
+      "url": "https://app.compound.finance",
+      "frontend_repo": "https://github.com/compound-finance/webb3-frontend",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-05-21",
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "ToS: IP-based geo-blocking"
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "hardcoded list of 38 addresses, incl. the Tornado Cash router 0x8589…DA16 (TC delisted from SDN in 2025, still blocked here)",
+        "layer": "frontend",
+        "fail": "n/a",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://www.compound.xyz/terms-of-service",
+        "updated": "2026-08-11",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic OFAC/UN/UK/EU + Foundation discretion",
+        "restricted_codes": []
+      },
+      "fork_notes": "Static list in src/helpers/sanctions.ts. Trivial to remove. Legacy v2 UI: compound-finance/palisade.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "src/helpers/sanctions.ts",
+        "src/contexts/Web3Context.tsx"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "C",
+      "fork_ready": "yes",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "morpho",
+      "name": "Morpho",
+      "category": "Lending",
+      "chains": "EVM",
+      "url": "https://app.morpho.org",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed (morpho-lite-apps archived 2026-05-06)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": "page carries meta x-geo-country (edge geolocation)"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [],
+        "scope": "some markets/vaults hidden or not openable by direct link 'due to legal constraints'"
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "unnamed (docs: blocks US-sanctioned addresses)",
+        "layer": "own-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "hidden markets",
+      "tos": {
+        "url": "https://morpho.org/terms-of-use",
+        "updated": "2026-09-11",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic comprehensive sanctions",
+        "restricted_codes": []
+      },
+      "fork_notes": "Already covered by morpho.cp0x.com. Lite/Fallback apps are archived but forkable.",
+      "live": [
+        "WebFetch (US): normal page, meta x-geo-country=US"
+      ],
+      "evidence": [
+        "https://docs.morpho.org/interface/warnings/",
+        "https://github.com/morpho-org/morpho-lite-apps"
+      ],
+      "confidence": "medium",
+      "alternatives": [
+        {
+          "name": "morpho.cp0x.com",
+          "url": "https://morpho.cp0x.com"
+        }
+      ],
+      "level": "C",
+      "fork_ready": "no_code",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "spark",
+      "name": "Spark",
+      "category": "Lending / savings",
+      "chains": "EVM",
+      "url": "https://app.spark.fi (-> app.spark.finance)",
+      "frontend_repo": null,
+      "repo_state": "private_now",
+      "repo_status": "private-now (marsfoundation/spark-app, sparkdotfi/spark-app -> 404)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "reported",
+        "countries": [
+          "US"
+        ],
+        "close_only": [],
+        "method": "2023: 'Accessing this website via VPN is not allowed'; US block per 2023 reports"
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "block",
+        "note": "2023 reports; current status not confirmed"
+      },
+      "screening": {
+        "s": "reported",
+        "provider": "TRM Labs (2023 reports)",
+        "layer": "own-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://spark.finance/terms-of-use",
+        "updated": "2026-04-02",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic; ToS 2.6: by IP, ISP, VPN, device, address",
+        "restricted_codes": []
+      },
+      "fork_notes": "Find the last public spark-app commit (mirrors/forks on GitHub).",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://cointelegraph.com/news/makerdao-spark-protocol-block-vpn-users-controversy"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "C",
+      "fork_ready": "no_code",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "sky",
+      "name": "Sky (ex-Maker)",
+      "category": "Savings / lending",
+      "chains": "Ethereum, L2",
+      "url": "https://app.sky.money",
+      "frontend_repo": "https://github.com/jetstreamgg/tarmac/tree/development/apps/webapp",
+      "repo_state": "open",
+      "repo_status": "open (Jetstream, not the sky-ecosystem org)",
+      "repo_last_commit": "2026-10-07",
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "AF",
+          "BY",
+          "MM",
+          "BI",
+          "CF",
+          "CN",
+          "CU",
+          "CD",
+          "ET",
+          "GN",
+          "GW",
+          "HT",
+          "HK",
+          "IR",
+          "IQ",
+          "LB",
+          "LY",
+          "ML",
+          "NI",
+          "NE",
+          "KP",
+          "RU",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "GB",
+          "VE",
+          "YE",
+          "ZW",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-Kherson",
+          "UA-LPR",
+          "UA-Zaporizhzhia"
+        ],
+        "close_only": [],
+        "method": "auth service /ip/status -> is_restricted_region -> full-page block 'Access blocked'; the country list is taken from the ToS (not published in code)"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [],
+        "scope": "api.sky.money/geo-config: per-country modules (savings/rewards/expert); unknown region disables them"
+      },
+      "vpn": {
+        "s": "detect",
+        "note": "not blocked; VPN/US users must sign the terms on every tx"
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "auth service /address/status + /address/status/enhanced before a tx (paid provider, unnamed)",
+        "layer": "own-api",
+        "fail": "closed",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.sky.money/legal/skybase-international/terms-of-use",
+        "updated": "2026-09-01",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "35: AF, BY, MM, BI, CF, CN, CU, CD, ET, GN, GW, HT, HK, IR, IQ, LB, LY, ML, NI, NE, KP, RU, SO, SS, SD, SY, GB, VE, YE, ZW, Crimea, DPR, Kherson, LPR, Zaporizhzhia",
+        "restricted_codes": [
+          "AF",
+          "BY",
+          "MM",
+          "BI",
+          "CF",
+          "CN",
+          "CU",
+          "CD",
+          "ET",
+          "GN",
+          "GW",
+          "HT",
+          "HK",
+          "IR",
+          "IQ",
+          "LB",
+          "LY",
+          "ML",
+          "NI",
+          "NE",
+          "KP",
+          "RU",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "GB",
+          "VE",
+          "YE",
+          "ZW",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-Kherson",
+          "UA-LPR",
+          "UA-Zaporizhzhia"
+        ]
+      },
+      "fork_notes": "Everything goes through VITE_AUTH_URL. The repo has a skip-auth build (used for e2e). That is ready to use for a fork.",
+      "live": [
+        "api.sky.money/geo-config (US): isRegionRestricted=false, all modules enabled"
+      ],
+      "evidence": [
+        "apps/webapp/src/lib/authCheck.ts",
+        "apps/webapp/src/modules/ui/context/ConnectedContext.tsx",
+        "apps/webapp/src/modules/ui/hooks/useTermsSignatureGate.tsx",
+        "apps/webapp/src/hooks/authentication/useRestrictedAddressCheck.md"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "yes",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "venus",
+      "name": "Venus",
+      "category": "Lending",
+      "chains": "BNB, EVM",
+      "url": "https://app.venus.io (-> venus.io)",
+      "frontend_repo": "https://github.com/VenusProtocol/venus-protocol-interface/tree/main/apps/evm",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-09-30",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [],
+        "scope": "per-asset restrictedCountries from the Venus API; country from free.freeipapi.com; gated assets (bStocks) need acknowledgement"
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "no",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "restricted/gated assets",
+      "tos": {
+        "url": "https://app.venus.io/#/terms-of-use",
+        "updated": "2025-09-18",
+        "us": "partial",
+        "us_scope": "Fixed-Term Vault",
+        "restricted": "main ToS: generic; FTV: US, UK, CA, CN, CU, IR, KP, SY, RU, BY, occupied UA regions",
+        "restricted_codes": [
+          "US",
+          "GB",
+          "CA",
+          "CN",
+          "CU",
+          "IR",
+          "KP",
+          "SY",
+          "RU",
+          "BY",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR",
+          "UA-Kherson",
+          "UA-Zaporizhzhia"
+        ]
+      },
+      "fork_notes": "Country from a free IP API, list from their API. Remove in a fork.",
+      "live": [
+        "WebFetch (US): 302 -> venus.io, JS shell"
+      ],
+      "evidence": [
+        "apps/evm/src/clients/api/queries/useGetIpLocation/getIpLocation/index.ts",
+        "apps/evm/src/clients/api/queries/useGetPools/applyCountryCodeToPools/index.ts"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "B",
+      "fork_ready": "yes",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "euler",
+      "name": "Euler",
+      "category": "Lending",
+      "chains": "EVM",
+      "url": "https://app.euler.finance",
+      "frontend_repo": "https://github.com/euler-xyz/euler-lite",
+      "repo_state": "open",
+      "repo_status": "open (prod built from it, app_id matches)",
+      "repo_last_commit": "2026-10-06",
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "AF",
+          "BY",
+          "CF",
+          "CU",
+          "KP",
+          "CD",
+          "ET",
+          "IR",
+          "IQ",
+          "LB",
+          "LY",
+          "ML",
+          "MM",
+          "NI",
+          "RU",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "VE",
+          "YE",
+          "ZW"
+        ],
+        "close_only": [],
+        "method": "Nuxt server middleware: HTTP 451 on /api/* by edge country header; fail-closed if country unknown"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [],
+        "scope": "per-vault/asset hard/soft blocks by country (incl. EU/EEA groups); withdraw/repay stay allowed"
+      },
+      "vpn": {
+        "s": "detect",
+        "note": "logged only, not blocked"
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "TRM Labs via Euler data-v3 /v3/compliance/address-screening",
+        "layer": "own-api",
+        "fail": "closed",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://www.euler.finance/terms",
+        "updated": "2026-05-04",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "IR, BY, CU, KP, SY, Crimea, DPR, LPR, RU",
+        "restricted_codes": [
+          "IR",
+          "BY",
+          "CU",
+          "KP",
+          "SY",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR",
+          "RU"
+        ]
+      },
+      "fork_notes": "Open repo with docs (docs/geo-blocking.md, docs/address-screening.md). Everything is behind env config. A fork turns off geo-gate and screening.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "server/middleware/geo-gate.ts",
+        "server/utils/screening.ts",
+        "docs/geo-blocking.md",
+        "docs/address-screening.md"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "yes",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "fluid",
+      "name": "Fluid",
+      "category": "Lending / DEX",
+      "chains": "EVM, Solana",
+      "url": "https://fluid.io",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://instadapp.io/terms",
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "unknown (client-side)",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed. Needs a browser crawl.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [],
+      "confidence": "low",
+      "alternatives": [],
+      "level": "?",
+      "fork_ready": "no_code",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm",
+        "solana"
+      ]
+    },
+    {
+      "id": "kamino",
+      "name": "Kamino",
+      "category": "Lending",
+      "chains": "Solana",
+      "url": "https://kamino.com (app.kamino.finance -> 302)",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "manual address blacklist (2025-12, Jupiter Lend case, not sanctions)",
+      "tos": {
+        "url": null,
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "ToS not found",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed; klend SDK is open.",
+      "live": [
+        "WebFetch (US): JS shell"
+      ],
+      "evidence": [],
+      "confidence": "low",
+      "alternatives": [],
+      "level": "?",
+      "fork_ready": "no_code",
+      "category_group": "lending",
+      "chain_tags": [
+        "solana"
+      ]
+    },
+    {
+      "id": "marginfi",
+      "name": "marginfi (-> Project 0)",
+      "category": "Lending",
+      "chains": "Solana",
+      "url": "https://app.marginfi.com (retired -> app.0.xyz)",
+      "frontend_repo": "https://github.com/mrgnlabs/mrgn-ts/tree/main/apps/marginfi-v2-ui",
+      "repo_state": "open_stale",
+      "repo_status": "open-deprecated (Project 0 closed)",
+      "repo_last_commit": "2026-06-03",
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "VE",
+          "CU",
+          "IR",
+          "KP",
+          "SY"
+        ],
+        "close_only": [],
+        "method": "Next middleware req.geo -> redirect marginfi.com"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "US"
+        ],
+        "scope": "US: /looper -> /not-allowed; Arena: US + 5 -> 'Arena Restricted'"
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://www.0.xyz/terms-of-use",
+        "updated": "2026-05-13",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic + restriction by wallet/IP/risk",
+        "restricted_codes": []
+      },
+      "fork_notes": "marginfi UI is archived. Project 0 is closed.",
+      "live": [
+        "WebFetch (US): retirement notice -> app.0.xyz"
+      ],
+      "evidence": [
+        "apps/marginfi-v2-ui/src/middleware.ts",
+        "apps/marginfi-v2-trading/src/middleware.ts"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "stale",
+      "category_group": "lending",
+      "chain_tags": [
+        "solana"
+      ]
+    },
+    {
+      "id": "liquity",
+      "name": "Liquity V2 (liquity.app)",
+      "category": "CDP / stablecoin",
+      "chains": "Ethereum",
+      "url": "https://liquity.app",
+      "frontend_repo": "https://github.com/liquity/bold/tree/main/frontend/app",
+      "repo_state": "open",
+      "repo_status": "open (reference frontend)",
+      "repo_last_commit": "2026-09-26",
+      "geo_site": {
+        "s": "optional",
+        "countries": [],
+        "close_only": [],
+        "method": "NEXT_PUBLIC_BLOCKING_VPNAPI: vpnapi.io country/VPN block, off by default"
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "optional",
+        "note": ""
+      },
+      "screening": {
+        "s": "optional",
+        "provider": "on-chain blocklist contract isBlackListed (NEXT_PUBLIC_BLOCKING_LIST)",
+        "layer": "frontend",
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": null,
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "Liquity AG runs no frontend; frontends are third-party",
+        "restricted_codes": []
+      },
+      "fork_notes": "Built for third-party frontends. Clean by default.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "frontend/app/src/comps/Blocking/Blocking.tsx",
+        "frontend/app/src/env.ts"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "B",
+      "fork_ready": "yes",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "notional",
+      "name": "Notional",
+      "category": "Lending / leverage",
+      "chains": "EVM",
+      "url": "https://notional.finance",
+      "frontend_repo": "https://github.com/notional-finance/notional-monorepo",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-06-19",
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "CU",
+          "IR",
+          "IQ",
+          "SY",
+          "KP",
+          "RU",
+          "BY",
+          "CF",
+          "CD",
+          "CG",
+          "LB",
+          "LR",
+          "LY",
+          "SO",
+          "VE",
+          "YE",
+          "ZW",
+          "US"
+        ],
+        "close_only": [],
+        "method": "api.notional.finance/geoip (Cloudflare cf.country) -> /blocked"
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "Chainalysis Sanctions Oracle 0x40C57923924B5c5c5455c48D93317139ADDaC8fb (on-chain)",
+        "layer": "frontend",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://notional.finance/terms",
+        "updated": "2020-12-05",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "NY, CU, IR, SY, KP, Crimea, VE (code blocks all of the US)",
+        "restricted_codes": [
+          "US-NY",
+          "CU",
+          "IR",
+          "SY",
+          "KP",
+          "UA-Crimea",
+          "VE"
+        ]
+      },
+      "fork_notes": "Geo is a request to their worker, screening is an eth_call. Both removed in a fork.",
+      "live": [
+        "WebFetch (US): metadata only (block is client-side)"
+      ],
+      "evidence": [
+        "packages/shared/notionable-hooks/src/use-geoip-block.ts",
+        "packages/notionable/src/account/communities.ts"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "yes",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "lido",
+      "name": "Lido",
+      "category": "Liquid staking",
+      "chains": "Ethereum",
+      "url": "https://stake.lido.fi",
+      "frontend_repo": "https://github.com/lidofinance/ethereum-staking-widget",
+      "repo_state": "open",
+      "repo_status": "open (IPFS build available)",
+      "repo_last_commit": "2026-10-08",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "US"
+        ],
+        "scope": "/api/geo (cf-ipcountry): full|limited; remote config geo.limited=[US] -> Earn vaults; Tor/unknown -> limited"
+      },
+      "vpn": {
+        "s": "detect",
+        "note": "Tor exits get the 'limited' mode"
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "/api/validation -> external validationAPI /v2/check/{addr} (unnamed) + local list",
+        "layer": "own-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://lido.fi/terms-of-use",
+        "updated": "2026-09-23",
+        "us": "partial",
+        "us_scope": "Earn vaults",
+        "restricted": "Crimea, CU, DPR, IR, LPR, KP, SY + sanctioned; US/UK: Earn only",
+        "restricted_codes": [
+          "UA-Crimea",
+          "CU",
+          "UA-DPR",
+          "IR",
+          "UA-LPR",
+          "KP",
+          "SY",
+          "GB"
+        ]
+      },
+      "fork_notes": "The IPFS build lets you control the API base paths. Stake/Withdraw are not geo-gated.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "utilsApi/geo-handler.ts",
+        "REMOTE_CONFIG_MANIFEST.json",
+        "pages/api/validation.ts",
+        "features/earn/shared/hooks/use-earn-geo-gate.ts"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "C",
+      "fork_ready": "yes",
+      "category_group": "staking",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "rocketpool",
+      "name": "Rocket Pool",
+      "category": "Liquid staking",
+      "chains": "Ethereum",
+      "url": "https://stake.rocketpool.net",
+      "frontend_repo": null,
+      "repo_state": "none_found",
+      "repo_status": "none-found",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": null,
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "ToS not found",
+        "restricted_codes": []
+      },
+      "fork_notes": "Needs a browser crawl.",
+      "live": [
+        "WebFetch (US): JS shell"
+      ],
+      "evidence": [],
+      "confidence": "low",
+      "alternatives": [],
+      "level": "?",
+      "fork_ready": "no_code",
+      "category_group": "staking",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "eigenlayer",
+      "name": "EigenLayer (EigenCloud)",
+      "category": "Restaking",
+      "chains": "Ethereum",
+      "url": "https://app.eigenlayer.xyz",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "reported",
+        "countries": [
+          "US",
+          "CA",
+          "CN",
+          "CU",
+          "KP",
+          "IR",
+          "VE"
+        ],
+        "close_only": [],
+        "method": "2024: EIGEN claims site only (IP + VPN detection)"
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "block",
+        "note": "2024, EIGEN claims site"
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.eigencloud.xyz/eigencloud/legal/terms-of-service",
+        "updated": "2025-12-15",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic US-embargoed",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed.",
+      "live": [
+        "WebFetch (US): HTTP 500"
+      ],
+      "evidence": [
+        "https://decrypt.co/228642/eigen-token-airdrop-plan-ethereum-restaking-protocol-eigenlayer"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "B",
+      "fork_ready": "no_code",
+      "category_group": "staking",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "etherfi",
+      "name": "ether.fi",
+      "category": "Restaking / vaults",
+      "chains": "EVM",
+      "url": "https://www.ether.fi/app (app.ether.fi -> 302)",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "tos_only",
+        "countries": [
+          "US",
+          "GB",
+          "US-NY"
+        ],
+        "scope": "Liquid vaults: not US/UK; Liquid Reserve: not NY"
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "ToS: 'wallet screening' for Trade",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://www.ether.fi/legal/terms-of-use",
+        "updated": "2026-09-09",
+        "us": "partial",
+        "us_scope": "",
+        "restricted": "CA (all services!), BY, BI, Crimea, CU, CD, IR, IQ, LY, KP, SO, SD, SY, VE, ZW",
+        "restricted_codes": [
+          "CA",
+          "BY",
+          "BI",
+          "UA-Crimea",
+          "CU",
+          "CD",
+          "IR",
+          "IQ",
+          "LY",
+          "KP",
+          "SO",
+          "SD",
+          "SY",
+          "VE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "Closed.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://www.ether.fi/legal/terms-of-use"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "A?",
+      "fork_ready": "no_code",
+      "category_group": "staking",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "pendle",
+      "name": "Pendle",
+      "category": "Yield",
+      "chains": "EVM",
+      "url": "https://app.pendle.finance",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "ToS mentions geo-blocks"
+      },
+      "geo_feature": {
+        "s": "tos_only",
+        "countries": [
+          "US"
+        ],
+        "scope": "Boros: not US"
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "ToS: wallet-screening DB, wallet blacklisting",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.pendle.finance/pendle-v2/TermsOfUse",
+        "updated": "2026-10-01",
+        "us": "partial",
+        "us_scope": "Boros",
+        "restricted": "CU, IR, KP, SY, RU, BY, MM, SD, ZW, VE, Crimea, DPR, LPR, FATF high-risk",
+        "restricted_codes": [
+          "CU",
+          "IR",
+          "KP",
+          "SY",
+          "RU",
+          "BY",
+          "MM",
+          "SD",
+          "ZW",
+          "VE",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR"
+        ]
+      },
+      "fork_notes": "Closed. Pendle API/SDK are open.",
+      "live": [
+        "WebFetch (US): 'Failed to load app' (JS)"
+      ],
+      "evidence": [
+        "https://docs.pendle.finance/pendle-v2/TermsOfUse"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "A?",
+      "fork_ready": "no_code",
+      "category_group": "yield",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "ethena",
+      "name": "Ethena",
+      "category": "Synthetic dollar",
+      "chains": "EVM",
+      "url": "https://app.ethena.fi",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "US"
+        ],
+        "close_only": [],
+        "method": "302 -> ethena.fi/restricted ('not available in your country' / high-risk wallet); confirmed live from the US, the ToS list (33 jurisdictions) is not live-verified"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "AT",
+          "BE",
+          "BG",
+          "HR",
+          "CY",
+          "CZ",
+          "DK",
+          "EE",
+          "FI",
+          "FR",
+          "DE",
+          "GR",
+          "HU",
+          "IE",
+          "IT",
+          "LV",
+          "LT",
+          "LU",
+          "MT",
+          "NL",
+          "PL",
+          "PT",
+          "RO",
+          "SK",
+          "SI",
+          "ES",
+          "SE",
+          "IS",
+          "LI",
+          "NO"
+        ],
+        "scope": "mint/redeem: KYC whitelist only; sUSDe not for EU/EEA"
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "unnamed (restricted page + Mint blocked addresses)",
+        "layer": "own-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.ethena.fi/resources/terms-of-service",
+        "updated": "2025-08",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "33: incl. US, RU, BY, IR, KP, CU, SY, VE, MM, DPR/LPR, Crimea, Abkhazia, S.Ossetia, N.Cyprus + EU/EEA (sUSDe)",
+        "restricted_codes": [
+          "US",
+          "RU",
+          "BY",
+          "IR",
+          "KP",
+          "CU",
+          "SY",
+          "VE",
+          "MM",
+          "UA-DPR",
+          "UA-LPR",
+          "UA-Crimea",
+          "GE-Abkhazia",
+          "GE-SouthOssetia",
+          "CY-North"
+        ]
+      },
+      "fork_notes": "Closed. Staking USDe->sUSDe is a plain ERC-4626 that works directly via the contract.",
+      "live": [
+        "WebFetch (US): 302 -> /restricted (geo-block confirmed)"
+      ],
+      "evidence": [
+        "https://ethena.fi/restricted",
+        "https://docs.ethena.fi/resources/terms-of-service"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "no_code",
+      "category_group": "yield",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "yearn",
+      "name": "Yearn",
+      "category": "Yield vaults",
+      "chains": "EVM",
+      "url": "https://yearn.fi",
+      "frontend_repo": "https://github.com/yearn/yearn.fi",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-10-07",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "no",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": null,
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "no ToS",
+        "restricted_codes": []
+      },
+      "fork_notes": "Clean.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "A",
+      "fork_ready": "yes",
+      "category_group": "yield",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "beefy",
+      "name": "Beefy",
+      "category": "Yield vaults",
+      "chains": "EVM",
+      "url": "https://app.beefy.com",
+      "frontend_repo": "https://github.com/beefyfinance/beefy-v2",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-10-07",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "US",
+          "CA",
+          "GB",
+          "AU",
+          "SG"
+        ],
+        "scope": "vaults with tokenized equities (Base): US, CA, GB, AU, SG; country from api.beefy.finance/geo/country; fail-closed"
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "no",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "src/config/restrictions.json",
+      "tos": {
+        "url": null,
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "no ToS",
+        "restricted_codes": []
+      },
+      "fork_notes": "Restriction is just a JSON config plus their API. There is a geoCountryOverride flag.",
+      "live": [
+        "api.beefy.finance/geo/country (US) -> {country: US}"
+      ],
+      "evidence": [
+        "src/config/restrictions.json",
+        "src/features/data/selectors/restrictions.ts",
+        "src/features/data/actions/restrictions.ts"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "B",
+      "fork_ready": "yes",
+      "category_group": "yield",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "convex",
+      "name": "Convex",
+      "category": "Yield",
+      "chains": "Ethereum",
+      "url": "https://curve.convexfinance.com",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": null,
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "no ToS",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed, no ToS.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [],
+      "confidence": "low",
+      "alternatives": [],
+      "level": "?",
+      "fork_ready": "no_code",
+      "category_group": "yield",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "jito",
+      "name": "Jito",
+      "category": "Liquid staking",
+      "chains": "Solana",
+      "url": "https://www.jito.network",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://www.jito.network/docs/jitosol/resources/terms-of-use/",
+        "updated": "2025-04-10",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic UN/OFAC/EU/UK",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://www.jito.network/docs/jitosol/resources/terms-of-use/"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "?",
+      "fork_ready": "no_code",
+      "category_group": "staking",
+      "chain_tags": [
+        "solana"
+      ]
+    },
+    {
+      "id": "across",
+      "name": "Across",
+      "category": "Bridge",
+      "chains": "EVM, Solana",
+      "url": "https://across.to (app.across.to -> 302)",
+      "frontend_repo": null,
+      "repo_state": "private_now",
+      "repo_status": "private-now (across-protocol/frontend public until ~2025-08; frontend-v1 = legacy 2023)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "ToS: by IP, at Risk Labs' discretion"
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "quote API returns a quote for an SDN recipient",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://across.to/terms-of-service",
+        "updated": "2025-10-22",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic comprehensive US sanctions",
+        "restricted_codes": []
+      },
+      "fork_notes": "Across API is open (suggested-fees, available-routes). Our own UI on top of it is realistic.",
+      "live": [
+        "/api/suggested-fees with SDN recipient -> normal quote"
+      ],
+      "evidence": [
+        "https://across.to/terms-of-service",
+        "http://web.archive.org/web/20250829200542/https://github.com/across-protocol/frontend"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "A?",
+      "fork_ready": "no_code",
+      "category_group": "bridge",
+      "chain_tags": [
+        "evm",
+        "solana"
+      ]
+    },
+    {
+      "id": "stargate",
+      "name": "Stargate",
+      "category": "Bridge",
+      "chains": "EVM (LayerZero)",
+      "url": "https://stargate.finance",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://stargate.finance/terms",
+        "updated": "2025-09-17",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic UN/EU/UK/Cayman/US",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "https://stargate.finance/terms"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "A?",
+      "fork_ready": "no_code",
+      "category_group": "bridge",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "synapse",
+      "name": "Synapse",
+      "category": "Bridge",
+      "chains": "EVM",
+      "url": "https://bridge.synapseprotocol.com",
+      "frontend_repo": "https://github.com/synapsecns/sanguine/tree/master/packages/synapse-interface",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-09-28",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "bundled blacklist + screener.omnirpc.io/fe/address/{addr} (Chainalysis Entity API behind it); connected + destination address",
+        "layer": "own-api",
+        "fail": "closed",
+        "fail_note": "error = flagged"
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://explorer.synapseprotocol.com/terms",
+        "updated": "2023-02",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic comprehensive US sanctions",
+        "restricted_codes": []
+      },
+      "fork_notes": "IMPORTANT: fail-closed. If the screener is down, everyone is flagged. A fork removes screenAddress().",
+      "live": [
+        "screener: SDN -> {risk: true}; control -> {risk: false}"
+      ],
+      "evidence": [
+        "packages/synapse-interface/utils/screenAddress.ts",
+        "packages/synapse-interface/contexts/UserProvider.tsx",
+        "packages/synapse-interface/store/middleware/destinationAddressMiddleware.ts"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "C",
+      "fork_ready": "yes",
+      "category_group": "bridge",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "hop",
+      "name": "Hop",
+      "category": "Bridge",
+      "chains": "EVM",
+      "url": "https://app.hop.exchange",
+      "frontend_repo": "https://github.com/hop-protocol/hop/tree/master/packages/frontend",
+      "repo_state": "open",
+      "repo_status": "open (low activity)",
+      "repo_last_commit": "2025-10-29",
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "BY",
+          "BI",
+          "CF",
+          "CI",
+          "CU",
+          "CD",
+          "ET",
+          "IR",
+          "IQ",
+          "KP",
+          "LB",
+          "LR",
+          "LY",
+          "MM",
+          "NI",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "VE",
+          "YE",
+          "ZW"
+        ],
+        "close_only": [],
+        "method": "netlify.toml: HTTP 451 by Country"
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "optional",
+        "provider": "OFAC list (ultrasoundmoney), REACT_APP_BLOCKLIST_ENABLED",
+        "layer": "frontend",
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": null,
+        "updated": "unknown",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "docs FAQ: same 22 countries",
+        "restricted_codes": [
+          "BY",
+          "BI",
+          "CF",
+          "CI",
+          "CU",
+          "CD",
+          "ET",
+          "IR",
+          "IQ",
+          "KP",
+          "LB",
+          "LR",
+          "LY",
+          "MM",
+          "NI",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "VE",
+          "YE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "WARNING: hop.exchange apex serves gambling spam (domain lapsed/hijacked). app.hop.exchange -> HTTP 400. Good candidate for a permissionless replacement.",
+      "live": [
+        "WebFetch: app.hop.exchange -> 400; hop.exchange -> spam"
+      ],
+      "evidence": [
+        "packages/frontend/netlify.toml",
+        "packages/frontend/src/config/blocklist.ts"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "yes",
+      "category_group": "bridge",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "portalbridge",
+      "name": "Portal Bridge (Wormhole)",
+      "category": "Bridge",
+      "chains": "Multi",
+      "url": "https://portalbridge.com",
+      "frontend_repo": null,
+      "repo_state": "archived",
+      "repo_status": "archived (XLabs/portal-bridge-ui, 2025-08); current build closed",
+      "repo_last_commit": "2025-04-16",
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "archived UI: TRM Labs via proxy (risk score >= 10 -> block, fail-open). wormhole-connect widget: hardcoded OFAC SDN list",
+        "layer": "own-api",
+        "fail": "open",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://portalbridge.com/terms-of-service",
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "unknown (client-side)",
+        "restricted_codes": []
+      },
+      "fork_notes": "Base: wormhole-foundation/wormhole-connect (widget) + the archived portal-bridge-ui.",
+      "live": [
+        "WebFetch (US): metadata only"
+      ],
+      "evidence": [
+        "XLabs/portal-bridge-ui: apps/connect/src/providers/sanctions.ts",
+        "wormhole-foundation/wormhole-connect: src/utils/transferValidation.ts, src/consts/wallet.ts"
+      ],
+      "confidence": "low",
+      "alternatives": [],
+      "level": "C",
+      "fork_ready": "no_code",
+      "category_group": "bridge",
+      "chain_tags": [
+        "other"
+      ]
+    },
+    {
+      "id": "relay",
+      "name": "Relay",
+      "category": "Bridge / intents",
+      "chains": "EVM, Solana, BTC...",
+      "url": "https://relay.link",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed (relayprotocol/relay-kit = SDK/UI kit)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "Chainalysis + HackBounty + Hermod + internal blocklist; public endpoint api.relay.link/sanctioned/{addr}",
+        "layer": "protocol-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": null,
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "ToS returns 403 to bots",
+        "restricted_codes": []
+      },
+      "fork_notes": "Screening runs at quote and fill level in the protocol API. A fork does not bypass it.",
+      "live": [
+        "api.relay.link/sanctioned: SDN -> {sanctioned: true}; control -> false"
+      ],
+      "evidence": [
+        "https://docs.relay.link/security/compliance",
+        "relayprotocol/relay-kit: packages/sdk/src/types/api.ts"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "no_code",
+      "category_group": "bridge",
+      "chain_tags": [
+        "bitcoin",
+        "evm",
+        "solana"
+      ]
+    },
+    {
+      "id": "polymarket",
+      "name": "Polymarket",
+      "category": "Prediction market",
+      "chains": "Polygon",
+      "url": "https://polymarket.com",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "IR",
+          "SY",
+          "CU",
+          "KP",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR"
+        ],
+        "close_only": [
+          "US",
+          "GB",
+          "FR",
+          "DE",
+          "IT",
+          "PL",
+          "BE",
+          "AU",
+          "SG",
+          "TW",
+          "TH",
+          "RU",
+          "BY",
+          "CA-ON",
+          "CA-BC",
+          "CA-AB",
+          "CA-QC"
+        ],
+        "method": "polymarket.com/api/geoblock; overlay 'Trading is blocked' + view-only; close-only list is partial ('and others' per help center)"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "IE",
+          "JP",
+          "NL",
+          "KR"
+        ],
+        "scope": "close-only tiers; frontend-only tier (IE, JP, NL, KR)"
+      },
+      "vpn": {
+        "s": "block",
+        "note": "reported 2026-06"
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://polymarket.com/tos",
+        "updated": "2026-08-11",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "~40 countries + regions (see help center)",
+        "restricted_codes": []
+      },
+      "fork_notes": "The CLOB API is also geo-blocked for the main tiers. An alternative frontend requires an API proxy outside the blocked jurisdictions.",
+      "live": [
+        "/api/geoblock (US) -> {blocked: true, country: US, region: OH}; overlay 'Trading is blocked in the United States'"
+      ],
+      "evidence": [
+        "https://docs.polymarket.com/developers/CLOB/geoblock",
+        "https://help.polymarket.com/en/articles/13364163-geographic-restrictions"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "D",
+      "fork_ready": "no_code",
+      "category_group": "prediction",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "safe",
+      "name": "Safe{Wallet}",
+      "category": "Wallet / multisig",
+      "chains": "EVM",
+      "url": "https://app.safe.global",
+      "frontend_repo": "https://github.com/safe-global/safe-wallet-monorepo/tree/main/apps/web",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-10-07",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [],
+        "scope": "HEAD /swap -> 403 for OFAC countries -> swap/stake/earn/Safe token hidden; the core wallet works"
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "Chainalysis Sanctions Oracle (on-chain) -> feature-level 'Blocked address'",
+        "layer": "frontend",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://safe.global/terms",
+        "updated": "2025-10",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic EU/US sanctions",
+        "restricted_codes": []
+      },
+      "fork_notes": "Only native integrations are restricted (swap via CoW, stake via Kiln and so on). The core wallet is permissionless.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [
+        "apps/web/src/components/common/GeoblockingProvider/index.tsx",
+        "apps/web/src/hooks/useSanctionedAddress.ts",
+        "apps/web/src/config/constants.ts"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "level": "C",
+      "fork_ready": "yes",
+      "category_group": "wallet",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "ens",
+      "name": "ENS",
+      "category": "Naming",
+      "chains": "Ethereum",
+      "url": "https://app.ens.domains",
+      "frontend_repo": "https://github.com/ensdomains/ens-app-v3",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-10-06",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "ToS 3.1(b) implies address blocking",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://ens.domains/legal/terms-of-use",
+        "updated": "2026-08-12",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "sanctioned + FATF non-cooperative",
+        "restricted_codes": []
+      },
+      "fork_notes": "Clean.",
+      "live": [
+        "WebFetch (US): normal page"
+      ],
+      "evidence": [],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "A",
+      "fork_ready": "yes",
+      "category_group": "other",
+      "chain_tags": [
+        "evm"
+      ]
+    },
+    {
+      "id": "snapshot",
+      "name": "Snapshot",
+      "category": "Governance",
+      "chains": "EVM, Starknet",
+      "url": "https://snapshot.box",
+      "frontend_repo": "https://github.com/snapshot-labs/sx-monorepo/tree/master/apps/ui",
+      "repo_state": "open",
+      "repo_status": "open",
+      "repo_last_commit": "2026-10-07",
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "ToS reserves geo-restriction"
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "no",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://snapshot.box/#/terms-of-use",
+        "updated": "2025-03-04",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "SECO list incl. RU, UA, BY + 19",
+        "restricted_codes": [
+          "BY",
+          "BI",
+          "CF",
+          "CG",
+          "KP",
+          "GN",
+          "GW",
+          "IR",
+          "IQ",
+          "LB",
+          "LY",
+          "ML",
+          "MM",
+          "SS",
+          "RU",
+          "SO",
+          "SD",
+          "SY",
+          "UA",
+          "VE",
+          "YE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "Clean. Legacy snapshot.org client: snapshot-labs/snapshot.",
+      "live": [
+        "WebFetch (US): JS shell"
+      ],
+      "evidence": [
+        "apps/ui/src/views/Terms.vue"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "A",
+      "fork_ready": "yes",
+      "category_group": "other",
+      "chain_tags": [
+        "evm",
+        "starknet"
+      ]
+    }
+  ]
+}
