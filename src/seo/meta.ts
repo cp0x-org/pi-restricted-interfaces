@@ -69,6 +69,7 @@ function restrictionSummary(e: InterfaceEntry, lang: Lang): string {
   if (e.screening.s === 'yes' || e.screening.s === 'reported')
     parts.push(S.screens(e.screening.layer ? t.labels.LAYER_LABELS[e.screening.layer] : ''));
   if (e.vpn.s === 'detect' || e.vpn.s === 'block') parts.push(e.vpn.s === 'block' ? S.vpnBlock : S.vpnDetect);
+  if (e.kyc && (e.kyc.s === 'yes' || e.kyc.s === 'reported')) parts.push(S.kyc);
   return parts.length ? parts.join(S.sep) : S.none;
 }
 

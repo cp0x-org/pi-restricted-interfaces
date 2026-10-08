@@ -36,6 +36,8 @@ export const CATEGORY_GROUPS = [
   'lending',
   'staking',
   'yield',
+  'rwa',
+  'stablecoin',
   'bridge',
   'prediction',
   'wallet',
@@ -73,6 +75,13 @@ export interface Screening {
   layer: Layer | null;
   fail: FailMode | null;
   fail_note: string;
+}
+
+/** Identity gate (KYC / accreditation / wallet allowlist). Optional: only present where it was researched. */
+export interface Kyc {
+  s: Status;
+  layer: Layer | null;
+  scope: string;
 }
 
 export interface Tos {
@@ -135,6 +144,7 @@ export interface InterfaceEntry {
   geo_feature: GeoFeature;
   vpn: Vpn;
   screening: Screening;
+  kyc?: Kyc;
   asset_filter: string;
   tos: Tos;
   fork_notes: string;
@@ -188,7 +198,7 @@ export interface CountryVerdict {
   conflict?: boolean;
 }
 
-export type MechanismKind = 'geo_site' | 'geo_feature' | 'screening' | 'vpn';
+export type MechanismKind = 'geo_site' | 'geo_feature' | 'screening' | 'vpn' | 'kyc';
 
 export interface EvidenceLink {
   label: string;

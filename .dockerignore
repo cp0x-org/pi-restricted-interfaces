@@ -5,3 +5,5 @@ dist
 monitor/repos
 monitor/out
 monitor/data/scan_raw.json
+.git
+.env.probe

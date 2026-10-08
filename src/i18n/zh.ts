@@ -7,8 +7,8 @@ export const zh: Messages = {
   labels: {
     LEVEL_LABELS: { D: 'D', C: 'C', B: 'B', 'A?': 'A?', '?': '?', A: 'A' },
     LEVEL_DESCRIPTIONS: {
-      D: '整站或交易被地区封锁，或钱包筛查在协议 API 中执行（分叉无法绕过）',
-      C: '钱包筛查在前端或运营方自有 API 中执行（分叉可移除）',
+      D: '整站或交易被地区封锁、钱包筛查在协议 API 中执行，或存在链上 KYC 白名单（分叉无法绕过）',
+      C: '钱包筛查或 KYC 关卡在前端或运营方自有 API 中执行（分叉可移除）',
       B: '仅限制部分功能或资产、仅有公开报道，或代码中存在默认关闭的可选限制',
       'A?': '未发现限制，但代码闭源：只能看到服务条款，需要浏览器实测',
       '?': '数据不足：代码闭源且无法读取服务条款',
@@ -81,6 +81,8 @@ export const zh: Messages = {
       lending: '借贷',
       staking: '质押',
       yield: '收益',
+      rwa: '现实世界资产（RWA）',
+      stablecoin: '稳定币',
       bridge: '跨链桥',
       prediction: '预测市场',
       wallet: '钱包',
@@ -103,7 +105,7 @@ export const zh: Messages = {
       tor: 'Tor',
       direct: '直连'
     },
-    MECHANISM_LABELS: { geo_site: '地区封锁', geo_feature: '功能限制', screening: '钱包筛查', vpn: 'VPN / Tor 检测' },
+    MECHANISM_LABELS: { geo_site: '地区封锁', geo_feature: '功能限制', screening: '钱包筛查', vpn: 'VPN / Tor 检测', kyc: 'KYC / 白名单' },
     CONFIDENCE_LABELS: { high: '高', medium: '中', low: '低' },
     REGION_LABELS: {
       'UA-Crimea': '克里米亚和塞瓦斯托波尔',
@@ -126,7 +128,6 @@ export const zh: Messages = {
     permissionless: '无需许可界面',
     referrals: 'cp0x 推荐计划',
     menu: '菜单',
-    connectWallet: '连接钱包',
     skip: '跳到主要内容',
     sections: '栏目',
     mainNav: '主导航',
@@ -237,6 +238,7 @@ export const zh: Messages = {
     whereRuns: '执行位置',
     failMode: '失败模式',
     note: '备注',
+    kycScope: '受限内容',
     tos: '服务条款',
     usPersons: '美国用户',
     document: '文档',
@@ -286,6 +288,7 @@ export const zh: Messages = {
       screens: (layer) => `筛查钱包${layer ? `（${layer}）` : ''}`,
       vpnBlock: '封锁 VPN 用户',
       vpnDetect: '检测 VPN 用户',
+      kyc: '需要 KYC',
       none: '未发现技术限制',
       sep: '；'
     },
@@ -306,7 +309,7 @@ export const zh: Messages = {
       `本目录为每个界面回答一个问题：官方前端或后端封锁了什么、针对谁、采用什么机制、在哪一层执行，以及无需许可的分叉能否移除它。数据快照：${date}。网站仅显示 EVM 网络：完整目录 ${total} 个界面中的 ${shown} 个；Solana、Cosmos 等非 EVM 应用保留在 \`monitor/data\` 和报告中。我们只做观察：不绕过任何限制，不签名，不发送交易。`,
     levelsTitle: '等级',
     levelsNote:
-      '等级根据数据计算：已确认整站地区封锁，或钱包筛查在协议 API 中执行时为 D；筛查在前端或运营方 API 中已确认或有报道时为 C；仅有功能或资产层面的限制、报道中的封锁或可选代码时为 B；未发现限制且代码开源时为 A；未发现限制但代码闭源时为 A?；代码闭源且无法评估时为 ?。',
+      '等级根据数据计算：已确认整站地区封锁、钱包筛查在协议 API 中执行，或 KYC 白名单在链上强制执行时为 D；筛查或 KYC 关卡在前端或运营方 API 中已确认或有报道时为 C；仅有功能或资产层面的限制、报道中的封锁或可选代码时为 B；未发现限制且代码开源时为 A；未发现限制但代码闭源时为 A?；代码闭源且无法评估时为 ?。',
     statusTitle: '状态值',
     layerTitle: '筛查在哪里执行（层）',
     layerNote:

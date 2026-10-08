@@ -5,17 +5,14 @@ import Box from '@mui/material/Box';
 
 // project imports
 import LogoSection from '../LogoSection';
-import ConnectButtonCustom from 'components/ConnectButtonCustom';
 import HeaderMenu from './HeaderMenu';
 import LanguageSwitcher from './LanguageSwitcher';
-import { useI18n } from 'i18n';
 
 // ==============================|| MAIN NAVBAR / HEADER ||============================== //
 
 export default function Header() {
   const theme = useTheme();
   const downMD = useMediaQuery(theme.breakpoints.down('md'));
-  const { t } = useI18n();
 
   return (
     <>
@@ -30,10 +27,9 @@ export default function Header() {
       <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-start' }}>
         <HeaderMenu />
       </Box>
-      {/* language + connect wallet, top right */}
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+      {/* language switcher, top right (no wallet: the site has no on-chain actions) */}
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
         <LanguageSwitcher />
-        <ConnectButtonCustom chainStatus="icon" showBalance={false} label={t.layout.connectWallet} />
       </Box>
     </>
   );

@@ -3478,6 +3478,11 @@
         "fail": "unknown",
         "fail_note": ""
       },
+      "kyc": {
+        "s": "yes",
+        "layer": "protocol-api",
+        "scope": "USDe mint/redeem only for KYC-approved whitelisted addresses; staking USDe into sUSDe is open"
+      },
       "asset_filter": "",
       "tos": {
         "url": "https://docs.ethena.fi/resources/terms-of-service",
@@ -4524,6 +4529,961 @@
       ],
       "confidence": "medium",
       "alternatives": []
+    },
+    {
+      "id": "ondo",
+      "name": "Ondo Finance",
+      "description": "Ondo Finance tokenizes real-world assets: USDY (a yield-bearing token backed by short-term US Treasuries and bank deposits), OUSG (a tokenized short-term Treasury fund for qualified investors) and Ondo Global Markets (tokenized US stocks and ETFs for non-US investors). Minting and redemption go through Ondo's KYC onboarding, while the tokens trade on DEXs and are used across DeFi.",
+      "description_zh": "Ondo Finance 将现实世界资产代币化：USDY（以短期美国国债和银行存款支持的生息代币）、OUSG（面向合格投资者的代币化短期国债基金）以及 Ondo Global Markets（面向非美国投资者的代币化美股和 ETF）。铸造和赎回需通过 Ondo 的 KYC 开户，而代币本身可在 DEX 上交易并在 DeFi 中使用。",
+      "category": "RWA / tokenized treasuries",
+      "chains": "Ethereum, Solana, Sui, Aptos and more",
+      "networks": [
+        "Ethereum",
+        "Mantle",
+        "Arbitrum",
+        "Polygon",
+        "BNB Chain"
+      ],
+      "url": "https://app.ondo.finance",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "Eligibility rules prohibit the listed jurisdictions; they are enforced at KYC onboarding. IP geo-blocking of the app was not verified."
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "AF",
+          "BY",
+          "CA",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR",
+          "UA-Kherson",
+          "UA-Zaporizhzhia",
+          "CU",
+          "KP",
+          "IR",
+          "LY",
+          "MM",
+          "RU",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "US"
+        ],
+        "scope": "USDY: subscription, acquisition and redemption prohibited for persons in the listed jurisdictions and for US persons (Reg S). Ondo Global Markets: Reg S offering, not for US or Canadian persons. OUSG: US accredited investors and qualified purchasers only."
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "kyc": {
+        "s": "yes",
+        "layer": "protocol-api",
+        "scope": "Mint and redeem only after KYC onboarding with Ondo; OUSG and Global Markets tokens are held through allowlisted wallets enforced on-chain."
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.ondo.finance/general-access-products/usdy/eligibility",
+        "updated": "unknown",
+        "us": "yes",
+        "us_scope": "USDY and Global Markets: no US persons; OUSG: US accredited investors / qualified purchasers only",
+        "restricted": "USDY prohibited jurisdictions: Afghanistan, Belarus, Canada, occupied regions of Ukraine (Crimea, Donetsk, Luhansk, Kherson, Zaporizhzhia, Sevastopol), Cuba, North Korea, Iran, Libya, Myanmar, Russia, Somalia, South Sudan, Sudan, Syria, United States",
+        "restricted_codes": [
+          "AF",
+          "BY",
+          "CA",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR",
+          "UA-Kherson",
+          "UA-Zaporizhzhia",
+          "CU",
+          "KP",
+          "IR",
+          "LY",
+          "MM",
+          "RU",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "US"
+        ]
+      },
+      "fork_notes": "Closed frontend. Minting and redemption are gated by Ondo's KYC and on-chain allowlists, so a fork cannot open them; only secondary-market trading of the tokens on DEXs is permissionless.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://docs.ondo.finance/general-access-products/usdy/eligibility",
+        "https://coinpaprika.com/education/ondo-finance-ondo/",
+        "https://altstreet.investments/platforms/reviews/ondofinance"
+      ],
+      "confidence": "medium",
+      "alternatives": []
+    },
+    {
+      "id": "maple",
+      "name": "Maple Finance",
+      "description": "Maple Finance is an on-chain lending platform where institutional borrowers take over-collateralized loans from pools run by credit managers. Its Syrup products (syrupUSDC, syrupUSDT) let lenders earn that yield through a liquid token, while Maple's institutional pools require KYC and an allowlisted wallet.",
+      "description_zh": "Maple Finance 是一个链上借贷平台，机构借款人从信贷管理人运营的资金池中获得超额抵押贷款。其 Syrup 产品（syrupUSDC、syrupUSDT）让出借人通过流动性代币获得这部分收益，而 Maple 的机构资金池需要 KYC 和白名单钱包。",
+      "category": "Lending / institutional credit",
+      "chains": "Ethereum, Base, Arbitrum, Solana",
+      "networks": [
+        "Ethereum",
+        "Base",
+        "Arbitrum"
+      ],
+      "url": "https://app.maple.finance",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "Interface Terms allow IP-based geofencing of Prohibited Persons; not verified live."
+      },
+      "geo_feature": {
+        "s": "tos_only",
+        "countries": [],
+        "scope": "syrupUSDC, syrupUSDT and syrupUSDG are not available to residents, citizens or tax residents of 34 restricted jurisdictions (incl. the US and Australia) or to anyone accessing from them."
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "Prohibited Persons on US, EU and UK sanctions lists are excluded by the Interface Terms",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "kyc": {
+        "s": "no",
+        "layer": null,
+        "scope": "syrupUSDC/syrupUSDT: no KYC, users self-certify eligibility. Maple's institutional pools (a separate product) require KYC and a wallet on Maple's Global Allowlist."
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.maple.finance/legal/interface-terms-of-use-syrupusdc-and-syrupusdt",
+        "updated": "unknown",
+        "us": "yes",
+        "us_scope": "residents, citizens and tax residents",
+        "restricted": "34 restricted jurisdictions incl. United States, Australia, Russia, Belarus, Iran, North Korea, Venezuela, occupied regions of Ukraine, Abkhazia, South Ossetia, Northern Cyprus",
+        "restricted_codes": [
+          "GE-Abkhazia",
+          "AF",
+          "AO",
+          "AU",
+          "BY",
+          "MM",
+          "BI",
+          "CF",
+          "CG",
+          "CU",
+          "UA-Crimea",
+          "ET",
+          "GW",
+          "IR",
+          "CI",
+          "LB",
+          "LR",
+          "LY",
+          "ML",
+          "NI",
+          "KP",
+          "CY-North",
+          "RU",
+          "SO",
+          "GE-SouthOssetia",
+          "SS",
+          "SD",
+          "SY",
+          "UA-DPR",
+          "UA-LPR",
+          "US",
+          "VE",
+          "YE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "Closed frontend. syrupUSDC/syrupUSDT are standard vault tokens that can be deposited through the contracts; the jurisdiction rules are contractual (Terms), not observed in code.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://docs.maple.finance/legal/syrupusdc-and-syrupusdt-available-jurisdictions",
+        "https://docs.maple.finance/legal/interface-terms-of-use-syrupusdc-and-syrupusdt",
+        "https://docs.maple.finance/legal/syrupusdc-and-syrupusdt-risks",
+        "https://maplefinance.gitbook.io/maple/maple-for-lenders/lending"
+      ],
+      "confidence": "medium",
+      "alternatives": []
+    },
+    {
+      "id": "centrifuge",
+      "name": "Centrifuge",
+      "description": "Centrifuge is a platform for tokenizing real-world assets such as Treasury funds, private credit and structured credit. Asset managers issue pool tokens on Ethereum and other networks; investors onboard with each manager (KYC and jurisdiction checks), and only approved wallets on a pool's on-chain memberlist can invest or hold the tokens.",
+      "description_zh": "Centrifuge 是一个将现实世界资产（如国债基金、私人信贷和结构化信贷）代币化的平台。资产管理人在以太坊等网络上发行资金池代币；投资者需分别通过各管理人的开户流程（KYC 和司法管辖区检查），只有列入资金池链上成员名单的钱包才能投资或持有代币。",
+      "category": "RWA / asset tokenization",
+      "chains": "Ethereum, Base, Arbitrum, Avalanche, BNB Chain, Plume",
+      "networks": [
+        "Ethereum",
+        "Base",
+        "Arbitrum",
+        "Avalanche",
+        "BNB Chain",
+        "Plume"
+      ],
+      "url": "https://app.centrifuge.io",
+      "frontend_repo": "https://github.com/centrifuge/apps",
+      "repo_state": "open_stale",
+      "repo_status": "open (monorepo for Centrifuge frontends; last push 2025-10-01, may lag the current app)",
+      "repo_last_commit": "2025-10-01",
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [],
+        "scope": "Per pool: managers apply KYC/AML and jurisdiction screening and the app restricts access where a pool requires it; flagship funds are non-US offerings. Country lists are set per pool and not published centrally."
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "kyc": {
+        "s": "yes",
+        "layer": "protocol-api",
+        "scope": "Per pool: KYC/AML with the asset manager, then the wallet is added to the pool's on-chain memberlist (separately on each network) before it can invest or hold tokens."
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://centrifuge.io/terms",
+        "updated": "unknown",
+        "us": "partial",
+        "us_scope": "set per pool; flagship funds are non-US offerings",
+        "restricted": "Services may be unavailable in some jurisdictions or limited to sophisticated, accredited or qualified investors",
+        "restricted_codes": []
+      },
+      "fork_notes": "The frontend is open source (centrifuge/apps), but investing requires the manager's approval on the pool's on-chain memberlist, so a fork cannot open access to pools.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://docs.centrifuge.io/user/investor/",
+        "https://docs.centrifuge.io/use/onboarding/",
+        "https://centrifuge.io/terms",
+        "https://altstreet.investments/platforms/reviews/centrifuge"
+      ],
+      "confidence": "medium",
+      "alternatives": []
+    },
+    {
+      "id": "superstate",
+      "name": "Superstate",
+      "description": "Superstate issues tokenized funds and shares on Ethereum: USTB (a short-duration US Treasury fund) and USCC (a crypto basis fund) for qualified investors, plus Opening Bell tokenized public equities. Holding the tokens requires Superstate onboarding and an allowlisted wallet.",
+      "description_zh": "Superstate 在以太坊上发行代币化基金和股份：面向合格投资者的 USTB（短期美国国债基金）和 USCC（加密基差基金），以及 Opening Bell 代币化公开股票。持有这些代币需要完成 Superstate 开户并使用白名单钱包。",
+      "category": "RWA / tokenized funds",
+      "chains": "Ethereum, Solana",
+      "networks": [
+        "Ethereum"
+      ],
+      "url": "https://superstate.com",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [],
+        "scope": "Funds (USTB, USCC): qualified purchasers in supported countries only (at least $5m investable assets for individuals, $25m for institutions). Tokenized equities: all investors in supported jurisdictions. Access is an allowlist of supported countries rather than a list of banned ones."
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "kyc": {
+        "s": "yes",
+        "layer": "protocol-api",
+        "scope": "Onboarding with KYC (via Parallel Markets), then wallet allowlisting; USTB transfers to non-allowlisted addresses revert on-chain."
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.superstate.com/introduction-to-superstate/onboarding",
+        "updated": "unknown",
+        "us": "partial",
+        "us_scope": "USTB/USCC: US accredited investors / qualified purchasers",
+        "restricted": "Only investors in supported countries (allowlist of roughly 22-29 countries, updated regularly)",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed frontend. USTB transfers to non-allowlisted addresses revert at the contract level, so a fork cannot give access.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://docs.superstate.com/introduction-to-superstate/onboarding",
+        "https://docs.superstate.com/superstate-funds/ustb",
+        "https://superstate.com/assets/ustb",
+        "https://eco.com/support/en/articles/15254017-ustb-deep-dive-2026-superstate-s-short-treasury-fund"
+      ],
+      "confidence": "medium",
+      "alternatives": []
+    },
+    {
+      "id": "symbiotic",
+      "name": "Symbiotic",
+      "description": "Symbiotic is a permissionless restaking protocol on Ethereum: vaults accept ETH, liquid-staking tokens and other ERC-20 collateral, and networks rent that stake for economic security, with operators and slashing rules set per vault. Its core contracts are immutable.",
+      "description_zh": "Symbiotic 是以太坊上的无需许可再质押协议：金库接受 ETH、流动性质押代币和其他 ERC-20 抵押品，各网络租用这些质押以获得经济安全，运营商和罚没规则按金库设置。其核心合约不可变更。",
+      "category": "Restaking",
+      "chains": "Ethereum",
+      "networks": [
+        "Ethereum"
+      ],
+      "url": "https://app.symbiotic.fi",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "unknown",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": null,
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "ToS not found",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed frontend. Core contracts are immutable and permissionless; restrictions, if any, would sit in the app or in individual vaults.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://www.paradigm.xyz/writing/symbiotic",
+        "https://www.coingecko.com/learn/what-is-symbiotic-restaking-crypto"
+      ],
+      "confidence": "low",
+      "alternatives": []
+    },
+    {
+      "id": "kelp",
+      "name": "Kelp DAO",
+      "description": "Kelp DAO issues rsETH, a liquid restaking token: users deposit ETH or liquid-staking tokens that are restaked through EigenLayer and other restaking layers, and receive rsETH to use across DeFi. Kelp is part of the Kernel DAO ecosystem.",
+      "description_zh": "Kelp DAO 发行流动性再质押代币 rsETH：用户存入 ETH 或流动性质押代币，这些资产通过 EigenLayer 等再质押层进行再质押，用户获得可在 DeFi 中使用的 rsETH。Kelp 属于 Kernel DAO 生态。",
+      "category": "Liquid restaking",
+      "chains": "Ethereum, Arbitrum, Base, Optimism, Linea, Scroll",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Optimism",
+        "Linea",
+        "Scroll"
+      ],
+      "url": "https://kerneldao.com/kelp",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "Users represent they are not sanctioned (OFAC, UN, EU, UK, HKMA, MAS); access may be blocked under the AML provisions",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "kyc": {
+        "s": "tos_only",
+        "layer": null,
+        "scope": "Terms allow KYC/AML checks at the operator's discretion or when required by law."
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://kerneldao.com/kelp/terms-of-service/",
+        "updated": "2025",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "No named jurisdictions; sanctions-list representations only",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed frontend; deposits and withdrawals use public contracts.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://kerneldao.com/kelp/terms-of-service/"
+      ],
+      "confidence": "medium",
+      "alternatives": []
+    },
+    {
+      "id": "lombard",
+      "name": "Lombard",
+      "description": "Lombard issues LBTC, a yield-bearing Bitcoin token: BTC deposited through Lombard is staked via Babylon and represented as LBTC on Ethereum and other chains, where it is used as DeFi collateral. LBTC is freely transferable, but minting, redemption and the yield strategy in the Lombard app are restricted by jurisdiction.",
+      "description_zh": "Lombard 发行生息比特币代币 LBTC：通过 Lombard 存入的 BTC 经由 Babylon 质押，并在以太坊等链上以 LBTC 表示，用作 DeFi 抵押品。LBTC 可自由转让，但 Lombard 应用中的铸造、赎回和收益策略按司法管辖区受限。",
+      "category": "Bitcoin liquid staking",
+      "chains": "Ethereum, Base, BNB Chain, Sui, Solana",
+      "networks": [
+        "Ethereum",
+        "Base",
+        "BNB Chain"
+      ],
+      "url": "https://www.lombard.finance/app",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "Terms bar Restricted (US, UK) and Sanctioned Jurisdictions as Prohibited Users; IP enforcement not verified."
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "US",
+          "GB"
+        ],
+        "scope": "Direct mint/redeem and the yield strategy in the Lombard app are not available to US or UK persons (official docs); LBTC itself is a transferable token usable in DeFi."
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": "Terms prohibit VPNs or proxies used to misrepresent location"
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "Unnamed third-party compliance screening provider (Terms §7.1, §8.4)",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "kyc": {
+        "s": "tos_only",
+        "layer": null,
+        "scope": "Terms reserve KYC/AML/CFT procedures and source-of-funds requests (§7.2, §8.4)."
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.lombard.finance/resources/terms",
+        "updated": "2026-08-12",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "Restricted: United States, United Kingdom. Sanctioned: Belarus, Burundi, Crimea/Donetsk/Luhansk, Cuba, DR Congo, Iran, Iraq, Libya, North Korea, Russia, Somalia, Sudan, Syria, Venezuela, Zimbabwe",
+        "restricted_codes": [
+          "US",
+          "GB",
+          "BY",
+          "BI",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR",
+          "CU",
+          "CD",
+          "IR",
+          "IQ",
+          "LY",
+          "KP",
+          "RU",
+          "SO",
+          "SD",
+          "SY",
+          "VE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "Closed frontend. LBTC can be held and used in DeFi without the app; mint and redeem depend on Lombard's infrastructure (BTC custody and bridging).",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://docs.lombard.finance/resources/terms",
+        "https://docs.lombard.finance/use/lbtc",
+        "https://www.lombard.finance/products/lbtc/"
+      ],
+      "confidence": "high",
+      "alternatives": []
+    },
+    {
+      "id": "frax",
+      "name": "Frax Finance",
+      "description": "Frax Finance runs a family of stablecoin and DeFi products: frxUSD (a fiat-backed dollar stablecoin), the sfrxUSD and sfrxETH yield tokens, the Fraxswap AMM and the Fraxtal layer 2. Frax launched in 2020 as a fractional-algorithmic stablecoin and has since moved to fully collateralized designs.",
+      "description_zh": "Frax Finance 运营一系列稳定币和 DeFi 产品：frxUSD（法币支持的美元稳定币）、sfrxUSD 和 sfrxETH 收益代币、Fraxswap AMM 以及二层网络 Fraxtal。Frax 于 2020 年以部分算法稳定币起步，此后转向完全抵押的设计。",
+      "category": "Stablecoin / DeFi suite",
+      "chains": "Ethereum, Fraxtal, Arbitrum, Base, Optimism",
+      "networks": [
+        "Ethereum",
+        "Fraxtal",
+        "Arbitrum",
+        "Base",
+        "Optimism"
+      ],
+      "url": "https://frax.com",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "reported",
+        "provider": "frxUSD contract-level blacklist for sanctions (third-party reviews)",
+        "layer": "protocol-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "kyc": {
+        "s": "reported",
+        "layer": null,
+        "scope": "Identity verification with Persona as part of frxUSD compliance (Persona case study)."
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://frax.com/frxUSD",
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "frxUSD Terms of Service not retrieved",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed frontend. Core Frax contracts are public; frxUSD mint/redeem through the custodian route has compliance requirements.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://llamarisk.com/research/pegkeeper-onboarding-frxusd",
+        "https://chaoslabs.xyz/posts/frxusd-token-review",
+        "https://withpersona.com/customers/frax-builds-a-global-compliance-program-for-crypto-native-users-in-one-month"
+      ],
+      "confidence": "low",
+      "alternatives": []
+    },
+    {
+      "id": "usual",
+      "name": "Usual",
+      "description": "Usual is a stablecoin protocol on Ethereum: USD0 is backed one-to-one by tokenized US Treasury bills, USD0++ is its staked, yield-earning version, and the USUAL token distributes protocol revenue to holders.",
+      "description_zh": "Usual 是以太坊上的稳定币协议：USD0 由代币化美国国债按 1:1 支持，USD0++ 是其质押生息版本，USUAL 代币将协议收入分配给持有者。",
+      "category": "Stablecoin / RWA-backed",
+      "chains": "Ethereum, Arbitrum, Base",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base"
+      ],
+      "url": "https://app.usual.money",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "Terms bar Prohibited Persons (residents or nationals of 60+ listed countries, incl. the US, China and Turkey); no technical geo-block described."
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": "Terms forbid using a VPN or proxy to conceal non-compliance"
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "Users represent they and their locality are not under UN, US or EU sanctions",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "kyc": {
+        "s": "no",
+        "layer": null,
+        "scope": "Terms state the operator has no information about users beyond public blockchain data."
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.usual.money/resources-and-ecosystem/legal-documentation/terms-of-services",
+        "updated": "2025-03-21",
+        "us": "yes",
+        "us_scope": "residents or nationals",
+        "restricted": "Prohibited Person: residents or nationals of 66 listed countries incl. United States, China, Russia, Turkey, Philippines, Nigeria, Pakistan, Puerto Rico, US Virgin Islands; plus US-embargoed countries",
+        "restricted_codes": [
+          "AF",
+          "AL",
+          "AO",
+          "AZ",
+          "BA",
+          "BS",
+          "BB",
+          "MM",
+          "BW",
+          "BF",
+          "BI",
+          "KY",
+          "KH",
+          "CM",
+          "UA-Crimea",
+          "TD",
+          "CN",
+          "CG",
+          "CD",
+          "CU",
+          "ET",
+          "ER",
+          "FJ",
+          "PW",
+          "GH",
+          "GN",
+          "GW",
+          "HT",
+          "IR",
+          "IQ",
+          "JM",
+          "JO",
+          "LA",
+          "UG",
+          "LR",
+          "LY",
+          "MG",
+          "ML",
+          "MT",
+          "MA",
+          "MZ",
+          "NI",
+          "NG",
+          "KP",
+          "PK",
+          "PA",
+          "PH",
+          "PR",
+          "RU",
+          "SN",
+          "SO",
+          "LK",
+          "SD",
+          "SY",
+          "TJ",
+          "TT",
+          "TR",
+          "TM",
+          "US",
+          "UZ",
+          "VU",
+          "VE",
+          "VI",
+          "YE",
+          "ZW"
+        ]
+      },
+      "fork_notes": "Closed frontend; USD0 and USD0++ use public contracts.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://docs.usual.money/resources-and-ecosystem/legal-documentation/terms-of-services"
+      ],
+      "confidence": "medium",
+      "alternatives": []
+    },
+    {
+      "id": "debridge",
+      "name": "deBridge",
+      "description": "deBridge is a cross-chain trading and messaging protocol. Its deBridge Liquidity Network (DLN) lets users swap between chains through orders that market makers fill on the destination chain, without locked liquidity pools; it connects Ethereum, major layer 2s, Solana and other networks.",
+      "description_zh": "deBridge 是一个跨链交易和消息协议。其 deBridge 流动性网络（DLN）让用户通过由做市商在目标链上成交的订单进行跨链兑换，无需锁定的流动性池；它连接以太坊、主要二层网络、Solana 等网络。",
+      "category": "Bridge / cross-chain swaps",
+      "chains": "EVM, Solana, Tron and more",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Optimism",
+        "Polygon",
+        "BNB Chain",
+        "Avalanche",
+        "Linea",
+        "20+ more"
+      ],
+      "url": "https://app.debridge.finance",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "Terms list restricted jurisdictions including the United States; technical enforcement not verified."
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "Terms exclude persons in embargoed or terrorism-supporting countries and on US government lists",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.debridge.foundation/legal/terms-of-service",
+        "updated": "2024-06-30",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "United States, Afghanistan, China, Crimea, Cuba, DRC, Iran, Iraq, Myanmar, North Korea, Russia, Somalia, South Sudan, Sudan, Syria, Venezuela, Yemen",
+        "restricted_codes": [
+          "US",
+          "AF",
+          "CN",
+          "UA-Crimea",
+          "CU",
+          "CD",
+          "IR",
+          "IQ",
+          "MM",
+          "KP",
+          "RU",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "VE",
+          "YE"
+        ]
+      },
+      "fork_notes": "Closed frontend. Orders are filled by independent market makers; the DLN API and SDK are public.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://docs.debridge.foundation/legal/terms-of-service",
+        "https://debridge.com/legal/"
+      ],
+      "confidence": "medium",
+      "alternatives": []
+    },
+    {
+      "id": "opensea",
+      "name": "OpenSea",
+      "description": "OpenSea is the largest NFT marketplace, where users buy, sell and mint NFTs on Ethereum and other EVM networks; it also offers token swaps. OpenSea is a US company and applies US sanctions to its users.",
+      "description_zh": "OpenSea 是最大的 NFT 市场，用户可以在以太坊及其他 EVM 网络上购买、出售和铸造 NFT，它也提供代币兑换。OpenSea 是一家美国公司，对其用户执行美国制裁。",
+      "category": "NFT marketplace",
+      "chains": "Ethereum, Base, Polygon, Arbitrum and more",
+      "networks": [
+        "Ethereum",
+        "Base",
+        "Polygon",
+        "Arbitrum",
+        "Optimism",
+        "Avalanche",
+        "Blast",
+        "Zora"
+      ],
+      "url": "https://opensea.io",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "IR"
+        ],
+        "close_only": [],
+        "method": "Blocks users and territories on US sanctions lists; in March 2022 Iranian users, including Iranian artists living abroad, lost access to their accounts (company statement and press reports)."
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "reported",
+        "provider": "Account-level sanctions checks; accounts deactivated by nationality, not only by location (2022 reports)",
+        "layer": "own-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://opensea.io/tos",
+        "updated": "unknown",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "Persons and territories under US sanctions (company statements, 2022)",
+        "restricted_codes": []
+      },
+      "fork_notes": "Closed frontend. NFTs live in public contracts (Seaport is open source), so other marketplaces can trade the same assets.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://www.artnews.com/art-news/news/opensea-deplatforms-iranian-users-us-sanctions-1234621105/",
+        "https://fortune.com/crypto/2022/03/04/opensea-metamask-block-users-sanctions",
+        "https://forkast.news/opensea-blocks-iranian-users-sanctions/"
+      ],
+      "confidence": "medium",
+      "alternatives": []
+    },
+    {
+      "id": "tornado",
+      "name": "Tornado Cash",
+      "description": "Tornado Cash is a non-custodial privacy protocol on Ethereum: users deposit fixed amounts of ETH or tokens into immutable pool contracts and later withdraw to a different address with a zero-knowledge proof, breaking the on-chain link. The US sanctions imposed in 2022 were lifted in March 2025; the interface is published on IPFS under tornadocash.eth.",
+      "description_zh": "Tornado Cash 是以太坊上的非托管隐私协议：用户将固定金额的 ETH 或代币存入不可变的资金池合约，之后通过零知识证明提取到另一个地址，从而切断链上关联。2022 年实施的美国制裁已于 2025 年 3 月解除；其界面通过 tornadocash.eth 发布在 IPFS 上。",
+      "category": "Privacy pool",
+      "chains": "Ethereum, BNB Chain, Polygon, Gnosis, Arbitrum, Optimism, Avalanche",
+      "networks": [
+        "Ethereum",
+        "BNB Chain",
+        "Polygon",
+        "Gnosis",
+        "Arbitrum",
+        "Optimism",
+        "Avalanche"
+      ],
+      "url": "https://tornadocash.eth.limo",
+      "frontend_repo": "https://github.com/tornadocash/tornado-classic-ui",
+      "repo_state": "archived",
+      "repo_status": "GitHub copy archived (last push 2022-08-05); the live UI is served from IPFS via the tornadocash.eth ENS record (sources at sources.tornadocash.eth.limo)",
+      "repo_last_commit": "2022-08-05",
+      "geo_site": {
+        "s": "unknown",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "reported",
+        "provider": "Chainalysis Sanctions Oracle check added to the frontend in April 2022; whether the current IPFS UI still screens is not verified",
+        "layer": "frontend",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": null,
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "No Terms of Service",
+        "restricted_codes": []
+      },
+      "fork_notes": "Contracts are immutable and permissionless; any interface (IPFS copies, tornado.cp0x.com) can use them, and relayers are independent. Verify the IPFS hash of tornadocash.eth before use.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://www.theblock.co/amp/post/142081/ethereum-mixer-tornado-cash-now-blocks-sanctioned-addresses",
+        "https://l2beat.com/privacy/projects/tornado-cash",
+        "https://home.treasury.gov/news/press-releases/sb0057"
+      ],
+      "confidence": "medium",
+      "alternatives": [
+        {
+          "name": "tornado.cp0x.com",
+          "url": "https://tornado.cp0x.com"
+        }
+      ]
     }
   ]
 }

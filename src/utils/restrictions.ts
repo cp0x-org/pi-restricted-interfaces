@@ -122,6 +122,13 @@ function entry(raw: unknown, index: number): InterfaceEntry {
       fail: oneOfOrNull(FAIL_MODES, sc.fail, w('screening.fail')),
       fail_note: str(sc.fail_note, w('screening.fail_note'))
     },
+    kyc: isRecord(raw.kyc)
+      ? {
+          s: oneOf(STATUS, raw.kyc.s, w('kyc.s')),
+          layer: oneOfOrNull(LAYERS, raw.kyc.layer, w('kyc.layer')),
+          scope: str(raw.kyc.scope, w('kyc.scope'))
+        }
+      : undefined,
     asset_filter: str(raw.asset_filter, w('asset_filter')),
     tos: {
       url: strOrNull(tos.url, w('tos.url')),
@@ -331,6 +338,8 @@ export function hasMechanism(e: InterfaceEntry, kind: MechanismKind): boolean {
       return enforced(e.screening.s) || e.screening.s === 'optional';
     case 'vpn':
       return e.vpn.s === 'detect' || e.vpn.s === 'block' || e.vpn.s === 'optional';
+    case 'kyc':
+      return !!e.kyc && enforced(e.kyc.s);
     default:
       return false;
   }

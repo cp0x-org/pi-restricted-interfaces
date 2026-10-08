@@ -6,8 +6,9 @@ interface the catalog records where the restriction is enforced (edge, frontend,
 protocol API) and whether a permissionless fork removes it, with links to the code paths, documents and API
 responses the verdict is based on.
 
-Built on the cp0x Permissionless Interface boilerplate (Berry MUI template: React 19 + Vite + MUI 7) with wallet
-connectivity (wagmi + RainbowKit) left in place.
+Live at [restricted.cp0x.com](https://restricted.cp0x.com). Built on the cp0x Permissionless Interface boilerplate (Berry MUI
+template: React 19 + Vite + MUI 7). The site is read-only: there is no wallet connection and no on-chain action, and it makes
+no third-party requests.
 
 ## Pages
 
@@ -61,11 +62,12 @@ from sources (mechanism details, providers, fork notes, evidence) stay in Englis
 The app replaces the static content when it starts, and `src/seo/usePageMeta.ts` keeps `<head>` in sync during
 client-side navigation.
 
-Set the public origin before building, otherwise `sitemap.xml`, canonical URLs and `og:url` are skipped (the build warns):
+The public origin comes from `VITE_SITE_URL` (`https://restricted.cp0x.com` in `.env.production` and the Dockerfile); without it `sitemap.xml`, canonical URLs, hreflang and `og:url` are skipped (the build warns):
 
 ```bash
-VITE_SITE_URL=https://your.domain pnpm build
-docker build --build-arg VITE_SITE_URL=https://your.domain .
+pnpm build                                              # uses VITE_SITE_URL=https://restricted.cp0x.com from .env.production
+docker build .                                          # same default; override with --build-arg VITE_SITE_URL=...
+VITE_SITE_URL=https://your.domain docker compose up -d --build   # linux/amd64 image on http://localhost:4173
 ```
 
 Serve the routes as clean URLs without a single-page rewrite, so that `/monitor/aave` returns `monitor/aave.html` and
@@ -93,7 +95,7 @@ pnpm monitor:build
 pnpm build
 ```
 
-Set `VITE_WALLETCONNECT_PROJECT_ID` in `.env` for WalletConnect (see `.env.example`). Chains and RPCs are configured in `src/wagmi-config.ts`.
+Adding a protocol: short step-by-step guide (in Russian) in [`monitor/ADD_PROTOCOL.md`](monitor/ADD_PROTOCOL.md).
 
 ## Application Links
 - Permissionless interfaces: [pi.cp0x.com](https://pi.cp0x.com/)

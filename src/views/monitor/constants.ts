@@ -32,8 +32,8 @@ export const LEVEL_LABELS: Record<Level, string> = {
 };
 
 export const LEVEL_DESCRIPTIONS: Record<Level, string> = {
-  D: 'Site or trading geo-block, or wallet screening inside the protocol API (a fork inherits it)',
-  C: 'Wallet screening on the frontend or in the operator’s own API (removable in a fork)',
+  D: 'Site or trading geo-block, wallet screening inside the protocol API, or an on-chain KYC allowlist (a fork inherits it)',
+  C: 'Wallet screening or a KYC gate on the frontend or in the operator’s own API (removable in a fork)',
   B: 'Only feature- or asset-level limits, public reports, or optional code that is off by default',
   'A?': 'Nothing found, but the code is closed: only the ToS is visible, a browser crawl is needed',
   '?': 'Not enough data: closed code and no readable ToS',
@@ -161,6 +161,8 @@ export const CATEGORY_GROUP_LABELS: Record<CategoryGroup, string> = {
   lending: 'Lending',
   staking: 'Staking',
   yield: 'Yield',
+  rwa: 'RWA',
+  stablecoin: 'Stablecoin',
   bridge: 'Bridge',
   prediction: 'Prediction market',
   wallet: 'Wallet',
@@ -207,5 +209,6 @@ export const MECHANISM_LABELS: Record<MechanismKind, string> = {
   geo_site: 'Geo Block',
   geo_feature: 'Feature Block',
   screening: 'Wallet screening',
-  vpn: 'VPN / Tor detection'
+  vpn: 'VPN / Tor detection',
+  kyc: 'KYC / allowlist'
 };

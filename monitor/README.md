@@ -60,6 +60,7 @@ git clone --depth 1 --filter=blob:limit=400k https://github.com/<owner>/<repo> m
 - `screening { s, provider, layer ∈ edge | frontend | own-api | protocol-api | null, fail ∈ open | closed | unknown | n/a | null, fail_note }`
 - `asset_filter` (text)
 - `tos { url, updated, us ∈ yes | no | partial | unknown, us_scope, restricted (text), restricted_codes[] }`
+- `kyc { s, layer, scope }` (optional: KYC / accreditation / wallet allowlist; an on-chain allowlist, `layer: protocol-api`, makes the level D)
 - `fork_notes`, `live[]`, `geo_endpoints[]` (URLs whose response reveals the server-side geo verdict, probed by P3), `evidence[]`, `confidence ∈ high | medium | low`, `alternatives[] { name, url }`
 
 Status vocabulary `s`: `yes` (confirmed by code, live check or official docs) · `no` · `reported` (press/users, not confirmed in code) · `tos_only` (reserved in the ToS, no enforcement found) · `optional` (in code, off by default) · `unknown`.
@@ -69,6 +70,9 @@ Country tokens: ISO 3166-1 alpha-2 codes, or sub-national regions as `CC-Name` (
 Computed by `build.py` (never edit by hand): `level` (A / A? / B / C / D / ?), `fork_ready` (yes / stale / partial / no_code), `category_group`, `chain_tags`, `observations[]` (latest verified probe results per country / proxy type / target).
 
 ## Adding or updating an interface
+
+Step-by-step guide with a JSON template (Russian): [`ADD_PROTOCOL.md`](ADD_PROTOCOL.md).
+
 
 1. Edit `data/interfaces.json` (keep every claim backed by an `evidence` entry: repo-relative path, URL, or `owner/repo: path`).
 2. `pnpm monitor:build` — fails on schema errors, prints the level distribution.

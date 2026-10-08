@@ -84,7 +84,7 @@ interface CountryHit {
 const hasPermissionless = (i: InterfaceEntry): boolean => i.alternatives.length > 0;
 type SortOrder = 'asc' | 'desc';
 
-const MECHANISMS: MechanismKind[] = ['geo_site', 'geo_feature', 'screening', 'vpn'];
+const MECHANISMS: MechanismKind[] = ['geo_site', 'geo_feature', 'screening', 'vpn', 'kyc'];
 const REPO_ORDER = ['open', 'open_stale', 'archived', 'private_now', 'closed', 'none_found'];
 const SCREENING_ORDER = ['yes', 'reported', 'optional', 'tos_only', 'unknown', 'no'];
 

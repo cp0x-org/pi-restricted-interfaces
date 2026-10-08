@@ -153,6 +153,13 @@ function interfaceBody(e: InterfaceEntry, ds: Dataset, lang: Lang): string {
       }`
     ),
     item(M.vpn, L.VPN_LABELS[e.vpn.s], sent(e.vpn.note)),
+    e.kyc
+      ? item(
+          M.kyc,
+          L.STATUS_LABELS[e.kyc.s],
+          `${sent(e.kyc.scope)}${e.kyc.layer ? ` ${field(T.whereRuns, esc(L.LAYER_LABELS[e.kyc.layer]))}${stop.trim()}` : ''}`
+        )
+      : '',
     e.asset_filter ? `<li><b>${esc(T.assetFilter)}${colon.trim()}</b> ${sent(e.asset_filter)}</li>` : '',
     `<li><b>${esc(T.tos)}${colon.trim()}</b> ${e.tos.url ? ext(e.tos.url, strip(e.tos.url)) : esc(T.notFoundDoc)}${
       e.tos.updated ? `${comma}${esc(T.lastUpdated)} ${esc(e.tos.updated)}` : ''

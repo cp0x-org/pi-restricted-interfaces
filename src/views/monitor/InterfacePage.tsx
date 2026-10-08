@@ -249,6 +249,21 @@ export default function InterfacePage() {
             rows={[{ label: T.note, value: entry.vpn.note }]}
           />
         </Grid>
+        {entry.kyc && (
+          <Grid size={{ xs: 12, md: 6 }}>
+            <MechanismCard
+              title={L.MECHANISM_LABELS.kyc}
+              chip={<StatusChip status={entry.kyc.s} />}
+              rows={[
+                { label: T.kycScope, value: entry.kyc.scope },
+                {
+                  label: T.whereRuns,
+                  value: entry.kyc.layer ? `${L.LAYER_LABELS[entry.kyc.layer]} — ${L.LAYER_DESCRIPTIONS[entry.kyc.layer]}` : ''
+                }
+              ]}
+            />
+          </Grid>
+        )}
         <Grid size={{ xs: 12 }}>
           <MechanismCard
             title={T.tos}

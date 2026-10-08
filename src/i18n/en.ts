@@ -61,7 +61,6 @@ export const en = {
     permissionless: 'Permissionless Interfaces',
     referrals: 'cp0x Referrals',
     menu: 'Menu',
-    connectWallet: 'Connect Wallet',
     skip: 'Skip to content',
     sections: 'Sections',
     mainNav: 'Main',
@@ -173,6 +172,7 @@ export const en = {
     whereRuns: 'Where it runs',
     failMode: 'Fail mode',
     note: 'Note',
+    kycScope: 'What is gated',
     tos: 'Terms of Service',
     usPersons: 'US persons',
     document: 'Document',
@@ -225,6 +225,7 @@ export const en = {
       screens: (layer: string) => `screens wallets${layer ? ` (${layer})` : ''}`,
       vpnBlock: 'blocks VPN users',
       vpnDetect: 'detects VPN users',
+      kyc: 'requires KYC',
       none: 'no technical restriction found',
       sep: '; '
     },
@@ -247,7 +248,7 @@ export const en = {
       `The catalog answers one question per interface: what does the official frontend or backend block, for whom, by which mechanism, where is it enforced, and does a permissionless fork remove it. Snapshot of ${date}. The site shows EVM networks only: ${shown} of ${total} interfaces in the full catalog; Solana, Cosmos and other non-EVM apps stay in \`monitor/data\` and in the report. Only observation: nothing is bypassed, nothing is signed, no transactions are sent.`,
     levelsTitle: 'Levels',
     levelsNote:
-      'The level is computed from the data: D when a site geo-block is confirmed or wallet screening runs in the protocol API; C when screening is confirmed or reported on the frontend or the operator’s own API; B for feature- or asset-level limits, reported blocks and optional code; A when nothing is found and the code is open; A? when nothing is found but the code is closed; ? when the code is closed and nothing could be assessed.',
+      'The level is computed from the data: D when a site geo-block is confirmed, wallet screening runs in the protocol API, or a KYC allowlist is enforced on-chain; C when screening or a KYC gate is confirmed or reported on the frontend or the operator’s own API; B for feature- or asset-level limits, reported blocks and optional code; A when nothing is found and the code is open; A? when nothing is found but the code is closed; ? when the code is closed and nothing could be assessed.',
     statusTitle: 'Status values',
     layerTitle: 'Where screening runs (layer)',
     layerNote:

@@ -10,7 +10,7 @@ RUN pnpm install
 COPY . .
 
 # Public origin for canonical URLs, og:url and sitemap.xml (docker build --build-arg VITE_SITE_URL=https://...)
-ARG VITE_SITE_URL=
+ARG VITE_SITE_URL=https://restricted.cp0x.com
 ENV VITE_SITE_URL=$VITE_SITE_URL
 
 RUN pnpm run build

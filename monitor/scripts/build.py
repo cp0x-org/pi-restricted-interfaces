@@ -20,7 +20,7 @@ VPN_OK = ("no", "tos_only", "detect", "block", "optional", "unknown")
 REPO_OK = ("open", "open_stale", "closed", "private_now", "archived", "none_found")
 TOS_US_OK = ("yes", "no", "partial", "unknown")
 CONF_OK = ("high", "medium", "low")
-GROUPS = ("dex", "aggregator", "perps", "lending", "staking", "yield", "bridge", "prediction", "wallet", "other")
+GROUPS = ("dex", "aggregator", "perps", "lending", "staking", "yield", "rwa", "stablecoin", "bridge", "prediction", "wallet", "other")
 TAGS = ("evm", "solana", "bitcoin", "sui", "starknet", "cosmos", "hyperliquid", "other")
 COMPUTED = ("level", "fork_ready", "category_group", "chain_tags")
 REQUIRED = ("id", "name", "description", "category", "chains", "url", "frontend_repo", "repo_state", "repo_status", "repo_last_commit",
@@ -70,13 +70,15 @@ US_RU = {"yes": "запрещено", "no": "нет", "partial": "частичн
 
 # ----------------------------------------------------------------------------- derived fields
 def level(i):
-    """D: site geo-block or screening in the protocol API (a fork can't bypass); C: wallet screening;
-    B: feature/asset-level, reported or optional; A: nothing found (A? when the code is closed); ?: no data."""
+    """D: site geo-block, screening in the protocol API, or an on-chain KYC allowlist (a fork can't bypass);
+    C: wallet screening or KYC on the frontend / operator API; B: feature/asset-level, reported or optional;
+    A: nothing found (A? when the code is closed); ?: no data."""
     g, f, s = i["geo_site"]["s"], i["geo_feature"]["s"], i["screening"]["s"]
+    k = i.get("kyc") or {}
     closed = i["frontend_repo"] is None
-    if g == "yes" or (s == "yes" and i["screening"]["layer"] == "protocol-api"):
+    if g == "yes" or (s == "yes" and i["screening"]["layer"] == "protocol-api") or (k.get("s") == "yes" and k.get("layer") == "protocol-api"):
         return "D"
-    if s in ("yes", "reported"):
+    if s in ("yes", "reported") or k.get("s") in ("yes", "reported"):
         return "C"
     if f == "yes" or g == "reported" or "optional" in (g, s):
         return "B"
@@ -88,7 +90,8 @@ def level(i):
 def fork_ready(i):
     if i["frontend_repo"] is None:
         return "no_code"
-    if i["screening"]["s"] == "yes" and i["screening"]["layer"] == "protocol-api":
+    k = i.get("kyc") or {}
+    if (i["screening"]["s"] == "yes" and i["screening"]["layer"] == "protocol-api") or (k.get("s") == "yes" and k.get("layer") == "protocol-api"):
         return "partial"
     if i["repo_state"] in ("open_stale", "archived"):
         return "stale"
@@ -97,7 +100,7 @@ def fork_ready(i):
 
 def category_group(i):
     head = i["category"].split("/")[0].strip().lower()
-    rules = [("aggregator", "aggregator"), ("perp", "perps"), ("prediction", "prediction"), ("bridge", "bridge"),
+    rules = [("rwa", "rwa"), ("stablecoin", "stablecoin"), ("aggregator", "aggregator"), ("perp", "perps"), ("prediction", "prediction"), ("bridge", "bridge"),
              ("wallet", "wallet"), ("dex", "dex"), ("lending", "lending"), ("cdp", "lending"), ("savings", "lending"),
              ("leverage", "lending"), ("staking", "staking"), ("restaking", "staking"), ("yield", "yield"),
              ("vault", "yield"), ("synthetic", "yield")]
@@ -208,6 +211,12 @@ def validate(data):
         check_enum(w + "screening.layer", sc["layer"], LAYER_OK)
         check_enum(w + "screening.fail", sc["fail"], FAIL_OK)
         check_enum(w + "tos.us", tos["us"], TOS_US_OK)
+        if "kyc" in i:
+            kyc = i["kyc"]
+            if not isinstance(kyc, dict) or not isinstance(kyc.get("scope"), str):
+                raise Invalid(f"{iid}: kyc must be an object with s, layer, scope")
+            check_enum(w + "kyc.s", kyc.get("s"), S_OK)
+            check_enum(w + "kyc.layer", kyc.get("layer"), LAYER_OK)
         check_tokens(w + "tos.restricted_codes", tos["restricted_codes"])
         for k in ("live", "evidence"):
             if not isinstance(i[k], list) or not all(isinstance(x, str) for x in i[k]):
@@ -277,6 +286,8 @@ def render_report(items, template):
             parts.append("Скрининг: " + i["screening"]["provider"])
         if i["asset_filter"]:
             parts.append("Фильтр активов: " + i["asset_filter"])
+        if i.get("kyc") and i["kyc"]["s"] not in ("no", "unknown"):
+            parts.append("KYC: " + i["kyc"]["scope"])
         mech = "<br>".join(p.replace("|", "/") for p in parts) or "—"
         ev = "<br>".join(f"`{e}`" if not e.startswith("http") else f"[src]({e})" for e in i["evidence"][:4]) or "—"
         fail = with_note(i["screening"]["fail"], i["screening"]["fail_note"]) if i["screening"]["fail"] else "—"
@@ -366,7 +377,7 @@ CSV_COLS = ["id", "name", "description", "category", "category_group", "chains",
             "geo_feature", "geo_feature_countries", "geo_feature_scope", "vpn", "vpn_note", "screening", "screening_provider",
             "screening_layer", "screening_fail", "screening_fail_note", "asset_filter", "tos_url", "tos_updated", "tos_us",
             "tos_us_scope", "tos_restricted", "tos_restricted_codes", "fork_ready", "fork_notes", "alternatives", "live",
-            "evidence", "confidence"]
+            "evidence", "confidence", "kyc", "kyc_layer", "kyc_scope"]
 
 
 def csv_row(i):
@@ -378,7 +389,8 @@ def csv_row(i):
             i["screening"]["fail"] or "", i["screening"]["fail_note"], i["asset_filter"], i["tos"]["url"] or "", i["tos"]["updated"],
             i["tos"]["us"], i["tos"]["us_scope"], i["tos"]["restricted"], " ".join(i["tos"]["restricted_codes"]),
             fork_ready(i), i["fork_notes"], " | ".join(f"{a['name']} {a['url']}" for a in i["alternatives"]),
-            " | ".join(i["live"]), " | ".join(i["evidence"]), i["confidence"]]
+            " | ".join(i["live"]), " | ".join(i["evidence"]), i["confidence"],
+            (i.get("kyc") or {}).get("s", ""), (i.get("kyc") or {}).get("layer") or "", (i.get("kyc") or {}).get("scope", "")]
 
 
 def ui_dataset(data, observations, ui_chains=None):
