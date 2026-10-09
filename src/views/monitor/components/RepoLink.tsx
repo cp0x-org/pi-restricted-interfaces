@@ -6,6 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { InterfaceEntry } from 'types/restrictions';
 import { repoShortLabel } from 'utils/restrictions';
 import { useI18n } from 'i18n';
+import { displayName } from 'utils/restrictions';
 
 interface RepoLinkProps {
   entry: InterfaceEntry;
@@ -32,7 +33,7 @@ export default function RepoLink({ entry, full = false, compact = false }: RepoL
           href={entry.frontend_repo}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={t.chips.frontendCodeOf(entry.name)}
+          aria-label={t.chips.frontendCodeOf(displayName(entry))}
           onClick={(e) => e.stopPropagation()}
           sx={{ display: 'inline-flex', color: entry.repo_state === 'open' ? 'secondary.main' : 'text.secondary' }}
         >

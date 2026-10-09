@@ -4,8 +4,8 @@
 export const STATUS = ['yes', 'no', 'reported', 'tos_only', 'optional', 'unknown'] as const;
 export type Status = (typeof STATUS)[number];
 
-/** Severity order: D is the most restricted, A the cleanest. Used as the default sort. */
-export const LEVELS = ['D', 'C', 'B', 'A?', '?', 'A'] as const;
+/** Rating by number of restrictions, most restricted first (default sort): D > 20, C 6-20, B 1-5, A none, n/a unknown. */
+export const LEVELS = ['D', 'C', 'B', 'A', 'n/a'] as const;
 export type Level = (typeof LEVELS)[number];
 
 export const LAYERS = ['edge', 'frontend', 'own-api', 'protocol-api'] as const;
@@ -122,9 +122,21 @@ export interface Observation {
   note: string;
 }
 
+/** current: the version the protocol points users to; legacy: an older official interface still served but being phased out
+ * (listed at the bottom). Defunct interfaces are kept in monitor/data only and never reach the site. */
+export const LIFECYCLES = ['current', 'legacy'] as const;
+export type Lifecycle = (typeof LIFECYCLES)[number];
+
 export interface InterfaceEntry {
   id: string;
   name: string;
+  /** Version label shown after the name, e.g. "V3" or "V4 · Aave Pro". */
+  version?: string;
+  /** Interfaces of one protocol (its versions) share a family id. */
+  family?: string;
+  lifecycle: Lifecycle;
+  /** Why an interface is legacy, with a date or source. */
+  lifecycle_note?: string;
   /** One paragraph about what the protocol is (shown on the interface page, used for SEO). */
   description: string;
   /** Simplified Chinese version of the description (optional). */
@@ -154,8 +166,16 @@ export interface InterfaceEntry {
   confidence: Confidence;
   alternatives: Alternative[];
   level: Level;
+  /** Counted technical restrictions behind the rating (computed by build.py). */
+  restrictions: Restrictions;
   fork_ready: ForkReady;
   observations: Observation[];
+}
+
+export interface Restrictions {
+  count: number;
+  countries: number;
+  mechanisms: MechanismKind[];
 }
 
 export interface DatasetMeta {
@@ -171,6 +191,8 @@ export interface DatasetMeta {
   /** Size of the full catalog in monitor/data; the UI dataset may be a filtered subset (see scope). */
   catalog_total: number;
   scope: string;
+  /** Display names of defunct interfaces left out of the site. */
+  defunct_hidden: string[];
 }
 
 export interface Dataset {

@@ -2,6 +2,7 @@
 // the running app (usePageMeta) and the build-time prerender in vite.config.mts. Keep this file free of browser APIs,
 // import.meta.env and baseUrl imports.
 import type { DatasetMeta, InterfaceEntry } from '../types/restrictions';
+import { displayName } from '../utils/restrictions';
 import { en, Messages } from '../i18n/en';
 import { zh } from '../i18n/zh';
 import { HREFLANG, Lang, LANGS_ALL, OG_LOCALE, localizePath } from '../i18n/paths';
@@ -127,12 +128,12 @@ export function interfaceMeta(e: InterfaceEntry, meta: DatasetMeta, siteUrl: str
   const base = `/monitor/${e.id}`;
   const path = localizePath(base, lang);
   const description = clip(
-    t.seo.ifaceDescription(e.name, restrictionSummary(e, lang), e.level, e.alternatives[0]?.name ?? ''),
+    t.seo.ifaceDescription(displayName(e), restrictionSummary(e, lang), e.level, e.alternatives[0]?.name ?? ''),
     t.seo.descriptionMax
   );
   return {
     lang,
-    title: t.pageTitle.iface(e.name, e.level),
+    title: t.pageTitle.iface(displayName(e), e.level),
     description,
     path,
     alternates: alternatesFor(base),
@@ -142,7 +143,7 @@ export function interfaceMeta(e: InterfaceEntry, meta: DatasetMeta, siteUrl: str
       '@graph': [
         {
           '@type': 'WebPage',
-          name: t.seo.ifacePageName(e.name),
+          name: t.seo.ifacePageName(displayName(e)),
           description,
           url: absoluteUrl(siteUrl, path),
           inLanguage: HREFLANG[lang],
@@ -150,7 +151,7 @@ export function interfaceMeta(e: InterfaceEntry, meta: DatasetMeta, siteUrl: str
           isPartOf: { '@type': 'WebSite', name: t.seo.siteName, url: absoluteUrl(siteUrl, localizePath('/', lang)) },
           about: {
             '@type': 'WebApplication',
-            name: e.name,
+            name: displayName(e),
             url: e.url,
             description: lang === 'zh' && e.description_zh ? e.description_zh : e.description,
             applicationCategory: 'FinanceApplication',
@@ -159,7 +160,7 @@ export function interfaceMeta(e: InterfaceEntry, meta: DatasetMeta, siteUrl: str
         },
         breadcrumb(siteUrl, [
           [t.layout.tabs.monitor, localizePath('/monitor', lang)],
-          [e.name, path]
+          [displayName(e), path]
         ])
       ]
     }

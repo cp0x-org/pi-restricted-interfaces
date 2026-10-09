@@ -19,7 +19,7 @@ import { localizePath } from 'i18n/paths';
 import { interfaces } from 'data/dataset';
 import { countryName, defaultCountryFromNavigator, flagEmoji, isCountryCode } from 'data/countries';
 import { COUNTRY_STATUS, CountryStatus, CountryVerdict, InterfaceEntry } from 'types/restrictions';
-import { basisRank, countryStatusRank, countryVerdict, levelRank } from 'utils/restrictions';
+import { basisRank, countryStatusRank, countryVerdict, displayName, levelRank } from 'utils/restrictions';
 import CountryPicker from './components/CountryPicker';
 import PermissionlessLink from './components/PermissionlessLink';
 import CountryVerdictCell from './components/CountryVerdictCell';
@@ -58,7 +58,7 @@ export default function CountryPage() {
           countryStatusRank(a.verdict.status) - countryStatusRank(b.verdict.status) ||
           basisRank(a.verdict.basis) - basisRank(b.verdict.basis) ||
           levelRank(a.entry.level) - levelRank(b.entry.level) ||
-          a.entry.name.localeCompare(b.entry.name)
+          displayName(a.entry).localeCompare(displayName(b.entry))
       );
   }, [selected]);
 
@@ -142,7 +142,7 @@ export default function CountryPage() {
                   <TableRow key={entry.id} hover onClick={() => navigate(path(`/monitor/${entry.id}`))} sx={{ cursor: 'pointer' }}>
                     <TableCell>
                       <Typography variant="subtitle1" component="span" sx={{ fontWeight: 600 }}>
-                        {entry.name}
+                        {displayName(entry)}
                       </Typography>
                       <Typography variant="caption" color="text.secondary" component="div">
                         {entry.category}

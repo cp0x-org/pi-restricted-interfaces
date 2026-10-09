@@ -5,7 +5,7 @@
 // Node-only code path: no browser APIs, relative imports only.
 import { LEVELS } from '../types/restrictions';
 import type { Dataset, InterfaceEntry, Status } from '../types/restrictions';
-import { evidenceLinks, parentOf } from '../utils/restrictions';
+import { displayName, evidenceLinks, lifecycleRank, parentOf, restrictionsText } from '../utils/restrictions';
 import { LANGS_ALL, Lang, localizePath } from '../i18n/paths';
 import type { Messages } from '../i18n/en';
 import {
@@ -96,9 +96,11 @@ function shell(main: string, lang: Lang, basePath: string): string {
 }
 
 const byDefaultOrder = (a: InterfaceEntry, b: InterfaceEntry): number =>
+  lifecycleRank(a) - lifecycleRank(b) ||
   Number(b.alternatives.length > 0) - Number(a.alternatives.length > 0) ||
   LEVELS.indexOf(a.level) - LEVELS.indexOf(b.level) ||
-  a.name.localeCompare(b.name);
+  b.restrictions.count - a.restrictions.count ||
+  displayName(a).localeCompare(displayName(b));
 
 function monitorBody(ds: Dataset, lang: Lang): string {
   const t = catalog(lang);
@@ -108,7 +110,7 @@ function monitorBody(ds: Dataset, lang: Lang): string {
   const rows = [...ds.interfaces].sort(byDefaultOrder).map((i) => {
     const screening = L.STATUS_LABELS[i.screening.s] + (i.screening.layer ? ` (${L.LAYER_LABELS[i.screening.layer]})` : '');
     const alt = i.alternatives[0];
-    return `<tr><td><a href="${localizePath(`/monitor/${i.id}`, lang)}">${esc(i.name)}</a><br><small>${esc(i.networks.join(', '))}</small></td><td>${
+    return `<tr><td><a href="${localizePath(`/monitor/${i.id}`, lang)}">${esc(displayName(i))}</a>${i.lifecycle === 'legacy' ? ` <small>(${esc(t.chips.legacy)})</small>` : ''}<br><small>${esc(i.networks.join(', '))}</small></td><td>${
       i.level
     }</td><td>${status(i.geo_site.s)}${i.geo_site.countries.length ? ` (${i.geo_site.countries.length})` : ''}</td><td>${status(i.geo_feature.s)}</td><td>${esc(
       screening
@@ -132,6 +134,9 @@ function interfaceBody(e: InterfaceEntry, ds: Dataset, lang: Lang): string {
   const list = (label: string, tokens: string[]) =>
     tokens.length ? ` ${field(label, tokens.map((tok) => esc(countryLabel(tok, t, regions))).join(listSep))}${stop.trim()}` : '';
   const alt = e.alternatives[0];
+  const versions = ds.interfaces
+    .filter((v) => e.family && v.family === e.family && v.id !== e.id)
+    .sort((a, b) => lifecycleRank(a) - lifecycleRank(b) || displayName(a).localeCompare(displayName(b)));
   const evidence = evidenceLinks(e)
     .map((l) => `<li>${l.href ? ext(l.href, l.label) : esc(l.label)}</li>`)
     .join('');
@@ -167,10 +172,10 @@ function interfaceBody(e: InterfaceEntry, ds: Dataset, lang: Lang): string {
   ];
   const description = lang === 'zh' && e.description_zh ? e.description_zh : e.description;
   const category = lang === 'zh' ? L.CATEGORY_GROUP_LABELS[e.category_group] : e.category;
-  return `<nav aria-label="Breadcrumb"><a href="${localizePath('/monitor', lang)}">${esc(t.layout.tabs.monitor)}</a> › ${esc(e.name)}</nav>
-<h1>${esc(e.name)}</h1>
+  return `<nav aria-label="Breadcrumb"><a href="${localizePath('/monitor', lang)}">${esc(t.layout.tabs.monitor)}</a> › ${esc(displayName(e))}</nav>
+<h1>${esc(displayName(e))}</h1>
 <p>${esc(description)}</p>
-<p><b>${esc(t.seo.levelSentence(e.level, L.LEVEL_DESCRIPTIONS[e.level]))}</b> ${esc(category)} · ${esc(e.networks.join(', ') || e.chains)}${stop.trim()}</p>
+${e.lifecycle === 'legacy' && e.lifecycle_note ? `<p><b>${esc(t.seo.legacySentence(e.lifecycle_note))}</b></p>\n` : ''}${versions.length ? `<p>${esc(T.otherVersions)}${colon}${versions.map((v) => `<a href="${localizePath(`/monitor/${v.id}`, lang)}">${esc(displayName(v))}</a>${v.lifecycle === 'legacy' ? ` (${esc(t.chips.legacy)})` : ''}`).join(listSep)}${stop.trim()}</p>\n` : ''}<p><b>${esc(t.seo.levelSentence(e.level, restrictionsText(e, t.monitor.restrictionsTip, L.MECHANISM_LABELS, t.seo.listSep, L.LEVEL_DESCRIPTIONS['n/a'])))}</b> ${esc(category)} · ${esc(e.networks.join(', ') || e.chains)}${stop.trim()}</p>
 <p>${field(t.monitor.cols.official, ext(e.url, strip(e.url)))}${stop}${alt ? `${esc(T.altPrefix)} ${ext(alt.url, alt.name)}${stop}` : ''}${field(
     T.frontendCode,
     e.frontend_repo ? ext(e.frontend_repo, strip(e.frontend_repo)) : esc(L.REPO_STATE_LABELS[e.repo_state])
@@ -191,7 +196,7 @@ function methodologyBody(ds: Dataset, lang: Lang): string {
   const M = t.method;
   return `<h1>${esc(M.title)}</h1>
 <p>${code(M.intro(ds.meta.generated, ds.interfaces.length, ds.meta.catalog_total))}</p>
-<h2>${esc(M.levelsTitle)}</h2><ul>${LEVELS.map((l) => `<li><b>${esc(l)}</b>: ${esc(L.LEVEL_DESCRIPTIONS[l])}</li>`).join('')}</ul><p>${esc(M.levelsNote)}</p>
+<h2>${esc(M.levelsTitle)}</h2><ul>${LEVELS.map((l) => `<li><b>${esc(l)}</b>: ${esc(L.LEVEL_DESCRIPTIONS[l])}</li>`).join('')}</ul><p>${esc(M.levelsNote)}</p><p>${esc(M.versionsNote)}</p>
 <h2>${esc(M.statusTitle)}</h2><ul>${(Object.keys(L.STATUS_LABELS) as Status[])
     .map((s) => `<li><b>${esc(L.STATUS_LABELS[s])}</b>: ${esc(L.STATUS_DESCRIPTIONS[s])}</li>`)
     .join('')}</ul>

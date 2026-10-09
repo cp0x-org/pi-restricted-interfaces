@@ -24,7 +24,6 @@ import TableSortLabel from '@mui/material/TableSortLabel';
 import TextField from '@mui/material/TextField';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
-import { alpha } from '@mui/material/styles';
 import { UnfoldMore } from '@mui/icons-material';
 import LaunchIcon from '@mui/icons-material/Launch';
 
@@ -50,6 +49,9 @@ import {
   RESTRICTED_STATUSES,
   basisRank,
   compareByLevelThenName,
+  displayName,
+  lifecycleRank,
+  restrictionsText,
   countryStatusRank,
   countryVerdict,
   hasMechanism,
@@ -92,11 +94,14 @@ function compare(a: InterfaceEntry, b: InterfaceEntry, field: SortableField): nu
   switch (field) {
     case 'country': // needs the selected country, handled in the component
     case 'permissionless':
-      return Number(hasPermissionless(b)) - Number(hasPermissionless(a)) || compareByLevelThenName(a, b);
+      // Default order: current interfaces (ours first), then legacy versions at the bottom.
+      return (
+        lifecycleRank(a) - lifecycleRank(b) || Number(hasPermissionless(b)) - Number(hasPermissionless(a)) || compareByLevelThenName(a, b)
+      );
     case 'level':
       return compareByLevelThenName(a, b);
     case 'name':
-      return a.name.localeCompare(b.name);
+      return displayName(a).localeCompare(displayName(b));
     case 'category':
       return a.category_group.localeCompare(b.category_group) || a.name.localeCompare(b.name);
     case 'screening':
@@ -206,7 +211,7 @@ export default function MonitorPage() {
   const baseRows = useMemo(() => {
     const needle = nameFilter.trim().toLowerCase();
     return interfaces.filter((i) => {
-      if (needle && !i.name.toLowerCase().includes(needle) && !i.id.includes(needle) && !i.url.includes(needle)) return false;
+      if (needle && !displayName(i).toLowerCase().includes(needle) && !i.id.includes(needle) && !i.url.includes(needle)) return false;
       if (groupFilter.length > 0 && !groupFilter.includes(i.category_group)) return false;
       if (networkFilter.length > 0 && !i.networks.some((n) => networkFilter.includes(n))) return false;
       if (levelFilter.length > 0 && !levelFilter.includes(i.level)) return false;
@@ -445,18 +450,7 @@ export default function MonitorPage() {
                   : undefined;
               const featureCaption = i.geo_feature.countries.length ? t.monitor.countries(i.geo_feature.countries.length) : undefined;
               return (
-                <TableRow
-                  key={i.id}
-                  hover
-                  onClick={() => navigate(path(`/monitor/${i.id}`))}
-                  sx={{
-                    cursor: 'pointer',
-                    ...(hasPermissionless(i) && {
-                      bgcolor: (theme) => alpha(theme.palette.primary.main, 0.06),
-                      '& > td:first-of-type': { boxShadow: (theme) => `inset 3px 0 0 ${theme.palette.primary.main}` }
-                    })
-                  }}
-                >
+                <TableRow key={i.id} hover onClick={() => navigate(path(`/monitor/${i.id}`))} sx={{ cursor: 'pointer' }}>
                   <TableCell>
                     <Link
                       component={RouterLink}
@@ -467,8 +461,16 @@ export default function MonitorPage() {
                       variant="subtitle1"
                       sx={{ fontWeight: 600 }}
                     >
-                      {i.name}
+                      {displayName(i)}
                     </Link>
+                    {i.lifecycle === 'legacy' && (
+                      <ToneChip
+                        tone="neutral"
+                        label={t.chips.legacy}
+                        tooltip={i.lifecycle_note ?? t.legend.legacy}
+                        sx={{ ml: 0.75, verticalAlign: 'middle' }}
+                      />
+                    )}
                     <Tooltip title={i.networks.join(', ')} arrow placement="top" disableHoverListener={i.networks.length <= 3}>
                       <Typography variant="caption" color="text.secondary" component="div">
                         {i.networks.slice(0, 3).join(', ')}
@@ -482,7 +484,18 @@ export default function MonitorPage() {
                     </TableCell>
                   )}
                   <TableCell>
-                    <LevelChip level={i.level} />
+                    <Tooltip
+                      arrow
+                      placement="top"
+                      title={restrictionsText(i, t.monitor.restrictionsTip, L.MECHANISM_LABELS, t.seo.listSep, L.LEVEL_DESCRIPTIONS['n/a'])}
+                    >
+                      <Stack spacing={0.25} alignItems="flex-start" data-restrictions={i.restrictions.count}>
+                        <LevelChip level={i.level} withTooltip={false} />
+                        <Typography variant="caption" color="text.secondary" sx={{ pl: 1.25 }}>
+                          {i.restrictions.count}
+                        </Typography>
+                      </Stack>
+                    </Tooltip>
                   </TableCell>
                   {hits && (
                     <TableCell data-col="country">

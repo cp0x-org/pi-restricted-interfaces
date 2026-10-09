@@ -3,7 +3,7 @@
 Source of truth: `data/interfaces.json` (schema v2, hand-maintained). Everything else is derived.
 
 ```
-data/interfaces.json ──(build.py)──▶ src/data/interfaces.json   dataset imported by the web app: EVM interfaces only (--ui-chains evm), + computed level, fork_ready, category_group, chain_tags, observations
+data/interfaces.json ──(build.py)──▶ src/data/interfaces.json   dataset imported by the web app: EVM interfaces only (--ui-chains evm), + computed level, restrictions, fork_ready, category_group, chain_tags, observations
                                  ▶ out/report.md               human-readable report (Russian)
                                  ▶ out/interfaces.csv          same table for spreadsheets
 ```
@@ -60,14 +60,15 @@ git clone --depth 1 --filter=blob:limit=400k https://github.com/<owner>/<repo> m
 - `screening { s, provider, layer ∈ edge | frontend | own-api | protocol-api | null, fail ∈ open | closed | unknown | n/a | null, fail_note }`
 - `asset_filter` (text)
 - `tos { url, updated, us ∈ yes | no | partial | unknown, us_scope, restricted (text), restricted_codes[] }`
-- `kyc { s, layer, scope }` (optional: KYC / accreditation / wallet allowlist; an on-chain allowlist, `layer: protocol-api`, makes the level D)
+- `kyc { s, layer, scope }` (optional: KYC / accreditation / wallet allowlist; counts as one restriction)
+- Versions (all optional): `version` (label shown after the name, e.g. `V3`, `V4 · Aave Pro`), `family` (shared id of all versions of one protocol, e.g. `aave`; the interface page links the other versions), `lifecycle ∈ current | legacy | defunct` (default `current`), `lifecycle_note` (required unless current: why, with a date or source). Every official interface of a protocol version is its own entry. `legacy` = still served but phased out by the protocol itself (deprecation notice, moved to a v2-/v3- subdomain, announced wind-down): listed at the bottom of the default order with a legacy chip. `defunct` = the official interface no longer works: kept in the catalog, report and CSV, never exported to the site.
 - `fork_notes`, `live[]`, `geo_endpoints[]` (URLs whose response reveals the server-side geo verdict, probed by P3), `evidence[]`, `confidence ∈ high | medium | low`, `alternatives[] { name, url }`
 
 Status vocabulary `s`: `yes` (confirmed by code, live check or official docs) · `no` · `reported` (press/users, not confirmed in code) · `tos_only` (reserved in the ToS, no enforcement found) · `optional` (in code, off by default) · `unknown`.
 
 Country tokens: ISO 3166-1 alpha-2 codes, or sub-national regions as `CC-Name` (`UA-Crimea`, `US-NY`, `CA-ON`, …; the full list is `REGIONS` in `build.py`). Group words such as "EU/EEA" are expanded explicitly; "sanctioned jurisdictions" or "FATF high-risk" stay in the free-text fields.
 
-Computed by `build.py` (never edit by hand): `level` (A / A? / B / C / D / ?), `fork_ready` (yes / stale / partial / no_code), `category_group`, `chain_tags`, `observations[]` (latest verified probe results per country / proxy type / target).
+Computed by `build.py` (never edit by hand): `level` (rating by number of technical restrictions (each blocked country/region once + one per feature gate, wallet screening, VPN detection, KYC; ToS-only terms not counted): A 0 (none), B 1–5, C 6–20, D > 20, n/a when nothing could be determined), `restrictions { count, countries, mechanisms[] }`, `fork_ready` (yes / stale / partial / no_code), `category_group`, `chain_tags`, `observations[]` (latest verified probe results per country / proxy type / target).
 
 ## Adding or updating an interface
 
@@ -75,5 +76,5 @@ Step-by-step guide with a JSON template (Russian): [`ADD_PROTOCOL.md`](ADD_PROTO
 
 
 1. Edit `data/interfaces.json` (keep every claim backed by an `evidence` entry: repo-relative path, URL, or `owner/repo: path`).
-2. `pnpm monitor:build` — fails on schema errors, prints the level distribution.
+2. `pnpm monitor:build` — fails on schema errors, prints the rating distribution.
 3. Review `out/report.md` and the diff of `src/data/interfaces.json`, then `pnpm build` for the site.

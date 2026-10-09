@@ -1,5 +1,7 @@
 import { useMemo } from 'react';
 import { Link as RouterLink, useParams } from 'react-router-dom';
+import Alert from '@mui/material/Alert';
+import AlertTitle from '@mui/material/AlertTitle';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
@@ -22,11 +24,11 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SubCard from 'ui-component/cards/SubCard';
 
-import { dataset, interfacesById } from 'data/dataset';
+import { dataset, interfacesById, versionsOf } from 'data/dataset';
 import { interfaceMeta, notFoundMeta } from 'seo/meta';
 import { siteUrl, usePageMeta } from 'seo/usePageMeta';
 import { tokenLabel } from 'data/countries';
-import { evidenceLinks } from 'utils/restrictions';
+import { displayName, evidenceLinks, restrictionsText } from 'utils/restrictions';
 import CountryTokenChips from './components/CountryTokenChips';
 import EvidenceList from './components/EvidenceList';
 import ForkChip from './components/ForkChip';
@@ -72,6 +74,7 @@ export default function InterfacePage() {
   }
 
   const links = evidenceLinks(entry);
+  const versions = versionsOf(entry);
   const liveChecks = entry.live;
 
   return (
@@ -85,9 +88,10 @@ export default function InterfacePage() {
           <Grid size={{ xs: 12, md: 7 }}>
             <Stack direction="row" spacing={1.5} alignItems="center" sx={{ flexWrap: 'wrap', rowGap: 1 }}>
               <Typography variant="h2" component="h1">
-                {entry.name}
+                {displayName(entry)}
               </Typography>
               <LevelChip level={entry.level} size="medium" />
+              {entry.lifecycle === 'legacy' && <ToneChip tone="neutral" size="medium" label={t.chips.legacy} />}
             </Stack>
             <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
               {lang === 'en' ? entry.category : L.CATEGORY_GROUP_LABELS[entry.category_group]} · {entry.chains}
@@ -104,8 +108,34 @@ export default function InterfacePage() {
                 ))}
               </Stack>
             )}
+            {entry.lifecycle === 'legacy' && (
+              <Alert severity="warning" variant="outlined" sx={{ mt: 1.5, maxWidth: 720 }}>
+                <AlertTitle>{T.legacyTitle}</AlertTitle>
+                {entry.lifecycle_note}
+              </Alert>
+            )}
+            {versions.length > 0 && (
+              <Stack direction="row" spacing={0.75} alignItems="center" sx={{ mt: 1.5, flexWrap: 'wrap', rowGap: 0.75 }}>
+                <Typography variant="body2" color="text.secondary">
+                  {T.otherVersions}
+                  {t.seo.colon}
+                </Typography>
+                {versions.map((v) => (
+                  <Chip
+                    key={v.id}
+                    component={RouterLink}
+                    to={path(`/monitor/${v.id}`)}
+                    clickable
+                    size="small"
+                    variant="outlined"
+                    color="secondary"
+                    label={v.lifecycle === 'legacy' ? `${displayName(v)} · ${t.chips.legacy}` : displayName(v)}
+                  />
+                ))}
+              </Stack>
+            )}
             <Typography variant="body2" sx={{ mt: 1.5, maxWidth: 720 }}>
-              {L.LEVEL_DESCRIPTIONS[entry.level]}
+              {restrictionsText(entry, t.monitor.restrictionsTip, L.MECHANISM_LABELS, t.seo.listSep, L.LEVEL_DESCRIPTIONS['n/a'])}
             </Typography>
             <Stack direction="row" spacing={1} sx={{ mt: 2, flexWrap: 'wrap', rowGap: 1 }}>
               <Button

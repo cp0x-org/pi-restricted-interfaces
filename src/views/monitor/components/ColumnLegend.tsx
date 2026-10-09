@@ -34,6 +34,14 @@ export default function ColumnLegend() {
         ))}
       </Box>
       <Stack direction="row" spacing={1.5} sx={{ mt: 1.5, flexWrap: 'wrap', rowGap: 1 }} alignItems="center">
+        <Stack direction="row" spacing={0.5} alignItems="center">
+          <ToneChip tone="neutral" label={t.chips.legacy} />
+          <Typography variant="caption" color="text.secondary">
+            {t.legend.legacy}
+          </Typography>
+        </Stack>
+      </Stack>
+      <Stack direction="row" spacing={1.5} sx={{ mt: 1, flexWrap: 'wrap', rowGap: 1 }} alignItems="center">
         {VALUE_ORDER.map((s) => (
           <Stack key={s} direction="row" spacing={0.5} alignItems="center">
             <ToneChip tone={statusTone(s)} label={L.STATUS_LABELS[s]} />

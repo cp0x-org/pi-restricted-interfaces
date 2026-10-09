@@ -12,10 +12,10 @@ no third-party requests.
 
 ## Pages
 
-- `/monitor` — ranking of the interfaces on EVM networks (the full catalog incl. Solana/Cosmos apps stays in `monitor/`): level A/A?/B/C/D/?, mechanisms, screening provider and layer, fork readiness, frontend code status; filters by category, chain, level, layer, mechanism and open-source-only
-- `/monitor/:id` — interface card: repository, each mechanism with countries and fail mode, Terms of Service summary, fork notes, live checks, evidence links pinned to the repository branch
+- `/monitor` — ranking of the interfaces on EVM networks (the full catalog incl. Solana/Cosmos apps stays in `monitor/`): rating A/B/C/D/n/a by number of restrictions, one row per official interface version (legacy versions at the bottom, defunct ones hidden), mechanisms, screening provider and layer, fork readiness, frontend code status; filters by category, chain, level, layer, mechanism and open-source-only
+- `/monitor/:id` — interface card: repository, each mechanism with countries and fail mode, Terms of Service summary, fork notes, live checks, evidence links pinned to the repository branch; for protocols with several versions also the version label, a legacy notice and links to the other versions (Aave V3 / V4, Notional Exponent / V3 / V2, …)
 - Country filter on `/monitor` (multi-select, `?country=UA,US`) — keeps only the interfaces that restrict at least one selected country (blocked, close-only, feature-limited, regional or ToS only) and adds a column with each verdict and its basis; chips above the table narrow by restriction type. The standalone `/country` page is hidden (`SHOW_COUNTRY_PAGE` in `src/views/monitor/constants.ts`); `/country/XX` links redirect to `/monitor?country=XX`
-- `/methodology` — levels, status vocabulary, layers, country rules, detection typology, live-check caveats and limitations
+- `/methodology` — rating rule, versions, status vocabulary, layers, country rules, detection typology, live-check caveats and limitations
 
 ## Data
 
@@ -27,7 +27,7 @@ and the CSV snapshot in [`monitor/out/`](monitor/out/) cover the whole catalog, 
 monitor/data/interfaces.json ──(pnpm monitor:build)──▶ src/data/interfaces.json + monitor/out/report.md + monitor/out/interfaces.csv
 ```
 
-`pnpm monitor:build` validates the data (enums, ISO country tokens, repository consistency), computes `level`,
+`pnpm monitor:build` validates the data (enums, ISO country tokens, repository consistency), computes `level` (rating by number of technical restrictions (each blocked country/region once + one per feature gate, wallet screening, VPN detection, KYC; ToS-only terms not counted): A 0 (none), B 1–5, C 6–20, D > 20, n/a when nothing could be determined), `restrictions`,
 `fork_ready`, `category_group` and `chain_tags`, and writes all three outputs. It needs Python ≥ 3.9 (standard library
 only) and is a maintainer tool: `pnpm build` never runs it. See [`monitor/README.md`](monitor/README.md) for the
 schema, the static scanner and the evidence verifier, [`monitor/docs/roadmap.md`](monitor/docs/roadmap.md) for the

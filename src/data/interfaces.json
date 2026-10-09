@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 2,
-    "generated": "2026-10-08",
+    "generated": "2026-10-10",
     "sanctioned_test_address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
     "sanctioned_test_address_note": "Ronin bridge exploiter (Lazarus Group), OFAC SDN since 2022-04-14. Control address: 0x2222...2222 / 0x1111...1111",
     "live_check_egress": "US datacenter (Polymarket /api/geoblock reported country=US, region=OH; Beefy /geo/country = US)",
@@ -25,7 +25,11 @@
       "GE-SouthOssetia": "South Ossetia",
       "CY-North": "Northern Cyprus"
     },
-    "catalog_total": 69,
+    "catalog_total": 77,
+    "defunct_hidden": [
+      "Notional V1",
+      "Hop"
+    ],
     "scope": "EVM networks only"
   },
   "interfaces": [
@@ -108,7 +112,16 @@
           "url": "https://uni.cp0x.com"
         }
       ],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 3,
+        "countries": 1,
+        "mechanisms": [
+          "geo_feature",
+          "screening"
+        ]
+      },
       "fork_ready": "yes",
       "category_group": "dex",
       "chain_tags": [
@@ -228,7 +241,16 @@
       ],
       "confidence": "high",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "C",
+      "restrictions": {
+        "count": 17,
+        "countries": 15,
+        "mechanisms": [
+          "geo_feature",
+          "screening"
+        ]
+      },
       "fork_ready": "yes",
       "category_group": "dex",
       "chain_tags": [
@@ -312,7 +334,13 @@
       ],
       "confidence": "low",
       "alternatives": [],
-      "level": "B",
+      "lifecycle": "current",
+      "level": "C",
+      "restrictions": {
+        "count": 10,
+        "countries": 10,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "dex",
       "chain_tags": [
@@ -324,6 +352,7 @@
     {
       "id": "curve",
       "name": "Curve",
+      "family": "curve",
       "description": "Curve Finance is an automated market maker built for low-slippage trading between assets that should trade near the same price, such as stablecoins and liquid-staking tokens. It also issues the crvUSD stablecoin and runs Llamalend lending markets; CRV holders lock tokens as veCRV to vote on how pool rewards are distributed.",
       "description_zh": "Curve Finance 是一个自动做市商，专为价格本应接近的资产之间的低滑点交易而设计，例如稳定币和流动性质押代币。它还发行 crvUSD 稳定币并运营 Llamalend 借贷市场；CRV 持有者将代币锁定为 veCRV，投票决定池奖励的分配。",
       "category": "DEX",
@@ -411,8 +440,87 @@
       ],
       "confidence": "high",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "yes",
+      "category_group": "dex",
+      "chain_tags": [
+        "evm"
+      ],
+      "observations": []
+    },
+    {
+      "id": "curve-classic",
+      "name": "Curve",
+      "version": "Classic UI",
+      "family": "curve",
+      "lifecycle": "legacy",
+      "lifecycle_note": "The previous Curve interface, kept at classic.curve.finance after the redesigned curve.finance app replaced it.",
+      "description": "Curve Classic is the original Curve Finance web interface, kept online at classic.curve.finance after the redesigned curve.finance app replaced it. It still lists pools and supports swaps and deposits across Curve's stableswap and crypto pools.",
+      "description_zh": "Curve Classic 是 Curve Finance 最初的网页界面，在重新设计的 curve.finance 应用取而代之后，仍保留在 classic.curve.finance。它仍列出资金池，并支持在 Curve 的稳定币兑换池和加密资产池中兑换和存款。",
+      "category": "DEX",
+      "chains": "EVM",
+      "networks": [
+        "Ethereum"
+      ],
+      "url": "https://classic.curve.finance",
+      "frontend_repo": null,
+      "repo_state": "none_found",
+      "repo_status": "none-found (only curve-contract is linked)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "no",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": null,
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "no terms linked from the classic UI",
+        "restricted_codes": []
+      },
+      "fork_notes": "Clean in the served bundle.",
+      "live": [
+        "classic.curve.finance (2026-10-10): loads pools and swap; the bundle has no geo or screening code"
+      ],
+      "geo_endpoints": [],
+      "evidence": [
+        "classic.curve.finance bundle inspection (2026-10-10)"
+      ],
+      "confidence": "low",
+      "alternatives": [],
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
+      "fork_ready": "no_code",
       "category_group": "dex",
       "chain_tags": [
         "evm"
@@ -489,7 +597,15 @@
           "url": "https://balancer.cp0x.com"
         }
       ],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 0,
+        "mechanisms": [
+          "screening"
+        ]
+      },
       "fork_ready": "yes",
       "category_group": "dex",
       "chain_tags": [
@@ -592,7 +708,16 @@
       ],
       "confidence": "high",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "D",
+      "restrictions": {
+        "count": 33,
+        "countries": 31,
+        "mechanisms": [
+          "geo_feature",
+          "screening"
+        ]
+      },
       "fork_ready": "partial",
       "category_group": "dex",
       "chain_tags": [
@@ -670,7 +795,16 @@
       ],
       "confidence": "high",
       "alternatives": [],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 2,
+        "countries": 0,
+        "mechanisms": [
+          "geo_site",
+          "screening"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "aggregator",
       "chain_tags": [
@@ -765,7 +899,16 @@
       ],
       "confidence": "high",
       "alternatives": [],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 2,
+        "countries": 0,
+        "mechanisms": [
+          "geo_feature",
+          "screening"
+        ]
+      },
       "fork_ready": "yes",
       "category_group": "aggregator",
       "chain_tags": [
@@ -864,7 +1007,13 @@
       ],
       "confidence": "medium",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "stale",
       "category_group": "dex",
       "chain_tags": [
@@ -966,7 +1115,15 @@
       ],
       "confidence": "medium",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "B",
+      "restrictions": {
+        "count": 2,
+        "countries": 1,
+        "mechanisms": [
+          "geo_feature"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "dex",
       "chain_tags": [
@@ -1074,7 +1231,13 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "?",
+      "lifecycle": "current",
+      "level": "n/a",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "dex",
       "chain_tags": [
@@ -1166,7 +1329,15 @@
       ],
       "confidence": "high",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "D",
+      "restrictions": {
+        "count": 22,
+        "countries": 21,
+        "mechanisms": [
+          "screening"
+        ]
+      },
       "fork_ready": "yes",
       "category_group": "dex",
       "chain_tags": [
@@ -1249,7 +1420,13 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "?",
+      "lifecycle": "current",
+      "level": "n/a",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "aggregator",
       "chain_tags": [
@@ -1327,7 +1504,13 @@
       ],
       "confidence": "medium",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 1,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "aggregator",
       "chain_tags": [
@@ -1423,7 +1606,15 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "D",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 0,
+        "mechanisms": [
+          "screening"
+        ]
+      },
       "fork_ready": "partial",
       "category_group": "bridge",
       "chain_tags": [
@@ -1492,7 +1683,13 @@
       ],
       "confidence": "high",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "yes",
       "category_group": "perps",
       "chain_tags": [
@@ -1561,7 +1758,13 @@
       ],
       "confidence": "high",
       "alternatives": [],
-      "level": "A?",
+      "lifecycle": "current",
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "perps",
       "chain_tags": [
@@ -1572,6 +1775,8 @@
     {
       "id": "aave",
       "name": "Aave",
+      "version": "V3",
+      "family": "aave",
       "description": "Aave is one of the largest decentralized lending protocols. Users supply assets to earn interest and borrow against over-collateralized positions in pools on Ethereum and many layer-2 and EVM networks; Aave also issues the GHO stablecoin, and AAVE holders govern the protocol.",
       "description_zh": "Aave 是最大的去中心化借贷协议之一。用户在以太坊及众多二层网络和 EVM 网络上的资金池中存入资产赚取利息，并以超额抵押的方式借款；Aave 还发行 GHO 稳定币，AAVE 持有者治理协议。",
       "category": "Lending",
@@ -1666,7 +1871,15 @@
           "url": "https://aave.cp0x.com"
         }
       ],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 0,
+        "mechanisms": [
+          "screening"
+        ]
+      },
       "fork_ready": "yes",
       "category_group": "lending",
       "chain_tags": [
@@ -1675,8 +1888,111 @@
       "observations": []
     },
     {
+      "id": "aave-pro",
+      "name": "Aave",
+      "version": "V4 · Aave Pro",
+      "family": "aave",
+      "description": "Aave Pro is the official interface for Aave V4, live on Ethereum since 30 March 2026. V4 replaces separate per-chain markets with a hub-and-spoke design: liquidity hubs such as Core, Prime and Plus feed spokes like e-Mode markets, and since September 2026 an Equities Hub on Base accepts Coinbase tokenized stocks as collateral for USDC loans. Aave V3 keeps running at app.aave.com.",
+      "description_zh": "Aave Pro 是 Aave V4 的官方界面，自 2026 年 3 月 30 日起在以太坊上线。V4 采用“枢纽—辐条”架构：Core、Prime、Plus 等流动性枢纽为 e-Mode 等市场提供资金；自 2026 年 9 月起，Base 上的股票枢纽接受 Coinbase 代币化股票作为借入 USDC 的抵押品。Aave V3 仍在 app.aave.com 运行。",
+      "category": "Lending",
+      "chains": "Ethereum, Base",
+      "networks": [
+        "Ethereum",
+        "Base"
+      ],
+      "url": "https://pro.aave.com",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed (protocol code aave/aave-v4 and aave-v4-sdk are public, the Pro frontend is not)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "ToS: region-based blocking or other technical methods; no site-level check in the app bundle"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "US"
+        ],
+        "scope": "Per-asset geo check (POST /api/geo -> areAssetsGeoblocked): a flagged asset can be viewed but not supplied or borrowed from a restricted region, closing positions stays allowed. The Equities Hub (Coinbase tokenized stocks on Base) is offered only outside the US."
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "ComplianceProvider -> own API route backed by COMPLIANCE_API_URL + COMPLIANCE_SECRET (provider not disclosed)",
+        "layer": "own-api",
+        "fail": "closed",
+        "fail_note": "status=error shows the same blocked screen with a retry button"
+      },
+      "asset_filter": "Equities Hub assets are geo-gated per region (Coinbase tokenized stocks, not offered in the US)",
+      "tos": {
+        "url": "https://aave.com/terms-of-service",
+        "updated": "2026-09-07",
+        "us": "partial",
+        "us_scope": "Equities Hub (tokenized stocks) is not offered in the US",
+        "restricted": "18: BY, CI, Crimea, CU, DPR, IR, IQ, Kherson, LR, LY, LPR, MM, KP, RU, SD, SY, VE, Zaporizhzhia",
+        "restricted_codes": [
+          "BY",
+          "CI",
+          "UA-Crimea",
+          "CU",
+          "UA-DPR",
+          "IR",
+          "IQ",
+          "UA-Kherson",
+          "LR",
+          "LY",
+          "UA-LPR",
+          "MM",
+          "KP",
+          "RU",
+          "SD",
+          "SY",
+          "VE",
+          "UA-Zaporizhzhia"
+        ]
+      },
+      "fork_notes": "Closed frontend. Compliance and geo checks are server routes of pro.aave.com; an interface built on the public V4 contracts and SDK does not inherit them.",
+      "live": [
+        "POST pro.aave.com/api/geo from RO (2026-10-10): USDC and WETH on Ethereum -> isGeoblocked=false"
+      ],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://aave.com/blog/aave-pro-user-guide",
+        "https://aave.com/terms-of-service",
+        "pro.aave.com bundle: ComplianceProvider, ComplianceGate, ComplianceBlockedScreen",
+        "pro.aave.com bundle: GeoRestrictedModal, isAssetGeoblocked, /api/geo",
+        "https://cryptobriefing.com/coinbase-tokenized-stocks-go-live-on-aave-v4-on-base/"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 3,
+        "countries": 1,
+        "mechanisms": [
+          "geo_feature",
+          "screening"
+        ]
+      },
+      "fork_ready": "no_code",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm"
+      ],
+      "observations": []
+    },
+    {
       "id": "compound",
-      "name": "Compound III",
+      "name": "Compound",
+      "version": "III",
+      "family": "compound",
       "description": "Compound III (Comet) is a lending protocol in which each market lends one base asset, such as USDC or ETH, against several collateral assets. It is a redesign of the earlier Compound money markets and is governed by COMP holders.",
       "description_zh": "Compound III（Comet）是一个借贷协议，每个市场以一种基础资产（如 USDC 或 ETH）出借，并接受多种抵押资产。它是早期 Compound 货币市场的重新设计，由 COMP 持有者治理。",
       "category": "Lending",
@@ -1693,7 +2009,7 @@
         "Unichain",
         "Ronin"
       ],
-      "url": "https://app.compound.finance",
+      "url": "https://app.compound.xyz",
       "frontend_repo": "https://github.com/compound-finance/webb3-frontend",
       "repo_state": "open",
       "repo_status": "open",
@@ -1731,7 +2047,8 @@
       },
       "fork_notes": "Static list in src/helpers/sanctions.ts. Trivial to remove. Legacy v2 UI: compound-finance/palisade.",
       "live": [
-        "WebFetch (US): normal page"
+        "WebFetch (US): normal page",
+        "app.compound.finance -> app.compound.xyz (domain moved, 2026-10-10)"
       ],
       "geo_endpoints": [],
       "evidence": [
@@ -1740,8 +2057,93 @@
       ],
       "confidence": "high",
       "alternatives": [],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 0,
+        "mechanisms": [
+          "screening"
+        ]
+      },
       "fork_ready": "yes",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm"
+      ],
+      "observations": []
+    },
+    {
+      "id": "compound-v2",
+      "name": "Compound",
+      "version": "V2",
+      "family": "compound",
+      "lifecycle": "legacy",
+      "lifecycle_note": "Compound governance started deprecating V2; the app at v2-app.compound.xyz asks users to migrate positions to Compound III.",
+      "description": "Compound V2 is the original Compound money market on Ethereum, where each asset had its own pool and cTokens represented deposits. It is being wound down in favour of Compound III; the legacy app at v2-app.compound.xyz shows a deprecation notice and links to migration.",
+      "description_zh": "Compound V2 是以太坊上最初的 Compound 货币市场，每种资产各有资金池，存款以 cToken 表示。它正在逐步退出，由 Compound III 取代；v2-app.compound.xyz 上的旧版应用显示弃用通知并提供迁移链接。",
+      "category": "Lending",
+      "chains": "Ethereum",
+      "networks": [
+        "Ethereum"
+      ],
+      "url": "https://v2-app.compound.xyz",
+      "frontend_repo": "https://github.com/compound-finance/palisade",
+      "repo_state": "open_stale",
+      "repo_status": "open-stale (public code predates the screening endpoint in the deployed app)",
+      "repo_last_commit": "2025-12-12",
+      "geo_site": {
+        "s": "tos_only",
+        "countries": [],
+        "close_only": [],
+        "method": "Privacy notice: automated geo-blocking and sanctions screening of IP-derived location may restrict access; no country list in the bundle"
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": ""
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "screening.compound.xyz (own service; the privacy notice names TRM Labs / Chainalysis as data providers)",
+        "layer": "own-api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://v2-app.compound.xyz/#terms",
+        "updated": "unknown",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "generic sanctions + Foundation discretion",
+        "restricted_codes": []
+      },
+      "fork_notes": "The screening endpoint is injected as an app flag (SCREENING_ENDPOINT); the public palisade code predates it, so a build of the public code does not screen.",
+      "live": [
+        "v2-app.compound.xyz (2026-10-10): 'V2 Deprecation has begun' banner; config SCREENING_ENDPOINT=https://screening.compound.xyz and a screening-error overlay"
+      ],
+      "geo_endpoints": [],
+      "evidence": [
+        "v2-app.compound.xyz bundle: SCREENING_ENDPOINT, screening-error-overlay",
+        "v2-app.compound.xyz privacy notice: geo-blocking and sanctions screening (TRM Labs / Chainalysis)",
+        "https://github.com/compound-finance/palisade"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 0,
+        "mechanisms": [
+          "screening"
+        ]
+      },
+      "fork_ready": "stale",
       "category_group": "lending",
       "chain_tags": [
         "evm"
@@ -1819,7 +2221,16 @@
           "url": "https://morpho.cp0x.com"
         }
       ],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 2,
+        "countries": 0,
+        "mechanisms": [
+          "geo_feature",
+          "screening"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "lending",
       "chain_tags": [
@@ -1896,7 +2307,16 @@
           "url": "https://spark.cp0x.com"
         }
       ],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 3,
+        "countries": 1,
+        "mechanisms": [
+          "screening",
+          "vpn"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "lending",
       "chain_tags": [
@@ -2046,7 +2466,17 @@
           "url": "https://sky.cp0x.com"
         }
       ],
+      "lifecycle": "current",
       "level": "D",
+      "restrictions": {
+        "count": 38,
+        "countries": 35,
+        "mechanisms": [
+          "geo_feature",
+          "screening",
+          "vpn"
+        ]
+      },
       "fork_ready": "yes",
       "category_group": "lending",
       "chain_tags": [
@@ -2134,7 +2564,15 @@
       ],
       "confidence": "high",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 0,
+        "mechanisms": [
+          "geo_feature"
+        ]
+      },
       "fork_ready": "yes",
       "category_group": "lending",
       "chain_tags": [
@@ -2251,7 +2689,17 @@
           "url": "https://euler.cp0x.com"
         }
       ],
+      "lifecycle": "current",
       "level": "D",
+      "restrictions": {
+        "count": 25,
+        "countries": 22,
+        "mechanisms": [
+          "geo_feature",
+          "screening",
+          "vpn"
+        ]
+      },
       "fork_ready": "yes",
       "category_group": "lending",
       "chain_tags": [
@@ -2343,7 +2791,13 @@
       "evidence": [],
       "confidence": "low",
       "alternatives": [],
-      "level": "?",
+      "lifecycle": "current",
+      "level": "n/a",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "lending",
       "chain_tags": [
@@ -2414,7 +2868,13 @@
           "url": "https://liquity.cp0x.com"
         }
       ],
-      "level": "B",
+      "lifecycle": "current",
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "yes",
       "category_group": "lending",
       "chain_tags": [
@@ -2425,13 +2885,14 @@
     {
       "id": "notional",
       "name": "Notional",
-      "description": "Notional is a fixed-rate lending and leveraged-yield protocol on Ethereum and Arbitrum. Its leveraged vaults let users borrow at fixed or variable rates to run yield strategies.",
-      "description_zh": "Notional 是以太坊和 Arbitrum 上的固定利率借贷与杠杆收益协议。其杠杆金库允许用户以固定或浮动利率借款来运行收益策略。",
+      "version": "Exponent",
+      "family": "notional",
+      "description": "Notional Exponent is Notional's leveraged-yield protocol, live on Ethereum since January 2026. It tokenizes yield strategies such as Midas, Pendle and staked-asset vaults and borrows through lending markets like Morpho to lever them up. Earlier Notional versions keep their own legacy apps.",
+      "description_zh": "Notional Exponent 是 Notional 的杠杆收益协议，自 2026 年 1 月起在以太坊上线。它把 Midas、Pendle 和质押资产金库等收益策略代币化，并通过 Morpho 等借贷市场借款来放大杠杆。Notional 的早期版本仍保留各自的旧版应用。",
       "category": "Lending / leverage",
-      "chains": "EVM",
+      "chains": "Ethereum",
       "networks": [
-        "Ethereum",
-        "Arbitrum"
+        "Ethereum"
       ],
       "url": "https://notional.finance",
       "frontend_repo": "https://github.com/notional-finance/notional-monorepo",
@@ -2498,6 +2959,7 @@
       },
       "fork_notes": "Geo is a request to their worker, screening is an eth_call. Both removed in a fork.",
       "live": [
+        "notional.finance bundle (2026-10-10): api.notional.finance/geoip + sanctions list incl. US -> /blocked; no VPN detector; app reads registry-v4.notional.finance",
         "WebFetch (US): metadata only (block is client-side)"
       ],
       "geo_endpoints": [
@@ -2505,12 +2967,203 @@
       ],
       "evidence": [
         "packages/shared/notionable-hooks/src/use-geoip-block.ts",
-        "packages/notionable/src/account/communities.ts"
+        "packages/notionable/src/account/communities.ts",
+        "notional-monorepo default branch v4/dev",
+        "https://blog.notional.finance/notional-exponent-is-live/"
       ],
       "confidence": "high",
       "alternatives": [],
-      "level": "D",
+      "lifecycle": "current",
+      "level": "C",
+      "restrictions": {
+        "count": 19,
+        "countries": 18,
+        "mechanisms": [
+          "screening"
+        ]
+      },
       "fork_ready": "yes",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm"
+      ],
+      "observations": []
+    },
+    {
+      "id": "notional-v3",
+      "name": "Notional",
+      "version": "V3",
+      "family": "notional",
+      "lifecycle": "legacy",
+      "lifecycle_note": "Being wound down after the November 2025 Balancer V2 exploit hit V3; the app moved to v3.notional.finance when Notional Exponent took over notional.finance in January 2026.",
+      "description": "Notional V3 is the previous Notional protocol: fixed- and variable-rate lending and borrowing plus leveraged vaults on Ethereum and Arbitrum. It is being wound down after the November 2025 Balancer V2 exploit and now lives at v3.notional.finance, while new strategies launch on Notional Exponent.",
+      "description_zh": "Notional V3 是 Notional 的上一代协议，在以太坊和 Arbitrum 上提供固定和浮动利率借贷以及杠杆金库。2025 年 11 月 Balancer V2 遭攻击后它正在逐步关闭，现位于 v3.notional.finance，新策略则在 Notional Exponent 上推出。",
+      "category": "Lending / leverage",
+      "chains": "Ethereum, Arbitrum",
+      "networks": [
+        "Ethereum",
+        "Arbitrum"
+      ],
+      "url": "https://v3.notional.finance",
+      "frontend_repo": "https://github.com/notional-finance/notional-monorepo",
+      "repo_state": "open_stale",
+      "repo_status": "open-stale (V3 code predates the v4 branches now on the default branch)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [
+          "CU",
+          "IR",
+          "IQ",
+          "SY",
+          "KP",
+          "RU",
+          "BY",
+          "CF",
+          "CD",
+          "CG",
+          "LB",
+          "LR",
+          "LY",
+          "SO",
+          "VE",
+          "YE",
+          "ZW"
+        ],
+        "close_only": [],
+        "method": "api.notional.finance/geoip -> /error?code=451 for sanctioned countries or a sanctioned address"
+      },
+      "geo_feature": {
+        "s": "yes",
+        "countries": [
+          "US"
+        ],
+        "scope": "Leveraged products are not available in the US or to VPN users; non-leveraged lending and borrowing stay open"
+      },
+      "vpn": {
+        "s": "detect",
+        "note": "detect.notional.finance: a non-200 answer marks the user as VPN and disables leveraged products"
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "isSanctionedAddress check in the frontend (same code path as the current app: Chainalysis sanctions oracle)",
+        "layer": "frontend",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://v3.notional.finance/terms",
+        "updated": "unknown",
+        "us": "partial",
+        "us_scope": "ToS bans New York; the code blocks leverage for all US users",
+        "restricted": "NY, CU, IR, SY, KP, Crimea, VE",
+        "restricted_codes": [
+          "US-NY",
+          "CU",
+          "IR",
+          "SY",
+          "KP",
+          "UA-Crimea",
+          "VE"
+        ]
+      },
+      "fork_notes": "Same mechanics as the current app plus a VPN detector, all in the frontend; removed in a fork.",
+      "live": [
+        "v3.notional.finance bundle (2026-10-10): detect.notional.finance VPN check, api.notional.finance/geoip -> /error?code=451, 'Leveraged products are not available in the US or to VPN users'"
+      ],
+      "geo_endpoints": [],
+      "evidence": [
+        "v3.notional.finance main bundle: sanctioned country list, detect.notional.finance, api.notional.finance/geoip",
+        "https://blog.notional.finance/introducing-notional-exponent/"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "D",
+      "restrictions": {
+        "count": 21,
+        "countries": 18,
+        "mechanisms": [
+          "geo_feature",
+          "screening",
+          "vpn"
+        ]
+      },
+      "fork_ready": "stale",
+      "category_group": "lending",
+      "chain_tags": [
+        "evm"
+      ],
+      "observations": []
+    },
+    {
+      "id": "notional-v2",
+      "name": "Notional",
+      "version": "V2",
+      "family": "notional",
+      "lifecycle": "legacy",
+      "lifecycle_note": "Deprecated when Notional V3 launched (2023); the app still loads with a deprecation banner and points migrated positions to V3.",
+      "description": "Notional V2 was Notional's fixed-rate lending protocol on Ethereum, where lenders and borrowers locked in rates through fCash markets. It was deprecated when Notional V3 launched; the old app at v2.notional.finance still loads with a deprecation banner and a link to migrated positions.",
+      "description_zh": "Notional V2 是 Notional 在以太坊上的固定利率借贷协议，出借人和借款人通过 fCash 市场锁定利率。Notional V3 上线后它已被弃用；v2.notional.finance 上的旧应用仍可打开，显示弃用提示和已迁移头寸的链接。",
+      "category": "Lending / leverage",
+      "chains": "Ethereum",
+      "networks": [
+        "Ethereum"
+      ],
+      "url": "https://v2.notional.finance",
+      "frontend_repo": null,
+      "repo_state": "none_found",
+      "repo_status": "none-found (only contracts-v2 is public)",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "no",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": null,
+        "updated": "unknown",
+        "us": "unknown",
+        "us_scope": "",
+        "restricted": "no terms linked from the app",
+        "restricted_codes": []
+      },
+      "fork_notes": "Deprecated; positions were migrated to V3.",
+      "live": [
+        "v2.notional.finance (2026-10-10): app loads with 'Notional V2 is being deprecated' banner; the bundle has no geo or screening code"
+      ],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://blog.notional.finance/notional-v2-deprecation-plan/",
+        "v2.notional.finance bundle inspection (2026-10-10)"
+      ],
+      "confidence": "low",
+      "alternatives": [],
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
+      "fork_ready": "no_code",
       "category_group": "lending",
       "chain_tags": [
         "evm"
@@ -2520,6 +3173,7 @@
     {
       "id": "lido",
       "name": "Lido",
+      "family": "lido",
       "description": "Lido is the largest liquid-staking protocol on Ethereum. Users stake ETH and receive stETH, a token that accrues staking rewards while remaining usable across DeFi; the validators are run by a curated set of node operators.",
       "description_zh": "Lido 是以太坊上最大的流动性质押协议。用户质押 ETH 并获得 stETH，该代币会累积质押奖励，同时可以在 DeFi 中继续使用；验证者由一组经过筛选的节点运营商运行。",
       "category": "Liquid staking",
@@ -2589,7 +3243,100 @@
       ],
       "confidence": "high",
       "alternatives": [],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 4,
+        "countries": 1,
+        "mechanisms": [
+          "geo_feature",
+          "screening",
+          "vpn"
+        ]
+      },
+      "fork_ready": "yes",
+      "category_group": "staking",
+      "chain_tags": [
+        "evm"
+      ],
+      "observations": []
+    },
+    {
+      "id": "lido-stvaults",
+      "name": "Lido",
+      "version": "V3 · stVaults",
+      "family": "lido",
+      "description": "Lido stVaults are the core of Lido V3 on Ethereum: isolated staking vaults that let institutions, node operators and protocols pick their own validator setup while minting stETH against the staked ETH. The stVaults app is where vault owners create and fund vaults and manage stETH minting and withdrawals.",
+      "description_zh": "Lido stVaults 是以太坊上 Lido V3 的核心：机构、节点运营商和协议可以通过独立的质押金库选择自己的验证者配置，并以质押的 ETH 铸造 stETH。金库所有者在 stVaults 应用中创建和注资金库，并管理 stETH 的铸造与提取。",
+      "category": "Liquid staking",
+      "chains": "Ethereum",
+      "networks": [
+        "Ethereum"
+      ],
+      "url": "https://stvaults.lido.fi",
+      "frontend_repo": "https://github.com/lidofinance/staking-vault-widget",
+      "repo_state": "open",
+      "repo_status": "open (footer links the deployed release, 0.23.0)",
+      "repo_last_commit": "2026-10-09",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "no",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://lido.fi/terms-of-use",
+        "updated": "2026-09-23",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "Crimea, CU, DPR, IR, LPR, KP, SY + sanctioned; US/UK: Earn only",
+        "restricted_codes": [
+          "UA-Crimea",
+          "CU",
+          "UA-DPR",
+          "IR",
+          "UA-LPR",
+          "KP",
+          "SY",
+          "GB"
+        ]
+      },
+      "fork_notes": "Clean: no geo or screening code; vault limits (paused deposits, jailed vaults) come from the protocol contracts.",
+      "live": [
+        "stvaults.lido.fi (2026-10-10): loads release 0.23.0; only matomo.lido.fi analytics besides the app"
+      ],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://github.com/lidofinance/staking-vault-widget",
+        "https://lido.fi/stvaults",
+        "https://lido.fi/terms-of-use"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "lifecycle": "current",
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "yes",
       "category_group": "staking",
       "chain_tags": [
@@ -2651,7 +3398,13 @@
       "evidence": [],
       "confidence": "low",
       "alternatives": [],
-      "level": "?",
+      "lifecycle": "current",
+      "level": "n/a",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "staking",
       "chain_tags": [
@@ -2723,7 +3476,15 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "B",
+      "lifecycle": "current",
+      "level": "C",
+      "restrictions": {
+        "count": 8,
+        "countries": 7,
+        "mechanisms": [
+          "vpn"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "staking",
       "chain_tags": [
@@ -2812,7 +3573,13 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "A?",
+      "lifecycle": "current",
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "staking",
       "chain_tags": [
@@ -2899,7 +3666,13 @@
       ],
       "confidence": "high",
       "alternatives": [],
-      "level": "A?",
+      "lifecycle": "current",
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "yield",
       "chain_tags": [
@@ -3029,7 +3802,17 @@
           "url": "https://ethena.cp0x.com"
         }
       ],
+      "lifecycle": "current",
       "level": "D",
+      "restrictions": {
+        "count": 34,
+        "countries": 31,
+        "mechanisms": [
+          "geo_feature",
+          "screening",
+          "kyc"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "yield",
       "chain_tags": [
@@ -3111,7 +3894,13 @@
       "evidence": [],
       "confidence": "medium",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "yes",
       "category_group": "yield",
       "chain_tags": [
@@ -3195,7 +3984,15 @@
       ],
       "confidence": "high",
       "alternatives": [],
-      "level": "B",
+      "lifecycle": "current",
+      "level": "C",
+      "restrictions": {
+        "count": 6,
+        "countries": 5,
+        "mechanisms": [
+          "geo_feature"
+        ]
+      },
       "fork_ready": "yes",
       "category_group": "yield",
       "chain_tags": [
@@ -3260,7 +4057,13 @@
       "evidence": [],
       "confidence": "low",
       "alternatives": [],
-      "level": "?",
+      "lifecycle": "current",
+      "level": "n/a",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "yield",
       "chain_tags": [
@@ -3339,7 +4142,13 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "A?",
+      "lifecycle": "current",
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "bridge",
       "chain_tags": [
@@ -3414,7 +4223,13 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "A?",
+      "lifecycle": "current",
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "bridge",
       "chain_tags": [
@@ -3489,146 +4304,21 @@
       ],
       "confidence": "high",
       "alternatives": [],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 0,
+        "mechanisms": [
+          "screening"
+        ]
+      },
       "fork_ready": "yes",
       "category_group": "bridge",
       "chain_tags": [
         "evm"
       ],
       "observations": []
-    },
-    {
-      "id": "hop",
-      "name": "Hop",
-      "description": "Hop is a bridge for moving tokens between Ethereum and its rollups, using bonders who front liquidity and intermediate hTokens on each chain. According to this snapshot its official domain no longer serves the app, while the contracts keep working.",
-      "description_zh": "Hop 是一个在以太坊及其 rollup 之间转移代币的跨链桥，依靠垫付流动性的担保人（bonder）和各链上的中间代币 hToken 运行。根据本次快照，其官方域名已不再提供应用，但合约仍在运行。",
-      "category": "Bridge",
-      "chains": "EVM",
-      "networks": [
-        "Ethereum",
-        "Arbitrum",
-        "Optimism",
-        "Base",
-        "Polygon",
-        "Gnosis",
-        "Arbitrum Nova",
-        "Linea",
-        "Polygon zkEVM"
-      ],
-      "url": "https://app.hop.exchange",
-      "frontend_repo": "https://github.com/hop-protocol/hop/tree/master/packages/frontend",
-      "repo_state": "open",
-      "repo_status": "open (low activity)",
-      "repo_last_commit": "2025-10-29",
-      "geo_site": {
-        "s": "yes",
-        "countries": [
-          "BY",
-          "BI",
-          "CF",
-          "CI",
-          "CU",
-          "CD",
-          "ET",
-          "IR",
-          "IQ",
-          "KP",
-          "LB",
-          "LR",
-          "LY",
-          "MM",
-          "NI",
-          "SO",
-          "SS",
-          "SD",
-          "SY",
-          "VE",
-          "YE",
-          "ZW"
-        ],
-        "close_only": [],
-        "method": "netlify.toml: HTTP 451 by Country"
-      },
-      "geo_feature": {
-        "s": "no",
-        "countries": [],
-        "scope": ""
-      },
-      "vpn": {
-        "s": "no",
-        "note": ""
-      },
-      "screening": {
-        "s": "optional",
-        "provider": "OFAC list (ultrasoundmoney), REACT_APP_BLOCKLIST_ENABLED",
-        "layer": "frontend",
-        "fail": null,
-        "fail_note": ""
-      },
-      "asset_filter": "",
-      "tos": {
-        "url": null,
-        "updated": "unknown",
-        "us": "no",
-        "us_scope": "",
-        "restricted": "docs FAQ: same 22 countries",
-        "restricted_codes": [
-          "BY",
-          "BI",
-          "CF",
-          "CI",
-          "CU",
-          "CD",
-          "ET",
-          "IR",
-          "IQ",
-          "KP",
-          "LB",
-          "LR",
-          "LY",
-          "MM",
-          "NI",
-          "SO",
-          "SS",
-          "SD",
-          "SY",
-          "VE",
-          "YE",
-          "ZW"
-        ]
-      },
-      "fork_notes": "WARNING: hop.exchange apex serves gambling spam (domain lapsed/hijacked). app.hop.exchange -> HTTP 400. Good candidate for a permissionless replacement.",
-      "live": [
-        "WebFetch: app.hop.exchange -> 400; hop.exchange -> spam"
-      ],
-      "geo_endpoints": [],
-      "evidence": [
-        "packages/frontend/netlify.toml",
-        "packages/frontend/src/config/blocklist.ts"
-      ],
-      "confidence": "medium",
-      "alternatives": [],
-      "level": "D",
-      "fork_ready": "yes",
-      "category_group": "bridge",
-      "chain_tags": [
-        "evm"
-      ],
-      "observations": [
-        {
-          "country": "US",
-          "region": null,
-          "proxy_type": "isp",
-          "at": "2026-10-08T15:54:38Z",
-          "kind": "site",
-          "url": "https://app.hop.exchange",
-          "http_status": 400,
-          "final_url": "https://app.hop.exchange",
-          "ui_state": "unknown",
-          "flags": {},
-          "note": "HTTP 400"
-        }
-      ]
     },
     {
       "id": "portalbridge",
@@ -3695,7 +4385,15 @@
       ],
       "confidence": "low",
       "alternatives": [],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 0,
+        "mechanisms": [
+          "screening"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "bridge",
       "chain_tags": [
@@ -3772,7 +4470,15 @@
       ],
       "confidence": "high",
       "alternatives": [],
-      "level": "D",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 0,
+        "mechanisms": [
+          "screening"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "bridge",
       "chain_tags": [
@@ -3872,7 +4578,16 @@
       ],
       "confidence": "high",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "D",
+      "restrictions": {
+        "count": 30,
+        "countries": 28,
+        "mechanisms": [
+          "geo_feature",
+          "vpn"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "prediction",
       "chain_tags": [
@@ -3972,7 +4687,16 @@
       ],
       "confidence": "high",
       "alternatives": [],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 2,
+        "countries": 0,
+        "mechanisms": [
+          "geo_feature",
+          "screening"
+        ]
+      },
       "fork_ready": "yes",
       "category_group": "wallet",
       "chain_tags": [
@@ -3983,6 +4707,7 @@
     {
       "id": "ens",
       "name": "ENS",
+      "family": "ens",
       "description": "ENS, the Ethereum Name Service, maps human-readable .eth names to wallet addresses, websites and other records. Names are NFTs registered for a yearly fee, and the protocol is governed by the ENS DAO.",
       "description_zh": "ENS（以太坊域名服务）把易读的 .eth 名称映射到钱包地址、网站和其他记录。域名是按年付费注册的 NFT，协议由 ENS DAO 治理。",
       "category": "Naming",
@@ -4034,8 +4759,88 @@
       "evidence": [],
       "confidence": "medium",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "yes",
+      "category_group": "other",
+      "chain_tags": [
+        "evm"
+      ],
+      "observations": []
+    },
+    {
+      "id": "ens-legacy",
+      "name": "ENS",
+      "version": "Legacy Manager",
+      "family": "ens",
+      "lifecycle": "legacy",
+      "lifecycle_note": "The app itself says it is no longer maintained for bug and security fixes and links to the current app at app.ens.domains.",
+      "description": "The ENS Legacy Manager is the previous Ethereum Name Service app for registering and managing .eth names, still served at legacy.ens.domains. ENS no longer maintains it for bug or security fixes and points users to the current app.",
+      "description_zh": "ENS 旧版管理器是以太坊域名服务此前用于注册和管理 .eth 域名的应用，仍可在 legacy.ens.domains 访问。ENS 已不再为其修复漏洞或安全问题，并引导用户使用当前应用。",
+      "category": "Naming",
+      "chains": "Ethereum",
+      "networks": [
+        "Ethereum"
+      ],
+      "url": "https://legacy.ens.domains",
+      "frontend_repo": "https://github.com/ensdomains/ens-app",
+      "repo_state": "open_stale",
+      "repo_status": "open-stale (described as the legacy ENS manager app)",
+      "repo_last_commit": "2025-04-21",
+      "geo_site": {
+        "s": "no",
+        "countries": [],
+        "close_only": [],
+        "method": ""
+      },
+      "geo_feature": {
+        "s": "no",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "no",
+        "note": ""
+      },
+      "screening": {
+        "s": "no",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://ens.domains/legal/terms-of-use",
+        "updated": "2026-08-12",
+        "us": "no",
+        "us_scope": "",
+        "restricted": "sanctioned + FATF non-cooperative",
+        "restricted_codes": []
+      },
+      "fork_notes": "Clean.",
+      "live": [
+        "legacy.ens.domains -> ens-app.pages.dev (2026-10-10): banner 'This version is no longer maintained for bug and security fixes'"
+      ],
+      "geo_endpoints": [],
+      "evidence": [
+        "https://github.com/ensdomains/ens-app",
+        "legacy.ens.domains bundle inspection (2026-10-10)"
+      ],
+      "confidence": "medium",
+      "alternatives": [],
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
+      "fork_ready": "stale",
       "category_group": "other",
       "chain_tags": [
         "evm"
@@ -4121,7 +4926,13 @@
       ],
       "confidence": "medium",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "yes",
       "category_group": "other",
       "chain_tags": [
@@ -4235,7 +5046,16 @@
       ],
       "confidence": "medium",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "D",
+      "restrictions": {
+        "count": 21,
+        "countries": 19,
+        "mechanisms": [
+          "geo_feature",
+          "kyc"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "rwa",
       "chain_tags": [
@@ -4243,7 +5063,73 @@
         "solana",
         "sui"
       ],
-      "observations": []
+      "observations": [
+        {
+          "country": "AU",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:56Z",
+          "kind": "site",
+          "url": "https://app.ondo.finance",
+          "http_status": 200,
+          "final_url": "https://app.ondo.finance",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "GB",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:09Z",
+          "kind": "site",
+          "url": "https://app.ondo.finance",
+          "http_status": 200,
+          "final_url": "https://app.ondo.finance",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "JP",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:51:35Z",
+          "kind": "site",
+          "url": "https://app.ondo.finance",
+          "http_status": 200,
+          "final_url": "https://app.ondo.finance",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "NL",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:30Z",
+          "kind": "site",
+          "url": "https://app.ondo.finance",
+          "http_status": 200,
+          "final_url": "https://app.ondo.finance",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "US",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:48:40Z",
+          "kind": "site",
+          "url": "https://app.ondo.finance",
+          "http_status": 200,
+          "final_url": "https://app.ondo.finance",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        }
+      ]
     },
     {
       "id": "maple",
@@ -4344,14 +5230,86 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "A?",
+      "lifecycle": "current",
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "lending",
       "chain_tags": [
         "evm",
         "solana"
       ],
-      "observations": []
+      "observations": [
+        {
+          "country": "AU",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:50:01Z",
+          "kind": "site",
+          "url": "https://app.maple.finance",
+          "http_status": 403,
+          "final_url": "https://app.maple.finance",
+          "ui_state": "challenge",
+          "flags": {},
+          "note": "Cloudflare challenge"
+        },
+        {
+          "country": "GB",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:10Z",
+          "kind": "site",
+          "url": "https://app.maple.finance",
+          "http_status": 403,
+          "final_url": "https://app.maple.finance",
+          "ui_state": "challenge",
+          "flags": {},
+          "note": "Cloudflare challenge"
+        },
+        {
+          "country": "JP",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:51:39Z",
+          "kind": "site",
+          "url": "https://app.maple.finance",
+          "http_status": 403,
+          "final_url": "https://app.maple.finance",
+          "ui_state": "challenge",
+          "flags": {},
+          "note": "Cloudflare challenge"
+        },
+        {
+          "country": "NL",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:31Z",
+          "kind": "site",
+          "url": "https://app.maple.finance",
+          "http_status": 403,
+          "final_url": "https://app.maple.finance",
+          "ui_state": "challenge",
+          "flags": {},
+          "note": "Cloudflare challenge"
+        },
+        {
+          "country": "US",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:48:42Z",
+          "kind": "site",
+          "url": "https://app.maple.finance",
+          "http_status": 403,
+          "final_url": "https://app.maple.finance",
+          "ui_state": "challenge",
+          "flags": {},
+          "note": "Cloudflare challenge"
+        }
+      ]
     },
     {
       "id": "centrifuge",
@@ -4420,13 +5378,88 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "D",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 2,
+        "countries": 0,
+        "mechanisms": [
+          "geo_feature",
+          "kyc"
+        ]
+      },
       "fork_ready": "partial",
       "category_group": "rwa",
       "chain_tags": [
         "evm"
       ],
-      "observations": []
+      "observations": [
+        {
+          "country": "AU",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:50:05Z",
+          "kind": "site",
+          "url": "https://app.centrifuge.io",
+          "http_status": 403,
+          "final_url": "https://app.centrifuge.io",
+          "ui_state": "challenge",
+          "flags": {},
+          "note": "Cloudflare challenge"
+        },
+        {
+          "country": "GB",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:12Z",
+          "kind": "site",
+          "url": "https://app.centrifuge.io",
+          "http_status": 403,
+          "final_url": "https://app.centrifuge.io",
+          "ui_state": "challenge",
+          "flags": {},
+          "note": "Cloudflare challenge"
+        },
+        {
+          "country": "JP",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:51:42Z",
+          "kind": "site",
+          "url": "https://app.centrifuge.io",
+          "http_status": 403,
+          "final_url": "https://app.centrifuge.io",
+          "ui_state": "challenge",
+          "flags": {},
+          "note": "Cloudflare challenge"
+        },
+        {
+          "country": "NL",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:33Z",
+          "kind": "site",
+          "url": "https://app.centrifuge.io",
+          "http_status": 403,
+          "final_url": "https://app.centrifuge.io",
+          "ui_state": "challenge",
+          "flags": {},
+          "note": "Cloudflare challenge"
+        },
+        {
+          "country": "US",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:48:44Z",
+          "kind": "site",
+          "url": "https://app.centrifuge.io",
+          "http_status": 403,
+          "final_url": "https://app.centrifuge.io",
+          "ui_state": "challenge",
+          "flags": {},
+          "note": "Cloudflare challenge"
+        }
+      ]
     },
     {
       "id": "superstate",
@@ -4490,14 +5523,89 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "D",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 2,
+        "countries": 0,
+        "mechanisms": [
+          "geo_feature",
+          "kyc"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "rwa",
       "chain_tags": [
         "evm",
         "solana"
       ],
-      "observations": []
+      "observations": [
+        {
+          "country": "AU",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:50:29Z",
+          "kind": "site",
+          "url": "https://superstate.com",
+          "http_status": 200,
+          "final_url": "https://superstate.com",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "GB",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:13Z",
+          "kind": "site",
+          "url": "https://superstate.com",
+          "http_status": 200,
+          "final_url": "https://superstate.com",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "JP",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:51:47Z",
+          "kind": "site",
+          "url": "https://superstate.com",
+          "http_status": 200,
+          "final_url": "https://superstate.com",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "NL",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:35Z",
+          "kind": "site",
+          "url": "https://superstate.com",
+          "http_status": 200,
+          "final_url": "https://superstate.com",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "US",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:48:47Z",
+          "kind": "site",
+          "url": "https://superstate.com",
+          "http_status": 200,
+          "final_url": "https://superstate.com",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        }
+      ]
     },
     {
       "id": "symbiotic",
@@ -4554,13 +5662,85 @@
       ],
       "confidence": "low",
       "alternatives": [],
-      "level": "?",
+      "lifecycle": "current",
+      "level": "n/a",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "staking",
       "chain_tags": [
         "evm"
       ],
-      "observations": []
+      "observations": [
+        {
+          "country": "AU",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:50:38Z",
+          "kind": "site",
+          "url": "https://app.symbiotic.fi",
+          "http_status": 200,
+          "final_url": "https://app.symbiotic.fi/deposit",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "GB",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:15Z",
+          "kind": "site",
+          "url": "https://app.symbiotic.fi",
+          "http_status": 200,
+          "final_url": "https://app.symbiotic.fi/deposit",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "JP",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:51:51Z",
+          "kind": "site",
+          "url": "https://app.symbiotic.fi",
+          "http_status": 200,
+          "final_url": "https://app.symbiotic.fi/deposit",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "NL",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:36Z",
+          "kind": "site",
+          "url": "https://app.symbiotic.fi",
+          "http_status": 200,
+          "final_url": "https://app.symbiotic.fi/deposit",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "US",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:48:50Z",
+          "kind": "site",
+          "url": "https://app.symbiotic.fi",
+          "http_status": 200,
+          "final_url": "https://app.symbiotic.fi/deposit",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        }
+      ]
     },
     {
       "id": "kelp",
@@ -4626,13 +5806,85 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "A?",
+      "lifecycle": "current",
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "staking",
       "chain_tags": [
         "evm"
       ],
-      "observations": []
+      "observations": [
+        {
+          "country": "AU",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:50:49Z",
+          "kind": "site",
+          "url": "https://kerneldao.com/kelp",
+          "http_status": 200,
+          "final_url": "https://kerneldao.com/kelp/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "GB",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:16Z",
+          "kind": "site",
+          "url": "https://kerneldao.com/kelp",
+          "http_status": 200,
+          "final_url": "https://kerneldao.com/kelp/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "JP",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:51:56Z",
+          "kind": "site",
+          "url": "https://kerneldao.com/kelp",
+          "http_status": 200,
+          "final_url": "https://kerneldao.com/kelp/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "NL",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:37Z",
+          "kind": "site",
+          "url": "https://kerneldao.com/kelp",
+          "http_status": 200,
+          "final_url": "https://kerneldao.com/kelp/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "US",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:48:52Z",
+          "kind": "site",
+          "url": "https://kerneldao.com/kelp",
+          "http_status": 200,
+          "final_url": "https://kerneldao.com/kelp/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        }
+      ]
     },
     {
       "id": "lombard",
@@ -4720,7 +5972,15 @@
       ],
       "confidence": "high",
       "alternatives": [],
+      "lifecycle": "current",
       "level": "B",
+      "restrictions": {
+        "count": 3,
+        "countries": 2,
+        "mechanisms": [
+          "geo_feature"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "staking",
       "chain_tags": [
@@ -4728,7 +5988,73 @@
         "solana",
         "sui"
       ],
-      "observations": []
+      "observations": [
+        {
+          "country": "AU",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:50:54Z",
+          "kind": "site",
+          "url": "https://www.lombard.finance/app",
+          "http_status": 200,
+          "final_url": "https://www.lombard.finance/app/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "GB",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:18Z",
+          "kind": "site",
+          "url": "https://www.lombard.finance/app",
+          "http_status": 200,
+          "final_url": "https://www.lombard.finance/app/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "JP",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:52:00Z",
+          "kind": "site",
+          "url": "https://www.lombard.finance/app",
+          "http_status": 200,
+          "final_url": "https://www.lombard.finance/app/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "NL",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:39Z",
+          "kind": "site",
+          "url": "https://www.lombard.finance/app",
+          "http_status": 200,
+          "final_url": "https://www.lombard.finance/app/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "US",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:48:55Z",
+          "kind": "site",
+          "url": "https://www.lombard.finance/app",
+          "http_status": 200,
+          "final_url": "https://www.lombard.finance/app/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        }
+      ]
     },
     {
       "id": "frax",
@@ -4795,13 +6121,88 @@
       ],
       "confidence": "low",
       "alternatives": [],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 2,
+        "countries": 0,
+        "mechanisms": [
+          "screening",
+          "kyc"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "stablecoin",
       "chain_tags": [
         "evm"
       ],
-      "observations": []
+      "observations": [
+        {
+          "country": "AU",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:50:59Z",
+          "kind": "site",
+          "url": "https://frax.com",
+          "http_status": 200,
+          "final_url": "https://frax.com",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "GB",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:20Z",
+          "kind": "site",
+          "url": "https://frax.com",
+          "http_status": 200,
+          "final_url": "https://frax.com",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "JP",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:52:04Z",
+          "kind": "site",
+          "url": "https://frax.com",
+          "http_status": 200,
+          "final_url": "https://frax.com",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "NL",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:40Z",
+          "kind": "site",
+          "url": "https://frax.com",
+          "http_status": 200,
+          "final_url": "https://frax.com",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "US",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:48:57Z",
+          "kind": "site",
+          "url": "https://frax.com",
+          "http_status": 200,
+          "final_url": "https://frax.com",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        }
+      ]
     },
     {
       "id": "usual",
@@ -4930,13 +6331,85 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "A?",
+      "lifecycle": "current",
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "stablecoin",
       "chain_tags": [
         "evm"
       ],
-      "observations": []
+      "observations": [
+        {
+          "country": "AU",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:51:03Z",
+          "kind": "site",
+          "url": "https://app.usual.money",
+          "http_status": 200,
+          "final_url": "https://app.usual.money",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "GB",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:21Z",
+          "kind": "site",
+          "url": "https://app.usual.money",
+          "http_status": 200,
+          "final_url": "https://app.usual.money",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "JP",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:52:07Z",
+          "kind": "site",
+          "url": "https://app.usual.money",
+          "http_status": 200,
+          "final_url": "https://app.usual.money",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "NL",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:41Z",
+          "kind": "site",
+          "url": "https://app.usual.money",
+          "http_status": 200,
+          "final_url": "https://app.usual.money",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "US",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:48:59Z",
+          "kind": "site",
+          "url": "https://app.usual.money",
+          "http_status": 200,
+          "final_url": "https://app.usual.money",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        }
+      ]
     },
     {
       "id": "debridge",
@@ -5019,14 +6492,86 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "A?",
+      "lifecycle": "current",
+      "level": "A",
+      "restrictions": {
+        "count": 0,
+        "countries": 0,
+        "mechanisms": []
+      },
       "fork_ready": "no_code",
       "category_group": "bridge",
       "chain_tags": [
         "evm",
         "solana"
       ],
-      "observations": []
+      "observations": [
+        {
+          "country": "AU",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:51:09Z",
+          "kind": "site",
+          "url": "https://app.debridge.finance",
+          "http_status": 200,
+          "final_url": "https://app.debridge.com/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "GB",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:23Z",
+          "kind": "site",
+          "url": "https://app.debridge.finance",
+          "http_status": 200,
+          "final_url": "https://app.debridge.com/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "JP",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:52:12Z",
+          "kind": "site",
+          "url": "https://app.debridge.finance",
+          "http_status": 200,
+          "final_url": "https://app.debridge.com/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "NL",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:43Z",
+          "kind": "site",
+          "url": "https://app.debridge.finance",
+          "http_status": 200,
+          "final_url": "https://app.debridge.com/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "US",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:02Z",
+          "kind": "site",
+          "url": "https://app.debridge.finance",
+          "http_status": 200,
+          "final_url": "https://app.debridge.com/",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        }
+      ]
     },
     {
       "id": "opensea",
@@ -5093,13 +6638,87 @@
       ],
       "confidence": "medium",
       "alternatives": [],
-      "level": "D",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 2,
+        "countries": 1,
+        "mechanisms": [
+          "screening"
+        ]
+      },
       "fork_ready": "no_code",
       "category_group": "other",
       "chain_tags": [
         "evm"
       ],
-      "observations": []
+      "observations": [
+        {
+          "country": "AU",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:51:15Z",
+          "kind": "site",
+          "url": "https://opensea.io",
+          "http_status": 200,
+          "final_url": "https://opensea.io",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "GB",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:24Z",
+          "kind": "site",
+          "url": "https://opensea.io",
+          "http_status": 200,
+          "final_url": "https://opensea.io",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "JP",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:52:17Z",
+          "kind": "site",
+          "url": "https://opensea.io",
+          "http_status": 200,
+          "final_url": "https://opensea.io",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "NL",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:44Z",
+          "kind": "site",
+          "url": "https://opensea.io",
+          "http_status": 200,
+          "final_url": "https://opensea.io",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "US",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:05Z",
+          "kind": "site",
+          "url": "https://opensea.io",
+          "http_status": 200,
+          "final_url": "https://opensea.io",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        }
+      ]
     },
     {
       "id": "tornado",
@@ -5168,13 +6787,87 @@
           "url": "https://tornado.cp0x.com"
         }
       ],
-      "level": "C",
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 0,
+        "mechanisms": [
+          "screening"
+        ]
+      },
       "fork_ready": "stale",
       "category_group": "other",
       "chain_tags": [
         "evm"
       ],
-      "observations": []
+      "observations": [
+        {
+          "country": "AU",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:51:19Z",
+          "kind": "site",
+          "url": "https://tornadocash.eth.limo",
+          "http_status": 200,
+          "final_url": "https://tornadocash.eth.limo",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "GB",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:26Z",
+          "kind": "site",
+          "url": "https://tornadocash.eth.limo",
+          "http_status": 200,
+          "final_url": "https://tornadocash.eth.limo",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "JP",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:52:19Z",
+          "kind": "site",
+          "url": "https://tornadocash.eth.limo",
+          "http_status": 200,
+          "final_url": "https://tornadocash.eth.limo",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "NL",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:46Z",
+          "kind": "site",
+          "url": "https://tornadocash.eth.limo",
+          "http_status": 200,
+          "final_url": "https://tornadocash.eth.limo",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        },
+        {
+          "country": "US",
+          "region": null,
+          "proxy_type": "isp",
+          "at": "2026-10-09T05:49:06Z",
+          "kind": "site",
+          "url": "https://tornadocash.eth.limo",
+          "http_status": 200,
+          "final_url": "https://tornadocash.eth.limo",
+          "ui_state": "ok",
+          "flags": {},
+          "note": "page served (client-side gates not evaluated)"
+        }
+      ]
     }
   ]
 }

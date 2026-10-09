@@ -26,18 +26,16 @@ export const LEVEL_LABELS: Record<Level, string> = {
   D: 'D',
   C: 'C',
   B: 'B',
-  'A?': 'A?',
-  '?': '?',
-  A: 'A'
+  A: 'A',
+  'n/a': 'n/a'
 };
 
 export const LEVEL_DESCRIPTIONS: Record<Level, string> = {
-  D: 'Site or trading geo-block, wallet screening inside the protocol API, or an on-chain KYC allowlist (a fork inherits it)',
-  C: 'Wallet screening or a KYC gate on the frontend or in the operator’s own API (removable in a fork)',
-  B: 'Only feature- or asset-level limits, public reports, or optional code that is off by default',
-  'A?': 'Nothing found, but the code is closed: only the ToS is visible, a browser crawl is needed',
-  '?': 'Not enough data: closed code and no readable ToS',
-  A: 'No technical restriction found and the frontend code is open'
+  D: 'More than 20 restrictions',
+  C: '6–20 restrictions',
+  B: '1–5 restrictions',
+  A: 'No technical restriction found',
+  'n/a': 'Nothing could be determined'
 };
 
 export const STATUS_LABELS: Record<Status, string> = {

@@ -25,8 +25,7 @@ export const vpnTone = (s: VpnStatus): Tone =>
 
 export const forkTone = (f: ForkReady): Tone => ({ yes: 'good', stale: 'mild', partial: 'warn', no_code: 'neutral' })[f] as Tone;
 
-export const levelTone = (l: Level): Tone =>
-  ({ D: 'bad', C: 'warn', B: 'mild', A: 'good', 'A?': 'goodOutlined', '?': 'unknown' })[l] as Tone;
+export const levelTone = (l: Level): Tone => ({ D: 'bad', C: 'warn', B: 'mild', A: 'good', 'n/a': 'unknown' })[l] as Tone;
 
 export const countryStatusTone = (s: CountryStatus): Tone =>
   ({ blocked: 'bad', close_only: 'warn', feature_limited: 'mild', regional: 'mild', tos_only: 'neutral', unknown: 'unknown', ok: 'good' })[

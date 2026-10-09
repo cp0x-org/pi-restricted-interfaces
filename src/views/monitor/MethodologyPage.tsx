@@ -59,6 +59,9 @@ export default function MethodologyPage() {
         <Typography variant="body2" sx={{ mt: 2 }}>
           {M.levelsNote}
         </Typography>
+        <Typography variant="body2" sx={{ mt: 1.5 }}>
+          {M.versionsNote}
+        </Typography>
       </Section>
 
       <Grid container spacing={3}>

@@ -74,18 +74,18 @@ export const en = {
   pageTitle: {
     monitor: 'DeFi Interface Restrictions Monitor | cp0x',
     methodology: 'Methodology: how DeFi interface restrictions are checked | cp0x',
-    iface: (name: string, level: string) => `${name} geo-blocking & wallet screening (level ${level}) | cp0x`,
+    iface: (name: string, level: string) => `${name} geo-blocking & wallet screening (rating ${level}) | cp0x`,
     notFound: 'Page not found | cp0x'
   },
   monitor: {
     title: 'Official DeFi interfaces: who restricts what',
     intro: (shown: number, total: number, date: string) =>
-      `Each row is the official web interface of a protocol on EVM networks (${shown} of ${total} in the full catalog; Solana, Cosmos and other non-EVM apps stay in the data but are not shown). The level says how hard the restriction is and whether a permissionless fork removes it. Snapshot of ${date}; every claim is backed by code, a live check or the Terms of Service (see the interface page).`,
+      `Each row is the official web interface of a protocol on EVM networks (${shown} of ${total} in the full catalog; Solana, Cosmos and other non-EVM apps stay in the data but are not shown). The rating counts the technical restrictions of the interface: the fewer, the better. Snapshot of ${date}; every claim is backed by code, a live check or the Terms of Service (see the interface page).`,
     search: 'Search',
     searchPlaceholder: 'Name or domain',
     category: 'Category',
     network: 'Network',
-    level: 'Level',
+    level: 'Rating',
     screeningLayer: 'Screening layer',
     country: 'Country',
     restrictedIn: (flags: string) => `Restricted in ${flags}:`,
@@ -95,7 +95,7 @@ export const en = {
     cols: {
       iface: 'Interface',
       category: 'Category',
-      level: 'Level',
+      level: 'Rating',
       geo: 'Geo Block',
       feature: 'Feature Block',
       screening: 'Wallet screening',
@@ -109,7 +109,11 @@ export const en = {
     closeOnly: (n: number) => `${n} close-only`,
     empty: 'No interfaces match the current filters.',
     showing: (shown: number, total: number) => `Showing ${shown} of ${total} interfaces`,
-    rows: 'Rows'
+    rows: 'Rows',
+    restrictionsTip: (n: number, countries: number, mechanisms: string) =>
+      n === 0
+        ? 'No technical restriction found (terms written only in the ToS are not counted)'
+        : `${n} restriction${n === 1 ? '' : 's'}: ${[countries ? `${countries} countr${countries === 1 ? 'y' : 'ies'}` : '', mechanisms].filter(Boolean).join(' + ')}`
   },
   tiles: {
     interfaces: 'Interfaces',
@@ -118,14 +122,16 @@ export const en = {
     permissionless: 'Permissionless via cp0x'
   },
   legend: {
-    level: 'D is the hardest restriction, A is clean; hover a chip for details.',
+    level:
+      'Fewer restrictions, better rating: A none, B 1–5, C 6–20, D more than 20; n/a if nothing could be determined. The number shows how many were counted.',
     geo: 'The whole site or trading is blocked for some countries.',
     feature: 'The site works, but some features or assets are hidden by country.',
     screening: 'The wallet is checked against sanctions lists; the caption shows where.',
     vpn: 'Whether VPN or Tor users are detected or blocked.',
     code: 'Public frontend repository.',
     official: 'The official interface.',
-    permissionless: 'Our permissionless interface from pi.cp0x.com; these rows are highlighted and listed first.',
+    permissionless: 'Our permissionless interface from pi.cp0x.com; these rows are listed first.',
+    legacy: 'An older official version that the protocol is phasing out; these rows are listed at the bottom.',
     values: {
       yes: 'confirmed by code, a live check or docs',
       reported: 'press or user reports',
@@ -149,13 +155,16 @@ export const en = {
     less: 'show less',
     nothing: 'Nothing recorded.',
     noEvidence: 'No evidence recorded.',
-    frontendCodeOf: (name: string) => `Frontend code of ${name}`
+    frontendCodeOf: (name: string) => `Frontend code of ${name}`,
+    legacy: 'legacy'
   },
   iface: {
     notFound: 'Interface not found',
     notFoundText: (id: string) => `There is no interface with id “${id}” in the catalog.`,
     back: 'Back to the monitor',
     all: 'All interfaces',
+    legacyTitle: 'Legacy version',
+    otherVersions: 'Other versions of this protocol',
     frontendCode: 'Frontend code',
     altPrefix: 'Permissionless alternative:',
     forkReadiness: 'Fork readiness',
@@ -207,10 +216,10 @@ export const en = {
     monitorDescription: (n: number, withAlt: number) =>
       `Which official DeFi interfaces geo-block countries, screen wallets or hide features: ${n} EVM apps ranked A–D with evidence, per-country status and ${withAlt} permissionless alternatives.`,
     methodologyDescription:
-      'How the monitor checks DeFi interfaces: restriction levels A–D, status values, where screening runs, per-country rules, live proxy probes and limitations.',
+      'How the monitor checks DeFi interfaces: ratings A–D by number of restrictions, status values, where screening runs, per-country rules, live proxy probes and limitations.',
     notFoundDescription: 'This page does not exist in the DeFi Interface Restrictions Monitor.',
     ifaceDescription: (name: string, summary: string, level: string, alt: string) =>
-      `${name}: ${summary}. Restriction level ${level}.${alt ? ` Permissionless alternative: ${alt}.` : ''} Evidence, countries and fork notes.`,
+      `${name}: ${summary}. Rating ${level}.${alt ? ` Permissionless alternative: ${alt}.` : ''} Evidence, countries and fork notes.`,
     ifacePageName: (name: string) => `${name}: access restrictions of the official interface`,
     datasetName: 'Access restrictions in official DeFi interfaces',
     datasetDescription:
@@ -232,7 +241,8 @@ export const en = {
     /** Max characters of a meta description (CJK glyphs are about twice as wide). */
     descriptionMax: 160,
     restrictionsTitle: 'Restrictions',
-    levelSentence: (level: string, description: string) => `Restriction level ${level}: ${description}.`,
+    levelSentence: (level: string, description: string) => `Rating ${level}: ${description}.`,
+    legacySentence: (note: string) => `Legacy version: ${note}`,
     checked: (date: string) => `Checked ${date}.`,
     countries: 'Countries',
     closeOnlyList: 'Close-only',
@@ -246,9 +256,11 @@ export const en = {
     title: 'Methodology',
     intro: (date: string, shown: number, total: number) =>
       `The catalog answers one question per interface: what does the official frontend or backend block, for whom, by which mechanism, where is it enforced, and does a permissionless fork remove it. Snapshot of ${date}. The site shows EVM networks only: ${shown} of ${total} interfaces in the full catalog; Solana, Cosmos and other non-EVM apps stay in \`monitor/data\` and in the report. Only observation: nothing is bypassed, nothing is signed, no transactions are sent.`,
-    levelsTitle: 'Levels',
+    levelsTitle: 'Rating',
     levelsNote:
-      'The level is computed from the data: D when a site geo-block is confirmed, wallet screening runs in the protocol API, or a KYC allowlist is enforced on-chain; C when screening or a KYC gate is confirmed or reported on the frontend or the operator’s own API; B for feature- or asset-level limits, reported blocks and optional code; A when nothing is found and the code is open; A? when nothing is found but the code is closed; ? when the code is closed and nothing could be assessed.',
+      'The rating counts the technical restrictions of the official interface: every country or region where the site, trading or a feature is blocked counts once, and each feature or asset gate, wallet screening (by API or contract), VPN detection and KYC requirement counts once more. Restrictions written only in the Terms of Service are not counted. Fewer restrictions, better rating: A none, B 1–5, C 6–20, D more than 20; n/a when nothing could be determined.',
+    versionsNote:
+      'Versions: every official interface of a protocol version is its own row (for example Aave V3 at app.aave.com and Aave V4 at pro.aave.com). An older version is marked legacy only when the protocol itself phases it out (a deprecation notice, a move to a v2-/v3- subdomain or an announced wind-down); legacy rows are listed at the bottom. Interfaces that no longer work are kept in the catalog but not shown here.',
     statusTitle: 'Status values',
     layerTitle: 'Where screening runs (layer)',
     layerNote:

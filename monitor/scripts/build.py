@@ -20,9 +20,12 @@ VPN_OK = ("no", "tos_only", "detect", "block", "optional", "unknown")
 REPO_OK = ("open", "open_stale", "closed", "private_now", "archived", "none_found")
 TOS_US_OK = ("yes", "no", "partial", "unknown")
 CONF_OK = ("high", "medium", "low")
+# current: the version the protocol points users to; legacy: an older official interface that is still served but being phased
+# out (listed at the bottom); defunct: the official interface no longer works (kept in the catalog, hidden from the site).
+LIFECYCLE_OK = ("current", "legacy", "defunct")
 GROUPS = ("dex", "aggregator", "perps", "lending", "staking", "yield", "rwa", "stablecoin", "bridge", "prediction", "wallet", "other")
 TAGS = ("evm", "solana", "bitcoin", "sui", "starknet", "cosmos", "hyperliquid", "other")
-COMPUTED = ("level", "fork_ready", "category_group", "chain_tags")
+COMPUTED = ("level", "restrictions", "fork_ready", "category_group", "chain_tags")
 REQUIRED = ("id", "name", "description", "category", "chains", "url", "frontend_repo", "repo_state", "repo_status", "repo_last_commit",
             "networks", "geo_site", "geo_feature", "vpn", "screening", "asset_filter", "tos", "fork_notes", "live", "geo_endpoints",
             "evidence", "confidence", "alternatives")
@@ -61,6 +64,7 @@ TOKEN_RE = re.compile(r"^[A-Z]{2}(-[A-Za-z]+)?$")
 ID_RE = re.compile(r"^[a-z0-9-]+$")
 
 # Russian labels for report.md
+LIFECYCLE_TAG = {"current": "", "legacy": " *(устаревшая версия)*", "defunct": " *(не работает)*"}
 S_RU = {"yes": "да", "no": "нет", "reported": "по отчётам", "tos_only": "только ToS", "optional": "опц.", "unknown": "?"}
 LAYER_RU = {"edge": "edge/CDN", "frontend": "фронтенд", "own-api": "свой API", "protocol-api": "API протокола", None: "—"}
 FORK_RU = {"yes": "да", "stale": "да, код устарел", "partial": "частично (API протокола)", "no_code": "нет кода"}
@@ -69,22 +73,51 @@ US_RU = {"yes": "запрещено", "no": "нет", "partial": "частичн
 
 
 # ----------------------------------------------------------------------------- derived fields
+ENFORCED = ("yes", "reported")
+# Rating thresholds on the number of restrictions: A only with none, B <= 5, C <= 20, D above.
+RATING_STEPS = ((0, "A"), (5, "B"), (20, "C"))
+
+
+def restrictions(i):
+    """Technical restrictions of the official interface (enforced = confirmed or reported; ToS-only does not count):
+    every restricted country/region (site, trading or feature level) once, plus one per mechanism:
+    feature/asset gate, wallet screening, VPN detection, KYC. A site geo-block without a published list counts once."""
+    countries, mechanisms = set(), []
+    gs, gf, sc = i["geo_site"], i["geo_feature"], i["screening"]
+    if gs["s"] in ENFORCED:
+        countries |= set(gs["countries"]) | set(gs["close_only"])
+        if not gs["countries"] and not gs["close_only"]:
+            mechanisms.append("geo_site")
+    if gf["s"] in ENFORCED:
+        countries |= set(gf["countries"])
+        mechanisms.append("geo_feature")
+    if sc["s"] in ENFORCED:
+        mechanisms.append("screening")
+    if i["vpn"]["s"] in ("detect", "block"):
+        mechanisms.append("vpn")
+    if (i.get("kyc") or {}).get("s") in ENFORCED:
+        mechanisms.append("kyc")
+    return OrderedDict([("count", len(countries) + len(mechanisms)), ("countries", len(countries)), ("mechanisms", mechanisms)])
+
+
+def lifecycle(i):
+    return i.get("lifecycle", "current")
+
+
+def display_name(i):
+    """Name as shown everywhere: "Aave" + version "V3" -> "Aave V3"."""
+    return f"{i['name']} {i['version']}" if i.get("version") else i["name"]
+
+
 def level(i):
-    """D: site geo-block, screening in the protocol API, or an on-chain KYC allowlist (a fork can't bypass);
-    C: wallet screening or KYC on the frontend / operator API; B: feature/asset-level, reported or optional;
-    A: nothing found (A? when the code is closed); ?: no data."""
-    g, f, s = i["geo_site"]["s"], i["geo_feature"]["s"], i["screening"]["s"]
-    k = i.get("kyc") or {}
-    closed = i["frontend_repo"] is None
-    if g == "yes" or (s == "yes" and i["screening"]["layer"] == "protocol-api") or (k.get("s") == "yes" and k.get("layer") == "protocol-api"):
-        return "D"
-    if s in ("yes", "reported") or k.get("s") in ("yes", "reported"):
-        return "C"
-    if f == "yes" or g == "reported" or "optional" in (g, s):
-        return "B"
-    if closed and g == "unknown" and s == "unknown":
-        return "?"
-    return "A?" if closed else "A"
+    """Fewer restrictions, better rating: A none, B 1-5, C 6-20, D more than 20; n/a when nothing could be determined."""
+    r = restrictions(i)
+    if r["count"] == 0 and i["geo_site"]["s"] == "unknown" and i["screening"]["s"] == "unknown":
+        return "n/a"
+    for limit, grade in RATING_STEPS:
+        if r["count"] <= limit:
+            return grade
+    return "D"
 
 
 def fork_ready(i):
@@ -232,6 +265,21 @@ def validate(data):
             raise Invalid(f"{iid}: geo_endpoints must be a list of https URLs")
         if gs["s"] == "yes" and not gs["countries"]:
             warnings.append(f"{iid}: geo_site.s=yes but no countries listed")
+        if "version" in i and (not isinstance(i["version"], str) or not 1 <= len(i["version"]) <= 40):
+            raise Invalid(f"{iid}: version must be a short label (1-40 characters)")
+        check_enum(w + "lifecycle", i.get("lifecycle", "current"), LIFECYCLE_OK)
+        if "lifecycle_note" in i and not isinstance(i["lifecycle_note"], str):
+            raise Invalid(f"{iid}: lifecycle_note must be a string")
+        if lifecycle(i) != "current" and not i.get("lifecycle_note"):
+            raise Invalid(f"{iid}: lifecycle={lifecycle(i)} needs a lifecycle_note (why, with a date or source)")
+        if "family" in i and (not isinstance(i["family"], str) or not ID_RE.match(i["family"])):
+            raise Invalid(f"{iid}: family must be an id-like string")
+    families = Counter(i["family"] for i in items if i.get("family"))
+    for fam, n in families.items():
+        if n < 2:
+            warnings.append(f"family {fam}: only one interface uses it")
+        if not any(i.get("family") == fam and lifecycle(i) == "current" for i in items):
+            warnings.append(f"family {fam}: no current version")
     return warnings
 
 
@@ -270,7 +318,7 @@ def render_report(items, template):
         repo = md_link(i["frontend_repo"]) if i["frontend_repo"] else f"— *{i['repo_status']}*"
         us = with_note(US_RU[i["tos"]["us"]], i["tos"]["us_scope"])
         vpn = with_note(VPN_RU[i["vpn"]["s"]], i["vpn"]["note"])
-        rows.append(f"| {n} | **{i['name']}** | {i['category']} | {md_link(i['url'])} | {repo} | {short_geo(i)} | "
+        rows.append(f"| {n} | **{display_name(i)}**{LIFECYCLE_TAG[lifecycle(i)]} | {i['category']} | {md_link(i['url'])} | {repo} | {short_geo(i)} | "
                     f"{S_RU[i['geo_feature']['s']]} | {scr} | {vpn} | {us} | **{level(i)}** |")
     main_table = "\n".join(rows)
 
@@ -291,7 +339,7 @@ def render_report(items, template):
         mech = "<br>".join(p.replace("|", "/") for p in parts) or "—"
         ev = "<br>".join(f"`{e}`" if not e.startswith("http") else f"[src]({e})" for e in i["evidence"][:4]) or "—"
         fail = with_note(i["screening"]["fail"], i["screening"]["fail_note"]) if i["screening"]["fail"] else "—"
-        mrows.append(f"| **{i['name']}** | {level(i)} | {mech} | {fail} | {FORK_RU[fork_ready(i)]} | "
+        mrows.append(f"| **{display_name(i)}**{LIFECYCLE_TAG[lifecycle(i)]} | {level(i)} | {mech} | {fail} | {FORK_RU[fork_ready(i)]} | "
                      f"{i['fork_notes'].replace('|', '/')} | {ev} |")
     mech_table = "\n".join(mrows)
 
@@ -299,13 +347,15 @@ def render_report(items, template):
     for i in items:
         for l in i["live"]:
             if any(k in l for k in ("SDN", "sanctioned", "geoblock", "restricted", "geo-config", "geo/country", "blacklisted", "screen")):
-                lrows.append(f"| {i['name']} | {l} |")
+                lrows.append(f"| {display_name(i)} | {l} |")
     live_table = "\n".join(lrows)
 
     lv = Counter(level(i) for i in items)
+    lc = Counter(lifecycle(i) for i in items)
     n_open = sum(1 for i in items if i["frontend_repo"])
     stats = (f"Всего интерфейсов: **{len(items)}**, с открытым фронтендом: **{n_open}**, закрытых: **{len(items) - n_open}**. "
-             f"Уровни: D — {lv['D']}, C — {lv['C']}, B — {lv['B']}, A — {lv['A']}, A? — {lv['A?']}, ? — {lv['?']}.")
+             f"Рейтинг (меньше ограничений = лучше): A — {lv['A']}, B — {lv['B']}, C — {lv['C']}, D — {lv['D']}, n/a — {lv['n/a']}. "
+             f"Устаревших версий: {lc['legacy']}, неработающих интерфейсов: {lc['defunct']}.")
 
     prov = Counter()
     for i in items:
@@ -373,16 +423,16 @@ def latest_observations(obs):
 
 # ----------------------------------------------------------------------------- csv / ui
 CSV_COLS = ["id", "name", "description", "category", "category_group", "chains", "chain_tags", "url", "frontend_repo", "repo_state", "repo_status",
-            "repo_last_commit", "level", "geo_site", "geo_site_countries", "geo_site_close_only", "geo_site_method",
+            "repo_last_commit", "level", "restriction_count", "geo_site", "geo_site_countries", "geo_site_close_only", "geo_site_method",
             "geo_feature", "geo_feature_countries", "geo_feature_scope", "vpn", "vpn_note", "screening", "screening_provider",
             "screening_layer", "screening_fail", "screening_fail_note", "asset_filter", "tos_url", "tos_updated", "tos_us",
             "tos_us_scope", "tos_restricted", "tos_restricted_codes", "fork_ready", "fork_notes", "alternatives", "live",
-            "evidence", "confidence", "kyc", "kyc_layer", "kyc_scope"]
+            "evidence", "confidence", "kyc", "kyc_layer", "kyc_scope", "version", "lifecycle", "lifecycle_note", "family"]
 
 
 def csv_row(i):
     return [i["id"], i["name"], i["description"], i["category"], category_group(i), i["chains"], " ".join(chain_tags(i)), i["url"],
-            i["frontend_repo"] or "", i["repo_state"], i["repo_status"], i["repo_last_commit"] or "", level(i),
+            i["frontend_repo"] or "", i["repo_state"], i["repo_status"], i["repo_last_commit"] or "", level(i), restrictions(i)["count"],
             i["geo_site"]["s"], " ".join(i["geo_site"]["countries"]), " ".join(i["geo_site"]["close_only"]), i["geo_site"]["method"],
             i["geo_feature"]["s"], " ".join(i["geo_feature"]["countries"]), i["geo_feature"]["scope"],
             i["vpn"]["s"], i["vpn"]["note"], i["screening"]["s"], i["screening"]["provider"], i["screening"]["layer"] or "",
@@ -390,23 +440,29 @@ def csv_row(i):
             i["tos"]["us"], i["tos"]["us_scope"], i["tos"]["restricted"], " ".join(i["tos"]["restricted_codes"]),
             fork_ready(i), i["fork_notes"], " | ".join(f"{a['name']} {a['url']}" for a in i["alternatives"]),
             " | ".join(i["live"]), " | ".join(i["evidence"]), i["confidence"],
-            (i.get("kyc") or {}).get("s", ""), (i.get("kyc") or {}).get("layer") or "", (i.get("kyc") or {}).get("scope", "")]
+            (i.get("kyc") or {}).get("s", ""), (i.get("kyc") or {}).get("layer") or "", (i.get("kyc") or {}).get("scope", ""),
+            i.get("version", ""), lifecycle(i), i.get("lifecycle_note", ""), i.get("family", "")]
 
 
 def ui_dataset(data, observations, ui_chains=None):
     """Dataset for the web app. With ui_chains (e.g. {"evm"}) only interfaces carrying one of those chain tags are exported;
-    the report and CSV always cover the whole catalog."""
+    defunct interfaces are never exported. The report and CSV always cover the whole catalog."""
     meta = OrderedDict(data["meta"])
     meta["regions"] = OrderedDict(REGIONS)
     meta["catalog_total"] = len(data["interfaces"])
+    meta["defunct_hidden"] = [display_name(i) for i in data["interfaces"] if lifecycle(i) == "defunct"]
     meta["scope"] = "EVM networks only" if ui_chains == {"evm"} else ("chains: " + ", ".join(sorted(ui_chains)) if ui_chains else "all interfaces")
     by_iface = latest_observations(observations)
     items = []
     for i in data["interfaces"]:
         if ui_chains and not (set(chain_tags(i)) & ui_chains):
             continue
+        if lifecycle(i) == "defunct":
+            continue
         e = OrderedDict(i)
+        e["lifecycle"] = lifecycle(i)
         e["level"] = level(i)
+        e["restrictions"] = restrictions(i)
         e["fork_ready"] = fork_ready(i)
         e["category_group"] = category_group(i)
         e["chain_tags"] = chain_tags(i)
@@ -459,7 +515,7 @@ def main():
         ui_chains = set(args.ui_chains.split(",")) if args.ui_chains else None
         ui = ui_dataset(data, observations, ui_chains)
         dump_json(ui, args.ui)
-        print(f"ui dataset: {len(ui['interfaces'])} of {len(items)} interfaces ({ui['meta']['scope']})")
+        print(f"ui dataset: {len(ui['interfaces'])} of {len(items)} interfaces ({ui['meta']['scope']}; defunct hidden: {len(ui['meta']['defunct_hidden'])})")
 
     print(stats)
     print("providers:", prov_line)

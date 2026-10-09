@@ -12,6 +12,7 @@ import {
   InterfaceEntry,
   LAYERS,
   LEVELS,
+  LIFECYCLES,
   Level,
   MechanismKind,
   OBS_KINDS,
@@ -91,6 +92,10 @@ function entry(raw: unknown, index: number): InterfaceEntry {
   return {
     id,
     name: str(raw.name, w('name')),
+    version: typeof raw.version === 'string' && raw.version ? raw.version : undefined,
+    family: typeof raw.family === 'string' && raw.family ? raw.family : undefined,
+    lifecycle: raw.lifecycle === undefined ? 'current' : oneOf(LIFECYCLES, raw.lifecycle, w('lifecycle')),
+    lifecycle_note: typeof raw.lifecycle_note === 'string' && raw.lifecycle_note ? raw.lifecycle_note : undefined,
     description: typeof raw.description === 'string' ? raw.description : '',
     description_zh: typeof raw.description_zh === 'string' ? raw.description_zh : undefined,
     category: str(raw.category, w('category')),
@@ -148,6 +153,15 @@ function entry(raw: unknown, index: number): InterfaceEntry {
       return { name: str(a.name, w('alternatives.name')), url: str(a.url, w('alternatives.url')) };
     }),
     level: oneOf(LEVELS, raw.level, w('level')),
+    restrictions: isRecord(raw.restrictions)
+      ? {
+          count: typeof raw.restrictions.count === 'number' ? raw.restrictions.count : 0,
+          countries: typeof raw.restrictions.countries === 'number' ? raw.restrictions.countries : 0,
+          mechanisms: (isStringArray(raw.restrictions.mechanisms) ? raw.restrictions.mechanisms : []).map((m) =>
+            oneOf(['geo_site', 'geo_feature', 'screening', 'vpn', 'kyc'] as const, m, w('restrictions.mechanisms'))
+          )
+        }
+      : { count: 0, countries: 0, mechanisms: [] },
     fork_ready: oneOf(FORK_READY, raw.fork_ready, w('fork_ready')),
     observations: (Array.isArray(raw.observations) ? raw.observations : []).map((o, n) => observation(o, `${id}.observations[${n}]`))
   };
@@ -179,7 +193,8 @@ export function assertDataset(raw: unknown): Dataset {
       country_tokens: str(meta.country_tokens, 'meta.country_tokens'),
       regions: Object.fromEntries(Object.entries(meta.regions).map(([k, v]) => [k, str(v, `meta.regions.${k}`)])),
       catalog_total: typeof meta.catalog_total === 'number' ? meta.catalog_total : interfaces.length,
-      scope: typeof meta.scope === 'string' ? meta.scope : 'all interfaces'
+      scope: typeof meta.scope === 'string' ? meta.scope : 'all interfaces',
+      defunct_hidden: isStringArray(meta.defunct_hidden) ? meta.defunct_hidden : []
     },
     interfaces
   };
@@ -189,8 +204,27 @@ export function assertDataset(raw: unknown): Dataset {
 
 export const levelRank = (level: Level): number => LEVELS.indexOf(level);
 
+/** Name with the version label: "Aave" + "V3" -> "Aave V3". Use it wherever an interface is named. */
+export const displayName = (e: Pick<InterfaceEntry, 'name' | 'version'>): string => (e.version ? `${e.name} ${e.version}` : e.name);
+
+/** 0 for current interfaces, 1 for legacy ones (they go to the bottom of the default order). */
+export const lifecycleRank = (e: InterfaceEntry): number => (e.lifecycle === 'legacy' ? 1 : 0);
+
+/** Breakdown behind the rating, e.g. "33 restrictions: 31 countries + Feature Block, Wallet screening". */
+export const restrictionsText = (
+  e: InterfaceEntry,
+  tip: (n: number, countries: number, mechanisms: string) => string,
+  labels: Record<MechanismKind, string>,
+  sep: string,
+  notDetermined: string
+): string =>
+  e.level === 'n/a'
+    ? notDetermined
+    : tip(e.restrictions.count, e.restrictions.countries, e.restrictions.mechanisms.map((m) => labels[m]).join(sep));
+
+/** Most restricted first: rating, then the number of restrictions, then name. */
 export const compareByLevelThenName = (a: InterfaceEntry, b: InterfaceEntry): number =>
-  levelRank(a.level) - levelRank(b.level) || a.name.localeCompare(b.name);
+  levelRank(a.level) - levelRank(b.level) || b.restrictions.count - a.restrictions.count || displayName(a).localeCompare(displayName(b));
 
 // ---------------------------------------------------------------------------- country tokens
 
