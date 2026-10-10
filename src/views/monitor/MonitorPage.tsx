@@ -6,6 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import Grid from '@mui/material/Grid';
+import InputAdornment from '@mui/material/InputAdornment';
 import Link from '@mui/material/Link';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -26,6 +27,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import { UnfoldMore } from '@mui/icons-material';
 import LaunchIcon from '@mui/icons-material/Launch';
+import SearchIcon from '@mui/icons-material/Search';
 
 import { dataset, interfaces, networkOptions } from 'data/dataset';
 import { countryName, countryOptions, flagEmoji, isCountryCode } from 'data/countries';
@@ -60,16 +62,27 @@ import {
 import FilterSelect from './components/FilterSelect';
 import LevelChip from './components/LevelChip';
 import RepoLink from './components/RepoLink';
-import ColumnLegend from './components/ColumnLegend';
 import PermissionlessLink from './components/PermissionlessLink';
 import CountryVerdictCell from './components/CountryVerdictCell';
 import StatTiles from './components/StatTiles';
 import StatusChip from './components/StatusChip';
+import TableLegend from './components/TableLegend';
 import ToneChip, { countryStatusTone, vpnTone } from './components/ToneChip';
 
-type SortableField = 'permissionless' | 'country' | 'level' | 'name' | 'category' | 'screening' | 'repo';
+type SortableField =
+  | 'permissionless'
+  | 'country'
+  | 'level'
+  | 'name'
+  | 'category'
+  | 'screening'
+  | 'repo'
+  | 'geo'
+  | 'feature'
+  | 'vpn'
+  | 'official';
 
-/** The Category column is hidden for now (the Category filter stays); flip to show it again. */
+/** The Category column is hidden for now; flip to show it again. */
 const SHOW_CATEGORY_COLUMN = false;
 
 /**
@@ -78,17 +91,24 @@ const SHOW_CATEGORY_COLUMN = false;
  */
 const SHOW_SCREENING_LAYER_FILTER = false;
 
+// Mechanism checkboxes and the open-source switch are hidden for now; flip this flag to restore them.
+const SHOW_MECHANISM_FILTERS = false;
+
 interface CountryHit {
   cc: string;
   verdict: CountryVerdict;
 }
 
 const hasPermissionless = (i: InterfaceEntry): boolean => i.alternatives.length > 0;
+const geoCount = (i: InterfaceEntry): number => i.geo_site.countries.length + i.geo_site.close_only.length;
+const officialHost = (i: InterfaceEntry): string => i.url.replace(/^https?:\/\//, '').replace(/\/$/, '');
 type SortOrder = 'asc' | 'desc';
 
 const MECHANISMS: MechanismKind[] = ['geo_site', 'geo_feature', 'screening', 'vpn', 'kyc'];
 const REPO_ORDER = ['open', 'open_stale', 'archived', 'private_now', 'closed', 'none_found'];
-const SCREENING_ORDER = ['yes', 'reported', 'optional', 'tos_only', 'unknown', 'no'];
+// Strictest first.
+const STATUS_ORDER = ['yes', 'reported', 'optional', 'tos_only', 'unknown', 'no'];
+const VPN_ORDER = ['block', 'detect', 'optional', 'tos_only', 'unknown', 'no'];
 
 function compare(a: InterfaceEntry, b: InterfaceEntry, field: SortableField): number {
   switch (field) {
@@ -104,9 +124,23 @@ function compare(a: InterfaceEntry, b: InterfaceEntry, field: SortableField): nu
       return displayName(a).localeCompare(displayName(b));
     case 'category':
       return a.category_group.localeCompare(b.category_group) || a.name.localeCompare(b.name);
+    case 'geo':
+      return (
+        STATUS_ORDER.indexOf(a.geo_site.s) - STATUS_ORDER.indexOf(b.geo_site.s) || geoCount(b) - geoCount(a) || compareByLevelThenName(a, b)
+      );
+    case 'feature':
+      return (
+        STATUS_ORDER.indexOf(a.geo_feature.s) - STATUS_ORDER.indexOf(b.geo_feature.s) ||
+        b.geo_feature.countries.length - a.geo_feature.countries.length ||
+        compareByLevelThenName(a, b)
+      );
+    case 'vpn':
+      return VPN_ORDER.indexOf(a.vpn.s) - VPN_ORDER.indexOf(b.vpn.s) || compareByLevelThenName(a, b);
+    case 'official':
+      return officialHost(a).localeCompare(officialHost(b));
     case 'screening':
       return (
-        SCREENING_ORDER.indexOf(a.screening.s) - SCREENING_ORDER.indexOf(b.screening.s) ||
+        STATUS_ORDER.indexOf(a.screening.s) - STATUS_ORDER.indexOf(b.screening.s) ||
         LAYERS.indexOf(b.screening.layer ?? 'edge') - LAYERS.indexOf(a.screening.layer ?? 'edge') ||
         levelRank(a.level) - levelRank(b.level)
       );
@@ -259,16 +293,34 @@ export default function MonitorPage() {
   const currentPage = Math.min(page, pageCount);
   const paginated = filtered.slice((currentPage - 1) * rowsPerPage, currentPage * rowsPerPage);
 
-  const header = (field: SortableField, label: string) => (
-    <TableSortLabel
-      active={sortField === field}
-      direction={sortField === field ? sortOrder : 'asc'}
-      onClick={() => handleRequestSort(field)}
-      IconComponent={sortField === field ? undefined : UnfoldMore}
-    >
-      {label}
-    </TableSortLabel>
-  );
+  // Every column sorts; definitions open on hover and when the sort button receives keyboard focus.
+  const dottedSx = { borderBottom: '1px dotted', borderColor: 'text.secondary', cursor: 'help' };
+
+  const header = (field: SortableField, label: string, tip?: string) => {
+    const sortLabel = (
+      <TableSortLabel
+        active={sortField === field}
+        direction={sortField === field ? sortOrder : 'asc'}
+        onClick={() => handleRequestSort(field)}
+        IconComponent={sortField === field ? undefined : UnfoldMore}
+      >
+        {tip ? (
+          <Box component="span" sx={dottedSx}>
+            {label}
+          </Box>
+        ) : (
+          label
+        )}
+      </TableSortLabel>
+    );
+    return tip ? (
+      <Tooltip title={tip} arrow placement="top">
+        {sortLabel}
+      </Tooltip>
+    ) : (
+      sortLabel
+    );
+  };
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -282,20 +334,30 @@ export default function MonitorPage() {
       <StatTiles activeLevels={levelFilter} onLevelClick={toggleLevel} />
 
       <Grid container spacing={2} sx={{ mb: 2 }}>
-        <Grid size={{ xs: 12, md: 4 }}>
+        {/* Search stays separate from the filters, narrowing by name or domain as you type. */}
+        <Grid size={{ xs: 12 }}>
           <TextField
             fullWidth
             size="small"
             label={t.monitor.search}
             placeholder={t.monitor.searchPlaceholder}
             value={nameFilter}
+            slotProps={{
+              input: {
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon fontSize="small" />
+                  </InputAdornment>
+                )
+              }
+            }}
             onChange={(e) => {
               setNameFilter(e.target.value);
               resetPage();
             }}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <FilterSelect
             label={t.monitor.category}
             options={CATEGORY_GROUPS}
@@ -307,18 +369,7 @@ export default function MonitorPage() {
             }}
           />
         </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
-          <FilterSelect
-            label={t.monitor.network}
-            options={networkOptions}
-            value={networkFilter}
-            onChange={(v) => {
-              setNetworkFilter(v);
-              resetPage();
-            }}
-          />
-        </Grid>
-        <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
           <FilterSelect
             label={t.monitor.level}
             options={LEVELS}
@@ -330,8 +381,28 @@ export default function MonitorPage() {
             }}
           />
         </Grid>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <FilterSelect
+            label={t.monitor.country}
+            options={countryOptions(loc)}
+            value={countries}
+            getLabel={(c) => `${flagEmoji(c)} ${countryName(c, loc)}`}
+            onChange={setCountries}
+          />
+        </Grid>
+        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+          <FilterSelect
+            label={t.monitor.network}
+            options={networkOptions}
+            value={networkFilter}
+            onChange={(v) => {
+              setNetworkFilter(v);
+              resetPage();
+            }}
+          />
+        </Grid>
         {SHOW_SCREENING_LAYER_FILTER && (
-          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
+          <Grid size={{ xs: 12, sm: 6, md: 3 }}>
             <FilterSelect
               label={t.monitor.screeningLayer}
               options={LAYERS}
@@ -344,15 +415,6 @@ export default function MonitorPage() {
             />
           </Grid>
         )}
-        <Grid size={{ xs: 12, sm: 6, md: SHOW_SCREENING_LAYER_FILTER ? 4 : 8 }}>
-          <FilterSelect
-            label={t.monitor.country}
-            options={countryOptions(loc)}
-            value={countries}
-            getLabel={(c) => `${flagEmoji(c)} ${countryName(c, loc)}`}
-            onChange={setCountries}
-          />
-        </Grid>
         {countries.length > 0 && (
           <Grid size={{ xs: 12 }}>
             <Stack direction="row" spacing={1} sx={{ flexWrap: 'wrap', rowGap: 1 }} alignItems="center">
@@ -372,38 +434,45 @@ export default function MonitorPage() {
             </Stack>
           </Grid>
         )}
-        <Grid size={{ xs: 12 }}>
-          <Stack direction={{ xs: 'column', md: 'row' }} spacing={{ xs: 0, md: 3 }} alignItems={{ md: 'center' }} sx={{ flexWrap: 'wrap' }}>
-            <Typography variant="body2" color="text.secondary" sx={{ pr: 1 }}>
-              {t.monitor.hasMechanism}
-            </Typography>
-            <FormGroup row>
-              {MECHANISMS.map((kind) => (
-                <FormControlLabel
-                  key={kind}
-                  control={<Checkbox size="small" checked={mechanismFilter.includes(kind)} onChange={() => toggleMechanism(kind)} />}
-                  label={<Typography variant="body2">{L.MECHANISM_LABELS[kind]}</Typography>}
-                />
-              ))}
-            </FormGroup>
-            <FormControlLabel
-              control={
-                <Switch
-                  size="small"
-                  checked={openOnly}
-                  onChange={(e) => {
-                    setOpenOnly(e.target.checked);
-                    resetPage();
-                  }}
-                />
-              }
-              label={<Typography variant="body2">{t.monitor.openOnly}</Typography>}
-            />
-          </Stack>
-        </Grid>
+        {SHOW_MECHANISM_FILTERS && (
+          <Grid size={{ xs: 12 }}>
+            <Stack
+              direction={{ xs: 'column', md: 'row' }}
+              spacing={{ xs: 0, md: 3 }}
+              alignItems={{ md: 'center' }}
+              sx={{ flexWrap: 'wrap' }}
+            >
+              <Typography variant="body2" color="text.secondary" sx={{ pr: 1 }}>
+                {t.monitor.hasMechanism}
+              </Typography>
+              <FormGroup row>
+                {MECHANISMS.map((kind) => (
+                  <FormControlLabel
+                    key={kind}
+                    control={<Checkbox size="small" checked={mechanismFilter.includes(kind)} onChange={() => toggleMechanism(kind)} />}
+                    label={<Typography variant="body2">{L.MECHANISM_LABELS[kind]}</Typography>}
+                  />
+                ))}
+              </FormGroup>
+              <FormControlLabel
+                control={
+                  <Switch
+                    size="small"
+                    checked={openOnly}
+                    onChange={(e) => {
+                      setOpenOnly(e.target.checked);
+                      resetPage();
+                    }}
+                  />
+                }
+                label={<Typography variant="body2">{t.monitor.openOnly}</Typography>}
+              />
+            </Stack>
+          </Grid>
+        )}
       </Grid>
 
-      <ColumnLegend />
+      <TableLegend />
 
       <TableContainer component={Paper} sx={{ mb: 2 }}>
         <Table
@@ -420,7 +489,7 @@ export default function MonitorPage() {
             <TableRow>
               <TableCell>{header('name', t.monitor.cols.iface)}</TableCell>
               {SHOW_CATEGORY_COLUMN && <TableCell>{header('category', t.monitor.cols.category)}</TableCell>}
-              <TableCell sx={{ whiteSpace: 'nowrap' }}>{header('level', t.monitor.cols.level)}</TableCell>
+              <TableCell sx={{ whiteSpace: 'nowrap' }}>{header('level', t.monitor.cols.level, t.legend.level)}</TableCell>
               {countries.length > 0 && (
                 <TableCell>
                   {header(
@@ -431,13 +500,13 @@ export default function MonitorPage() {
                   )}
                 </TableCell>
               )}
-              <TableCell>{t.monitor.cols.geo}</TableCell>
-              <TableCell>{t.monitor.cols.feature}</TableCell>
-              <TableCell>{header('screening', t.monitor.cols.screening)}</TableCell>
-              <TableCell>{t.monitor.cols.vpn}</TableCell>
-              <TableCell sx={{ whiteSpace: 'nowrap' }}>{header('repo', t.monitor.cols.code)}</TableCell>
-              <TableCell>{t.monitor.cols.official}</TableCell>
-              <TableCell>{header('permissionless', t.monitor.cols.permissionless)}</TableCell>
+              <TableCell>{header('geo', t.monitor.cols.geo, t.legend.geo)}</TableCell>
+              <TableCell>{header('feature', t.monitor.cols.feature, t.legend.feature)}</TableCell>
+              <TableCell>{header('screening', t.monitor.cols.screening, t.legend.screening)}</TableCell>
+              <TableCell>{header('vpn', t.monitor.cols.vpn, t.legend.vpn)}</TableCell>
+              <TableCell sx={{ whiteSpace: 'nowrap' }}>{header('repo', t.monitor.cols.code, t.legend.code)}</TableCell>
+              <TableCell>{header('official', t.monitor.cols.official, t.legend.official)}</TableCell>
+              <TableCell>{header('permissionless', t.monitor.cols.permissionless, t.legend.permissionless)}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -539,7 +608,7 @@ export default function MonitorPage() {
                       variant="body2"
                       sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, whiteSpace: 'nowrap' }}
                     >
-                      {i.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                      {officialHost(i)}
                       <LaunchIcon sx={{ fontSize: 14 }} />
                     </Link>
                   </TableCell>

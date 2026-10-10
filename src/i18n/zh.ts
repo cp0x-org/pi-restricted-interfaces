@@ -176,6 +176,8 @@ export const zh: Messages = {
     empty: '没有符合当前筛选条件的界面。',
     showing: (shown, total) => `显示 ${shown} / ${total} 个界面`,
     rows: '每页行数',
+    legendToggle: '如何阅读此表',
+    methodologyLink: '完整方法论 →',
     restrictionsTip: (n, countries, mechanisms) =>
       n === 0
         ? '未发现技术性限制（仅写在服务条款中的限制不计入）'
@@ -196,15 +198,9 @@ export const zh: Messages = {
     code: '公开的前端代码仓库。',
     official: '官方界面。',
     permissionless: '来自 pi.cp0x.com 的无需许可界面；这些行排在最前。',
-    legacy: '协议正在逐步淘汰的旧版官方界面；这些行排在最后。',
-    values: {
-      yes: '已由代码、实测或文档确认',
-      reported: '媒体或用户报道',
-      tos_only: '仅写在服务条款中，代码未执行',
-      optional: '代码中存在，默认关闭',
-      no: '未发现',
-      unknown: '未检查'
-    }
+    legacy: '协议正在逐步淘汰的旧版界面；排在最后',
+    vpnDetect: 'VPN 或 Tor 用户会被识别，只能使用受限模式或会看到警告',
+    vpnBlock: 'VPN 或 Tor 用户被拒绝访问'
   },
   chips: {
     regions: '地区',

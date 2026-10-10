@@ -1,6 +1,6 @@
 // English UI strings: the reference catalog. zh.ts must provide the same keys (enforced by the Messages type).
 // Label maps come from views/monitor/constants.ts, which the build-time prerender also uses.
-import type { Status, CountryStatus } from '../types/restrictions';
+import type { CountryStatus } from '../types/restrictions';
 import {
   BASIS_DESCRIPTIONS,
   BASIS_LABELS,
@@ -110,6 +110,8 @@ export const en = {
     empty: 'No interfaces match the current filters.',
     showing: (shown: number, total: number) => `Showing ${shown} of ${total} interfaces`,
     rows: 'Rows',
+    legendToggle: 'How to read the table',
+    methodologyLink: 'Full methodology →',
     restrictionsTip: (n: number, countries: number, mechanisms: string) =>
       n === 0
         ? 'No technical restriction found (terms written only in the ToS are not counted)'
@@ -131,15 +133,9 @@ export const en = {
     code: 'Public frontend repository.',
     official: 'The official interface.',
     permissionless: 'Our permissionless interface from pi.cp0x.com; these rows are listed first.',
-    legacy: 'An older official version that the protocol is phasing out; these rows are listed at the bottom.',
-    values: {
-      yes: 'confirmed by code, a live check or docs',
-      reported: 'press or user reports',
-      tos_only: 'only written in the Terms of Service, not enforced in code',
-      optional: 'in code, off by default',
-      no: 'not found',
-      unknown: 'not checked'
-    } as Record<Status, string>
+    legacy: 'An older version the protocol is phasing out; listed at the bottom',
+    vpnDetect: 'VPN or Tor users are recognised and get a limited mode or a warning',
+    vpnBlock: 'VPN or Tor users are refused access'
   },
   chips: {
     regions: 'Regions',
