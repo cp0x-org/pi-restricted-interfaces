@@ -1,23 +1,7 @@
-import { Fragment } from 'react';
 import { Stack, Box, Typography, Link } from '@mui/material';
 import { ReactComponent as Cp0xLogo } from '@/assets/images/cp0x-logo.svg';
 import { useI18n } from 'i18n';
-
-// The 0 of cp0x takes the brand colour, as in the logo beside it; the translated phrase stays whole.
-const brandName = (text: string) =>
-  text.split(/(cp0x)/).map((part, n) =>
-    part === 'cp0x' ? (
-      <Fragment key={n}>
-        cp
-        <Box component="span" sx={{ color: 'secondary.main' }}>
-          0
-        </Box>
-        x
-      </Fragment>
-    ) : (
-      part
-    )
-  );
+import BrandText from 'ui-component/BrandText';
 
 export default function Footer() {
   const { t, path } = useI18n();
@@ -64,7 +48,7 @@ export default function Footer() {
           }}
         >
           <Typography component="span" sx={{ fontWeight: 600 }}>
-            {brandName(t.layout.support)}
+            <BrandText text={t.layout.support} />
           </Typography>
           <Box
             className="wallet"
