@@ -157,7 +157,7 @@ export default function MainLayout() {
       {/* main content */}
       <MainContentStyled {...{ borderRadius, menuOrientation, open: drawerOpen, marginTop: 80 }}>
         <Container
-          maxWidth={'lg'}
+          maxWidth={'xl'}
           sx={{
             ...(!container && { px: { xs: 0 } }),
             minHeight: 'calc(100vh - 228px)',

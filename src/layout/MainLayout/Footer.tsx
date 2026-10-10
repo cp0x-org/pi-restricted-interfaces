@@ -16,13 +16,13 @@ export default function Footer() {
         flexDirection: { xs: 'column', md: 'row' }
       }}
     >
+      {/* Match the page container's width and edges. */}
       <Stack
         direction={{ xs: 'column', md: 'row' }}
         sx={{
           width: '100%',
-          maxWidth: '1280px',
+          maxWidth: 1536,
           mx: 'auto',
-          px: 3,
           alignItems: { xs: 'center', md: 'center' },
           justifyContent: 'space-between',
           gap: { xs: 2, md: 0 }
