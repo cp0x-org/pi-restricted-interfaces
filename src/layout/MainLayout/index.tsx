@@ -15,10 +15,10 @@ import Header from './Header';
 import MainContentStyled from './MainContentStyled';
 import Loader from 'ui-component/Loader';
 
-import { MenuOrientation, ThemeMode } from 'config';
+import { MenuOrientation } from 'config';
 import useConfig from 'hooks/useConfig';
 import { handlerDrawerOpen, useGetMenuMaster } from 'api/menu';
-import Tabs from '@mui/material/Tabs';
+import Tabs, { TabsProps } from '@mui/material/Tabs';
 import Tab, { TabProps } from '@mui/material/Tab';
 import MainCard from '../../ui-component/cards/MainCard';
 import { SHOW_COUNTRY_PAGE } from 'views/monitor/constants';
@@ -26,54 +26,41 @@ import { useI18n } from 'i18n';
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
-// icon tab style
-const AntTabs = styled(Tabs)(({ theme }) => ({
-  background: theme.palette.mode === ThemeMode.DARK ? theme.palette.dark[800] : theme.palette.primary.light,
-  width: 'fit-content',
-  borderBottom: 'none', // убираем бордер
-  '& .MuiTabs-flexContainer': {
-    border: '1px solid',
-    borderRadius: '12px',
-    borderColor: '#3F3F3F',
-    height: '61px'
-  },
-  '& .MuiTabs-scroller': {
-    borderBottom: 'none'
-  },
-  borderRadius: '12px',
-  boxShadow: 'none',
-  '& .MuiTabs-indicator': {
-    backgroundColor: theme.palette.secondary.main,
-    height: 0 // скрываем индикатор активного таба
-  }
-}));
+// Light tabs should not overpower the heading.
+// MUI clips the tab row (root via a class, scroller via inline style), cutting off the focus ring; two short tabs do not overflow, so there is nothing to clip.
+const AntTabs = styled((props: TabsProps) => <Tabs slotProps={{ scroller: { style: { overflow: 'visible' } } }} {...props} />)(
+  ({ theme }) => ({
+    minHeight: 0,
+    overflow: 'visible',
+    borderBottom: `1px solid ${theme.palette.divider}`,
+    '& .MuiTabs-indicator': {
+      backgroundColor: theme.palette.secondary.main,
+      height: 2
+    }
+  })
+);
 
-// style constant
-// Tabs are real links (crawlable, open in a new tab, announce aria-current) styled as the original tab bar.
+// Tabs are real links: crawlable, open in a new tab, and announce aria-current.
 const AntTab = styled((props: TabProps<typeof RouterLink>) => <Tab disableRipple component={RouterLink} {...props} />)(({ theme }) => ({
   textTransform: 'none',
   minWidth: 0,
-  fontWeight: theme.typography.fontWeightRegular,
-  fontFamily: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif',
-  // fontWeight: 500, // Medium
-  fontSize: '16px',
-  color: theme.palette.grey[100],
-  '&.MuiTab-root': {
-    borderRight: '1px solid #3F3F3F',
-    borderColor: '#3F3F3F',
-    minWidth: '125px'
-  },
+  minHeight: 0,
+  padding: theme.spacing(1, 0),
+  marginRight: theme.spacing(3),
+  fontSize: '15px',
+  fontWeight: theme.typography.fontWeightMedium,
+  color: theme.palette.text.secondary,
   '&:hover': {
-    color: theme.palette.grey[500],
-    opacity: 1
+    color: theme.palette.text.primary
   },
   '&.Mui-selected': {
-    color: theme.palette.background.default,
-    backgroundColor: theme.palette.secondary.main,
-    fontWeight: theme.typography.fontWeightMedium
+    color: theme.palette.text.primary
   },
+  // Ripple is disabled, so keyboard focus needs its own visible marker.
   '&.Mui-focusVisible': {
-    backgroundColor: theme.palette.secondary.main
+    outline: `2px solid ${theme.palette.secondary.main}`,
+    outlineOffset: 2,
+    borderRadius: 2
   }
 }));
 export default function MainLayout() {
@@ -165,8 +152,8 @@ export default function MainLayout() {
             flexDirection: 'column'
           }}
         >
-          <MainCard>
-            <AntTabs value={currentTabIndex === -1 ? false : currentTabIndex} centered role="navigation" aria-label={t.layout.sections}>
+          <MainCard contentSX={{ p: { xs: 2, sm: 3 } }}>
+            <AntTabs value={currentTabIndex === -1 ? false : currentTabIndex} role="navigation" aria-label={t.layout.sections}>
               {tabs.map((tab, index) => (
                 <AntTab
                   wrapped={true}

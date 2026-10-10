@@ -97,15 +97,21 @@ export default function TableLegend() {
                 <LegendItem chip={<ToneChip tone={vpnTone('block')} label={L.VPN_LABELS.block} />} description={t.legend.vpnBlock} />
               </LegendGroup>
             </Stack>
-            <LegendGroup title={t.method.statusTitle}>
-              {STATUSES.map((s) => (
-                <LegendItem
-                  key={s}
-                  chip={<ToneChip tone={statusTone(s)} label={L.STATUS_LABELS[s]} />}
-                  description={L.STATUS_DESCRIPTIONS[s]}
-                />
-              ))}
-            </LegendGroup>
+            <Stack spacing={2.5}>
+              <LegendGroup title={t.method.statusTitle}>
+                {STATUSES.map((s) => (
+                  <LegendItem
+                    key={s}
+                    chip={<ToneChip tone={statusTone(s)} label={L.STATUS_LABELS[s]} />}
+                    description={L.STATUS_DESCRIPTIONS[s]}
+                  />
+                ))}
+              </LegendGroup>
+              {/* Legacy rows sit at the bottom of the table; their chip is explained here like every other chip. */}
+              <LegendGroup title={t.monitor.cols.iface}>
+                <LegendItem chip={<ToneChip tone="neutral" label={t.chips.legacy} />} description={t.legend.legacy} />
+              </LegendGroup>
+            </Stack>
           </Box>
           <Box sx={{ mt: 2.5 }}>
             <Link component={RouterLink} to={path('/methodology')} variant="caption" underline="hover">

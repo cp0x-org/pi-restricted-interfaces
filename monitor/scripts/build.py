@@ -105,8 +105,9 @@ def lifecycle(i):
 
 
 def display_name(i):
-    """Name as shown everywhere: "Aave" + version "V3" -> "Aave V3"."""
-    return f"{i['name']} {i['version']}" if i.get("version") else i["name"]
+    """Name for reports and CSV, with a version label and parenthesized aka: "Sky (ex-Maker)"."""
+    name = f"{i['name']} {i['version']}" if i.get("version") else i["name"]
+    return f"{name} ({i['aka']})" if i.get("aka") else name
 
 
 def level(i):
@@ -267,6 +268,10 @@ def validate(data):
             warnings.append(f"{iid}: geo_site.s=yes but no countries listed")
         if "version" in i and (not isinstance(i["version"], str) or not 1 <= len(i["version"]) <= 40):
             raise Invalid(f"{iid}: version must be a short label (1-40 characters)")
+        if "aka" in i and (not isinstance(i["aka"], str) or not 1 <= len(i["aka"]) <= 40):
+            raise Invalid(f"{iid}: aka must be a short label (1-40 characters)")
+        if "(" in i["name"] or "·" in i.get("version", ""):
+            raise Invalid(f"{iid}: keep name/version plain; put a former name, parent brand or product in aka")
         check_enum(w + "lifecycle", i.get("lifecycle", "current"), LIFECYCLE_OK)
         if "lifecycle_note" in i and not isinstance(i["lifecycle_note"], str):
             raise Invalid(f"{iid}: lifecycle_note must be a string")
@@ -431,7 +436,8 @@ CSV_COLS = ["id", "name", "description", "category", "category_group", "chains",
 
 
 def csv_row(i):
-    return [i["id"], i["name"], i["description"], i["category"], category_group(i), i["chains"], " ".join(chain_tags(i)), i["url"],
+    # The version has its own CSV column; keep only the name and aka in the name column.
+    return [i["id"], display_name({**i, "version": ""}), i["description"], i["category"], category_group(i), i["chains"], " ".join(chain_tags(i)), i["url"],
             i["frontend_repo"] or "", i["repo_state"], i["repo_status"], i["repo_last_commit"] or "", level(i), restrictions(i)["count"],
             i["geo_site"]["s"], " ".join(i["geo_site"]["countries"]), " ".join(i["geo_site"]["close_only"]), i["geo_site"]["method"],
             i["geo_feature"]["s"], " ".join(i["geo_feature"]["countries"]), i["geo_feature"]["scope"],
@@ -507,7 +513,8 @@ def main():
     with open(os.path.join(args.outdir, "report.md"), "w", encoding="utf-8") as fh:
         fh.write(report)
     with open(os.path.join(args.outdir, "interfaces.csv"), "w", newline="", encoding="utf-8") as fh:
-        w = csv.writer(fh)
+        # Match the repository's LF endings; csv defaults to CRLF and would rewrite every row on rebuild.
+        w = csv.writer(fh, lineterminator="\n")
         w.writerow(CSV_COLS)
         for i in items:
             w.writerow(csv_row(i))
