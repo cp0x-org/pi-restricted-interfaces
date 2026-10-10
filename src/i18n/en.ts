@@ -67,6 +67,7 @@ export const en = {
     tabs: { monitor: 'Monitor', country: 'By country', methodology: 'Methodology' },
     language: 'Language',
     homeLogo: 'cp0x DeFi Interface Restrictions Monitor, home',
+    support: 'Support cp0x',
     telegram: 'cp0x on Telegram',
     twitter: 'cp0x on X (Twitter)',
     github: 'cp0x on GitHub'
@@ -80,7 +81,7 @@ export const en = {
   monitor: {
     title: 'Official DeFi interfaces: who restricts what',
     intro: (shown: number, total: number, date: string) =>
-      `Each row is the official web interface of a protocol on EVM networks (${shown} of ${total} in the full catalog; Solana, Cosmos and other non-EVM apps stay in the data but are not shown). The rating counts the technical restrictions of the interface: the fewer, the better. Snapshot of ${date}; every claim is backed by code, a live check or the Terms of Service (see the interface page).`,
+      `Official DeFi interfaces rated by the technical restrictions they enforce: the fewer, the better. Click a row for the evidence. Snapshot of ${date}.`,
     search: 'Search',
     searchPlaceholder: 'Name or domain',
     category: 'Category',
@@ -105,6 +106,8 @@ export const en = {
       permissionless: 'Permissionless app'
     },
     multiCountry: (flags: string) => `${flags} restrictions`,
+    sortBy: 'Sort by',
+    reverseOrder: 'Reverse the order',
     countries: (n: number) => `${n} ${n === 1 ? 'country' : 'countries'}`,
     closeOnly: (n: number) => `${n} close-only`,
     empty: 'No interfaces match the current filters.',
@@ -185,6 +188,9 @@ export const en = {
     lastUpdated: 'Last updated',
     restrictedAsWritten: 'Restricted jurisdictions (as written)',
     named: 'Named jurisdictions',
+    allInGeoBlock: (n: number) => (n === 1 ? 'Listed under Geo Block above' : `All ${n} are listed under Geo Block above`),
+    namedOnlyInTerms: 'Named only in the Terms',
+    blockedNotNamed: 'Blocked, not named in the Terms',
     forkNotes: 'Fork notes',
     noNotes: 'No notes.',
     repoStatus: 'Repository status',
@@ -193,8 +199,7 @@ export const en = {
     egress: 'Egress',
     probeEndpoints: 'Probe endpoints',
     observations: 'Live observations by country',
-    notProbed:
-      'Not probed yet. The P3 probe (monitor/scripts/probe.py) records, per country and proxy type, whether the landing page and the known geo endpoints are served, blocked or challenged.',
+    notProbed: 'No live check from individual countries yet.',
     obsCols: { country: 'Country', vantage: 'Vantage', target: 'Target', result: 'Result', http: 'HTTP', when: 'When' },
     landing: 'landing page',
     geoEndpoint: 'geo endpoint',
@@ -329,7 +334,7 @@ export const en = {
     liveP2: (egress: string) =>
       `Egress of the initial snapshot: ${egress}. Those checks ran from a single vantage point and without executing JavaScript, so client-side geo-blocks and blocks for other countries were visible only through the code.`,
     liveP3:
-      'Per-country probing (P3): the landing page and the known geo endpoints of every interface are fetched through a residential proxy in the target country, without JavaScript. The vantage is verified first by independent IP-geolocation services (two must agree) and, on Cloudflare-fronted hosts, by the `loc=` field of `/cdn-cgi/trace`; a disagreeing vantage is discarded. The result is one of: served, blocked (HTTP 451, a 403 with geo wording, a redirect to a block page, or a geo endpoint answering “restricted”), close-only, feature-limited, or anti-bot challenge (not testable). “Served” only means that no edge-level block was observed: client-side gates, wallet screening and feature gates need the browser and wallet probes of the next milestones. Sanctioned jurisdictions are not probed; their status stays inferred from code and configuration.',
+      'Per-country probing: the landing page and the known geo endpoints of every interface are fetched through a residential proxy in the target country, without JavaScript. The vantage is verified first by independent IP-geolocation services (two must agree) and, on Cloudflare-fronted hosts, by the `loc=` field of `/cdn-cgi/trace`; a disagreeing vantage is discarded. The result is one of: served, blocked (HTTP 451, a 403 with geo wording, a redirect to a block page, or a geo endpoint answering “restricted”), close-only, feature-limited, or anti-bot challenge (not testable). “Served” only means that no edge-level block was observed: client-side gates, wallet screening and feature gates are not covered by these probes. Sanctioned jurisdictions are not probed; their status stays inferred from code and configuration.',
     limitsTitle: 'Limitations and data',
     limits: [
       'Production may differ from the repository: Uniswap publishes a release mirror, Raydium and QuickSwap keep stale snapshots, and several projects (PancakeSwap, Across, Spark) made their frontends private.',

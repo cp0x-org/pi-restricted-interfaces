@@ -93,6 +93,7 @@ function entry(raw: unknown, index: number): InterfaceEntry {
     id,
     name: str(raw.name, w('name')),
     version: typeof raw.version === 'string' && raw.version ? raw.version : undefined,
+    aka: typeof raw.aka === 'string' && raw.aka ? raw.aka : undefined,
     family: typeof raw.family === 'string' && raw.family ? raw.family : undefined,
     lifecycle: raw.lifecycle === undefined ? 'current' : oneOf(LIFECYCLES, raw.lifecycle, w('lifecycle')),
     lifecycle_note: typeof raw.lifecycle_note === 'string' && raw.lifecycle_note ? raw.lifecycle_note : undefined,
@@ -204,8 +205,19 @@ export function assertDataset(raw: unknown): Dataset {
 
 export const levelRank = (level: Level): number => LEVELS.indexOf(level);
 
-/** Name with the version label: "Aave" + "V3" -> "Aave V3". Use it wherever an interface is named. */
+/** Name with the version label: "Aave" + "V3" -> "Aave V3". */
 export const displayName = (e: Pick<InterfaceEntry, 'name' | 'version'>): string => (e.version ? `${e.name} ${e.version}` : e.name);
+
+/** Name with the second name for page titles and search engines; on the page the second name is shown in grey. */
+export const fullName = (e: Pick<InterfaceEntry, 'name' | 'version' | 'aka'>): string =>
+  e.aka ? `${displayName(e)} (${e.aka})` : displayName(e);
+
+/**
+ * Search the name as shown in the table (Sky ex-Maker), in titles (Sky (ex-Maker)), the id and the URL.
+ * Keep each form on its own line so a query cannot join two fields.
+ */
+export const searchText = (e: Pick<InterfaceEntry, 'name' | 'version' | 'aka' | 'id' | 'url'>): string =>
+  [`${displayName(e)} ${e.aka ?? ''}`, fullName(e), e.id, e.url].join('\n').toLowerCase();
 
 /** 0 for current interfaces, 1 for legacy ones (they go to the bottom of the default order). */
 export const lifecycleRank = (e: InterfaceEntry): number => (e.lifecycle === 'legacy' ? 1 : 0);
@@ -235,6 +247,28 @@ export const parentOf = (token: CountryToken): string => {
 };
 
 export const isRegionToken = (token: CountryToken): boolean => token.includes('-');
+
+/**
+ * Compare Terms with the Geo Block lists (blocked and close-only) so the page does not repeat a country list.
+ * These are recorded lists, not proof of access: a country outside the Geo Block lists has not been noted as blocked,
+ * which does not mean it is open. A region is covered by its country (US-NY by US).
+ * Without a Geo Block list there is nothing to compare: compared is false and onlyInTerms is the full Terms list.
+ */
+export function tosAgainstGeo(e: Pick<InterfaceEntry, 'geo_site' | 'tos'>): {
+  compared: boolean;
+  onlyInTerms: CountryToken[];
+  blockedNotNamed: CountryToken[];
+} {
+  const geo = [...e.geo_site.countries, ...e.geo_site.close_only];
+  const named = e.tos.restricted_codes;
+  const covered = (list: CountryToken[], t: CountryToken): boolean => list.includes(t) || list.includes(parentOf(t));
+  const compared = geo.length > 0 && named.length > 0;
+  return {
+    compared,
+    onlyInTerms: compared ? named.filter((t) => !covered(geo, t)) : named,
+    blockedNotNamed: compared ? e.geo_site.countries.filter((t) => !covered(named, t)) : []
+  };
+}
 
 const enforced = (s: Status): boolean => s === 'yes' || s === 'reported';
 

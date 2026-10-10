@@ -28,7 +28,7 @@ import { dataset, interfacesById, versionsOf } from 'data/dataset';
 import { interfaceMeta, notFoundMeta } from 'seo/meta';
 import { siteUrl, usePageMeta } from 'seo/usePageMeta';
 import { tokenLabel } from 'data/countries';
-import { displayName, evidenceLinks, restrictionsText } from 'utils/restrictions';
+import { displayName, evidenceLinks, restrictionsText, tosAgainstGeo } from 'utils/restrictions';
 import CountryTokenChips from './components/CountryTokenChips';
 import EvidenceList from './components/EvidenceList';
 import ForkChip from './components/ForkChip';
@@ -77,6 +77,9 @@ export default function InterfacePage() {
   const versions = versionsOf(entry);
   const liveChecks = entry.live;
 
+  // Compare the Terms list with the Geo Block lists above so the page does not repeat a country list.
+  const tosVsGeo = tosAgainstGeo(entry);
+
   return (
     <Box sx={{ width: '100%' }}>
       <Button component={RouterLink} to={path('/monitor')} startIcon={<ArrowBackIcon />} size="small" sx={{ mb: 2 }}>
@@ -89,6 +92,11 @@ export default function InterfacePage() {
             <Stack direction="row" spacing={1.5} alignItems="center" sx={{ flexWrap: 'wrap', rowGap: 1 }}>
               <Typography variant="h2" component="h1">
                 {displayName(entry)}
+                {entry.aka && (
+                  <Typography component="span" variant="h4" color="text.secondary" sx={{ fontWeight: 400 }}>
+                    {` ${entry.aka}`}
+                  </Typography>
+                )}
               </Typography>
               <LevelChip level={entry.level} size="medium" />
               {entry.lifecycle === 'legacy' && <ToneChip tone="neutral" size="medium" label={t.chips.legacy} />}
@@ -317,9 +325,15 @@ export default function InterfacePage() {
                 )
               },
               { label: T.lastUpdated, value: entry.tos.updated },
-              { label: T.restrictedAsWritten, value: entry.tos.restricted }
+              { label: T.restrictedAsWritten, value: entry.tos.restricted },
+              ...(tosVsGeo.compared && tosVsGeo.onlyInTerms.length === 0
+                ? [{ label: T.named, value: T.allInGeoBlock(entry.tos.restricted_codes.length) }]
+                : [])
             ]}
-            countries={[{ label: T.named, tokens: entry.tos.restricted_codes }]}
+            countries={[
+              { label: tosVsGeo.compared ? T.namedOnlyInTerms : T.named, tokens: tosVsGeo.onlyInTerms },
+              { label: T.blockedNotNamed, tokens: tosVsGeo.blockedNotNamed }
+            ]}
           />
         </Grid>
       </Grid>

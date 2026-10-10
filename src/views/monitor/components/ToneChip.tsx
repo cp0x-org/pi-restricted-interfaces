@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import Chip, { ChipProps } from '@mui/material/Chip';
-import { Theme, lighten } from '@mui/material/styles';
+import { Theme, alpha, lighten } from '@mui/material/styles';
 import Tooltip from '@mui/material/Tooltip';
 import { CountryStatus, ForkReady, Level, Status, VpnStatus } from 'types/restrictions';
 
@@ -47,7 +47,9 @@ export default function ToneChip({ tone, tooltip, size = 'small', sx, ...rest }:
         // WCAG AA contrast on the dark theme: the palette's error.main and success.dark are too dim for 13px chip text
         ...(tone === 'bad' && { color: (theme: Theme) => lighten(theme.palette.error.main, 0.2) }),
         ...(tone === 'goodOutlined' && { color: 'success.main', borderColor: 'success.main' }),
-        ...(tone === 'unknown' && { color: 'text.secondary' }),
+        // Neutral values should not overpower restrictions.
+        ...(tone === 'neutral' && { color: 'text.secondary', borderColor: (theme: Theme) => alpha(theme.palette.text.secondary, 0.35) }),
+        ...(tone === 'unknown' && { color: 'text.disabled', borderColor: (theme: Theme) => alpha(theme.palette.text.secondary, 0.2) }),
         ...sx
       }}
       {...rest}

@@ -130,8 +130,10 @@ export type Lifecycle = (typeof LIFECYCLES)[number];
 export interface InterfaceEntry {
   id: string;
   name: string;
-  /** Version label shown after the name, e.g. "V3" or "V4 · Aave Pro". */
+  /** Version label shown after the name, e.g. "V3". */
   version?: string;
+  /** Second name shown next to the name: former name (ex-Maker), parent brand (0x) or product (Aave Pro). */
+  aka?: string;
   /** Interfaces of one protocol (its versions) share a family id. */
   family?: string;
   lifecycle: Lifecycle;

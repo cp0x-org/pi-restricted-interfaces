@@ -5,7 +5,7 @@ export const zh: Messages = {
   htmlLang: 'zh-CN',
   intlLocale: 'zh-Hans',
   labels: {
-    LEVEL_LABELS: { D: 'D', C: 'C', B: 'B', A: 'A', 'n/a': '暂无' },
+    LEVEL_LABELS: { D: 'D', C: 'C', B: 'B', A: 'A', 'n/a': '?' },
     LEVEL_DESCRIPTIONS: {
       D: '超过 20 项限制',
       C: '6–20 项限制',
@@ -133,6 +133,7 @@ export const zh: Messages = {
     tabs: { monitor: '监测', country: '按国家', methodology: '方法论' },
     language: '语言',
     homeLogo: 'cp0x DeFi 界面限制监测，首页',
+    support: '支持 cp0x',
     telegram: 'cp0x 的 Telegram',
     twitter: 'cp0x 的 X（Twitter）',
     github: 'cp0x 的 GitHub'
@@ -145,8 +146,7 @@ export const zh: Messages = {
   },
   monitor: {
     title: '官方 DeFi 界面：谁在限制什么',
-    intro: (shown, total, date) =>
-      `每一行是 EVM 网络上某个协议的官方网页界面（完整目录 ${total} 个中的 ${shown} 个；Solana、Cosmos 等非 EVM 应用保留在数据中，但不在此显示）。评级统计界面的技术性限制数量：越少越好。数据快照：${date}；每条结论都有代码、实测或服务条款作为依据（见各界面详情页）。`,
+    intro: (shown, total, date) => `DeFi 协议的官方界面按其实施的技术性限制评级：限制越少越好。点击任意一行查看依据。数据快照：${date}。`,
     search: '搜索',
     searchPlaceholder: '名称或域名',
     category: '类别',
@@ -171,6 +171,8 @@ export const zh: Messages = {
       permissionless: '无需许可应用'
     },
     multiCountry: (flags) => `${flags} 限制`,
+    sortBy: '排序方式',
+    reverseOrder: '反转顺序',
     countries: (n) => `${n} 个国家`,
     closeOnly: (n) => `${n} 个仅可平仓`,
     empty: '没有符合当前筛选条件的界面。',
@@ -249,6 +251,9 @@ export const zh: Messages = {
     lastUpdated: '最近更新',
     restrictedAsWritten: '受限司法管辖区（原文）',
     named: '点名的司法管辖区',
+    allInGeoBlock: (n) => (n === 1 ? '已列于上方地区封锁中' : `${n} 个均已列于上方地区封锁中`),
+    namedOnlyInTerms: '仅在条款中列出',
+    blockedNotNamed: '已封锁但条款中未列出',
     forkNotes: '分叉说明',
     noNotes: '暂无说明。',
     repoStatus: '代码仓库状态',
@@ -257,7 +262,7 @@ export const zh: Messages = {
     egress: '出口',
     probeEndpoints: '探测接口',
     observations: '各国实测结果',
-    notProbed: '尚未探测。P3 探测（monitor/scripts/probe.py）会按国家和代理类型记录首页与已知地区接口是正常访问、被封锁还是遇到验证。',
+    notProbed: '尚未从各个国家进行实时检测。',
     obsCols: { country: '国家', vantage: '观测点', target: '目标', result: '结果', http: 'HTTP', when: '时间' },
     landing: '首页',
     geoEndpoint: '地区接口',
@@ -381,7 +386,7 @@ export const zh: Messages = {
     liveP2: (egress) =>
       `初始快照的出口：${egress}。这些检查只从一个观测点进行且不执行 JavaScript，因此客户端地区封锁和针对其他国家的封锁只能通过代码看到。`,
     liveP3:
-      '按国家探测（P3）：通过目标国家的住宅代理、在不执行 JavaScript 的情况下抓取每个界面的首页和已知地区接口。先由多个独立的 IP 地理定位服务验证观测点（至少两个一致），对使用 Cloudflare 的站点还会核对 `/cdn-cgi/trace` 中的 `loc=` 字段；不一致的观测点会被丢弃。结果为以下之一：正常访问、封锁（HTTP 451、带地区说明的 403、跳转到封锁页，或地区接口返回“受限”）、仅可平仓、功能受限，或反机器人验证（无法测试）。“正常访问”只表示未在边缘层观察到封锁：客户端限制、钱包筛查和功能限制需要后续阶段的浏览器和钱包探测。受制裁司法管辖区不做探测，其状态仍根据代码和配置推断。',
+      '按国家探测：通过目标国家的住宅代理、在不执行 JavaScript 的情况下抓取每个界面的首页和已知地区接口。先由多个独立的 IP 地理定位服务验证观测点（至少两个一致），对使用 Cloudflare 的站点还会核对 `/cdn-cgi/trace` 中的 `loc=` 字段；不一致的观测点会被丢弃。结果为以下之一：正常访问、封锁（HTTP 451、带地区说明的 403、跳转到封锁页，或地区接口返回“受限”）、仅可平仓、功能受限，或反机器人验证（无法测试）。“正常访问”只表示未在边缘层观察到封锁：客户端限制、钱包筛查和功能限制不在此类探测范围内。受制裁司法管辖区不做探测，其状态仍根据代码和配置推断。',
     limitsTitle: '局限与数据',
     limits: [
       '生产版本可能与代码仓库不同：Uniswap 发布的是发布镜像，Raydium 和 QuickSwap 保留的是过时快照，还有一些项目（PancakeSwap、Across、Spark）已将前端转为私有。',

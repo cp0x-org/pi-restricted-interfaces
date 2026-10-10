@@ -7,6 +7,7 @@ import { interfaces, levelCounts, openSourceCount, permissionlessCount } from 'd
 import { LEVELS, Level } from 'types/restrictions';
 import LevelChip from './LevelChip';
 import { useI18n } from 'i18n';
+import BrandText from 'ui-component/BrandText';
 
 interface StatTilesProps {
   activeLevels?: Level[];
@@ -21,7 +22,7 @@ function Tile({ value, label, accent = false }: { value: number; label: string; 
         {value}
       </Typography>
       <Typography variant="body2" sx={{ color: theme.palette.grey[500] }}>
-        {label}
+        <BrandText text={label} />
       </Typography>
     </Stack>
   );
