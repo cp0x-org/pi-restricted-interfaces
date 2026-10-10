@@ -5,7 +5,7 @@
 // Node-only code path: no browser APIs, relative imports only.
 import { LEVELS } from '../types/restrictions';
 import type { Dataset, InterfaceEntry, Status } from '../types/restrictions';
-import { displayName, evidenceLinks, lifecycleRank, parentOf, restrictionsText } from '../utils/restrictions';
+import { displayName, evidenceLinks, fullName, lifecycleRank, parentOf, restrictionsText } from '../utils/restrictions';
 import { LANGS_ALL, Lang, localizePath } from '../i18n/paths';
 import type { Messages } from '../i18n/en';
 import {
@@ -110,7 +110,7 @@ function monitorBody(ds: Dataset, lang: Lang): string {
   const rows = [...ds.interfaces].sort(byDefaultOrder).map((i) => {
     const screening = L.STATUS_LABELS[i.screening.s] + (i.screening.layer ? ` (${L.LAYER_LABELS[i.screening.layer]})` : '');
     const alt = i.alternatives[0];
-    return `<tr><td><a href="${localizePath(`/monitor/${i.id}`, lang)}">${esc(displayName(i))}</a>${i.lifecycle === 'legacy' ? ` <small>(${esc(t.chips.legacy)})</small>` : ''}<br><small>${esc(i.networks.join(', '))}</small></td><td>${
+    return `<tr><td><a href="${localizePath(`/monitor/${i.id}`, lang)}">${esc(fullName(i))}</a>${i.lifecycle === 'legacy' ? ` <small>(${esc(t.chips.legacy)})</small>` : ''}<br><small>${esc(i.networks.join(', '))}</small></td><td>${
       i.level
     }</td><td>${status(i.geo_site.s)}${i.geo_site.countries.length ? ` (${i.geo_site.countries.length})` : ''}</td><td>${status(i.geo_feature.s)}</td><td>${esc(
       screening
@@ -172,8 +172,8 @@ function interfaceBody(e: InterfaceEntry, ds: Dataset, lang: Lang): string {
   ];
   const description = lang === 'zh' && e.description_zh ? e.description_zh : e.description;
   const category = lang === 'zh' ? L.CATEGORY_GROUP_LABELS[e.category_group] : e.category;
-  return `<nav aria-label="Breadcrumb"><a href="${localizePath('/monitor', lang)}">${esc(t.layout.tabs.monitor)}</a> › ${esc(displayName(e))}</nav>
-<h1>${esc(displayName(e))}</h1>
+  return `<nav aria-label="Breadcrumb"><a href="${localizePath('/monitor', lang)}">${esc(t.layout.tabs.monitor)}</a> › ${esc(fullName(e))}</nav>
+<h1>${esc(fullName(e))}</h1>
 <p>${esc(description)}</p>
 ${e.lifecycle === 'legacy' && e.lifecycle_note ? `<p><b>${esc(t.seo.legacySentence(e.lifecycle_note))}</b></p>\n` : ''}${versions.length ? `<p>${esc(T.otherVersions)}${colon}${versions.map((v) => `<a href="${localizePath(`/monitor/${v.id}`, lang)}">${esc(displayName(v))}</a>${v.lifecycle === 'legacy' ? ` (${esc(t.chips.legacy)})` : ''}`).join(listSep)}${stop.trim()}</p>\n` : ''}<p><b>${esc(t.seo.levelSentence(e.level, restrictionsText(e, t.monitor.restrictionsTip, L.MECHANISM_LABELS, t.seo.listSep, L.LEVEL_DESCRIPTIONS['n/a'])))}</b> ${esc(category)} · ${esc(e.networks.join(', ') || e.chains)}${stop.trim()}</p>
 <p>${field(t.monitor.cols.official, ext(e.url, strip(e.url)))}${stop}${alt ? `${esc(T.altPrefix)} ${ext(alt.url, alt.name)}${stop}` : ''}${field(

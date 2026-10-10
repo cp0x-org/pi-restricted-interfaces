@@ -21,7 +21,7 @@ import { rich, useI18n } from 'i18n';
 import { COUNTRY_STATUS, LAYERS, LEVELS, STATUS } from 'types/restrictions';
 import LevelChip from './components/LevelChip';
 import StatusChip from './components/StatusChip';
-import ToneChip, { countryStatusTone } from './components/ToneChip';
+import ToneChip, { countryStatusTone, vpnTone } from './components/ToneChip';
 import { DATA_FILE_PATH } from './constants';
 
 function Section({ title, children }: { title: string; children: ReactNode }) {
@@ -74,6 +74,17 @@ export default function MethodologyPage() {
                     <StatusChip status={s} />
                   </Box>
                   <Typography variant="body2">{L.STATUS_DESCRIPTIONS[s]}</Typography>
+                </Stack>
+              ))}
+              <Typography variant="caption" color="text.secondary" sx={{ pt: 1 }}>
+                {L.MECHANISM_LABELS.vpn}
+              </Typography>
+              {(['detect', 'block'] as const).map((v) => (
+                <Stack key={v} direction="row" spacing={2} alignItems="flex-start">
+                  <Box sx={{ minWidth: 96, pt: 0.25 }}>
+                    <ToneChip tone={vpnTone(v)} label={L.VPN_LABELS[v]} />
+                  </Box>
+                  <Typography variant="body2">{v === 'detect' ? t.legend.vpnDetect : t.legend.vpnBlock}</Typography>
                 </Stack>
               ))}
             </Stack>

@@ -6,6 +6,7 @@ import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import Link from '@mui/material/Link';
 import InputLabel from '@mui/material/InputLabel';
@@ -25,7 +26,11 @@ import TableSortLabel from '@mui/material/TableSortLabel';
 import TextField from '@mui/material/TextField';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 import { UnfoldMore } from '@mui/icons-material';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import LaunchIcon from '@mui/icons-material/Launch';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -57,8 +62,10 @@ import {
   countryStatusRank,
   countryVerdict,
   hasMechanism,
-  levelRank
+  levelRank,
+  searchText
 } from 'utils/restrictions';
+import InterfaceCard from './components/InterfaceCard';
 import FilterSelect from './components/FilterSelect';
 import LevelChip from './components/LevelChip';
 import RepoLink from './components/RepoLink';
@@ -154,10 +161,12 @@ function compare(a: InterfaceEntry, b: InterfaceEntry, field: SortableField): nu
 export default function MonitorPage() {
   const navigate = useNavigate();
   const { lang, t, L, path } = useI18n();
+  const theme = useTheme();
+  const narrow = useMediaQuery(theme.breakpoints.down('md'), { noSsr: true });
   const loc = t.intlLocale;
   usePageMeta(useMemo(() => monitorMeta(dataset.meta, interfaces, siteUrl(), lang), [lang]));
   const [page, setPage] = useState(1);
-  const [rowsPerPage, setRowsPerPage] = useState(25);
+  const [rowsPerPage, setRowsPerPage] = useState(100);
   // Default: interfaces with a cp0x permissionless app first, then by level (D → A) and name.
   const [sortField, setSortField] = useState<SortableField>('permissionless');
   const [sortOrder, setSortOrder] = useState<SortOrder>('asc');
@@ -245,7 +254,7 @@ export default function MonitorPage() {
   const baseRows = useMemo(() => {
     const needle = nameFilter.trim().toLowerCase();
     return interfaces.filter((i) => {
-      if (needle && !displayName(i).toLowerCase().includes(needle) && !i.id.includes(needle) && !i.url.includes(needle)) return false;
+      if (needle && !searchText(i).includes(needle)) return false;
       if (groupFilter.length > 0 && !groupFilter.includes(i.category_group)) return false;
       if (networkFilter.length > 0 && !i.networks.some((n) => networkFilter.includes(n))) return false;
       if (levelFilter.length > 0 && !levelFilter.includes(i.level)) return false;
@@ -288,6 +297,36 @@ export default function MonitorPage() {
     const sorted = [...rows].sort((a, b) => (sortField === 'country' ? byCountry(a, b) : compare(a, b, sortField)));
     return sortOrder === 'asc' ? sorted : sorted.reverse();
   }, [baseRows, hits, sortField, sortOrder]);
+
+  // Shared captions keep table rows and cards consistent.
+  const geoCaption = (i: InterfaceEntry): string | undefined => {
+    const geoCount = i.geo_site.countries.length;
+    const closeOnly = i.geo_site.close_only.length;
+    return geoCount || closeOnly
+      ? [geoCount && t.monitor.countries(geoCount), closeOnly && t.monitor.closeOnly(closeOnly)].filter(Boolean).join(', ')
+      : undefined;
+  };
+  const featureCaption = (i: InterfaceEntry): string | undefined =>
+    i.geo_feature.countries.length ? t.monitor.countries(i.geo_feature.countries.length) : undefined;
+
+  const countryLabel =
+    countries.length === 1
+      ? `${flagEmoji(countries[0])} ${countryName(countries[0], loc)}`
+      : t.monitor.multiCountry(countries.map(flagEmoji).join(' '));
+  // Cards have no column headers, so their sort list repeats the sortable headers in the same order.
+  const sortOptions: [SortableField, string][] = [
+    ['name', t.monitor.cols.iface],
+    ...(SHOW_CATEGORY_COLUMN ? ([['category', t.monitor.cols.category]] as [SortableField, string][]) : []),
+    ['level', t.monitor.cols.level],
+    ...(countries.length > 0 ? ([['country', countryLabel]] as [SortableField, string][]) : []),
+    ['geo', t.monitor.cols.geo],
+    ['feature', t.monitor.cols.feature],
+    ['screening', t.monitor.cols.screening],
+    ['vpn', t.monitor.cols.vpn],
+    ['repo', t.monitor.cols.code],
+    ['official', t.monitor.cols.official],
+    ['permissionless', t.monitor.cols.permissionless]
+  ];
 
   const pageCount = Math.max(1, Math.ceil(filtered.length / rowsPerPage));
   const currentPage = Math.min(page, pageCount);
@@ -474,162 +513,199 @@ export default function MonitorPage() {
 
       <TableLegend />
 
-      <TableContainer component={Paper} sx={{ mb: 2 }}>
-        <Table
-          size="small"
-          aria-label={t.monitor.tableLabel}
-          sx={{
-            minWidth: 1000,
-            // tighter cells so that all columns fit the container even with the country column
-            '& .MuiTableCell-root': { px: 1 },
-            '& .MuiTableCell-root:first-of-type': { pl: 2 }
-          }}
-        >
-          <TableHead>
-            <TableRow>
-              <TableCell>{header('name', t.monitor.cols.iface)}</TableCell>
-              {SHOW_CATEGORY_COLUMN && <TableCell>{header('category', t.monitor.cols.category)}</TableCell>}
-              <TableCell sx={{ whiteSpace: 'nowrap' }}>{header('level', t.monitor.cols.level, t.legend.level)}</TableCell>
-              {countries.length > 0 && (
-                <TableCell>
-                  {header(
-                    'country',
-                    countries.length === 1
-                      ? `${flagEmoji(countries[0])} ${countryName(countries[0], loc)}`
-                      : t.monitor.multiCountry(countries.map(flagEmoji).join(' '))
-                  )}
-                </TableCell>
-              )}
-              <TableCell>{header('geo', t.monitor.cols.geo, t.legend.geo)}</TableCell>
-              <TableCell>{header('feature', t.monitor.cols.feature, t.legend.feature)}</TableCell>
-              <TableCell>{header('screening', t.monitor.cols.screening, t.legend.screening)}</TableCell>
-              <TableCell>{header('vpn', t.monitor.cols.vpn, t.legend.vpn)}</TableCell>
-              <TableCell sx={{ whiteSpace: 'nowrap' }}>{header('repo', t.monitor.cols.code, t.legend.code)}</TableCell>
-              <TableCell>{header('official', t.monitor.cols.official, t.legend.official)}</TableCell>
-              <TableCell>{header('permissionless', t.monitor.cols.permissionless, t.legend.permissionless)}</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {paginated.map((i) => {
-              const geoCount = i.geo_site.countries.length;
-              const closeOnly = i.geo_site.close_only.length;
-              const geoCaption =
-                geoCount || closeOnly
-                  ? [geoCount && t.monitor.countries(geoCount), closeOnly && t.monitor.closeOnly(closeOnly)].filter(Boolean).join(', ')
-                  : undefined;
-              const featureCaption = i.geo_feature.countries.length ? t.monitor.countries(i.geo_feature.countries.length) : undefined;
-              return (
-                <TableRow key={i.id} hover onClick={() => navigate(path(`/monitor/${i.id}`))} sx={{ cursor: 'pointer' }}>
-                  <TableCell>
-                    <Link
-                      component={RouterLink}
-                      to={path(`/monitor/${i.id}`)}
-                      onClick={(e) => e.stopPropagation()}
-                      underline="hover"
-                      color="inherit"
-                      variant="subtitle1"
-                      sx={{ fontWeight: 600 }}
-                    >
-                      {displayName(i)}
-                    </Link>
-                    {i.lifecycle === 'legacy' && (
-                      <ToneChip
-                        tone="neutral"
-                        label={t.chips.legacy}
-                        tooltip={i.lifecycle_note ?? t.legend.legacy}
-                        sx={{ ml: 0.75, verticalAlign: 'middle' }}
-                      />
-                    )}
-                    <Tooltip title={i.networks.join(', ')} arrow placement="top" disableHoverListener={i.networks.length <= 3}>
-                      <Typography variant="caption" color="text.secondary" component="div">
-                        {i.networks.slice(0, 3).join(', ')}
-                        {i.networks.length > 3 ? ` +${i.networks.length - 3}` : ''}
-                      </Typography>
-                    </Tooltip>
-                  </TableCell>
-                  {SHOW_CATEGORY_COLUMN && (
+      {/* On narrow screens each interface gets a card: a 1000 px table would hide most columns behind horizontal scrolling. */}
+      {narrow ? (
+        <Stack spacing={1.5} sx={{ mb: 2 }}>
+          <Stack direction="row" spacing={1} alignItems="center">
+            <TextField
+              select
+              size="small"
+              label={t.monitor.sortBy}
+              value={sortField}
+              onChange={(e) => handleRequestSort(e.target.value as SortableField)}
+              sx={{ flex: 1 }}
+            >
+              {sortOptions.map(([field, label]) => (
+                <MenuItem key={field} value={field}>
+                  {label}
+                </MenuItem>
+              ))}
+            </TextField>
+            <IconButton aria-label={t.monitor.reverseOrder} onClick={() => handleRequestSort(sortField)}>
+              {sortOrder === 'asc' ? <ArrowUpwardIcon /> : <ArrowDownwardIcon />}
+            </IconButton>
+          </Stack>
+          {paginated.map((i) => (
+            <InterfaceCard
+              key={i.id}
+              entry={i}
+              to={path(`/monitor/${i.id}`)}
+              onOpen={() => navigate(path(`/monitor/${i.id}`))}
+              officialHost={officialHost(i)}
+              geoCaption={geoCaption(i)}
+              featureCaption={featureCaption(i)}
+              verdicts={hits?.get(i.id)?.map((h) => ({ verdict: h.verdict, prefix: countries.length > 1 ? flagEmoji(h.cc) : undefined }))}
+            />
+          ))}
+          {paginated.length === 0 && (
+            <Typography variant="body2" color="text.secondary" align="center" sx={{ py: 3 }}>
+              {t.monitor.empty}
+            </Typography>
+          )}
+        </Stack>
+      ) : (
+        <TableContainer component={Paper} sx={{ mb: 2 }}>
+          <Table
+            size="small"
+            aria-label={t.monitor.tableLabel}
+            sx={{
+              minWidth: 1000,
+              // tighter cells so that all columns fit the container even with the country column
+              '& .MuiTableCell-root': { px: 1 },
+              '& .MuiTableCell-root:first-of-type': { pl: 2 }
+            }}
+          >
+            <TableHead>
+              <TableRow>
+                <TableCell>{header('name', t.monitor.cols.iface)}</TableCell>
+                {SHOW_CATEGORY_COLUMN && <TableCell>{header('category', t.monitor.cols.category)}</TableCell>}
+                <TableCell sx={{ whiteSpace: 'nowrap' }}>{header('level', t.monitor.cols.level, t.legend.level)}</TableCell>
+                {countries.length > 0 && <TableCell>{header('country', countryLabel)}</TableCell>}
+                <TableCell>{header('geo', t.monitor.cols.geo, t.legend.geo)}</TableCell>
+                <TableCell>{header('feature', t.monitor.cols.feature, t.legend.feature)}</TableCell>
+                <TableCell>{header('screening', t.monitor.cols.screening, t.legend.screening)}</TableCell>
+                <TableCell>{header('vpn', t.monitor.cols.vpn, t.legend.vpn)}</TableCell>
+                <TableCell sx={{ whiteSpace: 'nowrap' }}>{header('repo', t.monitor.cols.code, t.legend.code)}</TableCell>
+                <TableCell>{header('official', t.monitor.cols.official, t.legend.official)}</TableCell>
+                <TableCell>{header('permissionless', t.monitor.cols.permissionless, t.legend.permissionless)}</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {paginated.map((i) => {
+                return (
+                  <TableRow key={i.id} hover onClick={() => navigate(path(`/monitor/${i.id}`))} sx={{ cursor: 'pointer' }}>
                     <TableCell>
-                      <Typography variant="body2">{i.category}</Typography>
-                    </TableCell>
-                  )}
-                  <TableCell>
-                    <Tooltip
-                      arrow
-                      placement="top"
-                      title={restrictionsText(i, t.monitor.restrictionsTip, L.MECHANISM_LABELS, t.seo.listSep, L.LEVEL_DESCRIPTIONS['n/a'])}
-                    >
-                      <Stack spacing={0.25} alignItems="flex-start" data-restrictions={i.restrictions.count}>
-                        <LevelChip level={i.level} withTooltip={false} />
-                        <Typography variant="caption" color="text.secondary" sx={{ pl: 1.25 }}>
-                          {i.restrictions.count}
+                      <Link
+                        component={RouterLink}
+                        to={path(`/monitor/${i.id}`)}
+                        onClick={(e) => e.stopPropagation()}
+                        underline="hover"
+                        color="inherit"
+                        variant="subtitle1"
+                        sx={{ fontWeight: 600 }}
+                      >
+                        {displayName(i)}
+                      </Link>
+                      {i.aka && (
+                        <Typography component="span" variant="body2" color="text.secondary">
+                          {` ${i.aka}`}
                         </Typography>
-                      </Stack>
-                    </Tooltip>
-                  </TableCell>
-                  {hits && (
-                    <TableCell data-col="country">
-                      <Stack spacing={0.75}>
-                        {(hits.get(i.id) ?? []).map((h) => (
-                          <CountryVerdictCell
-                            key={h.cc}
-                            verdict={h.verdict}
-                            compact
-                            prefix={countries.length > 1 ? flagEmoji(h.cc) : undefined}
-                          />
-                        ))}
-                      </Stack>
+                      )}
+                      {i.lifecycle === 'legacy' && (
+                        <ToneChip
+                          tone="neutral"
+                          label={t.chips.legacy}
+                          tooltip={i.lifecycle_note ?? t.legend.legacy}
+                          sx={{ ml: 0.75, verticalAlign: 'middle' }}
+                        />
+                      )}
+                      <Tooltip title={i.networks.join(', ')} arrow placement="top" disableHoverListener={i.networks.length <= 3}>
+                        <Typography variant="caption" color="text.secondary" component="div">
+                          {i.networks.slice(0, 3).join(', ')}
+                          {i.networks.length > 3 ? ` +${i.networks.length - 3}` : ''}
+                        </Typography>
+                      </Tooltip>
                     </TableCell>
-                  )}
-                  <TableCell>
-                    <StatusChip status={i.geo_site.s} caption={geoCaption} tooltip={i.geo_site.method || undefined} />
-                  </TableCell>
-                  <TableCell>
-                    <StatusChip status={i.geo_feature.s} caption={featureCaption} tooltip={i.geo_feature.scope || undefined} />
-                  </TableCell>
-                  <TableCell>
-                    <StatusChip
-                      status={i.screening.s}
-                      caption={i.screening.layer ? L.LAYER_LABELS[i.screening.layer] : undefined}
-                      tooltip={i.screening.provider || undefined}
-                    />
-                  </TableCell>
-                  <TableCell>
-                    <ToneChip tone={vpnTone(i.vpn.s)} label={L.VPN_LABELS[i.vpn.s]} tooltip={i.vpn.note || undefined} />
-                  </TableCell>
-                  <TableCell>
-                    <RepoLink entry={i} compact />
-                  </TableCell>
-                  <TableCell onClick={(e) => e.stopPropagation()}>
-                    <Link
-                      href={i.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      underline="hover"
-                      variant="body2"
-                      sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, whiteSpace: 'nowrap' }}
-                    >
-                      {officialHost(i)}
-                      <LaunchIcon sx={{ fontSize: 14 }} />
-                    </Link>
-                  </TableCell>
-                  <TableCell>
-                    <PermissionlessLink entry={i} />
+                    {SHOW_CATEGORY_COLUMN && (
+                      <TableCell>
+                        <Typography variant="body2">{i.category}</Typography>
+                      </TableCell>
+                    )}
+                    <TableCell>
+                      <Tooltip
+                        arrow
+                        placement="top"
+                        title={restrictionsText(
+                          i,
+                          t.monitor.restrictionsTip,
+                          L.MECHANISM_LABELS,
+                          t.seo.listSep,
+                          L.LEVEL_DESCRIPTIONS['n/a']
+                        )}
+                      >
+                        <Stack spacing={0.25} alignItems="flex-start" data-restrictions={i.restrictions.count}>
+                          <LevelChip level={i.level} withTooltip={false} />
+                          <Typography variant="caption" color="text.secondary" sx={{ pl: 1.25 }}>
+                            {i.restrictions.count}
+                          </Typography>
+                        </Stack>
+                      </Tooltip>
+                    </TableCell>
+                    {hits && (
+                      <TableCell data-col="country">
+                        <Stack spacing={0.75}>
+                          {(hits.get(i.id) ?? []).map((h) => (
+                            <CountryVerdictCell
+                              key={h.cc}
+                              verdict={h.verdict}
+                              compact
+                              prefix={countries.length > 1 ? flagEmoji(h.cc) : undefined}
+                            />
+                          ))}
+                        </Stack>
+                      </TableCell>
+                    )}
+                    <TableCell>
+                      <StatusChip status={i.geo_site.s} caption={geoCaption(i)} tooltip={i.geo_site.method || undefined} />
+                    </TableCell>
+                    <TableCell>
+                      <StatusChip status={i.geo_feature.s} caption={featureCaption(i)} tooltip={i.geo_feature.scope || undefined} />
+                    </TableCell>
+                    <TableCell>
+                      <StatusChip
+                        status={i.screening.s}
+                        caption={i.screening.layer ? L.LAYER_LABELS[i.screening.layer] : undefined}
+                        tooltip={i.screening.provider || undefined}
+                      />
+                    </TableCell>
+                    <TableCell>
+                      <ToneChip tone={vpnTone(i.vpn.s)} label={L.VPN_LABELS[i.vpn.s]} tooltip={i.vpn.note || undefined} />
+                    </TableCell>
+                    <TableCell>
+                      <RepoLink entry={i} compact />
+                    </TableCell>
+                    <TableCell onClick={(e) => e.stopPropagation()}>
+                      <Link
+                        href={i.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        underline="hover"
+                        variant="body2"
+                        sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, whiteSpace: 'nowrap' }}
+                      >
+                        {officialHost(i)}
+                        <LaunchIcon sx={{ fontSize: 14 }} />
+                      </Link>
+                    </TableCell>
+                    <TableCell>
+                      <PermissionlessLink entry={i} />
+                    </TableCell>
+                  </TableRow>
+                );
+              })}
+              {paginated.length === 0 && (
+                <TableRow>
+                  <TableCell colSpan={9 + (SHOW_CATEGORY_COLUMN ? 1 : 0) + (countries.length > 0 ? 1 : 0)}>
+                    <Typography variant="body2" color="text.secondary" align="center" sx={{ py: 3 }}>
+                      {t.monitor.empty}
+                    </Typography>
                   </TableCell>
                 </TableRow>
-              );
-            })}
-            {paginated.length === 0 && (
-              <TableRow>
-                <TableCell colSpan={9 + (SHOW_CATEGORY_COLUMN ? 1 : 0) + (countries.length > 0 ? 1 : 0)}>
-                  <Typography variant="body2" color="text.secondary" align="center" sx={{ py: 3 }}>
-                    {t.monitor.empty}
-                  </Typography>
-                </TableCell>
-              </TableRow>
-            )}
-          </TableBody>
-        </Table>
-      </TableContainer>
+              )}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      )}
 
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 2 }}>
         <Typography variant="body2" color="text.secondary">

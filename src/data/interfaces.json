@@ -1347,7 +1347,8 @@
     },
     {
       "id": "velora",
-      "name": "Velora (ex-ParaSwap)",
+      "name": "Velora",
+      "aka": "ex-ParaSwap",
       "description": "Velora, formerly ParaSwap, is a DEX aggregator and intent-based trading protocol. It routes swaps across many liquidity sources on Ethereum and major EVM networks, and its Delta mode lets users sign orders that agents execute on their behalf.",
       "description_zh": "Velora（原 ParaSwap）是一个 DEX 聚合器和基于意图的交易协议。它在以太坊和主要 EVM 网络上的众多流动性来源之间路由兑换，其 Delta 模式允许用户签署订单，由代理代为执行。",
       "category": "DEX aggregator",
@@ -1436,7 +1437,8 @@
     },
     {
       "id": "matcha",
-      "name": "Matcha (0x)",
+      "name": "Matcha",
+      "aka": "0x",
       "description": "Matcha is a DEX aggregator built by 0x on top of the 0x Swap API. It finds prices across many liquidity sources on EVM networks and Solana and supports limit orders and gasless swaps.",
       "description_zh": "Matcha 是 0x 基于 0x Swap API 构建的 DEX 聚合器。它在 EVM 网络和 Solana 上的众多流动性来源之间寻找价格，并支持限价单和免 gas 兑换。",
       "category": "DEX aggregator",
@@ -1521,7 +1523,8 @@
     },
     {
       "id": "jumper",
-      "name": "Jumper (LI.FI)",
+      "name": "Jumper",
+      "aka": "LI.FI",
       "description": "Jumper is a cross-chain swap and bridge aggregator powered by LI.FI. It compares bridges and DEXs to move and swap assets between EVM chains, Solana, Bitcoin and Sui in a single flow.",
       "description_zh": "Jumper 是由 LI.FI 驱动的跨链兑换和跨链桥聚合器。它比较各个跨链桥和 DEX，在一个流程中完成 EVM 链、Solana、比特币和 Sui 之间的资产转移与兑换。",
       "category": "Bridge / aggregator",
@@ -1699,7 +1702,8 @@
     },
     {
       "id": "gtrade",
-      "name": "gTrade (Gains)",
+      "name": "gTrade",
+      "aka": "Gains",
       "description": "gTrade is the leveraged trading platform of Gains Network, offering synthetic perpetuals on crypto, forex, stocks and commodities on Arbitrum, Base, Polygon and ApeChain, with liquidity supplied by gToken vaults.",
       "description_zh": "gTrade 是 Gains Network 的杠杆交易平台，在 Arbitrum、Base、Polygon 和 ApeChain 上提供加密货币、外汇、股票和大宗商品的合成永续合约，流动性由 gToken 金库提供。",
       "category": "Perps",
@@ -1890,7 +1894,8 @@
     {
       "id": "aave-pro",
       "name": "Aave",
-      "version": "V4 · Aave Pro",
+      "version": "V4",
+      "aka": "Aave Pro",
       "family": "aave",
       "description": "Aave Pro is the official interface for Aave V4, live on Ethereum since 30 March 2026. V4 replaces separate per-chain markets with a hub-and-spoke design: liquidity hubs such as Core, Prime and Plus feed spokes like e-Mode markets, and since September 2026 an Equities Hub on Base accepts Coinbase tokenized stocks as collateral for USDC loans. Aave V3 keeps running at app.aave.com.",
       "description_zh": "Aave Pro 是 Aave V4 的官方界面，自 2026 年 3 月 30 日起在以太坊上线。V4 采用“枢纽—辐条”架构：Core、Prime、Plus 等流动性枢纽为 e-Mode 等市场提供资金；自 2026 年 9 月起，Base 上的股票枢纽接受 Coinbase 代币化股票作为借入 USDC 的抵押品。Aave V3 仍在 app.aave.com 运行。",
@@ -2326,7 +2331,8 @@
     },
     {
       "id": "sky",
-      "name": "Sky (ex-Maker)",
+      "name": "Sky",
+      "aka": "ex-Maker",
       "description": "Sky, formerly MakerDAO, issues the USDS and DAI stablecoins backed by crypto and real-world assets. Its app offers the Sky Savings Rate, token rewards and upgrades from DAI and MKR, and SKY holders govern the protocol.",
       "description_zh": "Sky（原 MakerDAO）发行由加密资产和现实世界资产支持的 USDS 和 DAI 稳定币。其应用提供 Sky 储蓄利率、代币奖励以及 DAI 和 MKR 的升级，SKY 持有者治理协议。",
       "category": "Savings / lending",
@@ -2808,7 +2814,8 @@
     },
     {
       "id": "liquity",
-      "name": "Liquity V2 (liquity.app)",
+      "name": "Liquity",
+      "version": "V2",
       "description": "Liquity V2 is an immutable borrowing protocol where users open positions (troves) against ETH and liquid-staking tokens to mint the BOLD stablecoin at an interest rate they choose themselves. Liquity AG runs no official frontend; interfaces are operated by third parties.",
       "description_zh": "Liquity V2 是一个不可变的借款协议，用户以 ETH 和流动性质押代币开立仓位（trove），按自己选择的利率铸造 BOLD 稳定币。Liquity AG 不运营官方前端，界面由第三方运营。",
       "category": "CDP / stablecoin",
@@ -3264,7 +3271,8 @@
     {
       "id": "lido-stvaults",
       "name": "Lido",
-      "version": "V3 · stVaults",
+      "version": "V3",
+      "aka": "stVaults",
       "family": "lido",
       "description": "Lido stVaults are the core of Lido V3 on Ethereum: isolated staking vaults that let institutions, node operators and protocols pick their own validator setup while minting stETH against the staked ETH. The stVaults app is where vault owners create and fund vaults and manage stETH minting and withdrawals.",
       "description_zh": "Lido stVaults 是以太坊上 Lido V3 的核心：机构、节点运营商和协议可以通过独立的质押金库选择自己的验证者配置，并以质押的 ETH 铸造 stETH。金库所有者在 stVaults 应用中创建和注资金库，并管理 stETH 的铸造与提取。",
@@ -3414,7 +3422,8 @@
     },
     {
       "id": "eigenlayer",
-      "name": "EigenLayer (EigenCloud)",
+      "name": "EigenLayer",
+      "aka": "EigenCloud",
       "description": "EigenLayer, now part of EigenCloud, is a restaking protocol on Ethereum. It lets stakers restake ETH, liquid-staking tokens and EIGEN to secure additional services (AVSs) in exchange for extra rewards, at the risk of slashing.",
       "description_zh": "EigenLayer（现属 EigenCloud）是以太坊上的再质押协议。它允许质押者再质押 ETH、流动性质押代币和 EIGEN，为额外服务（AVS）提供安全保障并获得额外奖励，同时承担被罚没的风险。",
       "category": "Restaking",
@@ -4322,7 +4331,8 @@
     },
     {
       "id": "portalbridge",
-      "name": "Portal Bridge (Wormhole)",
+      "name": "Portal Bridge",
+      "aka": "Wormhole",
       "description": "Portal Bridge is the token bridge interface for the Wormhole cross-chain messaging protocol, moving assets between Ethereum and other EVM chains, Solana, Sui, Aptos and more, secured by Wormhole's guardian network.",
       "description_zh": "Portal Bridge 是 Wormhole 跨链消息协议的代币桥界面，在以太坊和其他 EVM 链、Solana、Sui、Aptos 等之间转移资产，由 Wormhole 守护者网络保障安全。",
       "category": "Bridge",

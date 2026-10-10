@@ -1,6 +1,23 @@
+import { Fragment } from 'react';
 import { Stack, Box, Typography, Link } from '@mui/material';
 import { ReactComponent as Cp0xLogo } from '@/assets/images/cp0x-logo.svg';
 import { useI18n } from 'i18n';
+
+// The 0 of cp0x takes the brand colour, as in the logo beside it; the translated phrase stays whole.
+const brandName = (text: string) =>
+  text.split(/(cp0x)/).map((part, n) =>
+    part === 'cp0x' ? (
+      <Fragment key={n}>
+        cp
+        <Box component="span" sx={{ color: 'secondary.main' }}>
+          0
+        </Box>
+        x
+      </Fragment>
+    ) : (
+      part
+    )
+  );
 
 export default function Footer() {
   const { t, path } = useI18n();
@@ -36,68 +53,85 @@ export default function Footer() {
         >
           <Cp0xLogo style={{ width: 70, height: 'auto' }} />
         </Link>
+        {/* Keep the support label and addresses stacked below lg; use a row only on wide screens. */}
         <Box
-          className="wallet"
+          className="support"
           sx={{
             display: 'flex',
-            gap: 1,
-            width: { xs: '100%', md: 'auto' },
-            flexDirection: { xs: 'column', md: 'row' },
-            alignItems: { xs: 'center', md: 'center' }
+            gap: { xs: 1, lg: 3 },
+            flexDirection: { xs: 'column', lg: 'row' },
+            alignItems: 'center'
           }}
         >
-          <Typography
-            component="span"
-            className="label"
+          <Typography component="span" sx={{ fontWeight: 600 }}>
+            {brandName(t.layout.support)}
+          </Typography>
+          <Box
+            className="wallet"
             sx={{
-              fontWeight: 500,
-              color: 'text.secondary'
+              display: 'flex',
+              gap: 1,
+              width: { xs: '100%', md: 'auto' },
+              flexDirection: { xs: 'column', md: 'row' },
+              alignItems: { xs: 'center', md: 'center' }
             }}
           >
-            ETH:
-          </Typography>
-          <Typography
-            component="span"
-            className="address"
-            sx={{
-              fontWeight: 400,
-              fontSize: '0.875rem'
-            }}
-          >
-            0x4c82cfF7398f3D43b36e41B10fF6F42b14DD9385
-          </Typography>
-        </Box>
+            <Typography
+              component="span"
+              className="label"
+              sx={{
+                fontWeight: 500,
+                color: 'text.secondary'
+              }}
+            >
+              ETH:
+            </Typography>
+            {/* At 0.875rem the full address is wider than a 320 px phone. */}
+            <Typography
+              component="span"
+              className="address"
+              sx={{
+                fontWeight: 400,
+                fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                overflowWrap: 'anywhere'
+              }}
+            >
+              0x4c82cfF7398f3D43b36e41B10fF6F42b14DD9385
+            </Typography>
+          </Box>
 
-        <Box
-          className="wallet"
-          sx={{
-            display: 'flex',
-            gap: 1,
-            width: { xs: '100%', md: 'auto' },
-            flexDirection: { xs: 'column', md: 'row' },
-            alignItems: { xs: 'center', md: 'center' }
-          }}
-        >
-          <Typography
-            component="span"
-            className="label"
+          <Box
+            className="wallet"
             sx={{
-              fontWeight: 500,
-              color: 'text.secondary'
+              display: 'flex',
+              gap: 1,
+              width: { xs: '100%', md: 'auto' },
+              flexDirection: { xs: 'column', md: 'row' },
+              alignItems: { xs: 'center', md: 'center' }
             }}
           >
-            BTC:
-          </Typography>
-          <Typography
-            component="span"
-            className="address"
-            sx={{
-              fontWeight: 400,
-              fontSize: '0.875rem'
-            }}
-          >
-            3G38fhKSPVfEWQ3GdrfAYjz8VgPfd5LHBm
-          </Typography>
+            <Typography
+              component="span"
+              className="label"
+              sx={{
+                fontWeight: 500,
+                color: 'text.secondary'
+              }}
+            >
+              BTC:
+            </Typography>
+            <Typography
+              component="span"
+              className="address"
+              sx={{
+                fontWeight: 400,
+                fontSize: { xs: '0.75rem', sm: '0.875rem' },
+                overflowWrap: 'anywhere'
+              }}
+            >
+              3G38fhKSPVfEWQ3GdrfAYjz8VgPfd5LHBm
+            </Typography>
+          </Box>
         </Box>
         <Box
           className="actions"

@@ -27,7 +27,7 @@ export const LEVEL_LABELS: Record<Level, string> = {
   C: 'C',
   B: 'B',
   A: 'A',
-  'n/a': 'n/a'
+  'n/a': '?'
 };
 
 export const LEVEL_DESCRIPTIONS: Record<Level, string> = {
