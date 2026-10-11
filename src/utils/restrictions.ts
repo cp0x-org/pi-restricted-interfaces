@@ -8,7 +8,6 @@ import {
   Dataset,
   EvidenceLink,
   FAIL_MODES,
-  FORK_READY,
   InterfaceEntry,
   LAYERS,
   LEVELS,
@@ -144,7 +143,7 @@ function entry(raw: unknown, index: number): InterfaceEntry {
       restricted: str(tos.restricted, w('tos.restricted')),
       restricted_codes: tokens(tos.restricted_codes, w('tos.restricted_codes'))
     },
-    fork_notes: str(raw.fork_notes, w('fork_notes')),
+    notes: str(raw.notes, w('notes')),
     live: isStringArray(raw.live) ? raw.live : [],
     geo_endpoints: isStringArray(raw.geo_endpoints) ? raw.geo_endpoints : [],
     evidence: isStringArray(raw.evidence) ? raw.evidence : [],
@@ -163,7 +162,6 @@ function entry(raw: unknown, index: number): InterfaceEntry {
           )
         }
       : { count: 0, countries: 0, mechanisms: [] },
-    fork_ready: oneOf(FORK_READY, raw.fork_ready, w('fork_ready')),
     observations: (Array.isArray(raw.observations) ? raw.observations : []).map((o, n) => observation(o, `${id}.observations[${n}]`))
   };
 }

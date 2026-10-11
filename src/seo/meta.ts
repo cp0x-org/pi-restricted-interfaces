@@ -198,6 +198,37 @@ export function methodologyMeta(meta: DatasetMeta, siteUrl: string, lang: Lang =
   };
 }
 
+export function summaryMeta(meta: DatasetMeta, siteUrl: string, lang: Lang = 'en'): PageMeta {
+  const t = catalog(lang);
+  const path = localizePath('/summary', lang);
+  const description = t.seo.summaryDescription;
+  return {
+    lang,
+    title: t.pageTitle.summary,
+    description,
+    path,
+    alternates: alternatesFor('/summary'),
+    type: 'article',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebPage',
+          name: t.summary.title,
+          description,
+          url: absoluteUrl(siteUrl, path),
+          inLanguage: HREFLANG[lang],
+          dateModified: meta.generated
+        },
+        breadcrumb(siteUrl, [
+          [t.layout.tabs.monitor, localizePath('/monitor', lang)],
+          [t.summary.title, path]
+        ])
+      ]
+    }
+  };
+}
+
 export const notFoundMeta = (lang: Lang = 'en'): PageMeta => ({
   lang,
   title: catalog(lang).pageTitle.notFound,

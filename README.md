@@ -2,8 +2,8 @@
 
 A public catalog of access restrictions in the official web interfaces of DeFi protocols: site-level geo-blocking,
 feature and asset gating by country, wallet screening, VPN detection and Terms-of-Service exclusions. For every
-interface the catalog records where the restriction is enforced (edge, frontend, the operator's own API or the
-protocol API) and whether a permissionless fork removes it, with links to the code paths, documents and API
+interface the catalog records where the restriction is enforced (edge, frontend, a server API or the smart
+contract itself), with links to the code paths, documents and API
 responses the verdict is based on.
 
 Live at [restricted.cp0x.com](https://restricted.cp0x.com). Built on the cp0x Permissionless Interface boilerplate (Berry MUI
@@ -12,9 +12,10 @@ no third-party requests.
 
 ## Pages
 
-- `/monitor` — ranking of the interfaces on EVM networks (the full catalog incl. Solana/Cosmos apps stays in `monitor/`): rating A/B/C/D/n/a by number of restrictions, one row per official interface version (legacy versions at the bottom, defunct ones hidden), mechanisms, screening provider and layer, fork readiness, frontend code status; filters by category, chain, level, layer, mechanism and open-source-only
-- `/monitor/:id` — interface card: repository, each mechanism with countries and fail mode, Terms of Service summary, fork notes, live checks, evidence links pinned to the repository branch; for protocols with several versions also the version label, a legacy notice and links to the other versions (Aave V3 / V4, Notional Exponent / V3 / V2, …)
+- `/monitor` — ranking of the interfaces on EVM networks (the full catalog incl. Solana/Cosmos apps stays in `monitor/`): rating A/B/C/D/n/a by number of restrictions, one row per official interface version (legacy versions at the bottom, defunct ones hidden), mechanisms, screening provider and layer, frontend code status; filters by category, chain, level, layer, mechanism and open-source-only
+- `/monitor/:id` — interface card: repository, each mechanism with countries and fail mode, Terms of Service summary, notes, live checks, evidence links pinned to the repository branch; for protocols with several versions also the version label, a legacy notice and links to the other versions (Aave V3 / V4, Notional Exponent / V3 / V2, …)
 - Country filter on `/monitor` (multi-select, `?country=UA,US`) — keeps only the interfaces that restrict at least one selected country (blocked, close-only, feature-limited, regional or ToS only) and adds a column with each verdict and its basis; chips above the table narrow by restriction type. The standalone `/country` page is hidden (`SHOW_COUNTRY_PAGE` in `src/views/monitor/constants.ts`); `/country/XX` links redirect to `/monitor?country=XX`
+- `/summary` — charts over the collected data: rating mix, which restrictions are enforced vs written only in the Terms, most blocked countries, wallet-screening layers and providers, and which categories and networks are the most permissionless (share without restrictions, average restrictions where there are any, maximum). Plain SVG/CSS charts, no chart library; numbers come from `src/utils/summary.ts`
 - `/methodology` — rating rule, versions, status vocabulary, layers, country rules, detection typology, live-check caveats and limitations
 
 ## Data
@@ -28,7 +29,7 @@ monitor/data/interfaces.json ──(pnpm monitor:build)──▶ src/data/interf
 ```
 
 `pnpm monitor:build` validates the data (enums, ISO country tokens, repository consistency), computes `level` (rating by number of technical restrictions (each blocked country/region once + one per feature gate, wallet screening, VPN detection, KYC; ToS-only terms not counted): A 0 (none), B 1–5, C 6–20, D > 20, n/a when nothing could be determined), `restrictions`,
-`fork_ready`, `category_group` and `chain_tags`, and writes all three outputs. It needs Python ≥ 3.9 (standard library
+`category_group` and `chain_tags`, and writes all three outputs. It needs Python ≥ 3.9 (standard library
 only) and is a maintainer tool: `pnpm build` never runs it. See [`monitor/README.md`](monitor/README.md) for the
 schema, the static scanner and the evidence verifier, [`monitor/docs/roadmap.md`](monitor/docs/roadmap.md) for the
 monitor architecture (live probes, proxies, mock wallet, scoring, alerts) and
@@ -44,7 +45,7 @@ choice is remembered and used only for `/` (browsers with a Chinese locale start
 Strings live in `src/i18n/en.ts` (reference) and `src/i18n/zh.ts`, which is typed against it, so a missing translation
 fails `pnpm build`; components read them through `useI18n()`, whose `path()` keeps internal links in the current
 language. Protocol descriptions have a `description_zh` field in `monitor/data/interfaces.json`; technical fields quoted
-from sources (mechanism details, providers, fork notes, evidence) stay in English.
+from sources (mechanism details, providers, notes, evidence) stay in English.
 
 ## SEO and deployment
 

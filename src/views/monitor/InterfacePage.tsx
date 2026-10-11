@@ -31,7 +31,6 @@ import { tokenLabel } from 'data/countries';
 import { displayName, evidenceLinks, restrictionsText, tosAgainstGeo } from 'utils/restrictions';
 import CountryTokenChips from './components/CountryTokenChips';
 import EvidenceList from './components/EvidenceList';
-import ForkChip from './components/ForkChip';
 import LevelChip from './components/LevelChip';
 import MechanismCard from './components/MechanismCard';
 import RepoLink from './components/RepoLink';
@@ -190,17 +189,7 @@ export default function InterfacePage() {
           </Grid>
           <Grid size={{ xs: 12, md: 5 }}>
             <Grid container spacing={2}>
-              <Grid size={{ xs: 6 }}>
-                <Stack spacing={0.5}>
-                  <Box>
-                    <ForkChip fork={entry.fork_ready} />
-                  </Box>
-                  <Typography variant="body2" sx={{ color: theme.palette.grey[500] }}>
-                    {T.forkReadiness}
-                  </Typography>
-                </Stack>
-              </Grid>
-              <Grid size={{ xs: 6 }}>
+              <Grid size={{ xs: 12 }}>
                 <Stack spacing={0.5}>
                   <Box>
                     <RepoLink entry={entry} />
@@ -346,9 +335,9 @@ export default function InterfacePage() {
 
       <Grid container spacing={3}>
         <Grid size={{ xs: 12, md: 6 }}>
-          <SubCard title={T.forkNotes} titleComponent="h2" sx={{ height: '100%' }}>
+          <SubCard title={T.notes} titleComponent="h2" sx={{ height: '100%' }}>
             <Typography variant="body2" sx={{ whiteSpace: 'pre-line' }}>
-              {entry.fork_notes || T.noNotes}
+              {entry.notes || T.noNotes}
             </Typography>
             {entry.repo_status && (
               <Typography variant="caption" color="text.secondary" component="div" sx={{ mt: 1.5 }}>

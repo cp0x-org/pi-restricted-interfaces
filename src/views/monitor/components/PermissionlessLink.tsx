@@ -1,4 +1,5 @@
 import Chip from '@mui/material/Chip';
+import { alpha, lighten } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import LaunchIcon from '@mui/icons-material/Launch';
@@ -30,6 +31,11 @@ export default function PermissionlessLink({ entry }: { entry: InterfaceEntry })
           icon={<LaunchIcon />}
           onClick={(e: React.MouseEvent) => e.stopPropagation()}
           sx={{
+            transition: 'background-color 150ms, box-shadow 150ms',
+            '&.MuiChip-clickable:hover, &.MuiChip-clickable:focus-visible': {
+              bgcolor: (theme) => lighten(theme.palette.primary.main, 0.3),
+              boxShadow: (theme) => `0 0 0 3px ${alpha(theme.palette.primary.main, 0.35)}`
+            },
             fontWeight: 600,
             '& .MuiChip-icon': { fontSize: 14, order: 1, ml: -0.5, mr: 0.75 }
           }}

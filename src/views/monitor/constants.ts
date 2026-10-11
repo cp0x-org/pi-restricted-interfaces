@@ -5,7 +5,6 @@ import {
   ChainTag,
   CountryStatus,
   FailMode,
-  ForkReady,
   Layer,
   Level,
   MechanismKind,
@@ -59,15 +58,15 @@ export const STATUS_DESCRIPTIONS: Record<Status, string> = {
 export const LAYER_LABELS: Record<Layer, string> = {
   edge: 'edge / CDN',
   frontend: 'frontend',
-  'own-api': 'own API',
-  'protocol-api': 'protocol API'
+  api: 'API',
+  contract: 'smart contract'
 };
 
 export const LAYER_DESCRIPTIONS: Record<Layer, string> = {
-  edge: 'CDN or hosting rule (HTTP 403/451/302 by country before any JavaScript runs)',
-  frontend: 'Client-side JavaScript: a fork simply removes it',
-  'own-api': 'A backend that only the official frontend calls: a fork does not need it',
-  'protocol-api': 'A backend every client of the protocol depends on (orderbook, indexer, router): a fork inherits it'
+  edge: 'CDN or hosting rule: the request is refused by country (HTTP 403/451/302) before the page loads',
+  frontend: 'Code in the browser decides: a built-in address list, or a provider or on-chain oracle queried by the page itself',
+  api: 'A server refuses the address: a compliance endpoint, the indexer, orderbook or quote API',
+  contract: 'The smart contract itself rejects the address: an on-chain blacklist, allowlist or memberlist'
 };
 
 export const FAIL_LABELS: Record<FailMode, string> = {
@@ -93,20 +92,6 @@ export const REPO_STATE_LABELS: Record<RepoState, string> = {
   private_now: 'private now',
   archived: 'archived',
   none_found: 'none found'
-};
-
-export const FORK_LABELS: Record<ForkReady, string> = {
-  yes: 'fork-ready',
-  stale: 'stale code',
-  partial: 'partial',
-  no_code: 'no code'
-};
-
-export const FORK_DESCRIPTIONS: Record<ForkReady, string> = {
-  yes: 'Open frontend; the gates can be removed in a fork',
-  stale: 'Open but outdated or archived code; production has moved on',
-  partial: 'Open frontend, but screening lives in the protocol API that a fork still depends on',
-  no_code: 'No public frontend code'
 };
 
 export const TOS_US_LABELS: Record<TosUs, string> = {

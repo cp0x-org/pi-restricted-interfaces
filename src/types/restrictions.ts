@@ -8,7 +8,7 @@ export type Status = (typeof STATUS)[number];
 export const LEVELS = ['D', 'C', 'B', 'A', 'n/a'] as const;
 export type Level = (typeof LEVELS)[number];
 
-export const LAYERS = ['edge', 'frontend', 'own-api', 'protocol-api'] as const;
+export const LAYERS = ['edge', 'frontend', 'api', 'contract'] as const;
 export type Layer = (typeof LAYERS)[number];
 
 export const FAIL_MODES = ['open', 'closed', 'unknown', 'n/a'] as const;
@@ -19,9 +19,6 @@ export type VpnStatus = (typeof VPN_STATUS)[number];
 
 export const REPO_STATES = ['open', 'open_stale', 'closed', 'private_now', 'archived', 'none_found'] as const;
 export type RepoState = (typeof REPO_STATES)[number];
-
-export const FORK_READY = ['yes', 'stale', 'partial', 'no_code'] as const;
-export type ForkReady = (typeof FORK_READY)[number];
 
 export const TOS_US = ['yes', 'no', 'partial', 'unknown'] as const;
 export type TosUs = (typeof TOS_US)[number];
@@ -161,7 +158,7 @@ export interface InterfaceEntry {
   kyc?: Kyc;
   asset_filter: string;
   tos: Tos;
-  fork_notes: string;
+  notes: string;
   live: string[];
   geo_endpoints: string[];
   evidence: string[];
@@ -170,7 +167,6 @@ export interface InterfaceEntry {
   level: Level;
   /** Counted technical restrictions behind the rating (computed by build.py). */
   restrictions: Restrictions;
-  fork_ready: ForkReady;
   observations: Observation[];
 }
 

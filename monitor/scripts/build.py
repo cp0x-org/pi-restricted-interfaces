@@ -6,7 +6,7 @@ Usage:
       --ui src/data/interfaces.json
 
 Outputs: <outdir>/report.md (Russian), <outdir>/interfaces.csv, and with --ui the dataset consumed by the web app
-(entries + computed level / fork_ready / category_group / chain_tags, meta + regions). Deterministic: no timestamps.
+(entries + computed level / category_group / chain_tags, meta + regions). Deterministic: no timestamps.
 Python >= 3.9, stdlib only.
 """
 import argparse, csv, json, os, re, sys
@@ -14,7 +14,7 @@ from collections import Counter, OrderedDict
 
 # ----------------------------------------------------------------------------- vocabularies
 S_OK = ("yes", "no", "reported", "tos_only", "optional", "unknown")
-LAYER_OK = (None, "edge", "frontend", "own-api", "protocol-api")
+LAYER_OK = (None, "edge", "frontend", "api", "contract")
 FAIL_OK = (None, "open", "closed", "unknown", "n/a")
 VPN_OK = ("no", "tos_only", "detect", "block", "optional", "unknown")
 REPO_OK = ("open", "open_stale", "closed", "private_now", "archived", "none_found")
@@ -25,9 +25,9 @@ CONF_OK = ("high", "medium", "low")
 LIFECYCLE_OK = ("current", "legacy", "defunct")
 GROUPS = ("dex", "aggregator", "perps", "lending", "staking", "yield", "rwa", "stablecoin", "bridge", "prediction", "wallet", "other")
 TAGS = ("evm", "solana", "bitcoin", "sui", "starknet", "cosmos", "hyperliquid", "other")
-COMPUTED = ("level", "restrictions", "fork_ready", "category_group", "chain_tags")
+COMPUTED = ("level", "restrictions", "category_group", "chain_tags")
 REQUIRED = ("id", "name", "description", "category", "chains", "url", "frontend_repo", "repo_state", "repo_status", "repo_last_commit",
-            "networks", "geo_site", "geo_feature", "vpn", "screening", "asset_filter", "tos", "fork_notes", "live", "geo_endpoints",
+            "networks", "geo_site", "geo_feature", "vpn", "screening", "asset_filter", "tos", "notes", "live", "geo_endpoints",
             "evidence", "confidence", "alternatives")
 OBS_STATES = ("ok", "blocked", "close_only", "feature_limited", "challenge", "error", "unknown")
 OBS_KINDS = ("site", "geo_endpoint")
@@ -66,8 +66,7 @@ ID_RE = re.compile(r"^[a-z0-9-]+$")
 # Russian labels for report.md
 LIFECYCLE_TAG = {"current": "", "legacy": " *(устаревшая версия)*", "defunct": " *(не работает)*"}
 S_RU = {"yes": "да", "no": "нет", "reported": "по отчётам", "tos_only": "только ToS", "optional": "опц.", "unknown": "?"}
-LAYER_RU = {"edge": "edge/CDN", "frontend": "фронтенд", "own-api": "свой API", "protocol-api": "API протокола", None: "—"}
-FORK_RU = {"yes": "да", "stale": "да, код устарел", "partial": "частично (API протокола)", "no_code": "нет кода"}
+LAYER_RU = {"edge": "edge/CDN", "frontend": "фронтенд", "api": "API", "contract": "контракт", None: "—"}
 VPN_RU = {"no": "нет", "tos_only": "только ToS", "detect": "детект", "block": "блок", "optional": "опц.", "unknown": "?"}
 US_RU = {"yes": "запрещено", "no": "нет", "partial": "частично", "unknown": "?"}
 
@@ -119,17 +118,6 @@ def level(i):
         if r["count"] <= limit:
             return grade
     return "D"
-
-
-def fork_ready(i):
-    if i["frontend_repo"] is None:
-        return "no_code"
-    k = i.get("kyc") or {}
-    if (i["screening"]["s"] == "yes" and i["screening"]["layer"] == "protocol-api") or (k.get("s") == "yes" and k.get("layer") == "protocol-api"):
-        return "partial"
-    if i["repo_state"] in ("open_stale", "archived"):
-        return "stale"
-    return "yes"
 
 
 def category_group(i):
@@ -327,8 +315,8 @@ def render_report(items, template):
                     f"{S_RU[i['geo_feature']['s']]} | {scr} | {vpn} | {us} | **{level(i)}** |")
     main_table = "\n".join(rows)
 
-    mrows = ["| Интерфейс | Уровень | Где enforcement / механизм | Fail-mode | Форк | Заметка для форка | Доказательства |",
-             "|---|---|---|---|---|---|---|"]
+    mrows = ["| Интерфейс | Уровень | Где enforcement / механизм | Fail-mode | Заметки | Доказательства |",
+             "|---|---|---|---|---|---|"]
     for i in items:
         parts = []
         if i["geo_site"]["s"] not in ("no", "unknown") and i["geo_site"]["method"]:
@@ -344,8 +332,8 @@ def render_report(items, template):
         mech = "<br>".join(p.replace("|", "/") for p in parts) or "—"
         ev = "<br>".join(f"`{e}`" if not e.startswith("http") else f"[src]({e})" for e in i["evidence"][:4]) or "—"
         fail = with_note(i["screening"]["fail"], i["screening"]["fail_note"]) if i["screening"]["fail"] else "—"
-        mrows.append(f"| **{display_name(i)}**{LIFECYCLE_TAG[lifecycle(i)]} | {level(i)} | {mech} | {fail} | {FORK_RU[fork_ready(i)]} | "
-                     f"{i['fork_notes'].replace('|', '/')} | {ev} |")
+        mrows.append(f"| **{display_name(i)}**{LIFECYCLE_TAG[lifecycle(i)]} | {level(i)} | {mech} | {fail} | "
+                     f"{i['notes'].replace('|', '/')} | {ev} |")
     mech_table = "\n".join(mrows)
 
     lrows = ["| Интерфейс | Результат |", "|---|---|"]
@@ -431,7 +419,7 @@ CSV_COLS = ["id", "name", "description", "category", "category_group", "chains",
             "repo_last_commit", "level", "restriction_count", "geo_site", "geo_site_countries", "geo_site_close_only", "geo_site_method",
             "geo_feature", "geo_feature_countries", "geo_feature_scope", "vpn", "vpn_note", "screening", "screening_provider",
             "screening_layer", "screening_fail", "screening_fail_note", "asset_filter", "tos_url", "tos_updated", "tos_us",
-            "tos_us_scope", "tos_restricted", "tos_restricted_codes", "fork_ready", "fork_notes", "alternatives", "live",
+            "tos_us_scope", "tos_restricted", "tos_restricted_codes", "notes", "alternatives", "live",
             "evidence", "confidence", "kyc", "kyc_layer", "kyc_scope", "version", "lifecycle", "lifecycle_note", "family"]
 
 
@@ -444,7 +432,7 @@ def csv_row(i):
             i["vpn"]["s"], i["vpn"]["note"], i["screening"]["s"], i["screening"]["provider"], i["screening"]["layer"] or "",
             i["screening"]["fail"] or "", i["screening"]["fail_note"], i["asset_filter"], i["tos"]["url"] or "", i["tos"]["updated"],
             i["tos"]["us"], i["tos"]["us_scope"], i["tos"]["restricted"], " ".join(i["tos"]["restricted_codes"]),
-            fork_ready(i), i["fork_notes"], " | ".join(f"{a['name']} {a['url']}" for a in i["alternatives"]),
+            i["notes"], " | ".join(f"{a['name']} {a['url']}" for a in i["alternatives"]),
             " | ".join(i["live"]), " | ".join(i["evidence"]), i["confidence"],
             (i.get("kyc") or {}).get("s", ""), (i.get("kyc") or {}).get("layer") or "", (i.get("kyc") or {}).get("scope", ""),
             i.get("version", ""), lifecycle(i), i.get("lifecycle_note", ""), i.get("family", "")]
@@ -469,7 +457,6 @@ def ui_dataset(data, observations, ui_chains=None):
         e["lifecycle"] = lifecycle(i)
         e["level"] = level(i)
         e["restrictions"] = restrictions(i)
-        e["fork_ready"] = fork_ready(i)
         e["category_group"] = category_group(i)
         e["chain_tags"] = chain_tags(i)
         e["observations"] = by_iface.get(i["id"], [])
@@ -526,8 +513,6 @@ def main():
 
     print(stats)
     print("providers:", prov_line)
-    fr = Counter(fork_ready(i) for i in items)
-    print("fork:", ", ".join(f"{k} — {fr[k]}" for k in ("yes", "stale", "partial", "no_code")))
     print("groups:", dict(Counter(category_group(i) for i in items)))
     print("tags:", dict(Counter(t for i in items for t in chain_tags(i))))
     if observations:

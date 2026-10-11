@@ -5,6 +5,7 @@ import MonitorPage from 'views/monitor/MonitorPage';
 import InterfacePage from 'views/monitor/InterfacePage';
 import CountryPage from 'views/monitor/CountryPage';
 import MethodologyPage from 'views/monitor/MethodologyPage';
+import SummaryPage from 'views/monitor/SummaryPage';
 import { SHOW_COUNTRY_PAGE } from 'views/monitor/constants';
 import useConfig from 'hooks/useConfig';
 
@@ -26,6 +27,7 @@ const pages = (prefix: '' | '/zh') => [
   { path: `${prefix}/monitor/:id`, element: <InterfacePage /> },
   { path: `${prefix}/country`, element: SHOW_COUNTRY_PAGE ? <CountryPage /> : <CountryRedirect base={`${prefix}/monitor`} /> },
   { path: `${prefix}/country/:code`, element: SHOW_COUNTRY_PAGE ? <CountryPage /> : <CountryRedirect base={`${prefix}/monitor`} /> },
+  { path: `${prefix}/summary`, element: <SummaryPage /> },
   { path: `${prefix}/methodology`, element: <MethodologyPage /> }
 ];
 

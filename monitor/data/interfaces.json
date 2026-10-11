@@ -6,7 +6,7 @@
     "sanctioned_test_address_note": "Ronin bridge exploiter (Lazarus Group), OFAC SDN since 2022-04-14. Control address: 0x2222...2222 / 0x1111...1111",
     "live_check_egress": "US datacenter (Polymarket /api/geoblock reported country=US, region=OH; Beefy /geo/country = US)",
     "status_values": "yes | no | reported (public reports, not confirmed in code) | tos_only (only reserved in ToS) | optional (in code, off by default) | unknown",
-    "layer_values": "edge (CDN/hosting rule) | frontend (client JS) | own-api (operator backend called by the frontend) | protocol-api (backend that any fork also depends on)",
+    "layer_values": "edge (CDN/hosting rule refuses the request by country) | frontend (code in the browser decides) | api (a server of the operator or protocol refuses the address: compliance endpoint, indexer, orderbook, quote API) | contract (the smart contract itself rejects the address: on-chain blacklist, allowlist or memberlist)",
     "country_tokens": "ISO 3166-1 alpha-2 codes, or sub-national regions as CC-Name (see regions); group words like 'EU/EEA' are expanded explicitly, 'sanctioned'/'FATF' stay in free text",
     "networks_note": "networks[] = EVM networks the official app lists at the time of the snapshot (from the app / public docs; indicative, not probed)",
     "alternatives_source": "https://pi.cp0x.com — permissionless interfaces by cp0x (card list in the site bundle, checked 2026-10-08)"
@@ -59,7 +59,7 @@
       "screening": {
         "s": "yes",
         "provider": "own compliance v2 API (entry-gateway.backend-prod.api.uniswap.org); TRM Labs historically (2022)",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "open",
         "fail_note": "an unauthenticated session also counts as not-blocked"
       },
@@ -72,7 +72,7 @@
         "restricted": "generic: comprehensive/regional US sanctions",
         "restricted_codes": []
       },
-      "fork_notes": "Screening and RWA gate are calls to their entry gateway. Remove them in a fork. Routing (Trading API) goes through the same gateway with an API key, which is a dependency.",
+      "notes": "Screening and the RWA gate are calls to the Uniswap entry gateway. Routing (Trading API) goes through the same gateway and needs an API key.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
@@ -190,7 +190,7 @@
           "ZW"
         ]
       },
-      "fork_notes": "Everything is client-side. Removed in a fork with no backend dependencies. Perps depend on the Hyperliquid API (IP check on their side).",
+      "notes": "Geo checks and screening run in the browser; no backend of their own is involved. Perps use the Hyperliquid API, which checks the IP on its side.",
       "live": [],
       "geo_endpoints": [
         "https://www.sushi.com/api/geolocation"
@@ -268,7 +268,7 @@
         "restricted": "unknown (ToS rendered client-side)",
         "restricted_codes": []
       },
-      "fork_notes": "Fork of the last public version of pancake-frontend (an old tag/mirror) is the only route. Needs a browser crawl.",
+      "notes": "pancake-frontend is no longer public; the last public version survives only as old tags and mirrors. Needs a browser crawl.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -360,7 +360,7 @@
           "ZW"
         ]
       },
-      "fork_notes": "Clean; only the content blacklist. Note: the ToS lists Ukraine in full.",
+      "notes": "Clean; only the content blacklist. Note: the ToS lists Ukraine in full.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -422,7 +422,7 @@
         "restricted": "no terms linked from the classic UI",
         "restricted_codes": []
       },
-      "fork_notes": "Clean in the served bundle.",
+      "notes": "Clean in the served bundle.",
       "live": [
         "classic.curve.finance (2026-10-10): loads pools and swap; the bundle has no geo or screening code"
       ],
@@ -473,7 +473,7 @@
       "screening": {
         "s": "yes",
         "provider": "Hypernative screener (api.hypernative.xyz/screener/reputation, policy OFAC + 3 hops) via /api/wallet-check -> BlockedAddressModal",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "unknown",
         "fail_note": ""
       },
@@ -486,7 +486,7 @@
         "restricted": "generic",
         "restricted_codes": []
       },
-      "fork_notes": "Screening runs in a Next API route with secret keys. Without them a fork simply doesn't screen.",
+      "notes": "Screening runs in a Next API route that holds the Hypernative keys.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -575,7 +575,7 @@
       "screening": {
         "s": "yes",
         "provider": "orderbook backend: hardcoded list + Chainalysis oracle + Hermod (zeroShadow)",
-        "layer": "protocol-api",
+        "layer": "api",
         "fail": "unknown",
         "fail_note": ""
       },
@@ -588,7 +588,7 @@
         "restricted": "generic UN/EU/US/UK",
         "restricted_codes": []
       },
-      "fork_notes": "The frontend geo filter is trivial to remove, but banned users are rejected by the CoW orderbook API itself. A fork does not bypass that.",
+      "notes": "The RWA geo filter runs in the frontend; wallet screening is done by the CoW orderbook API, which rejects orders from banned addresses.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
@@ -646,7 +646,7 @@
       "screening": {
         "s": "yes",
         "provider": "TRM Labs (help center); ToS also names BlockAid, Web3 Antivirus, MetaMask, Innerworks",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "unknown",
         "fail_note": ""
       },
@@ -659,7 +659,7 @@
         "restricted": "generic 'Prohibited Localities'",
         "restricted_codes": []
       },
-      "fork_notes": "Closed. The alternative is our own UI on top of the 1inch API (needs a key, ToS screening on their side). URL note: app.1inch.io -> 302.",
+      "notes": "Closed. The 1inch API is public but needs a key; screening happens on 1inch's side. URL note: app.1inch.io -> 302.",
       "live": [
         "WebFetch (US): 302 -> 1inch.com, normal page"
       ],
@@ -717,7 +717,7 @@
       "screening": {
         "s": "yes",
         "provider": "own Blackjack service (blackjack.kyberswap.com/api/v1/check) before each signature",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "open",
         "fail_note": ""
       },
@@ -745,7 +745,7 @@
           "UA-Zaporizhzhia"
         ]
       },
-      "fork_notes": "Blackjack is called from the frontend. Removed in a fork. Aggregator API is a separate dependency.",
+      "notes": "Blackjack is called from the frontend before each signature. The aggregator API is a separate service.",
       "live": [
         "Blackjack: sanctioned -> blacklisted:true (reason 2, since 2023-12); control -> blacklisted:false"
       ],
@@ -838,7 +838,7 @@
           "AG"
         ]
       },
-      "fork_notes": "Public code is clean but stale.",
+      "notes": "Public code is clean but stale.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -934,7 +934,7 @@
           "ZW"
         ]
       },
-      "fork_notes": "Closed. Sugar contracts (velodrome-finance/sugar) let you read data directly.",
+      "notes": "Closed. Sugar contracts (velodrome-finance/sugar) let you read data directly.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -1035,7 +1035,7 @@
           "ZW"
         ]
       },
-      "fork_notes": "Closed, same stack as Aerodrome.",
+      "notes": "Closed, same stack as Aerodrome.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -1118,7 +1118,7 @@
         "restricted": "none named",
         "restricted_codes": []
       },
-      "fork_notes": "Geo lives in netlify.toml, screening in a static list. A fork drops both.",
+      "notes": "Geo lives in netlify.toml (edge redirect), screening in a static address list in the bundle.",
       "live": [
         "WebFetch (US): app crashed with 'Something went wrong' (JS)"
       ],
@@ -1197,7 +1197,7 @@
           "UA-LPR"
         ]
       },
-      "fork_notes": "Closed. Velora API is an option.",
+      "notes": "Closed. The Velora API is public.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -1269,7 +1269,7 @@
         "restricted": "generic: US-embargoed",
         "restricted_codes": []
       },
-      "fork_notes": "Closed. The 0x API is an option.",
+      "notes": "Closed. Built on the 0x API.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -1325,7 +1325,7 @@
       "screening": {
         "s": "yes",
         "provider": "LI.FI API (li.quest): /v1/quote for an SDN address -> HTTP 422",
-        "layer": "protocol-api",
+        "layer": "api",
         "fail": "unknown",
         "fail_note": ""
       },
@@ -1357,7 +1357,7 @@
           "UA-Zaporizhzhia"
         ]
       },
-      "fork_notes": "Frontend is clean, but routes come from the LI.FI API, which screens addresses (and LI.FI's ToS excludes US persons). URL note: jumper.exchange -> 302.",
+      "notes": "Frontend code is clean; routes come from the LI.FI API, which screens addresses (LI.FI's ToS also excludes US persons). URL note: jumper.exchange -> 302.",
       "live": [
         "LI.FI /v1/quote: SDN fromAddress -> 422, control -> quote OK"
       ],
@@ -1433,7 +1433,7 @@
           "ZW"
         ]
       },
-      "fork_notes": "Snapshot code is clean (disclaimer modal only). Needs a live crawl of production.",
+      "notes": "Snapshot code is clean (disclaimer modal only). Needs a live crawl of production.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -1510,7 +1510,7 @@
           "ZW"
         ]
       },
-      "fork_notes": "Closed. Jupiter Plugin/API is an option.",
+      "notes": "Closed. Jupiter Plugin and API are public.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -1581,7 +1581,7 @@
       "screening": {
         "s": "yes",
         "provider": "third-party (unnamed), at wallet connect",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "unknown",
         "fail_note": ""
       },
@@ -1623,7 +1623,7 @@
           "UA-LPR"
         ]
       },
-      "fork_notes": "Closed. Whirlpools SDK is open.",
+      "notes": "Closed. Whirlpools SDK is open.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -1700,7 +1700,7 @@
           "RU"
         ]
       },
-      "fork_notes": "Closed.",
+      "notes": "Closed.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -1767,7 +1767,7 @@
       "screening": {
         "s": "yes",
         "provider": "Elliptic (indexer comlink /v4/compliance/screen)",
-        "layer": "protocol-api",
+        "layer": "api",
         "fail": "unknown",
         "fail_note": ""
       },
@@ -1792,7 +1792,7 @@
           "UA-LPR"
         ]
       },
-      "fork_notes": "Enforcement is in the public indexer. A fork must run its own indexer (open source v4-chain/indexer, compliance can be disabled). Otherwise it inherits the 403s.",
+      "notes": "Geo-blocking and screening are enforced by the public indexer (403 GEOBLOCKED). The indexer is open source (v4-chain/indexer) and its compliance checks are configurable.",
       "live": [
         "indexer /v4/compliance/screen: SDN -> {status: BLOCKED, reason: COMPLIANCE_PROVIDER}; control -> COMPLIANT"
       ],
@@ -1856,7 +1856,7 @@
         "restricted": "generic US/UK/EU embargo",
         "restricted_codes": []
       },
-      "fork_notes": "Clean. Only the ToS.",
+      "notes": "Clean. Only the ToS.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -1901,7 +1901,7 @@
       "screening": {
         "s": "unknown",
         "provider": "legalCheck takes the user address",
-        "layer": "protocol-api",
+        "layer": "api",
         "fail": null,
         "fail_note": ""
       },
@@ -1917,7 +1917,7 @@
           "CA-ON"
         ]
       },
-      "fork_notes": "Builder-code frontends (Sushi and others) call legalCheck themselves. The API does not block a fork from trading, but the check exists.",
+      "notes": "The check is the legalCheck call of the info API; builder-code frontends (Sushi and others) call it themselves. The trading API does not refuse orders on that basis.",
       "live": [
         "WebFetch (US): metadata only, no JS"
       ],
@@ -2001,7 +2001,7 @@
         "restricted": "unknown (text loaded from S3)",
         "restricted_codes": []
       },
-      "fork_notes": "Geo-check is client-side and fail-open. Rebranded to Velocity after the 2026-04 exploit. URL note: now app.velocity.exchange.",
+      "notes": "Geo-check is client-side and fail-open. Rebranded to Velocity after the 2026-04 exploit. URL note: now app.velocity.exchange.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -2066,7 +2066,7 @@
           "US"
         ]
       },
-      "fork_notes": "Closed.",
+      "notes": "Closed.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -2136,7 +2136,7 @@
           "MM"
         ]
       },
-      "fork_notes": "Closed. SDKs are open.",
+      "notes": "Closed. SDKs are open.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -2196,7 +2196,7 @@
       "screening": {
         "s": "yes",
         "provider": "/api/preflight-compliance -> private COMPLIANCE_API_URL/check/{addr}?surface=v3 (TRM Labs historically, 2022)",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "closed",
         "fail_note": "status=error -> overlay; skipped in read-only mode"
       },
@@ -2228,7 +2228,7 @@
           "UA-Zaporizhzhia"
         ]
       },
-      "fork_notes": "IMPORTANT: a naive fork/IPFS build without the API route will lock out EVERY user (fail-closed). Remove the `AddressBlocked` wrapper in pages/_app.page.tsx.",
+      "notes": "Fail-closed: without a working /api/preflight-compliance route the `AddressBlocked` wrapper in pages/_app.page.tsx locks out every user, IPFS builds included.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -2286,7 +2286,7 @@
       "screening": {
         "s": "yes",
         "provider": "ComplianceProvider -> own API route backed by COMPLIANCE_API_URL + COMPLIANCE_SECRET (provider not disclosed)",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "closed",
         "fail_note": "status=error shows the same blocked screen with a retry button"
       },
@@ -2318,7 +2318,7 @@
           "UA-Zaporizhzhia"
         ]
       },
-      "fork_notes": "Closed frontend. Compliance and geo checks are server routes of pro.aave.com; an interface built on the public V4 contracts and SDK does not inherit them.",
+      "notes": "Closed frontend. Compliance and geo checks are server routes of pro.aave.com; the V4 contracts and the public SDK do not include them.",
       "live": [
         "POST pro.aave.com/api/geo from RO (2026-10-10): USDC and WETH on Ethereum -> isGeoblocked=false"
       ],
@@ -2390,7 +2390,7 @@
         "restricted": "generic OFAC/UN/UK/EU + Foundation discretion",
         "restricted_codes": []
       },
-      "fork_notes": "Static list in src/helpers/sanctions.ts. Trivial to remove. Legacy v2 UI: compound-finance/palisade.",
+      "notes": "Static list in src/helpers/sanctions.ts. Legacy v2 UI: compound-finance/palisade.",
       "live": [
         "WebFetch (US): normal page",
         "app.compound.finance -> app.compound.xyz (domain moved, 2026-10-10)"
@@ -2440,7 +2440,7 @@
       "screening": {
         "s": "yes",
         "provider": "screening.compound.xyz (own service; the privacy notice names TRM Labs / Chainalysis as data providers)",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "unknown",
         "fail_note": ""
       },
@@ -2453,7 +2453,7 @@
         "restricted": "generic sanctions + Foundation discretion",
         "restricted_codes": []
       },
-      "fork_notes": "The screening endpoint is injected as an app flag (SCREENING_ENDPOINT); the public palisade code predates it, so a build of the public code does not screen.",
+      "notes": "The screening endpoint is injected as an app flag (SCREENING_ENDPOINT); the public palisade code predates it and does not screen.",
       "live": [
         "v2-app.compound.xyz (2026-10-10): 'V2 Deprecation has begun' banner; config SCREENING_ENDPOINT=https://screening.compound.xyz and a screening-error overlay"
       ],
@@ -2508,7 +2508,7 @@
       "screening": {
         "s": "yes",
         "provider": "unnamed (docs: blocks US-sanctioned addresses)",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "unknown",
         "fail_note": ""
       },
@@ -2521,7 +2521,7 @@
         "restricted": "generic comprehensive sanctions",
         "restricted_codes": []
       },
-      "fork_notes": "Already covered by morpho.cp0x.com. Lite/Fallback apps are archived but forkable.",
+      "notes": "Lite and Fallback apps (morpho-lite-apps) are archived but public.",
       "live": [
         "WebFetch (US): normal page, meta x-geo-country=US"
       ],
@@ -2579,7 +2579,7 @@
       "screening": {
         "s": "reported",
         "provider": "TRM Labs (2023 reports)",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "unknown",
         "fail_note": ""
       },
@@ -2592,7 +2592,7 @@
         "restricted": "generic; ToS 2.6: by IP, ISP, VPN, device, address",
         "restricted_codes": []
       },
-      "fork_notes": "Find the last public spark-app commit (mirrors/forks on GitHub). URL note: now app.spark.finance.",
+      "notes": "spark-app is no longer public; the last public commits survive in mirrors on GitHub. URL note: now app.spark.finance.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -2682,7 +2682,7 @@
       "screening": {
         "s": "yes",
         "provider": "auth service /address/status + /address/status/enhanced before a tx (paid provider, unnamed)",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "closed",
         "fail_note": ""
       },
@@ -2731,7 +2731,7 @@
           "UA-Zaporizhzhia"
         ]
       },
-      "fork_notes": "Everything goes through VITE_AUTH_URL. The repo has a skip-auth build (used for e2e). That is ready to use for a fork.",
+      "notes": "Geo, screening and the ToS signature all go through the auth service (VITE_AUTH_URL). The repo has a skip-auth build used for e2e tests.",
       "live": [
         "api.sky.money/geo-config (US): isRegionRestricted=false, all modules enabled"
       ],
@@ -2821,7 +2821,7 @@
           "UA-Zaporizhzhia"
         ]
       },
-      "fork_notes": "Country from a free IP API, list from their API. Remove in a fork. URL note: now venus.io.",
+      "notes": "Country from a free IP API (freeipapi.com), per-asset country lists from the Venus API. URL note: now venus.io.",
       "live": [
         "WebFetch (US): 302 -> venus.io, JS shell"
       ],
@@ -2899,7 +2899,7 @@
       "screening": {
         "s": "yes",
         "provider": "TRM Labs via Euler data-v3 /v3/compliance/address-screening",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "closed",
         "fail_note": ""
       },
@@ -2922,7 +2922,7 @@
           "RU"
         ]
       },
-      "fork_notes": "Open repo with docs (docs/geo-blocking.md, docs/address-screening.md). Everything is behind env config. A fork turns off geo-gate and screening.",
+      "notes": "Open repo with docs (docs/geo-blocking.md, docs/address-screening.md). Geo-gate and screening are switched by env config.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -2992,7 +2992,7 @@
         "restricted": "unknown (client-side)",
         "restricted_codes": []
       },
-      "fork_notes": "Closed. Needs a browser crawl.",
+      "notes": "Closed. Needs a browser crawl.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -3045,7 +3045,7 @@
         "restricted": "ToS not found",
         "restricted_codes": []
       },
-      "fork_notes": "Closed; klend SDK is open. URL note: app.kamino.finance -> 302.",
+      "notes": "Closed; klend SDK is open. URL note: app.kamino.finance -> 302.",
       "live": [
         "WebFetch (US): JS shell"
       ],
@@ -3107,7 +3107,7 @@
         "restricted": "generic + restriction by wallet/IP/risk",
         "restricted_codes": []
       },
-      "fork_notes": "marginfi UI is archived. Project 0 is closed. URL note: retired -> app.0.xyz.",
+      "notes": "marginfi UI is archived. Project 0 is closed. URL note: retired -> app.0.xyz.",
       "live": [
         "WebFetch (US): retirement notice -> app.0.xyz"
       ],
@@ -3166,7 +3166,7 @@
         "restricted": "Liquity AG runs no frontend; frontends are third-party",
         "restricted_codes": []
       },
-      "fork_notes": "Built for third-party frontends. Clean by default.",
+      "notes": "Built for third-party frontends. Clean by default.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -3258,7 +3258,7 @@
           "VE"
         ]
       },
-      "fork_notes": "Geo is a request to their worker, screening is an eth_call. Both removed in a fork.",
+      "notes": "Geo is a request to their worker (api.notional.finance/geoip); screening is an eth_call to the Chainalysis oracle made by the frontend.",
       "live": [
         "notional.finance bundle (2026-10-10): api.notional.finance/geoip + sanctions list incl. US -> /blocked; no VPN detector; app reads registry-v4.notional.finance",
         "WebFetch (US): metadata only (block is client-side)"
@@ -3354,7 +3354,7 @@
           "VE"
         ]
       },
-      "fork_notes": "Same mechanics as the current app plus a VPN detector, all in the frontend; removed in a fork.",
+      "notes": "Same mechanics as the current app plus a VPN detector, all in the frontend.",
       "live": [
         "v3.notional.finance bundle (2026-10-10): detect.notional.finance VPN check, api.notional.finance/geoip -> /error?code=451, 'Leveraged products are not available in the US or to VPN users'"
       ],
@@ -3416,7 +3416,7 @@
         "restricted": "no terms linked from the app",
         "restricted_codes": []
       },
-      "fork_notes": "Deprecated; positions were migrated to V3.",
+      "notes": "Deprecated; positions were migrated to V3.",
       "live": [
         "v2.notional.finance (2026-10-10): app loads with 'Notional V2 is being deprecated' banner; the bundle has no geo or screening code"
       ],
@@ -3478,7 +3478,7 @@
         "restricted": "not reviewed (legacy terms)",
         "restricted_codes": []
       },
-      "fork_notes": "Protocol paused after the September 2026 exploit.",
+      "notes": "Protocol paused after the September 2026 exploit.",
       "live": [
         "v1.notional.finance (2026-10-10): landing loads; the bundle has no geo or screening code"
       ],
@@ -3526,7 +3526,7 @@
       "screening": {
         "s": "yes",
         "provider": "/api/validation -> external validationAPI /v2/check/{addr} (unnamed) + local list",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "unknown",
         "fail_note": ""
       },
@@ -3548,7 +3548,7 @@
           "GB"
         ]
       },
-      "fork_notes": "The IPFS build lets you control the API base paths. Stake/Withdraw are not geo-gated.",
+      "notes": "The IPFS build lets you control the API base paths. Stake/Withdraw are not geo-gated.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -3622,7 +3622,7 @@
           "GB"
         ]
       },
-      "fork_notes": "Clean: no geo or screening code; vault limits (paused deposits, jailed vaults) come from the protocol contracts.",
+      "notes": "Clean: no geo or screening code; vault limits (paused deposits, jailed vaults) come from the protocol contracts.",
       "live": [
         "stvaults.lido.fi (2026-10-10): loads release 0.23.0; only matomo.lido.fi analytics besides the app"
       ],
@@ -3681,7 +3681,7 @@
         "restricted": "ToS not found",
         "restricted_codes": []
       },
-      "fork_notes": "Needs a browser crawl.",
+      "notes": "Needs a browser crawl.",
       "live": [
         "WebFetch (US): JS shell"
       ],
@@ -3745,7 +3745,7 @@
         "restricted": "generic US-embargoed",
         "restricted_codes": []
       },
-      "fork_notes": "Closed.",
+      "notes": "Closed.",
       "live": [
         "WebFetch (US): HTTP 500"
       ],
@@ -3827,7 +3827,7 @@
           "ZW"
         ]
       },
-      "fork_notes": "Closed. URL note: app.ether.fi -> 302.",
+      "notes": "Closed. URL note: app.ether.fi -> 302.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -3907,7 +3907,7 @@
           "UA-LPR"
         ]
       },
-      "fork_notes": "Closed. Pendle API/SDK are open.",
+      "notes": "Closed. Pendle API/SDK are open.",
       "live": [
         "WebFetch (US): 'Failed to load app' (JS)"
       ],
@@ -3990,13 +3990,13 @@
       "screening": {
         "s": "yes",
         "provider": "unnamed (restricted page + Mint blocked addresses)",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "unknown",
         "fail_note": ""
       },
       "kyc": {
         "s": "yes",
-        "layer": "protocol-api",
+        "layer": "contract",
         "scope": "USDe mint/redeem only for KYC-approved whitelisted addresses; staking USDe into sUSDe is open"
       },
       "asset_filter": "",
@@ -4024,7 +4024,7 @@
           "CY-North"
         ]
       },
-      "fork_notes": "Closed. Staking USDe->sUSDe is a plain ERC-4626 that works directly via the contract.",
+      "notes": "Closed. Staking USDe->sUSDe is a plain ERC-4626 that works directly via the contract.",
       "live": [
         "WebFetch (US): 302 -> /restricted (geo-block confirmed)"
       ],
@@ -4093,7 +4093,7 @@
         "restricted": "no ToS",
         "restricted_codes": []
       },
-      "fork_notes": "Clean.",
+      "notes": "Clean.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -4164,7 +4164,7 @@
         "restricted": "no ToS",
         "restricted_codes": []
       },
-      "fork_notes": "Restriction is just a JSON config plus their API. There is a geoCountryOverride flag.",
+      "notes": "Restriction is just a JSON config plus their API. There is a geoCountryOverride flag.",
       "live": [
         "api.beefy.finance/geo/country (US) -> {country: US}"
       ],
@@ -4228,7 +4228,7 @@
         "restricted": "no ToS",
         "restricted_codes": []
       },
-      "fork_notes": "Closed, no ToS.",
+      "notes": "Closed, no ToS.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -4281,7 +4281,7 @@
         "restricted": "generic UN/OFAC/EU/UK",
         "restricted_codes": []
       },
-      "fork_notes": "Closed.",
+      "notes": "Closed.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -4352,7 +4352,7 @@
         "restricted": "generic comprehensive US sanctions",
         "restricted_codes": []
       },
-      "fork_notes": "Across API is open (suggested-fees, available-routes). Our own UI on top of it is realistic. URL note: app.across.to -> 302.",
+      "notes": "Across API is public (suggested-fees, available-routes). URL note: app.across.to -> 302.",
       "live": [
         "/api/suggested-fees with SDN recipient -> normal quote"
       ],
@@ -4420,7 +4420,7 @@
         "restricted": "generic UN/EU/UK/Cayman/US",
         "restricted_codes": []
       },
-      "fork_notes": "Closed.",
+      "notes": "Closed.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -4473,7 +4473,7 @@
       "screening": {
         "s": "yes",
         "provider": "bundled blacklist + screener.omnirpc.io/fe/address/{addr} (Chainalysis Entity API behind it); connected + destination address",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "closed",
         "fail_note": "error = flagged"
       },
@@ -4486,7 +4486,7 @@
         "restricted": "generic comprehensive US sanctions",
         "restricted_codes": []
       },
-      "fork_notes": "IMPORTANT: fail-closed. If the screener is down, everyone is flagged. A fork removes screenAddress().",
+      "notes": "Fail-closed: a screener error marks the address as flagged. Screening lives in screenAddress().",
       "live": [
         "screener: SDN -> {risk: true}; control -> {risk: false}"
       ],
@@ -4601,7 +4601,7 @@
           "ZW"
         ]
       },
-      "fork_notes": "WARNING: hop.exchange apex serves gambling spam (domain lapsed/hijacked). app.hop.exchange -> HTTP 400. Good candidate for a permissionless replacement.",
+      "notes": "WARNING: hop.exchange apex serves gambling spam (domain lapsed/hijacked). app.hop.exchange -> HTTP 400.",
       "live": [
         "WebFetch: app.hop.exchange -> 400; hop.exchange -> spam"
       ],
@@ -4655,7 +4655,7 @@
       "screening": {
         "s": "yes",
         "provider": "archived UI: TRM Labs via proxy (risk score >= 10 -> block, fail-open). wormhole-connect widget: hardcoded OFAC SDN list",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "open",
         "fail_note": ""
       },
@@ -4668,7 +4668,7 @@
         "restricted": "unknown (client-side)",
         "restricted_codes": []
       },
-      "fork_notes": "Base: wormhole-foundation/wormhole-connect (widget) + the archived portal-bridge-ui.",
+      "notes": "Base: wormhole-foundation/wormhole-connect (widget) + the archived portal-bridge-ui.",
       "live": [
         "WebFetch (US): metadata only"
       ],
@@ -4723,7 +4723,7 @@
       "screening": {
         "s": "yes",
         "provider": "Chainalysis + HackBounty + Hermod + internal blocklist; public endpoint api.relay.link/sanctioned/{addr}",
-        "layer": "protocol-api",
+        "layer": "api",
         "fail": "unknown",
         "fail_note": ""
       },
@@ -4736,7 +4736,7 @@
         "restricted": "ToS returns 403 to bots",
         "restricted_codes": []
       },
-      "fork_notes": "Screening runs at quote and fill level in the protocol API. A fork does not bypass it.",
+      "notes": "Screening runs at quote and fill level in the Relay API (public endpoint /sanctioned/{addr}).",
       "live": [
         "api.relay.link/sanctioned: SDN -> {sanctioned: true}; control -> false"
       ],
@@ -4825,7 +4825,7 @@
         "restricted": "~40 countries + regions (see help center)",
         "restricted_codes": []
       },
-      "fork_notes": "The CLOB API is also geo-blocked for the main tiers. An alternative frontend requires an API proxy outside the blocked jurisdictions.",
+      "notes": "The CLOB API itself is geo-blocked for the main tiers, not only the website.",
       "live": [
         "/api/geoblock (US) -> {blocked: true, country: US, region: OH}; overlay 'Trading is blocked in the United States'"
       ],
@@ -4901,7 +4901,7 @@
         "restricted": "generic EU/US sanctions",
         "restricted_codes": []
       },
-      "fork_notes": "Only native integrations are restricted (swap via CoW, stake via Kiln and so on). The core wallet is permissionless.",
+      "notes": "Only native integrations are restricted (swap via CoW, stake via Kiln and so on). The core wallet is permissionless.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -4961,7 +4961,7 @@
         "restricted": "sanctioned + FATF non-cooperative",
         "restricted_codes": []
       },
-      "fork_notes": "Clean.",
+      "notes": "Clean.",
       "live": [
         "WebFetch (US): normal page"
       ],
@@ -5020,7 +5020,7 @@
         "restricted": "sanctioned + FATF non-cooperative",
         "restricted_codes": []
       },
-      "fork_notes": "Clean.",
+      "notes": "Clean.",
       "live": [
         "legacy.ens.domains -> ens-app.pages.dev (2026-10-10): banner 'This version is no longer maintained for bug and security fixes'"
       ],
@@ -5101,7 +5101,7 @@
           "ZW"
         ]
       },
-      "fork_notes": "Clean. Legacy snapshot.org client: snapshot-labs/snapshot.",
+      "notes": "Clean. Legacy snapshot.org client: snapshot-labs/snapshot.",
       "live": [
         "WebFetch (US): JS shell"
       ],
@@ -5175,7 +5175,7 @@
       },
       "kyc": {
         "s": "yes",
-        "layer": "protocol-api",
+        "layer": "contract",
         "scope": "Mint and redeem only after KYC onboarding with Ondo; OUSG and Global Markets tokens are held through allowlisted wallets enforced on-chain."
       },
       "asset_filter": "",
@@ -5207,7 +5207,7 @@
           "US"
         ]
       },
-      "fork_notes": "Closed frontend. Minting and redemption are gated by Ondo's KYC and on-chain allowlists, so a fork cannot open them; only secondary-market trading of the tokens on DEXs is permissionless.",
+      "notes": "Closed frontend. Minting and redemption are gated by Ondo's KYC and on-chain allowlists; secondary-market trading of the tokens on DEXs has no such gate.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
@@ -5306,7 +5306,7 @@
           "ZW"
         ]
       },
-      "fork_notes": "Closed frontend. syrupUSDC/syrupUSDT are standard vault tokens that can be deposited through the contracts; the jurisdiction rules are contractual (Terms), not observed in code.",
+      "notes": "Closed frontend. syrupUSDC/syrupUSDT are standard vault tokens that can be deposited through the contracts; the jurisdiction rules are contractual (Terms), not observed in code.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
@@ -5362,7 +5362,7 @@
       },
       "kyc": {
         "s": "yes",
-        "layer": "protocol-api",
+        "layer": "contract",
         "scope": "Per pool: KYC/AML with the asset manager, then the wallet is added to the pool's on-chain memberlist (separately on each network) before it can invest or hold tokens."
       },
       "asset_filter": "",
@@ -5374,7 +5374,7 @@
         "restricted": "Services may be unavailable in some jurisdictions or limited to sophisticated, accredited or qualified investors",
         "restricted_codes": []
       },
-      "fork_notes": "The frontend is open source (centrifuge/apps), but investing requires the manager's approval on the pool's on-chain memberlist, so a fork cannot open access to pools.",
+      "notes": "The frontend is open source (centrifuge/apps); investing requires the manager's approval on the pool's on-chain memberlist.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
@@ -5425,7 +5425,7 @@
       },
       "kyc": {
         "s": "yes",
-        "layer": "protocol-api",
+        "layer": "contract",
         "scope": "Onboarding with KYC (via Parallel Markets), then wallet allowlisting; USTB transfers to non-allowlisted addresses revert on-chain."
       },
       "asset_filter": "",
@@ -5437,7 +5437,7 @@
         "restricted": "Only investors in supported countries (allowlist of roughly 22-29 countries, updated regularly)",
         "restricted_codes": []
       },
-      "fork_notes": "Closed frontend. USTB transfers to non-allowlisted addresses revert at the contract level, so a fork cannot give access.",
+      "notes": "Closed frontend. USTB transfers to non-allowlisted addresses revert at the contract level.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
@@ -5495,7 +5495,7 @@
         "restricted": "ToS not found",
         "restricted_codes": []
       },
-      "fork_notes": "Closed frontend. Core contracts are immutable and permissionless; restrictions, if any, would sit in the app or in individual vaults.",
+      "notes": "Closed frontend. Core contracts are immutable and permissionless; restrictions, if any, would sit in the app or in individual vaults.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
@@ -5561,7 +5561,7 @@
         "restricted": "No named jurisdictions; sanctions-list representations only",
         "restricted_codes": []
       },
-      "fork_notes": "Closed frontend; deposits and withdrawals use public contracts.",
+      "notes": "Closed frontend; deposits and withdrawals use public contracts.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
@@ -5646,7 +5646,7 @@
           "ZW"
         ]
       },
-      "fork_notes": "Closed frontend. LBTC can be held and used in DeFi without the app; mint and redeem depend on Lombard's infrastructure (BTC custody and bridging).",
+      "notes": "Closed frontend. LBTC can be held and used in DeFi without the app; mint and redeem depend on Lombard's infrastructure (BTC custody and bridging).",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
@@ -5694,7 +5694,7 @@
       "screening": {
         "s": "reported",
         "provider": "frxUSD contract-level blacklist for sanctions (third-party reviews)",
-        "layer": "protocol-api",
+        "layer": "contract",
         "fail": "unknown",
         "fail_note": ""
       },
@@ -5712,7 +5712,7 @@
         "restricted": "frxUSD Terms of Service not retrieved",
         "restricted_codes": []
       },
-      "fork_notes": "Closed frontend. Core Frax contracts are public; frxUSD mint/redeem through the custodian route has compliance requirements.",
+      "notes": "Closed frontend. Core Frax contracts are public; frxUSD mint/redeem through the custodian route has compliance requirements.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
@@ -5842,7 +5842,7 @@
           "ZW"
         ]
       },
-      "fork_notes": "Closed frontend; USD0 and USD0++ use public contracts.",
+      "notes": "Closed frontend; USD0 and USD0++ use public contracts.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
@@ -5923,7 +5923,7 @@
           "YE"
         ]
       },
-      "fork_notes": "Closed frontend. Orders are filled by independent market makers; the DLN API and SDK are public.",
+      "notes": "Closed frontend. Orders are filled by independent market makers; the DLN API and SDK are public.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
@@ -5975,7 +5975,7 @@
       "screening": {
         "s": "reported",
         "provider": "Account-level sanctions checks; accounts deactivated by nationality, not only by location (2022 reports)",
-        "layer": "own-api",
+        "layer": "api",
         "fail": "unknown",
         "fail_note": ""
       },
@@ -5988,7 +5988,7 @@
         "restricted": "Persons and territories under US sanctions (company statements, 2022)",
         "restricted_codes": []
       },
-      "fork_notes": "Closed frontend. NFTs live in public contracts (Seaport is open source), so other marketplaces can trade the same assets.",
+      "notes": "Closed frontend. NFTs live in public contracts (Seaport is open source), so other marketplaces can trade the same assets.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
@@ -6051,7 +6051,7 @@
         "restricted": "No Terms of Service",
         "restricted_codes": []
       },
-      "fork_notes": "Contracts are immutable and permissionless; any interface (IPFS copies, tornado.cp0x.com) can use them, and relayers are independent. Verify the IPFS hash of tornadocash.eth before use.",
+      "notes": "Contracts are immutable and permissionless; any interface (IPFS copies, tornado.cp0x.com) can use them, and relayers are independent. Verify the IPFS hash of tornadocash.eth before use.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [

@@ -42,7 +42,7 @@ P1 repo-watch      P2 static-scan     P3 edge-probe      P4/P5 browser+wallet   
 | **P3 edge-probe** | `GET url` без JS из каждой страны-вантажа: статус, цепочка редиректов, заголовки (`server`, `cf-ray`, `x-vercel-id`, `x-nf-request-id`), хэш тела, ключевые слова. Плюс `GET https://<host>/cdn-cgi/trace`: поле `loc=` показывает, какую страну видит CDN самого сайта, — это лучшая верификация прокси | ежедневно | матрица страна × статус |
 | **P4 browser-probe** | Playwright, контекст на страну через прокси: загрузка, `networkidle`, HAR, консоль, скриншот, DOM-текст. Детект гео-модалок и оверлеев, список сторонних доменов (`api.country.is`, `ipapi`, `*.workers.dev`, `trmlabs`, `hypernative`…) | еженедельно + при диффе P3 | HAR, скриншот, `geo_requests[]` |
 | **P5 wallet-probe** | Mock EIP-1193/EIP-6963 кошелёк (ниже). Два прогона: clean-адрес и SDN-адрес. Connect → дождаться сети → снять UI-состояние → для DEX дойти до кнопки свапа/депозита (подпись отклоняется). Фиксируются запросы скрининга (URL, тело, ответ), модалки, дисконнект, disabled-кнопки | еженедельно | `wallet_tests[]` |
-| **P6 api-probe** | Публичные API протоколов, от которых зависит любой форк: quote/route/screen-эндпоинты с SDN и clean адресами из нескольких стран (LI.FI `/v1/quote`, Relay `/sanctioned/{a}`, dYdX `/v4/compliance/screen/{a}`, Kyber Blackjack, Synapse screener, Polymarket `/api/geoblock`, Across `/api/suggested-fees`, CoW quote/order validation…) | ежедневно | `layer=protocol-api` findings |
+| **P6 api-probe** | Публичные API протоколов: quote/route/screen-эндпоинты с SDN и clean адресами из нескольких стран (LI.FI `/v1/quote`, Relay `/sanctioned/{a}`, dYdX `/v4/compliance/screen/{a}`, Kyber Blackjack, Synapse screener, Polymarket `/api/geoblock`, Across `/api/suggested-fees`, CoW quote/order validation…) | ежедневно | `layer=api` findings |
 | **P7 tos-diff** | Рендер ToS (Playwright, ToS часто client-side), нормализация текста, хэш. При изменении — LLM-извлечение списка юрисдикций в ISO-коды и диф с прошлой версией | еженедельно | `tos` объект + diff |
 | **P8 score+diff** | Расчёт уровня (A/A?/B/C/D/?), sub-scores, сравнение с прошлым снапшотом, алерты | после каждого прогона | `latest.json`, история |
 
@@ -126,7 +126,7 @@ export async function attachProbeWallet(page: Page, address: string, chainIdHex 
 interface(id, name, category, chains[], url, frontend_repo, repo_path, api_endpoints[])
 run(id, started_at, kind: repo|static|edge|browser|wallet|api|tos, vantage)
 finding(id, run_id, interface_id, mechanism: geo_site|geo_feature|vpn|wallet_screening|asset_filter|tos_only,
-        layer: edge|frontend|own-api|protocol-api, provider, endpoint, countries[], fail_mode: open|closed|unknown,
+        layer: edge|frontend|api|contract, provider, endpoint, countries[], fail_mode: open|closed|unknown,
         status: confirmed|inferred|tos_only|reported, confidence)
 evidence(id, finding_id, kind: code|bundle|http|har|screenshot|doc|api, ref, sha256, observed_at)
 snapshot(interface_id, at, level, scores{geo,screening,asset,vpn}, fork{ready, blockers[], gates_to_remove[]})
@@ -140,7 +140,7 @@ snapshot(interface_id, at, level, scores{geo,screening,asset,vpn}, fork{ready, b
 
 ## 5. Как выводить данные на pi.cp0x.com
 
-1. **/monitor — рейтинг.** Сортируемая таблица: уровень, механизмы, провайдер скрининга, где исполняется (edge/фронт/свой API/API протокола), fork-ready, дата проверки, тренд (стрелка при смене уровня). Фильтры: категория, сеть, механизм, «есть альтернатива в каталоге».
+1. **/monitor — рейтинг.** Сортируемая таблица: уровень, механизмы, провайдер скрининга, где исполняется (edge/фронт/API/контракт), дата проверки, тренд (стрелка при смене уровня). Фильтры: категория, сеть, механизм, «есть альтернатива в каталоге».
 2. **/monitor?country=XX — «что работает из моей страны».** Колонка статуса для выбранной страны из `matrix.json` плюс ссылка на permissionless-альтернативу cp0x, если она есть. Это главный продуктовый экран.
 3. **/monitor/<id> — карточка интерфейса.** Хронология изменений, скриншоты по странам, ссылки на код, закреплённые на sha, ответы API на SDN/clean адреса, диф ToS.
 4. **Алерты.** Telegram-канал (можно переиспользовать существующий бот агрегатора) на события: новый гео-блок, смена ToS, репо стал приватным, смена провайдера скрининга.

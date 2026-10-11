@@ -77,6 +77,7 @@ export default function MainLayout() {
   const tabs = [
     { label: t.layout.tabs.monitor, path: 'monitor', iconPosition: 'top' },
     ...(SHOW_COUNTRY_PAGE ? [{ label: t.layout.tabs.country, path: 'country', iconPosition: 'top' }] : []),
+    { label: t.layout.tabs.summary, path: 'summary', iconPosition: 'top' },
     { label: t.layout.tabs.methodology, path: 'methodology', iconPosition: 'top' }
   ];
 

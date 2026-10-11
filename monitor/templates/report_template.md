@@ -10,10 +10,11 @@
 ## 1. Главное
 
 1. **Ограничения уходят с уровня сайта на уровень кошелька и актива.** Полный гео-блок сайта встречается редко. Типовая схема 2026 года выглядит так: скрининг кошелька через собственный бэкенд оператора плюс гео-фильтр отдельных активов. Особенно это касается RWA и токенизированных акций. Так устроены Uniswap, Sushi, CoW, Beefy, Venus, Euler, Aerodrome и Lido Earn. Robinhood-токены у Sushi закрыты для 15 стран, включая всю Украину.
-2. **Для форка важно не «есть ли ограничение», а где оно исполняется.**
-   - **Фронтенд или свой API оператора.** Ограничение удаляется в форке: Aave, Euler, Sky, Uniswap, Sushi, Balancer, Synapse, Notional, Ambient, Hop.
-   - **API протокола.** Форк наследует ограничение: CoW orderbook (Chainalysis oracle + Hermod), LI.FI API (422 на SDN-адрес), Relay (Chainalysis + HackBounty), индексер dYdX (Elliptic + 403 GEOBLOCKED), CLOB Polymarket. Здесь нужен свой инфраструктурный слой: self-hosted индексер dYdX или прокси вне заблокированных юрисдикций. Для скрининга в API протокола обхода нет.
-3. **Ловушки fail-closed при форке.** В нескольких репозиториях гейт блокирует всех, если бэкенд не настроен или недоступен. Гейт нужно удалять, а не просто не задавать env:
+2. **Где исполняется ограничение** (поле `layer`, фактическое место проверки; при нескольких проверках указана самая глубокая):
+   - **Фронтенд** — решает код в браузере (зашитый список, запрос к провайдеру или чтение on-chain оракула со страницы): Sushi, Ambient, Compound, Notional, Safe.
+   - **API** — отказывает сервер: отдельный compliance-эндпоинт (Uniswap, Aave, Euler, Sky, Balancer, Synapse, Lido, KyberSwap) или основной API протокола (CoW orderbook: Chainalysis oracle + Hermod; LI.FI API: 422 на SDN-адрес; Relay: Chainalysis + HackBounty; индексер dYdX: Elliptic + 403 GEOBLOCKED; CLOB Polymarket).
+   - **Смарт-контракт** — адрес отклоняет сам контракт: блэклист frxUSD (Frax), allowlist и memberlist у Ondo, Centrifuge и Superstate, mint/redeem USDe только для whitelisted-адресов (Ethena).
+3. **Fail-closed гейты.** В нескольких репозиториях гейт блокирует всех, если бэкенд не настроен или недоступен:
    - Aave: `/api/preflight-compliance` возвращает ошибку, и показывается оверлей на всё приложение.
    - Synapse: ошибка скринера означает «flagged».
    - Euler: неизвестная страна приводит к 451 на `/api/*`.

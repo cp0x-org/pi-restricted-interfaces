@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import Chip, { ChipProps } from '@mui/material/Chip';
 import { Theme, alpha, lighten } from '@mui/material/styles';
 import Tooltip from '@mui/material/Tooltip';
-import { CountryStatus, ForkReady, Level, Status, VpnStatus } from 'types/restrictions';
+import { CountryStatus, Level, Status, VpnStatus } from 'types/restrictions';
 
 /** Semantic colour of a chip. The theme's Chip override defaults to primary/light, so colours are always explicit here. */
 export type Tone = 'bad' | 'warn' | 'mild' | 'good' | 'goodOutlined' | 'neutral' | 'unknown';
@@ -22,8 +22,6 @@ export const statusTone = (s: Status): Tone =>
 
 export const vpnTone = (s: VpnStatus): Tone =>
   ({ block: 'bad', detect: 'warn', optional: 'mild', tos_only: 'neutral', no: 'good', unknown: 'unknown' })[s] as Tone;
-
-export const forkTone = (f: ForkReady): Tone => ({ yes: 'good', stale: 'mild', partial: 'warn', no_code: 'neutral' })[f] as Tone;
 
 export const levelTone = (l: Level): Tone => ({ D: 'bad', C: 'warn', B: 'mild', A: 'good', 'n/a': 'unknown' })[l] as Tone;
 

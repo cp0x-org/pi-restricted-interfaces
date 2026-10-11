@@ -93,8 +93,8 @@ type SortableField =
 const SHOW_CATEGORY_COLUMN = false;
 
 /**
- * Hidden: "Screening layer" filtered by WHERE the wallet screening runs (frontend JS, the operator's own API,
- * or the protocol API that every client depends on). The same information is in the caption of the Wallet screening column.
+ * Hidden: "Screening layer" filtered by WHERE the wallet screening runs (edge, frontend JS, a server API or the smart
+ * contract itself). The same information is in the caption of the Wallet screening column.
  */
 const SHOW_SCREENING_LAYER_FILTER = false;
 
@@ -108,7 +108,10 @@ interface CountryHit {
 
 const hasPermissionless = (i: InterfaceEntry): boolean => i.alternatives.length > 0;
 const geoCount = (i: InterfaceEntry): number => i.geo_site.countries.length + i.geo_site.close_only.length;
-const officialHost = (i: InterfaceEntry): string => i.url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+/** Networks listed under the name in the table (the rest is a +N count with the full list in the tooltip), kept short so the
+ * one-line cell stays narrow. */
+const TABLE_NETWORKS = 2;
+const officialHost = (i: InterfaceEntry): string => i.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
 type SortOrder = 'asc' | 'desc';
 
 const MECHANISMS: MechanismKind[] = ['geo_site', 'geo_feature', 'screening', 'vpn', 'kyc'];
@@ -302,9 +305,10 @@ export default function MonitorPage() {
   const geoCaption = (i: InterfaceEntry): string | undefined => {
     const geoCount = i.geo_site.countries.length;
     const closeOnly = i.geo_site.close_only.length;
-    return geoCount || closeOnly
-      ? [geoCount && t.monitor.countries(geoCount), closeOnly && t.monitor.closeOnly(closeOnly)].filter(Boolean).join(', ')
-      : undefined;
+    // One short line ("7 + 17 close-only") so the table cell never wraps.
+    if (geoCount && closeOnly) return `${geoCount} + ${t.monitor.closeOnly(closeOnly)}`;
+    if (geoCount) return t.monitor.countries(geoCount);
+    return closeOnly ? t.monitor.closeOnly(closeOnly) : undefined;
   };
   const featureCaption = (i: InterfaceEntry): string | undefined =>
     i.geo_feature.countries.length ? t.monitor.countries(i.geo_feature.countries.length) : undefined;
@@ -583,38 +587,49 @@ export default function MonitorPage() {
             <TableBody>
               {paginated.map((i) => {
                 return (
-                  <TableRow key={i.id} hover onClick={() => navigate(path(`/monitor/${i.id}`))} sx={{ cursor: 'pointer' }}>
+                  // No hover highlight on the row: only our permissionless button lights up.
+                  <TableRow key={i.id} onClick={() => navigate(path(`/monitor/${i.id}`))} sx={{ cursor: 'pointer' }}>
                     <TableCell>
-                      <Link
-                        component={RouterLink}
-                        to={path(`/monitor/${i.id}`)}
-                        onClick={(e) => e.stopPropagation()}
-                        underline="hover"
-                        color="inherit"
-                        variant="subtitle1"
-                        sx={{ fontWeight: 600 }}
-                      >
-                        {displayName(i)}
-                      </Link>
-                      {i.aka && (
-                        <Typography component="span" variant="body2" color="text.secondary">
-                          {` ${i.aka}`}
-                        </Typography>
-                      )}
-                      {i.lifecycle === 'legacy' && (
-                        <ToneChip
-                          tone="neutral"
-                          label={t.chips.legacy}
-                          tooltip={i.lifecycle_note ?? t.legend.legacy}
-                          sx={{ ml: 0.75, verticalAlign: 'middle' }}
-                        />
-                      )}
-                      <Tooltip title={i.networks.join(', ')} arrow placement="top" disableHoverListener={i.networks.length <= 3}>
-                        <Typography variant="caption" color="text.secondary" component="div">
-                          {i.networks.slice(0, 3).join(', ')}
-                          {i.networks.length > 3 ? ` +${i.networks.length - 3}` : ''}
-                        </Typography>
-                      </Tooltip>
+                      {/* Two fixed lines (name, then legacy chip + networks) keep every row the same height. */}
+                      <Box sx={{ whiteSpace: 'nowrap' }}>
+                        <Link
+                          component={RouterLink}
+                          to={path(`/monitor/${i.id}`)}
+                          onClick={(e) => e.stopPropagation()}
+                          underline="hover"
+                          color="inherit"
+                          variant="subtitle1"
+                          sx={{ fontWeight: 600 }}
+                        >
+                          {displayName(i)}
+                        </Link>
+                        {i.aka && (
+                          <Typography component="span" variant="body2" color="text.secondary">
+                            {` ${i.aka}`}
+                          </Typography>
+                        )}
+                      </Box>
+                      <Stack direction="row" spacing={0.5} alignItems="center" sx={{ whiteSpace: 'nowrap' }}>
+                        {i.lifecycle === 'legacy' && (
+                          <ToneChip
+                            tone="neutral"
+                            label={t.chips.legacy}
+                            tooltip={i.lifecycle_note ?? t.legend.legacy}
+                            sx={{ height: 18, '& .MuiChip-label': { px: 0.75, fontSize: '0.6875rem' } }}
+                          />
+                        )}
+                        <Tooltip
+                          title={i.networks.join(', ')}
+                          arrow
+                          placement="top"
+                          disableHoverListener={i.networks.length <= TABLE_NETWORKS}
+                        >
+                          <Typography variant="caption" color="text.secondary" component="div">
+                            {i.networks.slice(0, TABLE_NETWORKS).join(', ')}
+                            {i.networks.length > TABLE_NETWORKS ? ` +${i.networks.length - TABLE_NETWORKS}` : ''}
+                          </Typography>
+                        </Tooltip>
+                      </Stack>
                     </TableCell>
                     {SHOW_CATEGORY_COLUMN && (
                       <TableCell>
@@ -656,13 +671,14 @@ export default function MonitorPage() {
                       </TableCell>
                     )}
                     <TableCell>
-                      <StatusChip status={i.geo_site.s} caption={geoCaption(i)} tooltip={i.geo_site.method || undefined} />
+                      <StatusChip stacked status={i.geo_site.s} caption={geoCaption(i)} tooltip={i.geo_site.method || undefined} />
                     </TableCell>
                     <TableCell>
-                      <StatusChip status={i.geo_feature.s} caption={featureCaption(i)} tooltip={i.geo_feature.scope || undefined} />
+                      <StatusChip stacked status={i.geo_feature.s} caption={featureCaption(i)} tooltip={i.geo_feature.scope || undefined} />
                     </TableCell>
                     <TableCell>
                       <StatusChip
+                        stacked
                         status={i.screening.s}
                         caption={i.screening.layer ? L.LAYER_LABELS[i.screening.layer] : undefined}
                         tooltip={i.screening.provider || undefined}
@@ -681,10 +697,13 @@ export default function MonitorPage() {
                         rel="noopener noreferrer"
                         underline="hover"
                         variant="body2"
-                        sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, whiteSpace: 'nowrap' }}
+                        title={i.url}
+                        sx={{ display: 'inline-flex', alignItems: 'center', gap: 0.5, whiteSpace: 'nowrap', maxWidth: 220 }}
                       >
-                        {officialHost(i)}
-                        <LaunchIcon sx={{ fontSize: 14 }} />
+                        <Box component="span" sx={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                          {officialHost(i)}
+                        </Box>
+                        <LaunchIcon sx={{ fontSize: 14, flexShrink: 0 }} />
                       </Link>
                     </TableCell>
                     <TableCell>

@@ -156,6 +156,7 @@ export default function CountryPage() {
                     </TableCell>
                     <TableCell>
                       <StatusChip
+                        stacked
                         status={entry.screening.s}
                         caption={entry.screening.layer ? LAYER_LABELS[entry.screening.layer] : undefined}
                         tooltip={entry.screening.provider || undefined}

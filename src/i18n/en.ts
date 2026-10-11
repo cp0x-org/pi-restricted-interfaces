@@ -9,8 +9,6 @@ import {
   COUNTRY_STATUS_DESCRIPTIONS,
   COUNTRY_STATUS_LABELS,
   FAIL_LABELS,
-  FORK_DESCRIPTIONS,
-  FORK_LABELS,
   LAYER_DESCRIPTIONS,
   LAYER_LABELS,
   LEVEL_DESCRIPTIONS,
@@ -35,8 +33,6 @@ const labels = {
   FAIL_LABELS,
   VPN_LABELS,
   REPO_STATE_LABELS,
-  FORK_LABELS,
-  FORK_DESCRIPTIONS,
   TOS_US_LABELS,
   COUNTRY_STATUS_LABELS,
   COUNTRY_STATUS_DESCRIPTIONS,
@@ -64,7 +60,7 @@ export const en = {
     skip: 'Skip to content',
     sections: 'Sections',
     mainNav: 'Main',
-    tabs: { monitor: 'Monitor', country: 'By country', methodology: 'Methodology' },
+    tabs: { monitor: 'Monitor', country: 'By country', summary: 'Summary', methodology: 'Methodology' },
     language: 'Language',
     homeLogo: 'cp0x DeFi Interface Restrictions Monitor, home',
     support: 'Support cp0x',
@@ -75,6 +71,7 @@ export const en = {
   pageTitle: {
     monitor: 'DeFi Interface Restrictions Monitor | cp0x',
     methodology: 'Methodology: how DeFi interface restrictions are checked | cp0x',
+    summary: 'Summary: DeFi interface restrictions in charts | cp0x',
     iface: (name: string, level: string) => `${name} geo-blocking & wallet screening (rating ${level}) | cp0x`,
     notFound: 'Page not found | cp0x'
   },
@@ -166,7 +163,6 @@ export const en = {
     otherVersions: 'Other versions of this protocol',
     frontendCode: 'Frontend code',
     altPrefix: 'Permissionless alternative:',
-    forkReadiness: 'Fork readiness',
     lastCommit: (date: string) => ` · last commit ${date}`,
     confidence: 'Confidence',
     checked: 'Checked',
@@ -191,7 +187,7 @@ export const en = {
     allInGeoBlock: (n: number) => (n === 1 ? 'Listed under Geo Block above' : `All ${n} are listed under Geo Block above`),
     namedOnlyInTerms: 'Named only in the Terms',
     blockedNotNamed: 'Blocked, not named in the Terms',
-    forkNotes: 'Fork notes',
+    notes: 'Notes',
     noNotes: 'No notes.',
     repoStatus: 'Repository status',
     liveChecks: 'Live checks',
@@ -216,15 +212,17 @@ export const en = {
     noscript: 'Filters and sorting need JavaScript; the full catalog is shown below.',
     monitorDescription: (n: number, withAlt: number) =>
       `Which official DeFi interfaces geo-block countries, screen wallets or hide features: ${n} EVM apps ranked A–D with evidence, per-country status and ${withAlt} permissionless alternatives.`,
+    summaryDescription:
+      'Charts of geo-blocking, wallet screening and VPN checks across official DeFi interfaces: ratings, most blocked countries, screening providers, and the most permissionless categories and networks.',
     methodologyDescription:
       'How the monitor checks DeFi interfaces: ratings A–D by number of restrictions, status values, where screening runs, per-country rules, live proxy probes and limitations.',
     notFoundDescription: 'This page does not exist in the DeFi Interface Restrictions Monitor.',
     ifaceDescription: (name: string, summary: string, level: string, alt: string) =>
-      `${name}: ${summary}. Rating ${level}.${alt ? ` Permissionless alternative: ${alt}.` : ''} Evidence, countries and fork notes.`,
+      `${name}: ${summary}. Rating ${level}.${alt ? ` Permissionless alternative: ${alt}.` : ''} Evidence, countries and notes.`,
     ifacePageName: (name: string) => `${name}: access restrictions of the official interface`,
     datasetName: 'Access restrictions in official DeFi interfaces',
     datasetDescription:
-      'Catalog of geo-blocking, feature and asset gating, wallet screening and VPN detection in the official web interfaces of DeFi protocols on EVM networks, with the enforcement layer, fork readiness and evidence for every claim.',
+      'Catalog of geo-blocking, feature and asset gating, wallet screening and VPN detection in the official web interfaces of DeFi protocols on EVM networks, with the enforcement layer and evidence for every claim.',
     summary: {
       geoBlocks: (n: number) => `geo-blocks ${n} countries`,
       geoBlocksSite: 'geo-blocks the site',
@@ -253,10 +251,72 @@ export const en = {
     listSep: ', ',
     comma: ', '
   },
+  summary: {
+    title: 'Summary',
+    intro: (n: number, legacy: number, date: string) =>
+      `Charts over the ${n} current official interfaces (${legacy} legacy versions left out). Snapshot of ${date}.`,
+    tiles: {
+      interfaces: 'Interfaces',
+      clean: 'No restrictions',
+      cleanOf: (clean: number, rated: number) => `${clean} of ${rated} rated`,
+      restricted: 'With restrictions',
+      avg: 'Avg restrictions',
+      avgNote: 'where there are any',
+      max: 'Most restrictions',
+      countries: 'Countries blocked',
+      countriesNote: 'by at least one interface'
+    },
+    ratingTitle: 'Rating',
+    ratingCenter: 'interfaces',
+    mechanismsTitle: 'Which restrictions are enforced',
+    mechanismsNote: 'Enforced = confirmed or reported in practice; ToS only = written in the terms but not enforced.',
+    states: { enforced: 'enforced', tos_only: 'ToS only', none: 'not found', unknown: 'n/a' } as Record<string, string>,
+    countriesTitle: 'Most blocked countries',
+    countriesNote:
+      'Interfaces that block the site, trading or a feature there. The dashed outline shows how many Terms of Service name the country. Click a country to filter the monitor.',
+    site: 'site or trading',
+    feature: 'features only',
+    tos: (n: number) => `ToS ${n}`,
+    screeningTitle: 'Wallet screening',
+    screenedCenter: 'screen wallets',
+    layerTitle: 'Where it runs',
+    providersTitle: 'Who screens',
+    providersNote: 'One interface can use several sources.',
+    providers: {
+      trm: 'TRM Labs',
+      chainalysis: 'Chainalysis',
+      hypernative: 'Hypernative',
+      hermod: 'Hermod (zeroShadow)',
+      hackbounty: 'HackBounty',
+      list: 'Static address list',
+      undisclosed: 'Undisclosed / own service'
+    } as Record<string, string>,
+    categoryTitle: 'By category: which is the most permissionless',
+    networkTitle: 'By network',
+    networkNote: (n: number) => `Networks with at least ${n} interfaces; an interface counts in every network it supports.`,
+    cols: {
+      category: 'Category',
+      network: 'Network',
+      interfaces: 'Interfaces',
+      ratings: 'Ratings',
+      clean: 'No restrictions',
+      avg: 'Avg restrictions',
+      max: 'Max'
+    },
+    codeTitle: 'Frontend code',
+    open: 'open source',
+    closed: 'closed',
+    cp0xTitle: 'Permissionless via cp0x',
+    cp0xCenter: 'restricted',
+    cp0xCovered: 'have a cp0x version',
+    cp0xNot: 'no cp0x version yet',
+    notes:
+      'Shares leave out interfaces that could not be rated (?). Averages count only interfaces with at least one restriction; zeros are left out. The maximum names the interface.'
+  },
   method: {
     title: 'Methodology',
     intro: (date: string, shown: number, total: number) =>
-      `The catalog answers one question per interface: what does the official frontend or backend block, for whom, by which mechanism, where is it enforced, and does a permissionless fork remove it. Snapshot of ${date}. The site shows EVM networks only: ${shown} of ${total} interfaces in the full catalog; Solana, Cosmos and other non-EVM apps stay in \`monitor/data\` and in the report. Only observation: nothing is bypassed, nothing is signed, no transactions are sent.`,
+      `The catalog answers one question per interface: what does the official frontend or backend block, for whom, by which mechanism and where is it enforced. Snapshot of ${date}. The site shows EVM networks only: ${shown} of ${total} interfaces in the full catalog; Solana, Cosmos and other non-EVM apps stay in \`monitor/data\` and in the report. Only observation: nothing is bypassed, nothing is signed, no transactions are sent.`,
     levelsTitle: 'Rating',
     levelsNote:
       'The rating counts the technical restrictions of the official interface: every country or region where the site, trading or a feature is blocked counts once, and each feature or asset gate, wallet screening (by API or contract), VPN detection and KYC requirement counts once more. Restrictions written only in the Terms of Service are not counted. Fewer restrictions, better rating: A none, B 1–5, C 6–20, D more than 20; n/a when nothing could be determined.',
@@ -265,7 +325,7 @@ export const en = {
     statusTitle: 'Status values',
     layerTitle: 'Where screening runs (layer)',
     layerNote:
-      'Rule of thumb: if enforcement happens in a service that every client of the protocol must call (orderbook, indexer, router, relayer) it is the protocol API and a fork inherits it. If only the official frontend calls the service, it is the operator’s own API and a fork can drop it.',
+      'The layer is where the check actually runs, as found in the code or in a live request. When an interface checks in several places, the deepest one is shown: smart contract, then API, then frontend.',
     countryTitle: 'Status for a country',
     countryRules: {
       blocked: 'The country is in the list of a confirmed or reported site-level geo-block.',

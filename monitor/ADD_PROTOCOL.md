@@ -42,7 +42,7 @@
     "restricted": "Список стран своими словами",
     "restricted_codes": ["US", "RU", "IR", "KP", "UA-Crimea"]
   },
-  "fork_notes": "Что нужно убрать или поднять, чтобы сделать permissionless-версию.",
+  "notes": "Как устроены ограничения: какие сервисы и конфиги задействованы, состояние кода. Только факты, без советов про форки.",
   "live": [],
   "geo_endpoints": [],
   "evidence": ["https://myprotocol.xyz/terms", "https://docs.myprotocol.xyz/eligibility"],
@@ -57,13 +57,13 @@
 |---|---|
 | `s` (статус любого механизма) | `yes` подтверждено кодом, живой проверкой или документацией · `reported` пресса/пользователи · `tos_only` только в условиях · `optional` в коде, выключено · `no` проверено, нет · `unknown` не проверено |
 | страны | ISO-коды (`US`, `GB`, `DE`) или регионы `UA-Crimea`, `UA-DPR`, `UA-LPR`, `UA-Kherson`, `UA-Zaporizhzhia`, `US-NY`, `CA-ON`, `CA-BC`, `CA-AB`, `CA-QC`, `GE-Abkhazia`, `GE-SouthOssetia`, `CY-North` |
-| `layer` (где работает проверка) | `edge` · `frontend` · `own-api` (API только официального сайта) · `protocol-api` (API, без которого не работает никто, форк не поможет) · `null` |
+| `layer` (где фактически работает проверка) | `edge` (CDN/хостинг отказывает по стране) · `frontend` (решает код в браузере, в т.ч. чтение on-chain оракула со страницы) · `api` (отказывает сервер: compliance-эндпоинт, индексер, orderbook, quote API) · `contract` (адрес отклоняет сам смарт-контракт: блэклист, allowlist, memberlist) · `null`. Если проверок несколько, указывайте самую глубокую: `contract` → `api` → `frontend` |
 | `repo_state` | `open` · `open_stale` · `closed` · `private_now` · `archived` · `none_found` (если `closed`, то `frontend_repo: null`) |
 | `tos.us` | `yes` US persons запрещены · `no` · `partial` (опишите в `us_scope`) · `unknown` |
 | `confidence` | `high` · `medium` · `low` |
 
 Необязательные поля:
-- `"kyc": { "s": "yes", "layer": "protocol-api", "scope": "что закрыто KYC" }` — KYC или allowlist кошельков (считается как одно ограничение).
+- `"kyc": { "s": "yes", "layer": "contract", "scope": "что закрыто KYC" }` — KYC или allowlist кошельков (считается как одно ограничение).
 - `"alternatives": [{ "name": "myprotocol.cp0x.com", "url": "https://myprotocol.cp0x.com" }]` — если на pi.cp0x.com есть permissionless-версия (строка поднимется вверх).
 - Версии протокола — см. раздел ниже.
 

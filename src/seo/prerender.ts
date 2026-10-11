@@ -19,8 +19,11 @@ import {
   methodologyMeta,
   monitorMeta,
   notFoundMeta,
-  ogLocale
+  ogLocale,
+  summaryMeta
 } from './meta';
+import { MECHANISM_STATES, avg, buildSummary, pct, share } from '../utils/summary';
+import type { GroupRow } from '../utils/summary';
 
 interface SeoFile {
   fileName: string;
@@ -92,7 +95,7 @@ function shell(main: string, lang: Lang, basePath: string): string {
     .join(' · ');
   return `<div id="root"><div id="prerender"><header><nav aria-label="${esc(t.layout.mainNav)}"><a href="${p('/monitor')}"><strong>${esc(
     t.seo.siteName
-  )}</strong></a> · <a href="${p('/methodology')}">${esc(t.layout.tabs.methodology)}</a> · ${ext('https://pi.cp0x.com', t.layout.permissionless)} · ${langLinks}</nav></header><main>${main}</main></div></div>`;
+  )}</strong></a> · <a href="${p('/summary')}">${esc(t.layout.tabs.summary)}</a> · <a href="${p('/methodology')}">${esc(t.layout.tabs.methodology)}</a> · ${ext('https://pi.cp0x.com', t.layout.permissionless)} · ${langLinks}</nav></header><main>${main}</main></div></div>`;
 }
 
 const byDefaultOrder = (a: InterfaceEntry, b: InterfaceEntry): number =>
@@ -181,13 +184,80 @@ ${e.lifecycle === 'legacy' && e.lifecycle_note ? `<p><b>${esc(t.seo.legacySenten
     e.frontend_repo ? ext(e.frontend_repo, strip(e.frontend_repo)) : esc(L.REPO_STATE_LABELS[e.repo_state])
   )}${stop.trim()}</p>
 <h2>${esc(t.seo.restrictionsTitle)}</h2>${T.dataNote ? `<p><small>${esc(T.dataNote)}</small></p>` : ''}<ul>${items.filter(Boolean).join('')}</ul>
-${e.fork_notes ? `<h2>${esc(T.forkNotes)}</h2><p>${sent(e.fork_notes)}</p>` : ''}
+${e.notes ? `<h2>${esc(T.notes)}</h2><p>${sent(e.notes)}</p>` : ''}
 ${e.live.length ? `<h2>${esc(T.liveChecks)}</h2><ul>${e.live.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>` : ''}
 <h2>${esc(T.evidence)}</h2><ul>${evidence || `<li>${esc(t.chips.noEvidence)}</li>`}</ul>
 <p>${esc(t.seo.checked(ds.meta.generated))} <a href="${localizePath('/monitor', lang)}">${esc(T.all)}</a> · <a href="${localizePath(
     '/methodology',
     lang
   )}">${esc(t.layout.tabs.methodology)}</a></p>`;
+}
+
+/** Summary tab as plain tables: the same numbers the charts draw. */
+function summaryBody(ds: Dataset, lang: Lang): string {
+  const t = catalog(lang);
+  const L = t.labels;
+  const S = t.summary;
+  const s = buildSummary(ds.interfaces);
+  const byId = new Map(ds.interfaces.map((e) => [e.id, e]));
+  const names = (ids: string[]) =>
+    ids
+      .map((id) => `<a href="${localizePath(`/monitor/${id}`, lang)}">${esc(byId.get(id) ? displayName(byId.get(id)!) : id)}</a>`)
+      .join(esc(t.seo.listSep));
+  const table = (head: string[], rows: string[][]) =>
+    `<table><thead><tr>${head.map((h) => `<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows
+      .map((r) => `<tr>${r.map((c) => `<td>${c}</td>`).join('')}</tr>`)
+      .join('')}</tbody></table>`;
+  const groups = (rows: GroupRow[], first: string, label: (k: string) => string) =>
+    table(
+      [first, S.cols.interfaces, S.cols.ratings, S.cols.clean, S.cols.avg, S.cols.max],
+      rows.map((g) => [
+        esc(label(g.key)),
+        String(g.total),
+        esc(LEVELS.map((l) => `${L.LEVEL_LABELS[l]} ${g.levels[l]}`).join(', ')),
+        `${share(g.cleanShare)} (${g.clean}/${g.rated})`,
+        avg(g.avgRestricted),
+        g.max > 0 ? `${g.max} — ${names(g.maxIds.slice(0, 3))}` : '—'
+      ])
+    );
+  return `<h1>${esc(S.title)}</h1>
+<p>${esc(S.intro(s.total, s.legacyExcluded, ds.meta.generated))}</p>
+<ul><li>${esc(S.tiles.interfaces)}: ${s.total}</li><li>${esc(S.tiles.clean)}: ${pct(s.clean, s.rated)} (${esc(S.tiles.cleanOf(s.clean, s.rated))})</li><li>${esc(
+    S.tiles.restricted
+  )}: ${pct(s.restricted, s.rated)} (${s.restricted})</li><li>${esc(S.tiles.avg)} (${esc(S.tiles.avgNote)}): ${avg(s.avgRestricted)}</li><li>${esc(S.tiles.max)}: ${s.max} — ${names(
+    s.maxIds
+  )}</li><li>${esc(S.tiles.countries)}: ${s.countriesBlocked}</li></ul>
+<h2>${esc(S.ratingTitle)}</h2>${table(
+    [S.cols.ratings, S.cols.interfaces, ''],
+    LEVELS.map((l) => [`<b>${esc(L.LEVEL_LABELS[l])}</b> ${esc(L.LEVEL_DESCRIPTIONS[l])}`, String(s.levels[l]), pct(s.levels[l], s.total)])
+  )}
+<h2>${esc(S.mechanismsTitle)}</h2><p>${esc(S.mechanismsNote)}</p>${table(
+    ['', ...MECHANISM_STATES.map((st) => S.states[st])],
+    s.mechanisms.map((m) => [esc(L.MECHANISM_LABELS[m.kind]), ...MECHANISM_STATES.map((st) => String(m.counts[st]))])
+  )}
+<h2>${esc(S.countriesTitle)}</h2>${table(
+    ['', S.site, S.feature, 'ToS'],
+    s.countries
+      .slice(0, 15)
+      .map((c) => [
+        `<a href="${localizePath(`/monitor?country=${encodeURIComponent(c.token)}`, lang)}">${esc(countryLabel(c.token, t, ds.meta.regions))}</a>`,
+        String(c.site),
+        String(c.feature),
+        String(c.tos)
+      ])
+  )}
+<h2>${esc(S.screeningTitle)}</h2><h3>${esc(S.layerTitle)}</h3>${table(
+    [S.layerTitle, S.cols.interfaces],
+    s.layers.map((l) => [`${esc(L.LAYER_LABELS[l.key])}: ${esc(L.LAYER_DESCRIPTIONS[l.key])}`, String(l.count)])
+  )}<h3>${esc(S.providersTitle)}</h3><p>${esc(S.providersNote)}</p>${table(
+    [S.providersTitle, S.cols.interfaces],
+    s.providers.map((pr) => [esc(S.providers[pr.key]), `${pr.count} (${pct(pr.count, s.screened)})`])
+  )}
+<h2>${esc(S.categoryTitle)}</h2>${groups(s.categories, S.cols.category, (k) => L.CATEGORY_GROUP_LABELS[k as keyof typeof L.CATEGORY_GROUP_LABELS] ?? k)}
+<h2>${esc(S.networkTitle)}</h2><p>${esc(S.networkNote(5))}</p>${groups(s.networks, S.cols.network, (k) => k)}
+<h2>${esc(S.codeTitle)}</h2><p>${esc(S.open)}: ${s.open} · ${esc(S.closed)}: ${s.closed}</p>
+<h2>${esc(S.cp0xTitle)}</h2><p>${esc(S.cp0xCovered)}: ${s.cp0x.covered} / ${s.cp0x.restricted} (${pct(s.cp0x.covered, s.cp0x.restricted)})</p>
+<p><small>${esc(S.notes)}</small></p>`;
 }
 
 function methodologyBody(ds: Dataset, lang: Lang): string {
@@ -235,6 +305,10 @@ export function buildSeoFiles(template: string, ds: Dataset, siteUrl: string): S
     files.push({ fileName: lang === 'zh' ? 'zh.html' : 'index.html', source: monitor });
     files.push({ fileName: `${prefix}monitor.html`, source: monitor });
     files.push({
+      fileName: `${prefix}summary.html`,
+      source: page(template, summaryMeta(ds.meta, site, lang), site, summaryBody(ds, lang), '/summary')
+    });
+    files.push({
       fileName: `${prefix}methodology.html`,
       source: page(template, methodologyMeta(ds.meta, site, lang), site, methodologyBody(ds, lang), '/methodology')
     });
@@ -247,7 +321,7 @@ export function buildSeoFiles(template: string, ds: Dataset, siteUrl: string): S
   }
   files.push({ fileName: '404.html', source: page(template, notFoundMeta('en'), site, null, '/monitor') });
 
-  const basePaths = ['/monitor', '/methodology', ...ds.interfaces.map((e) => `/monitor/${e.id}`)];
+  const basePaths = ['/monitor', '/summary', '/methodology', ...ds.interfaces.map((e) => `/monitor/${e.id}`)];
   files.push({ fileName: 'robots.txt', source: `User-agent: *\nAllow: /\n${site ? `\nSitemap: ${site}/sitemap.xml\n` : ''}` });
   if (site) {
     // One <url> per language version, each listing the whole hreflang cluster (Google's sitemap hreflang format).

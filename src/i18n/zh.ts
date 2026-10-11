@@ -22,12 +22,12 @@ export const zh: Messages = {
       optional: '代码中存在，但默认关闭',
       unknown: '未检查或无法检查'
     },
-    LAYER_LABELS: { edge: '边缘 / CDN', frontend: '前端', 'own-api': '运营方 API', 'protocol-api': '协议 API' },
+    LAYER_LABELS: { edge: '边缘 / CDN', frontend: '前端', api: 'API', contract: '智能合约' },
     LAYER_DESCRIPTIONS: {
-      edge: 'CDN 或托管规则（在任何 JavaScript 运行前按国家返回 HTTP 403/451/302）',
-      frontend: '客户端 JavaScript：分叉可直接移除',
-      'own-api': '仅官方前端调用的后端：分叉不需要它',
-      'protocol-api': '协议所有客户端都依赖的后端（订单簿、索引器、路由器）：分叉会继承该限制'
+      edge: 'CDN 或托管规则：在页面加载前按国家拒绝请求（HTTP 403/451/302）',
+      frontend: '由浏览器中的代码判断：内置地址列表，或页面自身查询的筛查服务商或链上预言机',
+      api: '由服务器拒绝该地址：合规接口、索引器、订单簿或报价 API',
+      contract: '由智能合约本身拒绝该地址：链上黑名单、白名单或成员名单'
     },
     FAIL_LABELS: { open: '失败放行', closed: '失败拦截', unknown: '暂无', 'n/a': '不适用' },
     VPN_LABELS: { no: '否', tos_only: '仅条款', detect: '检测', block: '封锁', optional: '可选', unknown: '暂无' },
@@ -38,13 +38,6 @@ export const zh: Messages = {
       private_now: '已转为私有',
       archived: '已归档',
       none_found: '未找到'
-    },
-    FORK_LABELS: { yes: '可分叉', stale: '代码过时', partial: '部分可行', no_code: '无代码' },
-    FORK_DESCRIPTIONS: {
-      yes: '前端开源，分叉时可移除限制',
-      stale: '代码开源但已过时或归档，生产版本已更新',
-      partial: '前端开源，但筛查在协议 API 中执行，分叉仍依赖该 API',
-      no_code: '没有公开的前端代码'
     },
     TOS_US_LABELS: { yes: '禁止', no: '允许', partial: '部分', unknown: '暂无' },
     COUNTRY_STATUS_LABELS: {
@@ -130,7 +123,7 @@ export const zh: Messages = {
     skip: '跳到主要内容',
     sections: '栏目',
     mainNav: '主导航',
-    tabs: { monitor: '监测', country: '按国家', methodology: '方法论' },
+    tabs: { monitor: '监测', country: '按国家', summary: '概览', methodology: '方法论' },
     language: '语言',
     homeLogo: 'cp0x DeFi 界面限制监测，首页',
     support: '支持 cp0x',
@@ -141,6 +134,7 @@ export const zh: Messages = {
   pageTitle: {
     monitor: 'DeFi 界面限制监测 | cp0x',
     methodology: '方法论：如何检查 DeFi 界面限制 | cp0x',
+    summary: '概览：DeFi 界面限制图表 | cp0x',
     iface: (name, level) => `${name} 地区封锁与钱包筛查（评级 ${level}）| cp0x`,
     notFound: '页面不存在 | cp0x'
   },
@@ -229,7 +223,6 @@ export const zh: Messages = {
     otherVersions: '该协议的其他版本',
     frontendCode: '前端代码',
     altPrefix: '无需许可替代版本：',
-    forkReadiness: '分叉可行性',
     lastCommit: (date) => ` · 最近提交 ${date}`,
     confidence: '可信度',
     checked: '检查日期',
@@ -254,7 +247,7 @@ export const zh: Messages = {
     allInGeoBlock: (n) => (n === 1 ? '已列于上方地区封锁中' : `${n} 个均已列于上方地区封锁中`),
     namedOnlyInTerms: '仅在条款中列出',
     blockedNotNamed: '已封锁但条款中未列出',
-    forkNotes: '分叉说明',
+    notes: '说明',
     noNotes: '暂无说明。',
     repoStatus: '代码仓库状态',
     liveChecks: '实测记录',
@@ -278,14 +271,16 @@ export const zh: Messages = {
     noscript: '筛选和排序需要 JavaScript；完整目录见下方。',
     monitorDescription: (n, withAlt) =>
       `哪些官方 DeFi 界面按国家封锁、筛查钱包或隐藏功能：${n} 个 EVM 应用按 A–D 分级，附证据、各国状态和 ${withAlt} 个无需许可替代版本。`,
+    summaryDescription:
+      '官方 DeFi 界面的地区封锁、钱包筛查和 VPN 检测图表：评级分布、被封锁最多的国家、筛查来源，以及最无需许可的类别和网络。',
     methodologyDescription: '监测如何检查 DeFi 界面：按限制数量划分的 A–D 评级、状态值、筛查执行层、国家规则、代理实测与局限。',
     notFoundDescription: 'DeFi 界面限制监测中不存在此页面。',
     ifaceDescription: (name, summary, level, alt) =>
-      `${name}：${summary}。评级 ${level}。${alt ? `无需许可替代版本：${alt}。` : ''}含证据、国家名单和分叉说明。`,
+      `${name}：${summary}。评级 ${level}。${alt ? `无需许可替代版本：${alt}。` : ''}含证据、国家名单和说明。`,
     ifacePageName: (name) => `${name}：官方界面的访问限制`,
     datasetName: '官方 DeFi 界面的访问限制',
     datasetDescription:
-      '收录 EVM 网络上 DeFi 协议官方网页界面的地区封锁、功能与资产限制、钱包筛查和 VPN 检测，并标注执行层、分叉可行性以及每条结论的证据。',
+      '收录 EVM 网络上 DeFi 协议官方网页界面的地区封锁、功能与资产限制、钱包筛查和 VPN 检测，并标注执行层以及每条结论的证据。',
     summary: {
       geoBlocks: (n) => `封锁 ${n} 个国家`,
       geoBlocksSite: '对整站实施地区封锁',
@@ -312,10 +307,69 @@ export const zh: Messages = {
     listSep: '、',
     comma: '，'
   },
+  summary: {
+    title: '概览',
+    intro: (n, legacy, date) => `基于 ${n} 个当前官方界面的图表（不含 ${legacy} 个旧版）。数据快照：${date}。`,
+    tiles: {
+      interfaces: '界面',
+      clean: '无限制',
+      cleanOf: (clean, rated) => `已评级 ${rated} 个中的 ${clean} 个`,
+      restricted: '有限制',
+      avg: '平均限制数',
+      avgNote: '仅统计有限制的界面',
+      max: '限制最多',
+      countries: '被封锁的国家',
+      countriesNote: '至少被一个界面封锁'
+    },
+    ratingTitle: '评级',
+    ratingCenter: '个界面',
+    mechanismsTitle: '哪些限制真正执行',
+    mechanismsNote: '已执行 = 已确认或有报道的实际执行；仅条款 = 写在服务条款中但未执行。',
+    states: { enforced: '已执行', tos_only: '仅条款', none: '未发现', unknown: '暂无' },
+    countriesTitle: '被封锁最多的国家',
+    countriesNote: '在该国家封锁网站、交易或某项功能的界面数量。虚线框表示有多少份服务条款点名该国家。点击国家可筛选监测表。',
+    site: '网站或交易',
+    feature: '仅功能',
+    tos: (n) => `条款 ${n}`,
+    screeningTitle: '钱包筛查',
+    screenedCenter: '个筛查钱包',
+    layerTitle: '执行位置',
+    providersTitle: '筛查来源',
+    providersNote: '一个界面可能使用多个来源。',
+    providers: {
+      trm: 'TRM Labs',
+      chainalysis: 'Chainalysis',
+      hypernative: 'Hypernative',
+      hermod: 'Hermod（zeroShadow）',
+      hackbounty: 'HackBounty',
+      list: '静态地址名单',
+      undisclosed: '未披露 / 自有服务'
+    },
+    categoryTitle: '按类别：哪类最无需许可',
+    networkTitle: '按网络',
+    networkNote: (n) => `仅显示至少有 ${n} 个界面的网络；一个界面在其支持的每个网络中都计入。`,
+    cols: {
+      category: '类别',
+      network: '网络',
+      interfaces: '界面',
+      ratings: '评级',
+      clean: '无限制',
+      avg: '平均限制数',
+      max: '最多'
+    },
+    codeTitle: '前端代码',
+    open: '开源',
+    closed: '闭源',
+    cp0xTitle: '通过 cp0x 无需许可',
+    cp0xCenter: '个有限制',
+    cp0xCovered: '有 cp0x 版本',
+    cp0xNot: '暂无 cp0x 版本',
+    notes: '比例不含无法评级（?）的界面。平均值只统计至少有一项限制的界面，不计 0。最大值标出对应界面。'
+  },
   method: {
     title: '方法论',
     intro: (date, shown, total) =>
-      `本目录为每个界面回答一个问题：官方前端或后端封锁了什么、针对谁、采用什么机制、在哪一层执行，以及无需许可的分叉能否移除它。数据快照：${date}。网站仅显示 EVM 网络：完整目录 ${total} 个界面中的 ${shown} 个；Solana、Cosmos 等非 EVM 应用保留在 \`monitor/data\` 和报告中。我们只做观察：不绕过任何限制，不签名，不发送交易。`,
+      `本目录为每个界面回答一个问题：官方前端或后端封锁了什么、针对谁、采用什么机制，以及在哪一层执行。数据快照：${date}。网站仅显示 EVM 网络：完整目录 ${total} 个界面中的 ${shown} 个；Solana、Cosmos 等非 EVM 应用保留在 \`monitor/data\` 和报告中。我们只做观察：不绕过任何限制，不签名，不发送交易。`,
     levelsTitle: '评级',
     levelsNote:
       '评级统计官方界面的技术性限制：网站、交易或某项功能被封锁的每个国家或地区各计一项，功能或资产限制、钱包筛查（通过 API 或合约）、VPN 检测和 KYC 要求再各计一项。仅写在服务条款中的限制不计入。限制越少评级越高：A 为无限制，B 为 1–5 项，C 为 6–20 项，D 超过 20 项；无法确定时为“暂无”。',
@@ -324,7 +378,7 @@ export const zh: Messages = {
     statusTitle: '状态值',
     layerTitle: '筛查在哪里执行（层）',
     layerNote:
-      '经验法则：如果限制在协议所有客户端都必须调用的服务（订单簿、索引器、路由器、中继器）中执行，就属于协议 API，分叉会继承它；如果只有官方前端调用该服务，就属于运营方自有 API，分叉可以去掉它。',
+      '执行层表示检查实际在哪里进行，依据代码或实时请求确定。若一个界面在多处检查，显示最深的一层：智能合约，其次是 API，然后是前端。',
     countryTitle: '国家状态',
     countryRules: {
       blocked: '该国家在已确认或有报道的整站地区封锁名单中。',
