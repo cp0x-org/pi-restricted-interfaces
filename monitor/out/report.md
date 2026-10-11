@@ -20,9 +20,9 @@
    - Euler: неизвестная страна приводит к 451 на `/api/*`.
    - Sky: нет вердикта по IP — приложение блокируется.
    - Beefy: неизвестная гео приводит к блоку токенизированных акций.
-4. **Фронтенды закрываются.** С 2025 года код стал приватным или удалён у PancakeSwap (`pancake-frontend`), Across (`frontend`), Spark (`spark-app`). Morpho Lite/Fallback и Portal Bridge UI заархивированы. Uniswap публикует только release-mirror, Raydium и QuickSwap держат устаревшие снапшоты. Монитор должен отслеживать видимость репозиториев и хранить свои зеркала.
-5. **Статические санкционные списки расходятся с SDN.** Compound III до сих пор блокирует адреса Tornado Cash, хотя OFAC снял санкции в марте 2025. Ambient и wormhole-connect держат захардкоженные списки. Проверка «работает ли санкционный адрес» должна использовать актуальный SDN-адрес, например через `isSanctioned()` Chainalysis oracle.
-6. **Чистые официальные интерфейсы.** Технических ограничений в коде не найдено у GMX, Curve, Yearn, ENS и Snapshot. Для каталога у них низкий приоритет. В ToS Curve и Snapshot (список SECO) Украина указана целиком, но техническое исполнение в коде отсутствует.
+4. **Фронтенды закрываются.** С 2025 года код стал приватным или удалён у PancakeSwap (`pancake-frontend`), Across (`frontend`), Spark (`spark-app`). Morpho Lite/Fallback и Portal Bridge UI заархивированы. Uniswap публикует только release-mirror, Raydium и QuickSwap держат устаревшие снапшоты.
+5. **Статические санкционные списки расходятся с SDN.** Compound III до сих пор блокирует адреса Tornado Cash, хотя OFAC снял санкции в марте 2025. Ambient и wormhole-connect держат захардкоженные списки.
+6. **Чистые официальные интерфейсы.** Технических ограничений в коде не найдено у GMX, Curve, Yearn, ENS и Snapshot. В ToS Curve и Snapshot (список SECO) Украина указана целиком, но техническое исполнение в коде отсутствует.
 7. **Провайдеры скрининга** (по числу интерфейсов с подтверждённым или задокументированным скринингом): TRM Labs — 8, Chainalysis — 8, не раскрыт — 5, собственный сервис — 4, статический список — 4, Hermod/zeroShadow — 2, Hypernative — 1, Elliptic — 1, HackBounty — 1.
 
 ## 2. Легенда
@@ -142,7 +142,7 @@
 | Relay | api.relay.link/sanctioned: SDN -> {sanctioned: true}; control -> false |
 | Polymarket | /api/geoblock (US) -> {blocked: true, country: US, region: OH}; overlay 'Trading is blocked in the United States' |
 
-Подтверждено: скрининг Synapse, Relay, KyberSwap, dYdX и LI.FI реально отклоняет SDN-адрес и пропускает контрольный. Across на этапе котировки адрес не проверяет. Проверки через подключённый кошелёк в UI (Uniswap, Aave, Balancer, Euler, Sky, Sushi/TRM) требуют браузера с подменённым EIP-1193 провайдером. Методика описана в `plan.md`.
+Подтверждено: скрининг Synapse, Relay, KyberSwap, dYdX и LI.FI реально отклоняет SDN-адрес и пропускает контрольный. Across на этапе котировки адрес не проверяет. Проверки через подключённый кошелёк в UI (Uniswap, Aave, Balancer, Euler, Sky, Sushi/TRM) требуют браузера с подменённым EIP-1193 провайдером и в этот срез не вошли.
 
 ## 5. Механизмы и доказательства
 
@@ -228,7 +228,7 @@
 | **OpenSea** | B | Гео: Blocks users and territories on US sanctions lists; in March 2022 Iranian users, including Iranian artists living abroad, lost access to their accounts (company statement and press reports).<br>Скрининг: Account-level sanctions checks; accounts deactivated by nationality, not only by location (2022 reports) | unknown | Closed frontend. NFTs live in public contracts (Seaport is open source), so other marketplaces can trade the same assets. | [src](https://www.artnews.com/art-news/news/opensea-deplatforms-iranian-users-us-sanctions-1234621105/)<br>[src](https://fortune.com/crypto/2022/03/04/opensea-metamask-block-users-sanctions)<br>[src](https://forkast.news/opensea-blocks-iranian-users-sanctions/) |
 | **Tornado Cash** | B | Скрининг: Chainalysis Sanctions Oracle check added to the frontend in April 2022; whether the current IPFS UI still screens is not verified | unknown | Contracts are immutable and permissionless; any interface (IPFS copies, tornado.cp0x.com) can use them, and relayers are independent. Verify the IPFS hash of tornadocash.eth before use. | [src](https://www.theblock.co/amp/post/142081/ethereum-mixer-tornado-cash-now-blocks-sanctioned-addresses)<br>[src](https://l2beat.com/privacy/projects/tornado-cash)<br>[src](https://home.treasury.gov/news/press-releases/sb0057) |
 
-## 6. Типология механизмов (для схемы краулера)
+## 6. Типология механизмов
 
 | Слой | Как детектится | Примеры |
 |---|---|---|
@@ -241,18 +241,9 @@
 | Статический список | массив адресов в бандле | Compound, Ambient, wormhole-connect, Hop (опц.) |
 | Ограничения активов | token deny-list или RWA-листы по стране | Uniswap, CoW, Beefy, Venus, Sushi, Curve (контент-блэклист) |
 
-## 7. Приоритеты для каталога pi.cp0x.com
+## 7. Ограничения этого среза
 
-Критерии: высокий уровень ограничений плюс значимость протокола плюс реалистичность альтернативы.
-
-- **Форк открытого фронтенда с вырезанием гейтов (быстро):** Euler (`euler-lite`, всё за env, есть доки по гео и скринингу), Sky (`jetstreamgg/tarmac`, есть skip-auth сборка), Aave (`aave/interface`, убрать `<AddressBlocked>`), Notional, Lido (Earn), Synapse, Balancer, Uniswap (с учётом зависимости от Trading API).
-- **Свой UI поверх контрактов, кода нет:** Ethena (стейкинг sUSDe, обычный ERC-4626), Spark, Orca, Pendle, Morpho (уже есть `morpho.cp0x.com`).
-- **Нужна инфраструктура, не только UI:** dYdX (self-hosted индексер без compliance), Polymarket (прокси к CLOB вне заблокированных юрисдикций), Hyperliquid (API без IP-гейта, проверка `legalCheck` на стороне фронта).
-- **Сиротские протоколы:** Hop — домен `hop.exchange` отдаёт спам, `app.hop.exchange` недоступен, а контракты живы. Это кандидат на замену официального интерфейса.
-
-## 8. Ограничения этого среза
-
-- Живые проверки шли **из одной точки (US-датацентр)** и без исполнения JS. Гео-блоки, которые срабатывают только на клиенте или только для других стран, видны только через код. Для закрытых интерфейсов без найденных ограничений (рейтинг A при закрытом коде и `n/a`) нужен браузерный краул через резидентные прокси по странам (см. `plan.md`).
+- Живые проверки шли **из одной точки (US-датацентр)** и без исполнения JS. Гео-блоки, которые срабатывают только на клиенте или только для других стран, видны только через код. Закрытые интерфейсы без найденных ограничений (рейтинг A при закрытом коде и `n/a`) проверены только по ToS и публичным эндпоинтам, без браузера из других стран.
 - Репозитории просканированы на HEAD default-ветки. Прод может расходиться с кодом: у QuickSwap хэш прод-сборки отсутствует в репо, Raydium выложен снапшотом, Uniswap — release-mirror.
 - Статический сканер даёт кандидатов. Каждая находка со статусом `да` в таблице подтверждена ручным чтением кода или живым запросом. Сырые хиты сканера содержат ложные срабатывания: `elliptic` как крипто-библиотека, `blockaid` как сканер транзакций в кошельке Uniswap, а не compliance; Hypernative Guard в Safe.
 - ToS многих приложений рендерятся на клиенте. Если ToS не удалось прочитать, стоит `unknown`, без догадок.
