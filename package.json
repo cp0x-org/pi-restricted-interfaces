@@ -52,7 +52,16 @@
     "monitor:verify": "python3 -I monitor/scripts/verify.py monitor/data/interfaces.json monitor/repos",
     "monitor:scan": "python3 -I monitor/scripts/scan.py monitor/repos monitor/data/scan_raw.json",
     "monitor:probe": "python3 -I monitor/scripts/probe.py run monitor/data/interfaces.json monitor/probe/out",
-    "monitor:probe:merge": "python3 -I monitor/scripts/probe.py merge monitor/data/observations.json"
+    "monitor:probe:merge": "python3 -I monitor/scripts/probe.py merge monitor/data/observations.json",
+    "monitor:update": "python3 -I monitor/scripts/update.py",
+    "monitor:update:dry": "python3 -I monitor/scripts/update.py --dry-run",
+    "research:code": "python3 -I research/check_code.py",
+    "research:bundle": "python3 -I research/check_bundle.py",
+    "research:docs": "python3 -I research/check_docs.py",
+    "research:api": "python3 -I research/check_api.py",
+    "research:live": "python3 -I research/check_live.py",
+    "research:combine": "python3 -I research/combine.py --csv",
+    "research:all": "python3 -I research/run_all.py --csv"
   },
   "eslintConfig": {
     "extends": [

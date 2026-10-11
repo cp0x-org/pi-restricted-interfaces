@@ -1,0 +1,13 @@
+check: curve/no-geo-code
+about: No geo-IP lookup or country block anywhere in the frontend monorepo (the Terms text is excluded)
+source: https://github.com/curvefi/curve-frontend/tree/f8cfaab057efb97dd9b96eac6ce966245cc45b8c
+checked_at: 2026-10-11T21:04:38Z
+fetched: https://codeload.github.com/curvefi/curve-frontend/tar.gz/f8cfaab057efb97dd9b96eac6ce966245cc45b8c
+sha256: 17846e83a1df42620284f94c77a4a659449b18cf2405f28c1ed8bdf8af92cd4f
+--------------------------------------------------------------------------------
+files scanned: 1961
+patterns that must be absent:
+  api\.country\.is|ipapi\.co|ipinfo\.io|freeipapi|ip-api\.com|cdn-cgi/trace|/geoip\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country|req(uest)?\.geo\b
+
+hits:
+  none

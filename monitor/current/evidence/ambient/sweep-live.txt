@@ -1,0 +1,322 @@
+check: ambient/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://ambient.finance
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ }
+}

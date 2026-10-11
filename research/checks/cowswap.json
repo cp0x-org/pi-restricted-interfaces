@@ -1,0 +1,89 @@
+{
+  "id": "cowswap",
+  "name": "CoW Swap",
+  "targets": {
+    "app": "https://swap.cow.fi",
+    "repo": {
+      "repo": "cowprotocol/cowswap",
+      "ref": "7f861f9d12a0f9b0db33f9b0b1679ec309025120"
+    },
+    "terms": "https://cow.fi/legal/cowswap-terms",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "feature-rwa-countries",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Restricted (RWA / tokenized stock) token lists are hidden for visitors from RESTRICTED_COUNTRIES",
+      "source": {
+        "repo": "cowprotocol/cowswap",
+        "ref": "7f861f9d12a0f9b0db33f9b0b1679ec309025120",
+        "path": "libs/core/src/cms/consts.ts"
+      },
+      "expect": [
+        "export const RESTRICTED_COUNTRIES = \\[",
+        "restrictedCountries: \\[\\.\\.\\.RESTRICTED_COUNTRIES\\]"
+      ],
+      "section": {
+        "start": "export const RESTRICTED_COUNTRIES = \\[",
+        "end": "\\] as const"
+      },
+      "countries": "codes"
+    },
+    {
+      "id": "feature-rwa-geoip",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "The visitor's country for that gate comes from api.country.is",
+      "source": {
+        "repo": "cowprotocol/cowswap",
+        "ref": "7f861f9d12a0f9b0db33f9b0b1679ec309025120",
+        "path": "apps/cowswap-frontend/src/modules/rwa/state/geoDataAtom.ts"
+      },
+      "expect": [
+        "fetch\\('https://api\\.country\\.is'\\)"
+      ]
+    },
+    {
+      "id": "screening-orderbook",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "The orderbook backend rejects banned users: hardcoded list + Chainalysis oracle + Hermod (zeroShadow)",
+      "source": {
+        "repo": "cowprotocol/services",
+        "ref": "a9c2f4ebddd75c9b2b0b0cab980479468adcbe0f",
+        "path": "crates/order-validation/src/banned/mod.rs"
+      },
+      "expect": [
+        "hardcoded list \\+ optional Chainalysis Oracle",
+        "Hermod",
+        "pub async fn banned\\("
+      ]
+    },
+    {
+      "id": "prod-rwa-countries",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production JS: the RWA country list, api.country.is lookup and the isRwaGeoblockEnabled flag",
+      "source": {
+        "url": "https://swap.cow.fi"
+      },
+      "expect": [
+        "fetch\\(\"https://api\\.country\\.is\"\\)",
+        "isRwaGeoblockEnabled",
+        "restrictedCountries:\\[\\.\\.\\."
+      ],
+      "section": {
+        "start": "\\[\"AF\",\"DZ\",\"BY\"",
+        "end": "\\]"
+      },
+      "countries": "codes",
+      "case": true
+    }
+  ]
+}

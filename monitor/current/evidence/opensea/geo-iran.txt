@@ -1,0 +1,119 @@
+check: opensea/geo-iran
+about: OpenSea's statement (Mar 2022): it blocks users and territories on the US sanctions list; Iranian users lost access
+source: https://fortune.com/crypto/2022/03/04/opensea-metamask-block-users-sanctions/
+checked_at: 2026-10-11T21:18:56Z
+fetched: https://fortune.com/crypto/2022/03/04/opensea-metamask-block-users-sanctions/
+sha256: c601de6cc0e98162433ed60e59ba546c41d490dc1074000b82fae65b8b69d75a
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+OpenSea, MetaMask confirm they will block users in U.S.-sanctioned countries | Fortune
+Search
+Subscribe
+Home
+Latest
+Fortune 500
+Finance
+Tech
+Leadership
+Lifestyle
+Rankings
+Multimedia
+Some Fortune Crypto pricing data is provided by Binance.
+NFTs and Culture NFTs
+NFT marketplace OpenSea confirms it will block accounts hit by U.S. sanctions, reviving debate over how decentralized blockchain really is
+By Nicholas Gordon
+Nicholas Gordon
+Asia Editor
+By Nicholas Gordon
+Nicholas Gordon
+Asia Editor
+March 4, 2022, 5:20 AM ET
+Add Fortune on Google for similar content.
+Add us on Google
+Add us on Google
+Two major players in the booming “decentralized” internet space—Ethereum wallet MetaMask and digital art marketplace OpenSea—confirmed they are blocking and deleting accounts based in countries sanctioned by the U.S. The embargoes have revived debate among crypto enthusiasts over whether blockchain projects really are as decentralized and free from political pressure as proponents claim.
+“OpenSea blocks users and territories on the U.S. sanctions list from using our services, including buying, selling, or transferring NFTs,” OpenSea said in a statement to CoinDesk on Thursday, after users in countries under certain sanctions from the U.S. complained they had lost access to their accounts.
+Iranian users on OpenSea—the largest marketplace for non-fungible tokens (NFTs)— reported they were unable to access their accounts on Thursday, with some artists claiming that the platform had deleted their NFT collections. The same day, Venezuelan users also reported they were no longer able to access MetaMask—the most popular crypto wallet for those using the Ethereum blockchain.
+MetaMask’s parent company, ConsenSys, wrote in a statement to CoinDesk that it observes U.S. sanctions on “Iran, North Korea, Cuba, Syria, and the Crimea, Donetsk, and Luhansk regions of Ukraine.”
+Some blockchain enthusiasts argue that the decisions by OpenSea and MetaMask violate a key principle of Web3 —the supposed next iteration of the internet, as imagined by blockchain enthusiasts, where individual companies can’t exert unilateral control over user data and experiences.
+Yet the moves by MetaMask and OpenSea to comply with U.S. sanctions show Web3 can still be subject to unilateral control, and some NFT creators were upset by that revelation.
+Amir Soleymani, an art collector who focuses on digital art and NFTs, tweeted that the move by OpenSea is a “prime example of injustice towards creators and collectors who have nothing to do with politics.” Meanwhile, Parin Heidari, an Iranian artist who claimed her work was deleted by OpenSea, said the marketplace was punishing her for her government’s actions, writing, “I am an Iranian artist not not [ sic ] Iran’s government.”
+which is the lack of a truly decentralized marketplace.
+As an activist, my main goal has always been to address injustice and what happened today is the prime example of injustice towards creators and collectors who have nothing to do with politics.
+👇
+— Mondoir (@mondoir) March 3, 2022
+In the wake of Russia’s invasion of Ukraine, cryptocurrency exchanges are still grappling with how to comply with U.S. sanctions against Russian oligarchs and businesses. Binance, the world’s largest cryptocurrency exchange, said on Monday that while it would block the accounts of sanctioned Russians, it would not freeze all Russian accounts, as some Ukrainian politicians have asked it to do.
+Kraken, another crypto exchange, has also refused to arbitrarily freeze Russian accounts in retaliation for President Vladimir Putin invading Ukraine. Kraken CEO Jesse Powell said that “if we were going to voluntarily freeze financial accounts of residents of countries unjustly attacking and provoking violence around the world, step 1 would be to freeze all US accounts.”
+But as Western sanctions on Russia broaden to potentially target cryptocurrencies, people who use cryptocurrency exchanges and digital marketplaces may quickly realize that these platforms are run by companies—which exist in the real world and have legal responsibilities. And as Western regulators take a closer look at what Web3 platforms do, the companies that operate them will end up having to follow the law, despite their own beliefs.
+“We believe everyone deserves access to basic financial services,” Brian Armstrong, CEO of cryptocurrency exchange Coinbase, tweeted on Friday. “Unless the law says otherwise.”
+Never miss a story: Follow your favorite topics and authors to get a personalized email with the journalism that matters most to you.
+About the Author By Nicholas Gordon Asia Editor
+Nicholas Gordon is an Asia editor based in Hong Kong, where he helps to drive Fortune ’s coverage of Asian business and economics news.
+See full bio
+Latest in NFTs and Culture
+Most Popular
+Rankings
+100 Best Companies
+Fortune 500
+Global 500
+Fortune 500 Europe
+Most Powerful Women
+World's Most Admired Companies
+See All Rankings
+Lists Calendar
+Sections
+Finance
+Fortune Crypto
+Features
+Leadership
+Health
+Commentary
+Success
+Retail
+Mpw
+Tech
+Lifestyle
+CEO Initiative
+Asia
+Politics
+Conferences
+Europe
+Newsletters
+Personal Finance
+Environment
+Magazine
+Education
+Customer Support
+Frequently Asked Questions
+Customer Service Portal
+Privacy Policy
+Terms Of Use
+Single Issues For Purchase
+International Print
+Commercial Services
+Advertising
+Fortune Brand Studio
+Fortune Analytics
+Fortune Conferences
+Business Development
+Group Subscriptions
+About Us
+About Us
+Press Center
+Work At Fortune
+Terms And Conditions
+Site Map
+Rankings
+Sections
+Customer Support
+Commercial Services
+About Us
+Press Center
+Work At Fortune
+Terms And Conditions
+Site Map
+Latest in NFTs and Culture
+Most Popular
+© 2026 Fortune Media IP Limited. All Rights Reserved. Use of this site constitutes acceptance of our Terms of Use and Privacy Policy | CA Notice at Collection and Privacy Notice | Do Not Sell/Share My Personal Information
+FORTUNE is a trademark of Fortune Media IP Limited, registered in the U.S. and other countries. FORTUNE may receive compensation for some links to products and services on this website. Offers may be subject to change without notice.

@@ -1,0 +1,490 @@
+check: safe/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://app.safe.global
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.safe.global",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Safe{Wallet}",
+   "scripts": [
+    "/_next/static/chunks/chunks-sri-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_buildManifest.js",
+    "/_next/static/w-DN8K0QT6NpUZLUJdYUi/_ssgManifest.js"
+   ],
+   "bytes": 12039,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ }
+}

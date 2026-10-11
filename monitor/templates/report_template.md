@@ -1,78 +1,78 @@
-# Монитор ограничений в официальных DeFi-интерфейсах
+# Monitor of restrictions in official DeFi interfaces
 
-**Срез:** 2026-10-08 · **Охват:** DEX и агрегаторы, perps, lending, staking/yield, бриджи, prediction markets, кошельки и governance.
-**Данные:** `interfaces.json` (источник истины), `interfaces.csv` (открывается в Excel), `pi-monitor-prototype.zip` (сканер, сборщик отчёта, верификатор и сырые хиты `scan_raw.json`).
+**Snapshot:** 2026-10-08 · **Scope:** DEXs and aggregators, perps, lending, staking/yield, bridges, prediction markets, wallets and governance.
+**Data:** `interfaces.json` (source of truth), `interfaces.csv` (opens in Excel), `pi-monitor-prototype.zip` (scanner, report builder, verifier and the raw scanner hits `scan_raw.json`).
 
 {{STATS}}
 
 ---
 
-## 1. Главное
+## 1. Key findings
 
-1. **Ограничения уходят с уровня сайта на уровень кошелька и актива.** Полный гео-блок сайта встречается редко. Типовая схема 2026 года выглядит так: скрининг кошелька через собственный бэкенд оператора плюс гео-фильтр отдельных активов. Особенно это касается RWA и токенизированных акций. Так устроены Uniswap, Sushi, CoW, Beefy, Venus, Euler, Aerodrome и Lido Earn. Robinhood-токены у Sushi закрыты для 15 стран, включая всю Украину.
-2. **Где исполняется ограничение** (поле `layer`, фактическое место проверки; при нескольких проверках указана самая глубокая):
-   - **Фронтенд** — решает код в браузере (зашитый список, запрос к провайдеру или чтение on-chain оракула со страницы): Sushi, Ambient, Compound, Notional, Safe.
-   - **API** — отказывает сервер: отдельный compliance-эндпоинт (Uniswap, Aave, Euler, Sky, Balancer, Synapse, Lido, KyberSwap) или основной API протокола (CoW orderbook: Chainalysis oracle + Hermod; LI.FI API: 422 на SDN-адрес; Relay: Chainalysis + HackBounty; индексер dYdX: Elliptic + 403 GEOBLOCKED; CLOB Polymarket).
-   - **Смарт-контракт** — адрес отклоняет сам контракт: блэклист frxUSD (Frax), allowlist и memberlist у Ondo, Centrifuge и Superstate, mint/redeem USDe только для whitelisted-адресов (Ethena).
-3. **Fail-closed гейты.** В нескольких репозиториях гейт блокирует всех, если бэкенд не настроен или недоступен:
-   - Aave: `/api/preflight-compliance` возвращает ошибку, и показывается оверлей на всё приложение.
-   - Synapse: ошибка скринера означает «flagged».
-   - Euler: неизвестная страна приводит к 451 на `/api/*`.
-   - Sky: нет вердикта по IP — приложение блокируется.
-   - Beefy: неизвестная гео приводит к блоку токенизированных акций.
-4. **Фронтенды закрываются.** С 2025 года код стал приватным или удалён у PancakeSwap (`pancake-frontend`), Across (`frontend`), Spark (`spark-app`). Morpho Lite/Fallback и Portal Bridge UI заархивированы. Uniswap публикует только release-mirror, Raydium и QuickSwap держат устаревшие снапшоты.
-5. **Статические санкционные списки расходятся с SDN.** Compound III до сих пор блокирует адреса Tornado Cash, хотя OFAC снял санкции в марте 2025. Ambient и wormhole-connect держат захардкоженные списки.
-6. **Чистые официальные интерфейсы.** Технических ограничений в коде не найдено у GMX, Curve, Yearn, ENS и Snapshot. В ToS Curve и Snapshot (список SECO) Украина указана целиком, но техническое исполнение в коде отсутствует.
-7. **Провайдеры скрининга** (по числу интерфейсов с подтверждённым или задокументированным скринингом): {{PROVIDERS}}.
+1. **Restrictions move from the site level to the wallet and asset level.** A full geo-block of a site is rare. The typical 2026 setup is wallet screening through the operator's own backend plus a geo filter on individual assets, especially RWAs and tokenized stocks. Uniswap, Sushi, CoW, Beefy, Venus, Euler, Aerodrome and Lido Earn work this way. Sushi closes Robinhood tokens to 15 countries, including all of Ukraine.
+2. **Where a restriction is enforced** (the `layer` field, the actual place of the check; with several checks the deepest one is given):
+   - **Frontend**: code in the browser decides (a hardcoded list, a request to a provider or a read of an on-chain oracle from the page): Sushi, Ambient, Compound, Notional, Safe.
+   - **API**: the server refuses, either a separate compliance endpoint (Uniswap, Aave, Euler, Sky, Balancer, Synapse, Lido, KyberSwap) or the protocol's main API (CoW orderbook: Chainalysis oracle + Hermod; LI.FI API: 422 for an SDN address; Relay: Chainalysis + HackBounty; dYdX indexer: Elliptic + 403 GEOBLOCKED; Polymarket CLOB).
+   - **Smart contract**: the contract itself rejects the address: the frxUSD blacklist (Frax), allowlists and memberlists at Ondo, Centrifuge and Superstate, USDe mint/redeem for whitelisted addresses only (Ethena).
+3. **Fail-closed gates.** In several repositories the gate blocks everyone when the backend is not configured or not reachable:
+   - Aave: `/api/preflight-compliance` returns an error, and an overlay covers the whole app.
+   - Synapse: a screener error means "flagged".
+   - Euler: an unknown country leads to 451 on `/api/*`.
+   - Sky: no verdict for the IP, and the app is blocked.
+   - Beefy: an unknown location blocks tokenized stocks.
+4. **Frontends are closing.** Since 2025 the code was made private or removed at PancakeSwap (`pancake-frontend`), Across (`frontend`) and Spark (`spark-app`). Morpho Lite/Fallback and the Portal Bridge UI are archived. Uniswap publishes only a release mirror; Raydium and QuickSwap keep outdated snapshots.
+5. **Static sanctions lists drift from the SDN list.** Compound III still blocks Tornado Cash addresses, although OFAC lifted the sanctions in March 2025. Ambient and wormhole-connect keep hardcoded lists.
+6. **Clean official interfaces.** No technical restrictions were found in the code of GMX, Curve, Yearn, ENS and Snapshot. The Terms of Curve and Snapshot (the SECO list) name all of Ukraine, but the code does not enforce it.
+7. **Screening providers** (by the number of interfaces with confirmed or documented screening): {{PROVIDERS}}.
 
-## 2. Легенда
+## 2. Legend
 
-Рейтинг = число технических ограничений официального интерфейса: каждая страна или регион с блокировкой (сайт, торговля или функции) плюс по одному за ограничение функций/активов, скрининг кошельков, детект VPN и KYC. Запреты только в ToS не считаются. Меньше ограничений — лучше.
+Rating = the number of technical restrictions of an official interface: each country or region with a block (of the site, of trading or of features) plus one each for a feature or asset restriction, wallet screening, VPN detection and KYC. Bans that exist only in the Terms are not counted. Fewer restrictions is better.
 
-| Рейтинг | Ограничений |
+| Rating | Restrictions |
 |---|---|
-| **A** | 0 (ограничений не найдено) |
+| **A** | 0 (no restrictions found) |
 | **B** | 1–5 |
 | **C** | 6–20 |
-| **D** | больше 20 |
-| **n/a** | ничего не удалось определить |
+| **D** | more than 20 |
+| **n/a** | nothing could be determined |
 
-Значения в колонках: `да` подтверждено кодом, живой проверкой или официальной документацией · `по отчётам` пресса или пользователи · `только ToS` право зарезервировано, исполнение не найдено · `опц.` есть в коде, выключено по умолчанию · `?` неизвестно.
+Values in the columns: `yes` confirmed by code, a live check or official documentation · `reported` press or users · `ToS only` the right is reserved, no enforcement found · `optional` present in the code, off by default · `?` unknown.
 
-## 3. Сводная таблица
+## 3. Summary table
 
 {{MAIN_TABLE}}
 
-## 4. Живые проверки: санкционный адрес и гео-эндпоинты
+## 4. Live checks: sanctioned address and geo endpoints
 
-Тестовый адрес: `0x098B716B8Aaf21512996dC57EB0615e2383E2f96` (эксплойтер Ronin bridge, Lazarus Group, в SDN с 2022-04-14). Контрольные адреса: `0x1111…1111` и `0x2222…2222`. Проверялись публичные GET-эндпоинты скрининга, найденные в коде. Egress был из US-датацентра (Огайо).
+Test address: `0x098B716B8Aaf21512996dC57EB0615e2383E2f96` (Ronin bridge exploiter, Lazarus Group, on the SDN list since 2022-04-14). Control addresses: `0x1111…1111` and `0x2222…2222`. The public GET screening endpoints found in the code were tested. Egress was from a US datacenter (Ohio).
 
 {{LIVE_TABLE}}
 
-Подтверждено: скрининг Synapse, Relay, KyberSwap, dYdX и LI.FI реально отклоняет SDN-адрес и пропускает контрольный. Across на этапе котировки адрес не проверяет. Проверки через подключённый кошелёк в UI (Uniswap, Aave, Balancer, Euler, Sky, Sushi/TRM) требуют браузера с подменённым EIP-1193 провайдером и в этот срез не вошли.
+Confirmed: the screening of Synapse, Relay, KyberSwap, dYdX and LI.FI actually rejects the SDN address and lets the control address through. Across does not check the address at the quote stage. Checks through a connected wallet in the UI (Uniswap, Aave, Balancer, Euler, Sky, Sushi/TRM) need a browser with a substituted EIP-1193 provider and are not part of this snapshot.
 
-## 5. Механизмы и доказательства
+## 5. Mechanisms and evidence
 
-Пути к файлам указаны относительно корня репозитория из сводной таблицы, на HEAD от даты среза.
+File paths are relative to the root of the repository from the summary table, at HEAD on the snapshot date.
 
 {{MECH_TABLE}}
 
-## 6. Типология механизмов
+## 6. Types of mechanisms
 
-| Слой | Как детектится | Примеры |
+| Layer | How it is detected | Examples |
 |---|---|---|
-| Edge/CDN | HTTP 403/451/302 по стране без JS; `netlify.toml` `conditions.Country`, Next `middleware` `req.geo`, `cf-ipcountry`, `x-vercel-ip-country` | Hop (451), Ambient (302 → /blocked.html), Euler (451 на `/api`), marginfi |
-| Клиентский гео-чек | JS-запрос к гео-API: `api.country.is`, `free.freeipapi.com`, `*/geo/country`, `/api/geoblock`, `geolocation.*.workers.dev` | CoW, Venus, Beefy, Polymarket, Drift, Notional, Sushi |
-| Гео-сервис оператора с фичефлагами | ответ содержит `isRegionRestricted`/`gatedFeatures`/`limited` | Sky (`/ip/status`, `geo-config`), Uniswap compliance v2, Lido `/api/geo` |
-| VPN-детект | `is_vpn`, vpnapi.io, IPQS; Tor `T1` | Sky (детект → подпись ToS), Euler (лог), Liquity (опц.), Lido (Tor → limited) |
-| Скрининг кошелька, внешний API | запрос с адресом в теле или URL сразу после connect | TRM (Sushi, 1inch, Aave ист.), Hypernative (Balancer), Elliptic (dYdX), Chainalysis Entity (Synapse) |
-| Скрининг on-chain | `eth_call isSanctioned()` к `0x40C5…C8fb` | Notional, Safe, CoW backend |
-| Статический список | массив адресов в бандле | Compound, Ambient, wormhole-connect, Hop (опц.) |
-| Ограничения активов | token deny-list или RWA-листы по стране | Uniswap, CoW, Beefy, Venus, Sushi, Curve (контент-блэклист) |
+| Edge/CDN | HTTP 403/451/302 by country without JS; `netlify.toml` `conditions.Country`, Next `middleware` `req.geo`, `cf-ipcountry`, `x-vercel-ip-country` | Hop (451), Ambient (302 → /blocked.html), Euler (451 on `/api`), marginfi |
+| Client-side geo check | a JS request to a geo API: `api.country.is`, `free.freeipapi.com`, `*/geo/country`, `/api/geoblock`, `geolocation.*.workers.dev` | CoW, Venus, Beefy, Polymarket, Drift, Notional, Sushi |
+| Operator's geo service with feature flags | the answer contains `isRegionRestricted`/`gatedFeatures`/`limited` | Sky (`/ip/status`, `geo-config`), Uniswap compliance v2, Lido `/api/geo` |
+| VPN detection | `is_vpn`, vpnapi.io, IPQS; Tor `T1` | Sky (detection → ToS signature), Euler (log), Liquity (optional), Lido (Tor → limited) |
+| Wallet screening, external API | a request with the address in the body or URL right after connect | TRM (Sushi, 1inch, Aave historically), Hypernative (Balancer), Elliptic (dYdX), Chainalysis Entity (Synapse) |
+| On-chain screening | `eth_call isSanctioned()` to `0x40C5…C8fb` | Notional, Safe, CoW backend |
+| Static list | an array of addresses in the bundle | Compound, Ambient, wormhole-connect, Hop (optional) |
+| Asset restrictions | a token deny-list or RWA lists by country | Uniswap, CoW, Beefy, Venus, Sushi, Curve (content blacklist) |
 
-## 7. Ограничения этого среза
+## 7. Limits of this snapshot
 
-- Живые проверки шли **из одной точки (US-датацентр)** и без исполнения JS. Гео-блоки, которые срабатывают только на клиенте или только для других стран, видны только через код. Закрытые интерфейсы без найденных ограничений (рейтинг A при закрытом коде и `n/a`) проверены только по ToS и публичным эндпоинтам, без браузера из других стран.
-- Репозитории просканированы на HEAD default-ветки. Прод может расходиться с кодом: у QuickSwap хэш прод-сборки отсутствует в репо, Raydium выложен снапшотом, Uniswap — release-mirror.
-- Статический сканер даёт кандидатов. Каждая находка со статусом `да` в таблице подтверждена ручным чтением кода или живым запросом. Сырые хиты сканера содержат ложные срабатывания: `elliptic` как крипто-библиотека, `blockaid` как сканер транзакций в кошельке Uniswap, а не compliance; Hypernative Guard в Safe.
-- ToS многих приложений рендерятся на клиенте. Если ToS не удалось прочитать, стоит `unknown`, без догадок.
+- Live checks ran **from a single point (a US datacenter)** and without executing JS. Geo-blocks that fire only on the client or only for other countries are visible only through the code. Closed interfaces with no restrictions found (rating A with closed code, and `n/a`) were checked only through the Terms and public endpoints, without a browser from other countries.
+- Repositories were scanned at HEAD of the default branch. Production can differ from the code: the hash of QuickSwap's production build is missing from the repository, Raydium is published as a snapshot, Uniswap as a release mirror.
+- The static scanner gives candidates. Every finding with the status `yes` in the table is confirmed by reading the code or by a live request. The raw scanner hits contain false positives: `elliptic` as a crypto library, `blockaid` as a transaction scanner in the Uniswap wallet rather than compliance, Hypernative Guard in Safe.
+- The Terms of many apps are rendered on the client. Where the Terms could not be read, the value is `unknown`, with no guessing.

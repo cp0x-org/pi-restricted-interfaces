@@ -1,0 +1,11 @@
+{
+  "id": "convex",
+  "name": "Convex",
+  "targets": {
+    "app": "https://curve.convexfinance.com",
+    "repo": null,
+    "terms": null,
+    "endpoints": []
+  },
+  "checks": []
+}

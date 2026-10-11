@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 2,
-    "generated": "2026-10-10",
+    "generated": "2026-10-11",
     "sanctioned_test_address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
     "sanctioned_test_address_note": "Ronin bridge exploiter (Lazarus Group), OFAC SDN since 2022-04-14. Control address: 0x2222...2222 / 0x1111...1111",
     "live_check_egress": "US datacenter (Polymarket /api/geoblock reported country=US, region=OH; Beefy /geo/country = US)",
@@ -637,10 +637,26 @@
       "geo_feature": {
         "s": "yes",
         "countries": [
-          "US",
+          "AF",
+          "DZ",
+          "BY",
           "CA",
           "CN",
+          "CU",
+          "KP",
+          "ER",
+          "IR",
+          "LY",
+          "MM",
+          "MA",
+          "NP",
           "RU",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "US",
+          "VE",
           "AT",
           "BE",
           "BG",
@@ -667,9 +683,12 @@
           "SK",
           "SI",
           "ES",
-          "SE"
+          "SE",
+          "IS",
+          "LI",
+          "NO"
         ],
-        "scope": "RWA/tokenized-stock token lists hidden by IP (api.country.is), 50 countries incl. US, CA, CN, RU, all of the EU (list here is partial; full list in code); flag isRwaGeoblockEnabled"
+        "scope": "RWA/tokenized-stock token lists hidden by IP (api.country.is) for 50 countries: US, CA, CN, RU, the whole EEA and sanctioned or high-risk jurisdictions (RESTRICTED_COUNTRIES in libs/core/src/cms/consts.ts); flag isRwaGeoblockEnabled"
       },
       "vpn": {
         "s": "no",
@@ -705,8 +724,8 @@
       "lifecycle": "current",
       "level": "D",
       "restrictions": {
-        "count": 33,
-        "countries": 31,
+        "count": 52,
+        "countries": 50,
         "mechanisms": [
           "geo_feature",
           "screening"
@@ -834,10 +853,12 @@
       "repo_status": "open",
       "repo_last_commit": "2026-10-08",
       "geo_site": {
-        "s": "no",
-        "countries": [],
+        "s": "yes",
+        "countries": [
+          "VN"
+        ],
         "close_only": [],
-        "method": ""
+        "method": "Cloudflare edge: HTTP 403 'country is currently restricted in accordance with our Terms of Use'. Observed from Vietnam (2 networks, 2026-10-12); the other Terms countries are sanctioned jurisdictions that are not probed."
       },
       "geo_feature": {
         "s": "yes",
@@ -881,6 +902,7 @@
       },
       "notes": "Blackjack is called from the frontend before each signature. The aggregator API is a separate service.",
       "live": [
+        "kyberswap.com (2026-10-12): VN (Mobifone, VNPT) -> HTTP 403 'country is currently restricted in accordance with our Terms of Use'; 19 other countries -> app served",
         "Blackjack: sanctioned -> blacklisted:true (reason 2, since 2023-12); control -> blacklisted:false"
       ],
       "geo_endpoints": [],
@@ -894,8 +916,8 @@
       "lifecycle": "current",
       "level": "B",
       "restrictions": {
-        "count": 2,
-        "countries": 0,
+        "count": 3,
+        "countries": 1,
         "mechanisms": [
           "geo_feature",
           "screening"
@@ -1709,9 +1731,11 @@
         "method": "ToS 2.6: denial by IP/ISP/VPN"
       },
       "geo_feature": {
-        "s": "unknown",
-        "countries": [],
-        "scope": ""
+        "s": "yes",
+        "countries": [
+          "US"
+        ],
+        "scope": "Stock and index pairs: the app asks gTrade's geoblock API (wrkr.randomdegenerator.xyz/main/api/geo) for per-group flags and blocks the pairs of a flagged group. From the US stocks and indices are flagged; from 20 other countries tested on 2026-10-12 none are."
       },
       "vpn": {
         "s": "tos_only",
@@ -1735,22 +1759,29 @@
           "US"
         ]
       },
-      "notes": "Closed.",
+      "notes": "Closed frontend. Market-group flags per country come from gTrade's geoblock API; the Terms (2.6) also reserve blocking by IP, ISP or VPN.",
       "live": [
+        "wrkr.randomdegenerator.xyz/main/api/geo (2026-10-12): US -> stocks:true, indices:true; RO GB DE FR NL CA JP AU SG HK KR IN AE TR UA BR AR NG -> all false",
         "WebFetch (US): normal page"
       ],
-      "geo_endpoints": [],
+      "geo_endpoints": [
+        "https://wrkr.randomdegenerator.xyz/main/api/geo"
+      ],
       "evidence": [
+        "gains.trade bundle: useGeoblock hook ('geoblock-features', features[group] === true blocks the pair)",
+        "https://wrkr.randomdegenerator.xyz/main/api/geo",
         "https://gains.trade/terms-of-service"
       ],
       "confidence": "high",
       "alternatives": [],
       "lifecycle": "current",
-      "level": "A",
+      "level": "B",
       "restrictions": {
-        "count": 0,
-        "countries": 0,
-        "mechanisms": []
+        "count": 2,
+        "countries": 1,
+        "mechanisms": [
+          "geo_feature"
+        ]
       },
       "category_group": "perps",
       "chain_tags": [
@@ -3269,11 +3300,11 @@
         "note": ""
       },
       "screening": {
-        "s": "no",
-        "provider": "",
-        "layer": null,
-        "fail": null,
-        "fail_note": ""
+        "s": "yes",
+        "provider": "/api/validation -> external validation API {validationAPI}/v2/check/{addr} (unnamed; the same service as stake.lido.fi), local address file as a fallback",
+        "layer": "api",
+        "fail": "open",
+        "fail_note": "API error and no address file: the address counts as valid; the IPFS build skips the check"
       },
       "asset_filter": "",
       "tos": {
@@ -3293,12 +3324,15 @@
           "GB"
         ]
       },
-      "notes": "Clean: no geo or screening code; vault limits (paused deposits, jailed vaults) come from the protocol contracts.",
+      "notes": "Wallet screening runs through the shared Lido validation API; there is no geo-IP code. Vault limits (paused deposits, jailed vaults) come from the protocol contracts.",
       "live": [
+        "stvaults.lido.fi/api/validation (2026-10-11): sanctioned 0x098B…2f96 -> isValid:false, control 0x5aAe…eAed -> isValid:true",
         "stvaults.lido.fi (2026-10-10): loads release 0.23.0; only matomo.lido.fi analytics besides the app"
       ],
       "geo_endpoints": [],
       "evidence": [
+        "pages/api/validation.ts",
+        "providers/address-validation-provider.tsx",
         "https://github.com/lidofinance/staking-vault-widget",
         "https://lido.fi/stvaults",
         "https://lido.fi/terms-of-use"
@@ -3306,11 +3340,13 @@
       "confidence": "high",
       "alternatives": [],
       "lifecycle": "current",
-      "level": "A",
+      "level": "B",
       "restrictions": {
-        "count": 0,
+        "count": 1,
         "countries": 0,
-        "mechanisms": []
+        "mechanisms": [
+          "screening"
+        ]
       },
       "category_group": "staking",
       "chain_tags": [
@@ -3402,7 +3438,7 @@
       "repo_status": "closed",
       "repo_last_commit": null,
       "geo_site": {
-        "s": "reported",
+        "s": "yes",
         "countries": [
           "US",
           "CA",
@@ -3410,10 +3446,11 @@
           "CU",
           "KP",
           "IR",
-          "VE"
+          "VE",
+          "UA"
         ],
         "close_only": [],
-        "method": "2024: EIGEN claims site only (IP + VPN detection)"
+        "method": "2024 reports: IP blocks on the EIGEN claim site (US, CA, CN, CU, KP, IR, VE). 2026-10-12: app.eigenlayer.xyz answers visitors from Ukraine (2 networks) with 'RESTRICTED: The application is not available to persons in your jurisdiction'."
       },
       "geo_feature": {
         "s": "unknown",
@@ -3442,7 +3479,7 @@
       },
       "notes": "Closed.",
       "live": [
-        "WebFetch (US): HTTP 500"
+        "app.eigenlayer.xyz (2026-10-12): UA -> 'RESTRICTED: The application is not available to persons in your jurisdiction'; 19 other countries -> HTTP 500 (the app is down)"
       ],
       "geo_endpoints": [],
       "evidence": [
@@ -3453,8 +3490,8 @@
       "lifecycle": "current",
       "level": "C",
       "restrictions": {
-        "count": 8,
-        "countries": 7,
+        "count": 9,
+        "countries": 8,
         "mechanisms": [
           "vpn"
         ]
@@ -4155,9 +4192,11 @@
         "method": ""
       },
       "geo_feature": {
-        "s": "unknown",
-        "countries": [],
-        "scope": ""
+        "s": "yes",
+        "countries": [
+          "UA"
+        ],
+        "scope": "USDC transfers over Circle CCTP: the app first asks Circle's CCTP API (iris-api.circle.com/v1/publicKeys) and, when it does not answer, refuses the route with 'CCTP transfers are not available in your region'. Circle answers 403 'Lockout' to Ukrainian IPs (3 networks tested on 2026-10-12); other routes stay available."
       },
       "vpn": {
         "s": "tos_only",
@@ -4179,22 +4218,28 @@
         "restricted": "generic UN/EU/UK/Cayman/US",
         "restricted_codes": []
       },
-      "notes": "Closed.",
+      "notes": "Closed frontend. The CCTP route depends on Circle's API being reachable from the visitor's location.",
       "live": [
+        "iris-api.circle.com/v1/publicKeys (2026-10-12): UA -> HTTP 403 'Lockout' (3 networks); RO US GB TR AE SG HK BR JP -> 200",
         "WebFetch (US): normal page"
       ],
-      "geo_endpoints": [],
+      "geo_endpoints": [
+        "https://iris-api.circle.com/v1/publicKeys"
+      ],
       "evidence": [
+        "stargate.finance bundle: validateRegion throws UsdcCctpRegionRestrictedError when /v1/publicKeys fails",
         "https://stargate.finance/terms"
       ],
       "confidence": "medium",
       "alternatives": [],
       "lifecycle": "current",
-      "level": "A",
+      "level": "B",
       "restrictions": {
-        "count": 0,
-        "countries": 0,
-        "mechanisms": []
+        "count": 2,
+        "countries": 1,
+        "mechanisms": [
+          "geo_feature"
+        ]
       },
       "category_group": "bridge",
       "chain_tags": [
@@ -4315,9 +4360,9 @@
         "method": ""
       },
       "geo_feature": {
-        "s": "unknown",
+        "s": "yes",
         "countries": [],
-        "scope": ""
+        "scope": "Fusion swaps (market and limit orders): the quote API can refuse the selected tokens with GEO_BLOCKED ('Trading the selected tokens is not available in your region'); which tokens and countries is not published."
       },
       "vpn": {
         "s": "unknown",
@@ -4325,7 +4370,7 @@
       },
       "screening": {
         "s": "yes",
-        "provider": "archived UI: TRM Labs via proxy (risk score >= 10 -> block, fail-open). wormhole-connect widget: hardcoded OFAC SDN list",
+        "provider": "portalbridge.com checks both wallets of a transfer (checkWalletSanctions) before it starts; the archived UI used TRM Labs (risk score >= 10 -> block, fail-open), the wormhole-connect widget a hardcoded OFAC SDN list",
         "layer": "api",
         "fail": "open",
         "fail_note": ""
@@ -4345,6 +4390,7 @@
       ],
       "geo_endpoints": [],
       "evidence": [
+        "portalbridge.com bundle: checkWalletSanctions for both wallets; GEO_BLOCKED quote error",
         "XLabs/portal-bridge-ui: apps/connect/src/providers/sanctions.ts",
         "wormhole-foundation/wormhole-connect: src/utils/transferValidation.ts, src/consts/wallet.ts"
       ],
@@ -4353,9 +4399,10 @@
       "lifecycle": "current",
       "level": "B",
       "restrictions": {
-        "count": 1,
+        "count": 2,
         "countries": 0,
         "mechanisms": [
+          "geo_feature",
           "screening"
         ]
       },
@@ -4469,48 +4516,66 @@
       "geo_site": {
         "s": "yes",
         "countries": [
-          "IR",
-          "SY",
+          "AU",
+          "BE",
+          "BY",
+          "BR",
+          "BI",
+          "CF",
+          "CD",
           "CU",
+          "DE",
+          "ET",
+          "FR",
+          "GB",
+          "IE",
+          "IR",
+          "IQ",
+          "IT",
+          "JP",
           "KP",
+          "LB",
+          "LY",
+          "MM",
+          "MT",
+          "NI",
+          "NL",
+          "NZ",
+          "RU",
+          "SK",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "UM",
+          "US",
+          "VE",
+          "YE",
+          "ZW",
+          "CA-AB",
+          "CA-BC",
+          "CA-ON",
+          "CA-QC",
           "UA-Crimea",
           "UA-DPR",
           "UA-LPR"
         ],
         "close_only": [
-          "US",
-          "GB",
-          "FR",
-          "DE",
-          "IT",
-          "PL",
-          "BE",
-          "AU",
           "SG",
-          "TW",
+          "PL",
           "TH",
-          "RU",
-          "BY",
-          "CA-ON",
-          "CA-BC",
-          "CA-AB",
-          "CA-QC"
+          "TW"
         ],
-        "method": "polymarket.com/api/geoblock; overlay 'Trading is blocked' + view-only; close-only list is partial ('and others' per help center)"
+        "method": "polymarket.com/api/geoblock decides by IP: in blocked countries and regions markets stay viewable but trading is refused; close-only countries can only close positions. Lists from the help center (revision of 2026-08-14)"
       },
       "geo_feature": {
-        "s": "yes",
-        "countries": [
-          "IE",
-          "JP",
-          "NL",
-          "KR"
-        ],
-        "scope": "close-only tiers; frontend-only tier (IE, JP, NL, KR)"
+        "s": "no",
+        "countries": [],
+        "scope": ""
       },
       "vpn": {
-        "s": "block",
-        "note": "reported 2026-06"
+        "s": "tos_only",
+        "note": "Help center: using a VPN to bypass the restrictions violates the Terms (section 2.1.4); no detection mechanism documented"
       },
       "screening": {
         "s": "unknown",
@@ -4525,11 +4590,12 @@
         "updated": "2026-08-11",
         "us": "yes",
         "us_scope": "",
-        "restricted": "~40 countries + regions (see help center)",
+        "restricted": "40 countries + 7 regions (help center, revision of 2026-08-14)",
         "restricted_codes": []
       },
       "notes": "The CLOB API itself is geo-blocked for the main tiers, not only the website.",
       "live": [
+        "/api/geoblock (US, 2026-10-11) -> {blocked: true, country: US, region: VA}",
         "/api/geoblock (US) -> {blocked: true, country: US, region: OH}; overlay 'Trading is blocked in the United States'"
       ],
       "geo_endpoints": [
@@ -4544,12 +4610,9 @@
       "lifecycle": "current",
       "level": "D",
       "restrictions": {
-        "count": 30,
-        "countries": 28,
-        "mechanisms": [
-          "geo_feature",
-          "vpn"
-        ]
+        "count": 47,
+        "countries": 47,
+        "mechanisms": []
       },
       "category_group": "prediction",
       "chain_tags": [
@@ -5577,10 +5640,17 @@
       "repo_status": "closed",
       "repo_last_commit": null,
       "geo_site": {
-        "s": "unknown",
-        "countries": [],
+        "s": "yes",
+        "countries": [
+          "CU",
+          "IR",
+          "KP",
+          "SY",
+          "UA",
+          "CA"
+        ],
         "close_only": [],
-        "method": ""
+        "method": "Frontend: the country comes from www.cloudflare.com/cdn-cgi/trace (loc=); visitors from the listed countries get a full-screen 'UNSUPPORTED REGION' modal"
       },
       "geo_feature": {
         "s": "unknown",
@@ -5607,20 +5677,21 @@
         "restricted": "ToS not found",
         "restricted_codes": []
       },
-      "notes": "Closed frontend. Core contracts are immutable and permissionless; restrictions, if any, would sit in the app or in individual vaults.",
+      "notes": "Closed frontend. The region check runs in the browser with Cloudflare's trace endpoint; core contracts are immutable and permissionless.",
       "live": [],
       "geo_endpoints": [],
       "evidence": [
+        "app.symbiotic.fi bundle: country list and the UNSUPPORTED REGION modal",
         "https://www.paradigm.xyz/writing/symbiotic",
         "https://www.coingecko.com/learn/what-is-symbiotic-restaking-crypto"
       ],
-      "confidence": "low",
+      "confidence": "high",
       "alternatives": [],
       "lifecycle": "current",
-      "level": "n/a",
+      "level": "C",
       "restrictions": {
-        "count": 0,
-        "countries": 0,
+        "count": 6,
+        "countries": 6,
         "mechanisms": []
       },
       "category_group": "staking",
@@ -5722,9 +5793,13 @@
         "method": ""
       },
       "geo_feature": {
-        "s": "unknown",
-        "countries": [],
-        "scope": ""
+        "s": "yes",
+        "countries": [
+          "US",
+          "GB",
+          "CA"
+        ],
+        "scope": "Gain vaults (growth, airdrop and stable vault pages): the app asks universe.kelpdao.xyz/rseth/geoData and sends a visitor with isRestricted:true to /blocked ('Not available in your region'). Restricted from the US, the UK and Canada in the 2026-10-12 test; open from 15 other countries; the full list is not published."
       },
       "vpn": {
         "s": "unknown",
@@ -5751,20 +5826,28 @@
         "restricted": "No named jurisdictions; sanctions-list representations only",
         "restricted_codes": []
       },
-      "notes": "Closed frontend; deposits and withdrawals use public contracts.",
-      "live": [],
-      "geo_endpoints": [],
+      "notes": "Closed frontend; deposits and withdrawals use public contracts. The Gain vault gate is decided by Kelp's geoData API.",
+      "live": [
+        "universe.kelpdao.xyz/rseth/geoData (2026-10-12): US, US-NY, GB, CA, CA-ON -> isRestricted:true; RO DE FR NL UA TR AE SG JP AU BR HK KR -> false"
+      ],
+      "geo_endpoints": [
+        "https://universe.kelpdao.xyz/rseth/geoData"
+      ],
       "evidence": [
+        "kerneldao.com/kelp bundle: geoData request and the redirect of /gain/*-vault/ pages to /blocked",
+        "https://universe.kelpdao.xyz/rseth/geoData",
         "https://kerneldao.com/kelp/terms-of-service/"
       ],
-      "confidence": "medium",
+      "confidence": "high",
       "alternatives": [],
       "lifecycle": "current",
-      "level": "A",
+      "level": "B",
       "restrictions": {
-        "count": 0,
-        "countries": 0,
-        "mechanisms": []
+        "count": 4,
+        "countries": 3,
+        "mechanisms": [
+          "geo_feature"
+        ]
       },
       "category_group": "staking",
       "chain_tags": [

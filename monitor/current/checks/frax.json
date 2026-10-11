@@ -1,0 +1,40 @@
+{
+  "id": "frax",
+  "name": "Frax",
+  "targets": {
+    "app": "https://frax.com",
+    "repo": null,
+    "terms": "https://frax.com/frxUSD",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "screening-blacklist-report",
+      "type": "page",
+      "claim": "screening",
+      "status": "reported",
+      "about": "LlamaRisk review: blacklist controls are being embedded in the frxUSD contracts for sanctions screening and wallet blocking",
+      "source": {
+        "url": "https://llamarisk.com/research/pegkeeper-onboarding-frxusd",
+        "kind": "press"
+      },
+      "expect": [
+        "blacklist controls are being embedded directly in the frxUSD smart contracts to enable sanctions screening and wallet-level blocking"
+      ]
+    },
+    {
+      "id": "kyc-report",
+      "type": "page",
+      "claim": "kyc",
+      "status": "reported",
+      "about": "LlamaRisk review: full KYC/KYB will be required for minting or redeeming through FraxNet bank and fiat rails",
+      "source": {
+        "url": "https://llamarisk.com/research/pegkeeper-onboarding-frxusd",
+        "kind": "press"
+      },
+      "expect": [
+        "full KYC/KYB verification will be required for wallets interacting with the FraxNet infrastructure"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "aerodrome",
+  "name": "Aerodrome",
+  "targets": {
+    "app": "https://aerodrome.finance",
+    "repo": null,
+    "terms": "https://github.com/aerodrome-finance/docs/blob/main/content/legal.mdx",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "feature-stocks-us",
+      "type": "page",
+      "claim": "geo_feature",
+      "status": "reported",
+      "about": "Tokenized equities on Aerodrome (Base, Aug 2026) are available only to eligible users outside the United States (press)",
+      "source": {
+        "url": "https://cryptobriefing.com/aerodrome-tokenized-equities-base/",
+        "kind": "press"
+      },
+      "expect": [
+        "US residents are excluded\\. The tokenized equities are available only to eligible users outside the United States"
+      ],
+      "countries": [
+        "US"
+      ]
+    }
+  ]
+}

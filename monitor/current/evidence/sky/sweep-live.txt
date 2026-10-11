@@ -1,0 +1,474 @@
+check: sky/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://app.sky.money
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.sky.money",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Sky.money | Savings, rewards, staking and borrowing, without giving up control",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 8636,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.sky.money/geo-config": {
+   "status": 200,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "ok",
+   "flags": {
+    "isRegionRestricted": false,
+    "countryCode": "RO"
+   },
+   "body": "{\"version\":\"1.0.0\",\"countryCode\":\"RO\",\"generatedAt\":\"2026-10-11T21:19:31.558Z\",\"cacheTtl\":300,\"isRegionRestricted\":false,\"isCookiesBannerRequired\":true,\"modules\":{\"savings\":{\"enabled\":true},\"rewards\":",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "GB": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "DE": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "FR": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "NL": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "PL": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "UA": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "TR": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AE": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "SG": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "HK": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "JP": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "BR": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AR": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "NG": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "VN": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "GE": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.sky.money",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.sky.money/geo-config": {
+   "status": null,
+   "final_url": "https://api.sky.money/geo-config",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ }
+}

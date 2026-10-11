@@ -1,0 +1,193 @@
+check: aave-pro/feature-equities-us
+about: Coinbase tokenized stocks on Aave (Equities Hub) are offered only outside the US (Aave's announcement quoted by the press)
+source: https://cryptobriefing.com/coinbase-tokenized-stocks-go-live-on-aave-v4-on-base/
+checked_at: 2026-10-11T21:18:48Z
+fetched: https://cryptobriefing.com/coinbase-tokenized-stocks-go-live-on-aave-v4-on-base/
+sha256: 8be8d58529a4110c71bb33ea70bb28973c1c2474f53fda19029e89a40f93895d
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+Coinbase tokenized stocks go live on Aave V4 on Base
+System Light Dark
+English
+Español
+Crypto
+Finance (2026-09-09 nav taxonomy migration).
+Links to the canonical Finance archive via the resolver, which yields the
+base-dropped /finance/ once the term is renamed and falls back to the live
+/category/markets/ pre-migration. -->
+Finance
+Prediction
+Markets
+Macro
+AI
+Tech
+Markets
+Newsletter
+Ads
+Sections
+Bitcoin
+DeFi
+Ethereum
+NFTs
+AI Agents
+Regulation
+Web3
+Business
+Ecosystem
+Crypto
+Bitcoin
+DeFi
+Ethereum
+NFTs
+AI Agents
+Regulation
+Web3
+Business
+Ecosystem
+Finance; canonical resolver (base-dropped /finance/ post-migration). -->
+Finance
+Prediction Markets
+Macro
+AI
+Tech
+Markets
+Newsletter
+Ads
+Appearance System System Light Dark
+, viewability ~27-35%). -->
+SEARCH
+Searching...
+. -->
+Coinbase tokenized stocks go live on Aave V4 on Base
+Seven tokenized US technology stocks can now be used as collateral to borrow USDC, with Chainlink providing onchain market data.
+Share
+this.removeAttribute('data-copied'), 2000);"
+class="w-7 h-7 border border-foreground/30 text-foreground rounded-full flex items-center justify-center hover:bg-muted transition-colors"
+aria-label="Copy link"
+>
+Add us on Google
+by
+Estefano Gomez
+Sep. 25, 2026
+Coinbase ’s tokenized stocks are moving further into decentralized finance, with seven of the products now live as collateral on Aave V4 on Base.
+Coinbase Tokenized Stocks are live on Aave V4 on @base .
+Tokenized stocks are only available in eligible jurisdictions outside of the U.S. pic.twitter.com/VOL363Ihd9
+— Aave (@aave) September 25, 2026
+AAPLc, AMZNc, GOOGLc, METAc, MSFTc, NVDAc and TSLAc can now be deposited into Aave’s Equities Hub and used to borrow USDC . The products are available to eligible users outside the United States, while Chainlink provides the market data used to value the collateral onchain.
+The integration gives Coinbase’s recently launched tokenized equities a new use case beyond simply holding or trading them. Rather than selling the exposure, users can now borrow against the positions while keeping the underlying economic exposure to companies including Apple , Nvidia , Microsoft and Tesla .
+The tokens are issued by Coinbase Onchain SPV Ltd., with the underlying shares held by Alpaca Securities LLC in segregated custody accounts. Coinbase says the structure gives token holders exposure to actual equities rather than a synthetic instrument that merely tracks their prices.
+Advertisement
+Dividends are also handled differently from traditional stock accounts. Instead of being paid directly to holders, cash distributions are used to purchase additional underlying shares after fees and withholding taxes. Stock splits and other corporate actions are reflected through an onchain multiplier, effectively making the tokens total-return instruments.
+Aave’s setup is relatively simple at launch. The Equities Hub has a single USDC reserve, while all seven stocks can be posted as collateral under their own risk parameters.
+The crypto and markets news you actually need—every morning.
+Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
+Email address
+Subscribe free
+We respect your privacy. Unsubscribe anytime.
+The stocks themselves cannot be borrowed, and users cannot yet open positions that borrow one tokenized equity against another.
+One complication comes from the mismatch between crypto’s always-on markets and traditional equities trading hours.
+Aave remains accessible around the clock, but Chainlink’s tokenized equity feeds publish prices from Sunday evening through Friday evening. During weekends and US market holidays, the most recent price remains fixed until the underlying market reopens.
+That means users can continue to borrow, repay or withdraw during those periods, but the value of the stock collateral does not move with any off-market developments until fresh pricing becomes available.
+Corporate actions can also temporarily interrupt activity. A reserve may be paused during events such as stock splits until the updated token multiplier is applied.
+The launch is expected to expand over time. More Coinbase Tokenized Stocks could be added to the market, while Aave also plans to introduce GHO as another borrowable asset, subject to governance and risk approval.
+The tokenized stocks are available only to eligible users outside the United States and in jurisdictions where the products are permitted.
+Disclosure: This article was edited by Estefano Gomez. For more information on how we create and review content, see our Editorial Policy .
+ECOSYSTEM
+Coinbase tokenized stocks go live on Aave V4 on Base
+Seven tokenized US technology stocks can now be used as collateral to borrow USDC, with Chainlink providing onchain market data.
+by
+Estefano Gomez
+Sep. 25, 2026
+Share
+this.removeAttribute('data-copied'), 2000);"
+class="w-7 h-7 border border-foreground/30 text-foreground rounded-full flex items-center justify-center hover:bg-muted transition-colors"
+aria-label="Copy link"
+>
+Add us on Google
+Coinbase ’s tokenized stocks are moving further into decentralized finance, with seven of the products now live as collateral on Aave V4 on Base.
+Coinbase Tokenized Stocks are live on Aave V4 on @base .
+Tokenized stocks are only available in eligible jurisdictions outside of the U.S. pic.twitter.com/VOL363Ihd9
+— Aave (@aave) September 25, 2026
+AAPLc, AMZNc, GOOGLc, METAc, MSFTc, NVDAc and TSLAc can now be deposited into Aave’s Equities Hub and used to borrow USDC . The products are available to eligible users outside the United States, while Chainlink provides the market data used to value the collateral onchain.
+The integration gives Coinbase’s recently launched tokenized equities a new use case beyond simply holding or trading them. Rather than selling the exposure, users can now borrow against the positions while keeping the underlying economic exposure to companies including Apple , Nvidia , Microsoft and Tesla .
+The tokens are issued by Coinbase Onchain SPV Ltd., with the underlying shares held by Alpaca Securities LLC in segregated custody accounts. Coinbase says the structure gives token holders exposure to actual equities rather than a synthetic instrument that merely tracks their prices.
+Advertisement
+Dividends are also handled differently from traditional stock accounts. Instead of being paid directly to holders, cash distributions are used to purchase additional underlying shares after fees and withholding taxes. Stock splits and other corporate actions are reflected through an onchain multiplier, effectively making the tokens total-return instruments.
+Aave’s setup is relatively simple at launch. The Equities Hub has a single USDC reserve, while all seven stocks can be posted as collateral under their own risk parameters.
+The crypto and markets news you actually need—every morning.
+Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
+Email address
+Subscribe free
+We respect your privacy. Unsubscribe anytime.
+The stocks themselves cannot be borrowed, and users cannot yet open positions that borrow one tokenized equity against another.
+One complication comes from the mismatch between crypto’s always-on markets and traditional equities trading hours.
+Aave remains accessible around the clock, but Chainlink’s tokenized equity feeds publish prices from Sunday evening through Friday evening. During weekends and US market holidays, the most recent price remains fixed until the underlying market reopens.
+That means users can continue to borrow, repay or withdraw during those periods, but the value of the stock collateral does not move with any off-market developments until fresh pricing becomes available.
+Corporate actions can also temporarily interrupt activity. A reserve may be paused during events such as stock splits until the updated token multiplier is applied.
+The launch is expected to expand over time. More Coinbase Tokenized Stocks could be added to the market, while Aave also plans to introduce GHO as another borrowable asset, subject to governance and risk approval.
+The tokenized stocks are available only to eligible users outside the United States and in jurisdictions where the products are permitted.
+Disclosure: This article was edited by Estefano Gomez. For more information on how we create and review content, see our Editorial Policy .
+Loading more articles...
+You've reached the end
+Follow Us
+Quick Links
+Bitcoin
+Ethereum
+DeFi
+Finance
+Markets
+NFTs
+AI
+Tech
+AI Agents
+Newsletter
+Regulation
+Macro
+Advertising
+CB Select
+Company
+Team
+Contact
+Advertising
+Account
+Log In
+Quick Links
+Bitcoin
+Ethereum
+DeFi
+Finance
+Markets
+NFTs
+AI
+Tech
+AI Agents
+Newsletter
+Regulation
+Macro
+Advertising
+Contact
+CB Select
+Follow Us
+Account
+Log In
+All content is for informational purposes only and does not constitute investment advice. CryptoBriefing does not provide recommendations to buy, sell, or hold any asset or contract. See our Disclaimer & Risk Disclosure .
+© Decentral Media and Crypto Briefing® 2026.
+About Us
+Editorial Policy
+Disclaimer
+Privacy Policy
+RSS
+System Light Dark
+The crypto and markets news you actually need—every morning.
+Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
+Email address Subscribe free
+×
+Free daily briefing
+Email address Join
+×
+×
+The crypto and markets news you actually need—every morning.
+Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
+Email address Subscribe free
+We respect your privacy. Unsubscribe anytime.

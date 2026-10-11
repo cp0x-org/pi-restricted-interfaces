@@ -1,0 +1,31 @@
+{
+  "id": "compound-v2",
+  "name": "Compound V2",
+  "targets": {
+    "app": "https://v2-app.compound.xyz",
+    "repo": {
+      "repo": "compound-finance/palisade",
+      "ref": "02d5b227029987bf840d095f05885f5cea906fb6"
+    },
+    "terms": "https://v2-app.compound.xyz/#terms",
+    "endpoints": [],
+    "terms_fallback": "https://github.com/compound-finance/palisade/blob/02d5b227029987bf840d095f05885f5cea906fb6/src/elm/Strings/Terms.elm"
+  },
+  "checks": [
+    {
+      "id": "screening-endpoint",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "The V2 app is configured with SCREENING_ENDPOINT=https://screening.compound.xyz and shows a screening-error overlay",
+      "source": {
+        "url": "https://v2-app.compound.xyz",
+        "scripts": "compound\\.xyz/"
+      },
+      "expect": [
+        "SCREENING_ENDPOINT:\"https://screening\\.compound\\.xyz\"",
+        "screening-error-overlay"
+      ]
+    }
+  ]
+}

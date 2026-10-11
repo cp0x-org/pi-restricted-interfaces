@@ -1,0 +1,178 @@
+check: aerodrome/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://aerodrome.finance
+checked_at: 2026-10-11T21:05:25Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://aerodrome.finance (HTTP 200)
+scripts (161):
+  https://aerodrome.finance/assets/index-CmPrFgtd.js  sha256=3b24160d0085922036a035a8ebda36a2f348ac663a1b43158ce95b10fcf7320e
+  https://aerodrome.finance/assets/index-D9W1C5tw.js  sha256=ee1c4286e72d67ad4b9399a44b056fb19f033ac066cf30f86b9ac4cf3923755a
+  https://aerodrome.finance/assets/clsx.m-DHulAg21.js  sha256=fb137b760bacfb05fc2eacfee16f7954a01bd739c1846a2efd5ea53e24f454e1
+  https://aerodrome.finance/assets/index-nibyPLVP.js  sha256=1ec0c3e605b1f64e7d87a28c2540b084a517fb75ff5939ec04af40e574b875ba
+  https://aerodrome.finance/assets/sha3-Bk1ffKuE.js  sha256=a923f7fdca4ecd39093dafd3f7c9780b80fbf4bca169db37285e92f84681d48d
+  https://aerodrome.finance/assets/index-B7GqfAJq.js  sha256=eb371bc23650462efc5ba48b1bba36571e88bb429e9ca23e6d61a23ef3f97a9a
+  https://aerodrome.finance/assets/index-3shBQO7P.js  sha256=3b73360e6fed3ce09dfe2667def7cdcf4596c15ca4c67cc7c768abae462dcc17
+  https://aerodrome.finance/assets/index-BozP5vQt.js  sha256=a76cdd8e396d6034e8983387779165acd46ca701f122ec5080bfda34a9793a91
+  https://aerodrome.finance/assets/browser-ponyfill-CEp-GVeJ.js  sha256=a4756610550eb5bfe7db46b01a0b9f2818cdf68e15a5cc3490920da0a4f4888b
+  https://aerodrome.finance/assets/index-D_aj9D94.js  sha256=8152cbac5a8dc559fd00ef3086cbcc385b15c40b015f2d1f415785fac3b1937b
+  https://aerodrome.finance/assets/index-BbP3371Q.js  sha256=b9445685a0a326915cbac64923db0867e58369d30d65b246844cd45a429d71d7
+  https://aerodrome.finance/assets/index.es-DaGEhC-F.js  sha256=947e128ed6bfaee94bf93c2fcf99bfe09728fb60db69132cd283ced7860d1ca6
+  https://aerodrome.finance/assets/index-BpiPsRwA.js  sha256=8db55ecaf2d991d386c3eb3be9be5b71fbe20d26341f4e1537167de88a608e88
+  https://aerodrome.finance/assets/TokenSelection-8Ez96b1S.js  sha256=d536916f33d0f6407a0657aa498b405d45e60b4444d983eef5f935e3266ed179
+  https://aerodrome.finance/assets/PoolItem-mm-ANSjf.js  sha256=cf987178145f83fe33612f65333e3c6d9f96061fdac51a93462f52c120a1d3ec
+  https://aerodrome.finance/assets/PoolItemPosition-gx23flGv.js  sha256=42ce5987ba1d5b89ab7806a016ba1fc7f530bccd6f0148514c945aba3ae88f9f
+  https://aerodrome.finance/assets/epochs-Ce1u9Vsp.js  sha256=330a068eb05fed7aaf3b723c6f346fc169664493c55753407c5ec46a7f162463
+  https://aerodrome.finance/assets/Checkbox-7uavLCC_.js  sha256=ca873335f14e371ea4ef846cf7208069a4d89eb15ca699e1c5d44711482e34e3
+  https://aerodrome.finance/assets/index-Cv3efpxU.js  sha256=f5f2136ea730ff9736ae3bf97d933adf3cd1ae85d6a3d64e8c190f4201f71c3c
+  https://aerodrome.finance/assets/SegmentedControl-B-qLioye.js  sha256=376e6f5c575c2957af459fd052acbe8b3307ffd48c255afa83691e2bce7dd393
+  https://aerodrome.finance/assets/pair.worker-CR1zuxd1.js  sha256=0dd86d66c890099e15bcac2c8f23f170f3807593976399e620e977026fe23e4b
+  https://aerodrome.finance/assets/position-BqHYU7_w.js  sha256=41638f6239e27718c1090c969e178f895ceafcea664d20f66cae13843804860f
+  https://aerodrome.finance/assets/minus-DXGltX4Q.js  sha256=c0a00f94c62b82054674fcc4b19a52983d648fc5362dbcc875e0f66e9a1dc1db
+  https://aerodrome.finance/assets/NewLock-nukJOjgV.js  sha256=d3b4a216d5ba03407a01769ee1bf6fc6b662d0b58918d0563f5d620afce5b8cd
+  https://aerodrome.finance/assets/LockHeader-ilG6gNE0.js  sha256=2b070d6f4f0c0c7a679ddfba0ac1ff8158c307e7705cbcaf20e58bdfd3b82b67
+  https://aerodrome.finance/assets/Manage-Cz2miabV.js  sha256=10bcaa25ae6af12d4d81621eeb9984befdf27ba2265d7ccb4deb7aa97644a05e
+  https://aerodrome.finance/assets/VeNFTSelect-BX61N0vF.js  sha256=ee2f1799c3ea2176b3b97a6574727f2a282a36efa3dbfe32bafa13b870feebef
+  https://aerodrome.finance/assets/index-BrK9-tML.js  sha256=5d8a84a78a009d0dc73d9c849f413cd2affcab06da9085ec0ff50a2cf799ef58
+  https://aerodrome.finance/assets/relay-CBNSPvj3.js  sha256=7b521e5eaa9541d2bd4561c859deb2858573b54e3cbde1c106d71ca67a4a160c
+  https://aerodrome.finance/assets/RelayAvatar-DJIpJlcq.js  sha256=726c678ee0968c39e30f261c7b09afea0c36b04ca8f70683ae4fe73dd7c99e95
+  https://aerodrome.finance/assets/index-CKbZTP0j.js  sha256=242418bce8e0d0154ec778545f58def49a6c2df7ab927c26b1036fbf2268665f
+  https://aerodrome.finance/assets/index-BT02mowC.js  sha256=0829380f7bbc4899251fbfba17a1f1beed84b9953d26cfa0993d4af64fb54f82
+  https://aerodrome.finance/assets/index-4XbCgPA8.js  sha256=c9c9c61d333e73fc8684082b3ce9fffdbc32303da8818751b40b2017f4ceef2c
+  https://aerodrome.finance/assets/TokenAmountSlider-Bm7t90tX.js  sha256=8b9dc3ca50bff357f52c08011a1ec05328a38b7e0d0f65afe48469e820b9aacd
+  https://aerodrome.finance/assets/index-CPcw98oa.js  sha256=59d8b8ad7da7b3edf59c38a8acce6d084c5cb044314fab8018ecaf2407a69018
+  https://aerodrome.finance/assets/index-Bu2EeUk_.js  sha256=a4f4549587395990dd1f778f1ba04809ea6dccd1bb2329fa201f5cc67612a12c
+  https://aerodrome.finance/assets/index-Jje7ZAzn.js  sha256=1b7a52119f2a3b1484f560f5ac2a00bfd57b8d9c31b22a3e43afaa65be90c499
+  https://aerodrome.finance/assets/index-C-F5dqvQ.js  sha256=ed72178a2881389482fa7956356cac1b9bfde29b9f65daefefb47fd882a8bfed
+  https://aerodrome.finance/assets/index-llukxWp6.js  sha256=d7f7424e2de67a0efffbbb060c65e36af54398e14d1a00c4d30d0d3ab5860cf7
+  https://aerodrome.finance/assets/dijkstra-COg3n3zL.js  sha256=7c5acfd48afec3baac5927bad2f09b7ebb3ded5ffa8b268e4725015c9b9658e7
+  https://aerodrome.finance/assets/index-BTDq5l1O.js  sha256=60f34349f1315db56d32128c9170a89d9f98fc7f65b7f3b304a20046200c40a4
+  https://aerodrome.finance/assets/contracts-worker-CUxcb4BR.js  sha256=94ae0bee613b50427dd5129f3f199eacfb2f7cc076b61709af781236e07d1eb6
+  https://aerodrome.finance/assets/execution-worker-c7Ehl_qx.js  sha256=e58b507428a9a5c715dbe35445a5d94fa7552f5d34d58ed0aaca50c371c8a890
+  https://aerodrome.finance/assets/ccip-CaMh7j-z.js  sha256=21331411427615ab8f8dfca29668e067df8f436d18adca4ba999b103f2f745cc
+  https://aerodrome.finance/assets/contracts-worker-B9LmIFMs.js  sha256=f11932d16f1caabdd558790ab113cb311c54f293b0d11cc1e58fc14613418911
+  https://aerodrome.finance/assets/execution-worker-hURDGdsD.js  sha256=690ae5560567e3ea2ef995e1d8ea2cd7e0b6a8e92dab51ea7046fe531a734bbb
+  https://aerodrome.finance/assets/index-CIj6NbCv.js  sha256=fa7274c23c5f1e4e2aba7f4e1ce8ba0e3c576ce59672de232a4837f415a4f752
+  https://aerodrome.finance/assets/index-D3EGiOhC.js  sha256=1dd9ea93f56f3d8e4889d7ea8a0ea8c4df68db874c92952ad225a893ca0337b2
+  https://aerodrome.finance/assets/index-ZODP5bqN.js  sha256=9e47232ccfe1880ea07e1cac6fdd02f25a234fb777e47fe39fbc7ff70eda2ed6
+  https://aerodrome.finance/assets/FlightSchool-MnQdNTAh.js  sha256=e76403f5c7b8603b0acdf41bd11102c291a42ab635055b256388a0da1f0e5e5a
+  https://aerodrome.finance/assets/index-DxU9rMqx.js  sha256=01ed17427bc2d962da11af57ace43679152d04367e57745d68b9d34920dd558d
+  https://aerodrome.finance/assets/index-BmmHMiAe.js  sha256=7910828cc0ef0a6937bba669ff805867e860eb1dff3eefe9867528510c8dd8a9
+  https://aerodrome.finance/assets/index-BSfmZ3a6.js  sha256=d71cd2459224127ea2ac2c5e36517d4b1f6c1ea612fd5c2cea186ed80fb09bb1
+  https://aerodrome.finance/assets/ccip-DVLxTU66.js  sha256=d04be00239a0224f3464b6323cf9d7fa164ec415d90283b3d8acc95d3c211914
+  https://aerodrome.finance/assets/core-Dxryuqsz.js  sha256=e2e50cc34883f110a7e5c357ac23196a74751dbeb615aa52aaf2ed2c0e3e91e7
+  https://aerodrome.finance/assets/secp256k1-D7nWsfUE.js  sha256=9058c42327e8e5ef917873846f2d449a3723ca80d643de5c4d1c3fdb4a67e96b
+  https://aerodrome.finance/assets/TransportWebHID-BqbI418V.js  sha256=c35789251e006631dce73bfe526c3f3fbbb597c30bcb86fb19e4e9a6171e0359
+  https://aerodrome.finance/assets/index-C9Qj6jY2.js  sha256=58ebdd4129c589d7333c4197a45bb3ac665808843017b9fbd5e3319348b61dc7
+  https://aerodrome.finance/assets/v4-CtRu48qb.js  sha256=18f66864aaa1bcf243199c1f806b1e65ad0a29b9f657548cb90a0e26e395c1ba
+  https://aerodrome.finance/assets/index-AX-swle1.js  sha256=ccec9f927b5e83fdea5460d19b853544f83ccb546707c87f25ecaedc5155bac8
+  https://aerodrome.finance/assets/ccip-BoZHzDXu.js  sha256=aa37ec5b44ea980fa40a1068bf78815bc529465803d9683a2d06d1794fbd190a
+  https://aerodrome.finance/assets/epochs.worker-C6mSgb5H.js  sha256=f486a92baf6c9ad46f40af68b6d49391b2a020d0fceb84a16cbf977f99003bcf
+  https://aerodrome.finance/assets/pair.worker-DCgNW9y4.js  sha256=804ebb44fcbee7d112ac238e00c8a8ccc3229ba2620ae8a356594efb53e336e8
+  https://aerodrome.finance/assets/quote.worker-CQteClty.js  sha256=20b06dc34da49edeccad8a2381a54c509bb87213e4cc0145c3c6ebe739218a27
+  https://aerodrome.finance/assets/token.worker-vs3Ub2tR.js  sha256=99ee17a30dc886843cdf5ed879cd77acf47ce59cfab4ecebfeb1e455c9898d7f
+  https://aerodrome.finance/assets/useOnchainToken.worker-DOzOKV7A.js  sha256=1706991454d409c35d4f886e02d55c7acdeefd3a0618914d954f0ab1c28ea1cf
+  https://aerodrome.finance/assets/usePoolsForSwaps.worker-LQpK1NDR.js  sha256=11f8f8edc8f2972fe2131b2229031b3b7c860f2ffffdb1241b6d26bf16db1aa1
+  https://aerodrome.finance/assets/usePositions.worker-BdCWth-N.js  sha256=42006921d58c82eba70dcf396cc6398573d2927dec74ddea108b70dd25381a63
+  https://aerodrome.finance/assets/ve.worker-Cqp3Ik8b.js  sha256=7e03f6cee0184a72fb91e885adf236c2d91ab2add668ee77bda75ff216d6e805
+  https://aerodrome.finance/assets/epochs.worker-BL6VS0PU.js  sha256=7c1dbd8435147858465a4da4cb9f3651496c2e2751b8c00f00e0b1b420fa8282
+  https://aerodrome.finance/assets/useOnchainToken.worker-TUIMB2Xq.js  sha256=1de1ecd504b3038201a1271d22fc6ee4b031d7ece95b74dac9edd5b8e867e4a7
+  https://aerodrome.finance/assets/usePoolsForSwaps.worker-DwyYeJ5X.js  sha256=c4cc52652d339a5a67b407c0738e2967caaaf5c7c71ce3ecf3b12a206f413950
+  https://aerodrome.finance/assets/usePositions.worker-CN-GafKp.js  sha256=f0e48ae94f6ceff8d53565e9555f8794451214ff192265685499bf1c38d0a2ff
+  https://aerodrome.finance/assets/basic-C4wxO21O.js  sha256=ea73dd7688c189bc0238b43eea9eb71215bcc4e3b774e24d63b2fe1b28eeb1d5
+  https://aerodrome.finance/assets/index-C4dQxKMM.js  sha256=6e82cb95bbef7d21f9b18be3c3ce26d6678102e5b2f2f3ca03f3518c350d8d29
+  https://aerodrome.finance/assets/w3m-modal-BzjVOxFE.js  sha256=3f1a0a261a0b936f9f2e7ceb2f93a9f309a77f9ac87cf3b2641351fa5e92fdbd
+  https://aerodrome.finance/assets/contracts-CH0xYNm2.js  sha256=54e6a17632249c6aee9b61abccae71d675b24a4ffd94b4552d15baf70b8cd1a7
+  https://aerodrome.finance/assets/pools-DrO4imiE.js  sha256=f1f8de1f4615170bb5ad7ef1b7740b817ceb22517d42167cacfa5859c4e07e3f
+  https://aerodrome.finance/assets/wagmi-VxofBtPD.js  sha256=5fc5715b120643ecf647c1bac9f818710f56b516c6fdcb2bb1312851ff2bd976
+  https://aerodrome.finance/assets/parseAbi-Dk3Ttnwp.js  sha256=699f27fd3bc629986c1070fb021e6a5c190e680b50d0e50935bcacd34a08cca0
+  https://aerodrome.finance/assets/lib-9e_MyLfm.js  sha256=f0c72c3fc2cdb2f94e61cf691867ba8573452f6098d60cf704a5fcb60a1f4c75
+  https://aerodrome.finance/assets/address-DG9mKvKj.js  sha256=deb1d19da992df07d45048eeee48edad5a1127f199f20a1cb5c5afee95ebb3cc
+  https://aerodrome.finance/assets/formatEther-CbwAzzNX.js  sha256=ee7a0ba07216fb2634c06146998af8a78013efa8e057b59f64813873e7824b78
+  https://aerodrome.finance/assets/regex-p89SVLjL.js  sha256=c1e10411a0ca7721f37b41e146ce4c53ddc71f59363dd9d3cf7e745ab2bd47c7
+  https://aerodrome.finance/assets/isAddressEqual-SQo6THqk.js  sha256=38c439cbbcfdbacf5a42e6a1830e52c7a725939b15301770b6bba0766f2386de
+  https://aerodrome.finance/assets/add-CsRzoTVB.js  sha256=5b034412506dc57cc6199ebe34942a7af43b0d0fb6d93935d5b882cc3e916c0b
+  https://aerodrome.finance/assets/all-wallets-B3mdcJYO.js  sha256=c983de74af60184d534d2cc07a20a5610cab4c9749d63a1ef66038ae66578d17
+  https://aerodrome.finance/assets/arrow-bottom-circle-CqhO6ip3.js  sha256=099fee78d483f515c25f2b02f0d1a64be09484d1a6ce83bc2752df4958936e65
+  https://aerodrome.finance/assets/app-store-DIzKgSXe.js  sha256=58410898f28eef9378a85f31fd84a8a8d8c1e2e0dc1416cdb879eb6b4a0bc1c7
+  https://aerodrome.finance/assets/apple-DKtTzeBB.js  sha256=812707a310732ac9807927be8bfaf6d4f4213378c47d02a8540f7947463a6943
+  https://aerodrome.finance/assets/arrow-bottom-Bhw-R7GR.js  sha256=83481d1916a68c58bffd6e0905576f1d30da46bb6db4394bd50d9e0cef6b29f2
+  https://aerodrome.finance/assets/arrow-left-CgNNvsew.js  sha256=fabcacbce977df9f34f0d63fd0565bcd2ac8a3468b46cdc975ce28dfa71917b0
+  https://aerodrome.finance/assets/arrow-right-DhFphJ6j.js  sha256=cfb3982e0536ba9ca4a226648376535783c2dc07f20ace24c84faae3358bc74a
+  https://aerodrome.finance/assets/arrow-top-BK_trbpo.js  sha256=111b800cc5d51f382d0603734875d93ea69de52c74798737144a2f499fdabd3c
+  https://aerodrome.finance/assets/bank-BgzuR3sD.js  sha256=b7eaaf220b80498a73bac1ffe6ec91e505ed78783f5b83bf84f091334d10acce
+  https://aerodrome.finance/assets/browser-KwdzucEL.js  sha256=771c594fc81dd0fd761cd4b62f246e52b31bf106b1d7c350f56c7275b8220749
+  https://aerodrome.finance/assets/card-D-Xqy0TO.js  sha256=eee69f57e8b590dadb7375cbda0b0f6d8a104df7d132a78c0eb6836affe3731e
+  https://aerodrome.finance/assets/checkmark-BHSAzMYD.js  sha256=788930f016199544fdb170c74e0253d7f1dc36bfb682fb04d2d6ac1dff9b413c
+  https://aerodrome.finance/assets/checkmark-bold-Bb0flnD5.js  sha256=507df2031dda39d96583d45d7a902101b74ccac66e9d3e0b96ec8af78721dffb
+  https://aerodrome.finance/assets/chevron-bottom-BqTPCU_S.js  sha256=36144b7406660f90e307740bb983943dfea8985f120ca29062382ee8e2bc3eca
+  https://aerodrome.finance/assets/chevron-left-B4ezv-fv.js  sha256=4451d081a6ac613c98724121cefdb13f4975cb48566eb750737d7b23d63f2478
+  https://aerodrome.finance/assets/chevron-right-BALn4tyS.js  sha256=f3c7e034763dc6a4c3698e9c8533f6877c731c2cdfad4bef80ddd2794b6dc8e3
+  https://aerodrome.finance/assets/chevron-top-CV3me-Nh.js  sha256=6aea875d2f00ac8badaefd82fb9ff6c9f01345311e992e68bca0823d83b8711f
+  https://aerodrome.finance/assets/chrome-store-eOFZYh2o.js  sha256=1fc3910460a02ce11662b456482cf99c9bb27d2d82130a8f150079dc56053abb
+  https://aerodrome.finance/assets/clock-DG1_cDcN.js  sha256=aae02e1ecef42d043c9b7f927748506e7e9993d6b049024b93e1c6bccf63e467
+  https://aerodrome.finance/assets/close-CcC8lzJh.js  sha256=4e420422c6e0b4f03af45707bd81f083c800f7bfdf6f94e621d516d8b1e50d39
+  https://aerodrome.finance/assets/compass-CXi5l_Ld.js  sha256=202460fcdb2734fe3edaf56e4788f58e90e5c3d33f700e2d7a02c1c3321230e8
+  https://aerodrome.finance/assets/coinPlaceholder-DQ5DSOeQ.js  sha256=73ecea385873e05170789b1d7ba91380e85e58f62ca1557fe2e47b37c61eac0b
+  https://aerodrome.finance/assets/copy-udw2mYIk.js  sha256=9c374fd15feae24c2dace24ac8e856e01c58eae0df756275b44349aa9165f35a
+  https://aerodrome.finance/assets/cursor-3p8wuzCg.js  sha256=70a230609e570f09fcdca4554a5a6a6ba14e4233c179fc1ce49bf12bd1078f4e
+  https://aerodrome.finance/assets/cursor-transparent-Bm0G-T31.js  sha256=a508f48b5c4de3e476224eadf9dce0920123bc3681594eff6294f2b507b1ab34
+  https://aerodrome.finance/assets/desktop-BVq0A-eM.js  sha256=c5a92bb4194d7f4e6a1ccaa56cd9286949c7fbb95ee0607901280dca9e5f730b
+  https://aerodrome.finance/assets/disconnect-C5-aBGos.js  sha256=0dd5cb1cfb9011424e428b5fec31d3dc8da530dc1dd4c2f9e0c86ecc255f1f14
+  https://aerodrome.finance/assets/discord-CR2w72Fe.js  sha256=a37996c75581d6c8e0974468166dc388d157bc1df51afe481b3b6d6b21343a4e
+  https://aerodrome.finance/assets/etherscan-gPdFjG0C.js  sha256=606048582f9d834eab1cc5dd2aad7bfb9b06abbb10d16386f504781629567067
+  https://aerodrome.finance/assets/extension-CztXbA-R.js  sha256=ab9eb47714dffcf15ca1383f142149be6199dc3dbce6e94d8d8b2d5cc8728005
+  https://aerodrome.finance/assets/external-link-BEEzAJAb.js  sha256=8da44db55af17d5be86f2f8aee6c0fa5f85ca7605fb2b87491a92785f49aa5d1
+  https://aerodrome.finance/assets/facebook-CBHtO5fd.js  sha256=3d935f22ec75ec2fa199eb55ad9475d64d2009267547450ab577235a32ed293a
+  https://aerodrome.finance/assets/farcaster-Db4Ascej.js  sha256=2c68775b316770d5d59e0752ed5f80bae2b9030eaf2216e0e86c2fbd983d7d64
+  https://aerodrome.finance/assets/filters-4mVsHdpG.js  sha256=3dabc5124fea76d8daed55dc6dfded9c2f15ebb0dac7ee5a4bde837140a3fa63
+  https://aerodrome.finance/assets/github-BInmjZtF.js  sha256=f814ba1109405e0354581387e1180ff390548f627642b4d06e8c8a99145244dc
+  https://aerodrome.finance/assets/google-Bzn_EyKK.js  sha256=3748183e190aca6612aa7f94a8a392fa33457e525992b1705f2bd746ce9d6551
+  https://aerodrome.finance/assets/help-circle-cf4LnEgr.js  sha256=bd7d93721b3f78b61a172e79b8719617187940d4de43227cc775d06877cbdb9c
+  https://aerodrome.finance/assets/image-C6Wh9c7P.js  sha256=b3772f072bb927e15bc2983be3f1830f445faa3d72b08eff224c592f0dfc379e
+  https://aerodrome.finance/assets/id-DBEkgYA0.js  sha256=71189c10e5ebe6b11660cd4f9b5d8c2488fc457a8f23bd5f7cba9a219f67aab1
+  https://aerodrome.finance/assets/info-circle-BjAHWtO9.js  sha256=dc8c2b3fd18c85f6668bd159f09a1789a669c2e6f98c94aea08f34152561d5d0
+  https://aerodrome.finance/assets/lightbulb-DfN2GZ6K.js  sha256=e389cabd59641280abb3d5a04cc71e40ad0ff96069207912191995a877c5b25c
+  https://aerodrome.finance/assets/mail-4zXE0_SL.js  sha256=59d8ec5d4d13d6e9442200b18384abcf68771f5bafef27c9a899846b78d39778
+  https://aerodrome.finance/assets/mobile-ERyIp4lV.js  sha256=6efe0b2fe884f792a98f97966e237ea78416ae4dec182ed2ae7e35776e867cfb
+  https://aerodrome.finance/assets/more-DBMI2Twr.js  sha256=f31b3f8ebd7b25fac10a219fc367cfda77a66bc41496e556e3bed4e8e44103b7
+  https://aerodrome.finance/assets/network-placeholder-CRoLEfel.js  sha256=efb4ae158b7fdecb0ead694bef5ed2ba59502f98b70b4bc672ca4481a720cc92
+  https://aerodrome.finance/assets/nftPlaceholder-P95ubVMi.js  sha256=3f9508d29ac14c1acd1208e6dc308be392b4ab3d7cbba0cd2d4566d79267195b
+  https://aerodrome.finance/assets/off-BOEuou3M.js  sha256=136f529e388e0e2833356f4298a616a7f8207c52770dd70d1bb537290ac8fa77
+  https://aerodrome.finance/assets/play-store-Cusmo-ed.js  sha256=591dfe50a9dc3990cd0cbea2a444bdcce1e10f035e1d0f2bac767b1fe338aaca
+  https://aerodrome.finance/assets/plus-Bd69jwYI.js  sha256=aa859919edf4f6b31d3b10297983a3e25bff38cd5d8d3f2dd84a4c8b0dd549d0
+  https://aerodrome.finance/assets/qr-code-Yai67vir.js  sha256=3aae99d373e428ee1eed2cae7b30555ef0b3f66c33951892085dcd7522f5fd35
+  https://aerodrome.finance/assets/recycle-horizontal-DWmQViBz.js  sha256=dc0554d6f1943f2c924ef8a37baaac0821a4773c945ef1a5a986d8accf348390
+  https://aerodrome.finance/assets/refresh-Bjdt-fzp.js  sha256=a0a4f3777cf68592e8132dd1884edf896bcfedacd6c3d026d24dcf84439b6724
+  https://aerodrome.finance/assets/search-By3xkFua.js  sha256=0cb00cee05eef6dfdf2c06c2c319a5db32bc059a38a35af661b2c5cfbecfdd9f
+  https://aerodrome.finance/assets/send-DHD3loK9.js  sha256=b778bbecbfdd67663f1fdf87f57ed90421472078a97ee0ed6eb7552cbf4f239f
+  https://aerodrome.finance/assets/swapHorizontal-BA-WEZB9.js  sha256=a01e926ab82c3a9f965f17330597ac52aa7219bdefce18b33b4616058864a661
+  https://aerodrome.finance/assets/swapHorizontalMedium-CzUa6c1N.js  sha256=eaba8bcbfbea668f9adfbfe8f4c2a7c76b76fe243215db5e80a83c24b683be90
+  https://aerodrome.finance/assets/swapHorizontalBold-BegdSnWO.js  sha256=1342f444003be7a4c4d5233ba7d2497a21abf0224f4be49e7b0dfd7feca05619
+  https://aerodrome.finance/assets/swapHorizontalRoundedBold-BpJUbzKJ.js  sha256=827d2ccb1e4f9221bb17f5b6a169b960bf582ac263752dc3875dd59819fa3017
+  https://aerodrome.finance/assets/swapVertical-COBJKX0o.js  sha256=a530c5aa83c94214bca108cf8f92fa0c9fd1475be600bf2653cad85abee937bb
+  https://aerodrome.finance/assets/telegram-Cs0ihWQx.js  sha256=78969f1d1fea1b1488b523f681507d2066a5e3a545c90bc6adba967917a1cf53
+  https://aerodrome.finance/assets/three-dots-7SeFA5nA.js  sha256=e8e57f0b428eab5bd7fe702ab8b36f9739c3b5fd32afc7908c24ad0b04a8dab9
+  https://aerodrome.finance/assets/twitch-MEpn1x2k.js  sha256=d30908fbd3a2b6203c776060ec7d0571b992f45dadf9ac7f0ba369293589ed7b
+  https://aerodrome.finance/assets/x-sCkVfuNp.js  sha256=8a414df41ac03d86e83a76d7108965450884f6730b92d1bd32ac39d2c478f674
+  https://aerodrome.finance/assets/twitterIcon-6DPCAT_c.js  sha256=f7c4a02420da82b64a6dda6033adc064800aa9d1fca81adc897676e9501930cb
+  https://aerodrome.finance/assets/verify-BCchf2ly.js  sha256=8bcc61d00957a975ce1f28709604a597413b9bcf919362cd6d36c3aa798db35d
+  https://aerodrome.finance/assets/verify-filled-C-JhKOkH.js  sha256=7388ed154e2a1b83713687c00ecbfc30b70ceb32929363dbb837f646cd773dcc
+  https://aerodrome.finance/assets/wallet-DD8-Ur-G.js  sha256=1b5aee44c9537dd3f9307dccb3bad69897d8c911b09f076476658cee52806167
+  https://aerodrome.finance/assets/walletconnect-D5ZLRJdf.js  sha256=419d2c24fab866db50a8018079bd233c30673e34e49b8e74a446281dd93516c2
+  https://aerodrome.finance/assets/wallet-placeholder-DJpowGi5.js  sha256=f691adb43277454c5895be5ff8247f85b65fa1b411fadbed7138910c42ca457a
+  https://aerodrome.finance/assets/warning-circle-Bn4bLFtH.js  sha256=574d2df3f846ef2a8ed3cfe3621caa236abdfef773b3ecee2bf5eaaae6b8a273
+  https://aerodrome.finance/assets/info-D8qTMhyW.js  sha256=fb9b9467980c006aac587c6a68a98c6ab2a491d05976a1e19417c59b1ac12873
+  https://aerodrome.finance/assets/exclamation-triangle-Dk93TC2h.js  sha256=c52338daa9992c054f7ed5e8660d1d6cc5fdb24cc7e8c4254203e0215a819aea
+  https://aerodrome.finance/assets/reown-logo-_-mJtlS_.js  sha256=ecd5d27c03b87e252792e853fcf8e79f73e8689f3092a10bb78f622c0fe5103f
+  https://aerodrome.finance/assets/contracts-worker-DGHyyn_l.js  sha256=545a3270da612fa44acfc603d2325a66ede05a7af0e6dce2238de9bfeb6237ae
+  https://aerodrome.finance/assets/ccip-NyVLXrKK.js  sha256=a9ebfe8be30f33b3c0c4e28fce94df59ec7781be6fab1bcab74679213116f2c5
+
+signals:
+  [strong] geo: block text — 1 file(s)
+      /assets/index-CmPrFgtd.js: e determined by that asset's issuer. If a specific asset is not available in your region, it may be because the issuer does not allow that asset to be traded in your re
+  [weak] geo: geo-block words — 1 file(s)
+      /assets/index-CmPrFgtd.js: the way You access and use them. You agree not to evade any geofencing or usage restrictions on the Website."}),` `,u.jsx(t.li,{children:"(c) Secur
+  [weak] screening: screening words — 1 file(s)
+      /assets/index-CmPrFgtd.js: uela, Yemen, Zimbabwe, or any other specifically designated OFAC sanctions listed jurisdiction; and"}),` `,u.jsx(t.li,{children:"(b) Your access

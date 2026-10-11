@@ -1,0 +1,343 @@
+check: fluid/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://fluid.io
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://fluid.io",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "The Liquidity Layer For All Finance · Fluid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/gtag/js"
+   ],
+   "bytes": 11160,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ }
+}

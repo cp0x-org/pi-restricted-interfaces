@@ -1,0 +1,73 @@
+check: aave/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://app.aave.com
+checked_at: 2026-10-11T21:05:12Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://app.aave.com (HTTP 200)
+scripts (56):
+  https://app.aave.com/_next/static/chunks/polyfills-42372ed130431b0a.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
+  https://app.aave.com/_next/static/chunks/webpack-74af4a70e5bb8080.js  sha256=c6aecdb88810dfa58cd53a5cc2811417bc7c65e8fa6ba446bba68587a3a974e3
+  https://app.aave.com/_next/static/chunks/framework-6c17f08e07d1abc4.js  sha256=0df5fce44e8743019aa92a7f597631db068782a6e47aec97b31f56404436d3fd
+  https://app.aave.com/_next/static/chunks/main-d49d245e2b5e089a.js  sha256=def56a01d1b286ff4fc1eea62afb572695e75821f6a82a9b9b714de512be038b
+  https://app.aave.com/_next/static/chunks/pages/_app-31e4d749b5f8a855.js  sha256=2d88e363d23896476ddf9e5fa0ce25e5c81e53faa9b01d2bbf720ec3ba01cd16
+  https://app.aave.com/_next/static/chunks/9520-d0e953950e0bfbcb.js  sha256=c3e5d36dd270d29bd8ddac623de7f05b6f129210732366eacf20f8775e8c8b48
+  https://app.aave.com/_next/static/chunks/6840-ed4c0d1aa30e0295.js  sha256=ec2218ac86fe6e9d8bf387050e7b02b0576579610e863e19a26384dc1e24edc6
+  https://app.aave.com/_next/static/chunks/715-fc9d1c4219a02480.js  sha256=76b07220bd73cf72e3dcba63f64e259f78bdd1ad5082a8c74e932b92ee5bd110
+  https://app.aave.com/_next/static/chunks/2526-7c677a96278644bd.js  sha256=24909d66f89bf57f4206a49f77a6d38a6a92be5b6a8f63ee8005cf3866cdafc2
+  https://app.aave.com/_next/static/chunks/7730-7f49fdf65b92eb63.js  sha256=f21db3a9e84d31565baa4ed8a17a7ee139abdeaa7f345f961a752a825a6852bf
+  https://app.aave.com/_next/static/chunks/4016-a663acf6e007dcd6.js  sha256=42f69124f331f8ac27fb9fc58296debe2b505076d544bb51df60173fcc09a3c9
+  https://app.aave.com/_next/static/chunks/6655-315d3c2246d2aa27.js  sha256=f55df44f5c166198aa6707dce64a96a83afb8db202f97d03a4126797969c4c74
+  https://app.aave.com/_next/static/chunks/8430-6aca98be31b05246.js  sha256=85573bb44039ee7e10e8ec7cdf745f23e3a758fadfd35b7bf6b7ab8494179621
+  https://app.aave.com/_next/static/chunks/8916-609dfa7f50e11454.js  sha256=eaf582e2096a85fdb6a69d7800754c087c524dd868426c0923e351deac2f108b
+  https://app.aave.com/_next/static/chunks/4843-7947b9a32bba6e09.js  sha256=f937fda63b10272f9c4b37508f9c5bc4218fb9d6da8e7b03a6f75da970e94e5d
+  https://app.aave.com/_next/static/chunks/1283-729b12d13c2c539a.js  sha256=6dc5ae8e0b8dc4033895317494d81eff2aec4ee4e0abb8345a3b8e9116eab986
+  https://app.aave.com/_next/static/chunks/pages/index-e27609e8ad2c8cb0.js  sha256=7c1824a32e6dd75be87f84fe5806248f5b9f7a0a07b7101c8411da11a61c799d
+  https://app.aave.com/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js  sha256=4e3f16fbd0769b5112e75026ecba42e7ce2077ff5a84b5b53274df0a4f3cf8f2
+  https://app.aave.com/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js  sha256=6f5b4aa00d2f8d6aed9935b471806bf7acef464d0c1d390260e5fe27f800c67e
+  https://app.aave.com/_next/static/chunks/efa535cb-71f07085cf30660f.js  sha256=52ea5d5be63ba403bc25726224667e6235dc7a3a4f813f4a33eb64624d97d283
+  https://app.aave.com/_next/static/chunks/9577-aac6692f3f1d89a8.js  sha256=d1f7a531e6ef6f27a90b2a2857400bed1b3dea85dc3c7b1ff6e2031a1a059677
+  https://app.aave.com/_next/static/chunks/5934-016555b9c622a585.js  sha256=3c701344f1413e0eda4245fdb3556b52944217dc950b635a7247867d516d98b3
+  https://app.aave.com/_next/static/chunks/2301-9089b6db45c0a488.js  sha256=2b3f76c4331a369f65279bf50ae04db74c3b6686d802b0f0648ee9d704519f60
+  https://app.aave.com/_next/static/chunks/7707-eb8684d7d26939c1.js  sha256=e69de6659404c3e20170db7244ad282d31d922dde5b583fce44eb67619428964
+  https://app.aave.com/_next/static/chunks/5568-04899af6d4d4fdb9.js  sha256=6112aff1bf7c3e204299c2eab6ea636123d0162fa2d40ac34abaf37326c16175
+  https://app.aave.com/_next/static/chunks/6241-26111c056db98ee6.js  sha256=29374fc09ba4b1de3c08db88ca7599847fff9a064318ca1b6cbb29910ff5db03
+  https://app.aave.com/_next/static/chunks/8929-43182f547a6cf5b4.js  sha256=1b9faaae1dbac5a8381d22319fb82effff773cf80aa4728e4724e75be44f7445
+  https://app.aave.com/_next/static/chunks/5541-2ae49e899ca5452c.js  sha256=30b58e7624976652a5a3a419e7f9b320d9f71101c2b1c8218f0e4f64e171fc6f
+  https://app.aave.com/_next/static/chunks/7712-75dfa16bef62f872.js  sha256=cc5b1900d91964e63c0e5d994fe9b1a43a33b6160e8cef9d6596e13afc0c2563
+  https://app.aave.com/_next/static/chunks/pages/404-03211079bce49f69.js  sha256=38a6fc76cf899bd25851629ade4b6dc8c5e533284f4c6e7009a2cad7119c5d3d
+  https://app.aave.com/_next/static/chunks/pages/500-a8418d0cef753d9e.js  sha256=0043151c0b63aad4bbafc1959c866e88969b2d40b614e896f182dcb712706d94
+  https://app.aave.com/_next/static/chunks/pages/_error-02378d1816250082.js  sha256=32161e2654f031c7c1a0c7a5bbd4eddbfb2ea946218a29a609ccb260caf06e5a
+  https://app.aave.com/_next/static/chunks/pages/bridge-f0614f574b39c61b.js  sha256=23a53330e87390324179d9ff5dcba70ebba2bf1475c665a132bfb8e5decb841b
+  https://app.aave.com/_next/static/chunks/pages/dashboard-4154cbc8f8f71321.js  sha256=0eda29117cf34f72ee080d4ca1e3c132f68fd2c0f241e63939b3a1fa8fb68698
+  https://app.aave.com/_next/static/chunks/pages/faucet-bcf5270c65ed02b0.js  sha256=d4062dddb5076b8df3713ad49d75dfa68dfa00feffb554b3bb40fe7cc1dc258b
+  https://app.aave.com/_next/static/chunks/7306-a45fcd8e43016d4d.js  sha256=a11305c15ff6f45aa44db46fb18154b1cda2340b4c5f2ff519c9a626329411ec
+  https://app.aave.com/_next/static/chunks/pages/governance-aa4af9a7e4e4c2fc.js  sha256=3aa5c7c9c922ac7782dc0ce3186305f25f8ee4faee8605500b88fc1f6a278bbd
+  https://app.aave.com/_next/static/chunks/52d06cd5-f7211a7fcf83ff10.js  sha256=cda56e6c2359717f5693c28d44e0a0120d1ffe5a3d81f3783b76fc17de0f08d8
+  https://app.aave.com/_next/static/chunks/7603-0b03c48390b5ca15.js  sha256=73a1097cf3244d174e46a294860083c03ad0437f6dd13304ec557584dd24505a
+  https://app.aave.com/_next/static/chunks/pages/governance/ipfs-preview-6698de2befd6a996.js  sha256=ddee7d9aa896b2fafaa3b0af8bcc1638edadf33d2bee4d453efbba6d591d4fd4
+  https://app.aave.com/_next/static/chunks/4973-d69068b171a133c6.js  sha256=42e759c693f3d3b2cbcb7db5fed8a4a98609aafadc4cc197b480024febea9419
+  https://app.aave.com/_next/static/chunks/pages/governance/v3/proposal-14f160632eda7ab0.js  sha256=b6a5e5488253da90d3fe1d6a6c27db403327e419d1aa2d2d778700e8622c81b6
+  https://app.aave.com/_next/static/chunks/pages/history-f4d716e5df8e1d27.js  sha256=d3e8d8ccf9fd770066fbe7683d8d845ed65e8e4f25115b9c9714da750503ee48
+  https://app.aave.com/_next/static/chunks/pages/markets-8ba00aa9615b9ab3.js  sha256=b6ba02cdad6e2866fc93e398d9054a6c0500a99aa1e5778faf569c0575fe2f18
+  https://app.aave.com/_next/static/chunks/pages/reserve-overview-b55e1bc5c806062f.js  sha256=f7e7c790971be3ef1541dc34eec73a57889a54b674d2a80b65a789895afeeaf9
+  https://app.aave.com/_next/static/chunks/pages/safety-module-c365068d2da47811.js  sha256=d7cbe6b4ba2758f1e8a33d4e51a56c213434078a282a5189ae919598946ca550
+  https://app.aave.com/_next/static/chunks/pages/sentry-example-70cf1be440aba43b.js  sha256=46124ff38e20a50535217a9622d7b619ec5f771396f912b703f357c295d96f9b
+  https://app.aave.com/_next/static/chunks/pages/sgho-f7c61f8d3228bc9c.js  sha256=1b3147613226f23e8145f073cb558d87f807ecdd164ef7428ef58bfb4d85c7ca
+  https://app.aave.com/_next/static/chunks/pages/staking-923cd7706b8b5fd8.js  sha256=ac43e4572451f8bbae50dbe047c0752bb39fd01f7dcce28862ba3b22f9f59260
+  https://app.aave.com/_next/static/chunks/3131-d53aeccc8c4bee7b.js  sha256=387d1d31a90222e2e5d0e363ea8c22c4294eac57690548302550e075e2ee8157
+  https://app.aave.com/_next/static/chunks/pages/v3-migration-72c1dbaacd14ff4e.js  sha256=6268ea8d48d2438cc3ec9464fddda3b58d940708d66312d80510eda8c81873bf
+  https://app.aave.com/_next/static/chunks/5117-cb6cf06453777984.js  sha256=41756aa80815420e7eca09610c32e8f51a94523b93603fe0c6655247057470b9
+  https://app.aave.com/_next/static/chunks/4373-ecbcc959e4b364ee.js  sha256=874c3e5ed9c4dac2c8eacccc1274f153f65ddb83095158576de3b4f830e2d7c1
+  https://app.aave.com/_next/static/chunks/9679-57d08bf850c18f3c.js  sha256=cceef8d91ccd3f15dd60a3e43a0e7d39fdc8005785b0d303f9343c5baadb784b
+  https://app.aave.com/_next/static/chunks/3279-99f3f1174fff20f1.js  sha256=87111f20989d012f38ec540b6280917392179748af834c379de9a71921ede5b7
+  https://app.aave.com/_next/static/chunks/7184-0aba82d9944b7dc7.js  sha256=57cf2dee37a808fccf27f66e3fe6c200e48ed8e1c74c137eb60257780ac1c7d1
+
+signals:
+  [weak] geo: geo-block words — 1 file(s)
+      /_next/static/chunks/6840-ed4c0d1aa30e0295.js: test(e)}var et=(e,t,o)=>Math.min(Math.max(e,t),o),eo=(e=>(e.BlockedCountries="blocked_countries",e.AddressBlacklist="address_blacklist",e.ShowPoweredTagl
+  [strong] screening: screening call — 1 file(s)
+      /_next/static/chunks/pages/_app-31e4d749b5f8a855.js: (e.prev=e.next){case 0:return e.prev=0,e.next=3,fetch("/api/preflight-compliance/?address=".concat(encodeURIComponent(t)));case 3:return n=e.sent,e.next=6,n.jso
+  [weak] vpn: VPN words — 1 file(s)
+      /_next/static/chunks/pages/_app-31e4d749b5f8a855.js: t";n.d(t,{CQP:()=>v,H14:()=>g,R01:()=>x,RBH:()=>u,RPo:()=>E,VPn:()=>h,fyA:()=>A,lcx:()=>y,r70:()=>b,zYV:()=>m});var a=n(37856),i=n(43029),o=n(1

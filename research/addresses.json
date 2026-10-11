@@ -1,0 +1,17 @@
+{
+  "sdn": {
+    "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+    "note": "Ronin bridge exploiter (Lazarus Group), on the OFAC SDN list since 2022-04-14. check_api.py confirms it with the Chainalysis Sanctions Oracle before every run."
+  },
+  "control": {
+    "address": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+    "note": "Control: the example address from EIP-55, on no sanctions list. Repeated-digit addresses such as 0x2222…2222 are not usable: LI.FI rejects them as a 'zero address'. The oracle must return false for the control."
+  },
+  "oracle": {
+    "chain": "Ethereum mainnet",
+    "address": "0x40C57923924B5c5c5455c48D93317139ADDaC8fb",
+    "function": "isSanctioned(address) returns (bool), selector 0xdf592f7d",
+    "docs": "https://go.chainalysis.com/chainalysis-oracle-docs.html"
+  },
+  "rpc_default": "https://ethereum-rpc.publicnode.com"
+}

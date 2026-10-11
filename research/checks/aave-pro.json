@@ -1,0 +1,65 @@
+{
+  "id": "aave-pro",
+  "name": "Aave Pro",
+  "targets": {
+    "app": "https://pro.aave.com",
+    "repo": null,
+    "terms": "https://aave.com/terms-of-service",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "feature-asset-geo",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Per-asset geo check: POST /api/geo -> areAssetsGeoblocked; a flagged asset cannot be supplied or borrowed from the region",
+      "source": {
+        "url": "https://pro.aave.com",
+        "scripts": "^https://pro\\.aave\\.com/",
+        "follow": "(?:/_next/)?(static/chunks/[\\w.-]+\\.js)",
+        "follow_base": "https://pro.aave.com/_next/"
+      },
+      "expect": [
+        "fetch\\(\"/api/geo\",\\{method:\"POST\"",
+        "areAssetsGeoblocked",
+        "This action is not available in your region"
+      ]
+    },
+    {
+      "id": "feature-equities-us",
+      "type": "page",
+      "claim": "geo_feature",
+      "status": "reported",
+      "about": "Coinbase tokenized stocks on Aave (Equities Hub) are offered only outside the US (Aave's announcement quoted by the press)",
+      "source": {
+        "url": "https://cryptobriefing.com/coinbase-tokenized-stocks-go-live-on-aave-v4-on-base/",
+        "kind": "press"
+      },
+      "expect": [
+        "only available in eligible jurisdictions outside of the U\\.S\\.",
+        "available to eligible users outside the United States"
+      ],
+      "countries": [
+        "US"
+      ]
+    },
+    {
+      "id": "screening-compliance",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "ComplianceProvider checks the connected wallet and shows ComplianceBlockedScreen (provider not disclosed)",
+      "source": {
+        "url": "https://pro.aave.com",
+        "scripts": "^https://pro\\.aave\\.com/",
+        "follow": "(?:/_next/)?(static/chunks/[\\w.-]+\\.js)",
+        "follow_base": "https://pro.aave.com/_next/"
+      },
+      "expect": [
+        "\"ComplianceProvider\"",
+        "\"ComplianceBlockedScreen\""
+      ]
+    }
+  ]
+}

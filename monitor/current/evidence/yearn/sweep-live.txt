@@ -1,0 +1,595 @@
+check: yearn/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://yearn.fi
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://yearn.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Yearn Vaults",
+   "scripts": [
+    "/_next/static/immutable/chunks/0c0hxoamwjsbw.js",
+    "/_next/static/immutable/chunks/0vn_c-*.js",
+    "/_next/static/immutable/chunks/10_yjqipzegf3.js",
+    "/_next/static/immutable/chunks/12fmbqx9yrtlv.js",
+    "/_next/static/immutable/chunks/1d3fay67wu0mx.js",
+    "/_next/static/immutable/chunks/252lozu7wp9-l.js",
+    "/_next/static/immutable/chunks/2hagrmbpf3ubc.js",
+    "/_next/static/immutable/chunks/2k-8-jmak2-4b.js",
+    "/_next/static/immutable/chunks/2zdb-*.js",
+    "/_next/static/immutable/chunks/2zqsbm8s85161.js",
+    "/_next/static/immutable/chunks/3h5p-*.js",
+    "/_next/static/immutable/chunks/3k2xcmgm4koz-.js",
+    "/_next/static/immutable/chunks/3mp4zpxk_f503.js",
+    "/_next/static/immutable/chunks/turbopack-*.js"
+   ],
+   "bytes": 71744,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ }
+}

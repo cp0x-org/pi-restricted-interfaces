@@ -1,0 +1,26 @@
+{
+  "id": "maple",
+  "name": "Maple",
+  "targets": {
+    "app": "https://app.maple.finance",
+    "repo": null,
+    "terms": "https://docs.maple.finance/legal/interface-terms-of-use-syrupusdc-and-syrupusdt",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-terms",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "tos_only",
+      "about": "The Interface Terms allow IP-based geofencing of Prohibited Persons (not verified live)",
+      "source": {
+        "url": "https://docs.maple.finance/legal/interface-terms-of-use-syrupusdc-and-syrupusdt",
+        "kind": "terms"
+      },
+      "expect": [
+        "The Company may utilize certain tools, such as IP-based geofencing, to enforce the above restrictions"
+      ]
+    }
+  ]
+}

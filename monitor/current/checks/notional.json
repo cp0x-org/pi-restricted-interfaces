@@ -1,0 +1,88 @@
+{
+  "id": "notional",
+  "name": "Notional",
+  "targets": {
+    "app": "https://notional.finance",
+    "repo": {
+      "repo": "notional-finance/notional-monorepo",
+      "ref": "cff15de4b098d101b2a023732efd242496c42888"
+    },
+    "terms": "https://notional.finance/terms",
+    "endpoints": [
+      "https://api.notional.finance/geoip"
+    ]
+  },
+  "checks": [
+    {
+      "id": "geo-countries",
+      "type": "code",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Visitors from SanctionedCountries (country from api.notional.finance/geoip) are sent to /blocked",
+      "source": {
+        "repo": "notional-finance/notional-monorepo",
+        "ref": "cff15de4b098d101b2a023732efd242496c42888",
+        "path": "packages/shared/notionable-hooks/src/use-geoip-block.ts"
+      },
+      "expect": [
+        "SanctionedCountries\\.find\\(\\(s\\) => s === country\\)",
+        "navigate\\('/blocked'\\)"
+      ],
+      "section": {
+        "start": "const SanctionedCountries = \\[",
+        "end": "^\\];"
+      },
+      "countries": "codes"
+    },
+    {
+      "id": "screening-oracle",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "The connected wallet is checked with the Chainalysis Sanctions Oracle on-chain (isSanctioned)",
+      "source": {
+        "repo": "notional-finance/notional-monorepo",
+        "ref": "cff15de4b098d101b2a023732efd242496c42888",
+        "path": "packages/notionable/src/account/communities.ts"
+      },
+      "expect": [
+        "0x40c57923924b5c5c5455c48d93317139addac8fb",
+        "function isSanctioned\\(address\\) view returns \\(bool\\)"
+      ]
+    },
+    {
+      "id": "prod-countries",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Production JS: country list, api.notional.finance/geoip lookup and the redirect to /blocked",
+      "source": {
+        "url": "https://notional.finance"
+      },
+      "expect": [
+        "fetch\\(\"https://api\\.notional\\.finance/geoip\"\\)",
+        "\\(\"/blocked\"\\)"
+      ],
+      "section": {
+        "start": "\\[\"CU\",\"IR\",\"IQ\",\"SY\"",
+        "end": "\\]"
+      },
+      "countries": "codes",
+      "case": true
+    },
+    {
+      "id": "prod-oracle",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Production JS: Chainalysis Sanctions Oracle isSanctioned call",
+      "source": {
+        "url": "https://notional.finance"
+      },
+      "expect": [
+        "0x40c57923924b5c5c5455c48d93317139addac8fb",
+        "function isSanctioned\\(address\\) view returns \\(bool\\)"
+      ]
+    }
+  ]
+}

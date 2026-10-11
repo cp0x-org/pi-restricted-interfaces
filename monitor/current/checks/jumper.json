@@ -1,0 +1,34 @@
+{
+  "id": "jumper",
+  "name": "Jumper",
+  "targets": {
+    "app": "https://jumper.xyz",
+    "repo": {
+      "repo": "jumperexchange/jumper-exchange",
+      "ref": "eee099c8390dc8841179f80eaed027756a447e66"
+    },
+    "terms": "https://jumper.xyz/terms-of-business",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "screening-lifi-quote",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "LI.FI quote API (used by Jumper) refuses a quote for the SDN wallet (HTTP 422) and returns one for the control",
+      "source": {
+        "method": "GET",
+        "url": "https://li.quest/v1/quote?fromChain=1&toChain=1&fromToken=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&toToken=0xdAC17F958D2ee523a2206206994597C13D831ec7&fromAmount=1000000000&fromAddress={address}"
+      },
+      "expect_sdn": [
+        "^status: 422$",
+        "None of the available routes"
+      ],
+      "expect_control": [
+        "^status: 200$",
+        "^body: \\{\"type\":\"lifi\""
+      ]
+    }
+  ]
+}

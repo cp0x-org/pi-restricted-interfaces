@@ -1,0 +1,360 @@
+check: uniswap/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://app.uniswap.org
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86982,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.uniswap.org",
+   "state": "error",
+   "why": "URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.uniswap.org",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Uniswap Interface",
+   "scripts": [
+    "/assets/index-*.js",
+    "/turnstile/v0/api.js",
+    "/zone-*.js"
+   ],
+   "bytes": 86921,
+   "redirects": [],
+   "server": null
+  }
+ }
+}

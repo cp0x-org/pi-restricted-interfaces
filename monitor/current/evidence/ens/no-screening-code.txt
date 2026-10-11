@@ -1,0 +1,13 @@
+check: ens/no-screening-code
+about: No wallet-screening call or sanctions list in the ENS app
+source: https://github.com/ensdomains/ens-app-v3/tree/67b917459591440b637ea5f315eabc4229473506
+checked_at: 2026-10-11T21:04:39Z
+fetched: https://codeload.github.com/ensdomains/ens-app-v3/tar.gz/67b917459591440b637ea5f315eabc4229473506
+sha256: 1c414dc63a8d26a1576b5d78d0e2543aa47c3459afa150796ccc903322e20472
+--------------------------------------------------------------------------------
+files scanned: 678
+patterns that must be absent:
+  trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\w-])|preflight-compliance|/address/status\b|compliance/screen|/v\d/check/
+
+hits:
+  none

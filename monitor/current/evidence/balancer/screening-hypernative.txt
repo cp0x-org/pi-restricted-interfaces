@@ -1,0 +1,9 @@
+check: balancer/screening-hypernative
+about: Wallet reputation is checked with the Hypernative screener (OFAC + up to 3 hops)
+source: https://github.com/balancer/frontend-monorepo/blob/046d0100891916cda92a0aef5a0f2d059bd309d0/packages/lib/shared/services/hypernative/checkAddressReputation.ts#L30
+checked_at: 2026-10-11T21:04:38Z
+fetched: https://raw.githubusercontent.com/balancer/frontend-monorepo/046d0100891916cda92a0aef5a0f2d059bd309d0/packages/lib/shared/services/hypernative/checkAddressReputation.ts
+sha256: 38965c4fe3fc4272f2f5a35a29ca73524d46d77f369000e92367841da64f0778
+--------------------------------------------------------------------------------
+L19:   created by hypernative  based on their understanding of the required rules (OFAC + Related to OFAC up to 3 hops away)
+L30:     const res = await fetch('https://api.hypernative.xyz/screener/reputation', {

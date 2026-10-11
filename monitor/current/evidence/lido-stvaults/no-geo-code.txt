@@ -1,0 +1,13 @@
+check: lido-stvaults/no-geo-code
+about: No geo-IP lookup or country block in the stVaults widget
+source: https://github.com/lidofinance/staking-vault-widget/tree/f258fb091d3ca01e5baf98128d01818e407a7877
+checked_at: 2026-10-11T21:04:43Z
+fetched: https://codeload.github.com/lidofinance/staking-vault-widget/tar.gz/f258fb091d3ca01e5baf98128d01818e407a7877
+sha256: 63a8bbdfacbe827b4b8683a9127e6b2edb9a82e2de28c9a825d975ccfd984e87
+--------------------------------------------------------------------------------
+files scanned: 1558
+patterns that must be absent:
+  api\.country\.is|ipapi\.co|ipinfo\.io|freeipapi|ip-api\.com|cdn-cgi/trace|/geoip\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country|req(uest)?\.geo\b
+
+hits:
+  none

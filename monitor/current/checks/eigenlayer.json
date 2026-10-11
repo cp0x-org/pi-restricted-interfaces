@@ -1,0 +1,62 @@
+{
+  "id": "eigenlayer",
+  "name": "EigenLayer",
+  "targets": {
+    "app": "https://app.eigenlayer.xyz",
+    "repo": null,
+    "terms": "https://docs.eigencloud.xyz/eigencloud/legal/terms-of-service",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-claims-report",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "reported",
+      "about": "Press report (Apr 2024): the EIGEN claim site blocks IP addresses from listed regions",
+      "source": {
+        "url": "https://decrypt.co/228642/eigen-token-airdrop-plan-ethereum-restaking-protocol-eigenlayer",
+        "kind": "press"
+      },
+      "expect": [
+        "enforced through IP address blocks"
+      ],
+      "section": {
+        "start": "deemed high-risk",
+        "end": "\\.\\s"
+      },
+      "countries": "names"
+    },
+    {
+      "id": "vpn-claims-report",
+      "type": "page",
+      "claim": "vpn",
+      "status": "block",
+      "about": "Press report (Apr 2024): proxy and VPN detection and blocking on the EIGEN claim site",
+      "source": {
+        "url": "https://decrypt.co/228642/eigen-token-airdrop-plan-ethereum-restaking-protocol-eigenlayer",
+        "kind": "press"
+      },
+      "expect": [
+        "implemented proxy and VPN detection and blocking controls"
+      ]
+    },
+    {
+      "id": "geo-ua-live",
+      "type": "live",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Live: app.eigenlayer.xyz answers a visitor from Ukraine with 'RESTRICTED: The application is not available to persons in your jurisdiction'",
+      "source": {
+        "url": "https://app.eigenlayer.xyz",
+        "country": "UA"
+      },
+      "expect": [
+        "The application is not available to persons in your jurisdiction"
+      ],
+      "countries": [
+        "UA"
+      ]
+    }
+  ]
+}

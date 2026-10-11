@@ -1,0 +1,9 @@
+check: sky/feature-geo-config
+about: Route guard: modules disabled for the visitor's country by /geo-config redirect away (restrictive fallback on error)
+source: https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/geo-config/routeGuard.ts#L29
+checked_at: 2026-10-11T21:04:43Z
+fetched: https://raw.githubusercontent.com/jetstreamgg/tarmac/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/geo-config/routeGuard.ts
+sha256: 1e886aa49d639003633e0c2e9c9ce1d17b38f0ca84a4f6cf618ca02199205a01
+--------------------------------------------------------------------------------
+L5: import { FALLBACK_CONFIG } from './constants';
+L29: export async function requireModuleEnabled(

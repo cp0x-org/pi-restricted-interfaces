@@ -1,0 +1,54 @@
+{
+  "id": "portalbridge",
+  "name": "Portal Bridge",
+  "targets": {
+    "app": "https://portalbridge.com",
+    "repo": null,
+    "terms": "https://portalbridge.com/terms-of-service",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "screening-trm",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Portal Bridge UI screens wallets with TRM Labs and blocks sanctioned risk (repository archived; the current site is closed source)",
+      "source": {
+        "repo": "XLabs/portal-bridge-ui",
+        "ref": "10744b90e48444f8da054aaa9c07518fb9eaf997",
+        "path": "apps/connect/src/providers/sanctions.ts"
+      },
+      "expect": [
+        "export const TRM_URL",
+        "RISK_LEVEL_SANCTION: number = 10"
+      ]
+    },
+    {
+      "id": "prod-wallet-sanctions",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Production JS of portalbridge.com: both wallets of a transfer are checked (checkWalletSanctions) before it starts",
+      "source": {
+        "url": "https://portalbridge.com"
+      },
+      "expect": [
+        "checkWalletSanctions\\)\\(\\w,\\w\\),\\(0,\\w\\.checkWalletSanctions\\)"
+      ]
+    },
+    {
+      "id": "prod-geo-blocked-quote",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production JS: Fusion swap quotes can fail with GEO_BLOCKED ('Trading the selected tokens is not available in your region')",
+      "source": {
+        "url": "https://portalbridge.com"
+      },
+      "expect": [
+        "GEO_BLOCKED:\"Trading the selected tokens is not available in your region\""
+      ]
+    }
+  ]
+}

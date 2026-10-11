@@ -5,7 +5,7 @@ Usage:
   python3 -I monitor/scripts/build.py monitor/data/interfaces.json monitor/templates/report_template.md monitor/out \
       --ui src/data/interfaces.json
 
-Outputs: <outdir>/report.md (Russian), <outdir>/interfaces.csv, and with --ui the dataset consumed by the web app
+Outputs: <outdir>/report.md, <outdir>/interfaces.csv, and with --ui the dataset consumed by the web app
 (entries + computed level / category_group / chain_tags, meta + regions). Deterministic: no timestamps.
 Python >= 3.9, stdlib only.
 """
@@ -63,12 +63,12 @@ REGIONS = OrderedDict([
 TOKEN_RE = re.compile(r"^[A-Z]{2}(-[A-Za-z]+)?$")
 ID_RE = re.compile(r"^[a-z0-9-]+$")
 
-# Russian labels for report.md
-LIFECYCLE_TAG = {"current": "", "legacy": " *(устаревшая версия)*", "defunct": " *(не работает)*"}
-S_RU = {"yes": "да", "no": "нет", "reported": "по отчётам", "tos_only": "только ToS", "optional": "опц.", "unknown": "?"}
-LAYER_RU = {"edge": "edge/CDN", "frontend": "фронтенд", "api": "API", "contract": "контракт", None: "—"}
-VPN_RU = {"no": "нет", "tos_only": "только ToS", "detect": "детект", "block": "блок", "optional": "опц.", "unknown": "?"}
-US_RU = {"yes": "запрещено", "no": "нет", "partial": "частично", "unknown": "?"}
+# Labels for report.md
+LIFECYCLE_TAG = {"current": "", "legacy": " *(legacy version)*", "defunct": " *(defunct)*"}
+S_LABEL = {"yes": "yes", "no": "no", "reported": "reported", "tos_only": "ToS only", "optional": "optional", "unknown": "?"}
+LAYER_LABEL = {"edge": "edge/CDN", "frontend": "frontend", "api": "API", "contract": "contract", None: "—"}
+VPN_LABEL = {"no": "no", "tos_only": "ToS only", "detect": "detect", "block": "block", "optional": "optional", "unknown": "?"}
+US_LABEL = {"yes": "prohibited", "no": "no", "partial": "partial", "unknown": "?"}
 
 
 # ----------------------------------------------------------------------------- derived fields
@@ -287,7 +287,7 @@ def md_link(url):
 
 def short_geo(i):
     g = i["geo_site"]
-    s = S_RU[g["s"]]
+    s = S_LABEL[g["s"]]
     if g["s"] in ("yes", "reported") and g["countries"]:
         c = g["countries"]
         s += f" ({len(c)})" if len(c) > 3 else f" ({', '.join(c)})"
@@ -301,32 +301,32 @@ def with_note(label, note):
 
 
 def render_report(items, template):
-    rows = ["| # | Интерфейс | Категория | URL | GitHub фронтенда | Гео: сайт | Гео: фичи/активы | Скрининг кошелька | VPN | ToS: US | Уровень |",
+    rows = ["| # | Interface | Category | URL | Frontend GitHub | Geo: site | Geo: features/assets | Wallet screening | VPN | ToS: US | Rating |",
             "|---|---|---|---|---|---|---|---|---|---|---|"]
     for n, i in enumerate(items, 1):
         sc = i["screening"]
-        scr = S_RU[sc["s"]]
+        scr = S_LABEL[sc["s"]]
         if sc["s"] in ("yes", "reported") and sc["layer"]:
-            scr += f" ({LAYER_RU[sc['layer']]})"
+            scr += f" ({LAYER_LABEL[sc['layer']]})"
         repo = md_link(i["frontend_repo"]) if i["frontend_repo"] else f"— *{i['repo_status']}*"
-        us = with_note(US_RU[i["tos"]["us"]], i["tos"]["us_scope"])
-        vpn = with_note(VPN_RU[i["vpn"]["s"]], i["vpn"]["note"])
+        us = with_note(US_LABEL[i["tos"]["us"]], i["tos"]["us_scope"])
+        vpn = with_note(VPN_LABEL[i["vpn"]["s"]], i["vpn"]["note"])
         rows.append(f"| {n} | **{display_name(i)}**{LIFECYCLE_TAG[lifecycle(i)]} | {i['category']} | {md_link(i['url'])} | {repo} | {short_geo(i)} | "
-                    f"{S_RU[i['geo_feature']['s']]} | {scr} | {vpn} | {us} | **{level(i)}** |")
+                    f"{S_LABEL[i['geo_feature']['s']]} | {scr} | {vpn} | {us} | **{level(i)}** |")
     main_table = "\n".join(rows)
 
-    mrows = ["| Интерфейс | Уровень | Где enforcement / механизм | Fail-mode | Заметки | Доказательства |",
+    mrows = ["| Interface | Rating | Where it is enforced / mechanism | Fail mode | Notes | Evidence |",
              "|---|---|---|---|---|---|"]
     for i in items:
         parts = []
         if i["geo_site"]["s"] not in ("no", "unknown") and i["geo_site"]["method"]:
-            parts.append("Гео: " + i["geo_site"]["method"])
+            parts.append("Geo: " + i["geo_site"]["method"])
         if i["geo_feature"]["s"] not in ("no", "unknown") and i["geo_feature"]["scope"]:
-            parts.append("Фичи: " + i["geo_feature"]["scope"])
+            parts.append("Features: " + i["geo_feature"]["scope"])
         if i["screening"]["s"] not in ("no", "unknown") and i["screening"]["provider"]:
-            parts.append("Скрининг: " + i["screening"]["provider"])
+            parts.append("Screening: " + i["screening"]["provider"])
         if i["asset_filter"]:
-            parts.append("Фильтр активов: " + i["asset_filter"])
+            parts.append("Asset filter: " + i["asset_filter"])
         if i.get("kyc") and i["kyc"]["s"] not in ("no", "unknown"):
             parts.append("KYC: " + i["kyc"]["scope"])
         mech = "<br>".join(p.replace("|", "/") for p in parts) or "—"
@@ -336,7 +336,7 @@ def render_report(items, template):
                      f"{i['notes'].replace('|', '/')} | {ev} |")
     mech_table = "\n".join(mrows)
 
-    lrows = ["| Интерфейс | Результат |", "|---|---|"]
+    lrows = ["| Interface | Result |", "|---|---|"]
     for i in items:
         for l in i["live"]:
             if any(k in l for k in ("SDN", "sanctioned", "geoblock", "restricted", "geo-config", "geo/country", "blacklisted", "screen")):
@@ -346,9 +346,9 @@ def render_report(items, template):
     lv = Counter(level(i) for i in items)
     lc = Counter(lifecycle(i) for i in items)
     n_open = sum(1 for i in items if i["frontend_repo"])
-    stats = (f"Всего интерфейсов: **{len(items)}**, с открытым фронтендом: **{n_open}**, закрытых: **{len(items) - n_open}**. "
-             f"Рейтинг (меньше ограничений = лучше): A — {lv['A']}, B — {lv['B']}, C — {lv['C']}, D — {lv['D']}, n/a — {lv['n/a']}. "
-             f"Устаревших версий: {lc['legacy']}, неработающих интерфейсов: {lc['defunct']}.")
+    stats = (f"Interfaces: **{len(items)}**, with an open frontend: **{n_open}**, closed: **{len(items) - n_open}**. "
+             f"Rating (fewer restrictions = better): A — {lv['A']}, B — {lv['B']}, C — {lv['C']}, D — {lv['D']}, n/a — {lv['n/a']}. "
+             f"Legacy versions: {lc['legacy']}, defunct interfaces: {lc['defunct']}.")
 
     prov = Counter()
     for i in items:
@@ -357,7 +357,7 @@ def render_report(items, template):
             continue
         for key, name in [("trm", "TRM Labs"), ("chainalysis", "Chainalysis"), ("elliptic", "Elliptic"),
                           ("hypernative", "Hypernative"), ("hermod", "Hermod/zeroShadow"), ("hackbounty", "HackBounty"),
-                          ("hardcoded", "статический список"), ("own", "собственный сервис"), ("unnamed", "не раскрыт")]:
+                          ("hardcoded", "hardcoded list"), ("own", "own service"), ("unnamed", "undisclosed")]:
             if key in p:
                 prov[name] += 1
     prov_line = ", ".join(f"{k} — {v}" for k, v in prov.most_common())

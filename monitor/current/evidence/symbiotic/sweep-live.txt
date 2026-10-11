@@ -1,0 +1,322 @@
+check: symbiotic/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://app.symbiotic.fi
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Vaults | Symbiotic",
+   "scripts": [],
+   "bytes": 153462,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "velodrome",
+  "name": "Velodrome",
+  "targets": {
+    "app": "https://velodrome.finance",
+    "repo": null,
+    "terms": "https://github.com/velodrome-finance/docs/blob/main/content/legal.mdx",
+    "endpoints": []
+  },
+  "checks": []
+}

@@ -1,0 +1,9 @@
+check: euler/feature-vault-geo
+about: Per-vault and per-asset hard and soft blocks by country (repo documentation)
+source: https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/docs/geo-blocking.md#L21
+checked_at: 2026-10-11T21:04:39Z
+fetched: https://raw.githubusercontent.com/euler-xyz/euler-lite/43ba73fadda21d943224742286c7c078562e3769/docs/geo-blocking.md
+sha256: 521cf6355e3577900cf57e00e06bc0e54111e10cfc94226248584a1f51e96fca
+--------------------------------------------------------------------------------
+L21: ### Blocked (Hard Block)
+L28: ### Restricted (Soft Block)

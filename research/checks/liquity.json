@@ -1,0 +1,78 @@
+{
+  "id": "liquity",
+  "name": "Liquity V2",
+  "targets": {
+    "app": "https://liquity.app",
+    "repo": {
+      "repo": "liquity/bold",
+      "ref": "d262669ef3c4d37bf0544df3bb2624c07b8a5ee0"
+    },
+    "terms": null,
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-optional",
+      "type": "code",
+      "claim": "geo_site",
+      "status": "optional",
+      "about": "Country block via vpnapi.io exists in the code but runs only when NEXT_PUBLIC_BLOCKING_VPNAPI is set (off by default)",
+      "source": {
+        "repo": "liquity/bold",
+        "ref": "d262669ef3c4d37bf0544df3bb2624c07b8a5ee0",
+        "path": "frontend/app/src/comps/Blocking/Blocking.tsx"
+      },
+      "expect": [
+        "BLOCKING_VPNAPI",
+        "isCountryBlocked",
+        "This app cannot be accessed from this country"
+      ]
+    },
+    {
+      "id": "screening-optional",
+      "type": "code",
+      "claim": "screening",
+      "status": "optional",
+      "about": "On-chain blocklist contract (isBlacklisted) is consulted only when NEXT_PUBLIC_BLOCKING_LIST is set",
+      "source": {
+        "repo": "liquity/bold",
+        "ref": "d262669ef3c4d37bf0544df3bb2624c07b8a5ee0",
+        "path": "frontend/app/src/comps/Blocking/Blocking.tsx"
+      },
+      "expect": [
+        "BLOCKING_LIST",
+        "functionName: \"isBlacklisted\""
+      ]
+    },
+    {
+      "id": "flags-optional",
+      "type": "code",
+      "claim": "vpn",
+      "status": "optional",
+      "about": "Both blocking variables are optional environment settings for third-party frontends",
+      "source": {
+        "repo": "liquity/bold",
+        "ref": "d262669ef3c4d37bf0544df3bb2624c07b8a5ee0",
+        "path": "frontend/app/src/env.ts"
+      },
+      "expect": [
+        "BLOCKING_LIST: v\\.optional\\(",
+        "BLOCKING_VPNAPI: process\\.env\\.NEXT_PUBLIC_BLOCKING_VPNAPI"
+      ]
+    },
+    {
+      "id": "prod-optional",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "optional",
+      "about": "Production JS: the optional blocking settings ship unset (BLOCKING_LIST:void 0)",
+      "source": {
+        "url": "https://liquity.app"
+      },
+      "expect": [
+        "BLOCKING_LIST:void 0",
+        "BLOCKING_VPNAPI"
+      ]
+    }
+  ]
+}

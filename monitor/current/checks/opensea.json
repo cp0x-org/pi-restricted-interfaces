@@ -1,0 +1,44 @@
+{
+  "id": "opensea",
+  "name": "OpenSea",
+  "targets": {
+    "app": "https://opensea.io",
+    "repo": null,
+    "terms": "https://opensea.io/tos",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-iran",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "OpenSea's statement (Mar 2022): it blocks users and territories on the US sanctions list; Iranian users lost access",
+      "source": {
+        "url": "https://fortune.com/crypto/2022/03/04/opensea-metamask-block-users-sanctions/",
+        "kind": "press"
+      },
+      "expect": [
+        "OpenSea blocks users and territories on the U\\.S\\. sanctions list",
+        "Iranian users on OpenSea"
+      ],
+      "countries": [
+        "IR"
+      ]
+    },
+    {
+      "id": "screening-accounts-report",
+      "type": "page",
+      "claim": "screening",
+      "status": "reported",
+      "about": "Press report (Mar 2022): Iranian accounts were deactivated, incl. artists living abroad",
+      "source": {
+        "url": "https://www.artnews.com/art-news/news/opensea-deplatforms-iranian-users-us-sanctions-1234621105/",
+        "kind": "press"
+      },
+      "expect": [
+        "OpenSea Deplatforms Iranian Users"
+      ]
+    }
+  ]
+}

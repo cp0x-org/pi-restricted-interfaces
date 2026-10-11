@@ -1,0 +1,98 @@
+{
+  "id": "kelp",
+  "name": "Kelp",
+  "targets": {
+    "app": "https://kerneldao.com/kelp",
+    "repo": null,
+    "terms": "https://kerneldao.com/kelp/terms-of-service/",
+    "endpoints": [
+      "https://universe.kelpdao.xyz/rseth/geoData"
+    ]
+  },
+  "checks": [
+    {
+      "id": "screening-terms",
+      "type": "page",
+      "claim": "screening",
+      "status": "tos_only",
+      "about": "Users represent they are not sanctioned (OFAC, UN, EU, UK, HKMA, MAS); no screening mechanism verified",
+      "source": {
+        "url": "https://kerneldao.com/kelp/terms-of-service/",
+        "kind": "terms"
+      },
+      "expect": [
+        "Hong\\s+Kong\\s+Monetary\\s+Authority\\s+or\\s+the\\s+Monetary\\s+Authority\\s+of\\s+Singapore"
+      ]
+    },
+    {
+      "id": "prod-gain-gate",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production JS: Gain vault pages ask universe.kelpdao.xyz/rseth/geoData and redirect to /blocked when isRestricted",
+      "source": {
+        "url": "https://kerneldao.com/kelp"
+      },
+      "expect": [
+        "\"/gain/growth-vault/\",\"/gain/airdrop-gain/\",\"/gain/stable-vault/\"",
+        "/rseth/geoData",
+        "isRestricted\\)&&\\w",
+        "replace\\(\"/blocked\"\\)"
+      ]
+    },
+    {
+      "id": "geo-api-us",
+      "type": "live",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Live: Kelp's geoData API answers isRestricted:true to a visitor from the US",
+      "source": {
+        "url": "https://universe.kelpdao.xyz/rseth/geoData",
+        "country": "US"
+      },
+      "expect": [
+        "\"isRestricted\":\\s*true",
+        "\"countryCode\":\\s*\"US\""
+      ],
+      "countries": [
+        "US"
+      ]
+    },
+    {
+      "id": "geo-api-gb",
+      "type": "live",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Live: Kelp's geoData API answers isRestricted:true to a visitor from the UK",
+      "source": {
+        "url": "https://universe.kelpdao.xyz/rseth/geoData",
+        "country": "GB"
+      },
+      "expect": [
+        "\"isRestricted\":\\s*true",
+        "\"countryCode\":\\s*\"GB\""
+      ],
+      "countries": [
+        "GB"
+      ]
+    },
+    {
+      "id": "geo-api-ca",
+      "type": "live",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Live: Kelp's geoData API answers isRestricted:true to a visitor from Canada",
+      "source": {
+        "url": "https://universe.kelpdao.xyz/rseth/geoData",
+        "country": "CA"
+      },
+      "expect": [
+        "\"isRestricted\":\\s*true",
+        "\"countryCode\":\\s*\"CA\""
+      ],
+      "countries": [
+        "CA"
+      ]
+    }
+  ]
+}

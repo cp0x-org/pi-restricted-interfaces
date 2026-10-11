@@ -1,0 +1,52 @@
+{
+  "id": "curve-classic",
+  "name": "Curve Classic",
+  "targets": {
+    "app": "https://classic.curve.finance",
+    "repo": null,
+    "terms": null,
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "no-geo",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "no",
+      "about": "The classic UI's JavaScript has no geo-IP lookup or country block",
+      "source": {
+        "url": "https://classic.curve.finance",
+        "scripts": "^https://classic\\.curve\\.finance/",
+        "follow": {
+          "regex": "\"(chunk-[0-9a-f]{8})\":\"([0-9a-f]{8})\"",
+          "path": "js/{1}.{2}.js"
+        },
+        "follow_base": "https://classic.curve.finance/",
+        "max_scripts": 200
+      },
+      "absent": [
+        "api\\.country\\.is|ipapi\\.co|ipinfo\\.io|freeipapi|ip-api\\.com|cdn-cgi/trace|/geoip\\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)"
+      ]
+    },
+    {
+      "id": "no-screening",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "no",
+      "about": "The classic UI's JavaScript has no wallet-screening call or sanctions list",
+      "source": {
+        "url": "https://classic.curve.finance",
+        "scripts": "^https://classic\\.curve\\.finance/",
+        "follow": {
+          "regex": "\"(chunk-[0-9a-f]{8})\":\"([0-9a-f]{8})\"",
+          "path": "js/{1}.{2}.js"
+        },
+        "follow_base": "https://classic.curve.finance/",
+        "max_scripts": 200
+      },
+      "absent": [
+        "trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\\w-])|preflight-compliance|/address/status\\b|compliance/screen|/v\\d/check/"
+      ]
+    }
+  ]
+}

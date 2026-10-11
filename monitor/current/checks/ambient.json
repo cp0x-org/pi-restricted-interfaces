@@ -1,0 +1,83 @@
+{
+  "id": "ambient",
+  "name": "Ambient Finance",
+  "targets": {
+    "app": "https://ambient.finance",
+    "repo": {
+      "repo": "CrocSwap/ambient-ts-app",
+      "ref": "90e569a9bbcab62907c7713ce25c6ab5b0246baf"
+    },
+    "terms": "https://ambient.finance/terms",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-netlify",
+      "type": "code",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Netlify edge rule redirects every page to /blocked.html for visitors from the listed countries",
+      "source": {
+        "repo": "CrocSwap/ambient-ts-app",
+        "ref": "90e569a9bbcab62907c7713ce25c6ab5b0246baf",
+        "path": "netlify.toml"
+      },
+      "expect": [
+        "# Block all pages for specified countries",
+        "to = \"/blocked\\.html\"\\s*\\n\\s*status = 302\\s*\\n\\s*force = true\\s*\\n\\s*conditions = \\{Country"
+      ],
+      "section": {
+        "start": "# Block all pages for specified countries",
+        "end": "\\]\\}"
+      },
+      "countries": "codes"
+    },
+    {
+      "id": "screening-blacklist",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Hardcoded OFAC address list in the frontend; a listed wallet is disconnected and sent to ofac.treasury.gov",
+      "source": {
+        "repo": "CrocSwap/ambient-ts-app",
+        "ref": "90e569a9bbcab62907c7713ce25c6ab5b0246baf",
+        "path": "src/ambient-utils/constants/blacklist.ts"
+      },
+      "expect": [
+        "const ofacBlacklist = \\[",
+        "'0x098b716b8aaf21512996dc57eb0615e2383e2f96'"
+      ]
+    },
+    {
+      "id": "screening-disconnect",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "useBlacklist() disconnects a blacklisted account and redirects to ofac.treasury.gov",
+      "source": {
+        "repo": "CrocSwap/ambient-ts-app",
+        "ref": "90e569a9bbcab62907c7713ce25c6ab5b0246baf",
+        "path": "src/App/hooks/useBlacklist.ts"
+      },
+      "expect": [
+        "checkBlacklist\\(account\\)",
+        "disconnectUser\\(\\)",
+        "location\\.replace\\('https://ofac\\.treasury\\.gov'\\)"
+      ]
+    },
+    {
+      "id": "prod-blacklist",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Production JS: the OFAC address list (incl. the Ronin exploiter) and the redirect to ofac.treasury.gov",
+      "source": {
+        "url": "https://ambient.finance"
+      },
+      "expect": [
+        "0x098b716b8aaf21512996dc57eb0615e2383e2f96",
+        "location\\.replace\\(`https://ofac\\.treasury\\.gov`\\)"
+      ]
+    }
+  ]
+}

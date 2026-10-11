@@ -1,0 +1,111 @@
+{
+  "id": "kyberswap",
+  "name": "KyberSwap",
+  "targets": {
+    "app": "https://kyberswap.com",
+    "repo": {
+      "repo": "KyberNetwork/kyberswap-interface",
+      "ref": "12c16463eb52d1f13f0961daf9445f907adaeb0e"
+    },
+    "terms": "https://kyberswap.com/files/KyberSwap%20-%20Terms%20of%20Use%20-%2001%20September%202026.pdf",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "feature-token-geo",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Per-country token restriction; the country is taken from the browser (described in code as a UX deterrent)",
+      "source": {
+        "repo": "KyberNetwork/kyberswap-interface",
+        "ref": "12c16463eb52d1f13f0961daf9445f907adaeb0e",
+        "path": "apps/kyberswap-interface/src/hooks/useRestrictedTokens.ts"
+      },
+      "expect": [
+        "getUserCountryCode\\(\\)",
+        "useGetRestrictedTokensQuery\\(\\{ countryCode"
+      ]
+    },
+    {
+      "id": "screening-code",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Every transaction first asks the Blackjack service; a blacklisted wallet gets BlacklistedWalletError",
+      "source": {
+        "repo": "KyberNetwork/kyberswap-interface",
+        "ref": "12c16463eb52d1f13f0961daf9445f907adaeb0e",
+        "path": "apps/kyberswap-interface/src/utils/sendTransaction.ts"
+      },
+      "expect": [
+        "export async function ensureNotBlacklisted",
+        "if \\(res\\?\\.data\\?\\.blacklisted\\) throw new BlacklistedWalletError"
+      ]
+    },
+    {
+      "id": "screening-blackjack",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Blackjack API answers blacklisted:true for the sanctioned wallet and false for the control",
+      "source": {
+        "method": "GET",
+        "url": "https://blackjack.kyberswap.com/api/v1/check?wallets={address}"
+      },
+      "expect_sdn": [
+        "^status: 200$",
+        "\"blacklisted\":\\s*true"
+      ],
+      "expect_control": [
+        "^status: 200$",
+        "\"blacklisted\":\\s*false"
+      ]
+    },
+    {
+      "id": "prod-blackjack",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Production JS: the Blackjack screening API is configured",
+      "source": {
+        "url": "https://kyberswap.com"
+      },
+      "expect": [
+        "VITE_BLACKJACK_API:\"https://blackjack\\.kyberswap\\.com/api\""
+      ]
+    },
+    {
+      "id": "prod-restricted-tokens",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production JS: the per-country restricted-tokens API client",
+      "source": {
+        "url": "https://kyberswap.com"
+      },
+      "expect": [
+        "reducerPath:\"restrictedTokensApi\"",
+        "getRestrictedTokens"
+      ]
+    },
+    {
+      "id": "geo-vn-live",
+      "type": "live",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Live: kyberswap.com answers a visitor from Vietnam with HTTP 403 'country is currently restricted in accordance with our Terms of Use'",
+      "source": {
+        "url": "https://kyberswap.com",
+        "country": "VN"
+      },
+      "expect": [
+        "^status: 403$",
+        "country is currently restricted in accordance with our"
+      ],
+      "countries": [
+        "VN"
+      ]
+    }
+  ]
+}

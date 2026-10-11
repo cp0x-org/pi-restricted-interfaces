@@ -1,0 +1,15 @@
+check: curve/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/curvefi/curve-frontend/tree/f8cfaab057efb97dd9b96eac6ce966245cc45b8c
+checked_at: 2026-10-11T21:03:08Z
+fetched: https://codeload.github.com/curvefi/curve-frontend/tar.gz/f8cfaab057efb97dd9b96eac6ce966245cc45b8c
+sha256: 17846e83a1df42620284f94c77a4a659449b18cf2405f28c1ed8bdf8af92cd4f
+--------------------------------------------------------------------------------
+repository: https://github.com/curvefi/curve-frontend/tree/f8cfaab057efb97dd9b96eac6ce966245cc45b8c
+files scanned: 1977
+
+signals:
+  [weak] geo: geo-block words — 1 file(s)
+      https://github.com/curvefi/curve-frontend/blob/f8cfaab057efb97dd9b96eac6ce966245cc45b8c/packages/evm-ui/src/widgets/Legal/components/tabs/Terms.tsx#L43  aragraph> </Section> <Header>{t`1. Eligibility and Prohibited Jurisdictions`}</Header> <Section> <Paragraph>{t`By accessing or using the Website
+  [weak] kyc: KYC words — 1 file(s)
+      https://github.com/curvefi/curve-frontend/blob/f8cfaab057efb97dd9b96eac6ce966245cc45b8c/packages/evm-ui/src/widgets/Legal/components/tabs/Privacy.tsx#L129  s (e.g. to combat money laundering and terrorist financing (KYC), to fulfil tax obligations, etc.), and we might have to request further inform

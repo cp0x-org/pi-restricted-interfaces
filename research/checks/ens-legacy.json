@@ -1,0 +1,69 @@
+{
+  "id": "ens-legacy",
+  "name": "ENS (legacy app)",
+  "targets": {
+    "app": "https://legacy.ens.domains",
+    "repo": {
+      "repo": "ensdomains/ens-app",
+      "ref": "1cc872b5738e811fc416e8fc6ca3671e3cc4454b"
+    },
+    "terms": "https://ens.domains/legal/terms-of-use",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "no-geo-code",
+      "type": "code-scan",
+      "claim": "geo_site",
+      "status": "no",
+      "about": "No geo-IP lookup or country block in the legacy ENS app",
+      "source": {
+        "repo": "ensdomains/ens-app",
+        "ref": "1cc872b5738e811fc416e8fc6ca3671e3cc4454b"
+      },
+      "absent": [
+        "api\\.country\\.is|ipapi\\.co|ipinfo\\.io|freeipapi|ip-api\\.com|cdn-cgi/trace|/geoip\\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country|req(uest)?\\.geo\\b"
+      ]
+    },
+    {
+      "id": "no-screening-code",
+      "type": "code-scan",
+      "claim": "screening",
+      "status": "no",
+      "about": "No wallet-screening call or sanctions list in the legacy ENS app",
+      "source": {
+        "repo": "ensdomains/ens-app",
+        "ref": "1cc872b5738e811fc416e8fc6ca3671e3cc4454b"
+      },
+      "absent": [
+        "trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\\w-])|preflight-compliance|/address/status\\b|compliance/screen|/v\\d/check/"
+      ]
+    },
+    {
+      "id": "prod-no-geo",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "no",
+      "about": "Production JS of ENS (legacy): no geo-IP lookup or country block",
+      "source": {
+        "url": "https://legacy.ens.domains"
+      },
+      "absent": [
+        "api\\.country\\.is|ipapi\\.co|ipinfo\\.io|freeipapi|ip-api\\.com|cdn-cgi/trace|/geoip\\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country"
+      ]
+    },
+    {
+      "id": "prod-no-screening",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "no",
+      "about": "Production JS of ENS (legacy): no wallet-screening call or sanctions oracle",
+      "source": {
+        "url": "https://legacy.ens.domains"
+      },
+      "absent": [
+        "trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\\w-])|preflight-compliance|/address/status\\b|compliance/screen|/v\\d/check/"
+      ]
+    }
+  ]
+}

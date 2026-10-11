@@ -1,0 +1,20 @@
+check: compound/prod-sanctions-list
+about: Production JS: the hardcoded sanctioned-address list incl. the Tornado Cash router
+source: https://app.compound.xyz
+checked_at: 2026-10-11T21:15:24Z
+http_status: 200
+--------------------------------------------------------------------------------
+scripts:
+  https://app.compound.xyz/assets/main-Bkduosrm.js  sha256=1c2e59287c9d6223b1ee513e67a74a18a590591b8c30682e0c461c90298e02f3
+  https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920  sha256=3e5bc7ca508f5d5aa7255341243840c8d2b70c8aea323800b51610df3f5a8a2c
+  https://app.compound.xyz/assets/index-CDBAAxoU.js  sha256=9f9f6850d9c5d242c8a3a775cddd133501a1c9cf712dd1cdf38553d29cb2f5ca
+  https://app.compound.xyz/assets/hooks.module-CyE9fDR_.js  sha256=b69aa00f6f5a1a2d6592bf27e6c5a2d9d9662966d9cd9edfd9f1e3a2992c3074
+  https://app.compound.xyz/assets/formatAbiItem-CzMQcDO7.js  sha256=3510813d26bc94a86215c7f15e91ec40b3d2653f52d18a7c940ccad1ebcb8f40
+  https://app.compound.xyz/assets/index-BiVaFMqh.js  sha256=b89043e63af6b6987cc19c10dcc5c3a517aa6b6294a7406af71882ef959c2593
+  https://app.compound.xyz/assets/index-VTVygW3L.js  sha256=1a59da534a52830666da1dcc152a0090651f1a8408f1510d608d6e0f854acb29
+  https://app.compound.xyz/assets/index-CXpyRjAr.js  sha256=95f8f758414e1f293348600066abb3bd3c4f1672c18e5c2cc7ad3b7c268ed87e
+  https://app.compound.xyz/assets/index.umd-DN2xy3IQ.js  sha256=ba7cf5db6182db5fc655e2985d71fa8d0aa5d016a937a1071c7920ca4956585c
+  https://app.compound.xyz/assets/ccip-CbblT82P.js  sha256=e8a9c5704bf3c32717ac660391e538d455753c136b9a2475c6ce66e9be1d1c6c
+
+matches:
+  https://app.compound.xyz/assets/main-Bkduosrm.js: …[0])?e(Gie[r[0]]):[]:typeof r=="string"?e([r]):[]}function Qze(t){return["0x8589427373D6D84E98730D7795D8f6f8731FDA16","0x722122dF12D4e14e13Ac3b6895a86e84145b6967","0xDD4c48C0B24039969fC16D1cdF626eaB821d3384","0xd90e2f925…

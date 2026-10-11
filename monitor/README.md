@@ -4,7 +4,7 @@ Source of truth: `data/interfaces.json` (schema v2, hand-maintained). Everything
 
 ```
 data/interfaces.json ──(build.py)──▶ src/data/interfaces.json   dataset imported by the web app: EVM interfaces only (--ui-chains evm), + computed level, restrictions, category_group, chain_tags, observations
-                                 ▶ out/report.md               human-readable report (Russian)
+                                 ▶ out/report.md               human-readable report
                                  ▶ out/interfaces.csv          same table for spreadsheets
 ```
 
@@ -16,7 +16,15 @@ pnpm monitor:verify         # evidence paths exist in local clones, frontend rep
 pnpm monitor:scan           # ripgrep the cloned frontends for geo/screening signals -> data/scan_raw.json
 pnpm monitor:probe -- --countries UA,US   # P3: HTTP probe of every interface from those countries via a proxy -> probe/out/<run>.json
 pnpm monitor:probe:merge -- probe/out/<run>.json   # append a run to data/observations.json
+pnpm monitor:update:dry     # run every research check, show what would change in the catalog and the table
+pnpm monitor:update         # publish a version: checks -> sync country lists -> build -> current/, previous one to archive/<scanned>_<archived>/
 ```
+
+How to update the site and read the history: [`docs/updating.md`](docs/updating.md).
+
+To check the published numbers against their primary sources, use [`../research/`](../research/README.md)
+(`pnpm research:all`): one check per counted restriction, rebuilt into the same table and compared with
+`src/data/interfaces.json`. Change `data/interfaces.json` and the matching `research/checks/<id>.json` together.
 
 Proxies for `monitor:probe` are configured through `PROBE_PROXY_URL` (template with `{cc}`), see `docs/probing.md` for providers,
 pricing, credentials format and the full workflow.
@@ -43,12 +51,14 @@ git clone --depth 1 --filter=blob:limit=400k https://github.com/<owner>/<repo> m
 | `scripts/verify.py` | evidence paths and repo reachability |
 | `scripts/probe.py` | P3 per-country HTTP probe through a proxy (vantage verification, site + geo endpoints, `merge` into the store) |
 | `data/observations.json` | append-only store of probe observations; `build.py` exports the latest verified ones to the site |
-| `docs/probing.md` | how to buy and configure proxies, run the probe and read the results (Russian) |
+| `docs/probing.md` | how to buy and configure proxies, run the probe and read the results |
 | `templates/report_template.md` | report skeleton with `{{MAIN_TABLE}}`, `{{MECH_TABLE}}`, `{{LIVE_TABLE}}`, `{{STATS}}`, `{{PROVIDERS}}` |
 | `prompts/auditor-agent.md` | prompt for the LLM auditor used in deep checks (schema of its JSON output) |
 | `docs/roadmap.md` | monitor architecture and milestones M1–M4 (probes, proxies, mock wallet, scoring, alerts) |
 | `out/` | generated snapshot of the report and CSV (always the full catalog, incl. non-EVM) |
-| `archive/<date>/` | frozen copies of data, CSV, report and observations with a summary table (README.md) |
+| `current/` | the version the site shows: VERSION.json, CHANGES.md, the table rebuilt from the checks, check results, evidence, check definitions and a copy of the catalog (written by `scripts/update.py`) |
+| `archive/<scanned>_<archived>/` | previous versions, same layout; `2026-10-08_2026-10-11/` is the pre-check snapshot (old rating scale) |
+| `scripts/update.py` | publishes a version: research checks, sync of country lists, build, rotation of `current/` into `archive/` |
 
 ## Schema v2 (one entry)
 
@@ -72,7 +82,7 @@ Computed by `build.py` (never edit by hand): `level` (rating by number of techni
 
 ## Adding or updating an interface
 
-Step-by-step guide with a JSON template (Russian): [`ADD_PROTOCOL.md`](ADD_PROTOCOL.md).
+Step-by-step guide with a JSON template: [`ADD_PROTOCOL.md`](ADD_PROTOCOL.md).
 
 
 1. Edit `data/interfaces.json` (keep every claim backed by an `evidence` entry: repo-relative path, URL, or `owner/repo: path`).

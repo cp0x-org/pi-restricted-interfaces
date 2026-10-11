@@ -1,0 +1,72 @@
+{
+  "id": "beefy",
+  "name": "Beefy",
+  "targets": {
+    "app": "https://app.beefy.com",
+    "repo": {
+      "repo": "beefyfinance/beefy-v2",
+      "ref": "b7098b467950b1ac01dbb248241bbc9bfae72e0b"
+    },
+    "terms": null,
+    "endpoints": [
+      "https://api.beefy.finance/geo/country"
+    ]
+  },
+  "checks": [
+    {
+      "id": "feature-tequities-countries",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Vaults with tokenized equities on Base are restricted for these countries",
+      "source": {
+        "repo": "beefyfinance/beefy-v2",
+        "ref": "b7098b467950b1ac01dbb248241bbc9bfae72e0b",
+        "path": "src/config/restrictions.json"
+      },
+      "expect": [
+        "\"base-tequities\""
+      ],
+      "section": {
+        "start": "\"countries\":",
+        "end": "\\]"
+      },
+      "countries": "codes"
+    },
+    {
+      "id": "feature-fail-closed",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Country from api.beefy.finance/geo/country; unknown location or an error counts as blocked",
+      "source": {
+        "repo": "beefyfinance/beefy-v2",
+        "ref": "b7098b467950b1ac01dbb248241bbc9bfae72e0b",
+        "path": "src/features/data/selectors/restrictions.ts"
+      },
+      "expect": [
+        "return 'blocked'; // fail closed on error",
+        "profile\\.countries\\.includes\\(country\\) \\? 'blocked' : 'allowed'"
+      ]
+    },
+    {
+      "id": "prod-tequities",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production JS: tokenized-equity vault countries and the geo/country lookup",
+      "source": {
+        "url": "https://app.beefy.com"
+      },
+      "expect": [
+        "`\\$\\{this\\.api\\}/geo/country`"
+      ],
+      "section": {
+        "start": "\"base-tequities\":\\{countries:\\[",
+        "end": "\\]"
+      },
+      "countries": "codes",
+      "case": true
+    }
+  ]
+}

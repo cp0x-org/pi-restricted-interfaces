@@ -1,0 +1,9 @@
+check: liquity/flags-optional
+about: Both blocking variables are optional environment settings for third-party frontends
+source: https://github.com/liquity/bold/blob/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0/frontend/app/src/env.ts#L119
+checked_at: 2026-10-11T21:04:43Z
+fetched: https://raw.githubusercontent.com/liquity/bold/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0/frontend/app/src/env.ts
+sha256: 6cfb15c35124557c798670d7557e48ffe9bc3f50f0f10e01cf272a99e2ecd725
+--------------------------------------------------------------------------------
+L119:     BLOCKING_LIST: v.optional(
+L338:   BLOCKING_VPNAPI: process.env.NEXT_PUBLIC_BLOCKING_VPNAPI,

@@ -1,0 +1,60 @@
+check: ethena/screening-restricted-page
+about: The /restricted page served to blocked visitors also covers wallets 'linked to high risk activities'
+source: https://ethena.fi/restricted
+checked_at: 2026-10-11T21:15:35Z
+http_status: 200
+--------------------------------------------------------------------------------
+scripts:
+  https://ethena.fi/_next/static/chunks/4655-5246e57bd94d8b91.js  sha256=8aa5e1aef7408f61c92c68760d48dffa348af0b73d905b3489256668f15b2374
+  https://ethena.fi/_next/static/chunks/6158-eb1125d1f73c60ae.js  sha256=ebf42b970d78b4b73dabb7557b2e42ce8791cc311b851a9601b5d5fb1fc52384
+  https://ethena.fi/_next/static/chunks/3122-3f1597eaa4ba3a4f.js  sha256=a22ae8d9768e2d8ef66fa856d828732a7fff97256bfdecd26c8c718c203c102a
+  https://ethena.fi/_next/static/chunks/4937-d3f86ef81d8b73cf.js  sha256=4a1b040a1383b74afbae879a867fc4b4434395eede8b09cd66be63a86b45cf74
+  https://ethena.fi/_next/static/chunks/3590-76ad7d65dbd6ca3c.js  sha256=65b70d27bead5e3e10cc913e776291df74a30a0dfa66adb9a07c63c3f6d6dd02
+  https://ethena.fi/_next/static/chunks/2947-a7e8f24d8799aab6.js  sha256=81897b43bf391271fd12a302470da6919b7161edab4b4854a5168b9fca610db7
+  https://ethena.fi/_next/static/chunks/9176-08c783730012a643.js  sha256=6d65d1b88135374bf4f3054079e09db9da2a97ef3065a71e439d7c5bca54a74b
+  https://ethena.fi/_next/static/chunks/5342-58373c43552a36a4.js  sha256=cab1009c8b08efd0aba038ab515651b8d31fd1e8da2b1ea5e68f2f0bdc856b37
+  https://ethena.fi/_next/static/chunks/1515-ea26b2f160b208e2.js  sha256=dabdc75ecfea38728ddae23129d09c11cb0415ab5bac2557850c70d05e26dcd4
+  https://ethena.fi/_next/static/chunks/9141-913e27971584f303.js  sha256=a724475acec3c0fedfc42ea3a5aa1a5f742f09c796a40d253f3f493d28e796a2
+  https://ethena.fi/_next/static/chunks/6931-c56b2f93bad6c400.js  sha256=13e403e64f5c9f7f8fb2cf614a04e8f7da9d3657314b45c0c857cd09a3bb4dbe
+  https://ethena.fi/_next/static/chunks/557-b0c2004a12faf019.js  sha256=52b73277028e44d91f8ae1afbe7babf43dac000947efd05d91f0081133cab326
+  https://ethena.fi/_next/static/chunks/8956-2ce77992d19d8524.js  sha256=7dd4eb642fafa2d7ab47c2c3666eb82039dda73a62721d557975285decb9c8e3
+  https://ethena.fi/_next/static/chunks/1209-55f9b7d0db20b1a8.js  sha256=a7cc662233b7a936914aeba65a1e07da37f44c8b4aec2c028c707e57852e668a
+  https://ethena.fi/_next/static/chunks/176-a17be18337f97a3e.js  sha256=192b932b40f94d48dc1ef240f434136975f1bbffcff56a36acd6ba37f17300f0
+  https://ethena.fi/_next/static/chunks/main-app-43fa370875ca2c53.js  sha256=f2f50f7679b065b102fb30267cfa8cab3339c08b6e1cfd95ef39c2e0f560787e
+  https://ethena.fi/_next/static/chunks/1283-48c281f5480f2ce0.js  sha256=f69003fb4a5baa2a16c3d7df9a7aebde8f6880dcd6262579c633b74c82a7f356
+  https://ethena.fi/_next/static/chunks/1602-615da159da8a3f61.js  sha256=af89947b335445dab82787455a30fc5256c6bb90334d39a42837ffb65ba2bdae
+  https://ethena.fi/_next/static/chunks/app/(routes)/layout-c42420827625b5ef.js  sha256=48f20fe536424b7c293260e47f3c1dddf08f89625f56d58bba6814ad3cc231de
+  https://ethena.fi/_next/static/chunks/app/global-error-971517f7d4232e99.js  sha256=a581768a1c15813f7ec20f576acc04001bbc08250c5e6d4d654a5665157b6413
+  https://ethena.fi/_next/static/chunks/163-47b192b4ac90d34b.js  sha256=c3b89ed9d1e1ea72255d9c352b4f209597192cb0948c4acb09757192a7b94e2b
+  https://ethena.fi/_next/static/chunks/894-d7bef7b193903abf.js  sha256=fb0b2a19dccbd6bef5d6fc99689026dd45fed764688b13e8ee577302e3a03e05
+  https://ethena.fi/_next/static/chunks/849-092ea888fead92a2.js  sha256=7698f451151c5b1280f47b8e85604fae69cccd9e4be3a1417ee78dc42718827a
+  https://ethena.fi/_next/static/chunks/3917-d95f7d84ebed8c74.js  sha256=986df940fdb2d3208e85578352b8ace160e457fb35788a5ecedefab56ffc425c
+  https://ethena.fi/_next/static/chunks/7444-a81d0bc0fbc346da.js  sha256=18355fd9ccf0bc62b733115ca0cfa4a5a41aac4c39d6df86848faa33b2c9776c
+  https://ethena.fi/_next/static/chunks/6853-e34d7eb9dc4af30f.js  sha256=29f3c192c586c6e29b9a87f47c93f081ba25bc7c87154b470f9c3c53d4ea8611
+  https://ethena.fi/_next/static/chunks/3663-ee44b5b43e60c6bd.js  sha256=0176ed509301614433ffb3d56a1cbf11f44c14c96a388aba4f64ffd7a9e15fe1
+  https://ethena.fi/_next/static/chunks/1980-a685f949ef61932e.js  sha256=568605e10312d491ca4334b4aac8508968e850efd7c2d5eb75b62d990faf162f
+  https://ethena.fi/_next/static/chunks/1447-d1e10d7f7b586bb3.js  sha256=8610ca1648f5af94e2ea6a509da5cef7f665b40bc5a3f3187eac081d84293e2f
+  https://ethena.fi/_next/static/chunks/2481-e915992fd7fdea43.js  sha256=991cdfc98fec4c78bf60e1b8eec5718d217f6323646bc773aed0ef7d93de70cb
+  https://ethena.fi/_next/static/chunks/9864-b138f6c9ed4522fb.js  sha256=b90ee90b34f7fc418f100ae239b3bc2d343631daa8c90dfd77915c89fdbf3282
+  https://ethena.fi/_next/static/chunks/7685-169d77b6b1be8ab7.js  sha256=66dca6efb6dca9fa9724fb47697940244d3d6b157b57a63462205da6f45eddbf
+  https://ethena.fi/_next/static/chunks/9206-8b1aaabcb274d2f3.js  sha256=476a2b07c6b1a018144d91324691e51a2fbcaf85e8947ffb3f4dfb33f2520ced
+  https://ethena.fi/_next/static/chunks/5927-0b2672b52224eb37.js  sha256=eed12b5f42d15ba8627e4dc74b014ae8ea32aee3f58d55621bde6f4ce58b7eee
+  https://ethena.fi/_next/static/chunks/2518-65452080dfaf227d.js  sha256=d6a49997d18ef69a4380ea82cd37484f35a48f0e857d57c11710f809259974d9
+  https://ethena.fi/_next/static/chunks/546-4184893a80f14f09.js  sha256=296fa6fd6de40d02a5399c0fdd2e9ab3b785f6495139fa83f88c87b3913038c6
+  https://ethena.fi/_next/static/chunks/5718-d8df6f7e582a89d6.js  sha256=09e2805ec13deeb2d31162b067107c00a783e2c47a23e764f38bc5e2d0c38d82
+  https://ethena.fi/_next/static/chunks/6236-7e31223cf5111ace.js  sha256=8df50ce04edc52042982ae727f8c53e6d8bdab6fef38d7c6393d05427e2d5e34
+  https://ethena.fi/_next/static/chunks/3160-817b186222f8e9e1.js  sha256=574bca8b8d7055fbb5521d5fa43c717e4db7896ce5b7d2960bd8f6b6bf7ed887
+  https://ethena.fi/_next/static/chunks/2451-ac3726b93218ef2b.js  sha256=2d86d09c61760c3bdf88e0f2caf7d98314ccdc30b3468669be7468613bfef099
+  https://ethena.fi/_next/static/chunks/6254-a0603b01b6300fbb.js  sha256=bef6d05a2218e72c82deb787736d76f085d7b3d09818e123d61edd7f9b5cf67d
+  https://ethena.fi/_next/static/chunks/2044-aa802a3539b318b5.js  sha256=ce4359db842ac7541ef231a7303b0b654bb2f01fc97a2ed2ff22845f1da8cb76
+  https://ethena.fi/_next/static/chunks/8991-88c1c10203bb4112.js  sha256=dc188c671f0d90ce222f9c82fce511e7017b06878b0c0050769791ba392994d4
+  https://ethena.fi/_next/static/chunks/3970-25d6450aa67fde62.js  sha256=d706dfdfcaad622cae59e3d177ad032be1772b2995555dfe5746ccb3c7eec1d3
+  https://ethena.fi/_next/static/chunks/4749-1dcfa78a4e134452.js  sha256=4f22b9e296d819d0732c32385aa5a69fec61c16d3eb2874ee98e459b9ca0ccc6
+  https://ethena.fi/_next/static/chunks/5605-8a7c1c603838325c.js  sha256=a4715ed496f45cc1eea0ac4bcf46b918db994c28c9e729e7011507b0e9318051
+  https://ethena.fi/_next/static/chunks/app/layout-833410711ba8174f.js  sha256=b52122b47fd8c174c21c6e150a068fdde81834f0a71e0a661fccd8d3dd828c56
+  https://ethena.fi/_next/static/chunks/app/not-found-069dd855a19db7e9.js  sha256=201697f0411848f81ff00260a66fb68094e42383881db4bc3f6c3a7376f288ae
+  https://ethena.fi/_next/static/chunks/polyfills-42372ed130431b0a.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
+  https://ethena.fi/_next/static/chunks/webpack-d20fab9a0a824569.js  sha256=806facc25201edcf3910cc89d76ed7cb0233d15e0a15723e8912b33f94988421
+
+matches:
+  https://ethena.fi/restricted (HTML and inline scripts): …xt-center">Unfortunately, Ethena is not available in your country yet or your wallet is linked to high risk activities.</p></div></div></section><!--$?--><template id="B:1"></template><!--/$--></div><div data-testid="foo…

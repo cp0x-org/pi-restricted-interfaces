@@ -1,0 +1,203 @@
+{
+  "id": "sky",
+  "name": "Sky",
+  "targets": {
+    "app": "https://app.sky.money",
+    "repo": {
+      "repo": "jetstreamgg/tarmac",
+      "ref": "db72c8c98bccbff26e0ecc3ab83db7f6b10209cb"
+    },
+    "terms": "https://docs.sky.money/legal/skybase-international/terms-of-use",
+    "endpoints": [
+      "https://api.sky.money/geo-config"
+    ]
+  },
+  "checks": [
+    {
+      "id": "geo-ip-status",
+      "type": "code",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "The app asks the Sky compliance API /ip/status and blocks the whole app for a restricted region",
+      "source": {
+        "repo": "jetstreamgg/tarmac",
+        "ref": "db72c8c98bccbff26e0ecc3ab83db7f6b10209cb",
+        "path": "apps/webapp/src/modules/ui/context/ConnectedContext.tsx"
+      },
+      "expect": [
+        "if \\(vpnData\\?\\.isRestrictedRegion\\) return 'region-restricted'"
+      ]
+    },
+    {
+      "id": "geo-ip-status-call",
+      "type": "code",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "useVpnCheck() fetches {authUrl}/ip/status",
+      "source": {
+        "repo": "jetstreamgg/tarmac",
+        "ref": "db72c8c98bccbff26e0ecc3ab83db7f6b10209cb",
+        "path": "apps/webapp/src/hooks/authentication/useVpnCheck.ts"
+      },
+      "expect": [
+        "fetch\\(`\\$\\{authUrl\\}/ip/status`\\)"
+      ]
+    },
+    {
+      "id": "geo-terms-list",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Prohibited Jurisdictions named in the Sky Terms of Use (the region list the /ip/status block applies; not published in code)",
+      "source": {
+        "url": "https://docs.sky.money/legal/skybase-international/terms-of-use",
+        "kind": "terms"
+      },
+      "expect": [
+        "Prohibited Jurisdictions"
+      ],
+      "section": {
+        "start": "following countries or regions \\(\\W*Prohibited Jurisdictions\\W*\\):",
+        "end": "\\n"
+      },
+      "countries": "names"
+    },
+    {
+      "id": "feature-geo-config",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Route guard: modules disabled for the visitor's country by /geo-config redirect away (restrictive fallback on error)",
+      "source": {
+        "repo": "jetstreamgg/tarmac",
+        "ref": "db72c8c98bccbff26e0ecc3ab83db7f6b10209cb",
+        "path": "apps/webapp/src/modules/geo-config/routeGuard.ts"
+      },
+      "expect": [
+        "export async function requireModuleEnabled",
+        "FALLBACK_CONFIG"
+      ]
+    },
+    {
+      "id": "screening-address-status",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Wallet screening through {authUrl}/address/status before the terms and before a transaction",
+      "source": {
+        "repo": "jetstreamgg/tarmac",
+        "ref": "db72c8c98bccbff26e0ecc3ab83db7f6b10209cb",
+        "path": "apps/webapp/src/hooks/authentication/useRestrictedAddressCheck.ts"
+      },
+      "expect": [
+        "/address/status\\?address=\\$\\{address\\}"
+      ]
+    },
+    {
+      "id": "screening-wallet-blocked",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "A wallet that is not allowed gets the 'wallet-blocked' state",
+      "source": {
+        "repo": "jetstreamgg/tarmac",
+        "ref": "db72c8c98bccbff26e0ecc3ab83db7f6b10209cb",
+        "path": "apps/webapp/src/modules/ui/context/ConnectedContext.tsx"
+      },
+      "expect": [
+        "if \\(authData\\?\\.addressAllowed === false\\) return 'wallet-blocked'"
+      ]
+    },
+    {
+      "id": "vpn-terms-signature",
+      "type": "code",
+      "claim": "vpn",
+      "status": "detect",
+      "about": "VPN (and US) users are detected and must sign the Terms before every transaction",
+      "source": {
+        "repo": "jetstreamgg/tarmac",
+        "ref": "db72c8c98bccbff26e0ecc3ab83db7f6b10209cb",
+        "path": "apps/webapp/src/modules/ui/hooks/useTermsSignatureGate.tsx"
+      },
+      "expect": [
+        "checks for VPN use or location within the US",
+        "only US and VPN users owe the per-transaction signature"
+      ]
+    },
+    {
+      "id": "prod-ip-status",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Production JS: /ip/status decides 'region-restricted' for the whole app",
+      "source": {
+        "url": "https://app.sky.money"
+      },
+      "expect": [
+        "fetch\\(`\\$\\{e\\}/ip/status`\\)",
+        "isRestrictedRegion\\)return`region-restricted`"
+      ]
+    },
+    {
+      "id": "prod-geo-config",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production JS: per-country modules from api.sky.money/geo-config, restrictive fallback",
+      "source": {
+        "url": "https://app.sky.money"
+      },
+      "expect": [
+        "`https://api\\.sky\\.money/geo-config`",
+        "isRegionRestricted:!0"
+      ]
+    },
+    {
+      "id": "prod-screening",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Production JS: /address/status(/enhanced) screening and the 'wallet-blocked' state",
+      "source": {
+        "url": "https://app.sky.money"
+      },
+      "expect": [
+        "/address/status",
+        "addressAllowed===!1\\)return`wallet-blocked`"
+      ]
+    },
+    {
+      "id": "prod-vpn",
+      "type": "bundle",
+      "claim": "vpn",
+      "status": "detect",
+      "about": "Production JS: is_vpn from /ip/status",
+      "source": {
+        "url": "https://app.sky.money"
+      },
+      "expect": [
+        "is_vpn:",
+        "isConnectedToVpn"
+      ]
+    },
+    {
+      "id": "screening-api",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Sky compliance API /address/status answers addressAllowed:false for the sanctioned wallet and true for the control",
+      "source": {
+        "method": "GET",
+        "url": "https://api.sky.money/address/status?address={address}"
+      },
+      "expect_sdn": [
+        "^status: 200$",
+        "\"addressAllowed\":\\s*false"
+      ],
+      "expect_control": [
+        "^status: 200$",
+        "\"addressAllowed\":\\s*true"
+      ]
+    }
+  ]
+}

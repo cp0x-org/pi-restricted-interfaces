@@ -1,0 +1,65 @@
+check: polymarket/sweep-terms
+about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
+source: https://polymarket.com/tos
+checked_at: 2026-10-11T19:39:14Z
+fetched: https://web.archive.org/web/9999id_/https://polymarket.com/tos
+sha256: 9b9609bf7313c406e7f6f64a370dc097d6e67d3ca923a37425ead305278875bf
+http_status: 200
+via: archive
+--------------------------------------------------------------------------------
+countries: 
+
+clauses:
+  geofencing: None
+  vpn: None
+  screening: None
+  us_persons: None
+  kyc: None
+
+--- restriction paragraphs ---
+
+
+--- full text ---
+Terms of Use | Polymarket
+It looks like you’re in the US
+Trading is blocked in the United States on polymarket.com. Switch to polymarket.us to trade prediction markets.
+Go to polymarket.us Continue in view only mode
+Skip to main content
+To trade in the US, go to polymarket.us
+Trending Combos Perps Breaking New
+Politics Sports Crypto Esports Iran Finance Geopolitics Tech Culture Economy Weather Mentions Elections Art More
+To trade in the US, go to polymarket.us
+Terms of Use | Polymarket
+The World's Largest Prediction Market™
+Markets by category and topics
+Esports Odds Weather Odds & predictions Election Odds & predictions Bitcoin Predictions & odds Crypto Price predictions Culture Trends & predictions Earnings Predictions Economic Predictions & forecasts Financial Forecasts & predictions Perps Perpetual futures Geopolitical Predictions Mention Markets Political Odds & predictions Sports Odds & predictions Tech Trends & predictions World Trends & predictions
+Support & Social
+Learn 𝕏 (Twitter) Instagram Discord TikTok News Contact us Help Center Status
+Polymarket
+Rewards APIs Leaderboard Institutional Accuracy Brand Activity Careers Press
+Adventure One QSS Inc. © 2026 · Privacy · Terms of Use · Market Integrity · Transparency · Help Center · Docs
+Polymarket operates globally through separate legal entities. Polymarket US is operated by QCX LLC d/b/a Polymarket US, a CFTC-regulated Designated Contract Market. This international platform is not regulated by the CFTC and operates independently. Trading involves substantial risk of loss. See our Terms of Service & Privacy Policy .
+Home
+Search
+Breaking
+More
+It looks like you’re in the US
+Trading is blocked in the United States on polymarket.com. Switch to polymarket.us to trade prediction markets.
+Go to polymarket.us Continue in view only mode
+Skip to main content
+To trade in the US, go to polymarket.us
+Trending Combos Perps Breaking New
+Politics Sports Crypto Esports Iran Finance Geopolitics Tech Culture Economy Weather Mentions Elections Art More
+To trade in the US, go to polymarket.us
+Trending Combos Perps Breaking New
+Politics Sports Crypto Esports Iran Finance Geopolitics Tech Culture Economy Weather Mentions Elections Art More
+Home
+Search
+Breaking
+More
+Home
+Search
+Breaking
+More
+Trending Combos Perps Breaking New
+Politics Sports Crypto Esports Iran Finance Geopolitics Tech Culture Economy Weather Mentions Elections Art More

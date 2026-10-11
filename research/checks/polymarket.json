@@ -1,0 +1,130 @@
+{
+  "id": "polymarket",
+  "name": "Polymarket",
+  "targets": {
+    "app": "https://polymarket.com",
+    "repo": null,
+    "terms": "https://polymarket.com/tos",
+    "endpoints": [
+      "https://polymarket.com/api/geoblock"
+    ],
+    "network_blocks": {
+      "RO": "From Romania the request is answered by the internet provider (nginx/1.8.0 with an empty page instead of Cloudflare): a national block before the app, not a restriction of the interface"
+    }
+  },
+  "checks": [
+    {
+      "id": "geo-endpoint-docs",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Polymarket docs: orders from blocked regions are rejected; the verdict comes from GET polymarket.com/api/geoblock",
+      "source": {
+        "url": "https://docs.polymarket.com/developers/CLOB/geoblock",
+        "kind": "docs",
+        "archive": "https://web.archive.org/web/20260122064721/https://docs.polymarket.com/developers/CLOB/geoblock"
+      },
+      "expect": [
+        "Orders submitted from blocked regions will be rejected",
+        "GET https://polymarket\\.com/api/geoblock"
+      ]
+    },
+    {
+      "id": "geo-countries",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Help center: countries completely restricted from accessing Polymarket",
+      "source": {
+        "url": "https://help.polymarket.com/en/articles/13364163-geographic-restrictions",
+        "kind": "help",
+        "archive": "https://web.archive.org/web/20261006180258/https://help.polymarket.com/en/articles/13364163-geographic-restrictions"
+      },
+      "expect": [
+        "countries are completely restricted from accessing Polymarket"
+      ],
+      "section": {
+        "start": "countries are completely restricted from accessing Polymarket",
+        "end": "Blocked Regions"
+      },
+      "countries": "names"
+    },
+    {
+      "id": "geo-regions",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Help center: restricted regions inside otherwise accessible countries (Canadian provinces, occupied Ukrainian regions)",
+      "source": {
+        "url": "https://help.polymarket.com/en/articles/13364163-geographic-restrictions",
+        "kind": "help",
+        "archive": "https://web.archive.org/web/20261006180258/https://help.polymarket.com/en/articles/13364163-geographic-restrictions"
+      },
+      "expect": [
+        "specific regions within otherwise accessible countries are also restricted"
+      ],
+      "section": {
+        "start": "specific regions within otherwise accessible countries are also restricted",
+        "end": "Country-specific examples"
+      },
+      "exclude": [
+        "Canada \\(CA\\)",
+        "Ukraine \\(UA\\)"
+      ],
+      "countries": "names"
+    },
+    {
+      "id": "geo-close-only",
+      "type": "page",
+      "claim": "geo_site.close_only",
+      "status": "yes",
+      "about": "Help center: close-only countries, where users can close existing positions but cannot open new ones",
+      "source": {
+        "url": "https://help.polymarket.com/en/articles/13364163-geographic-restrictions",
+        "kind": "help",
+        "archive": "https://web.archive.org/web/20261006180258/https://help.polymarket.com/en/articles/13364163-geographic-restrictions"
+      },
+      "expect": [
+        "Some countries have a .close-only. restriction status"
+      ],
+      "section": {
+        "start": "Countries with close-only status include:",
+        "end": "For example"
+      },
+      "countries": "names"
+    },
+    {
+      "id": "geo-us-live",
+      "type": "live",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Live: /api/geoblock answers blocked=true to a visitor from the US",
+      "source": {
+        "url": "https://polymarket.com/api/geoblock",
+        "country": "US"
+      },
+      "expect": [
+        "\"blocked\":\\s*true",
+        "\"country\":\\s*\"US\""
+      ],
+      "countries": [
+        "US"
+      ]
+    },
+    {
+      "id": "vpn-terms",
+      "type": "page",
+      "claim": "vpn",
+      "status": "tos_only",
+      "about": "Help center: using a VPN to bypass the restrictions violates the Terms (no detection mechanism documented)",
+      "source": {
+        "url": "https://help.polymarket.com/en/articles/13364163-geographic-restrictions",
+        "kind": "help",
+        "archive": "https://web.archive.org/web/20261006180258/https://help.polymarket.com/en/articles/13364163-geographic-restrictions"
+      },
+      "expect": [
+        "strictly prohibits the use of VPNs or similar tools to bypass geographic restrictions"
+      ]
+    }
+  ]
+}

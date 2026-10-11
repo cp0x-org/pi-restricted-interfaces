@@ -1,0 +1,30 @@
+{
+  "id": "lombard",
+  "name": "Lombard",
+  "targets": {
+    "app": "https://www.lombard.finance/app",
+    "repo": null,
+    "terms": "https://docs.lombard.finance/resources/terms",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "feature-us-uk",
+      "type": "page",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Lombard docs: the yield strategy, incl. direct mint and redemption, is not available to US or UK persons",
+      "source": {
+        "url": "https://docs.lombard.finance/use/lbtc",
+        "kind": "docs"
+      },
+      "expect": [
+        "not available to US or UK persons"
+      ],
+      "countries": [
+        "US",
+        "GB"
+      ]
+    }
+  ]
+}

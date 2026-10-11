@@ -1,0 +1,10 @@
+check: aave/screening-overlay
+about: A non-compliant wallet (or a compliance error) gets a full-screen blocked overlay
+source: https://github.com/aave/interface/blob/32cc548b980baadea36cfea5227fc144d3f49958/src/components/AddressBlocked.tsx#L20
+checked_at: 2026-10-11T21:04:38Z
+fetched: https://raw.githubusercontent.com/aave/interface/32cc548b980baadea36cfea5227fc144d3f49958/src/components/AddressBlocked.tsx
+sha256: 734d221332318596955d15305537bead348758dd3f892cd11ecc916ea429f670
+--------------------------------------------------------------------------------
+L8: import { AddressBlockedModal } from './AddressBlockedModal';
+L20:   const showBlockedOverlay = status === 'non-compliant';
+L21:   const showErrorOverlay = status === 'error';

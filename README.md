@@ -21,8 +21,8 @@ no third-party requests.
 ## Data
 
 The dataset lives in [`monitor/data/interfaces.json`](monitor/data/interfaces.json) (schema v2, hand-maintained, every claim backed by evidence).
-The web app imports the generated [`src/data/interfaces.json`](src/data/interfaces.json), filtered to EVM networks; the Russian report
-and the CSV snapshot in [`monitor/out/`](monitor/out/) cover the whole catalog, and dated frozen copies live in [`monitor/archive/`](monitor/archive/).
+The web app imports the generated [`src/data/interfaces.json`](src/data/interfaces.json), filtered to EVM networks; the report
+and the CSV snapshot in [`monitor/out/`](monitor/out/) cover the whole catalog, the version the site shows (with its checks and evidence) is [`monitor/current/`](monitor/current/), and previous versions live in [`monitor/archive/`](monitor/archive/) as `<scanned>_<archived>/` (`pnpm monitor:update`, see [`monitor/docs/updating.md`](monitor/docs/updating.md)).
 
 ```
 monitor/data/interfaces.json ──(pnpm monitor:build)──▶ src/data/interfaces.json + monitor/out/report.md + monitor/out/interfaces.csv
@@ -34,6 +34,13 @@ only) and is a maintainer tool: `pnpm build` never runs it. See [`monitor/README
 schema, the static scanner and the evidence verifier, [`monitor/docs/roadmap.md`](monitor/docs/roadmap.md) for the
 monitor architecture (live probes, proxies, mock wallet, scoring, alerts) and
 [`monitor/prompts/auditor-agent.md`](monitor/prompts/auditor-agent.md) for the LLM auditor prompt.
+
+Independent reproduction: [`research/`](research/) turns every restriction the site counts into a check against its
+primary source (code at a pinned commit, the production bundle, docs/Terms/press with Wayback fallback, public APIs
+with a sanctioned vs a control wallet, live requests from a country through a proxy) and rebuilds the table without
+reading the site's data: `pnpm research:all` writes `research/out/report.md` and `research/out/table.csv` and compares
+them with `src/data/interfaces.json`. Stdlib Python, no browser, no AI. How to run it:
+[`research/README.md`](research/README.md); methodology: [`research/METHODOLOGY.md`](research/METHODOLOGY.md).
 
 ## Languages
 
@@ -96,7 +103,7 @@ pnpm monitor:build
 pnpm build
 ```
 
-Adding a protocol: short step-by-step guide (in Russian) in [`monitor/ADD_PROTOCOL.md`](monitor/ADD_PROTOCOL.md).
+Adding a protocol: short step-by-step guide in [`monitor/ADD_PROTOCOL.md`](monitor/ADD_PROTOCOL.md).
 
 ## Application Links
 - Permissionless interfaces: [pi.cp0x.com](https://pi.cp0x.com/)

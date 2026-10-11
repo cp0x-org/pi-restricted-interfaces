@@ -1,0 +1,9 @@
+check: snapshot/geo-terms
+about: The Terms list SECO-embargoed countries and only reserve the right to restrict access by location
+source: https://github.com/snapshot-labs/sx-monorepo/blob/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef/apps/ui/src/views/Terms.vue#L13
+checked_at: 2026-10-11T21:04:43Z
+fetched: https://raw.githubusercontent.com/snapshot-labs/sx-monorepo/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef/apps/ui/src/views/Terms.vue
+sha256: 46f648ef49eb2add5443302894c1d50cfd40f590aec6cc940d278e65cf1bbebe
+--------------------------------------------------------------------------------
+L13: ## 1. Eligibility and prohibited jurisdictions
+L23: The company reserves the right to technically restrict access to Snapshot and the content provided thereon based on your geographical location.

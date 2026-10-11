@@ -1,0 +1,26 @@
+{
+  "id": "pendle",
+  "name": "Pendle",
+  "targets": {
+    "app": "https://app.pendle.finance",
+    "repo": null,
+    "terms": "https://docs.pendle.finance/pendle-v2/TermsOfUse",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-terms",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "tos_only",
+      "about": "The Terms forbid circumventing geo-blocks with a VPN; no technical block verified (closed frontend)",
+      "source": {
+        "url": "https://docs.pendle.finance/pendle-v2/TermsOfUse",
+        "kind": "terms"
+      },
+      "expect": [
+        "You shall not use a virtual private network, proxy or any other method to circumvent geo-blocks"
+      ]
+    }
+  ]
+}
