@@ -53,6 +53,7 @@
     "monitor:scan": "python3 -I monitor/scripts/scan.py monitor/repos monitor/data/scan_raw.json",
     "monitor:probe": "python3 -I monitor/scripts/probe.py run monitor/data/interfaces.json monitor/probe/out",
     "monitor:probe:merge": "python3 -I monitor/scripts/probe.py merge monitor/data/observations.json",
+    "monitor:sync": "python3 -I monitor/scripts/sync.py",
     "monitor:update": "python3 -I monitor/scripts/update.py",
     "monitor:update:dry": "python3 -I monitor/scripts/update.py --dry-run",
     "research:code": "python3 -I research/check_code.py",

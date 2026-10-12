@@ -1883,6 +1883,21 @@
         "WebFetch (US): normal page"
       ],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "tickers",
+          "method": "GET",
+          "url": "https://arbitrum-api.gmxinfra.io/prices/tickers",
+          "note": "Read-only price API the app uses; a control for a protocol without a server-side geo check.",
+          "rules": [
+            {
+              "match": "^HTTP 200\\b",
+              "state": "ok",
+              "note": "price API served"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "landing/src/pages/TermsAndConditions/TermsAndConditions.tsx"
       ],
@@ -1910,12 +1925,12 @@
         "s": "yes",
         "countries": [],
         "close_only": [],
-        "method": "The app calls the info API legalCheck for the visitor's IP; restrictions 'a' (BlockActions) disables trading and the app shows \"Not available in your jurisdiction\". IP geolocation by IPdata (Privacy Policy). Which countries get the block is not confirmed yet: Terms 1.6 name the United States and Ontario (plus unnamed sanctioned territories); a per-country check is pending."
+        "method": "The app calls the info API legalCheck for the visitor's IP; restrictions 'a' (BlockActions) disables trading and the app shows \"Not available in your jurisdiction\". IP geolocation by IPdata (Privacy Policy). The blocked countries are those where legalCheck answered 'a' to the live probe (see the observations; 2026-10-12: US, US-NY, CA-ON, CU, IR, MM, SY); Terms 1.6 name the United States and Ontario (plus unnamed sanctioned territories)."
       },
       "geo_feature": {
-        "s": "unknown",
+        "s": "yes",
         "countries": [],
-        "scope": "legalCheck also returns codes that hide outcome markets ('o', returned from SG, BR and FR on 2026-10-12) and a UK code ('u'); not counted."
+        "scope": "Outcome markets (contracts that settle on the outcome of an event) are hidden where legalCheck answers 'o' (HideOutcomes) or 'u' (Uk: outcome markets hidden plus the app's UK-specific flow). The countries are those of the live probe (see the observations; 2026-10-12: 19 of 62 countries, among them DE, FR, GB, JP, SG, CA)."
       },
       "vpn": {
         "s": "tos_only",
@@ -1945,6 +1960,44 @@
         "api.hyperliquid.xyz/info legalCheck (2026-10-12): SDN -> userAllowed:false; control -> userAllowed:true"
       ],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "legalCheck",
+          "method": "POST",
+          "url": "https://api.hyperliquid.xyz/info",
+          "body": {
+            "type": "legalCheck",
+            "user": "0x4FaEC93ff98ab58bacb93dDA550bcB8294e590eE"
+          },
+          "note": "The IP check the app runs on load, with the app's own placeholder address.",
+          "flags": [
+            "restrictions",
+            "userAllowed"
+          ],
+          "rules": [
+            {
+              "match": "\"restrictions\"\\s*:\\s*\"a\"",
+              "state": "blocked",
+              "note": "restrictions=a (BlockActions): the app disables trading"
+            },
+            {
+              "match": "\"restrictions\"\\s*:\\s*\"o\"",
+              "state": "feature_limited",
+              "note": "restrictions=o (HideOutcomes): the app hides outcome markets"
+            },
+            {
+              "match": "\"restrictions\"\\s*:\\s*\"u\"",
+              "state": "feature_limited",
+              "note": "restrictions=u (Uk): the app hides outcome markets and runs its UK flow"
+            },
+            {
+              "match": "\"restrictions\"\\s*:\\s*\"n\"",
+              "state": "ok",
+              "note": "restrictions=n: no IP restriction"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "app.hyperliquid.xyz bundle: legalCheck call, BlockActions=`a`, 'Not available in your jurisdiction'",
         "app.hyperliquid.xyz bundle: TermsOfUse 1.6, PrivacyPolicy (geo-blocking by IP address using IPdata)",
@@ -2030,9 +2083,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
-      "geo_endpoints": [
-        "https://geolocation.drift-labs.workers.dev/"
-      ],
+      "geo_endpoints": [],
       "evidence": [
         "velocity-exchange/velocity-common: common-ts/src/utils/geoblock/index.ts, common-ts/src/constants/geoblockList.ts, react/src/hooks/useGeoBlocking.tsx"
       ],
@@ -2069,7 +2120,7 @@
         "countries": [
           "US"
         ],
-        "scope": "Stock and index pairs: the app asks gTrade's geoblock API (wrkr.randomdegenerator.xyz/main/api/geo) for per-group flags and blocks the pairs of a flagged group. From the US stocks and indices are flagged; from 20 other countries tested on 2026-10-12 none are."
+        "scope": "Stock and index pairs: the app asks gTrade's geoblock API (wrkr.randomdegenerator.xyz/main/api/geo) for per-group flags and blocks the pairs of a flagged group. The flagged groups by country are those of the live probe (see the observations; 2026-10-12, 62 countries: stocks and indices in US, CU, IR, SY)."
       },
       "vpn": {
         "s": "tos_only",
@@ -2098,8 +2149,34 @@
         "wrkr.randomdegenerator.xyz/main/api/geo (2026-10-12): US -> stocks:true, indices:true; RO GB DE FR NL CA JP AU SG HK KR IN AE TR UA BR AR NG -> all false",
         "WebFetch (US): normal page"
       ],
-      "geo_endpoints": [
-        "https://wrkr.randomdegenerator.xyz/main/api/geo"
+      "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "geo",
+          "method": "GET",
+          "url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+          "note": "gTrade's geoblock API: a market group set to true has its pairs blocked in the app.",
+          "flags": [
+            "country",
+            "features.stocks",
+            "features.indices",
+            "features.forex",
+            "features.crypto",
+            "features.commodities"
+          ],
+          "rules": [
+            {
+              "match": "\"(stocks|indices|forex|crypto|commodities)\"\\s*:\\s*true",
+              "state": "feature_limited",
+              "note": "a market group is flagged: its pairs are blocked"
+            },
+            {
+              "match": "\"features\"\\s*:",
+              "state": "ok",
+              "note": "no market group flagged"
+            }
+          ]
+        }
       ],
       "evidence": [
         "gains.trade bundle: useGeoblock hook ('geoblock-features', features[group] === true blocks the pair)",
@@ -2139,7 +2216,7 @@
         "s": "yes",
         "countries": [],
         "close_only": [],
-        "method": "The API rejects requests with geo_restriction_not_allowed (\"You are accessing Lighter from a restricted jurisdiction\") and the app shows a geo-blocked banner; the Terms log the IP to enforce access restrictions. Which countries get the block is not confirmed yet: the Terms name 14 jurisdictions; a per-country check is pending."
+        "method": "The API rejects requests with geo_restriction_not_allowed (\"You are accessing Lighter from a restricted jurisdiction\") and the app shows a geo-blocked banner; the Terms log the IP to enforce access restrictions. The blocked countries are those where GET /api/v1/geoLocation answered error 20558 to the live probe (see the observations; 2026-10-12: 14 of 62 countries, among them US, CA, GB, RU, UA, CN); the Terms name 14 jurisdictions."
       },
       "geo_feature": {
         "s": "unknown",
@@ -2184,6 +2261,29 @@
       "notes": "Closed frontend; SDKs are open. The geo restriction is an API error code the app turns into a banner. Wallet login goes through Dynamic, whose public project settings carry enableExternalWalletOnTransactionSanctions: true (effect not verified).",
       "live": [],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "geoLocation",
+          "method": "GET",
+          "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+          "note": "The API's geo check, polled by the app; error 20558 turns into the geo-blocked banner.",
+          "flags": [
+            "code"
+          ],
+          "rules": [
+            {
+              "match": "\"code\"\\s*:\\s*20558",
+              "state": "blocked",
+              "note": "API error 20558 geo_restriction_not_allowed"
+            },
+            {
+              "match": "^HTTP 200\\b",
+              "state": "ok",
+              "note": "code 200: no geo restriction"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "app.lighter.xyz bundle: geo_restriction_not_allowed, geo-blocked banner",
         "https://lighter.xyz/terms",
@@ -2368,6 +2468,74 @@
         "POST pro.aave.com/api/geo from RO (2026-10-10): USDC and WETH on Ethereum -> isGeoblocked=false"
       ],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "asset geoblock",
+          "method": "POST",
+          "url": "https://pro.aave.com/api/geo",
+          "body": {
+            "tokens": [
+              {
+                "chainId": 1,
+                "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+              },
+              {
+                "chainId": 1,
+                "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+              },
+              {
+                "chainId": 1,
+                "address": "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f"
+              },
+              {
+                "chainId": 1,
+                "address": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8"
+              },
+              {
+                "chainId": 1,
+                "address": "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD"
+              },
+              {
+                "chainId": 1,
+                "address": "0xC139190F447e929f090Edeb554D95AbB8b18aC1C"
+              },
+              {
+                "chainId": 1,
+                "address": "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497"
+              },
+              {
+                "chainId": 1,
+                "address": "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3"
+              },
+              {
+                "chainId": 1,
+                "address": "0x43415eB6ff9DB7E26A15b704e7A3eDCe97d31C4e"
+              },
+              {
+                "chainId": 1,
+                "address": "0x14d60E7FDC0D71d8611742720E4C50E7a974020c"
+              },
+              {
+                "chainId": 1,
+                "address": "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c"
+              }
+            ]
+          },
+          "note": "The app asks which assets are geoblocked for the visitor (11 Ethereum assets: USDC, WETH, GHO, PYUSD, RLUSD, USDtb, sUSDe, USDe, USTB, USCC, EURC).",
+          "rules": [
+            {
+              "match": "\"isGeoblocked\"\\s*:\\s*true",
+              "state": "feature_limited",
+              "note": "an asset is geoblocked: the app hides or disables it"
+            },
+            {
+              "match": "\"areAssetsGeoblocked\"",
+              "state": "ok",
+              "note": "none of the probed assets is geoblocked"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "https://aave.com/blog/aave-pro-user-guide",
         "https://aave.com/terms-of-service",
@@ -6266,7 +6434,7 @@
         "s": "yes",
         "countries": [],
         "close_only": [],
-        "method": "GET /geo answers 451 for a restricted region and the app replaces itself with \"Extended is not available in your region\" (API error GLOBAL.NOT_AVAILABLE_IN_YOUR_REGION). Which countries get the block is not confirmed yet: the Restricted Countries page names 16 jurisdictions; a per-country check is pending."
+        "method": "GET /geo answers 451 for a restricted region and the app replaces itself with \"Extended is not available in your region\" (API error GLOBAL.NOT_AVAILABLE_IN_YOUR_REGION). The blocked countries are those where /geo answered 451 to the live probe (see the observations); the Restricted Countries page names 16 jurisdictions."
       },
       "geo_feature": {
         "s": "unknown",
@@ -6347,7 +6515,7 @@
         "s": "yes",
         "countries": [],
         "close_only": [],
-        "method": "POST /bapi/futures/v1/public/future/web3/common-check-ip returns {isBlocked, orderLimit, country}: isBlocked refuses the wallet connection (\"Service not available in your region\"), orderLimit leaves only closing positions and withdrawals. Which countries get which is not confirmed yet: the Terms name 11 Prohibited Jurisdictions; a per-country check is pending."
+        "method": "POST /bapi/futures/v1/public/future/web3/common-check-ip returns {isBlocked, orderLimit, country}: isBlocked refuses the wallet connection (\"Service not available in your region\"), orderLimit leaves only closing positions and withdrawals. The countries are those of the live probe (see the observations; 2026-10-12: isBlocked in BY, CD, CU, IQ, IR, SD, SS, SY, ZW; orderLimit, that is close-only, in the US); the Terms name 11 Prohibited Jurisdictions."
       },
       "geo_feature": {
         "s": "unknown",
@@ -6389,6 +6557,39 @@
       "notes": "Closed frontend. The IP check is a public API call the app makes before connecting a wallet; the answer names the country but the mapping of countries to isBlocked and orderLimit is server-side. The IP check answered isBlocked:false and orderLimit:false from Singapore, Brazil and France on 2026-10-12.",
       "live": [],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "common-check-ip",
+          "method": "POST",
+          "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+          "body": {
+            "sourceCode": ""
+          },
+          "note": "The IP check the app makes before connecting a wallet.",
+          "flags": [
+            "data.country",
+            "data.isBlocked",
+            "data.orderLimit"
+          ],
+          "rules": [
+            {
+              "match": "\"isBlocked\"\\s*:\\s*true",
+              "state": "blocked",
+              "note": "isBlocked: the app refuses to connect a wallet"
+            },
+            {
+              "match": "\"orderLimit\"\\s*:\\s*true",
+              "state": "close_only",
+              "note": "orderLimit: only closing positions and withdrawals"
+            },
+            {
+              "match": "\"isBlocked\"\\s*:\\s*false",
+              "state": "ok",
+              "note": "isBlocked=false, orderLimit=false"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "www.asterdex.com bundle: common-check-ip, dex-ip-blocked, 'Only closing positions and withdrawals are available'",
         "https://docs.asterdex.com/resources/terms-and-conditions",

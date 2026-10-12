@@ -116,22 +116,27 @@ arrays of country codes. A site unreachable from this machine is fetched through
 - **Proxy.** The catalog uses **Decodo (formerly Smartproxy)**. The runs of 2026-10-08 and 2026-10-09 and the first
   checks of 2026-10-11 went through Decodo's trial ISP pool (`isp.decodo.com:10001`, US exit: AS5650 Verizon Business),
   which stopped authorizing (HTTP 407) during the 2026-10-11 run. Since 2026-10-12 the residential pool is used:
-  `gate.decodo.com:7000` with the country in the user name (`user-LOGIN-country-us`; US states as
+  `gate.decodo.com:7000` with the country and a sticky session in the user name
+  (`user-LOGIN-country-us-session-<id>-sessionduration-30`, one exit IP per country and run; US states as
   `-country-us-state-us_new_york`, Canadian provinces through a city, `-country-ca-city-toronto`); the dashboard's
   `gate.decodo.com:10001` is a sticky session with a random country and cannot be targeted. Exits are home networks
   (for example RCN and Charter in the US, BT and Virgin Media in the UK, Bell in Canada, Vodafone in Ukraine). Any
   provider with country targeting works, only the `PROBE_PROXY_URL` string (a template with `{cc}`) changes. Prices and
   setup are described in `monitor/docs/probing.md`.
-- **Vantage.** Three independent services (`api.country.is`, `ipinfo.io`, `ifconfig.co`) are asked through the same
-  proxy which country they see. At least two must answer, and all answers must equal the requested country. Otherwise
-  the check is skipped: geolocation databases disagree, especially on ISP and datacenter addresses.
+- **Vantage.** Three IP -> country lookups (`api.country.is`, `ipinfo.io`, `ifconfig.co`) are asked through the same
+  proxy which country the exit IP is in. The proxy must answer, and at least half of the answers must be the requested
+  country (geolocation databases disagree on some ranges: one of them puts the Iranian AS58224 in Azerbaijan).
+  Otherwise the check is skipped: the provider has no exit there, or gave one in another country; neither says
+  anything about the interface.
 - **Request.** One GET with the redirect chain recorded. Matches are searched in a transcript of the response: status,
   final URL, redirects, body.
 - **Without a proxy.** The latest verified observation for the same interface, country and URL is taken from
   `monitor/data/observations.json` (written by `monitor/scripts/probe.py`). The output marks it `REC` with its date and
   network instead of passing it off as a fresh check.
-- Sanctioned jurisdictions (IR, KP, SY, CU, occupied regions) are not checked live: commercial providers do not sell
-  them, and such use is legally questionable. For them, code, configs and documentation remain.
+- Sanctioned and high-risk jurisdictions (the `sanctioned` group of `monitor/data/countries.json`: RU, BY, IR, KP,
+  CU, SY, VE, MM and others) are checked live where the proxy has exits. The Decodo residential pool on 2026-10-12 had
+  exits in all of them except KP and CF; CU answered now and then. Occupied regions (UA-Crimea and others) cannot be
+  targeted; for them, code, configs and documentation remain.
 
 ### 4.6 Sweeps: every check family for every interface
 
@@ -142,7 +147,7 @@ missing for an interface only when there is nothing to check.
 | Sweep | Applies to | Method |
 |---|---|---|
 | App JavaScript | every interface (all have an app URL) | the app's HTML, every `<script>`, and lazily loaded chunks found in the code (Next.js `static/chunks`, webpack/Angular chunk maps, Vite `assets/`, Vue CLI `js/`), up to 1,500 files / 80 MB per app; searched for the signals in `lib/signals.py` |
-| Live | every interface | the app page and its known geo endpoints from this machine and through a residential proxy in each of 20 countries — `US, US-NY, CA-ON, GB, DE, FR, NL, PL, UA, TR, AE, SG, HK, JP, BR, AR, NG, VN, KZ, GE` (vantage verified as in 4.5); state per vantage: ok, blocked (HTTP 451, a redirect to a blocking page, a blocking text, or an empty page from a different server while other vantages get the app), challenge (anti-bot), error; the list of `<script>` files is compared between vantages |
+| Live | every interface | the app page and its known geo endpoints from this machine and through a residential proxy in each country of `monitor/data/countries.json` — 40 popular countries, the regions US-NY and CA-ON, and 21 sanctioned or high-risk jurisdictions (vantage verified as in 4.5); state per vantage: ok, blocked (HTTP 451, a redirect to a blocking page, a blocking text, or an empty page from a different server while other vantages get the app), challenge (anti-bot), error; the list of `<script>` files is compared between vantages |
 | Code | every open repository (30) | every source file at the pinned commit (tests, locales and build output excluded), the same signals, file:line permalinks |
 | Terms | every published Terms (54) | the paragraphs about restricted, prohibited or sanctioned jurisdictions and the list items under them; countries read with the dictionary; clauses flagged: geofencing/IP blocking, VPN, sanctions, wallet screening, US persons, KYC. Sources in order: the page, the same page through a proxy, the Terms file in the frontend's repository, the latest Wayback snapshot, the prose compiled into the app's JavaScript |
 | Public API | every interface with a known public screening endpoint (9) | the claim check of 4.4 |

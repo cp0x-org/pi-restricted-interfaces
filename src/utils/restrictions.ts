@@ -147,6 +147,12 @@ function entry(raw: unknown, index: number): InterfaceEntry {
     notes: str(raw.notes, w('notes')),
     live: isStringArray(raw.live) ? raw.live : [],
     geo_endpoints: isStringArray(raw.geo_endpoints) ? raw.geo_endpoints : [],
+    api_probes: (Array.isArray(raw.api_probes) ? raw.api_probes : []).filter(isRecord).map((p, n) => ({
+      name: str(p.name, w(`api_probes[${n}].name`)),
+      method: p.method === 'POST' ? 'POST' : 'GET',
+      url: str(p.url, w(`api_probes[${n}].url`)),
+      note: typeof p.note === 'string' ? p.note : ''
+    })),
     evidence: isStringArray(raw.evidence) ? raw.evidence : [],
     confidence: oneOf(CONFIDENCE, raw.confidence, w('confidence')),
     alternatives: alternatives.map((a, n) => {
@@ -347,8 +353,10 @@ export function observationsFor(e: InterfaceEntry, cc: string): Observation[] {
 const observedRestriction = (o: Observation): CountryVerdict['status'] | null =>
   o.ui_state === 'blocked' || o.ui_state === 'close_only' || o.ui_state === 'feature_limited' ? o.ui_state : null;
 
+const KIND_LABELS: Record<Observation['kind'], string> = { site: 'Landing page', geo_endpoint: 'Geo endpoint', api: 'API' };
+
 const describe = (o: Observation): string =>
-  `${o.kind === 'site' ? 'Landing page' : 'Geo endpoint'} ${o.url} → HTTP ${o.http_status ?? '—'}` +
+  `${KIND_LABELS[o.kind]} ${o.url} → HTTP ${o.http_status ?? '—'}` +
   `${o.final_url && o.final_url !== o.url ? ` → ${o.final_url}` : ''}${o.note ? `; ${o.note}` : ''}`;
 
 /**
@@ -371,13 +379,17 @@ export function countryVerdict(e: InterfaceEntry, cc: string): CountryVerdict {
     const detail = restrictedStatically ? `${base.detail} Confirmed live: ${describe(blocking)}` : describe(blocking);
     return { status, basis: 'observed', detail, regions: [], observation: blocking, conflict: base.status === 'ok' };
   }
-  const served = obs.find((o) => o.kind === 'site' && o.ui_state === 'ok');
+  // The protocol's own API saying "no restriction" is a stronger answer than a landing page that was served.
+  const served = obs.find((o) => o.kind === 'api' && o.ui_state === 'ok') ?? obs.find((o) => o.kind === 'site' && o.ui_state === 'ok');
   if (served) {
     if (base.status === 'ok' || base.status === 'unknown') {
       return {
         status: 'ok',
         basis: 'observed',
-        detail: 'No edge-level block observed; client-side gates not evaluated',
+        detail:
+          served.kind === 'api'
+            ? `The protocol's API reported no restriction (${served.note}); wallet screening not evaluated`
+            : 'No edge-level block observed; client-side gates not evaluated',
         regions: [],
         observation: served
       };

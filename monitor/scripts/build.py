@@ -12,6 +12,9 @@ Python >= 3.9, stdlib only.
 import argparse, csv, json, os, re, sys
 from collections import Counter, OrderedDict
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import observed  # noqa: E402
+
 # ----------------------------------------------------------------------------- vocabularies
 S_OK = ("yes", "no", "reported", "tos_only", "optional", "unknown")
 LAYER_OK = (None, "edge", "frontend", "api", "contract")
@@ -30,7 +33,8 @@ REQUIRED = ("id", "name", "description", "category", "chains", "url", "frontend_
             "networks", "geo_site", "geo_feature", "vpn", "screening", "asset_filter", "tos", "notes", "live", "geo_endpoints",
             "evidence", "confidence", "alternatives")
 OBS_STATES = ("ok", "blocked", "close_only", "feature_limited", "challenge", "error", "unknown")
-OBS_KINDS = ("site", "geo_endpoint")
+OBS_KINDS = ("site", "geo_endpoint", "api")
+PROBE_METHODS = ("GET", "POST")
 PROXY_TYPES = ("residential", "isp", "mobile", "datacenter", "tor", "direct")
 
 ISO2 = frozenset("""
@@ -252,8 +256,7 @@ def validate(data):
             warnings.append(f"{iid}: EVM interface without networks[]")
         if not isinstance(i["geo_endpoints"], list) or not all(isinstance(u, str) and u.startswith("https://") for u in i["geo_endpoints"]):
             raise Invalid(f"{iid}: geo_endpoints must be a list of https URLs")
-        if gs["s"] == "yes" and not gs["countries"]:
-            warnings.append(f"{iid}: geo_site.s=yes but no countries listed")
+        check_api_probes(iid, i.get("api_probes", []))
         if "version" in i and (not isinstance(i["version"], str) or not 1 <= len(i["version"]) <= 40):
             raise Invalid(f"{iid}: version must be a short label (1-40 characters)")
         if "aka" in i and (not isinstance(i["aka"], str) or not 1 <= len(i["aka"]) <= 40):
@@ -369,6 +372,35 @@ def render_report(items, template):
     return out, stats, prov_line
 
 
+def check_api_probes(iid, probes):
+    """api_probes[]: {name, method, url, body?, note?, flags?[], rules?[{match, state, note?}]}, one per URL."""
+    if not isinstance(probes, list):
+        raise Invalid(f"{iid}: api_probes must be a list")
+    urls = set()
+    for n, p in enumerate(probes):
+        w = f"{iid}: api_probes[{n}]"
+        if not isinstance(p, dict) or not isinstance(p.get("name"), str) or not p["name"]:
+            raise Invalid(f"{w} needs a name")
+        check_enum(w + ".method", p.get("method", "GET"), PROBE_METHODS)
+        if not str(p.get("url", "")).startswith("https://"):
+            raise Invalid(f"{w}.url must be an https URL")
+        if p["url"] in urls:
+            raise Invalid(f"{w}.url repeats another probe's URL (observations are keyed by URL)")
+        urls.add(p["url"])
+        if "body" in p and (p.get("method") != "POST" or not isinstance(p["body"], (dict, list))):
+            raise Invalid(f"{w}.body is a JSON object or array, for POST only")
+        if not isinstance(p.get("flags", []), list) or not all(isinstance(f, str) for f in p.get("flags", [])):
+            raise Invalid(f"{w}.flags must be a list of JSON paths or header:<name>")
+        for k, rule in enumerate(p.get("rules", [])):
+            if not isinstance(rule, dict) or not isinstance(rule.get("match"), str):
+                raise Invalid(f"{w}.rules[{k}] needs a match regex")
+            try:
+                re.compile(rule["match"])
+            except re.error as e:
+                raise Invalid(f"{w}.rules[{k}].match: {e}")
+            check_enum(f"{w}.rules[{k}].state", rule.get("state"), OBS_STATES)
+
+
 # ----------------------------------------------------------------------------- observations (P3 probe)
 OBS_REQUIRED = ("interface_id", "kind", "url", "country", "region", "proxy_type", "vantage", "at", "http_status", "final_url",
                 "ui_state", "flags", "note")
@@ -401,15 +433,13 @@ def load_observations(path, ids):
     return obs
 
 
-def latest_observations(obs):
-    """Verified, non-error observations; the newest per (interface, country, region, proxy_type, kind, url)."""
-    latest = OrderedDict()
-    for o in obs:
-        if not o["vantage"].get("verified") or o["ui_state"] == "error":
-            continue
-        key = (o["interface_id"], o["country"], o["region"], o["proxy_type"], o["kind"], o["url"])
-        if key not in latest or o["at"] > latest[key]["at"]:
-            latest[key] = o
+probe_targets = observed.targets
+
+
+def latest_observations(obs, targets=None):
+    """Verified, non-error observations; the newest per (interface, country, region, proxy_type, kind, url).
+    With targets, endpoint observations of URLs no longer probed are dropped: they would stay forever otherwise."""
+    latest = observed.latest(obs, targets)
     by_iface = {}
     for key, o in sorted(latest.items(), key=lambda kv: (kv[0][0], kv[0][1], kv[0][2] or "", kv[0][4], kv[0][5], kv[0][3])):
         by_iface.setdefault(key[0], []).append(OrderedDict((f, o[f]) for f in OBS_UI_FIELDS))
@@ -449,7 +479,7 @@ def ui_dataset(data, observations, ui_chains=None):
     meta["catalog_total"] = len(data["interfaces"])
     meta["defunct_hidden"] = [display_name(i) for i in data["interfaces"] if lifecycle(i) == "defunct"]
     meta["scope"] = "EVM networks, plus apps whose official interface lists EVM networks" if ui_chains == {"evm"} else ("chains: " + ", ".join(sorted(ui_chains)) if ui_chains else "all interfaces")
-    by_iface = latest_observations(observations)
+    by_iface = latest_observations(observations, probe_targets(data))
     items = []
     for i in data["interfaces"]:
         # An app on its own chain is shown when its official interface lists EVM networks (deposits, an EVM side chain).
@@ -482,7 +512,8 @@ def main():
     ap.add_argument("outdir")
     ap.add_argument("--ui", help="write the web app dataset (entries + computed fields) to this path")
     ap.add_argument("--ui-chains", help="comma-separated chain tags to keep in the UI dataset, e.g. evm (report/CSV stay complete)")
-    ap.add_argument("--observations", help="monitor/data/observations.json from probe.py (latest verified ones go to the UI dataset)")
+    ap.add_argument("--observations", help="monitor/data/observations.json from probe.py (latest verified ones go to the UI dataset; "
+                                           "observed blocks are counted, see observed.py)")
     args = ap.parse_args()
 
     with open(args.src, encoding="utf-8") as fh:
@@ -493,9 +524,23 @@ def main():
     except Invalid as e:
         print(f"invalid data: {e}", file=sys.stderr)
         sys.exit(1)
+    # Countries the probe saw restricted are counted everywhere below (site dataset, report, CSV); the catalog file is not
+    # touched, so the next probe run that sees them open again simply stops adding them.
+    seen = observed.found(observations, probe_targets(data))
+    items, added = [], OrderedDict()
+    for i in data["interfaces"]:
+        e, add = observed.apply(i, seen.get(i["id"], {}))
+        items.append(e)
+        if add:
+            added[i["id"]] = add
+    data = OrderedDict(data, interfaces=items)
+    for i in items:
+        if i["geo_site"]["s"] == "yes" and not i["geo_site"]["countries"] and not i["geo_site"]["close_only"]:
+            warnings.append(f"{i['id']}: geo_site.s=yes but no countries listed or observed")
     for w in warnings:
         print(f"warning: {w}", file=sys.stderr)
-    items = data["interfaces"]
+    for iid, add in added.items():
+        print(f"observed: {iid} " + "; ".join(f"{f}.{k} +{' '.join(t)}" for (f, k), t in add.items()))
 
     os.makedirs(args.outdir, exist_ok=True)
     with open(args.template, encoding="utf-8") as fh:
@@ -520,7 +565,7 @@ def main():
     print("groups:", dict(Counter(category_group(i) for i in items)))
     print("tags:", dict(Counter(t for i in items for t in chain_tags(i))))
     if observations:
-        lat = latest_observations(observations)
+        lat = latest_observations(observations, probe_targets(data))
         print(f"observations: {len(observations)} stored, {sum(len(v) for v in lat.values())} latest verified across {len(lat)} interfaces")
 
 

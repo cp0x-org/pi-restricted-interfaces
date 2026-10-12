@@ -109,6 +109,10 @@ python3 -I research/combine.py | grep myprotocol          # the rating and restr
 
 ## 4. Optional: a live check from other countries
 
+If the app decides the block after an API call (a geo check, a legal check, an IP check before connecting a wallet), add
+that call to `api_probes` (format and examples: `monitor/docs/probing.md`, section 4a): the probe then asks it from
+every country and records the protocol's own verdict, not only whether the landing page loads.
+
 ```bash
 set -a; source .env.probe; set +a                     # proxy credentials, see monitor/docs/probing.md
 pnpm monitor:probe -- --countries US,DE,UA --only myprotocol

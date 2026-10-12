@@ -369,6 +369,11 @@ export default function InterfacePage() {
                 {T.probeEndpoints}: {entry.geo_endpoints.join(', ')}
               </Typography>
             )}
+            {entry.api_probes.length > 0 && (
+              <Typography variant="caption" color="text.secondary" component="div" sx={{ mt: 1 }}>
+                {T.apiProbes}: {entry.api_probes.map((p) => `${p.method} ${p.url} (${p.name})`).join(', ')}
+              </Typography>
+            )}
           </SubCard>
         </Grid>
         <Grid size={{ xs: 12 }}>
@@ -399,7 +404,7 @@ export default function InterfacePage() {
                         <TableCell>{L.PROXY_TYPE_LABELS[o.proxy_type]}</TableCell>
                         <TableCell sx={{ wordBreak: 'break-all' }}>
                           <Typography variant="caption" color="text.secondary" component="div">
-                            {o.kind === 'site' ? T.landing : T.geoEndpoint}
+                            {o.kind === 'site' ? T.landing : o.kind === 'api' ? T.apiProbe : T.geoEndpoint}
                           </Typography>
                           {o.url}
                         </TableCell>

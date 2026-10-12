@@ -95,10 +95,18 @@ export interface Alternative {
   url: string;
 }
 
+/** A protocol API asked from every probed country (api_probes in monitor/data/interfaces.json; rules stay in the data). */
+export interface ApiProbe {
+  name: string;
+  method: 'GET' | 'POST';
+  url: string;
+  note: string;
+}
+
 export const OBS_STATES = ['ok', 'blocked', 'close_only', 'feature_limited', 'challenge', 'error', 'unknown'] as const;
 export type ObservationState = (typeof OBS_STATES)[number];
 
-export const OBS_KINDS = ['site', 'geo_endpoint'] as const;
+export const OBS_KINDS = ['site', 'geo_endpoint', 'api'] as const;
 export type ObservationKind = (typeof OBS_KINDS)[number];
 
 export const PROXY_TYPES = ['residential', 'isp', 'mobile', 'datacenter', 'tor', 'direct'] as const;
@@ -163,6 +171,7 @@ export interface InterfaceEntry {
   notes: string;
   live: string[];
   geo_endpoints: string[];
+  api_probes: ApiProbe[];
   evidence: string[];
   confidence: Confidence;
   alternatives: Alternative[];

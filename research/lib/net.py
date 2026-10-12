@@ -209,27 +209,49 @@ def transcript(r, body_limit=4000):
 
 
 # ----------------------------------------------------------------------------- proxy and vantage
-GEO_APIS = [  # independent IP -> country services, asked through the same proxy; two must agree
+COUNTRIES = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "monitor", "data", "countries.json")
+GEO_APIS = [  # IP -> country lookups, asked through the same proxy; at least half must see the requested country
     ("api.country.is", "https://api.country.is/", lambda j: (j.get("country"), None)),
     ("ipinfo.io", "https://ipinfo.io/json", lambda j: (j.get("country"), j.get("org"))),
     ("ifconfig.co", "https://ifconfig.co/json", lambda j: (j.get("country_iso"), j.get("asn_org"))),
 ]
 
 
+SESSIONS = {}  # country -> sticky session id for this run: the vantage check and every request share one exit IP
+
+
 def proxy_for(country):
-    """Proxy URL for a country from PROBE_PROXY_URL (template with {cc} / {CC}) or PROBE_PROXY_URL_<CC>; None if unset."""
-    override = os.environ.get("PROBE_PROXY_URL_" + country.replace("-", "_").upper())
-    if override:
-        return override
-    tpl = os.environ.get("PROBE_PROXY_URL")
+    """Proxy URL for a country from PROBE_PROXY_URL (template with {cc} / {CC}, optional {session}) or
+    PROBE_PROXY_URL_<CC>; None if unset. {session} is one random id per country for the whole run."""
+    tpl = os.environ.get("PROBE_PROXY_URL_" + country.replace("-", "_").upper()) or os.environ.get("PROBE_PROXY_URL")
     if not tpl:
         return None
     cc = country.split("-")[0]
-    return tpl.replace("{cc}", cc.lower()).replace("{CC}", cc.upper())
+    session = SESSIONS.setdefault(country, hashlib.sha256(os.urandom(16)).hexdigest()[:8])
+    return tpl.replace("{cc}", cc.lower()).replace("{CC}", cc.upper()).replace("{session}", session)
+
+
+def expand_countries(spec):
+    """Country tokens from a comma-separated spec; group names of monitor/data/countries.json (popular, regions,
+    sanctioned, default = all three) expand in place. A region of a group needs its own PROBE_PROXY_URL_<TOKEN>:
+    with the country template it would silently probe the whole country. Same as monitor/scripts/probe.py."""
+    with open(COUNTRIES, encoding="utf-8") as fh:
+        groups = json.load(fh)
+    groups["default"] = groups["popular"] + groups["regions"] + groups["sanctioned"]
+    tokens = []
+    for t in filter(None, (t.strip() for t in spec.split(","))):
+        group = groups.get(t.lower())
+        if isinstance(group, list):
+            group = [g for g in group if "-" not in g or os.environ.get("PROBE_PROXY_URL_" + g.replace("-", "_").upper())]
+        for c in group if isinstance(group, list) else [t.upper()]:
+            if c not in tokens:
+                tokens.append(c)
+    return tokens
 
 
 def vantage(proxy, country, timeout=30):
-    """Which country do independent geo services see through this proxy? verified = 2+ answers, all equal to `country`."""
+    """Which country do the geo lookups see through this proxy? verified = the proxy answered and at least half of the
+    answers are `country` (geolocation databases disagree on some ranges: an Iranian AS58224 address shows up as AZ)."""
     expected = country.split("-")[0].upper()
     seen, org, by = [], None, []
     for name, url, pick in GEO_APIS:
@@ -245,7 +267,7 @@ def vantage(proxy, country, timeout=30):
                 by.append(name)
             org = org or o
     return OrderedDict(requested=country, seen=seen, org=org, verified_by=by,
-                       verified=len(seen) >= 2 and all(c == expected for c in seen))
+                       verified=bool(seen) and seen.count(expected) * 2 >= len(seen))
 
 
 def proxy_label(proxy):

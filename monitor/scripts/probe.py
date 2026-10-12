@@ -5,37 +5,58 @@ What it records per interface and country:
   * the landing page: HTTP status, redirect chain, edge provider headers, a body excerpt and hash,
     a coarse ui_state (ok | blocked | challenge | error | unknown);
   * each known geo endpoint (`geo_endpoints` in interfaces.json): status, JSON flags such as
-    blocked / isRegionRestricted / limited, a body excerpt;
-  * the vantage: the country seen by two independent geo APIs through the same proxy, the ASN, and
-    `loc=` from /cdn-cgi/trace on Cloudflare-fronted hosts. A proxied vantage needs two services agreeing;
-    one that disagrees (or answers alone) is kept but marked verified=false and never reaches the site.
+    blocked / isRegionRestricted / limited, a verdict header (dYdX `geo-origin-status`), a body excerpt;
+  * each API probe (`api_probes` in interfaces.json): the protocol's own geo check or a read-only API call (GET or POST
+    with a JSON body), classified by the probe's `rules` (regexes over the status line, headers and body: the first
+    match gives the state) and, when none matches, like a geo endpoint; `flags` names the JSON paths and headers to keep;
+  * the vantage: the country of the proxy's exit IP by IP -> country lookups (GEO_APIS) through the same proxy, the ASN,
+    and `loc=` from /cdn-cgi/trace on Cloudflare-fronted hosts. A country is probed when the proxy answers and at least
+    half of the lookups see that country; a proxy without an exit there (no_proxy) or with an exit elsewhere (wrong_country)
+    is skipped: neither says anything about the sites.
 
 "ok" means only "no edge-level block observed": client-side gates, wallet screening and feature gates
 are out of scope for P3 (see docs/roadmap.md, P4/P5).
 
 Usage:
-  python3 -I monitor/scripts/probe.py run  monitor/data/interfaces.json monitor/probe/out --countries UA,US,DE
+  python3 -I monitor/scripts/probe.py run  monitor/data/interfaces.json monitor/probe/out              # default countries
+  python3 -I monitor/scripts/probe.py run  ... --countries UA,US,DE
+  python3 -I monitor/scripts/probe.py run  ... --countries sanctioned,US    # groups of monitor/data/countries.json
   python3 -I monitor/scripts/probe.py run  ... --only polymarket,hop --proxy-type direct    # no proxy, your own egress
   python3 -I monitor/scripts/probe.py merge monitor/data/observations.json monitor/probe/out/<run>.json
 
+Countries: without --countries (or $PROBE_COUNTRIES) the `default` set of monitor/data/countries.json is probed:
+`popular` + `regions` + `sanctioned`. Group names expand inside --countries. A region of a group (US-NY, CA-ON) is
+probed only when its PROBE_PROXY_URL_<TOKEN> is set; a region named explicitly falls back to the country template.
+
 Environment:
   PROBE_PROXY_URL        proxy URL template with {cc} (lower-case ISO2) and optional {CC} (upper-case) placeholders,
-                         e.g. http://user-country-{cc}:pass@gate.example.com:7000
+                         e.g. http://user-country-{cc}:pass@gate.example.com:7000; {session} becomes a new random id per
+                         country, so a provider's sticky session keeps one exit IP for the vantage check and every target
+                         (Decodo: user-LOGIN-country-{cc}-session-{session}-sessionduration-30)
   PROBE_PROXY_URL_<TOKEN> override for one token, e.g. PROBE_PROXY_URL_US_NY, PROBE_PROXY_URL_CA_ON
                          (token = country/region token with '-' replaced by '_')
   PROBE_PROXY_TYPE       residential | isp | mobile | datacenter | tor | direct   (default: residential, or direct with --proxy-type direct)
+  PROBE_COUNTRIES        countries when --countries is not given (default: `default` of monitor/data/countries.json)
   PROBE_TIMEOUT          seconds per request (default 25)
-  PROBE_DELAY            seconds between requests (default 1.0)
+  PROBE_DELAY            seconds between requests of one country (default 1.0)
+  PROBE_WORKERS          countries probed in parallel (default 6)
+  PROBE_RATE             requests per second over all countries, the cap the proxy gateway sees (default 5)
+
+Countries run in parallel, each with its own sequence of requests and PROBE_DELAY pauses; all of them share one
+PROBE_RATE budget. When the proxy says "too many requests" (CONNECT 429/503) a request backs off 15 s, then 30 s; when it
+refuses authorization (407: credentials, used-up traffic) the run stops and writes what it has. Ctrl+C does the same.
 
 Stdlib only; Python >= 3.9. Observation only: no logins, no CAPTCHA solving, no wallet, no transactions.
 """
-import argparse, hashlib, html, json, os, re, ssl, sys, time, urllib.error, urllib.parse, urllib.request
+import argparse, hashlib, html, json, os, re, secrets, ssl, sys, threading, time, urllib.error, urllib.parse, urllib.request
 from collections import OrderedDict
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 
 VERSION = "probe.py/0.1"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36"
-GEO_APIS = [  # independent IP -> country services, queried through the proxy; two must agree for a proxied run
+COUNTRIES = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "countries.json")
+GEO_APIS = [  # IP -> country lookups, queried through the proxy; at least half must see the requested country
     ("api.country.is", "https://api.country.is/", lambda j: (j.get("country"), None, None)),
     ("ipinfo.io", "https://ipinfo.io/json", lambda j: (j.get("country"), (j.get("org") or "").split(" ")[0] or None, j.get("org"))),
     ("ifconfig.co", "https://ifconfig.co/json", lambda j: (j.get("country_iso"), j.get("asn"), j.get("asn_org"))),
@@ -47,6 +68,15 @@ BLOCK_TEXT_RE = re.compile(r"(not available in your (country|region|jurisdiction
 CHALLENGE_RE = re.compile(r"(just a moment|cf-chl|challenge-platform|attention required|verify you are human|enable javascript and cookies)", re.I)
 FLAG_KEYS = ("blocked", "isBlocked", "geoblocked", "isRegionRestricted", "restricted", "isRestricted", "limited", "allowed", "ipAllowed")
 TAG_RE = re.compile(r"<(script|style)[^>]*>.*?</\1>|<[^>]+>", re.S)
+PROXY_BUSY_RE = re.compile(r"Tunnel connection failed: (429|503)\b")  # the gateway asks to slow down
+PROXY_AUTH_RE = re.compile(r"Tunnel connection failed: 407\b")        # wrong credentials or used-up traffic
+STOP = threading.Event()  # set on 407 or Ctrl+C: no new requests, the run file is written with what was collected
+PRINT = threading.Lock()
+
+
+def say(line):
+    with PRINT:
+        print(line, flush=True)
 
 
 def now_iso():
@@ -79,10 +109,34 @@ def make_opener(proxy_url):
     return opener, redirect
 
 
-def fetch(proxy_url, url, timeout, max_bytes=400_000, _insecure=False):
-    """GET url through the proxy. Returns an OrderedDict with status, headers, body (bytes) and redirects.
+class Pacer:
+    """At most `rate` requests per second over all workers: the proxy gateway sees one client however many countries run."""
+
+    def __init__(self):
+        self.gap, self.next, self.lock = 0.0, 0.0, threading.Lock()
+
+    def set_rate(self, rate):
+        self.gap = 1.0 / rate if rate > 0 else 0.0
+
+    def wait(self):
+        with self.lock:
+            now = time.monotonic()
+            at = max(now, self.next)
+            self.next = at + self.gap
+        if at > now:
+            time.sleep(at - now)
+
+
+PACER = Pacer()
+
+
+def fetch(proxy_url, url, timeout, max_bytes=400_000, method="GET", body=None, _insecure=False, _busy=0):
+    """GET (or POST with a JSON body) url through the proxy. Returns an OrderedDict with status, headers, body (bytes)
+    and redirects.
     If the local root store cannot verify the chain (common with the macOS system Python), the request is retried once
-    without verification and the observation carries tls_unverified=True. Only public pages are read, nothing is sent."""
+    without verification and the observation carries tls_unverified=True. Only public pages are read, nothing is sent.
+    Every attempt waits for its turn in PACER; a throttled proxy (429/503) is retried twice after 15 s and 30 s."""
+    PACER.wait()
     opener, redirect = make_opener(proxy_url)
     if _insecure:
         ctx = ssl.create_default_context()
@@ -91,9 +145,11 @@ def fetch(proxy_url, url, timeout, max_bytes=400_000, _insecure=False):
         opener.add_handler(urllib.request.HTTPSHandler(context=ctx))
     out = OrderedDict(url=url, status=None, final_url=url, headers={}, body=b"", redirects=[], error=None, ms=None,
                       tls_unverified=_insecure)
+    data = None if body is None else json.dumps(body).encode()
+    req = urllib.request.Request(url, data=data, method=method, headers={"Content-Type": "application/json"} if data else {})
     t0 = time.time()
     try:
-        with opener.open(url, timeout=timeout) as r:
+        with opener.open(req, timeout=timeout) as r:
             out["status"] = r.status
             out["final_url"] = r.geturl()
             out["headers"] = {k.lower(): v for k, v in r.headers.items()}
@@ -108,7 +164,13 @@ def fetch(proxy_url, url, timeout, max_bytes=400_000, _insecure=False):
             out["body"] = b""
     except Exception as e:  # noqa: BLE001 - any transport/parse failure is an observation of kind "error"
         if not _insecure and "CERTIFICATE_VERIFY_FAILED" in str(e):
-            return fetch(proxy_url, url, timeout, max_bytes, _insecure=True)
+            return fetch(proxy_url, url, timeout, max_bytes, method, body, True, _busy)
+        if proxy_url and PROXY_BUSY_RE.search(str(e)) and _busy < 2 and not STOP.is_set():
+            time.sleep(15 * (_busy + 1))
+            return fetch(proxy_url, url, timeout, max_bytes, method, body, _insecure, _busy + 1)
+        if proxy_url and PROXY_AUTH_RE.search(str(e)) and not STOP.is_set():
+            STOP.set()
+            say(f"! the proxy refused authorization ({str(e)[:80]}): stopping, the run file keeps what was collected")
         out["error"] = f"{type(e).__name__}: {str(e)[:160]}"
     out["ms"] = int((time.time() - t0) * 1000)
     out["redirects"] = redirect.chain
@@ -176,10 +238,17 @@ def classify_endpoint(r):
         for k in ("country", "countryCode", "country_code", "region", "status", "tier"):
             if k in j and isinstance(j[k], (str, int)):
                 flags[k] = j[k]
+    hdr = r["headers"]
+    if hdr.get("geo-origin-status"):  # dYdX indexer: the verdict rides on every response, whatever the body
+        flags["geo-origin-status"] = hdr["geo-origin-status"]
+        if hdr["geo-origin-status"] == "restricted":
+            return "blocked", flags, "geo-origin-status: restricted"
     if st == 451:
         return "blocked", flags, "HTTP 451"
     if st == 403:
         text = body_text(r["body"], 600)
+        if hdr.get("cf-mitigated") == "challenge" or CHALLENGE_RE.search(text):
+            return "challenge", flags, "Cloudflare challenge (not testable without a browser)"
         if GEO_TEXT_RE.search(text) or any(flags.get(k) is True for k in ("blocked", "geoblocked", "restricted")):
             return "blocked", flags, "HTTP 403 with geo wording"
         return "unknown", flags, "HTTP 403 without geo wording (WAF/anti-bot?)"
@@ -196,28 +265,86 @@ def classify_endpoint(r):
     return "unknown", flags, f"HTTP {st}"
 
 
+def transcript(r):
+    """What API probe rules are matched against: the status line, the response headers, then the body."""
+    head = "".join(f"{k}: {v}\n" for k, v in r["headers"].items())
+    return f"HTTP {r['status']}\n{head}\n" + r["body"].decode("utf-8", "replace")
+
+
+def pick_flags(paths, r):
+    """Values named by an API probe: dotted JSON paths (data.isBlocked) and response headers (header:geo-origin-status)."""
+    j, out = body_json(r["body"]), OrderedDict()
+    for path in paths:
+        if path.startswith("header:"):
+            v = r["headers"].get(path[7:].lower())
+        else:
+            v = j
+            for part in path.split("."):
+                v = v.get(part) if isinstance(v, dict) else None
+        if isinstance(v, (str, int, float, bool)):
+            out[path] = v
+    return out
+
+
+def classify_api(probe, r):
+    """State of an API probe: its rules in order (the first match wins), else the generic geo-endpoint reading."""
+    flags = pick_flags(probe.get("flags", []), r)
+    if r["error"]:
+        return "error", flags, r["error"]
+    text = transcript(r)
+    for rule in probe.get("rules", []):
+        if re.search(rule["match"], text, re.M):
+            return rule["state"], flags, rule.get("note") or f"rule {rule['match']}"
+    state, generic, note = classify_endpoint(r)
+    return state, flags or generic, note
+
+
 # ----------------------------------------------------------------------------- vantage
-def proxy_for(token, proxy_type):
-    """Resolve the proxy URL for a country/region token from the environment."""
+def proxy_for(token, proxy_type, session=""):
+    """Resolve the proxy URL for a country/region token from the environment; {session} is filled with `session`."""
     if proxy_type == "direct":
         return None
-    override = os.environ.get("PROBE_PROXY_URL_" + token.replace("-", "_").upper())
-    if override:
-        return override
-    tpl = os.environ.get("PROBE_PROXY_URL")
+    tpl = os.environ.get("PROBE_PROXY_URL_" + token.replace("-", "_").upper()) or os.environ.get("PROBE_PROXY_URL")
     if not tpl:
         sys.exit("PROBE_PROXY_URL is not set (or use --proxy-type direct)")
     cc = token.split("-")[0]
-    return tpl.replace("{cc}", cc.lower()).replace("{CC}", cc.upper())
+    return tpl.replace("{cc}", cc.lower()).replace("{CC}", cc.upper()).replace("{session}", session)
 
 
-def check_vantage(proxy_url, token, timeout, min_agree=2):
-    """Ask independent geo APIs through the proxy which country they see; compare with the requested one.
-    verified = at least `min_agree` services answered and every answer equals the requested country."""
+def expand_countries(spec):
+    """Country tokens from a comma-separated spec; group names of monitor/data/countries.json (popular, regions,
+    sanctioned, default = all three) expand in place. A region of a group needs its own PROBE_PROXY_URL_<TOKEN>:
+    with the country template it would silently probe the whole country."""
+    with open(COUNTRIES, encoding="utf-8") as fh:
+        groups = json.load(fh)
+    groups["default"] = groups["popular"] + groups["regions"] + groups["sanctioned"]
+    tokens = []
+    for t in filter(None, (t.strip() for t in spec.split(","))):
+        group = groups.get(t.lower())
+        if isinstance(group, list):
+            group = [g for g in group if "-" not in g or os.environ.get("PROBE_PROXY_URL_" + g.replace("-", "_").upper())]
+        for c in group if isinstance(group, list) else [t.upper()]:
+            if c not in tokens:
+                tokens.append(c)
+    return tokens
+
+
+def check_vantage(proxy_url, token, timeout):
+    """Ask the geo APIs through the proxy which country its exit IP is in.
+    status: ok (the proxy answers and at least half of the answers are the requested country), no_proxy (the proxy did not
+    answer, retried once: the provider has no exit there, which says nothing about the sites), wrong_country (the exit is
+    elsewhere)."""
     expected = token.split("-")[0].upper()
-    seen, asn, org, by = [], None, None, []
-    for name, url, pick in GEO_APIS:
+    seen, asn, org, by, err = [], None, None, [], None
+    for i, (name, url, pick) in enumerate(GEO_APIS + GEO_APIS[:1]):
+        if STOP.is_set():
+            break
+        if i == len(GEO_APIS):  # one retry when nothing answered: thin pools (CU) fail now and then
+            if seen:
+                break
+            time.sleep(3)
         r = fetch(proxy_url, url, timeout)
+        err = err or r["error"]
         j = body_json(r["body"]) if not r["error"] and r["status"] == 200 else None
         if isinstance(j, dict):
             c, a, o = pick(j)
@@ -226,9 +353,9 @@ def check_vantage(proxy_url, token, timeout, min_agree=2):
                 by.append(name)
             asn = asn or a
             org = org or o
-    verified = len(seen) >= min_agree and all(c == expected for c in seen)
-    return OrderedDict(requested=token, ip_country=(seen[0] if seen else None), seen=seen, asn=asn, org=org,
-                       verified_by=by, verified=verified)
+    status = "no_proxy" if not seen else "ok" if seen.count(expected) * 2 >= len(seen) else "wrong_country"
+    return OrderedDict(requested=token, ip_country=(max(seen, key=seen.count) if seen else None), seen=seen, asn=asn,
+                       org=org, verified_by=by, status=status, error=None if seen else err, verified=status == "ok")
 
 
 def cf_trace(proxy_url, final_url, timeout):
@@ -256,53 +383,106 @@ def observation(entry, token, proxy_type, vantage, kind, r, state, note, flags=N
     ])
 
 
+def probe_country(token, entries, proxy_type, timeout, delay):
+    """Vantage check, then every target from one country in order. Returns (vantage, observations, finished)."""
+    if STOP.is_set():
+        return None, [], False
+    proxy_url = proxy_for(token, proxy_type, secrets.token_hex(4))  # one sticky exit IP per country, if the template asks
+    v = check_vantage(proxy_url, token, timeout)
+    if STOP.is_set():
+        return None, [], False
+    say(f"[{token}] vantage: {v['status']} ip_country={v['ip_country']} seen={v['seen']} asn={v['asn']}")
+    if not v["verified"]:
+        why = f"the proxy has no exit here ({v['error']})" if v["status"] == "no_proxy" else f"the proxy exit is in {v['ip_country']}"
+        say(f"[{token}] skipped: {why}")
+        return v, [], True
+    obs = []
+    for e in entries:
+        r = fetch(proxy_url, e["url"], timeout)
+        cf_loc = cf_trace(proxy_url, r["final_url"], timeout) if (r["headers"].get("server") == "cloudflare" or r["headers"].get("cf-ray")) else None
+        if STOP.is_set():  # the answer may be the proxy's 407, not the site's
+            return v, obs, False
+        state, note = classify_site(r)
+        if cf_loc and cf_loc != token.split("-")[0].upper():
+            note += f"; cdn-cgi/trace loc={cf_loc} disagrees with {token}"
+        obs.append(observation(e, token, proxy_type, v, "site", r, state, note, cf_loc=cf_loc))
+        say(f"[{token}] {e['id']:14s} site  {r['status']!s:>4} {state:16s} {note[:70]}")
+        time.sleep(delay)
+        for url in e.get("geo_endpoints", []):
+            r2 = fetch(proxy_url, url, timeout)
+            if STOP.is_set():
+                return v, obs, False
+            st2, flags, note2 = classify_endpoint(r2)
+            obs.append(observation(e, token, proxy_type, v, "geo_endpoint", r2, st2, note2, flags=flags))
+            say(f"[{token}] {e['id']:14s} geo   {r2['status']!s:>4} {st2:16s} {json.dumps(flags)[:70]}")
+            time.sleep(delay)
+        for probe in e.get("api_probes", []):
+            r3 = fetch(proxy_url, probe["url"], timeout, method=probe.get("method", "GET"), body=probe.get("body"))
+            if STOP.is_set():
+                return v, obs, False
+            st3, flags, note3 = classify_api(probe, r3)
+            obs.append(observation(e, token, proxy_type, v, "api", r3, st3, f"{probe['name']}: {note3}", flags=flags))
+            say(f"[{token}] {e['id']:14s} api   {r3['status']!s:>4} {st3:16s} {probe['name']} {json.dumps(flags)[:60]}")
+            time.sleep(delay)
+    return v, obs, True
+
+
 def cmd_run(args):
     with open(args.data, encoding="utf-8") as fh:
         data = json.load(fh, object_pairs_hook=OrderedDict)
     only = set(args.only.split(",")) if args.only else None
     entries = [e for e in data["interfaces"] if not only or e["id"] in only]
-    tokens = [t.strip() for t in args.countries.split(",") if t.strip()]
     proxy_type = args.proxy_type or os.environ.get("PROBE_PROXY_TYPE", "residential")
     timeout = float(os.environ.get("PROBE_TIMEOUT", "25"))
     delay = float(os.environ.get("PROBE_DELAY", "1.0"))
+    workers = max(1, int(os.environ.get("PROBE_WORKERS", "6")))
+    PACER.set_rate(float(os.environ.get("PROBE_RATE", "5")))
+    spec = args.countries or os.environ.get("PROBE_COUNTRIES")
+    if spec or proxy_type != "direct":
+        tokens = expand_countries(spec or "default")
+    else:  # direct without countries: the country of this machine's own egress
+        own = check_vantage(None, "", timeout)["ip_country"]
+        tokens = [own] if own else []
+    say(f"{len(tokens)} countries, {workers} in parallel, at most {os.environ.get('PROBE_RATE', '5')} requests/s: {' '.join(tokens)}")
     started = now_iso()
     run_id = started.replace(":", "").replace("-", "") + "_" + proxy_type
-    obs, vantages = [], OrderedDict()
 
-    for token in tokens:
-        proxy_url = proxy_for(token, proxy_type)
-        v = check_vantage(proxy_url, token, timeout, min_agree=1 if proxy_type == "direct" else 2)
-        vantages[token] = v
-        print(f"[{token}] vantage: ip_country={v['ip_country']} asn={v['asn']} verified={v['verified']} by={v['verified_by']}", flush=True)
-        if not v["verified"]:
-            print(f"[{token}] vantage NOT verified -> targets skipped for this token", flush=True)
-            continue
-        for e in entries:
-            r = fetch(proxy_url, e["url"], timeout)
-            cf_loc = cf_trace(proxy_url, r["final_url"], timeout) if (r["headers"].get("server") == "cloudflare" or r["headers"].get("cf-ray")) else None
-            state, note = classify_site(r)
-            if cf_loc and cf_loc != token.split("-")[0].upper():
-                note += f"; cdn-cgi/trace loc={cf_loc} disagrees with {token}"
-            obs.append(observation(e, token, proxy_type, v, "site", r, state, note, cf_loc=cf_loc))
-            print(f"[{token}] {e['id']:14s} site  {r['status']!s:>4} {state:16s} {note[:70]}", flush=True)
-            time.sleep(delay)
-            for url in e.get("geo_endpoints", []):
-                r2 = fetch(proxy_url, url, timeout)
-                st2, flags, note2 = classify_endpoint(r2)
-                obs.append(observation(e, token, proxy_type, v, "geo_endpoint", r2, st2, note2, flags=flags))
-                print(f"[{token}] {e['id']:14s} geo   {r2['status']!s:>4} {st2:16s} {json.dumps(flags)[:70]}", flush=True)
-                time.sleep(delay)
+    pool = ThreadPoolExecutor(max_workers=workers)
+    futures = [pool.submit(probe_country, t, entries, proxy_type, timeout, delay) for t in tokens]
+    try:
+        for f in futures:
+            f.result()
+    except KeyboardInterrupt:
+        STOP.set()
+        say("! interrupted: finishing the requests in flight, then writing what was collected")
+    pool.shutdown(wait=True, cancel_futures=True)
+
+    obs, vantages, unfinished = [], OrderedDict(), []
+    for token, f in zip(tokens, futures):
+        v, got, finished = (None, [], False) if f.cancelled() else f.result()
+        if v:
+            vantages[token] = v
+        obs += got
+        if not finished:
+            unfinished.append(token)
 
     os.makedirs(args.outdir, exist_ok=True)
     out_path = os.path.join(args.outdir, run_id + ".json")
     result = OrderedDict([("run", OrderedDict([("id", run_id), ("started_at", started), ("finished_at", now_iso()), ("tool", VERSION),
-                                               ("proxy_type", proxy_type), ("countries", tokens), ("vantages", vantages)])),
+                                               ("proxy_type", proxy_type), ("countries", tokens), ("unfinished", unfinished),
+                                               ("vantages", vantages)])),
                           ("observations", obs)])
     with open(out_path, "w", encoding="utf-8") as fh:
         json.dump(result, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
-    print(f"\n{len(obs)} observations -> {out_path}")
-    print("merge with: python3 -I monitor/scripts/probe.py merge monitor/data/observations.json", out_path)
+    for status in ("ok", "no_proxy", "wrong_country"):
+        got = [f"{t}({v['ip_country']})" if status == "wrong_country" else t for t, v in vantages.items()
+               if v["status"] == status and t not in unfinished]
+        print(f"\n{status}: {len(got)} {' '.join(got)}", end="")
+    if unfinished:
+        print(f"\nunfinished: {len(unfinished)} {' '.join(unfinished)}", end="")
+    print(f"\n\n{len(obs)} observations -> {out_path}")
+    print("next: pnpm monitor:sync   (merges this run into monitor/data/observations.json and rebuilds the site data)")
 
 
 def obs_key(o):
@@ -346,7 +526,8 @@ def main():
     r = sub.add_parser("run", help="probe interfaces from the given countries")
     r.add_argument("data", help="monitor/data/interfaces.json")
     r.add_argument("outdir", help="directory for the run file")
-    r.add_argument("--countries", required=True, help="comma-separated tokens: UA,US,DE,US-NY")
+    r.add_argument("--countries", help="comma-separated tokens and groups of monitor/data/countries.json: UA,US,DE,US-NY,"
+                                       "sanctioned (default: $PROBE_COUNTRIES or `default` = popular + regions + sanctioned)")
     r.add_argument("--only", help="comma-separated interface ids")
     r.add_argument("--proxy-type", choices=["residential", "isp", "mobile", "datacenter", "tor", "direct"])
     r.set_defaults(func=cmd_run)
@@ -354,7 +535,7 @@ def main():
     m.add_argument("store", help="monitor/data/observations.json")
     m.add_argument("runs", nargs="+", help="run files from `probe.py run`")
     m.set_defaults(func=cmd_merge)
-    args = ap.parse_args()
+    args = ap.parse_args([a for a in sys.argv[1:] if a != "--"])  # pnpm forwards the `--` of `pnpm monitor:probe -- --only x`
     args.func(args)
 
 
