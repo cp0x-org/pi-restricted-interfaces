@@ -28,7 +28,7 @@ import { dataset, interfacesById, versionsOf } from 'data/dataset';
 import { interfaceMeta, notFoundMeta } from 'seo/meta';
 import { siteUrl, usePageMeta } from 'seo/usePageMeta';
 import { tokenLabel } from 'data/countries';
-import { displayName, evidenceLinks, restrictionsText, tosAgainstGeo } from 'utils/restrictions';
+import { appHref, displayName, evidenceLinks, restrictionsText, tosAgainstGeo } from 'utils/restrictions';
 import CountryTokenChips from './components/CountryTokenChips';
 import EvidenceList from './components/EvidenceList';
 import LevelChip from './components/LevelChip';
@@ -146,7 +146,7 @@ export default function InterfacePage() {
             </Typography>
             <Stack direction="row" spacing={1} sx={{ mt: 2, flexWrap: 'wrap', rowGap: 1 }}>
               <Button
-                href={entry.url}
+                href={appHref(entry)}
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="outlined"
@@ -369,6 +369,11 @@ export default function InterfacePage() {
                 {T.probeEndpoints}: {entry.geo_endpoints.join(', ')}
               </Typography>
             )}
+            {entry.api_probes.length > 0 && (
+              <Typography variant="caption" color="text.secondary" component="div" sx={{ mt: 1 }}>
+                {T.apiProbes}: {entry.api_probes.map((p) => `${p.method} ${p.url} (${p.name})`).join(', ')}
+              </Typography>
+            )}
           </SubCard>
         </Grid>
         <Grid size={{ xs: 12 }}>
@@ -399,7 +404,7 @@ export default function InterfacePage() {
                         <TableCell>{L.PROXY_TYPE_LABELS[o.proxy_type]}</TableCell>
                         <TableCell sx={{ wordBreak: 'break-all' }}>
                           <Typography variant="caption" color="text.secondary" component="div">
-                            {o.kind === 'site' ? T.landing : T.geoEndpoint}
+                            {o.kind === 'site' ? T.landing : o.kind === 'api' ? T.apiProbe : T.geoEndpoint}
                           </Typography>
                           {o.url}
                         </TableCell>

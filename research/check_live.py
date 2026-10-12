@@ -11,7 +11,8 @@ Claim checks (type "live"), one URL from one country (source.url, source.country
   1. take the proxy for that country from PROBE_PROXY_URL (a template with {cc}, the same variable as
      monitor/scripts/probe.py; read from the environment, research/.env or the project's .env.probe);
   2. verify the vantage: api.country.is, ipinfo.io and ifconfig.co are asked through the same proxy which country
-     they see; at least two must answer and all must equal the requested country, otherwise the check is skipped;
+     the exit IP is in; the proxy must answer and at least half of the answers must be the requested country,
+     otherwise the check is skipped (no exit there, or an exit in another country);
   3. GET source.url through the proxy (redirects followed and recorded) and match `expect` against the transcript
      (status, final_url, redirect lines, body).
 Without a proxy (or with an unverified vantage) the script falls back to the observation already recorded in
@@ -25,20 +26,18 @@ Usage (from pi-restrict-interface/):
   python3 -I research/check_live.py                       # proxy from .env / .env.probe, else recorded
   PROBE_PROXY_URL='http://user-LOGIN-country-{cc}:PASS@gate.decodo.com:7000' python3 -I research/check_live.py
   python3 -I research/check_live.py --no-recorded          # never fall back to recorded observations
-  python3 -I research/check_live.py --countries US,GB,DE   # sweep vantages (default: 20 countries, see DEFAULT_COUNTRIES)
+  python3 -I research/check_live.py --countries US,GB,DE   # sweep vantages (default: monitor/data/countries.json)
+  python3 -I research/check_live.py --countries sanctioned # a group of monitor/data/countries.json
 """
 import json, os, re, sys, urllib.parse
 from collections import OrderedDict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import common  # noqa: E402
-from lib.net import GEO_APIS, fetch, proxy_for, proxy_label, text_of, transcript, vantage  # noqa: E402
+from lib.net import GEO_APIS, expand_countries, fetch, proxy_for, proxy_label, text_of, transcript, vantage  # noqa: E402
 from lib.text import html_to_text  # noqa: E402
 
 STORE = os.path.join(common.PROJECT, "monitor", "data", "observations.json")
-# First wave of the research plan: big markets, states/provinces with their own rules, and countries often listed in
-# Terms. About 8 MB of proxy traffic per country per run. Sanctioned jurisdictions are never probed.
-DEFAULT_COUNTRIES = "US,US-NY,CA-ON,GB,DE,FR,NL,PL,UA,TR,AE,SG,HK,JP,BR,AR,NG,VN,KZ,GE"
 
 
 def recorded(iface, country, url):
@@ -287,8 +286,9 @@ def print_sweep(res, spec):
 def main():
     def extra(ap):
         ap.add_argument("--no-recorded", action="store_true", help="do not fall back to monitor/data/observations.json")
-        ap.add_argument("--countries", default=os.environ.get("PROBE_COUNTRIES", DEFAULT_COUNTRIES),
-                        help=f"proxy countries for the sweep (default {DEFAULT_COUNTRIES} or $PROBE_COUNTRIES)")
+        ap.add_argument("--countries", default=os.environ.get("PROBE_COUNTRIES", "default"),
+                        help="proxy countries and groups of monitor/data/countries.json for the sweep, about 8 MB each "
+                             "(default: $PROBE_COUNTRIES or `default` = popular + regions + sanctioned)")
         ap.add_argument("--no-sweep", action="store_true", help="only the claim checks of type live")
     args = common.cli(__doc__, extra)
     env_file = common.load_env()
@@ -297,7 +297,7 @@ def main():
     specs = common.load_specs(args.only)
     timeout = float(os.environ.get("PROBE_TIMEOUT", "40"))
     if not args.no_sweep:
-        countries = [c.strip() for c in args.countries.split(",") if c.strip()]
+        countries = expand_countries(args.countries)
         rows, used = sweep(specs, countries, timeout)
         print()
         for res in rows:

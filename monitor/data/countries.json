@@ -1,0 +1,16 @@
+{
+  "_comment": "Default vantages of monitor/scripts/probe.py and research/check_live.py (without --countries). popular: big crypto markets and countries often named in Terms; regions: states/provinces with their own rules, probed only when PROBE_PROXY_URL_<TOKEN> is set; sanctioned: sanctioned and high-risk jurisdictions, probed where the proxy has exits (Decodo residential on 2026-10-12: all except KP and CF; CU only now and then).",
+  "popular": [
+    "US", "CA", "MX", "BR", "AR", "CO",
+    "GB", "DE", "FR", "NL", "ES", "IT", "PL", "CH", "SE",
+    "UA", "TR", "AE", "SA", "IL",
+    "IN", "PK", "BD", "ID", "VN", "TH", "PH", "MY", "SG", "HK", "CN", "JP", "KR", "TW", "AU",
+    "NG", "ZA", "KE",
+    "KZ", "GE"
+  ],
+  "regions": ["US-NY", "CA-ON"],
+  "sanctioned": [
+    "RU", "BY", "KP", "IR", "CU", "SY", "VE", "MM", "AF", "IQ", "LB",
+    "LY", "SD", "SS", "YE", "ZW", "NI", "CD", "CF", "SO", "ML"
+  ]
+}

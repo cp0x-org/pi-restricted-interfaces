@@ -60,6 +60,7 @@ import {
   lifecycleRank,
   restrictionsText,
   countryStatusRank,
+  appHref,
   countryVerdict,
   hasMechanism,
   levelRank,
@@ -692,7 +693,7 @@ export default function MonitorPage() {
                     </TableCell>
                     <TableCell onClick={(e) => e.stopPropagation()}>
                       <Link
-                        href={i.url}
+                        href={appHref(i)}
                         target="_blank"
                         rel="noopener noreferrer"
                         underline="hover"

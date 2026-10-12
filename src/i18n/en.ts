@@ -194,11 +194,13 @@ export const en = {
     noLive: 'No live checks recorded.',
     egress: 'Egress',
     probeEndpoints: 'Probe endpoints',
+    apiProbes: 'API probes',
     observations: 'Live observations by country',
     notProbed: 'No live check from individual countries yet.',
     obsCols: { country: 'Country', vantage: 'Vantage', target: 'Target', result: 'Result', http: 'HTTP', when: 'When' },
     landing: 'landing page',
     geoEndpoint: 'geo endpoint',
+    apiProbe: 'protocol API',
     evidence: 'Evidence',
     pathsNote: (date: string) => `Paths are relative to the repository root at the default branch on ${date}.`,
     tosCountries: 'Countries named in the ToS:',
@@ -211,7 +213,7 @@ export const en = {
     langName: 'English',
     noscript: 'Filters and sorting need JavaScript; the full catalog is shown below.',
     monitorDescription: (n: number, withAlt: number) =>
-      `Which official DeFi interfaces geo-block countries, screen wallets or hide features: ${n} EVM apps ranked A–D with evidence, per-country status and ${withAlt} permissionless alternatives.`,
+      `Which official DeFi interfaces geo-block countries, screen wallets or hide features: ${n} apps ranked A–D with evidence, per-country status and ${withAlt} permissionless alternatives.`,
     summaryDescription:
       'Charts of geo-blocking, wallet screening and VPN checks across official DeFi interfaces: ratings, most blocked countries, screening providers, and the most permissionless categories and networks.',
     methodologyDescription:
@@ -222,7 +224,7 @@ export const en = {
     ifacePageName: (name: string) => `${name}: access restrictions of the official interface`,
     datasetName: 'Access restrictions in official DeFi interfaces',
     datasetDescription:
-      'Catalog of geo-blocking, feature and asset gating, wallet screening and VPN detection in the official web interfaces of DeFi protocols on EVM networks, with the enforcement layer and evidence for every claim.',
+      'Catalog of geo-blocking, feature and asset gating, wallet screening and VPN detection in the official web interfaces of DeFi protocols on or reached from EVM networks, with the enforcement layer and evidence for every claim.',
     summary: {
       geoBlocks: (n: number) => `geo-blocks ${n} countries`,
       geoBlocksSite: 'geo-blocks the site',
@@ -316,7 +318,7 @@ export const en = {
   method: {
     title: 'Methodology',
     intro: (date: string, shown: number, total: number) =>
-      `The catalog answers one question per interface: what does the official frontend or backend block, for whom, by which mechanism and where is it enforced. Snapshot of ${date}. The site shows EVM networks only: ${shown} of ${total} interfaces in the full catalog; Solana, Cosmos and other non-EVM apps stay in \`monitor/data\` and in the report. Only observation: nothing is bypassed, nothing is signed, no transactions are sent.`,
+      `The catalog answers one question per interface: what does the official frontend or backend block, for whom, by which mechanism and where is it enforced. Snapshot of ${date}. The site shows EVM networks and apps on their own chains reached from them (Hyperliquid, Lighter, Extended): ${shown} of ${total} interfaces in the full catalog; Solana, Cosmos and other apps without an EVM network stay in \`monitor/data\` and in the report. Only observation: nothing is bypassed, nothing is signed, no transactions are sent.`,
     levelsTitle: 'Rating',
     levelsNote:
       'The rating counts the technical restrictions of the official interface: every country or region where the site, trading or a feature is blocked counts once, and each feature or asset gate, wallet screening (by API or contract), VPN detection and KYC requirement counts once more. Restrictions written only in the Terms of Service are not counted. Fewer restrictions, better rating: A none, B 1–5, C 6–20, D more than 20; n/a when nothing could be determined.',
@@ -339,7 +341,7 @@ export const en = {
       ok: 'None of the above; wallet screening and VPN detection may still apply.'
     } as Record<CountryStatus, string>,
     countryNote:
-      'Rules are applied in this order and the first match wins. Each verdict carries its basis: observed (live probe from that country through a verified proxy), confirmed (code, live check or official documentation), reported (press or users), ToS (Terms of Service only) or inferred (nothing found; a closed frontend may hide more). A live observation that shows a block confirms a static blocked / close-only / feature-limited verdict and overrides anything weaker; a served landing page upgrades “n/a” or “no restriction found” to an observed verdict; any other disagreement is shown as a conflict with both sides visible. Country lists are ISO 3166-1 codes; group terms such as “all of the EU” were expanded explicitly, while “sanctioned jurisdictions” or “FATF high-risk” stay as free text and do not produce a match.',
+      'Rules are applied in this order and the first match wins. Each verdict carries its basis: observed (live probe from that country through a verified proxy), confirmed (code, live check or official documentation), reported (press or users), ToS (Terms of Service only) or inferred (nothing found; a closed frontend may hide more). A live observation that shows a block confirms a static blocked / close-only / feature-limited verdict and overrides anything weaker; the protocol’s API answering “no restriction” (or, failing that, a served landing page) upgrades “n/a” or “no restriction found” to an observed verdict; any other disagreement is shown as a conflict with both sides visible. Country lists are ISO 3166-1 codes; group terms such as “all of the EU” were expanded explicitly, while “sanctioned jurisdictions” or “FATF high-risk” stay as free text and do not produce a match.',
     detectTitle: 'How mechanisms are detected',
     detectCols: { layer: 'Layer', signal: 'Signal', examples: 'Examples' },
     typology: [
@@ -394,7 +396,7 @@ export const en = {
     liveP2: (egress: string) =>
       `Egress of the initial snapshot: ${egress}. Those checks ran from a single vantage point and without executing JavaScript, so client-side geo-blocks and blocks for other countries were visible only through the code.`,
     liveP3:
-      'Per-country probing: the landing page and the known geo endpoints of every interface are fetched through a residential proxy in the target country, without JavaScript. The vantage is verified first by independent IP-geolocation services (two must agree) and, on Cloudflare-fronted hosts, by the `loc=` field of `/cdn-cgi/trace`; a disagreeing vantage is discarded. The result is one of: served, blocked (HTTP 451, a 403 with geo wording, a redirect to a block page, or a geo endpoint answering “restricted”), close-only, feature-limited, or anti-bot challenge (not testable). “Served” only means that no edge-level block was observed: client-side gates, wallet screening and feature gates are not covered by these probes. Sanctioned jurisdictions are not probed; their status stays inferred from code and configuration.',
+      'Per-country probing: the landing page, the known geo endpoints and, where the protocol has one, its own geo-check API (the call the app makes to decide what a visitor may do, such as Hyperliquid legalCheck, Aster common-check-ip or Lighter geoLocation) are requested through a residential proxy in the target country, without JavaScript. The vantage is verified first: the proxy must answer and at least half of the IP-geolocation services asked through it must see the target country; on Cloudflare-fronted hosts the `loc=` field of `/cdn-cgi/trace` is recorded too. The result is one of: served, blocked (HTTP 451, a 403 with geo wording, a redirect to a block page, or an API answering “restricted”), close-only, feature-limited, or anti-bot challenge (not testable). A served landing page only means that no edge-level block was observed; an API answering “no restriction” is the protocol’s own verdict for that country. Wallet screening is not covered by these probes. Sanctioned and high-risk jurisdictions are probed where the proxy provider has exits; elsewhere their status stays inferred from code and configuration.',
     limitsTitle: 'Limitations and data',
     limits: [
       'Production may differ from the repository: Uniswap publishes a release mirror, Raydium and QuickSwap keep stale snapshots, and several projects (PancakeSwap, Across, Spark) made their frontends private.',

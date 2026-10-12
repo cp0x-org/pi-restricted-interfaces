@@ -3,7 +3,8 @@
 
 Input: research/out/{code,bundle,docs,api,live}.json written by the check_*.py scripts. Only checks that passed
 (or, for live checks without a proxy, a "recorded" observation) are used; a failed, skipped or missing check simply
-does not support its claim.
+does not support its claim. The P3 probe store (monitor/data/observations.json) adds one "recorded" row per claim for
+the countries it saw restricted that no check names, with the same rule as the site (monitor/scripts/observed.py).
 
 Per interface and claim the strongest status among passing checks wins (yes > reported > optional > tos_only > no;
 for VPN block > detect). The rating is then computed with the same rule as the site (monitor/scripts/build.py):
@@ -33,8 +34,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import common  # noqa: E402
 from lib.net import now_iso  # noqa: E402
 
+sys.path.append(os.path.join(common.PROJECT, "monitor", "scripts"))
+import observed  # noqa: E402
+
 KINDS = ("code", "bundle", "docs", "api", "live")
 SITE = os.path.join(common.PROJECT, "src", "data", "interfaces.json")
+CATALOG = os.path.join(common.PROJECT, "monitor", "data", "interfaces.json")
+OBSERVATIONS = os.path.join(common.PROJECT, "monitor", "data", "observations.json")
 RANK = {"block": 7, "detect": 6, "yes": 5, "reported": 4, "optional": 2, "tos_only": 1, "no": 0}
 ENFORCED = ("yes", "reported")
 STEPS = ((0, "A"), (5, "B"), (20, "C"))
@@ -195,11 +201,40 @@ def review(t, e, sweeps, spec=None):
     return items
 
 
+def load_observed():
+    """Restrictions the P3 probe saw, per interface (monitor/scripts/observed.py), or {} without a store."""
+    if not os.path.exists(OBSERVATIONS):
+        return {}
+    with open(CATALOG, encoding="utf-8") as fh:
+        catalog = json.load(fh)
+    with open(OBSERVATIONS, encoding="utf-8") as fh:
+        obs = json.load(fh).get("observations", [])
+    return observed.found(obs, observed.targets(catalog))
+
+
+def observed_rows(iid, claims, seen):
+    """One "recorded" claim row per field for the countries the probe saw restricted that the checks do not name yet."""
+    have = {(f, k): set(claims[f][k]) if claims[f]["status"] in ENFORCED else set() for f, k in observed.FIELDS.values()}
+    out = []
+    for (field, key), tokens in observed.additions(seen, have).items():
+        claim = "geo_site.close_only" if key == "close_only" else field
+        evidence = "; ".join(f"{t}: {o['kind']} {o['url']} → HTTP {o['http_status'] or '—'} {o['ui_state']} "
+                             f"({o['proxy_type']}, {o['at'][:10]})" for t, o in ((t, seen[(field, key)][t]) for t in tokens))
+        out.append(OrderedDict([
+            ("interface", iid), ("check", f"{iid}/probe-{claim.replace('.', '-').replace('_', '-')}"), ("type", "probe"),
+            ("claim", claim), ("status", "yes"), ("outcome", "recorded"), ("countries", tokens),
+            ("about", "Live probe (monitor:probe): the newest verified observation from these countries is restricted"),
+            ("source", "monitor/data/observations.json"), ("found", [OrderedDict(text=evidence)]), ("reasons", []),
+        ]))
+    return out
+
+
 def build(scope):
     rows, meta = load_results()
     with open(SITE, encoding="utf-8") as fh:
         site = {e["id"]: e for e in json.load(fh)["interfaces"]}
     specs = {s["id"]: s for s in common.load_specs()}
+    seen = load_observed()
     ids = list(site) + ([i for i in specs if i not in site] if scope == "all" else [])
     table = []
     for iid in ids:
@@ -207,7 +242,10 @@ def build(scope):
         current = {f"{iid}/{c['id']}" for c in (spec or {}).get("checks", [])}
         # Rows of checks that no longer exist in research/checks (left over from an older run) are ignored.
         mine = [r for r in rows if r["interface"] == iid and (not r.get("claim") or r["check"] in current)]
+        planned = len((spec or {}).get("checks", []))
+        not_run = planned - sum(1 for r in mine if r.get("claim"))
         checks = [r for r in mine if r.get("claim")]
+        checks += observed_rows(iid, summarize(checks), seen.get(iid, {}))
         sweeps = {r["type"]: r for r in mine if not r.get("claim")}
         claims = summarize(checks)
         count, countries, mechanisms = restrictions(claims)
@@ -215,12 +253,11 @@ def build(scope):
         e = site.get(iid)
         sv = site_view(e) if e else None
         tally = OrderedDict((k, sum(1 for r in checks if r["outcome"] == k)) for k in ("pass", "recorded", "fail", "error", "skip"))
-        planned = len((spec or {}).get("checks", []))
         t = OrderedDict([
             ("id", iid), ("name", display_name(e) if e else specs[iid].get("name", iid)),
             ("lifecycle", e.get("lifecycle", "current") if e else ""), ("url", e["url"] if e else ""),
             ("rating", lvl), ("restrictions", count), ("countries", countries), ("mechanisms", mechanisms),
-            ("claims", claims), ("checks", checks), ("tally", tally), ("not_run", planned - len(checks)),
+            ("claims", claims), ("checks", checks), ("tally", tally), ("not_run", not_run),
             ("site", sv), ("match", (sv is not None and sv["level"] == lvl and sv["count"] == count)),
             ("sweeps", sweeps), ("coverage", coverage(spec, sweeps, (spec or {}).get("checks", []))),
         ])

@@ -63,6 +63,7 @@ Cheat sheet of the values:
 | `confidence` | `high` · `medium` · `low` |
 
 Optional fields:
+- `"referral_url": "https://app.myprotocol.xyz/?ref=CP0X"`: where the official-app link goes when it differs from `url` (a cp0x referral link); the link text, search and probes keep `url`.
 - `"kyc": { "s": "yes", "layer": "contract", "scope": "what KYC gates" }`: KYC or a wallet allowlist (counts as one restriction).
 - `"alternatives": [{ "name": "myprotocol.cp0x.com", "url": "https://myprotocol.cp0x.com" }]`: if pi.cp0x.com has a permissionless version (the row moves up).
 - Protocol versions: see the section below.
@@ -107,6 +108,10 @@ python3 -I research/combine.py | grep myprotocol          # the rating and restr
 ```
 
 ## 4. Optional: a live check from other countries
+
+If the app decides the block after an API call (a geo check, a legal check, an IP check before connecting a wallet), add
+that call to `api_probes` (format and examples: `monitor/docs/probing.md`, section 4a): the probe then asks it from
+every country and records the protocol's own verdict, not only whether the landing page loads.
 
 ```bash
 set -a; source .env.probe; set +a                     # proxy credentials, see monitor/docs/probing.md
