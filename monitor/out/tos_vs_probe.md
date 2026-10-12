@@ -64,7 +64,7 @@ How to read the columns: **ToS** — the countries the Terms of Service name (IS
 | Synapse (`synapse`) | — (0) | — (0) | 0 | — | — | — | not probed |
 | Portal Bridge (Wormhole) (`portalbridge`) | — (0) | — (0) | 0 | — | — | — | not probed |
 | Relay (`relay`) | — (0) | — (0) | 0 | — | — | — | not probed |
-| Polymarket (`polymarket`) | — (0) | AU BR CA CA-ON CD CF CU DE FR GB IQ IR IT JP KR LB LY MM NI NL PL RU SD SG SO SS SY TH TW US US-NY VE ZW (33) | 54 | — | — | AU BR CA CA-ON CD CF CU DE FR GB IQ IR IT JP KR LB LY MM NI NL PL RU SD SG SO SS SY TH TW US US-NY VE ZW | probe finds more (33 not in ToS) |
+| Polymarket (`polymarket`) | AU BE BI BR BY CA-AB CA-BC CA-ON CA-QC CD CF CU DE ET FR GB IE IQ IR IT JP KP LB LY MM MT NI NL NZ PL RU SD SG SK SO SS SY TH TW UA-Crimea UA-DPR UA-LPR UM US VE YE ZW (47) | AU BR CA CA-ON CD CF CU DE FR GB IQ IR IT JP KR LB LY MM NI NL PL RU SD SG SO SS SY TH TW US US-NY VE ZW (33) | 54 | — | BE BI BY CA-AB CA-BC CA-QC ET IE KP MT NZ SK UA-Crimea UA-DPR UA-LPR UM YE | CA KR | probe finds more (2 not in ToS) |
 | Safe{Wallet} (`safe`) | — (0) | BY CU RU (3) | 62 | — | — | BY CU RU | probe finds more (3 not in ToS) |
 | ENS (`ens`) | — (0) | — (0) | 62 | — | — | — | nothing on either side — landing page only |
 | ENS Legacy Manager (`ens-legacy`) | — (0) | — (0) | 0 | — | — | — | not probed |

@@ -99,7 +99,7 @@
       "tos": {
         "us": "no",
         "us_scope": "",
-        "restricted": "generic: comprehensive/regional US sanctions",
+        "restricted": "The Terms name no country: users must not be citizens, residents or organized in a jurisdiction or territory under comprehensive country-wide, territory-wide or regional US sanctions (support.uniswap.org Terms of Service, read on 2026-10-12 from the Wayback copy of 2026-09-19).",
         "restricted_codes": []
       },
       "observed": [
@@ -8754,7 +8754,7 @@
       "tos": {
         "us": "no",
         "us_scope": "",
-        "restricted": "generic US-embargoed",
+        "restricted": "The Terms name no country: users must not be located or organized in any US-embargoed country or region, or one designated 'terrorist supporting' (docs.eigencloud.xyz Terms of Service, Wayback copy of 2026-09-17).",
         "restricted_codes": []
       },
       "observed": [
@@ -9636,8 +9636,56 @@
       "tos": {
         "us": "yes",
         "us_scope": "",
-        "restricted": "40 countries + 7 regions (help center, revision of 2026-08-14)",
-        "restricted_codes": []
+        "restricted": "Section 2.1.4 of the Terms forbids using the platform from restricted locations and bypassing them with a VPN; the list itself is the help-center article 'Geographic Restrictions' (revision of 2026-08-14): 40 blocked countries (the article's heading says 39) and 7 blocked regions (four Canadian provinces, Crimea, Donetsk, Luhansk).",
+        "restricted_codes": [
+          "AU",
+          "BE",
+          "BY",
+          "BR",
+          "BI",
+          "CF",
+          "CD",
+          "CU",
+          "DE",
+          "ET",
+          "FR",
+          "GB",
+          "IE",
+          "IR",
+          "IQ",
+          "IT",
+          "JP",
+          "KP",
+          "LB",
+          "LY",
+          "MM",
+          "MT",
+          "NI",
+          "NL",
+          "NZ",
+          "PL",
+          "RU",
+          "SG",
+          "SK",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "TW",
+          "TH",
+          "UM",
+          "US",
+          "VE",
+          "YE",
+          "ZW",
+          "CA-AB",
+          "CA-BC",
+          "CA-ON",
+          "CA-QC",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR"
+        ]
       },
       "observed": [
         {
@@ -10227,7 +10275,7 @@
       "tos": {
         "us": "no",
         "us_scope": "",
-        "restricted": "generic EU/US sanctions",
+        "restricted": "The Terms name no country: users must not be citizens, residents or members of any jurisdiction subject to EU or US economic sanctions (safe.global/terms, section 17, read 2026-10-12).",
         "restricted_codes": []
       },
       "observed": [
@@ -12575,7 +12623,7 @@
       "tos": {
         "us": "partial",
         "us_scope": "USTB/USCC: US accredited investors / qualified purchasers",
-        "restricted": "Only investors in supported countries (allowlist of roughly 22-29 countries, updated regularly)",
+        "restricted": "An allowlist, not a blocklist: Superstate Funds are offered only to Qualified Purchasers in 29 supported countries (docs 'Getting started', 2026-10: US, AU, BM, BS, VG, CA, KY, CY, FR, GE, DE, GI, HK, IT, IE, JE, LU, MH, MX, PA, PL, SC, SG, ES, KN, KR, CH, AE, GB); tokenized equities to investors in supported countries. No named restricted country, so no restricted codes.",
         "restricted_codes": []
       },
       "observed": [
@@ -13337,7 +13385,7 @@
       "tos": {
         "us": "no",
         "us_scope": "",
-        "restricted": "No named jurisdictions; sanctions-list representations only",
+        "restricted": "The Terms name no country: users must not be located, organized, citizens or residents in a country or territory subject to sanctions by OFAC, the UN, the EU, HM Treasury, the HKMA or the MAS (kerneldao.com/kelp/terms-of-service, clause (m), read 2026-10-12).",
         "restricted_codes": []
       },
       "observed": [

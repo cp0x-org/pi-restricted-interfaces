@@ -70,7 +70,7 @@
     "updated": "2025",
     "us": "no",
     "us_scope": "",
-    "restricted": "No named jurisdictions; sanctions-list representations only",
+    "restricted": "The Terms name no country: users must not be located, organized, citizens or residents in a country or territory subject to sanctions by OFAC, the UN, the EU, HM Treasury, the HKMA or the MAS (kerneldao.com/kelp/terms-of-service, clause (m), read 2026-10-12).",
     "restricted_codes": []
   },
   "notes": "Closed frontend; deposits and withdrawals use public contracts. The Gain vault gate is decided by Kelp's geoData API.",
