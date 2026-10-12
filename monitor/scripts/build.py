@@ -5,7 +5,8 @@ Usage:
   python3 -I monitor/scripts/build.py monitor/data/interfaces.json monitor/templates/report_template.md monitor/out \
       --observations monitor/data/observations.json --export src/data --chains evm
 
-Outputs: <outdir>/report.md and <outdir>/interfaces.csv over the whole catalog (the collected data, derived), and with
+Outputs: <outdir>/report.md, <outdir>/interfaces.csv and <outdir>/tos_vs_probe.md (the Terms' country lists against the
+probe's findings, tos_vs_probe.py) over the whole catalog (the collected data, derived), and with
 --export the files the web app loads (export.py: monitor.json + interfaces/<id>.json), which are then compared with the
 collected data (check_export.py); a mismatch fails the build. Deterministic: no timestamps. Python >= 3.9, stdlib only.
 """
@@ -536,6 +537,8 @@ def main():
         w.writerow(CSV_COLS)
         for i in items:
             w.writerow(csv_row(i))
+    import tos_vs_probe  # noqa: E402
+    tos_vs_probe.write(data, observations, os.path.join(args.outdir, "tos_vs_probe.md"))
     if args.export:
         import check_export, export  # noqa: E402 - the site files are a separate stage with their own scripts
         chains = set(args.chains.split(",")) if args.chains else None

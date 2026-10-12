@@ -5253,7 +5253,7 @@
         "s": "no",
         "countries": [],
         "close_only": [],
-        "method": ""
+        "method": "The Safe Client Gateway (safe-client.safe.global), which the app loads every Safe, balance and transaction from, is refused by CloudFront (HTTP 403) in some countries; the page itself loads and then shows 'Access Restricted'. The countries are those of the live probe (see the observations; 2026-10-12: BY, CU, RU)."
       },
       "geo_feature": {
         "s": "yes",
@@ -5285,6 +5285,32 @@
         "WebFetch (US): normal page"
       ],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "client gateway",
+          "method": "GET",
+          "url": "https://safe-client.safe.global/v1/chains?limit=1",
+          "headers": {
+            "Origin": "https://app.safe.global"
+          },
+          "note": "The Safe Client Gateway the app loads every Safe, balance and transaction from; CloudFront refuses it by country, and the app then shows 'Access Restricted'.",
+          "flags": [
+            "count"
+          ],
+          "rules": [
+            {
+              "match": "The request could not be satisfied",
+              "state": "blocked",
+              "note": "CloudFront refuses the gateway (HTTP 403): the app cannot load any Safe"
+            },
+            {
+              "match": "\"count\"\\s*:",
+              "state": "ok",
+              "note": "the gateway answers"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "apps/web/src/components/common/GeoblockingProvider/index.tsx",
         "apps/web/src/hooks/useSanctionedAddress.ts",
@@ -5784,7 +5810,7 @@
         "s": "unknown",
         "countries": [],
         "close_only": [],
-        "method": ""
+        "method": "superstate.com answers HTTP 403 'Access restricted: Access to this site is not permitted from your location'. The countries are those of the live probe (see the observations; 2026-10-12: AF, BY, CU, IR, LB, MM, RU, SY, VE)."
       },
       "geo_feature": {
         "s": "yes",

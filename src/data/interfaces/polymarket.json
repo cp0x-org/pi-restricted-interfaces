@@ -58,7 +58,9 @@
       "CA-QC",
       "UA-Crimea",
       "UA-DPR",
-      "UA-LPR"
+      "UA-LPR",
+      "CA",
+      "KR"
     ],
     "close_only": [
       "SG",
@@ -110,8 +112,8 @@
   "lifecycle": "current",
   "level": "D",
   "restrictions": {
-    "count": 47,
-    "countries": 47,
+    "count": 49,
+    "countries": 49,
     "mechanisms": []
   },
   "category_group": "prediction",
@@ -119,6 +121,1430 @@
     "evm"
   ],
   "observations": [
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:09:20Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "AF",
+        "region": "KAB"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:09:16Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:02Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "AR",
+        "region": "S"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:03:59Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:21Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "AU",
+        "region": "NSW"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:18Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:05:44Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "BD",
+        "region": "B"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:05:41Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:03Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "BR",
+        "region": "SP"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:00Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:03:54Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "CA",
+        "region": "ON"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:03:52Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:10Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "CA",
+        "region": "ON"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:08Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:41Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "CD",
+        "region": "KN"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:38Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:52Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "CF",
+        "region": "BGF"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:48Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:57Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "CH",
+        "region": "BE"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:56Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:03:59Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "CO",
+        "region": "DC"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:03:57Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:48Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 403,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 403 with geo wording"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:45Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 403,
+      "final_url": "https://polymarket.com",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 403 with geo wording"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:34Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "DE",
+        "region": "NI"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:32Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:37Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "FR",
+        "region": "HDF"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:35Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:23Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "GB",
+        "region": "ENG"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:21Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:58Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "GE",
+        "region": "IM"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:56Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:48Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "HK",
+        "region": ""
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:46Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:04Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "ID",
+        "region": "SA"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:01Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:05:22Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "IL",
+        "region": "HA"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:05:20Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IQ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:09:21Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "IQ",
+        "region": "SU"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "IQ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:09:20Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:41Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 403,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 403 with geo wording"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:39Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 403,
+      "final_url": "https://polymarket.com",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 403 with geo wording"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:49Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "IT",
+        "region": "25"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:48Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:49Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "JP",
+        "region": "13"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:47Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:36Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "KE",
+        "region": "30"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:33Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:06Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 451,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 451"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:02Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 451,
+      "final_url": "https://polymarket.com",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 451"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:45Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "KZ",
+        "region": "ALA"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:43Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:09:34Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "LB",
+        "region": "AK"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:09:32Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:00Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "LY",
+        "region": "TB"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:09:58Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:51Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "ML",
+        "region": "BKO"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:49Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:09:17Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "MM",
+        "region": "13"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:09:12Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:03:59Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "MX",
+        "region": "NLE"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:03:56Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:23Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "MY",
+        "region": "02"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:21Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:36Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "NG",
+        "region": "LA"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:34Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:38Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "NI",
+        "region": "MN"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:35Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:37Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "NL",
+        "region": "GE"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:36Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:28Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "PH",
+        "region": "40"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:25Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:05:35Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "PK",
+        "region": "SD"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:05:32Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:51Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "PL",
+        "region": "14"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:49Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:21Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "RU",
+        "region": "TA"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:19Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:09:59Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "SD",
+        "region": "GZ"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:09:57Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:58Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "SE",
+        "region": "AB"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:04:57Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:26Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "SG",
+        "region": ""
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:24Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:11:00Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "SO",
+        "region": "WO"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "SO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:55Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:13Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "SS",
+        "region": "EC"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:10Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:43Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 403,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 403 with geo wording"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:41Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 403,
+      "final_url": "https://polymarket.com",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 403 with geo wording"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:03Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "TH",
+        "region": "90"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:01Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:07Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "TW",
+        "region": "04"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:04Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:05:01Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "UA",
+        "region": "71"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:05:00Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
     {
       "country": "US",
       "region": null,
@@ -135,6 +1561,186 @@
         "region": "VA"
       },
       "note": "flag true"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:03:58Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "US",
+        "region": "FL"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:03:55Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": "US-NY",
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:14Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "US",
+        "region": "NY"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "US",
+      "region": "US-NY",
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:11Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:48Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "VE",
+        "region": "A"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:08:46Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:06:00Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "VN",
+        "region": "70"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:05:58Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:32Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "ok",
+      "flags": {
+        "blocked": false,
+        "country": "ZA",
+        "region": "GP"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:07:30Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:18Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "ZW",
+        "region": "HA"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:10:16Z",
+      "kind": "site",
+      "url": "https://polymarket.com",
+      "http_status": 200,
+      "final_url": "https://polymarket.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
     }
   ]
 }
