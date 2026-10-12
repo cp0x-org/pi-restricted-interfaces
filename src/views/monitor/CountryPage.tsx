@@ -18,7 +18,7 @@ import { localizePath } from 'i18n/paths';
 
 import { interfaces } from 'data/dataset';
 import { countryName, defaultCountryFromNavigator, flagEmoji, isCountryCode } from 'data/countries';
-import { COUNTRY_STATUS, CountryStatus, CountryVerdict, InterfaceEntry } from 'types/restrictions';
+import { COUNTRY_STATUS, CountryStatus, CountryVerdict, InterfaceRow } from 'types/restrictions';
 import { basisRank, countryStatusRank, countryVerdict, displayName, levelRank } from 'utils/restrictions';
 import CountryPicker from './components/CountryPicker';
 import PermissionlessLink from './components/PermissionlessLink';
@@ -29,7 +29,7 @@ import ToneChip, { countryStatusTone, vpnTone } from './components/ToneChip';
 import { COUNTRY_STATUS_DESCRIPTIONS, COUNTRY_STATUS_LABELS, LAYER_LABELS, VPN_LABELS } from './constants';
 
 interface Row {
-  entry: InterfaceEntry;
+  entry: InterfaceRow;
   verdict: CountryVerdict;
 }
 

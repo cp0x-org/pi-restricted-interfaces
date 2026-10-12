@@ -1,0 +1,87 @@
+{
+  "id": "1inch",
+  "name": "1inch",
+  "description": "1inch is a DEX aggregator that splits each swap across many liquidity sources to get a better price, with an intent-based Fusion mode in which resolvers fill orders without the user paying gas. It also offers limit orders, cross-chain swaps and its own wallet; 1INCH is the governance token.",
+  "description_zh": "1inch 是一个 DEX 聚合器，会把每笔兑换拆分到多个流动性来源以获得更好的价格，并提供基于意图的 Fusion 模式，由解析者（resolver）成交订单、用户无需支付 gas。它还提供限价单、跨链兑换和自有钱包；1INCH 是治理代币。",
+  "category": "DEX aggregator",
+  "chains": "EVM, Solana",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Optimism",
+    "Polygon",
+    "BNB Chain",
+    "Avalanche",
+    "Gnosis",
+    "zkSync",
+    "Linea",
+    "Sonic",
+    "Unichain"
+  ],
+  "url": "https://1inch.com",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "reported",
+    "countries": [],
+    "close_only": [],
+    "method": "2022: US geo-block, since lifted (FAQ now says the US is available)"
+  },
+  "geo_feature": {
+    "s": "tos_only",
+    "countries": [
+      "AE"
+    ],
+    "scope": "UAE: some features"
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "TRM Labs (help center); ToS also names BlockAid, Web3 Antivirus, MetaMask, Innerworks",
+    "layer": "api",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://1inch.com/assets/1inch_com_terms_of_use.pdf",
+    "updated": "2026-09-14",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "generic 'Prohibited Localities'",
+    "restricted_codes": []
+  },
+  "notes": "Closed. The 1inch API is public but needs a key; screening happens on 1inch's side. URL note: app.1inch.io -> 302.",
+  "live": [
+    "WebFetch (US): 302 -> 1inch.com, normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://help.1inch.com/en/articles/6588963-1inch-address-screening",
+    "https://configs.1inch.io/frontend/legal/1inch_com_terms_of_use.pdf"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 2,
+    "countries": 0,
+    "mechanisms": [
+      "geo_site",
+      "screening"
+    ]
+  },
+  "category_group": "aggregator",
+  "chain_tags": [
+    "evm",
+    "solana"
+  ],
+  "observations": []
+}

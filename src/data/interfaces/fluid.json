@@ -1,0 +1,71 @@
+{
+  "id": "fluid",
+  "name": "Fluid",
+  "description": "Fluid, built by Instadapp, combines lending and a DEX on top of a shared liquidity layer. Its vaults allow high loan-to-value borrowing, and Fluid DEX can use collateral and debt positions as trading liquidity.",
+  "description_zh": "Fluid 由 Instadapp 构建，在共享流动性层之上结合了借贷和 DEX。其金库支持高贷款价值比借款，Fluid DEX 可以把抵押品和债务仓位用作交易流动性。",
+  "category": "Lending / DEX",
+  "chains": "EVM, Solana",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Polygon"
+  ],
+  "url": "https://fluid.io",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "unknown",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "unknown",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://instadapp.io/terms",
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "unknown (client-side)",
+    "restricted_codes": []
+  },
+  "notes": "Closed. Needs a browser crawl.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [],
+  "confidence": "low",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "n/a",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "lending",
+  "chain_tags": [
+    "evm",
+    "solana"
+  ],
+  "observations": []
+}

@@ -1,0 +1,153 @@
+{
+  "id": "euler",
+  "name": "Euler",
+  "description": "Euler is a modular lending protocol. Its Euler Vault Kit lets anyone deploy lending vaults, and the Ethereum Vault Connector links them so that one account can use positions in several vaults as collateral; Euler v2 relaunched in 2024 after the 2023 exploit of v1.",
+  "description_zh": "Euler 是一个模块化借贷协议。其 Euler Vault Kit 允许任何人部署借贷金库，Ethereum Vault Connector 将这些金库连接起来，使一个账户可以把多个金库中的仓位用作抵押；在 2023 年 v1 遭攻击后，Euler v2 于 2024 年重新上线。",
+  "category": "Lending",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Base",
+    "Arbitrum",
+    "Avalanche",
+    "BNB Chain",
+    "Sonic",
+    "Berachain",
+    "BOB",
+    "Swell",
+    "Unichain",
+    "Linea"
+  ],
+  "url": "https://app.euler.finance",
+  "frontend_repo": "https://github.com/euler-xyz/euler-lite",
+  "repo_state": "open",
+  "repo_status": "open (prod built from it, app_id matches)",
+  "repo_last_commit": "2026-10-06",
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "AF",
+      "BY",
+      "CF",
+      "CU",
+      "KP",
+      "CD",
+      "ET",
+      "IR",
+      "IQ",
+      "LB",
+      "LY",
+      "ML",
+      "MM",
+      "NI",
+      "RU",
+      "SO",
+      "SS",
+      "SD",
+      "SY",
+      "VE",
+      "YE",
+      "ZW"
+    ],
+    "close_only": [],
+    "method": "Nuxt server middleware: HTTP 451 on /api/* by edge country header; fail-closed if country unknown"
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [],
+    "scope": "per-vault/asset hard/soft blocks by country (incl. EU/EEA groups); withdraw/repay stay allowed"
+  },
+  "vpn": {
+    "s": "detect",
+    "note": "logged only, not blocked"
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "TRM Labs via Euler data-v3 /v3/compliance/address-screening",
+    "layer": "api",
+    "fail": "closed",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://www.euler.finance/terms",
+    "updated": "2026-05-04",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "IR, BY, CU, KP, SY, Crimea, DPR, LPR, RU",
+    "restricted_codes": [
+      "IR",
+      "BY",
+      "CU",
+      "KP",
+      "SY",
+      "UA-Crimea",
+      "UA-DPR",
+      "UA-LPR",
+      "RU"
+    ]
+  },
+  "notes": "Open repo with docs (docs/geo-blocking.md, docs/address-screening.md). Geo-gate and screening are switched by env config.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [
+    "https://app.euler.finance/api/ping"
+  ],
+  "evidence": [
+    "server/middleware/geo-gate.ts",
+    "server/utils/screening.ts",
+    "docs/geo-blocking.md",
+    "docs/address-screening.md"
+  ],
+  "confidence": "high",
+  "alternatives": [
+    {
+      "name": "euler.cp0x.com",
+      "url": "https://euler.cp0x.com"
+    }
+  ],
+  "lifecycle": "current",
+  "level": "D",
+  "restrictions": {
+    "count": 25,
+    "countries": 22,
+    "mechanisms": [
+      "geo_feature",
+      "screening",
+      "vpn"
+    ]
+  },
+  "category_group": "lending",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": [
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-08T15:54:15Z",
+      "kind": "geo_endpoint",
+      "url": "https://app.euler.finance/api/ping",
+      "http_status": 403,
+      "final_url": "https://app.euler.finance/api/ping",
+      "ui_state": "unknown",
+      "flags": {},
+      "note": "HTTP 403 without geo wording (WAF/anti-bot?)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-08T15:53:48Z",
+      "kind": "site",
+      "url": "https://app.euler.finance",
+      "http_status": 200,
+      "final_url": "https://app.euler.finance",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

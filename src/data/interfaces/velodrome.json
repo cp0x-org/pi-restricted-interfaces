@@ -1,0 +1,113 @@
+{
+  "id": "velodrome",
+  "name": "Velodrome",
+  "description": "Velodrome is the central AMM and liquidity marketplace of Optimism and other OP Superchain networks. Using the ve(3,3) model, veVELO holders vote where VELO emissions go and collect the fees and incentives of the pools they back.",
+  "description_zh": "Velodrome 是 Optimism 及其他 OP Superchain 网络的核心 AMM 和流动性市场。在 ve(3,3) 模型下，veVELO 持有者投票决定 VELO 排放的去向，并获得所支持池子的手续费和激励。",
+  "category": "DEX",
+  "chains": "Optimism, Superchain",
+  "networks": [
+    "Optimism",
+    "Mode",
+    "Lisk",
+    "Fraxtal",
+    "Ink",
+    "Soneium",
+    "Unichain",
+    "Swell",
+    "Superchain"
+  ],
+  "url": "https://velodrome.finance",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed (only velodrome-finance/docs, sugar)",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "unknown",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "unknown",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://github.com/velodrome-finance/docs/blob/main/content/legal.mdx",
+    "updated": "2025-10-14",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "same 35-country list as Aerodrome (incl. CN, TR, UA, RU)",
+    "restricted_codes": [
+      "AF",
+      "BY",
+      "BA",
+      "BI",
+      "CF",
+      "CN",
+      "CD",
+      "CU",
+      "ET",
+      "GN",
+      "GW",
+      "HT",
+      "IR",
+      "IQ",
+      "KP",
+      "LB",
+      "LY",
+      "ML",
+      "MD",
+      "ME",
+      "MM",
+      "NI",
+      "NE",
+      "RU",
+      "RS",
+      "SO",
+      "SS",
+      "SD",
+      "SY",
+      "TN",
+      "TR",
+      "UA",
+      "VE",
+      "YE",
+      "ZW"
+    ]
+  },
+  "notes": "Closed, same stack as Aerodrome.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://github.com/velodrome-finance/docs/blob/main/content/legal.mdx"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "n/a",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "dex",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

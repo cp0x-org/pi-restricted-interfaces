@@ -5,17 +5,20 @@ import {
   CONFIDENCE,
   CountryToken,
   CountryVerdict,
-  Dataset,
+  DatasetMeta,
   EvidenceLink,
   FAIL_MODES,
   InterfaceEntry,
+  InterfaceRow,
   LAYERS,
   LEVELS,
   LIFECYCLES,
   Level,
   MechanismKind,
+  Monitor,
   OBS_KINDS,
   OBS_STATES,
+  ObservedCountry,
   Observation,
   PROXY_TYPES,
   REPO_STATES,
@@ -25,14 +28,18 @@ import {
   VPN_STATUS
 } from '../types/restrictions';
 
-// ---------------------------------------------------------------------------- dataset validation
+// ---------------------------------------------------------------------------- site file validation
+// The JSON literal types widen to `string`, so the files are narrowed here, failing loudly on a schema mismatch
+// (monitor/scripts/build.py and check_export.py are the primary gates).
+
+const SITE_SCHEMA = 3;
 
 const isRecord = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null && !Array.isArray(v);
 const isStringArray = (v: unknown): v is string[] => Array.isArray(v) && v.every((x) => typeof x === 'string');
 
 function oneOf<T extends string>(allowed: readonly T[], value: unknown, where: string): T {
   if (typeof value !== 'string' || !(allowed as readonly string[]).includes(value)) {
-    throw new Error(`interfaces.json: ${where}=${JSON.stringify(value)}, expected one of ${allowed.join(' | ')}`);
+    throw new Error(`site data: ${where}=${JSON.stringify(value)}, expected one of ${allowed.join(' | ')}`);
   }
   return value as T;
 }
@@ -42,7 +49,7 @@ function oneOfOrNull<T extends string>(allowed: readonly T[], value: unknown, wh
 }
 
 function str(value: unknown, where: string): string {
-  if (typeof value !== 'string') throw new Error(`interfaces.json: ${where} must be a string`);
+  if (typeof value !== 'string') throw new Error(`site data: ${where} must be a string`);
   return value;
 }
 
@@ -51,36 +58,45 @@ function strOrNull(value: unknown, where: string): string | null {
 }
 
 function tokens(value: unknown, where: string): CountryToken[] {
-  if (!isStringArray(value)) throw new Error(`interfaces.json: ${where} must be a list of country tokens`);
+  if (!isStringArray(value)) throw new Error(`site data: ${where} must be a list of country tokens`);
   return value;
 }
 
-function observation(raw: unknown, where: string): Observation {
-  if (!isRecord(raw)) throw new Error(`interfaces.json: ${where} is not an object`);
-  const flags: Record<string, string | number | boolean> = {};
-  if (isRecord(raw.flags)) {
-    Object.entries(raw.flags).forEach(([k, v]) => {
-      if (typeof v === 'string' || typeof v === 'number' || typeof v === 'boolean') flags[k] = v;
-    });
-  }
+function observedCountry(raw: unknown, where: string): ObservedCountry {
+  if (!isRecord(raw)) throw new Error(`site data: ${where} is not an object`);
   return {
     country: str(raw.country, `${where}.country`),
-    region: strOrNull(raw.region, `${where}.region`),
     proxy_type: oneOf(PROXY_TYPES, raw.proxy_type, `${where}.proxy_type`),
     at: str(raw.at, `${where}.at`),
     kind: oneOf(OBS_KINDS, raw.kind, `${where}.kind`),
     url: str(raw.url, `${where}.url`),
     http_status: typeof raw.http_status === 'number' ? raw.http_status : null,
-    final_url: typeof raw.final_url === 'string' ? raw.final_url : '',
     ui_state: oneOf(OBS_STATES, raw.ui_state, `${where}.ui_state`),
-    flags,
     note: typeof raw.note === 'string' ? raw.note : ''
   };
 }
 
-function entry(raw: unknown, index: number): InterfaceEntry {
-  if (!isRecord(raw)) throw new Error(`interfaces.json: interfaces[${index}] is not an object`);
-  const id = str(raw.id, `interfaces[${index}].id`);
+function observation(raw: unknown, where: string): Observation {
+  const base = observedCountry(raw, where);
+  const r = raw as Record<string, unknown>;
+  const flags: Record<string, string | number | boolean> = {};
+  if (isRecord(r.flags)) {
+    Object.entries(r.flags).forEach(([k, v]) => {
+      if (typeof v === 'string' || typeof v === 'number' || typeof v === 'boolean') flags[k] = v;
+    });
+  }
+  return {
+    ...base,
+    region: strOrNull(r.region, `${where}.region`),
+    final_url: typeof r.final_url === 'string' ? r.final_url : '',
+    flags
+  };
+}
+
+/** The dashboard row of one interface (monitor.json). */
+function row(raw: unknown, where: string): InterfaceRow {
+  if (!isRecord(raw)) throw new Error(`site data: ${where} is not an object`);
+  const id = str(raw.id, `${where}.id`);
   const w = (field: string) => `${id}.${field}`;
   const gs = isRecord(raw.geo_site) ? raw.geo_site : {};
   const gf = isRecord(raw.geo_feature) ? raw.geo_feature : {};
@@ -96,19 +112,13 @@ function entry(raw: unknown, index: number): InterfaceEntry {
     family: typeof raw.family === 'string' && raw.family ? raw.family : undefined,
     lifecycle: raw.lifecycle === undefined ? 'current' : oneOf(LIFECYCLES, raw.lifecycle, w('lifecycle')),
     lifecycle_note: typeof raw.lifecycle_note === 'string' && raw.lifecycle_note ? raw.lifecycle_note : undefined,
-    description: typeof raw.description === 'string' ? raw.description : '',
-    description_zh: typeof raw.description_zh === 'string' ? raw.description_zh : undefined,
     category: str(raw.category, w('category')),
     category_group: oneOf(CATEGORY_GROUPS, raw.category_group, w('category_group')),
-    chains: str(raw.chains, w('chains')),
     networks: isStringArray(raw.networks) ? raw.networks : [],
-    chain_tags: (isStringArray(raw.chain_tags) ? raw.chain_tags : []).map((t) => oneOf(CHAIN_TAGS, t, w('chain_tags'))),
     url: str(raw.url, w('url')),
     referral_url: typeof raw.referral_url === 'string' && raw.referral_url ? raw.referral_url : undefined,
     frontend_repo: strOrNull(raw.frontend_repo, w('frontend_repo')),
     repo_state: oneOf(REPO_STATES, raw.repo_state, w('repo_state')),
-    repo_status: str(raw.repo_status, w('repo_status')),
-    repo_last_commit: strOrNull(raw.repo_last_commit, w('repo_last_commit')),
     geo_site: {
       s: oneOf(STATUS, gs.s, w('geo_site.s')),
       countries: tokens(gs.countries, w('geo_site.countries')),
@@ -124,39 +134,17 @@ function entry(raw: unknown, index: number): InterfaceEntry {
     screening: {
       s: oneOf(STATUS, sc.s, w('screening.s')),
       provider: str(sc.provider, w('screening.provider')),
-      layer: oneOfOrNull(LAYERS, sc.layer, w('screening.layer')),
-      fail: oneOfOrNull(FAIL_MODES, sc.fail, w('screening.fail')),
-      fail_note: str(sc.fail_note, w('screening.fail_note'))
+      layer: oneOfOrNull(LAYERS, sc.layer, w('screening.layer'))
     },
-    kyc: isRecord(raw.kyc)
-      ? {
-          s: oneOf(STATUS, raw.kyc.s, w('kyc.s')),
-          layer: oneOfOrNull(LAYERS, raw.kyc.layer, w('kyc.layer')),
-          scope: str(raw.kyc.scope, w('kyc.scope'))
-        }
-      : undefined,
-    asset_filter: str(raw.asset_filter, w('asset_filter')),
+    kyc: isRecord(raw.kyc) ? { s: oneOf(STATUS, raw.kyc.s, w('kyc.s')) } : undefined,
     tos: {
-      url: strOrNull(tos.url, w('tos.url')),
-      updated: str(tos.updated, w('tos.updated')),
       us: oneOf(TOS_US, tos.us, w('tos.us')),
       us_scope: str(tos.us_scope, w('tos.us_scope')),
       restricted: str(tos.restricted, w('tos.restricted')),
       restricted_codes: tokens(tos.restricted_codes, w('tos.restricted_codes'))
     },
-    notes: str(raw.notes, w('notes')),
-    live: isStringArray(raw.live) ? raw.live : [],
-    geo_endpoints: isStringArray(raw.geo_endpoints) ? raw.geo_endpoints : [],
-    api_probes: (Array.isArray(raw.api_probes) ? raw.api_probes : []).filter(isRecord).map((p, n) => ({
-      name: str(p.name, w(`api_probes[${n}].name`)),
-      method: p.method === 'POST' ? 'POST' : 'GET',
-      url: str(p.url, w(`api_probes[${n}].url`)),
-      note: typeof p.note === 'string' ? p.note : ''
-    })),
-    evidence: isStringArray(raw.evidence) ? raw.evidence : [],
-    confidence: oneOf(CONFIDENCE, raw.confidence, w('confidence')),
     alternatives: alternatives.map((a, n) => {
-      if (!isRecord(a)) throw new Error(`interfaces.json: ${id}.alternatives[${n}] is not an object`);
+      if (!isRecord(a)) throw new Error(`site data: ${id}.alternatives[${n}] is not an object`);
       return { name: str(a.name, w('alternatives.name')), url: str(a.url, w('alternatives.url')) };
     }),
     level: oneOf(LEVELS, raw.level, w('level')),
@@ -169,41 +157,86 @@ function entry(raw: unknown, index: number): InterfaceEntry {
           )
         }
       : { count: 0, countries: 0, mechanisms: [] },
-    observations: (Array.isArray(raw.observations) ? raw.observations : []).map((o, n) => observation(o, `${id}.observations[${n}]`))
+    observed: (Array.isArray(raw.observed) ? raw.observed : []).map((o, n) => observedCountry(o, `${id}.observed[${n}]`))
   };
 }
 
-/** Narrow the imported JSON to Dataset, failing loudly on a schema mismatch (build.py is the primary gate). */
-export function assertDataset(raw: unknown): Dataset {
+/** Narrow one interfaces/<id>.json to InterfaceEntry (the row fields plus everything the interface page shows). */
+export function assertEntry(raw: unknown): InterfaceEntry {
+  const base = row(raw, 'interface');
+  const r = raw as Record<string, unknown>;
+  const id = base.id;
+  const w = (field: string) => `${id}.${field}`;
+  const sc = isRecord(r.screening) ? r.screening : {};
+  const tos = isRecord(r.tos) ? r.tos : {};
+  return {
+    ...base,
+    description: typeof r.description === 'string' ? r.description : '',
+    description_zh: typeof r.description_zh === 'string' ? r.description_zh : undefined,
+    chains: str(r.chains, w('chains')),
+    chain_tags: (isStringArray(r.chain_tags) ? r.chain_tags : []).map((t) => oneOf(CHAIN_TAGS, t, w('chain_tags'))),
+    repo_status: str(r.repo_status, w('repo_status')),
+    repo_last_commit: strOrNull(r.repo_last_commit, w('repo_last_commit')),
+    screening: {
+      ...base.screening,
+      fail: oneOfOrNull(FAIL_MODES, sc.fail, w('screening.fail')),
+      fail_note: str(sc.fail_note, w('screening.fail_note'))
+    },
+    kyc: isRecord(r.kyc)
+      ? {
+          s: oneOf(STATUS, r.kyc.s, w('kyc.s')),
+          layer: oneOfOrNull(LAYERS, r.kyc.layer, w('kyc.layer')),
+          scope: str(r.kyc.scope, w('kyc.scope'))
+        }
+      : undefined,
+    asset_filter: str(r.asset_filter, w('asset_filter')),
+    tos: { ...base.tos, url: strOrNull(tos.url, w('tos.url')), updated: str(tos.updated, w('tos.updated')) },
+    notes: str(r.notes, w('notes')),
+    live: isStringArray(r.live) ? r.live : [],
+    geo_endpoints: isStringArray(r.geo_endpoints) ? r.geo_endpoints : [],
+    api_probes: (Array.isArray(r.api_probes) ? r.api_probes : []).filter(isRecord).map((p, n) => ({
+      name: str(p.name, w(`api_probes[${n}].name`)),
+      method: p.method === 'POST' ? 'POST' : 'GET',
+      url: str(p.url, w(`api_probes[${n}].url`)),
+      note: typeof p.note === 'string' ? p.note : ''
+    })),
+    evidence: isStringArray(r.evidence) ? r.evidence : [],
+    confidence: oneOf(CONFIDENCE, r.confidence, w('confidence')),
+    observations: (Array.isArray(r.observations) ? r.observations : []).map((o, n) => observation(o, `${id}.observations[${n}]`))
+  };
+}
+
+function datasetMeta(meta: Record<string, unknown>, total: number): DatasetMeta {
+  if (meta.schema_version !== SITE_SCHEMA) throw new Error(`monitor.json: meta.schema_version must be ${SITE_SCHEMA}`);
+  if (!isRecord(meta.regions)) throw new Error('monitor.json: meta.regions missing');
+  return {
+    schema_version: SITE_SCHEMA,
+    generated: str(meta.generated, 'meta.generated'),
+    sanctioned_test_address: str(meta.sanctioned_test_address, 'meta.sanctioned_test_address'),
+    sanctioned_test_address_note: str(meta.sanctioned_test_address_note, 'meta.sanctioned_test_address_note'),
+    live_check_egress: str(meta.live_check_egress, 'meta.live_check_egress'),
+    status_values: str(meta.status_values, 'meta.status_values'),
+    layer_values: str(meta.layer_values, 'meta.layer_values'),
+    country_tokens: str(meta.country_tokens, 'meta.country_tokens'),
+    regions: Object.fromEntries(Object.entries(meta.regions).map(([k, v]) => [k, str(v, `meta.regions.${k}`)])),
+    catalog_total: typeof meta.catalog_total === 'number' ? meta.catalog_total : total,
+    scope: typeof meta.scope === 'string' ? meta.scope : 'all interfaces',
+    defunct_hidden: isStringArray(meta.defunct_hidden) ? meta.defunct_hidden : []
+  };
+}
+
+/** Narrow the imported monitor.json to Monitor, failing loudly on a schema mismatch. */
+export function assertMonitor(raw: unknown): Monitor {
   if (!isRecord(raw) || !isRecord(raw.meta) || !Array.isArray(raw.interfaces)) {
-    throw new Error('interfaces.json: expected { meta, interfaces[] }');
+    throw new Error('monitor.json: expected { meta, interfaces[] }');
   }
-  const meta = raw.meta;
-  if (meta.schema_version !== 2) throw new Error('interfaces.json: meta.schema_version must be 2');
-  if (!isRecord(meta.regions)) throw new Error('interfaces.json: meta.regions missing');
-  const interfaces = raw.interfaces.map(entry);
+  const interfaces = raw.interfaces.map((r, n) => row(r, `interfaces[${n}]`));
   const ids = new Set<string>();
   interfaces.forEach((i) => {
-    if (ids.has(i.id)) throw new Error(`interfaces.json: duplicate id ${i.id}`);
+    if (ids.has(i.id)) throw new Error(`monitor.json: duplicate id ${i.id}`);
     ids.add(i.id);
   });
-  return {
-    meta: {
-      schema_version: 2,
-      generated: str(meta.generated, 'meta.generated'),
-      sanctioned_test_address: str(meta.sanctioned_test_address, 'meta.sanctioned_test_address'),
-      sanctioned_test_address_note: str(meta.sanctioned_test_address_note, 'meta.sanctioned_test_address_note'),
-      live_check_egress: str(meta.live_check_egress, 'meta.live_check_egress'),
-      status_values: str(meta.status_values, 'meta.status_values'),
-      layer_values: str(meta.layer_values, 'meta.layer_values'),
-      country_tokens: str(meta.country_tokens, 'meta.country_tokens'),
-      regions: Object.fromEntries(Object.entries(meta.regions).map(([k, v]) => [k, str(v, `meta.regions.${k}`)])),
-      catalog_total: typeof meta.catalog_total === 'number' ? meta.catalog_total : interfaces.length,
-      scope: typeof meta.scope === 'string' ? meta.scope : 'all interfaces',
-      defunct_hidden: isStringArray(meta.defunct_hidden) ? meta.defunct_hidden : []
-    },
-    interfaces
-  };
+  return { meta: datasetMeta(raw.meta, interfaces.length), interfaces };
 }
 
 // ---------------------------------------------------------------------------- ordering helpers
@@ -228,11 +261,11 @@ export const searchText = (e: Pick<InterfaceEntry, 'name' | 'version' | 'aka' | 
   [`${displayName(e)} ${e.aka ?? ''}`, fullName(e), e.id, e.url].join('\n').toLowerCase();
 
 /** 0 for current interfaces, 1 for legacy ones (they go to the bottom of the default order). */
-export const lifecycleRank = (e: InterfaceEntry): number => (e.lifecycle === 'legacy' ? 1 : 0);
+export const lifecycleRank = (e: InterfaceRow): number => (e.lifecycle === 'legacy' ? 1 : 0);
 
 /** Breakdown behind the rating, e.g. "33 restrictions: 31 countries + Feature Block, Wallet screening". */
 export const restrictionsText = (
-  e: InterfaceEntry,
+  e: InterfaceRow,
   tip: (n: number, countries: number, mechanisms: string) => string,
   labels: Record<MechanismKind, string>,
   sep: string,
@@ -243,7 +276,7 @@ export const restrictionsText = (
     : tip(e.restrictions.count, e.restrictions.countries, e.restrictions.mechanisms.map((m) => labels[m]).join(sep));
 
 /** Most restricted first: rating, then the number of restrictions, then name. */
-export const compareByLevelThenName = (a: InterfaceEntry, b: InterfaceEntry): number =>
+export const compareByLevelThenName = (a: InterfaceRow, b: InterfaceRow): number =>
   levelRank(a.level) - levelRank(b.level) || b.restrictions.count - a.restrictions.count || displayName(a).localeCompare(displayName(b));
 
 // ---------------------------------------------------------------------------- country tokens
@@ -262,7 +295,7 @@ export const isRegionToken = (token: CountryToken): boolean => token.includes('-
  * which does not mean it is open. A region is covered by its country (US-NY by US).
  * Without a Geo Block list there is nothing to compare: compared is false and onlyInTerms is the full Terms list.
  */
-export function tosAgainstGeo(e: Pick<InterfaceEntry, 'geo_site' | 'tos'>): {
+export function tosAgainstGeo(e: Pick<InterfaceRow, 'geo_site' | 'tos'>): {
   compared: boolean;
   onlyInTerms: CountryToken[];
   blockedNotNamed: CountryToken[];
@@ -289,7 +322,7 @@ const regionsOf = (list: CountryToken[], cc: string): CountryToken[] => list.fil
  * Precedence: blocked > close_only > feature_limited > regional (enforced) > tos_only > regional (ToS) > unknown > ok.
  * Wallet screening and VPN detection are country-independent and are not folded in.
  */
-export function staticCountryVerdict(e: InterfaceEntry, cc: string): CountryVerdict {
+export function staticCountryVerdict(e: InterfaceRow, cc: string): CountryVerdict {
   const { geo_site: gs, geo_feature: gf, tos } = e;
   const none: CountryToken[] = [];
 
@@ -341,62 +374,51 @@ export function staticCountryVerdict(e: InterfaceEntry, cc: string): CountryVerd
   };
 }
 
-const PROXY_PREFERENCE: Record<Observation['proxy_type'], number> = { residential: 0, isp: 1, mobile: 2, direct: 3, datacenter: 4, tor: 5 };
-
-/** Country-level (not region-specific) observations for `cc`, most trustworthy vantage first, newest first. */
-export function observationsFor(e: InterfaceEntry, cc: string): Observation[] {
-  return e.observations
-    .filter((o) => o.country === cc && o.region === null)
-    .sort((a, b) => PROXY_PREFERENCE[a.proxy_type] - PROXY_PREFERENCE[b.proxy_type] || b.at.localeCompare(a.at));
-}
-
-const observedRestriction = (o: Observation): CountryVerdict['status'] | null =>
+const observedRestriction = (o: ObservedCountry): CountryVerdict['status'] | null =>
   o.ui_state === 'blocked' || o.ui_state === 'close_only' || o.ui_state === 'feature_limited' ? o.ui_state : null;
 
-const KIND_LABELS: Record<Observation['kind'], string> = { site: 'Landing page', geo_endpoint: 'Geo endpoint', api: 'API' };
+const KIND_LABELS: Record<ObservedCountry['kind'], string> = { site: 'Landing page', geo_endpoint: 'Geo endpoint', api: 'API' };
 
-const describe = (o: Observation): string =>
-  `${KIND_LABELS[o.kind]} ${o.url} → HTTP ${o.http_status ?? '—'}` +
-  `${o.final_url && o.final_url !== o.url ? ` → ${o.final_url}` : ''}${o.note ? `; ${o.note}` : ''}`;
+const describe = (o: ObservedCountry): string =>
+  `${KIND_LABELS[o.kind]} ${o.url} → HTTP ${o.http_status ?? '—'}${o.note ? `; ${o.note}` : ''}`;
 
 /**
- * Static verdict (code, docs, ToS) combined with the latest live observation from the P3 probe:
- * an observed block wins over any inference; an observed "served" page upgrades ok/unknown to an observed ok;
- * otherwise the static verdict stays and the observation is attached, flagged as a conflict when they disagree.
+ * Static verdict (code, docs, ToS) combined with the live observation the probe left for this country (export.py picks
+ * one per country: the most trusted vantage, newest; a restriction first, then the protocol's API saying "no
+ * restriction", then a served landing page). An observed block wins over any inference; an observed "no restriction"
+ * upgrades ok/unknown to an observed ok; otherwise the static verdict stays and the observation is attached, flagged as
+ * a conflict when they disagree.
  */
-export function countryVerdict(e: InterfaceEntry, cc: string): CountryVerdict {
+export function countryVerdict(e: InterfaceRow, cc: string): CountryVerdict {
   const base = staticCountryVerdict(e, cc);
-  const obs = observationsFor(e, cc);
-  if (obs.length === 0) return base;
+  const o = e.observed.find((x) => x.country === cc);
+  if (!o) return base;
 
-  const blocking = obs.find((o) => observedRestriction(o) !== null);
-  if (blocking) {
-    const observed = observedRestriction(blocking) as CountryVerdict['status'];
+  const observed = observedRestriction(o);
+  if (observed) {
     // The static classification is finer than an HTTP probe (close-only vs blocked, feature-limited vs blocked):
     // when both agree that something is restricted, keep the static status and let the observation confirm it.
     const restrictedStatically = base.status === 'blocked' || base.status === 'close_only' || base.status === 'feature_limited';
     const status = restrictedStatically ? base.status : observed;
-    const detail = restrictedStatically ? `${base.detail} Confirmed live: ${describe(blocking)}` : describe(blocking);
-    return { status, basis: 'observed', detail, regions: [], observation: blocking, conflict: base.status === 'ok' };
+    const detail = restrictedStatically ? `${base.detail} Confirmed live: ${describe(o)}` : describe(o);
+    return { status, basis: 'observed', detail, regions: [], observation: o, conflict: base.status === 'ok' };
   }
-  // The protocol's own API saying "no restriction" is a stronger answer than a landing page that was served.
-  const served = obs.find((o) => o.kind === 'api' && o.ui_state === 'ok') ?? obs.find((o) => o.kind === 'site' && o.ui_state === 'ok');
-  if (served) {
+  if (o.ui_state === 'ok' && (o.kind === 'api' || o.kind === 'site')) {
     if (base.status === 'ok' || base.status === 'unknown') {
       return {
         status: 'ok',
         basis: 'observed',
         detail:
-          served.kind === 'api'
-            ? `The protocol's API reported no restriction (${served.note}); wallet screening not evaluated`
+          o.kind === 'api'
+            ? `The protocol's API reported no restriction (${o.note}); wallet screening not evaluated`
             : 'No edge-level block observed; client-side gates not evaluated',
         regions: [],
-        observation: served
+        observation: o
       };
     }
-    return { ...base, observation: served, conflict: base.status === 'blocked' || base.status === 'close_only' };
+    return { ...base, observation: o, conflict: base.status === 'blocked' || base.status === 'close_only' };
   }
-  return { ...base, observation: obs[0] };
+  return { ...base, observation: o };
 }
 
 /** Country statuses that mean the country is named in a restriction (enforced or only in the ToS). */
@@ -410,7 +432,7 @@ export const basisRank = (basis: CountryVerdict['basis']): number => BASES.index
 // ---------------------------------------------------------------------------- mechanisms
 
 /** True when the mechanism is technically present (confirmed, reported or optional code), not merely reserved in the ToS. */
-export function hasMechanism(e: InterfaceEntry, kind: MechanismKind): boolean {
+export function hasMechanism(e: InterfaceRow, kind: MechanismKind): boolean {
   switch (kind) {
     case 'geo_site':
       return enforced(e.geo_site.s) || e.geo_site.s === 'optional';
@@ -455,7 +477,7 @@ export function repoShortLabel(url: string): string {
 const OWNER_REPO_EVIDENCE = /^([\w.-]+\/[\w.-]+):\s*(.+)$/;
 
 /** Evidence strings -> clickable links. Repo-relative paths are pinned to the branch from frontend_repo (or HEAD). */
-export function evidenceLinks(e: InterfaceEntry): EvidenceLink[] {
+export function evidenceLinks(e: Pick<InterfaceEntry, 'evidence' | 'frontend_repo'>): EvidenceLink[] {
   const own = parseGithubRepo(e.frontend_repo);
   const links: EvidenceLink[] = [];
   e.evidence.forEach((ev) => {

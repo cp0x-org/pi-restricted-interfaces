@@ -122,5 +122,5 @@ pnpm monitor:build
 
 ## 5. Publish
 
-Commit `monitor/data/interfaces.json`, `src/data/interfaces.json` and `monitor/out/*`, then deploy
+Commit `monitor/data/interfaces.json`, `src/data/` and `monitor/out/*`, then deploy
 (`docker build .`, the domain `https://restricted.cp0x.com` is already configured).

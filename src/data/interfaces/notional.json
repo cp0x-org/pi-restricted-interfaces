@@ -1,0 +1,106 @@
+{
+  "id": "notional",
+  "name": "Notional",
+  "version": "Exponent",
+  "family": "notional",
+  "description": "Notional Exponent is Notional's leveraged-yield protocol, live on Ethereum since January 2026. It tokenizes yield strategies such as Midas, Pendle and staked-asset vaults and borrows through lending markets like Morpho to lever them up. Earlier Notional versions keep their own legacy apps.",
+  "description_zh": "Notional Exponent 是 Notional 的杠杆收益协议，自 2026 年 1 月起在以太坊上线。它把 Midas、Pendle 和质押资产金库等收益策略代币化，并通过 Morpho 等借贷市场借款来放大杠杆。Notional 的早期版本仍保留各自的旧版应用。",
+  "category": "Lending / leverage",
+  "chains": "Ethereum",
+  "networks": [
+    "Ethereum"
+  ],
+  "url": "https://notional.finance",
+  "frontend_repo": "https://github.com/notional-finance/notional-monorepo",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-06-19",
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "CU",
+      "IR",
+      "IQ",
+      "SY",
+      "KP",
+      "RU",
+      "BY",
+      "CF",
+      "CD",
+      "CG",
+      "LB",
+      "LR",
+      "LY",
+      "SO",
+      "VE",
+      "YE",
+      "ZW",
+      "US"
+    ],
+    "close_only": [],
+    "method": "api.notional.finance/geoip (Cloudflare cf.country) -> /blocked"
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "Chainalysis Sanctions Oracle 0x40C57923924B5c5c5455c48D93317139ADDaC8fb (on-chain)",
+    "layer": "frontend",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://notional.finance/terms",
+    "updated": "2020-12-05",
+    "us": "yes",
+    "us_scope": "",
+    "restricted": "NY, CU, IR, SY, KP, Crimea, VE (code blocks all of the US)",
+    "restricted_codes": [
+      "US-NY",
+      "CU",
+      "IR",
+      "SY",
+      "KP",
+      "UA-Crimea",
+      "VE"
+    ]
+  },
+  "notes": "Geo is a request to their worker (api.notional.finance/geoip); screening is an eth_call to the Chainalysis oracle made by the frontend.",
+  "live": [
+    "notional.finance bundle (2026-10-10): api.notional.finance/geoip + sanctions list incl. US -> /blocked; no VPN detector; app reads registry-v4.notional.finance",
+    "WebFetch (US): metadata only (block is client-side)"
+  ],
+  "geo_endpoints": [
+    "https://api.notional.finance/geoip"
+  ],
+  "evidence": [
+    "packages/shared/notionable-hooks/src/use-geoip-block.ts",
+    "packages/notionable/src/account/communities.ts",
+    "notional-monorepo default branch v4/dev",
+    "https://blog.notional.finance/notional-exponent-is-live/"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "C",
+  "restrictions": {
+    "count": 19,
+    "countries": 18,
+    "mechanisms": [
+      "screening"
+    ]
+  },
+  "category_group": "lending",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

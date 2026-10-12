@@ -1,0 +1,87 @@
+{
+  "id": "stargate",
+  "name": "Stargate",
+  "description": "Stargate is a cross-chain liquidity transfer protocol built on LayerZero. It moves native assets such as USDC, USDT and ETH between EVM chains using unified liquidity pools.",
+  "description_zh": "Stargate 是基于 LayerZero 构建的跨链流动性转移协议，利用统一流动性池在 EVM 链之间转移 USDC、USDT 和 ETH 等原生资产。",
+  "category": "Bridge",
+  "chains": "EVM (LayerZero)",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Optimism",
+    "Base",
+    "Polygon",
+    "BNB Chain",
+    "Avalanche",
+    "Linea",
+    "Scroll",
+    "Mantle",
+    "50+ more via LayerZero"
+  ],
+  "url": "https://stargate.finance",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "tos_only",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [
+      "UA"
+    ],
+    "scope": "USDC transfers over Circle CCTP: the app first asks Circle's CCTP API (iris-api.circle.com/v1/publicKeys) and, when it does not answer, refuses the route with 'CCTP transfers are not available in your region'. Circle answers 403 'Lockout' to Ukrainian IPs (3 networks tested on 2026-10-12); other routes stay available."
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "unknown",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://stargate.finance/terms",
+    "updated": "2025-09-17",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "generic UN/EU/UK/Cayman/US",
+    "restricted_codes": []
+  },
+  "notes": "Closed frontend. The CCTP route depends on Circle's API being reachable from the visitor's location.",
+  "live": [
+    "iris-api.circle.com/v1/publicKeys (2026-10-12): UA -> HTTP 403 'Lockout' (3 networks); RO US GB TR AE SG HK BR JP -> 200",
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [
+    "https://iris-api.circle.com/v1/publicKeys"
+  ],
+  "evidence": [
+    "stargate.finance bundle: validateRegion throws UsdcCctpRegionRestrictedError when /v1/publicKeys fails",
+    "https://stargate.finance/terms"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 2,
+    "countries": 1,
+    "mechanisms": [
+      "geo_feature"
+    ]
+  },
+  "category_group": "bridge",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

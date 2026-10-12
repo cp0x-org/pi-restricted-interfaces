@@ -1,0 +1,149 @@
+{
+  "id": "centrifuge",
+  "name": "Centrifuge",
+  "description": "Centrifuge is a platform for tokenizing real-world assets such as Treasury funds, private credit and structured credit. Asset managers issue pool tokens on Ethereum and other networks; investors onboard with each manager (KYC and jurisdiction checks), and only approved wallets on a pool's on-chain memberlist can invest or hold the tokens.",
+  "description_zh": "Centrifuge 是一个将现实世界资产（如国债基金、私人信贷和结构化信贷）代币化的平台。资产管理人在以太坊等网络上发行资金池代币；投资者需分别通过各管理人的开户流程（KYC 和司法管辖区检查），只有列入资金池链上成员名单的钱包才能投资或持有代币。",
+  "category": "RWA / asset tokenization",
+  "chains": "Ethereum, Base, Arbitrum, Avalanche, BNB Chain, Plume",
+  "networks": [
+    "Ethereum",
+    "Base",
+    "Arbitrum",
+    "Avalanche",
+    "BNB Chain",
+    "Plume"
+  ],
+  "url": "https://app.centrifuge.io",
+  "frontend_repo": "https://github.com/centrifuge/apps",
+  "repo_state": "open_stale",
+  "repo_status": "open (monorepo for Centrifuge frontends; last push 2025-10-01, may lag the current app)",
+  "repo_last_commit": "2025-10-01",
+  "geo_site": {
+    "s": "unknown",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [],
+    "scope": "Per pool: managers apply KYC/AML and jurisdiction screening and the app restricts access where a pool requires it; flagship funds are non-US offerings. Country lists are set per pool and not published centrally."
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "unknown",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "kyc": {
+    "s": "yes",
+    "layer": "contract",
+    "scope": "Per pool: KYC/AML with the asset manager, then the wallet is added to the pool's on-chain memberlist (separately on each network) before it can invest or hold tokens."
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://centrifuge.io/terms",
+    "updated": "unknown",
+    "us": "partial",
+    "us_scope": "set per pool; flagship funds are non-US offerings",
+    "restricted": "Services may be unavailable in some jurisdictions or limited to sophisticated, accredited or qualified investors",
+    "restricted_codes": []
+  },
+  "notes": "The frontend is open source (centrifuge/apps); investing requires the manager's approval on the pool's on-chain memberlist.",
+  "live": [],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://docs.centrifuge.io/user/investor/",
+    "https://docs.centrifuge.io/use/onboarding/",
+    "https://centrifuge.io/terms",
+    "https://altstreet.investments/platforms/reviews/centrifuge"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 2,
+    "countries": 0,
+    "mechanisms": [
+      "geo_feature",
+      "kyc"
+    ]
+  },
+  "category_group": "rwa",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": [
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:50:05Z",
+      "kind": "site",
+      "url": "https://app.centrifuge.io",
+      "http_status": 403,
+      "final_url": "https://app.centrifuge.io",
+      "ui_state": "challenge",
+      "flags": {},
+      "note": "Cloudflare challenge"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:12Z",
+      "kind": "site",
+      "url": "https://app.centrifuge.io",
+      "http_status": 403,
+      "final_url": "https://app.centrifuge.io",
+      "ui_state": "challenge",
+      "flags": {},
+      "note": "Cloudflare challenge"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:51:42Z",
+      "kind": "site",
+      "url": "https://app.centrifuge.io",
+      "http_status": 403,
+      "final_url": "https://app.centrifuge.io",
+      "ui_state": "challenge",
+      "flags": {},
+      "note": "Cloudflare challenge"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:33Z",
+      "kind": "site",
+      "url": "https://app.centrifuge.io",
+      "http_status": 403,
+      "final_url": "https://app.centrifuge.io",
+      "ui_state": "challenge",
+      "flags": {},
+      "note": "Cloudflare challenge"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:48:44Z",
+      "kind": "site",
+      "url": "https://app.centrifuge.io",
+      "http_status": 403,
+      "final_url": "https://app.centrifuge.io",
+      "ui_state": "challenge",
+      "flags": {},
+      "note": "Cloudflare challenge"
+    }
+  ]
+}

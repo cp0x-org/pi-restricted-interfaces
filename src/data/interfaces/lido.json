@@ -1,0 +1,90 @@
+{
+  "id": "lido",
+  "name": "Lido",
+  "family": "lido",
+  "description": "Lido is the largest liquid-staking protocol on Ethereum. Users stake ETH and receive stETH, a token that accrues staking rewards while remaining usable across DeFi; the validators are run by a curated set of node operators.",
+  "description_zh": "Lido 是以太坊上最大的流动性质押协议。用户质押 ETH 并获得 stETH，该代币会累积质押奖励，同时可以在 DeFi 中继续使用；验证者由一组经过筛选的节点运营商运行。",
+  "category": "Liquid staking",
+  "chains": "Ethereum",
+  "networks": [
+    "Ethereum"
+  ],
+  "url": "https://stake.lido.fi",
+  "frontend_repo": "https://github.com/lidofinance/ethereum-staking-widget",
+  "repo_state": "open",
+  "repo_status": "open (IPFS build available)",
+  "repo_last_commit": "2026-10-08",
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [
+      "US"
+    ],
+    "scope": "/api/geo (cf-ipcountry): full|limited; remote config geo.limited=[US] -> Earn vaults; Tor/unknown -> limited"
+  },
+  "vpn": {
+    "s": "detect",
+    "note": "Tor exits get the 'limited' mode"
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "/api/validation -> external validationAPI /v2/check/{addr} (unnamed) + local list",
+    "layer": "api",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://lido.fi/terms-of-use",
+    "updated": "2026-09-23",
+    "us": "partial",
+    "us_scope": "Earn vaults",
+    "restricted": "Crimea, CU, DPR, IR, LPR, KP, SY + sanctioned; US/UK: Earn only",
+    "restricted_codes": [
+      "UA-Crimea",
+      "CU",
+      "UA-DPR",
+      "IR",
+      "UA-LPR",
+      "KP",
+      "SY",
+      "GB"
+    ]
+  },
+  "notes": "The IPFS build lets you control the API base paths. Stake/Withdraw are not geo-gated.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [
+    "https://stake.lido.fi/api/geo"
+  ],
+  "evidence": [
+    "utilsApi/geo-handler.ts",
+    "REMOTE_CONFIG_MANIFEST.json",
+    "pages/api/validation.ts",
+    "features/earn/shared/hooks/use-earn-geo-gate.ts"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 4,
+    "countries": 1,
+    "mechanisms": [
+      "geo_feature",
+      "screening",
+      "vpn"
+    ]
+  },
+  "category_group": "staking",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

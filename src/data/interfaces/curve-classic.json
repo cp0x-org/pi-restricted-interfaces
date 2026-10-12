@@ -1,0 +1,72 @@
+{
+  "id": "curve-classic",
+  "name": "Curve",
+  "version": "Classic UI",
+  "family": "curve",
+  "lifecycle": "legacy",
+  "lifecycle_note": "The previous Curve interface, kept at classic.curve.finance after the redesigned curve.finance app replaced it.",
+  "description": "Curve Classic is the original Curve Finance web interface, kept online at classic.curve.finance after the redesigned curve.finance app replaced it. It still lists pools and supports swaps and deposits across Curve's stableswap and crypto pools.",
+  "description_zh": "Curve Classic 是 Curve Finance 最初的网页界面，在重新设计的 curve.finance 应用取而代之后，仍保留在 classic.curve.finance。它仍列出资金池，并支持在 Curve 的稳定币兑换池和加密资产池中兑换和存款。",
+  "category": "DEX",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum"
+  ],
+  "url": "https://classic.curve.finance",
+  "frontend_repo": null,
+  "repo_state": "none_found",
+  "repo_status": "none-found (only curve-contract is linked)",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "no",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": null,
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "no terms linked from the classic UI",
+    "restricted_codes": []
+  },
+  "notes": "Clean in the served bundle.",
+  "live": [
+    "classic.curve.finance (2026-10-10): loads pools and swap; the bundle has no geo or screening code"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "classic.curve.finance bundle inspection (2026-10-10)"
+  ],
+  "confidence": "low",
+  "alternatives": [],
+  "level": "A",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "dex",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

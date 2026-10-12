@@ -1,0 +1,87 @@
+{
+  "id": "morpho",
+  "name": "Morpho",
+  "description": "Morpho is a lending protocol built on immutable, isolated markets, each with one collateral asset and one loan asset. Curated Morpho Vaults allocate deposits across these markets, and many other apps build on Morpho as lending infrastructure.",
+  "description_zh": "Morpho 是一个建立在不可变、相互隔离的市场之上的借贷协议，每个市场只有一种抵押资产和一种借出资产。经过策展的 Morpho 金库把存款分配到这些市场中，许多其他应用也以 Morpho 作为借贷基础设施。",
+  "category": "Lending",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Base",
+    "Arbitrum",
+    "Optimism",
+    "Polygon",
+    "Unichain",
+    "World Chain",
+    "Katana",
+    "Plume",
+    "Sonic"
+  ],
+  "url": "https://app.morpho.org",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed (morpho-lite-apps archived 2026-05-06)",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "unknown",
+    "countries": [],
+    "close_only": [],
+    "method": "page carries meta x-geo-country (edge geolocation)"
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [],
+    "scope": "some markets/vaults hidden or not openable by direct link 'due to legal constraints'"
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "unnamed (docs: blocks US-sanctioned addresses)",
+    "layer": "api",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "hidden markets",
+  "tos": {
+    "url": "https://morpho.org/terms-of-use",
+    "updated": "2026-09-11",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "generic comprehensive sanctions",
+    "restricted_codes": []
+  },
+  "notes": "Lite and Fallback apps (morpho-lite-apps) are archived but public.",
+  "live": [
+    "WebFetch (US): normal page, meta x-geo-country=US"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://docs.morpho.org/interface/warnings/",
+    "https://github.com/morpho-org/morpho-lite-apps"
+  ],
+  "confidence": "medium",
+  "alternatives": [
+    {
+      "name": "morpho.cp0x.com",
+      "url": "https://morpho.cp0x.com"
+    }
+  ],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 2,
+    "countries": 0,
+    "mechanisms": [
+      "geo_feature",
+      "screening"
+    ]
+  },
+  "category_group": "lending",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

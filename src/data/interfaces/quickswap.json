@@ -1,0 +1,104 @@
+{
+  "id": "quickswap",
+  "name": "QuickSwap",
+  "description": "QuickSwap is a decentralized exchange that began as a Uniswap v2 fork on Polygon and now runs concentrated-liquidity pools, farming and perpetuals on Polygon and several other EVM networks. QUICK is its governance token.",
+  "description_zh": "QuickSwap 是一个去中心化交易所，最初是 Polygon 上的 Uniswap v2 分叉，如今在 Polygon 及其他多个 EVM 网络上运营集中流动性池、流动性挖矿和永续合约。QUICK 是其治理代币。",
+  "category": "DEX",
+  "chains": "Polygon, EVM",
+  "networks": [
+    "Polygon",
+    "Polygon zkEVM",
+    "Manta Pacific",
+    "Immutable zkEVM",
+    "X Layer",
+    "Soneium"
+  ],
+  "url": "https://dapp.quickswap.exchange",
+  "frontend_repo": "https://github.com/QuickSwap/interface-v2",
+  "repo_state": "open_stale",
+  "repo_status": "open-stale (prod build hash 22dcd56 not in repo)",
+  "repo_last_commit": "2025-04-03",
+  "geo_site": {
+    "s": "unknown",
+    "countries": [],
+    "close_only": [],
+    "method": "none in the public code; production diverges"
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "no",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "TOKEN_BLACKLIST / PAIR_BLACKLIST",
+  "tos": {
+    "url": "https://dapp.quickswap.exchange/tos",
+    "updated": "unknown",
+    "us": "yes",
+    "us_scope": "",
+    "restricted": "US, UK, TW + ~25 (DZ, BD, BO, BY, BI, MM, CI, Crimea, CU, CD, EC, IR, IQ, LY, ML, MA, LR, NP, KP, SO, SD, SY, VE, ZW, AG)",
+    "restricted_codes": [
+      "US",
+      "GB",
+      "TW",
+      "DZ",
+      "BD",
+      "BO",
+      "BY",
+      "BI",
+      "MM",
+      "CI",
+      "UA-Crimea",
+      "CU",
+      "CD",
+      "EC",
+      "IR",
+      "IQ",
+      "LY",
+      "ML",
+      "MA",
+      "LR",
+      "NP",
+      "KP",
+      "SO",
+      "SD",
+      "SY",
+      "VE",
+      "ZW",
+      "AG"
+    ]
+  },
+  "notes": "Public code is clean but stale.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "src/constants/index.ts",
+    "public/locales/en.json"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "A",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "dex",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

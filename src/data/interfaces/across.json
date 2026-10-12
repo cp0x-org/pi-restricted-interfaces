@@ -1,0 +1,85 @@
+{
+  "id": "across",
+  "name": "Across",
+  "description": "Across is an intent-based cross-chain bridge. Relayers front funds to users on the destination chain within seconds and are repaid later from a shared liquidity pool, with UMA's optimistic oracle securing the settlement.",
+  "description_zh": "Across 是一个基于意图的跨链桥。中继者在几秒内在目标链上向用户垫付资金，之后从共享流动性池中获得偿还，结算由 UMA 的乐观预言机保障。",
+  "category": "Bridge",
+  "chains": "EVM, Solana",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Optimism",
+    "Base",
+    "Polygon",
+    "zkSync",
+    "Linea",
+    "Scroll",
+    "Blast",
+    "Mode",
+    "Lisk",
+    "Unichain",
+    "Ink",
+    "Soneium",
+    "World Chain"
+  ],
+  "url": "https://across.to",
+  "frontend_repo": null,
+  "repo_state": "private_now",
+  "repo_status": "private-now (across-protocol/frontend public until ~2025-08; frontend-v1 = legacy 2023)",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "tos_only",
+    "countries": [],
+    "close_only": [],
+    "method": "ToS: by IP, at Risk Labs' discretion"
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "unknown",
+    "provider": "quote API returns a quote for an SDN recipient",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://across.to/terms-of-service",
+    "updated": "2025-10-22",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "generic comprehensive US sanctions",
+    "restricted_codes": []
+  },
+  "notes": "Across API is public (suggested-fees, available-routes). URL note: app.across.to -> 302.",
+  "live": [
+    "/api/suggested-fees with SDN recipient -> normal quote"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://across.to/terms-of-service",
+    "http://web.archive.org/web/20250829200542/https://github.com/across-protocol/frontend"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "A",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "bridge",
+  "chain_tags": [
+    "evm",
+    "solana"
+  ],
+  "observations": []
+}

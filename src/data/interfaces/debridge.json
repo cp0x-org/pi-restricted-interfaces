@@ -1,0 +1,161 @@
+{
+  "id": "debridge",
+  "name": "deBridge",
+  "description": "deBridge is a cross-chain trading and messaging protocol. Its deBridge Liquidity Network (DLN) lets users swap between chains through orders that market makers fill on the destination chain, without locked liquidity pools; it connects Ethereum, major layer 2s, Solana and other networks.",
+  "description_zh": "deBridge 是一个跨链交易和消息协议。其 deBridge 流动性网络（DLN）让用户通过由做市商在目标链上成交的订单进行跨链兑换，无需锁定的流动性池；它连接以太坊、主要二层网络、Solana 等网络。",
+  "category": "Bridge / cross-chain swaps",
+  "chains": "EVM, Solana, Tron and more",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Optimism",
+    "Polygon",
+    "BNB Chain",
+    "Avalanche",
+    "Linea",
+    "20+ more"
+  ],
+  "url": "https://app.debridge.finance",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "tos_only",
+    "countries": [],
+    "close_only": [],
+    "method": "Terms list restricted jurisdictions including the United States; technical enforcement not verified."
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "tos_only",
+    "provider": "Terms exclude persons in embargoed or terrorism-supporting countries and on US government lists",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://docs.debridge.foundation/legal/terms-of-service",
+    "updated": "2024-06-30",
+    "us": "yes",
+    "us_scope": "",
+    "restricted": "United States, Afghanistan, China, Crimea, Cuba, DRC, Iran, Iraq, Myanmar, North Korea, Russia, Somalia, South Sudan, Sudan, Syria, Venezuela, Yemen",
+    "restricted_codes": [
+      "US",
+      "AF",
+      "CN",
+      "UA-Crimea",
+      "CU",
+      "CD",
+      "IR",
+      "IQ",
+      "MM",
+      "KP",
+      "RU",
+      "SO",
+      "SS",
+      "SD",
+      "SY",
+      "VE",
+      "YE"
+    ]
+  },
+  "notes": "Closed frontend. Orders are filled by independent market makers; the DLN API and SDK are public.",
+  "live": [],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://docs.debridge.foundation/legal/terms-of-service",
+    "https://debridge.com/legal/"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "A",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "bridge",
+  "chain_tags": [
+    "evm",
+    "solana"
+  ],
+  "observations": [
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:51:09Z",
+      "kind": "site",
+      "url": "https://app.debridge.finance",
+      "http_status": 200,
+      "final_url": "https://app.debridge.com/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:23Z",
+      "kind": "site",
+      "url": "https://app.debridge.finance",
+      "http_status": 200,
+      "final_url": "https://app.debridge.com/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:52:12Z",
+      "kind": "site",
+      "url": "https://app.debridge.finance",
+      "http_status": 200,
+      "final_url": "https://app.debridge.com/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:43Z",
+      "kind": "site",
+      "url": "https://app.debridge.finance",
+      "http_status": 200,
+      "final_url": "https://app.debridge.com/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:02Z",
+      "kind": "site",
+      "url": "https://app.debridge.finance",
+      "http_status": 200,
+      "final_url": "https://app.debridge.com/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

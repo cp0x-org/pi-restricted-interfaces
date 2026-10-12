@@ -1,0 +1,142 @@
+{
+  "id": "symbiotic",
+  "name": "Symbiotic",
+  "description": "Symbiotic is a permissionless restaking protocol on Ethereum: vaults accept ETH, liquid-staking tokens and other ERC-20 collateral, and networks rent that stake for economic security, with operators and slashing rules set per vault. Its core contracts are immutable.",
+  "description_zh": "Symbiotic 是以太坊上的无需许可再质押协议：金库接受 ETH、流动性质押代币和其他 ERC-20 抵押品，各网络租用这些质押以获得经济安全，运营商和罚没规则按金库设置。其核心合约不可变更。",
+  "category": "Restaking",
+  "chains": "Ethereum",
+  "networks": [
+    "Ethereum"
+  ],
+  "url": "https://app.symbiotic.fi",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "CU",
+      "IR",
+      "KP",
+      "SY",
+      "UA",
+      "CA"
+    ],
+    "close_only": [],
+    "method": "Frontend: the country comes from www.cloudflare.com/cdn-cgi/trace (loc=); visitors from the listed countries get a full-screen 'UNSUPPORTED REGION' modal"
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "unknown",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": null,
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "ToS not found",
+    "restricted_codes": []
+  },
+  "notes": "Closed frontend. The region check runs in the browser with Cloudflare's trace endpoint; core contracts are immutable and permissionless.",
+  "live": [],
+  "geo_endpoints": [],
+  "evidence": [
+    "app.symbiotic.fi bundle: country list and the UNSUPPORTED REGION modal",
+    "https://www.paradigm.xyz/writing/symbiotic",
+    "https://www.coingecko.com/learn/what-is-symbiotic-restaking-crypto"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "C",
+  "restrictions": {
+    "count": 6,
+    "countries": 6,
+    "mechanisms": []
+  },
+  "category_group": "staking",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": [
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:50:38Z",
+      "kind": "site",
+      "url": "https://app.symbiotic.fi",
+      "http_status": 200,
+      "final_url": "https://app.symbiotic.fi/deposit",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:15Z",
+      "kind": "site",
+      "url": "https://app.symbiotic.fi",
+      "http_status": 200,
+      "final_url": "https://app.symbiotic.fi/deposit",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:51:51Z",
+      "kind": "site",
+      "url": "https://app.symbiotic.fi",
+      "http_status": 200,
+      "final_url": "https://app.symbiotic.fi/deposit",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:36Z",
+      "kind": "site",
+      "url": "https://app.symbiotic.fi",
+      "http_status": 200,
+      "final_url": "https://app.symbiotic.fi/deposit",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:48:50Z",
+      "kind": "site",
+      "url": "https://app.symbiotic.fi",
+      "http_status": 200,
+      "final_url": "https://app.symbiotic.fi/deposit",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "pendle",
+  "name": "Pendle",
+  "description": "Pendle is a yield-trading protocol that splits yield-bearing tokens into principal tokens (PT) and yield tokens (YT), so users can lock in a fixed yield or trade on future variable yield; Boros extends the model to funding rates.",
+  "description_zh": "Pendle 是一个收益交易协议，把生息代币拆分为本金代币（PT）和收益代币（YT），让用户可以锁定固定收益或交易未来的浮动收益；Boros 把这一模式扩展到资金费率。",
+  "category": "Yield",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "BNB Chain",
+    "Mantle",
+    "Sonic",
+    "Berachain",
+    "Optimism"
+  ],
+  "url": "https://app.pendle.finance",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "tos_only",
+    "countries": [],
+    "close_only": [],
+    "method": "ToS mentions geo-blocks"
+  },
+  "geo_feature": {
+    "s": "tos_only",
+    "countries": [
+      "US"
+    ],
+    "scope": "Boros: not US"
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "tos_only",
+    "provider": "ToS: wallet-screening DB, wallet blacklisting",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://docs.pendle.finance/pendle-v2/TermsOfUse",
+    "updated": "2026-10-01",
+    "us": "partial",
+    "us_scope": "Boros",
+    "restricted": "CU, IR, KP, SY, RU, BY, MM, SD, ZW, VE, Crimea, DPR, LPR, FATF high-risk",
+    "restricted_codes": [
+      "CU",
+      "IR",
+      "KP",
+      "SY",
+      "RU",
+      "BY",
+      "MM",
+      "SD",
+      "ZW",
+      "VE",
+      "UA-Crimea",
+      "UA-DPR",
+      "UA-LPR"
+    ]
+  },
+  "notes": "Closed. Pendle API/SDK are open.",
+  "live": [
+    "WebFetch (US): 'Failed to load app' (JS)"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://docs.pendle.finance/pendle-v2/TermsOfUse"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "A",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "yield",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

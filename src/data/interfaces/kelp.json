@@ -1,0 +1,155 @@
+{
+  "id": "kelp",
+  "name": "Kelp DAO",
+  "description": "Kelp DAO issues rsETH, a liquid restaking token: users deposit ETH or liquid-staking tokens that are restaked through EigenLayer and other restaking layers, and receive rsETH to use across DeFi. Kelp is part of the Kernel DAO ecosystem.",
+  "description_zh": "Kelp DAO 发行流动性再质押代币 rsETH：用户存入 ETH 或流动性质押代币，这些资产通过 EigenLayer 等再质押层进行再质押，用户获得可在 DeFi 中使用的 rsETH。Kelp 属于 Kernel DAO 生态。",
+  "category": "Liquid restaking",
+  "chains": "Ethereum, Arbitrum, Base, Optimism, Linea, Scroll",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Optimism",
+    "Linea",
+    "Scroll"
+  ],
+  "url": "https://kerneldao.com/kelp",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "unknown",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [
+      "US",
+      "GB",
+      "CA"
+    ],
+    "scope": "Gain vaults (growth, airdrop and stable vault pages): the app asks universe.kelpdao.xyz/rseth/geoData and sends a visitor with isRestricted:true to /blocked ('Not available in your region'). Restricted from the US, the UK and Canada in the 2026-10-12 test; open from 15 other countries; the full list is not published."
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "tos_only",
+    "provider": "Users represent they are not sanctioned (OFAC, UN, EU, UK, HKMA, MAS); access may be blocked under the AML provisions",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "kyc": {
+    "s": "tos_only",
+    "layer": null,
+    "scope": "Terms allow KYC/AML checks at the operator's discretion or when required by law."
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://kerneldao.com/kelp/terms-of-service/",
+    "updated": "2025",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "No named jurisdictions; sanctions-list representations only",
+    "restricted_codes": []
+  },
+  "notes": "Closed frontend; deposits and withdrawals use public contracts. The Gain vault gate is decided by Kelp's geoData API.",
+  "live": [
+    "universe.kelpdao.xyz/rseth/geoData (2026-10-12): US, US-NY, GB, CA, CA-ON -> isRestricted:true; RO DE FR NL UA TR AE SG JP AU BR HK KR -> false"
+  ],
+  "geo_endpoints": [
+    "https://universe.kelpdao.xyz/rseth/geoData"
+  ],
+  "evidence": [
+    "kerneldao.com/kelp bundle: geoData request and the redirect of /gain/*-vault/ pages to /blocked",
+    "https://universe.kelpdao.xyz/rseth/geoData",
+    "https://kerneldao.com/kelp/terms-of-service/"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 4,
+    "countries": 3,
+    "mechanisms": [
+      "geo_feature"
+    ]
+  },
+  "category_group": "staking",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": [
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:50:49Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:16Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:51:56Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:37Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:48:52Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

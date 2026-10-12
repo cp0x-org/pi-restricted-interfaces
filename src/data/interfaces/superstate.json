@@ -1,0 +1,145 @@
+{
+  "id": "superstate",
+  "name": "Superstate",
+  "description": "Superstate issues tokenized funds and shares on Ethereum: USTB (a short-duration US Treasury fund) and USCC (a crypto basis fund) for qualified investors, plus Opening Bell tokenized public equities. Holding the tokens requires Superstate onboarding and an allowlisted wallet.",
+  "description_zh": "Superstate 在以太坊上发行代币化基金和股份：面向合格投资者的 USTB（短期美国国债基金）和 USCC（加密基差基金），以及 Opening Bell 代币化公开股票。持有这些代币需要完成 Superstate 开户并使用白名单钱包。",
+  "category": "RWA / tokenized funds",
+  "chains": "Ethereum, Solana",
+  "networks": [
+    "Ethereum"
+  ],
+  "url": "https://superstate.com",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "unknown",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [],
+    "scope": "Funds (USTB, USCC): qualified purchasers in supported countries only (at least $5m investable assets for individuals, $25m for institutions). Tokenized equities: all investors in supported jurisdictions. Access is an allowlist of supported countries rather than a list of banned ones."
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "unknown",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "kyc": {
+    "s": "yes",
+    "layer": "contract",
+    "scope": "Onboarding with KYC (via Parallel Markets), then wallet allowlisting; USTB transfers to non-allowlisted addresses revert on-chain."
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://docs.superstate.com/introduction-to-superstate/onboarding",
+    "updated": "unknown",
+    "us": "partial",
+    "us_scope": "USTB/USCC: US accredited investors / qualified purchasers",
+    "restricted": "Only investors in supported countries (allowlist of roughly 22-29 countries, updated regularly)",
+    "restricted_codes": []
+  },
+  "notes": "Closed frontend. USTB transfers to non-allowlisted addresses revert at the contract level.",
+  "live": [],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://docs.superstate.com/introduction-to-superstate/onboarding",
+    "https://docs.superstate.com/superstate-funds/ustb",
+    "https://superstate.com/assets/ustb",
+    "https://eco.com/support/en/articles/15254017-ustb-deep-dive-2026-superstate-s-short-treasury-fund"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 2,
+    "countries": 0,
+    "mechanisms": [
+      "geo_feature",
+      "kyc"
+    ]
+  },
+  "category_group": "rwa",
+  "chain_tags": [
+    "evm",
+    "solana"
+  ],
+  "observations": [
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:50:29Z",
+      "kind": "site",
+      "url": "https://superstate.com",
+      "http_status": 200,
+      "final_url": "https://superstate.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:13Z",
+      "kind": "site",
+      "url": "https://superstate.com",
+      "http_status": 200,
+      "final_url": "https://superstate.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:51:47Z",
+      "kind": "site",
+      "url": "https://superstate.com",
+      "http_status": 200,
+      "final_url": "https://superstate.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:35Z",
+      "kind": "site",
+      "url": "https://superstate.com",
+      "http_status": 200,
+      "final_url": "https://superstate.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:48:47Z",
+      "kind": "site",
+      "url": "https://superstate.com",
+      "http_status": 200,
+      "final_url": "https://superstate.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

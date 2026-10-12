@@ -1,0 +1,146 @@
+{
+  "id": "opensea",
+  "name": "OpenSea",
+  "description": "OpenSea is the largest NFT marketplace, where users buy, sell and mint NFTs on Ethereum and other EVM networks; it also offers token swaps. OpenSea is a US company and applies US sanctions to its users.",
+  "description_zh": "OpenSea 是最大的 NFT 市场，用户可以在以太坊及其他 EVM 网络上购买、出售和铸造 NFT，它也提供代币兑换。OpenSea 是一家美国公司，对其用户执行美国制裁。",
+  "category": "NFT marketplace",
+  "chains": "Ethereum, Base, Polygon, Arbitrum and more",
+  "networks": [
+    "Ethereum",
+    "Base",
+    "Polygon",
+    "Arbitrum",
+    "Optimism",
+    "Avalanche",
+    "Blast",
+    "Zora"
+  ],
+  "url": "https://opensea.io",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "IR"
+    ],
+    "close_only": [],
+    "method": "Blocks users and territories on US sanctions lists; in March 2022 Iranian users, including Iranian artists living abroad, lost access to their accounts (company statement and press reports)."
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "reported",
+    "provider": "Account-level sanctions checks; accounts deactivated by nationality, not only by location (2022 reports)",
+    "layer": "api",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://opensea.io/tos",
+    "updated": "unknown",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "Persons and territories under US sanctions (company statements, 2022)",
+    "restricted_codes": []
+  },
+  "notes": "Closed frontend. NFTs live in public contracts (Seaport is open source), so other marketplaces can trade the same assets.",
+  "live": [],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://www.artnews.com/art-news/news/opensea-deplatforms-iranian-users-us-sanctions-1234621105/",
+    "https://fortune.com/crypto/2022/03/04/opensea-metamask-block-users-sanctions",
+    "https://forkast.news/opensea-blocks-iranian-users-sanctions/"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 2,
+    "countries": 1,
+    "mechanisms": [
+      "screening"
+    ]
+  },
+  "category_group": "other",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": [
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:51:15Z",
+      "kind": "site",
+      "url": "https://opensea.io",
+      "http_status": 200,
+      "final_url": "https://opensea.io",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:24Z",
+      "kind": "site",
+      "url": "https://opensea.io",
+      "http_status": 200,
+      "final_url": "https://opensea.io",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:52:17Z",
+      "kind": "site",
+      "url": "https://opensea.io",
+      "http_status": 200,
+      "final_url": "https://opensea.io",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:44Z",
+      "kind": "site",
+      "url": "https://opensea.io",
+      "http_status": 200,
+      "final_url": "https://opensea.io",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:05Z",
+      "kind": "site",
+      "url": "https://opensea.io",
+      "http_status": 200,
+      "final_url": "https://opensea.io",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

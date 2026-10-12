@@ -1,0 +1,95 @@
+{
+  "id": "venus",
+  "name": "Venus",
+  "description": "Venus is the main lending and borrowing protocol on BNB Chain, a Compound-style money market that is also deployed on Ethereum, Arbitrum and other networks. It issues the VAI stablecoin and is governed by XVS holders.",
+  "description_zh": "Venus 是 BNB Chain 上主要的借贷协议，采用 Compound 式货币市场，也部署在以太坊、Arbitrum 等网络上。它发行 VAI 稳定币，由 XVS 持有者治理。",
+  "category": "Lending",
+  "chains": "BNB, EVM",
+  "networks": [
+    "BNB Chain",
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "opBNB",
+    "zkSync",
+    "Optimism",
+    "Unichain"
+  ],
+  "url": "https://app.venus.io",
+  "frontend_repo": "https://github.com/VenusProtocol/venus-protocol-interface/tree/main/apps/evm",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-09-30",
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [],
+    "scope": "per-asset restrictedCountries from the Venus API; country from free.freeipapi.com; gated assets (bStocks) need acknowledgement"
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "no",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "restricted/gated assets",
+  "tos": {
+    "url": "https://app.venus.io/#/terms-of-use",
+    "updated": "2025-09-18",
+    "us": "partial",
+    "us_scope": "Fixed-Term Vault",
+    "restricted": "main ToS: generic; FTV: US, UK, CA, CN, CU, IR, KP, SY, RU, BY, occupied UA regions",
+    "restricted_codes": [
+      "US",
+      "GB",
+      "CA",
+      "CN",
+      "CU",
+      "IR",
+      "KP",
+      "SY",
+      "RU",
+      "BY",
+      "UA-Crimea",
+      "UA-DPR",
+      "UA-LPR",
+      "UA-Kherson",
+      "UA-Zaporizhzhia"
+    ]
+  },
+  "notes": "Country from a free IP API (freeipapi.com), per-asset country lists from the Venus API. URL note: now venus.io.",
+  "live": [
+    "WebFetch (US): 302 -> venus.io, JS shell"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "apps/evm/src/clients/api/queries/useGetIpLocation/getIpLocation/index.ts",
+    "apps/evm/src/clients/api/queries/useGetPools/applyCountryCodeToPools/index.ts"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 1,
+    "countries": 0,
+    "mechanisms": [
+      "geo_feature"
+    ]
+  },
+  "category_group": "lending",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

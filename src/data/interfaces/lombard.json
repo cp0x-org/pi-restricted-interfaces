@@ -1,0 +1,169 @@
+{
+  "id": "lombard",
+  "name": "Lombard",
+  "description": "Lombard issues LBTC, a yield-bearing Bitcoin token: BTC deposited through Lombard is staked via Babylon and represented as LBTC on Ethereum and other chains, where it is used as DeFi collateral. LBTC is freely transferable, but minting, redemption and the yield strategy in the Lombard app are restricted by jurisdiction.",
+  "description_zh": "Lombard 发行生息比特币代币 LBTC：通过 Lombard 存入的 BTC 经由 Babylon 质押，并在以太坊等链上以 LBTC 表示，用作 DeFi 抵押品。LBTC 可自由转让，但 Lombard 应用中的铸造、赎回和收益策略按司法管辖区受限。",
+  "category": "Bitcoin liquid staking",
+  "chains": "Ethereum, Base, BNB Chain, Sui, Solana",
+  "networks": [
+    "Ethereum",
+    "Base",
+    "BNB Chain"
+  ],
+  "url": "https://www.lombard.finance/app",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "tos_only",
+    "countries": [],
+    "close_only": [],
+    "method": "Terms bar Restricted (US, UK) and Sanctioned Jurisdictions as Prohibited Users; IP enforcement not verified."
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [
+      "US",
+      "GB"
+    ],
+    "scope": "Direct mint/redeem and the yield strategy in the Lombard app are not available to US or UK persons (official docs); LBTC itself is a transferable token usable in DeFi."
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": "Terms prohibit VPNs or proxies used to misrepresent location"
+  },
+  "screening": {
+    "s": "tos_only",
+    "provider": "Unnamed third-party compliance screening provider (Terms §7.1, §8.4)",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "kyc": {
+    "s": "tos_only",
+    "layer": null,
+    "scope": "Terms reserve KYC/AML/CFT procedures and source-of-funds requests (§7.2, §8.4)."
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://docs.lombard.finance/resources/terms",
+    "updated": "2026-08-12",
+    "us": "yes",
+    "us_scope": "",
+    "restricted": "Restricted: United States, United Kingdom. Sanctioned: Belarus, Burundi, Crimea/Donetsk/Luhansk, Cuba, DR Congo, Iran, Iraq, Libya, North Korea, Russia, Somalia, Sudan, Syria, Venezuela, Zimbabwe",
+    "restricted_codes": [
+      "US",
+      "GB",
+      "BY",
+      "BI",
+      "UA-Crimea",
+      "UA-DPR",
+      "UA-LPR",
+      "CU",
+      "CD",
+      "IR",
+      "IQ",
+      "LY",
+      "KP",
+      "RU",
+      "SO",
+      "SD",
+      "SY",
+      "VE",
+      "ZW"
+    ]
+  },
+  "notes": "Closed frontend. LBTC can be held and used in DeFi without the app; mint and redeem depend on Lombard's infrastructure (BTC custody and bridging).",
+  "live": [],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://docs.lombard.finance/resources/terms",
+    "https://docs.lombard.finance/use/lbtc",
+    "https://www.lombard.finance/products/lbtc/"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 3,
+    "countries": 2,
+    "mechanisms": [
+      "geo_feature"
+    ]
+  },
+  "category_group": "staking",
+  "chain_tags": [
+    "evm",
+    "solana",
+    "sui"
+  ],
+  "observations": [
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:50:54Z",
+      "kind": "site",
+      "url": "https://www.lombard.finance/app",
+      "http_status": 200,
+      "final_url": "https://www.lombard.finance/app/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:18Z",
+      "kind": "site",
+      "url": "https://www.lombard.finance/app",
+      "http_status": 200,
+      "final_url": "https://www.lombard.finance/app/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:52:00Z",
+      "kind": "site",
+      "url": "https://www.lombard.finance/app",
+      "http_status": 200,
+      "final_url": "https://www.lombard.finance/app/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:39Z",
+      "kind": "site",
+      "url": "https://www.lombard.finance/app",
+      "http_status": 200,
+      "final_url": "https://www.lombard.finance/app/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:48:55Z",
+      "kind": "site",
+      "url": "https://www.lombard.finance/app",
+      "http_status": 200,
+      "final_url": "https://www.lombard.finance/app/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

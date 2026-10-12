@@ -1,0 +1,67 @@
+{
+  "id": "rocketpool",
+  "name": "Rocket Pool",
+  "description": "Rocket Pool is a decentralized liquid-staking protocol for Ethereum. Anyone can run a node with a smaller ETH bond than a solo validator, and stakers receive rETH, which grows in value with staking rewards.",
+  "description_zh": "Rocket Pool 是以太坊的去中心化流动性质押协议。任何人都可以用少于独立验证者所需的 ETH 保证金运行节点，质押者获得随质押奖励增值的 rETH。",
+  "category": "Liquid staking",
+  "chains": "Ethereum",
+  "networks": [
+    "Ethereum"
+  ],
+  "url": "https://stake.rocketpool.net",
+  "frontend_repo": null,
+  "repo_state": "none_found",
+  "repo_status": "none-found",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "unknown",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "unknown",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": null,
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "ToS not found",
+    "restricted_codes": []
+  },
+  "notes": "Needs a browser crawl.",
+  "live": [
+    "WebFetch (US): JS shell"
+  ],
+  "geo_endpoints": [],
+  "evidence": [],
+  "confidence": "low",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "n/a",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "staking",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

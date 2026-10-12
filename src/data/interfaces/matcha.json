@@ -1,0 +1,85 @@
+{
+  "id": "matcha",
+  "name": "Matcha",
+  "aka": "0x",
+  "description": "Matcha is a DEX aggregator built by 0x on top of the 0x Swap API. It finds prices across many liquidity sources on EVM networks and Solana and supports limit orders and gasless swaps.",
+  "description_zh": "Matcha 是 0x 基于 0x Swap API 构建的 DEX 聚合器。它在 EVM 网络和 Solana 上的众多流动性来源之间寻找价格，并支持限价单和免 gas 兑换。",
+  "category": "DEX aggregator",
+  "chains": "EVM, Solana",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Optimism",
+    "Polygon",
+    "BNB Chain",
+    "Avalanche",
+    "Blast",
+    "Linea",
+    "Scroll",
+    "Mantle",
+    "Unichain",
+    "Berachain"
+  ],
+  "url": "https://matcha.xyz",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "reported",
+    "countries": [
+      "RU"
+    ],
+    "close_only": [],
+    "method": "'Region Unsupported' for trades (Russia, 2022 reports)"
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "tos_only",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://matcha.xyz/terms",
+    "updated": "2025-07-15",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "generic: US-embargoed",
+    "restricted_codes": []
+  },
+  "notes": "Closed. Built on the 0x API.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://www.theblock.co/post/137962/dex-aggregator-matcha-geoblocks-trades-from-russia"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 1,
+    "countries": 1,
+    "mechanisms": []
+  },
+  "category_group": "aggregator",
+  "chain_tags": [
+    "evm",
+    "solana"
+  ],
+  "observations": []
+}

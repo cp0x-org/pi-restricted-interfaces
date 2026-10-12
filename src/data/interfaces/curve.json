@@ -1,0 +1,104 @@
+{
+  "id": "curve",
+  "name": "Curve",
+  "family": "curve",
+  "description": "Curve Finance is an automated market maker built for low-slippage trading between assets that should trade near the same price, such as stablecoins and liquid-staking tokens. It also issues the crvUSD stablecoin and runs Llamalend lending markets; CRV holders lock tokens as veCRV to vote on how pool rewards are distributed.",
+  "description_zh": "Curve Finance 是一个自动做市商，专为价格本应接近的资产之间的低滑点交易而设计，例如稳定币和流动性质押代币。它还发行 crvUSD 稳定币并运营 Llamalend 借贷市场；CRV 持有者将代币锁定为 veCRV，投票决定池奖励的分配。",
+  "category": "DEX",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Optimism",
+    "Base",
+    "Polygon",
+    "Avalanche",
+    "Fantom",
+    "Gnosis",
+    "Fraxtal",
+    "BNB Chain",
+    "Sonic"
+  ],
+  "url": "https://www.curve.finance",
+  "frontend_repo": "https://github.com/curvefi/curve-frontend",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-10-08",
+  "geo_site": {
+    "s": "tos_only",
+    "countries": [],
+    "close_only": [],
+    "method": "ToS reserves technical geo-restriction; none in code"
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "no",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "pool/token blacklist (local + prices.curve.finance), deprecation",
+  "tos": {
+    "url": "https://www.curve.finance/dex/ethereum/legal/?tab=terms",
+    "updated": "2026-06-17",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "SECO list, 22: BY, BI, CF, CG, KP, GN, GW, IR, IQ, LB, LY, ML, MM, SS, RU, SO, SD, SY, UA, VE, YE, ZW",
+    "restricted_codes": [
+      "BY",
+      "BI",
+      "CF",
+      "CG",
+      "KP",
+      "GN",
+      "GW",
+      "IR",
+      "IQ",
+      "LB",
+      "LY",
+      "ML",
+      "MM",
+      "SS",
+      "RU",
+      "SO",
+      "SD",
+      "SY",
+      "UA",
+      "VE",
+      "YE",
+      "ZW"
+    ]
+  },
+  "notes": "Clean; only the content blacklist. Note: the ToS lists Ukraine in full.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "packages/evm-ui/src/widgets/Legal/components/tabs/Terms.tsx",
+    "BLACKLISTS-DEPRECATIONS.md"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "A",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "dex",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

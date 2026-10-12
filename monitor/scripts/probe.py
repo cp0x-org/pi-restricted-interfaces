@@ -9,6 +9,9 @@ What it records per interface and country:
   * each API probe (`api_probes` in interfaces.json): the protocol's own geo check or a read-only API call (GET or POST
     with a JSON body), classified by the probe's `rules` (regexes over the status line, headers and body: the first
     match gives the state) and, when none matches, like a geo endpoint; `flags` names the JSON paths and headers to keep;
+    `{ip}` in the URL becomes the proxy's exit IP (an API that takes the address to check as a parameter: Spark
+    /ip/status?ip=); the observation keeps the template URL, the IP itself is not recorded; `headers` are sent as
+    given (an Origin the API insists on, as Jumper's geo-gates does);
   * the vantage: the country of the proxy's exit IP by IP -> country lookups (GEO_APIS) through the same proxy, the ASN,
     and `loc=` from /cdn-cgi/trace on Cloudflare-fronted hosts. A country is probed when the proxy answers and at least
     half of the lookups see that country; a proxy without an exit there (no_proxy) or with an exit elsewhere (wrong_country)
@@ -48,7 +51,7 @@ refuses authorization (407: credentials, used-up traffic) the run stops and writ
 
 Stdlib only; Python >= 3.9. Observation only: no logins, no CAPTCHA solving, no wallet, no transactions.
 """
-import argparse, hashlib, html, json, os, re, secrets, ssl, sys, threading, time, urllib.error, urllib.parse, urllib.request
+import argparse, hashlib, html, json, os, re, secrets, shutil, ssl, subprocess, sys, tempfile, threading, time, urllib.error, urllib.parse, urllib.request
 from collections import OrderedDict
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
@@ -66,6 +69,8 @@ BLOCK_PATH_RE = re.compile(r"(blocked|restricted|not-?available|unavailable|geo-
 BLOCK_TEXT_RE = re.compile(r"(not available in your (country|region|jurisdiction)|blocked in your|restricted in your|"
                            r"unavailable in your|access (is )?blocked|unavailable for legal reasons|service unavailable in)", re.I)
 CHALLENGE_RE = re.compile(r"(just a moment|cf-chl|challenge-platform|attention required|verify you are human|enable javascript and cookies)", re.I)
+# Cloudflare's WAF block page (a firewall rule matched: a country, an ASN, a bot score); not a challenge, and no geo wording
+WAF_BLOCK_RE = re.compile(r"(sorry, you have been blocked|you are unable to access)", re.I)
 FLAG_KEYS = ("blocked", "isBlocked", "geoblocked", "isRegionRestricted", "restricted", "isRestricted", "limited", "allowed", "ipAllowed")
 TAG_RE = re.compile(r"<(script|style)[^>]*>.*?</\1>|<[^>]+>", re.S)
 PROXY_BUSY_RE = re.compile(r"Tunnel connection failed: (429|503)\b")  # the gateway asks to slow down
@@ -130,7 +135,41 @@ class Pacer:
 PACER = Pacer()
 
 
-def fetch(proxy_url, url, timeout, max_bytes=400_000, method="GET", body=None, _insecure=False, _busy=0):
+TLS_RE = re.compile(r"PROTOCOL_VERSION|UNSUPPORTED_PROTOCOL|WRONG_VERSION_NUMBER|SSLV3_ALERT_HANDSHAKE_FAILURE")
+
+
+def curl_fetch(proxy_url, url, timeout, max_bytes, method, data, headers, out):
+    """The same single request with the curl binary (present on every Mac and Linux): the macOS system Python is linked
+    against LibreSSL without TLS 1.3, and some sites (jumper.xyz) accept nothing else. Same as research/lib/net.py."""
+    with tempfile.TemporaryDirectory() as tmp:
+        hfile, bfile = os.path.join(tmp, "h"), os.path.join(tmp, "b")
+        cmd = ["curl", "-sS", "-L", "--max-redirs", "10", "--max-time", str(int(timeout)), "-X", method, "-D", hfile, "-o", bfile,
+               "-w", "%{http_code} %{url_effective}", "--max-filesize", str(max_bytes)]
+        for k, v in headers.items():
+            cmd += ["-H", f"{k}: {v}"]
+        if proxy_url:
+            cmd += ["-x", proxy_url]
+        if data:
+            cmd += ["--data-binary", "@-"]
+        p = subprocess.run(cmd + [url], input=data, capture_output=True, timeout=timeout + 10)
+        if p.returncode != 0 and not os.path.exists(bfile):
+            out["error"] = f"curl: {p.stderr.decode('utf-8', 'replace').strip()[:160]}"
+            return out
+        code, _, final = p.stdout.decode().partition(" ")
+        out["status"], out["final_url"] = int(code or 0) or None, final or url
+        blocks = [b for b in open(hfile, encoding="latin-1").read().split("\r\n\r\n") if b.strip()] if os.path.exists(hfile) else []
+        for b in blocks[:-1]:
+            st, loc = re.match(r"HTTP/\S+ (\d+)", b), re.search(r"^location:\s*(\S+)", b, re.I | re.M)
+            if st and loc:
+                out["redirects"].append({"status": int(st.group(1)), "location": loc.group(1)})
+        if blocks:
+            out["headers"] = {k.lower(): v.strip() for k, v in re.findall(r"^([\w-]+):\s*(.*)$", blocks[-1], re.M)}
+        with open(bfile, "rb") as fh:
+            out["body"] = fh.read(max_bytes)
+    return out
+
+
+def fetch(proxy_url, url, timeout, max_bytes=400_000, method="GET", body=None, headers=None, _insecure=False, _busy=0):
     """GET (or POST with a JSON body) url through the proxy. Returns an OrderedDict with status, headers, body (bytes)
     and redirects.
     If the local root store cannot verify the chain (common with the macOS system Python), the request is retried once
@@ -146,7 +185,7 @@ def fetch(proxy_url, url, timeout, max_bytes=400_000, method="GET", body=None, _
     out = OrderedDict(url=url, status=None, final_url=url, headers={}, body=b"", redirects=[], error=None, ms=None,
                       tls_unverified=_insecure)
     data = None if body is None else json.dumps(body).encode()
-    req = urllib.request.Request(url, data=data, method=method, headers={"Content-Type": "application/json"} if data else {})
+    req = urllib.request.Request(url, data=data, method=method, headers=dict(headers or {}, **({"Content-Type": "application/json"} if data else {})))
     t0 = time.time()
     try:
         with opener.open(req, timeout=timeout) as r:
@@ -164,10 +203,15 @@ def fetch(proxy_url, url, timeout, max_bytes=400_000, method="GET", body=None, _
             out["body"] = b""
     except Exception as e:  # noqa: BLE001 - any transport/parse failure is an observation of kind "error"
         if not _insecure and "CERTIFICATE_VERIFY_FAILED" in str(e):
-            return fetch(proxy_url, url, timeout, max_bytes, method, body, True, _busy)
+            return fetch(proxy_url, url, timeout, max_bytes, method, body, headers, True, _busy)
+        if TLS_RE.search(str(e)) and shutil.which("curl"):
+            all_headers = dict(opener.addheaders, **req.headers)
+            out = curl_fetch(proxy_url, url, timeout, max_bytes, method, data, all_headers, out)
+            out["ms"] = int((time.time() - t0) * 1000)
+            return out
         if proxy_url and PROXY_BUSY_RE.search(str(e)) and _busy < 2 and not STOP.is_set():
             time.sleep(15 * (_busy + 1))
-            return fetch(proxy_url, url, timeout, max_bytes, method, body, _insecure, _busy + 1)
+            return fetch(proxy_url, url, timeout, max_bytes, method, body, headers, _insecure, _busy + 1)
         if proxy_url and PROXY_AUTH_RE.search(str(e)) and not STOP.is_set():
             STOP.set()
             say(f"! the proxy refused authorization ({str(e)[:80]}): stopping, the run file keeps what was collected")
@@ -203,6 +247,8 @@ def classify_site(r):
     if st == 451:
         return "blocked", "HTTP 451"
     if st == 403:
+        if WAF_BLOCK_RE.search(text):
+            return "unknown", "Cloudflare block page without geo wording (a firewall rule: country, network or bot score)"
         if hdr.get("cf-mitigated") == "challenge" or CHALLENGE_RE.search(text):
             return "challenge", "Cloudflare challenge"
         if GEO_TEXT_RE.search(text):
@@ -247,6 +293,8 @@ def classify_endpoint(r):
         return "blocked", flags, "HTTP 451"
     if st == 403:
         text = body_text(r["body"], 600)
+        if WAF_BLOCK_RE.search(text):
+            return "unknown", flags, "Cloudflare block page without geo wording (a firewall rule: country, network or bot score)"
         if hdr.get("cf-mitigated") == "challenge" or CHALLENGE_RE.search(text):
             return "challenge", flags, "Cloudflare challenge (not testable without a browser)"
         if GEO_TEXT_RE.search(text) or any(flags.get(k) is True for k in ("blocked", "geoblocked", "restricted")):
@@ -335,7 +383,7 @@ def check_vantage(proxy_url, token, timeout):
     answer, retried once: the provider has no exit there, which says nothing about the sites), wrong_country (the exit is
     elsewhere)."""
     expected = token.split("-")[0].upper()
-    seen, asn, org, by, err = [], None, None, [], None
+    seen, asn, org, by, err, ip = [], None, None, [], None, None
     for i, (name, url, pick) in enumerate(GEO_APIS + GEO_APIS[:1]):
         if STOP.is_set():
             break
@@ -353,9 +401,10 @@ def check_vantage(proxy_url, token, timeout):
                 by.append(name)
             asn = asn or a
             org = org or o
+            ip = ip or (j.get("ip") if isinstance(j.get("ip"), str) else None)
     status = "no_proxy" if not seen else "ok" if seen.count(expected) * 2 >= len(seen) else "wrong_country"
     return OrderedDict(requested=token, ip_country=(max(seen, key=seen.count) if seen else None), seen=seen, asn=asn,
-                       org=org, verified_by=by, status=status, error=None if seen else err, verified=status == "ok")
+                       org=org, verified_by=by, status=status, error=None if seen else err, verified=status == "ok", ip=ip)
 
 
 def cf_trace(proxy_url, final_url, timeout):
@@ -371,7 +420,7 @@ def cf_trace(proxy_url, final_url, timeout):
 # ----------------------------------------------------------------------------- run
 def observation(entry, token, proxy_type, vantage, kind, r, state, note, flags=None, cf_loc=None):
     hdr = r["headers"]
-    return OrderedDict([
+    return OrderedDict([  # the vantage's exit IP is deliberately left out
         ("interface_id", entry["id"]), ("kind", kind), ("url", r["url"]), ("country", token.split("-")[0]),
         ("region", token if "-" in token else None), ("proxy_type", proxy_type),
         ("vantage", OrderedDict([("ip_country", vantage["ip_country"]), ("asn", vantage["asn"]), ("org", vantage["org"]),
@@ -417,9 +466,12 @@ def probe_country(token, entries, proxy_type, timeout, delay):
             say(f"[{token}] {e['id']:14s} geo   {r2['status']!s:>4} {st2:16s} {json.dumps(flags)[:70]}")
             time.sleep(delay)
         for probe in e.get("api_probes", []):
-            r3 = fetch(proxy_url, probe["url"], timeout, method=probe.get("method", "GET"), body=probe.get("body"))
+            r3 = fetch(proxy_url, probe["url"].replace("{ip}", v["ip"] or ""), timeout, method=probe.get("method", "GET"),
+                       body=probe.get("body"), headers=probe.get("headers"))
             if STOP.is_set():
                 return v, obs, False
+            if "{ip}" in probe["url"]:  # the observation is keyed by the template; the exit IP stays out of the data
+                r3["url"], r3["final_url"], r3["redirects"] = probe["url"], probe["url"], []
             st3, flags, note3 = classify_api(probe, r3)
             obs.append(observation(e, token, proxy_type, v, "api", r3, st3, f"{probe['name']}: {note3}", flags=flags))
             say(f"[{token}] {e['id']:14s} api   {r3['status']!s:>4} {st3:16s} {probe['name']} {json.dumps(flags)[:60]}")
@@ -461,7 +513,7 @@ def cmd_run(args):
     for token, f in zip(tokens, futures):
         v, got, finished = (None, [], False) if f.cancelled() else f.result()
         if v:
-            vantages[token] = v
+            vantages[token] = OrderedDict((k, x) for k, x in v.items() if k != "ip")
         obs += got
         if not finished:
             unfinished.append(token)

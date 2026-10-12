@@ -1,7 +1,7 @@
 // Page metadata (title, description, canonical path, hreflang alternates, JSON-LD) for both UI languages, shared by
 // the running app (usePageMeta) and the build-time prerender in vite.config.mts. Keep this file free of browser APIs,
 // import.meta.env and baseUrl imports.
-import type { DatasetMeta, InterfaceEntry } from '../types/restrictions';
+import type { DatasetMeta, InterfaceEntry, InterfaceRow } from '../types/restrictions';
 import { fullName } from '../utils/restrictions';
 import { en, Messages } from '../i18n/en';
 import { zh } from '../i18n/zh';
@@ -57,7 +57,7 @@ export const alternatesFor = (basePath: string): Alternate[] => [
 export const ogLocale = (lang: Lang): string => OG_LOCALE[lang];
 
 /** Short plain-language summary of what an interface restricts, in the given language. */
-function restrictionSummary(e: InterfaceEntry, lang: Lang): string {
+function restrictionSummary(e: InterfaceRow, lang: Lang): string {
   const t = catalog(lang);
   const S = t.seo.summary;
   const parts: string[] = [];
@@ -79,7 +79,7 @@ const breadcrumb = (siteUrl: string, items: [string, string][]) => ({
   itemListElement: items.map(([name, path], n) => ({ '@type': 'ListItem', position: n + 1, name, item: absoluteUrl(siteUrl, path) }))
 });
 
-export function monitorMeta(meta: DatasetMeta, interfaces: InterfaceEntry[], siteUrl: string, lang: Lang = 'en'): PageMeta {
+export function monitorMeta(meta: DatasetMeta, interfaces: InterfaceRow[], siteUrl: string, lang: Lang = 'en'): PageMeta {
   const t = catalog(lang);
   const withAlt = interfaces.filter((i) => i.alternatives.length > 0).length;
   const path = localizePath('/monitor', lang);
@@ -123,7 +123,13 @@ export function monitorMeta(meta: DatasetMeta, interfaces: InterfaceEntry[], sit
   };
 }
 
-export function interfaceMeta(e: InterfaceEntry, meta: DatasetMeta, siteUrl: string, lang: Lang = 'en'): PageMeta {
+/** The record when it is loaded; the dashboard row alone (no description yet) while the page waits for it. */
+export function interfaceMeta(
+  e: InterfaceRow & Partial<Pick<InterfaceEntry, 'description' | 'description_zh'>>,
+  meta: DatasetMeta,
+  siteUrl: string,
+  lang: Lang = 'en'
+): PageMeta {
   const t = catalog(lang);
   const base = `/monitor/${e.id}`;
   const path = localizePath(base, lang);
@@ -153,7 +159,7 @@ export function interfaceMeta(e: InterfaceEntry, meta: DatasetMeta, siteUrl: str
             '@type': 'WebApplication',
             name: fullName(e),
             url: e.url,
-            description: lang === 'zh' && e.description_zh ? e.description_zh : e.description,
+            description: (lang === 'zh' && e.description_zh ? e.description_zh : e.description) ?? '',
             applicationCategory: 'FinanceApplication',
             operatingSystem: 'Web'
           }

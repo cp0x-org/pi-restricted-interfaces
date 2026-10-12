@@ -1,0 +1,73 @@
+{
+  "id": "ens-legacy",
+  "name": "ENS",
+  "version": "Legacy Manager",
+  "family": "ens",
+  "lifecycle": "legacy",
+  "lifecycle_note": "The app itself says it is no longer maintained for bug and security fixes and links to the current app at app.ens.domains.",
+  "description": "The ENS Legacy Manager is the previous Ethereum Name Service app for registering and managing .eth names, still served at legacy.ens.domains. ENS no longer maintains it for bug or security fixes and points users to the current app.",
+  "description_zh": "ENS 旧版管理器是以太坊域名服务此前用于注册和管理 .eth 域名的应用，仍可在 legacy.ens.domains 访问。ENS 已不再为其修复漏洞或安全问题，并引导用户使用当前应用。",
+  "category": "Naming",
+  "chains": "Ethereum",
+  "networks": [
+    "Ethereum"
+  ],
+  "url": "https://legacy.ens.domains",
+  "frontend_repo": "https://github.com/ensdomains/ens-app",
+  "repo_state": "open_stale",
+  "repo_status": "open-stale (described as the legacy ENS manager app)",
+  "repo_last_commit": "2025-04-21",
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "no",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://ens.domains/legal/terms-of-use",
+    "updated": "2026-08-12",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "sanctioned + FATF non-cooperative",
+    "restricted_codes": []
+  },
+  "notes": "Clean.",
+  "live": [
+    "legacy.ens.domains -> ens-app.pages.dev (2026-10-10): banner 'This version is no longer maintained for bug and security fixes'"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://github.com/ensdomains/ens-app",
+    "legacy.ens.domains bundle inspection (2026-10-10)"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "level": "A",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "other",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

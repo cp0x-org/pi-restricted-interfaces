@@ -1,0 +1,68 @@
+{
+  "id": "ens",
+  "name": "ENS",
+  "family": "ens",
+  "description": "ENS, the Ethereum Name Service, maps human-readable .eth names to wallet addresses, websites and other records. Names are NFTs registered for a yearly fee, and the protocol is governed by the ENS DAO.",
+  "description_zh": "ENS（以太坊域名服务）把易读的 .eth 名称映射到钱包地址、网站和其他记录。域名是按年付费注册的 NFT，协议由 ENS DAO 治理。",
+  "category": "Naming",
+  "chains": "Ethereum",
+  "networks": [
+    "Ethereum"
+  ],
+  "url": "https://app.ens.domains",
+  "frontend_repo": "https://github.com/ensdomains/ens-app-v3",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-10-06",
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "tos_only",
+    "provider": "ToS 3.1(b) implies address blocking",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://ens.domains/legal/terms-of-use",
+    "updated": "2026-08-12",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "sanctioned + FATF non-cooperative",
+    "restricted_codes": []
+  },
+  "notes": "Clean.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "A",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "other",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

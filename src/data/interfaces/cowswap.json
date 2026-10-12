@@ -1,0 +1,130 @@
+{
+  "id": "cowswap",
+  "name": "CoW Swap",
+  "description": "CoW Swap is the trading interface of CoW Protocol, where users sign swap intents and independent solvers compete in batch auctions to settle them. Opposite orders can be matched directly as a coincidence of wants or routed through on-chain liquidity, which protects traders from MEV and means failed orders cost no gas.",
+  "description_zh": "CoW Swap 是 CoW Protocol 的交易界面：用户签署兑换意图，独立的求解者（solver）在批量拍卖中竞争结算。相反方向的订单可以作为“需求巧合”直接撮合，或路由到链上流动性，从而保护交易者免受 MEV 影响，失败的订单也不消耗 gas。",
+  "category": "DEX / intents",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Gnosis",
+    "Arbitrum",
+    "Base",
+    "Avalanche",
+    "Polygon",
+    "BNB Chain"
+  ],
+  "url": "https://swap.cow.fi",
+  "frontend_repo": "https://github.com/cowprotocol/cowswap/tree/develop/apps/cowswap-frontend",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-10-07",
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [
+      "AF",
+      "DZ",
+      "BY",
+      "CA",
+      "CN",
+      "CU",
+      "KP",
+      "ER",
+      "IR",
+      "LY",
+      "MM",
+      "MA",
+      "NP",
+      "RU",
+      "SO",
+      "SS",
+      "SD",
+      "SY",
+      "US",
+      "VE",
+      "AT",
+      "BE",
+      "BG",
+      "HR",
+      "CY",
+      "CZ",
+      "DK",
+      "EE",
+      "FI",
+      "FR",
+      "DE",
+      "GR",
+      "HU",
+      "IE",
+      "IT",
+      "LV",
+      "LT",
+      "LU",
+      "MT",
+      "NL",
+      "PL",
+      "PT",
+      "RO",
+      "SK",
+      "SI",
+      "ES",
+      "SE",
+      "IS",
+      "LI",
+      "NO"
+    ],
+    "scope": "RWA/tokenized-stock token lists hidden by IP (api.country.is) for 50 countries: US, CA, CN, RU, the whole EEA and sanctioned or high-risk jurisdictions (RESTRICTED_COUNTRIES in libs/core/src/cms/consts.ts); flag isRwaGeoblockEnabled"
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "orderbook backend: hardcoded list + Chainalysis oracle + Hermod (zeroShadow)",
+    "layer": "api",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "RWA lists",
+  "tos": {
+    "url": "https://cow.fi/legal/cowswap-terms",
+    "updated": "2025-07",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "generic UN/EU/US/UK",
+    "restricted_codes": []
+  },
+  "notes": "The RWA geo filter runs in the frontend; wallet screening is done by the CoW orderbook API, which rejects orders from banned addresses.",
+  "live": [],
+  "geo_endpoints": [],
+  "evidence": [
+    "apps/cowswap-frontend/src/modules/rwa/state/geoDataAtom.ts",
+    "libs/core/src/cms/consts.ts",
+    "libs/tokens/src/updaters/RestrictedTokensListUpdater/index.tsx",
+    "https://github.com/cowprotocol/services/blob/main/crates/order-validation/src/banned/mod.rs"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "D",
+  "restrictions": {
+    "count": 52,
+    "countries": 50,
+    "mechanisms": [
+      "geo_feature",
+      "screening"
+    ]
+  },
+  "category_group": "dex",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}
