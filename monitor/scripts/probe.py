@@ -98,7 +98,10 @@ class RecordingRedirectHandler(urllib.request.HTTPRedirectHandler):
 
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         self.chain.append({"status": code, "location": newurl})
-        return super().redirect_request(req, fp, code, msg, headers, newurl)
+        # Python < 3.11 does not follow 308 (Permanent Redirect); it keeps the method like 307
+        return super().redirect_request(req, fp, 307 if code == 308 else code, msg, headers, newurl)
+
+    http_error_308 = urllib.request.HTTPRedirectHandler.http_error_302
 
 
 def make_opener(proxy_url):
@@ -136,7 +139,7 @@ class Pacer:
 PACER = Pacer()
 
 
-TLS_RE = re.compile(r"PROTOCOL_VERSION|UNSUPPORTED_PROTOCOL|WRONG_VERSION_NUMBER|SSLV3_ALERT_HANDSHAKE_FAILURE")
+TLS_RE = re.compile(r"PROTOCOL_VERSION|UNSUPPORTED_PROTOCOL|WRONG_VERSION_NUMBER|SSLV3_ALERT_HANDSHAKE_FAILURE|EOF occurred in violation of protocol")
 
 
 def curl_fetch(proxy_url, url, timeout, max_bytes, method, data, headers, out):
@@ -437,10 +440,14 @@ def probe_country(token, entries, proxy_type, timeout, delay):
     """Vantage check, then every target from one country in order. Returns (vantage, observations, finished)."""
     if STOP.is_set():
         return None, [], False
-    proxy_url = proxy_for(token, proxy_type, secrets.token_hex(4))  # one sticky exit IP per country, if the template asks
-    v = check_vantage(proxy_url, token, timeout)
-    if STOP.is_set():
-        return None, [], False
+    for attempt in range(3):  # a sticky session that does not answer is replaced by a fresh one (another exit IP)
+        proxy_url = proxy_for(token, proxy_type, secrets.token_hex(4))  # one sticky exit IP per country, if the template asks
+        v = check_vantage(proxy_url, token, timeout)
+        if STOP.is_set():
+            return None, [], False
+        if v["status"] != "no_proxy" or proxy_type == "direct":
+            break
+        say(f"[{token}] vantage: no answer from the proxy ({v['error']}), new session (attempt {attempt + 2} of 3)")
     say(f"[{token}] vantage: {v['status']} ip_country={v['ip_country']} seen={v['seen']} asn={v['asn']}")
     if not v["verified"]:
         why = f"the proxy has no exit here ({v['error']})" if v["status"] == "no_proxy" else f"the proxy exit is in {v['ip_country']}"

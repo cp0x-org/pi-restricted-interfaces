@@ -2689,7 +2689,7 @@
         "s": "tos_only",
         "countries": [],
         "close_only": [],
-        "method": "ToS: IP-based geo-blocking"
+        "method": "app.compound.xyz answers HTTP 403 with a geo-block notice to some countries (the Terms reserve IP-based geo-blocking). The countries are those of the live probe (see the observations; 2026-10-12: CD, IQ, MM, SD, SS, ZW; four sanctioned countries got Cloudflare's block page without geo wording)."
       },
       "geo_feature": {
         "s": "no",
@@ -2752,7 +2752,7 @@
         "s": "tos_only",
         "countries": [],
         "close_only": [],
-        "method": "Privacy notice: automated geo-blocking and sanctions screening of IP-derived location may restrict access; no country list in the bundle"
+        "method": "v2-app.compound.xyz answers HTTP 403 with a geo-block notice to some countries (the privacy notice describes automated geo-blocking of the IP-derived location). The countries are those of the live probe (see the observations; 2026-10-12: CD, IQ, MM, SS, ZW; four sanctioned countries got Cloudflare's block page without geo wording)."
       },
       "geo_feature": {
         "s": "no",
@@ -2891,7 +2891,7 @@
           "US"
         ],
         "close_only": [],
-        "method": "2023: 'Accessing this website via VPN is not allowed'; US block per 2023 reports"
+        "method": "app.spark.finance answers HTTP 403 with a geo-block notice to some countries; the app's own /ip/status check (api-v2.spark.finance) returns the country and a VPN flag for the list in the code. The countries are those of the live probe (see the observations; 2026-10-12: 18 of 61, among them UA, RU, BY, IR, CU, SY, VE, AF, LB). 2023 reports: 'Accessing this website via VPN is not allowed', US block."
       },
       "geo_feature": {
         "s": "unknown",
@@ -4219,7 +4219,7 @@
         "s": "tos_only",
         "countries": [],
         "close_only": [],
-        "method": "ToS mentions geo-blocks"
+        "method": "app.pendle.finance answers HTTP 451 (Unavailable For Legal Reasons) to some countries; the Terms mention geo-blocks. The countries are those of the live probe (see the observations; 2026-10-12: BY, CU, IR, SD, SY, ZW)."
       },
       "geo_feature": {
         "s": "tos_only",
@@ -4300,7 +4300,7 @@
           "US"
         ],
         "close_only": [],
-        "method": "302 -> ethena.fi/restricted ('not available in your country' / high-risk wallet); confirmed live from the US, the ToS list (33 jurisdictions) is not live-verified"
+        "method": "302 -> ethena.fi/restricted ('not available in your country' / high-risk wallet); confirmed live from the US and 15 more countries on 2026-10-12 (see the observations; the Terms list 33 jurisdictions)"
       },
       "geo_feature": {
         "s": "yes",
