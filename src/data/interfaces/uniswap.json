@@ -57,7 +57,7 @@
     "updated": "2024-03-21",
     "us": "no",
     "us_scope": "",
-    "restricted": "generic: comprehensive/regional US sanctions",
+    "restricted": "The Terms name no country: users must not be citizens, residents or organized in a jurisdiction or territory under comprehensive country-wide, territory-wide or regional US sanctions (support.uniswap.org Terms of Service, read on 2026-10-12 from the Wayback copy of 2026-09-19).",
     "restricted_codes": []
   },
   "notes": "Screening and the RWA gate are calls to the Uniswap entry gateway. Routing (Trading API) goes through the same gateway and needs an API key.",

@@ -56,7 +56,7 @@
     "updated": "unknown",
     "us": "partial",
     "us_scope": "USTB/USCC: US accredited investors / qualified purchasers",
-    "restricted": "Only investors in supported countries (allowlist of roughly 22-29 countries, updated regularly)",
+    "restricted": "An allowlist, not a blocklist: Superstate Funds are offered only to Qualified Purchasers in 29 supported countries (docs 'Getting started', 2026-10: US, AU, BM, BS, VG, CA, KY, CY, FR, GE, DE, GI, HK, IT, IE, JE, LU, MH, MX, PA, PL, SC, SG, ES, KN, KR, CH, AE, GB); tokenized equities to investors in supported countries. No named restricted country, so no restricted codes.",
     "restricted_codes": []
   },
   "notes": "Closed frontend. USTB transfers to non-allowlisted addresses revert at the contract level.",

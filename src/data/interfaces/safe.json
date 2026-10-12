@@ -61,7 +61,7 @@
     "updated": "2025-10",
     "us": "no",
     "us_scope": "",
-    "restricted": "generic EU/US sanctions",
+    "restricted": "The Terms name no country: users must not be citizens, residents or members of any jurisdiction subject to EU or US economic sanctions (safe.global/terms, section 17, read 2026-10-12).",
     "restricted_codes": []
   },
   "notes": "Only native integrations are restricted (swap via CoW, stake via Kiln and so on). The core wallet is permissionless.",
