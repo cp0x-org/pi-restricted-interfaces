@@ -5,7 +5,7 @@
 // Node-only code path: no browser APIs, relative imports only.
 import { LEVELS } from '../types/restrictions';
 import type { Dataset, InterfaceEntry, Status } from '../types/restrictions';
-import { displayName, evidenceLinks, fullName, lifecycleRank, parentOf, restrictionsText } from '../utils/restrictions';
+import { appHref, displayName, evidenceLinks, fullName, lifecycleRank, parentOf, restrictionsText } from '../utils/restrictions';
 import { LANGS_ALL, Lang, localizePath } from '../i18n/paths';
 import type { Messages } from '../i18n/en';
 import {
@@ -117,7 +117,7 @@ function monitorBody(ds: Dataset, lang: Lang): string {
       i.level
     }</td><td>${status(i.geo_site.s)}${i.geo_site.countries.length ? ` (${i.geo_site.countries.length})` : ''}</td><td>${status(i.geo_feature.s)}</td><td>${esc(
       screening
-    )}</td><td>${esc(L.VPN_LABELS[i.vpn.s])}</td><td>${ext(i.url, strip(i.url))}</td><td>${alt ? ext(alt.url, alt.name) : '—'}</td></tr>`;
+    )}</td><td>${esc(L.VPN_LABELS[i.vpn.s])}</td><td>${ext(appHref(i), strip(i.url))}</td><td>${alt ? ext(alt.url, alt.name) : '—'}</td></tr>`;
   });
   return `<h1>${esc(t.monitor.title)}</h1>
 <p>${esc(t.monitor.intro(ds.interfaces.length, ds.meta.catalog_total, ds.meta.generated))}</p>
@@ -179,7 +179,7 @@ function interfaceBody(e: InterfaceEntry, ds: Dataset, lang: Lang): string {
 <h1>${esc(fullName(e))}</h1>
 <p>${esc(description)}</p>
 ${e.lifecycle === 'legacy' && e.lifecycle_note ? `<p><b>${esc(t.seo.legacySentence(e.lifecycle_note))}</b></p>\n` : ''}${versions.length ? `<p>${esc(T.otherVersions)}${colon}${versions.map((v) => `<a href="${localizePath(`/monitor/${v.id}`, lang)}">${esc(displayName(v))}</a>${v.lifecycle === 'legacy' ? ` (${esc(t.chips.legacy)})` : ''}`).join(listSep)}${stop.trim()}</p>\n` : ''}<p><b>${esc(t.seo.levelSentence(e.level, restrictionsText(e, t.monitor.restrictionsTip, L.MECHANISM_LABELS, t.seo.listSep, L.LEVEL_DESCRIPTIONS['n/a'])))}</b> ${esc(category)} · ${esc(e.networks.join(', ') || e.chains)}${stop.trim()}</p>
-<p>${field(t.monitor.cols.official, ext(e.url, strip(e.url)))}${stop}${alt ? `${esc(T.altPrefix)} ${ext(alt.url, alt.name)}${stop}` : ''}${field(
+<p>${field(t.monitor.cols.official, ext(appHref(e), strip(e.url)))}${stop}${alt ? `${esc(T.altPrefix)} ${ext(alt.url, alt.name)}${stop}` : ''}${field(
     T.frontendCode,
     e.frontend_repo ? ext(e.frontend_repo, strip(e.frontend_repo)) : esc(L.REPO_STATE_LABELS[e.repo_state])
   )}${stop.trim()}</p>

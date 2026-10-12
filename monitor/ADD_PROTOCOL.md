@@ -63,6 +63,7 @@ Cheat sheet of the values:
 | `confidence` | `high` · `medium` · `low` |
 
 Optional fields:
+- `"referral_url": "https://app.myprotocol.xyz/?ref=CP0X"`: where the official-app link goes when it differs from `url` (a cp0x referral link); the link text, search and probes keep `url`.
 - `"kyc": { "s": "yes", "layer": "contract", "scope": "what KYC gates" }`: KYC or a wallet allowlist (counts as one restriction).
 - `"alternatives": [{ "name": "myprotocol.cp0x.com", "url": "https://myprotocol.cp0x.com" }]`: if pi.cp0x.com has a permissionless version (the row moves up).
 - Protocol versions: see the section below.

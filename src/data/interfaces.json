@@ -25,12 +25,12 @@
       "GE-SouthOssetia": "South Ossetia",
       "CY-North": "Northern Cyprus"
     },
-    "catalog_total": 77,
+    "catalog_total": 80,
     "defunct_hidden": [
       "Notional V1",
       "Hop"
     ],
-    "scope": "EVM networks only"
+    "scope": "EVM networks, plus apps whose official interface lists EVM networks"
   },
   "interfaces": [
     {
@@ -1706,6 +1706,86 @@
       "observations": []
     },
     {
+      "id": "hyperliquid",
+      "name": "Hyperliquid",
+      "description": "Hyperliquid is a layer-1 blockchain with a fully on-chain order book for perpetual futures and spot trading, plus the HyperEVM smart-contract environment; HYPE is its native token. The official app takes USDC deposits from Arbitrum.",
+      "description_zh": "Hyperliquid 是一条一层区块链，内置完全链上的永续合约与现货订单簿，并提供 HyperEVM 智能合约环境；HYPE 是其原生代币。官方应用接受来自 Arbitrum 的 USDC 存款。",
+      "category": "Perps",
+      "chains": "Hyperliquid L1",
+      "networks": [
+        "Arbitrum",
+        "HyperEVM"
+      ],
+      "url": "https://app.hyperliquid.xyz",
+      "referral_url": "https://app.hyperliquid.xyz/join/CP0X",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [],
+        "close_only": [],
+        "method": "The app calls the info API legalCheck for the visitor's IP; restrictions 'a' (BlockActions) disables trading and the app shows \"Not available in your jurisdiction\". IP geolocation by IPdata (Privacy Policy). Which countries get the block is not confirmed yet: Terms 1.6 name the United States and Ontario (plus unnamed sanctioned territories); a per-country check is pending."
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": "legalCheck also returns codes that hide outcome markets ('o', returned from SG, BR and FR on 2026-10-12) and a UK code ('u'); not counted."
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": "Terms forbid VPNs or proxies to conceal location."
+      },
+      "screening": {
+        "s": "yes",
+        "provider": "Chainalysis (the app's 'flagged by Chainalysis' banner) via info API legalCheck userAllowed",
+        "layer": "api",
+        "fail": "unknown",
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://app.hyperliquid.xyz/terms",
+        "updated": "2026-06-15",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "Terms 1.6: United States, Ontario (Canada), persons in sanctioned jurisdictions (not named) and their citizens",
+        "restricted_codes": [
+          "US",
+          "CA-ON"
+        ]
+      },
+      "notes": "The app asks the info API legalCheck with the connected wallet (or a placeholder address): the answer carries userAllowed (wallet screening) and restrictions for the visitor's IP. Builder-code frontends call legalCheck themselves. The country list is not published in code; the bundled Terms 1.6 name it.",
+      "live": [
+        "api.hyperliquid.xyz/info legalCheck (2026-10-12): SDN -> userAllowed:false; control -> userAllowed:true"
+      ],
+      "geo_endpoints": [],
+      "evidence": [
+        "app.hyperliquid.xyz bundle: legalCheck call, BlockActions=`a`, 'Not available in your jurisdiction'",
+        "app.hyperliquid.xyz bundle: TermsOfUse 1.6, PrivacyPolicy (geo-blocking by IP address using IPdata)",
+        "https://app.hyperliquid.xyz/terms",
+        "https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-start-trading"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 2,
+        "countries": 0,
+        "mechanisms": [
+          "geo_site",
+          "screening"
+        ]
+      },
+      "category_group": "perps",
+      "chain_tags": [
+        "hyperliquid"
+      ],
+      "observations": []
+    },
+    {
       "id": "gtrade",
       "name": "gTrade",
       "aka": "Gains",
@@ -1786,6 +1866,103 @@
       "category_group": "perps",
       "chain_tags": [
         "evm"
+      ],
+      "observations": []
+    },
+    {
+      "id": "lighter",
+      "name": "Lighter",
+      "description": "Lighter is a perpetual futures exchange built as a zk-rollup: order matching and liquidations run off-chain and are verified on-chain with zero-knowledge proofs. Deposits settle through its Ethereum contract, and the app also takes deposits from other EVM networks through a universal deposit address.",
+      "description_zh": "Lighter 是一个以 zk-rollup 形式构建的永续合约交易所：订单撮合和清算在链下运行，并通过零知识证明在链上验证。存款通过其以太坊合约结算，应用还可通过通用存款地址接收来自其他 EVM 网络的存款。",
+      "category": "Perps",
+      "chains": "Lighter (zk L2)",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "BNB Chain",
+        "Polygon",
+        "Optimism",
+        "Avalanche",
+        "HyperEVM",
+        "Arc",
+        "Monad",
+        "Robinhood Chain"
+      ],
+      "url": "https://app.lighter.xyz",
+      "referral_url": "https://app.lighter.xyz/?referral=CP0XCOOL",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [],
+        "close_only": [],
+        "method": "The API rejects requests with geo_restriction_not_allowed (\"You are accessing Lighter from a restricted jurisdiction\") and the app shows a geo-blocked banner; the Terms log the IP to enforce access restrictions. Which countries get the block is not confirmed yet: the Terms name 14 jurisdictions; a per-country check is pending."
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://lighter.xyz/terms",
+        "updated": "2025-12-29",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "US, Canada, UK, China, North Korea, Russia, Ukraine, Cuba, Iran, Venezuela, Sudan, Belarus, Myanmar, Syria",
+        "restricted_codes": [
+          "US",
+          "CA",
+          "GB",
+          "CN",
+          "KP",
+          "RU",
+          "UA",
+          "CU",
+          "IR",
+          "VE",
+          "SD",
+          "BY",
+          "MM",
+          "SY"
+        ]
+      },
+      "notes": "Closed frontend; SDKs are open. The geo restriction is an API error code the app turns into a banner. Wallet login goes through Dynamic, whose public project settings carry enableExternalWalletOnTransactionSanctions: true (effect not verified).",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "app.lighter.xyz bundle: geo_restriction_not_allowed, geo-blocked banner",
+        "https://lighter.xyz/terms",
+        "https://apidocs.lighter.xyz/docs/deposits-transfers-and-withdrawals"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 0,
+        "mechanisms": [
+          "geo_site"
+        ]
+      },
+      "category_group": "perps",
+      "chain_tags": [
+        "other"
       ],
       "observations": []
     },
@@ -6897,6 +7074,289 @@
           "note": "page served (client-side gates not evaluated)"
         }
       ]
+    },
+    {
+      "id": "variational",
+      "name": "Variational",
+      "aka": "Omni",
+      "description": "Variational is a peer-to-peer derivatives protocol on Arbitrum that clears and settles trades on-chain. Its first app, Omni, lets users trade perpetuals on crypto and traditional markets from a single cross-margined USDC account, with the Omni Liquidity Provider quoting and taking the other side of every trade.",
+      "description_zh": "Variational 是 Arbitrum 上的点对点衍生品协议，在链上清算和结算交易。其首个应用 Omni 让用户在单一全仓 USDC 账户中交易加密货币和传统市场的永续合约，由 Omni 流动性提供者（OLP）为每笔交易报价并作为对手方。",
+      "category": "Perps",
+      "chains": "Arbitrum",
+      "networks": [
+        "Arbitrum"
+      ],
+      "url": "https://omni.variational.io",
+      "referral_url": "https://omni.variational.io/?ref=OMNICP0X",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [],
+        "close_only": [],
+        "method": "Cloudflare answers \"access restricted\" (the app reloads into the Cloudflare block page) and the /banner API flags isRestrictedJurisdiction. Which countries get the block is not confirmed yet: the Restricted Persons page names 19 territories (and bars US and Canadian persons); a per-country check is pending."
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": "Terms: \"Disguise your location through IP proxying, VPN or other methods\" is prohibited."
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.variational.io/legal/terms-of-use",
+        "updated": "2026-09-11",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "Restricted Persons page: Crimea, Donetsk, Luhansk and Sevastopol, Cuba, Iran, North Korea, Sudan, Syria, Canada, the US and its territories (Micronesia, Guam, Marshall Islands, Northern Mariana Islands, Puerto Rico, Palau, US Minor Outlying Islands, US Virgin Islands), Taiwan; also US and Canadian persons",
+        "restricted_codes": [
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR",
+          "CU",
+          "IR",
+          "KP",
+          "SD",
+          "SY",
+          "CA",
+          "US",
+          "FM",
+          "GU",
+          "MH",
+          "MP",
+          "PR",
+          "PW",
+          "UM",
+          "VI",
+          "TW"
+        ]
+      },
+      "notes": "Closed SvelteKit frontend. The block runs at Cloudflare: a request answered with 'access restricted' makes the app reload into the block page, and the /banner API carries isRestrictedJurisdiction. Deposits are USDC on Arbitrum.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "omni.variational.io bundle: isRestrictedJurisdiction, /access restricted/i reload",
+        "https://docs.variational.io/legal/restricted-persons",
+        "https://docs.variational.io/legal/terms-of-use",
+        "https://docs.variational.io/omni/getting-started-with-omni"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 0,
+        "mechanisms": [
+          "geo_site"
+        ]
+      },
+      "category_group": "perps",
+      "chain_tags": [
+        "evm"
+      ],
+      "observations": []
+    },
+    {
+      "id": "extended",
+      "name": "Extended",
+      "description": "Extended is a hybrid perpetual futures exchange: orders are matched off-chain and trades settle on Starknet, with settlement moving to Circle's Arc from 2026-10-22. USDC is the collateral, and the app takes deposits and withdrawals on several EVM networks and on Starknet.",
+      "description_zh": "Extended 是一个混合式永续合约交易所：订单在链下撮合，交易在 Starknet 上结算，自 2026-10-22 起结算迁移到 Circle 的 Arc。USDC 是抵押品，应用支持在多个 EVM 网络和 Starknet 上存取款。",
+      "category": "Perps",
+      "chains": "Starknet (settlement moves to Arc from 2026-10-22)",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Arc",
+        "Polygon",
+        "Avalanche",
+        "BNB Chain"
+      ],
+      "url": "https://app.extended.exchange",
+      "referral_url": "https://app.extended.exchange/join/CP0X",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [],
+        "close_only": [],
+        "method": "GET /geo answers 451 for a restricted region and the app replaces itself with \"Extended is not available in your region\" (API error GLOBAL.NOT_AVAILABLE_IN_YOUR_REGION). Which countries get the block is not confirmed yet: the Restricted Countries page names 16 jurisdictions; a per-country check is pending."
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "detect",
+        "note": "GET /geo answers 451 with the load balancer's error code VPN."
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.extended.exchange/extended-resources/legal/terms-of-use",
+        "updated": "2026-10-08",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "Restricted Countries page: Afghanistan, Canada, Hong Kong, Cuba, Iran, North Korea, Russia, Syria, Seychelles, Crimea, Donetsk, Kherson, Luhansk and Zaporizhzhia, the UK, the US",
+        "restricted_codes": [
+          "AF",
+          "CA",
+          "HK",
+          "CU",
+          "IR",
+          "KP",
+          "RU",
+          "SY",
+          "SC",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-Kherson",
+          "UA-LPR",
+          "UA-Zaporizhzhia",
+          "GB",
+          "US"
+        ]
+      },
+      "notes": "Closed frontend. The app asks api.starknet.extended.exchange/geo on load; a 451 answer blocks the app, and the load balancer's error code tells a VPN from a restricted region. GET api.starknet.extended.exchange/geo answered {\"status\": \"OK\"} from Singapore, Brazil and France on 2026-10-12.",
+      "live": [],
+      "geo_endpoints": [
+        "https://api.starknet.extended.exchange/geo"
+      ],
+      "evidence": [
+        "app.extended.exchange bundle: GET /geo, UnavailableForLegalReasons, LbErrorCode VPN, 'Extended is not available in your region'",
+        "https://docs.extended.exchange/extended-resources/legal/restricted-countries",
+        "https://docs.extended.exchange/extended-resources/legal/terms-of-use",
+        "https://docs.extended.exchange/extended-resources/account-operations/deposits-and-withdrawals",
+        "https://docs.extended.exchange/about-extended/migration-from-starknet-to-arc"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 2,
+        "countries": 0,
+        "mechanisms": [
+          "geo_site",
+          "vpn"
+        ]
+      },
+      "category_group": "perps",
+      "chain_tags": [
+        "starknet"
+      ],
+      "observations": []
+    },
+    {
+      "id": "aster",
+      "name": "Aster",
+      "description": "Aster is a decentralized exchange for perpetual futures and spot trading, with order books running on Aster Chain, its own privacy-focused layer 1 for derivatives. The app takes deposits from BNB Chain, Ethereum, Arbitrum, Solana and Sui.",
+      "description_zh": "Aster 是一个去中心化的永续合约与现货交易所，订单簿运行在其自有的、注重隐私的衍生品一层链 Aster Chain 上。应用接受来自 BNB Chain、以太坊、Arbitrum、Solana 和 Sui 的存款。",
+      "category": "Perps",
+      "chains": "Aster Chain, BNB Chain, Ethereum, Arbitrum, Solana, Sui",
+      "networks": [
+        "BNB Chain",
+        "Ethereum",
+        "Arbitrum"
+      ],
+      "url": "https://www.asterdex.com",
+      "referral_url": "https://www.asterdex.com/en/referral/jjrfpd",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [],
+        "close_only": [],
+        "method": "POST /bapi/futures/v1/public/future/web3/common-check-ip returns {isBlocked, orderLimit, country}: isBlocked refuses the wallet connection (\"Service not available in your region\"), orderLimit leaves only closing positions and withdrawals. Which countries get which is not confirmed yet: the Terms name 11 Prohibited Jurisdictions; a per-country check is pending."
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.asterdex.com/resources/terms-and-conditions",
+        "updated": "2026-02-25",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "Prohibited Jurisdictions: US, Canada, UK, China, North Korea, Russia, Ukraine, Cuba, Iran, Venezuela, Syria",
+        "restricted_codes": [
+          "US",
+          "CA",
+          "GB",
+          "CN",
+          "KP",
+          "RU",
+          "UA",
+          "CU",
+          "IR",
+          "VE",
+          "SY"
+        ]
+      },
+      "notes": "Closed frontend. The IP check is a public API call the app makes before connecting a wallet; the answer names the country but the mapping of countries to isBlocked and orderLimit is server-side. The IP check answered isBlocked:false and orderLimit:false from Singapore, Brazil and France on 2026-10-12.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "www.asterdex.com bundle: common-check-ip, dex-ip-blocked, 'Only closing positions and withdrawals are available'",
+        "https://docs.asterdex.com/resources/terms-and-conditions",
+        "https://docs.asterdex.com/aster-chain/overview",
+        "https://docs.asterdex.com/overview/smart-contracts"
+      ],
+      "confidence": "high",
+      "alternatives": [],
+      "lifecycle": "current",
+      "level": "B",
+      "restrictions": {
+        "count": 1,
+        "countries": 0,
+        "mechanisms": [
+          "geo_site"
+        ]
+      },
+      "category_group": "perps",
+      "chain_tags": [
+        "evm",
+        "solana",
+        "sui"
+      ],
+      "observations": []
     }
   ]
 }

@@ -12,7 +12,7 @@ no third-party requests.
 
 ## Pages
 
-- `/monitor` — ranking of the interfaces on EVM networks (the full catalog incl. Solana/Cosmos apps stays in `monitor/`): rating A/B/C/D/n/a by number of restrictions, one row per official interface version (legacy versions at the bottom, defunct ones hidden), mechanisms, screening provider and layer, frontend code status; filters by category, chain, level, layer, mechanism and open-source-only
+- `/monitor` — ranking of the interfaces on EVM networks and of apps reached from them, such as Hyperliquid (the full catalog incl. Solana/Cosmos apps stays in `monitor/`): rating A/B/C/D/n/a by number of restrictions, one row per official interface version (legacy versions at the bottom, defunct ones hidden), mechanisms, screening provider and layer, frontend code status; filters by category, chain, level, layer, mechanism and open-source-only
 - `/monitor/:id` — interface card: repository, each mechanism with countries and fail mode, Terms of Service summary, notes, live checks, evidence links pinned to the repository branch; for protocols with several versions also the version label, a legacy notice and links to the other versions (Aave V3 / V4, Notional Exponent / V3 / V2, …)
 - Country filter on `/monitor` (multi-select, `?country=UA,US`) — keeps only the interfaces that restrict at least one selected country (blocked, close-only, feature-limited, regional or ToS only) and adds a column with each verdict and its basis; chips above the table narrow by restriction type. The standalone `/country` page is hidden (`SHOW_COUNTRY_PAGE` in `src/views/monitor/constants.ts`); `/country/XX` links redirect to `/monitor?country=XX`
 - `/summary` — charts over the collected data: rating mix, which restrictions are enforced vs written only in the Terms, most blocked countries, wallet-screening layers and providers, and which categories and networks are the most permissionless (share without restrictions, average restrictions where there are any, maximum). Plain SVG/CSS charts, no chart library; numbers come from `src/utils/summary.ts`
@@ -21,7 +21,7 @@ no third-party requests.
 ## Data
 
 The dataset lives in [`monitor/data/interfaces.json`](monitor/data/interfaces.json) (schema v2, hand-maintained, every claim backed by evidence).
-The web app imports the generated [`src/data/interfaces.json`](src/data/interfaces.json), filtered to EVM networks; the report
+The web app imports the generated [`src/data/interfaces.json`](src/data/interfaces.json), filtered to EVM networks (an app on its own chain is included when its `networks[]` lists EVM networks); the report
 and the CSV snapshot in [`monitor/out/`](monitor/out/) cover the whole catalog, the version the site shows (with its checks and evidence) is [`monitor/current/`](monitor/current/), and previous versions live in [`monitor/archive/`](monitor/archive/) as `<scanned>_<archived>/` (`pnpm monitor:update`, see [`monitor/docs/updating.md`](monitor/docs/updating.md)).
 
 ```

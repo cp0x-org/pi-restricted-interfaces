@@ -211,7 +211,7 @@ export const en = {
     langName: 'English',
     noscript: 'Filters and sorting need JavaScript; the full catalog is shown below.',
     monitorDescription: (n: number, withAlt: number) =>
-      `Which official DeFi interfaces geo-block countries, screen wallets or hide features: ${n} EVM apps ranked A–D with evidence, per-country status and ${withAlt} permissionless alternatives.`,
+      `Which official DeFi interfaces geo-block countries, screen wallets or hide features: ${n} apps ranked A–D with evidence, per-country status and ${withAlt} permissionless alternatives.`,
     summaryDescription:
       'Charts of geo-blocking, wallet screening and VPN checks across official DeFi interfaces: ratings, most blocked countries, screening providers, and the most permissionless categories and networks.',
     methodologyDescription:
@@ -222,7 +222,7 @@ export const en = {
     ifacePageName: (name: string) => `${name}: access restrictions of the official interface`,
     datasetName: 'Access restrictions in official DeFi interfaces',
     datasetDescription:
-      'Catalog of geo-blocking, feature and asset gating, wallet screening and VPN detection in the official web interfaces of DeFi protocols on EVM networks, with the enforcement layer and evidence for every claim.',
+      'Catalog of geo-blocking, feature and asset gating, wallet screening and VPN detection in the official web interfaces of DeFi protocols on or reached from EVM networks, with the enforcement layer and evidence for every claim.',
     summary: {
       geoBlocks: (n: number) => `geo-blocks ${n} countries`,
       geoBlocksSite: 'geo-blocks the site',
@@ -316,7 +316,7 @@ export const en = {
   method: {
     title: 'Methodology',
     intro: (date: string, shown: number, total: number) =>
-      `The catalog answers one question per interface: what does the official frontend or backend block, for whom, by which mechanism and where is it enforced. Snapshot of ${date}. The site shows EVM networks only: ${shown} of ${total} interfaces in the full catalog; Solana, Cosmos and other non-EVM apps stay in \`monitor/data\` and in the report. Only observation: nothing is bypassed, nothing is signed, no transactions are sent.`,
+      `The catalog answers one question per interface: what does the official frontend or backend block, for whom, by which mechanism and where is it enforced. Snapshot of ${date}. The site shows EVM networks and apps on their own chains reached from them (Hyperliquid, Lighter, Extended): ${shown} of ${total} interfaces in the full catalog; Solana, Cosmos and other apps without an EVM network stay in \`monitor/data\` and in the report. Only observation: nothing is bypassed, nothing is signed, no transactions are sent.`,
     levelsTitle: 'Rating',
     levelsNote:
       'The rating counts the technical restrictions of the official interface: every country or region where the site, trading or a feature is blocked counts once, and each feature or asset gate, wallet screening (by API or contract), VPN detection and KYC requirement counts once more. Restrictions written only in the Terms of Service are not counted. Fewer restrictions, better rating: A none, B 1–5, C 6–20, D more than 20; n/a when nothing could be determined.',

@@ -95,7 +95,7 @@ ALIASES = {
     "TZ": ["United Republic of Tanzania"], "US": ["US", "U.S.", "USA", "U.S.A.", "United States of America"],
     "VA": ["Vatican", "Vatican City"], "VE": ["Bolivarian Republic of Venezuela"], "VN": ["Viet Nam"],
     "VI": ["US Virgin Islands", "United States Virgin Islands", "Virgin Islands (U.S.)"],
-    "VG": ["Virgin Islands (British)"], "KN": ["St. Kitts and Nevis", "St Kitts and Nevis"],
+    "VG": ["Virgin Islands (British)"], "UM": ["US Minor Outlying Islands"], "KN": ["St. Kitts and Nevis", "St Kitts and Nevis"],
     "LC": ["St. Lucia", "St Lucia"], "VC": ["St. Vincent and the Grenadines", "St Vincent and the Grenadines"],
     "UA-Crimea": ["Crimea", "Crimean", "Sevastopol", "Crimea region"],
     "UA-DPR": ["Donetsk", "DNR", "DPR", "Donetsk People's Republic"],

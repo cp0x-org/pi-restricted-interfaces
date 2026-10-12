@@ -3,7 +3,7 @@
 Source of truth: `data/interfaces.json` (schema v2, hand-maintained). Everything else is derived.
 
 ```
-data/interfaces.json ──(build.py)──▶ src/data/interfaces.json   dataset imported by the web app: EVM interfaces only (--ui-chains evm), + computed level, restrictions, category_group, chain_tags, observations
+data/interfaces.json ──(build.py)──▶ src/data/interfaces.json   dataset imported by the web app: EVM interfaces, plus apps whose networks[] lists EVM networks (--ui-chains evm), + computed level, restrictions, category_group, chain_tags, observations
                                  ▶ out/report.md               human-readable report
                                  ▶ out/interfaces.csv          same table for spreadsheets
 ```
@@ -62,7 +62,7 @@ git clone --depth 1 --filter=blob:limit=400k https://github.com/<owner>/<repo> m
 
 ## Schema v2 (one entry)
 
-- `id` (slug), `name`, `description` (one paragraph about what the protocol is, 80–600 chars; shown on the interface page and used for SEO), `description_zh` (optional Simplified Chinese version shown when the UI is in Chinese), `category` (free text), `chains` (free text), `networks[]` (EVM networks the official app lists; indicative, from app/docs), `url`
+- `id` (slug), `name`, `description` (one paragraph about what the protocol is, 80–600 chars; shown on the interface page and used for SEO), `description_zh` (optional Simplified Chinese version shown when the UI is in Chinese), `category` (free text), `chains` (free text), `networks[]` (EVM networks the official app lists; indicative, from app/docs); a non-empty list also puts an app on its own chain on the site, `url`, `referral_url` (optional: where the official-app link goes when it differs from `url`, such as a cp0x referral link; the link text, search and probes keep `url`)
 - `frontend_repo` (GitHub URL or null, may point at a monorepo subfolder), `repo_state` ∈ `open | open_stale | closed | private_now | archived | none_found`, `repo_status` (note), `repo_last_commit`
 - `geo_site { s, countries[], close_only[], method }` — site-level geo-blocking
 - `geo_feature { s, countries[], scope }` — feature / asset-level geo-gating

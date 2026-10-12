@@ -29,8 +29,10 @@ from lib.net import fetch, proxy_for, text_of  # noqa: E402
 ATTR = r"=(?:\"([^\"]+)\"|'([^']+)'|([^\s>\"']+))"   # quoted or unquoted attribute value
 SCRIPT_RE = re.compile(r"<script\b[^>]*\bsrc" + ATTR, re.I)
 PRELOAD_RE = re.compile(r"<link\b(?=[^>]*\brel=[\"']?(?:modulepreload|preload)\b)[^>]*\bhref" + ATTR, re.I)
-# Chunk paths written literally in JavaScript: Next.js (static/chunks/...), CRA (static/js/...), Vite (assets/...).
-LITERAL_RE = re.compile(r"[\"'`]((?:\.{1,2}/|/)?(?:_next/static/|static/js/|static/chunks/|assets/|js/|chunks/)[\w./~@%+-]+?\.m?js)(?:\?[^\"'`]*)?[\"'`]")
+# Chunk paths written literally in JavaScript: Next.js (static/chunks/...), CRA (static/js/...), Vite (assets/...), SvelteKit (_app/immutable/...).
+LITERAL_RE = re.compile(r"[\"'`]((?:\.{1,2}/|/)?(?:_next/static/|static/js/|static/chunks/|_app/immutable/|assets/|js/|chunks/|nodes/|entry/)[\w./~@%+-]+?\.m?js)(?:\?[^\"'`]*)?[\"'`]")
+# Entry points imported from inline scripts: SvelteKit boots with import("/_app/immutable/entry/start.X.js").
+INLINE_IMPORT_RE = re.compile(r"\bimport\(\s*[\"'`]([^\"'`]+?\.m?js)(?:\?[^\"'`]*)?[\"'`]\s*\)")
 # Chunks next to the importing file: import("./chunk-ABC.js"), from"./index-DEF.js" (Vite, esbuild/Angular).
 SIBLING_RE = re.compile(r"[\"'`](\./[\w.~@%+-]+\.m?js)[\"'`]")
 # webpack/Angular chunk maps: "static/js/"+({...}[e]||e)+"."+{12:"a1b2c3",...}[e]+".chunk.js"
@@ -99,9 +101,13 @@ def collect(url, max_age, scripts=None, follow=None, follow_base=None, max_scrip
             u = urllib.parse.urljoin(base, ref)
             if u not in urls:
                 urls.append(u)
+    inline = "\n".join(m.group(1) for m in re.finditer(r"<script\b(?![^>]*\bsrc=)[^>]*>(.*?)</script>", html, re.S | re.I))
+    for m in INLINE_IMPORT_RE.finditer(inline):
+        u = urllib.parse.urljoin(base, m.group(1))
+        if u not in urls:
+            urls.append(u)
     keep = re.compile(scripts) if scripts else None
     urls = [u for u in urls if not keep or keep.search(u)]
-    inline = "\n".join(m.group(1) for m in re.finditer(r"<script\b(?![^>]*\bsrc=)[^>]*>(.*?)</script>", html, re.S | re.I))
     files = [(base + " (HTML and inline scripts)", html + "\n" + inline, page["sha256"])]
     next_root = next((u.split("/_next/")[0] + "/_next/" for u in urls if "/_next/" in u), None)
     fspec = follow

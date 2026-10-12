@@ -19,10 +19,10 @@ no known public API), and `combine.py` shows that in a coverage matrix.
 
 | Sweep | For | What it does |
 |---|---|---|
-| app JavaScript (`check_bundle.py`) | all 64 interfaces | downloads the app's HTML, every script and the lazily loaded chunks, searches them for restriction signals (geo-IP services, country headers, geo endpoints, blocking texts, the sanctions oracle, screening vendors and calls, VPN detection, KYC vendors) |
-| live (`check_live.py`) | all 64 interfaces | requests the app and its geo endpoints from this machine and through a proxy in each of several countries, compares the answers: a block, an anti-bot challenge, an empty page from a different server (a block by the network, nginx or the CDN) or different JavaScript for one country |
+| app JavaScript (`check_bundle.py`) | all 69 interfaces | downloads the app's HTML, every script and the lazily loaded chunks, searches them for restriction signals (geo-IP services, country headers, geo endpoints, blocking texts, the sanctions oracle, screening vendors and calls, VPN detection, KYC vendors) |
+| live (`check_live.py`) | all 69 interfaces | requests the app and its geo endpoints from this machine and through a proxy in each of several countries, compares the answers: a block, an anti-bot challenge, an empty page from a different server (a block by the network, nginx or the CDN) or different JavaScript for one country |
 | code (`check_code.py`) | the 30 interfaces with an open repository | searches every source file at a pinned commit for the same signals |
-| Terms (`check_docs.py`) | the 54 interfaces that publish Terms | reads the Terms, picks the restricted-jurisdiction paragraphs, reads the countries and flags the clauses (geofencing, VPN, sanctions, wallet screening, US persons, KYC) |
+| Terms (`check_docs.py`) | the 59 interfaces that publish Terms | reads the Terms, picks the restricted-jurisdiction paragraphs, reads the countries and flags the clauses (geofencing, VPN, sanctions, wallet screening, US persons, KYC) |
 
 **Claim checks confirm what the site counts.** Every restriction that counts towards the rating is written down as a
 check: where the primary source is and **what** must be in it if the claim is true (`expect`: a phrase or a line of
@@ -66,7 +66,7 @@ python3 -I research/run_all.py --csv      # same as: pnpm research:all
 | `research/out/<type>.json`, `<type>.md` | the results of each script separately |
 | `research/out/evidence/<interface>/<check>.txt` | what the script saw: code lines, page text, API response, proxy vantage, the list of downloaded scripts |
 
-The output ends with `same rating and count as the site: N of 64` and the list of sweep findings to review.
+The output ends with `same rating and count as the site: N of 69` and the list of sweep findings to review.
 
 Publishing a new version of the site's data, with history and an archive, is done by `pnpm monitor:update`:
 [`monitor/docs/updating.md`](../monitor/docs/updating.md).

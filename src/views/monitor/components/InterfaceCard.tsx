@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { useI18n } from 'i18n';
 import { CountryVerdict, InterfaceEntry } from 'types/restrictions';
-import { displayName, restrictionsText } from 'utils/restrictions';
+import { appHref, displayName, restrictionsText } from 'utils/restrictions';
 import CountryVerdictCell from './CountryVerdictCell';
 import LevelChip from './LevelChip';
 import PermissionlessLink from './PermissionlessLink';
@@ -126,7 +126,7 @@ export default function InterfaceCard({ entry: i, to, onOpen, officialHost, geoC
 
       <Stack direction="row" spacing={2} useFlexGap alignItems="center" sx={{ mt: 1.5, flexWrap: 'wrap', rowGap: 1 }}>
         <Link
-          href={i.url}
+          href={appHref(i)}
           target="_blank"
           rel="noopener noreferrer"
           onClick={(e) => e.stopPropagation()}

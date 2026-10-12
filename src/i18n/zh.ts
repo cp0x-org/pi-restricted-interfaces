@@ -270,7 +270,7 @@ export const zh: Messages = {
     langName: '中文',
     noscript: '筛选和排序需要 JavaScript；完整目录见下方。',
     monitorDescription: (n, withAlt) =>
-      `哪些官方 DeFi 界面按国家封锁、筛查钱包或隐藏功能：${n} 个 EVM 应用按 A–D 分级，附证据、各国状态和 ${withAlt} 个无需许可替代版本。`,
+      `哪些官方 DeFi 界面按国家封锁、筛查钱包或隐藏功能：${n} 个应用按 A–D 分级，附证据、各国状态和 ${withAlt} 个无需许可替代版本。`,
     summaryDescription:
       '官方 DeFi 界面的地区封锁、钱包筛查和 VPN 检测图表：评级分布、被封锁最多的国家、筛查来源，以及最无需许可的类别和网络。',
     methodologyDescription: '监测如何检查 DeFi 界面：按限制数量划分的 A–D 评级、状态值、筛查执行层、国家规则、代理实测与局限。',
@@ -280,7 +280,7 @@ export const zh: Messages = {
     ifacePageName: (name) => `${name}：官方界面的访问限制`,
     datasetName: '官方 DeFi 界面的访问限制',
     datasetDescription:
-      '收录 EVM 网络上 DeFi 协议官方网页界面的地区封锁、功能与资产限制、钱包筛查和 VPN 检测，并标注执行层以及每条结论的证据。',
+      '收录 EVM 网络上及可从 EVM 网络进入的 DeFi 协议官方网页界面的地区封锁、功能与资产限制、钱包筛查和 VPN 检测，并标注执行层以及每条结论的证据。',
     summary: {
       geoBlocks: (n) => `封锁 ${n} 个国家`,
       geoBlocksSite: '对整站实施地区封锁',
@@ -369,7 +369,7 @@ export const zh: Messages = {
   method: {
     title: '方法论',
     intro: (date, shown, total) =>
-      `本目录为每个界面回答一个问题：官方前端或后端封锁了什么、针对谁、采用什么机制，以及在哪一层执行。数据快照：${date}。网站仅显示 EVM 网络：完整目录 ${total} 个界面中的 ${shown} 个；Solana、Cosmos 等非 EVM 应用保留在 \`monitor/data\` 和报告中。我们只做观察：不绕过任何限制，不签名，不发送交易。`,
+      `本目录为每个界面回答一个问题：官方前端或后端封锁了什么、针对谁、采用什么机制，以及在哪一层执行。数据快照：${date}。网站显示 EVM 网络上的界面，以及可从 EVM 网络进入的自有链应用（Hyperliquid、Lighter、Extended）：完整目录 ${total} 个界面中的 ${shown} 个；Solana、Cosmos 等没有 EVM 网络的应用保留在 \`monitor/data\` 和报告中。我们只做观察：不绕过任何限制，不签名，不发送交易。`,
     levelsTitle: '评级',
     levelsNote:
       '评级统计官方界面的技术性限制：网站、交易或某项功能被封锁的每个国家或地区各计一项，功能或资产限制、钱包筛查（通过 API 或合约）、VPN 检测和 KYC 要求再各计一项。仅写在服务条款中的限制不计入。限制越少评级越高：A 为无限制，B 为 1–5 项，C 为 6–20 项，D 超过 20 项；无法确定时为“暂无”。',

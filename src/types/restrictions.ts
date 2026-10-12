@@ -147,6 +147,8 @@ export interface InterfaceEntry {
   networks: string[];
   chain_tags: ChainTag[];
   url: string;
+  /** Where the official-app link goes when it differs from url (a cp0x referral link); the link text keeps url. */
+  referral_url?: string;
   frontend_repo: string | null;
   repo_state: RepoState;
   repo_status: string;

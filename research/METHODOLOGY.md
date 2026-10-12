@@ -7,8 +7,9 @@ described in [README.md](README.md).
 
 The unit of analysis is the protocol's **official web interface** (for example, `app.uniswap.org`), not its smart
 contracts. The question: which technical access restrictions this interface applies, to whom, and where they are
-enforced. The site shows the interfaces that run on EVM networks (64 as of 2026-10-11); defunct interfaces and
-interfaces on other networks stay in the catalog `monitor/data/interfaces.json` but are not shown on the site.
+enforced. The site shows the interfaces that run on EVM networks and apps on their own chains whose official
+interface lists EVM networks, such as Hyperliquid, Lighter and Extended (69 as of 2026-10-12); defunct interfaces and
+interfaces with no EVM network stay in the catalog `monitor/data/interfaces.json` but are not shown on the site.
 
 ## 2. Claims and statuses
 
@@ -71,7 +72,7 @@ examined for closed and doubtful cases.
 ### 4.2 The official site's JavaScript (`check_bundle.py`)
 
 The app's HTML and every script it references are downloaded, plus lazily loaded chunks found in the code (webpack,
-Next.js, Vite, Vue CLI and Angular chunk maps). They are then searched as text: nothing is executed. This is the code
+Next.js, Vite, Vue CLI and Angular chunk maps, SvelteKit entry imports). They are then searched as text: nothing is executed. This is the code
 that actually runs, so it is checked for every interface (4.6), and claim checks confirm in it what the repository
 says: the same country lists (CoW Swap, Sushi, Notional, Beefy, Lido), the same oracle and screening calls (Sky, Safe,
 Aave, Compound, Synapse, Ambient), and the absence of geo or screening code at interfaces rated A (Curve, GMX, Yearn,

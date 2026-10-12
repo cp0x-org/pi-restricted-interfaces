@@ -258,6 +258,8 @@ def validate(data):
             raise Invalid(f"{iid}: version must be a short label (1-40 characters)")
         if "aka" in i and (not isinstance(i["aka"], str) or not 1 <= len(i["aka"]) <= 40):
             raise Invalid(f"{iid}: aka must be a short label (1-40 characters)")
+        if "referral_url" in i and not (isinstance(i["referral_url"], str) and i["referral_url"].startswith("https://")):
+            raise Invalid(f"{iid}: referral_url must be an https URL")
         if "(" in i["name"] or "·" in i.get("version", ""):
             raise Invalid(f"{iid}: keep name/version plain; put a former name, parent brand or product in aka")
         check_enum(w + "lifecycle", i.get("lifecycle", "current"), LIFECYCLE_OK)
@@ -439,17 +441,19 @@ def csv_row(i):
 
 
 def ui_dataset(data, observations, ui_chains=None):
-    """Dataset for the web app. With ui_chains (e.g. {"evm"}) only interfaces carrying one of those chain tags are exported;
-    defunct interfaces are never exported. The report and CSV always cover the whole catalog."""
+    """Dataset for the web app. With ui_chains (e.g. {"evm"}) only interfaces carrying one of those chain tags are exported,
+    plus, for "evm", apps on their own chain whose networks[] lists EVM networks; defunct interfaces are never exported.
+    The report and CSV always cover the whole catalog."""
     meta = OrderedDict(data["meta"])
     meta["regions"] = OrderedDict(REGIONS)
     meta["catalog_total"] = len(data["interfaces"])
     meta["defunct_hidden"] = [display_name(i) for i in data["interfaces"] if lifecycle(i) == "defunct"]
-    meta["scope"] = "EVM networks only" if ui_chains == {"evm"} else ("chains: " + ", ".join(sorted(ui_chains)) if ui_chains else "all interfaces")
+    meta["scope"] = "EVM networks, plus apps whose official interface lists EVM networks" if ui_chains == {"evm"} else ("chains: " + ", ".join(sorted(ui_chains)) if ui_chains else "all interfaces")
     by_iface = latest_observations(observations)
     items = []
     for i in data["interfaces"]:
-        if ui_chains and not (set(chain_tags(i)) & ui_chains):
+        # An app on its own chain is shown when its official interface lists EVM networks (deposits, an EVM side chain).
+        if ui_chains and not (set(chain_tags(i)) & ui_chains) and not ("evm" in ui_chains and i["networks"]):
             continue
         if lifecycle(i) == "defunct":
             continue

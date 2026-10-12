@@ -104,6 +104,7 @@ function entry(raw: unknown, index: number): InterfaceEntry {
     networks: isStringArray(raw.networks) ? raw.networks : [],
     chain_tags: (isStringArray(raw.chain_tags) ? raw.chain_tags : []).map((t) => oneOf(CHAIN_TAGS, t, w('chain_tags'))),
     url: str(raw.url, w('url')),
+    referral_url: typeof raw.referral_url === 'string' && raw.referral_url ? raw.referral_url : undefined,
     frontend_repo: strOrNull(raw.frontend_repo, w('frontend_repo')),
     repo_state: oneOf(REPO_STATES, raw.repo_state, w('repo_state')),
     repo_status: str(raw.repo_status, w('repo_status')),
@@ -202,6 +203,9 @@ export function assertDataset(raw: unknown): Dataset {
 // ---------------------------------------------------------------------------- ordering helpers
 
 export const levelRank = (level: Level): number => LEVELS.indexOf(level);
+
+/** The official-app link opens the referral link when there is one; its text still shows url. */
+export const appHref = (e: Pick<InterfaceEntry, 'url' | 'referral_url'>): string => e.referral_url ?? e.url;
 
 /** Name with the version label: "Aave" + "V3" -> "Aave V3". */
 export const displayName = (e: Pick<InterfaceEntry, 'name' | 'version'>): string => (e.version ? `${e.name} ${e.version}` : e.name);
