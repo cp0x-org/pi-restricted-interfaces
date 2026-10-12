@@ -56,7 +56,7 @@ npx serve dist -l 4174 -c ../serve.json           # same serving as the Dockerfi
 curl -s localhost:4174/monitor/aave | grep '<title>'   # page-specific title without JavaScript
 ```
 
-Expect: `/monitor/aave` and `/zh/monitor/aave` → 200 with their own title, `<html lang>`, canonical, hreflang and JSON-LD; `/monitor/aave/` → 301; `/monitor/nope` and
+Expect: `/monitor.json` and `/<id>.json` (e.g. `/aave.json`) → 200 `application/json` with `Access-Control-Allow-Origin: *` (the site data by direct URL, also on the dev server); `/monitor/aave` and `/zh/monitor/aave` → 200 with their own title, `<html lang>`, canonical, hreflang and JSON-LD; `/monitor/aave/` → 301; `/monitor/nope` and
 `/country/UA` → 404 (`404.html`, noindex) while the app still boots and redirects; `/robots.txt`, `/sitemap.xml` (96 URLs with hreflang alternates).
 Accessibility: axe-core (wcag2a/aa + best-practice) should report no violations on /monitor, /monitor/<id>, /methodology.
 

@@ -24,10 +24,12 @@
       "KP",
       "IR",
       "VE",
-      "UA"
+      "UA",
+      "RU",
+      "SY"
     ],
     "close_only": [],
-    "method": "2024 reports: IP blocks on the EIGEN claim site (US, CA, CN, CU, KP, IR, VE). 2026-10-12: app.eigenlayer.xyz answers visitors from Ukraine (2 networks) with 'RESTRICTED: The application is not available to persons in your jurisdiction'."
+    "method": "app.eigenlayer.xyz replaces the app with 'ACCESS RESTRICTED: The application is not available to persons in your jurisdiction' (HTTP 200). The countries are those of the live probe (see the observations; 2026-10-12: CU, IR, RU, SY, UA; from the other countries the page answered HTTP 500 to a request without JavaScript). 2024 reports: IP blocks on the EIGEN claim site (US, CA, CN, CU, KP, IR, VE)."
   },
   "geo_feature": {
     "s": "unknown",
@@ -67,8 +69,8 @@
   "lifecycle": "current",
   "level": "C",
   "restrictions": {
-    "count": 9,
-    "countries": 8,
+    "count": 11,
+    "countries": 10,
     "mechanisms": [
       "vpn"
     ]
@@ -77,5 +79,71 @@
   "chain_tags": [
     "evm"
   ],
-  "observations": []
+  "observations": [
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:47Z",
+      "kind": "site",
+      "url": "https://app.eigenlayer.xyz",
+      "http_status": 200,
+      "final_url": "https://app.eigenlayer.xyz",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "block text in body"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:41Z",
+      "kind": "site",
+      "url": "https://app.eigenlayer.xyz",
+      "http_status": 200,
+      "final_url": "https://app.eigenlayer.xyz",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "block text in body"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:32Z",
+      "kind": "site",
+      "url": "https://app.eigenlayer.xyz",
+      "http_status": 200,
+      "final_url": "https://app.eigenlayer.xyz",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "block text in body"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:03Z",
+      "kind": "site",
+      "url": "https://app.eigenlayer.xyz",
+      "http_status": 200,
+      "final_url": "https://app.eigenlayer.xyz",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "block text in body"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:49Z",
+      "kind": "site",
+      "url": "https://app.eigenlayer.xyz",
+      "http_status": 200,
+      "final_url": "https://app.eigenlayer.xyz",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "block text in body"
+    }
+  ]
 }

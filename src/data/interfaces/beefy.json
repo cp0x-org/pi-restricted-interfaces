@@ -64,9 +64,7 @@
   "live": [
     "api.beefy.finance/geo/country (US) -> {country: US}"
   ],
-  "geo_endpoints": [
-    "https://api.beefy.finance/geo/country"
-  ],
+  "geo_endpoints": [],
   "evidence": [
     "src/config/restrictions.json",
     "src/features/data/selectors/restrictions.ts",

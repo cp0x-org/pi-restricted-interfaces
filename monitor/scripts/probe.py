@@ -66,8 +66,9 @@ GEO_APIS = [  # IP -> country lookups, queried through the proxy; at least half 
 ]
 GEO_TEXT_RE = re.compile(r"(geo|region|country|jurisdiction|legal reasons|not available in|restricted|sanction)", re.I)
 BLOCK_PATH_RE = re.compile(r"(blocked|restricted|not-?available|unavailable|geo-?block|not-?allowed|forbidden)", re.I)
-BLOCK_TEXT_RE = re.compile(r"(not available in your (country|region|jurisdiction)|blocked in your|restricted in your|"
-                           r"unavailable in your|access (is )?blocked|unavailable for legal reasons|service unavailable in)", re.I)
+BLOCK_TEXT_RE = re.compile(r"(not available (in|to (persons|users|residents) in) your (country|region|jurisdiction|location)|blocked in your|"
+                           r"restricted in your|unavailable in your|access (is )?blocked|unavailable for legal reasons|service unavailable in|"
+                           r"from your (current )?location is unavailable)", re.I)
 CHALLENGE_RE = re.compile(r"(just a moment|cf-chl|challenge-platform|attention required|verify you are human|enable javascript and cookies)", re.I)
 # Cloudflare's WAF block page (a firewall rule matched: a country, an ASN, a bot score); not a challenge, and no geo wording
 WAF_BLOCK_RE = re.compile(r"(sorry, you have been blocked|you are unable to access)", re.I)

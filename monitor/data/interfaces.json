@@ -45,7 +45,7 @@
           "UA"
         ],
         "close_only": [],
-        "method": "Code has no site-level geo-block. 2025 reports said the whole of Ukraine was blocked through 'third-party providers'"
+        "method": "The interface gateway (interface.gateway.uniswap.org) the app reads all its data from answers HTTP 409 ACCESS_DENIED to some countries, and app.uniswap.org itself is refused there; the code has no site-level geo-block. The countries are those of the live probe (see the observations; 2026-10-12: CU, IR). 2025 reports said the whole of Ukraine was blocked through 'third-party providers'; from Ukraine the gateway answered on 2026-10-12."
       },
       "geo_feature": {
         "s": "yes",
@@ -75,6 +75,29 @@
       "notes": "Screening and the RWA gate are calls to the Uniswap entry gateway. Routing (Trading API) goes through the same gateway and needs an API key.",
       "live": [],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "gateway",
+          "method": "GET",
+          "url": "https://interface.gateway.uniswap.org/v2/uniswap.explore.v1.ExploreStatsService/ExploreStats?connect=v1&encoding=json&message=%7B%22chainId%22%3A%221%22%7D",
+          "headers": {
+            "Origin": "https://app.uniswap.org"
+          },
+          "note": "A read-only call to the interface gateway every page makes (explore statistics); the gateway refuses whole countries with ACCESS_DENIED.",
+          "rules": [
+            {
+              "match": "ACCESS_DENIED",
+              "state": "blocked",
+              "note": "the interface gateway answers ACCESS_DENIED (HTTP 409): the app has no data from this country"
+            },
+            {
+              "match": "\"stats\"",
+              "state": "ok",
+              "note": "the gateway answers"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "packages/compliance/src/client.ts",
         "packages/compliance/src/screenAddressQuery.ts",
@@ -192,9 +215,7 @@
       },
       "notes": "Geo checks and screening run in the browser; no backend of their own is involved. Perps use the Hyperliquid API, which checks the IP on its side.",
       "live": [],
-      "geo_endpoints": [
-        "https://www.sushi.com/api/geolocation"
-      ],
+      "geo_endpoints": [],
       "evidence": [
         "apps/web/src/lib/wagmi/components/sanctioned-address-dialog.tsx",
         "apps/web/src/lib/robinhood/restricted-countries.ts",
@@ -3568,9 +3589,7 @@
         "notional.finance bundle (2026-10-10): api.notional.finance/geoip + sanctions list incl. US -> /blocked; no VPN detector; app reads registry-v4.notional.finance",
         "WebFetch (US): metadata only (block is client-side)"
       ],
-      "geo_endpoints": [
-        "https://api.notional.finance/geoip"
-      ],
+      "geo_endpoints": [],
       "evidence": [
         "packages/shared/notionable-hooks/src/use-geoip-block.ts",
         "packages/notionable/src/account/communities.ts",
@@ -3815,14 +3834,14 @@
         "s": "no",
         "countries": [],
         "close_only": [],
-        "method": ""
+        "method": "stake.lido.fi/api/geo answers HTTP 403 'Access to our services from your current location is unavailable' to some countries and the app shows the same warning. The countries are those of the live probe (see the observations; 2026-10-12: CU, IR, SY)."
       },
       "geo_feature": {
         "s": "yes",
         "countries": [
           "US"
         ],
-        "scope": "/api/geo (cf-ipcountry): full|limited; remote config geo.limited=[US] -> Earn vaults; Tor/unknown -> limited"
+        "scope": "/api/geo (cf-ipcountry): full|limited; remote config geo.limited=[US] -> Earn vaults; Tor/unknown -> limited Live: /api/geo answers availability=limited from the US (2026-10-12; staking disabled, withdrawals stay), full elsewhere."
       },
       "vpn": {
         "s": "detect",
@@ -3857,8 +3876,35 @@
       "live": [
         "WebFetch (US): normal page"
       ],
-      "geo_endpoints": [
-        "https://stake.lido.fi/api/geo"
+      "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "geo",
+          "method": "GET",
+          "url": "https://stake.lido.fi/api/geo",
+          "note": "The availability the app reads on load: full, or limited (staking disabled, only withdrawals), or a 403 'Access to our services from your current location is unavailable'.",
+          "flags": [
+            "country",
+            "availability"
+          ],
+          "rules": [
+            {
+              "match": "\"availability\"\\s*:\\s*\"limited\"",
+              "state": "feature_limited",
+              "note": "availability=limited: staking is disabled, withdrawals stay"
+            },
+            {
+              "match": "from your current location is unavailable",
+              "state": "blocked",
+              "note": "HTTP 403: 'Access to our services from your current location is unavailable'"
+            },
+            {
+              "match": "\"availability\"\\s*:\\s*\"full\"",
+              "state": "ok",
+              "note": "availability=full"
+            }
+          ]
+        }
       ],
       "evidence": [
         "utilsApi/geo-handler.ts",
@@ -4027,7 +4073,7 @@
           "UA"
         ],
         "close_only": [],
-        "method": "2024 reports: IP blocks on the EIGEN claim site (US, CA, CN, CU, KP, IR, VE). 2026-10-12: app.eigenlayer.xyz answers visitors from Ukraine (2 networks) with 'RESTRICTED: The application is not available to persons in your jurisdiction'."
+        "method": "app.eigenlayer.xyz replaces the app with 'ACCESS RESTRICTED: The application is not available to persons in your jurisdiction' (HTTP 200). The countries are those of the live probe (see the observations; 2026-10-12: CU, IR, RU, SY, UA; from the other countries the page answered HTTP 500 to a request without JavaScript). 2024 reports: IP blocks on the EIGEN claim site (US, CA, CN, CU, KP, IR, VE)."
       },
       "geo_feature": {
         "s": "unknown",
@@ -4477,9 +4523,7 @@
       "live": [
         "api.beefy.finance/geo/country (US) -> {country: US}"
       ],
-      "geo_endpoints": [
-        "https://api.beefy.finance/geo/country"
-      ],
+      "geo_endpoints": [],
       "evidence": [
         "src/config/restrictions.json",
         "src/features/data/selectors/restrictions.ts",
@@ -5872,7 +5916,7 @@
         "s": "unknown",
         "countries": [],
         "close_only": [],
-        "method": ""
+        "method": "universe.kelpdao.xyz/rseth/geoData answers isRestricted=true for the visitor's IP and the app shows 'Not available in your region'. The countries are those of the live probe (see the observations; 2026-10-12: 16 of 61, among them US, GB, CA, IR, CU, SY, VE)."
       },
       "geo_feature": {
         "s": "yes",

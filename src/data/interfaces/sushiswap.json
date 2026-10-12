@@ -98,9 +98,7 @@
   },
   "notes": "Geo checks and screening run in the browser; no backend of their own is involved. Perps use the Hyperliquid API, which checks the IP on its side.",
   "live": [],
-  "geo_endpoints": [
-    "https://www.sushi.com/api/geolocation"
-  ],
+  "geo_endpoints": [],
   "evidence": [
     "apps/web/src/lib/wagmi/components/sanctioned-address-dialog.tsx",
     "apps/web/src/lib/robinhood/restricted-countries.ts",
