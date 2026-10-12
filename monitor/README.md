@@ -18,6 +18,7 @@ pnpm monitor:sync           # no checks, no network: merge new probe runs from p
 pnpm monitor:build          # validate data (+ observations, observed blocks counted), regenerate out/report.md, out/interfaces.csv and the site files in src/data, then check them
 pnpm monitor:export         # only the site files (src/data/monitor.json, src/data/interfaces/<id>.json)
 pnpm monitor:check          # only the check: ratings, counts, country lists and probe verdicts of the site files vs the collected data
+pnpm monitor:tos            # only out/tos_vs_probe.md: Terms vs probe, per interface
 pnpm monitor:verify         # evidence paths exist in local clones, frontend repos reachable (needs network + repos/)
 pnpm monitor:scan           # ripgrep the cloned frontends for geo/screening signals -> data/scan_raw.json
 pnpm monitor:probe                        # P3: HTTP probe of every interface from the countries of data/countries.json via a proxy -> probe/out/<run>.json
@@ -56,6 +57,7 @@ git clone --depth 1 --filter=blob:limit=400k https://github.com/<owner>/<repo> m
 | `scripts/build.py` | validation (enums, ISO country tokens, repo consistency), derived fields, report and CSV; with `--export` it runs the two scripts below |
 | `scripts/export.py` | the files the site loads: `src/data/monitor.json` (dashboard rows) and `src/data/interfaces/<id>.json` (one record per page) |
 | `scripts/check_export.py` | recomputes ratings, counts, country lists and probe verdicts from the collected data and compares them with the site files (`pnpm monitor:check`) |
+| `scripts/tos_vs_probe.py` | `out/tos_vs_probe.md`: per interface, the countries the Terms name against the countries the probe saw restricted, and the differences in both directions (`pnpm monitor:tos`, also written by the build) |
 | `scripts/scan.py` | static scan of cloned frontends |
 | `scripts/verify.py` | evidence paths and repo reachability |
 | `scripts/probe.py` | P3 per-country HTTP probe through a proxy (vantage verification, site + geo endpoints, `merge` into the store) |

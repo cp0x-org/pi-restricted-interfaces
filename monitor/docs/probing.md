@@ -209,7 +209,8 @@ probed. Probes on 2026-10-12:
 | Velora | `GET api.velora.xyz/prices` | an empty HTTP 403 (RU, BY, CU, SY on 2026-10-12): no quote |
 | Jumper | `GET api.jumper.xyz/v1/geo-gates` with `Origin: https://jumper.xyz` | a gate with `Outcome: block` for the visitor's country: the Earn pages under its `PathPrefix` are replaced by 'Access unavailable in your region' (feature-limited); Cloudflare refuses the whole site from CU and SY |
 | Lido | `GET stake.lido.fi/api/geo` | `availability: limited` (staking disabled, withdrawals stay: US), or HTTP 403 'Access to our services from your current location is unavailable' (IR) |
-| Uniswap | `GET interface.gateway.uniswap.org/.../ExploreStats` with `Origin: https://app.uniswap.org` | HTTP 409 `ACCESS_DENIED`: the interface gateway refuses the country (IR on 2026-10-12) |
+| Uniswap | `GET interface.gateway.uniswap.org/.../ExploreStats` with `Origin: https://app.uniswap.org` | HTTP 409 `ACCESS_DENIED`: the interface gateway refuses the country (CU, IR on 2026-10-12) |
+| Safe | `GET safe-client.safe.global/v1/chains` with `Origin: https://app.safe.global` | CloudFront refuses the client gateway (HTTP 403 'The request could not be satisfied'): the app cannot load any Safe (BY, CU, RU on 2026-10-12) |
 
 Not testable over HTTP: Variational answers every request without a browser with a Cloudflare challenge, even its
 `/api/banner`; it needs the browser probe (P4). Drift's `geolocation.drift-labs.workers.dev` only returns the country
@@ -224,7 +225,11 @@ answered every country alike. For the same reason SushiSwap's `/api/geolocation`
 list), Beefy (per vault), Lombard (`/app/country.json` + ipinfo.io) and Symbiotic (`/cdn-cgi/trace`) keep their lists in
 the code too. Orca and Jito answer sanctioned countries with Cloudflare's block page (recorded as `unknown`: a firewall
 rule without geo wording); Eigenlayer's 'ACCESS RESTRICTED ... not available to persons in your jurisdiction' page is
-read as a block by the landing-page probe.
+read as a block by the landing-page probe, as is Superstate's 403 'Access to this site is not permitted from your
+location'. Ondo, Usual, ENS, OpenSea and Frax serve their landing pages everywhere (Frax answers 13 sanctioned and
+high-risk countries with Cloudflare's block page); Centrifuge answers every request without a browser with that page;
+Snapshot cannot be reached through the Decodo tunnel; Tornado Cash is served from IPFS. The comparison of every
+interface's Terms with what the probe saw is `monitor/out/tos_vs_probe.md` (`pnpm monitor:tos`).
 
 A datacenter run to check VPN detection uses the same script with another proxy:
 
