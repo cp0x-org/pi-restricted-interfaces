@@ -1,0 +1,99 @@
+{
+  "id": "ambient",
+  "name": "Ambient Finance",
+  "description": "Ambient Finance, formerly CrocSwap, is a decentralized exchange that keeps every pool inside a single smart contract and combines concentrated and full-range (ambient) liquidity in the same pool. It is deployed on Ethereum, Scroll, Blast and other EVM networks.",
+  "description_zh": "Ambient Finance（原 CrocSwap）是一个去中心化交易所，把所有池子放在同一个智能合约中，并在同一个池里结合集中流动性和全区间（ambient）流动性。它部署在以太坊、Scroll、Blast 等 EVM 网络上。",
+  "category": "DEX",
+  "chains": "EVM (Scroll, Blast, Ethereum...)",
+  "networks": [
+    "Ethereum",
+    "Scroll",
+    "Blast",
+    "Swell",
+    "Plume"
+  ],
+  "url": "https://ambient.finance",
+  "frontend_repo": "https://github.com/CrocSwap/ambient-ts-app",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-10-07",
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "AF",
+      "BY",
+      "MM",
+      "CF",
+      "CU",
+      "CD",
+      "ET",
+      "IR",
+      "IQ",
+      "LB",
+      "LY",
+      "ML",
+      "NI",
+      "KP",
+      "RU",
+      "SO",
+      "SS",
+      "SD",
+      "VE",
+      "YE",
+      "ZW"
+    ],
+    "close_only": [],
+    "method": "Netlify redirect by Country -> /blocked.html (edge)"
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "hardcoded OFAC list (~244 addresses) -> disconnect + redirect to ofac.treasury.gov",
+    "layer": "frontend",
+    "fail": "n/a",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://ambient.finance/terms",
+    "updated": "2023-05-24",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "none named",
+    "restricted_codes": []
+  },
+  "notes": "Geo lives in netlify.toml (edge redirect), screening in a static address list in the bundle.",
+  "live": [
+    "WebFetch (US): app crashed with 'Something went wrong' (JS)"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "netlify.toml",
+    "src/ambient-utils/constants/blacklist.ts",
+    "src/App/hooks/useBlacklist.ts"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "D",
+  "restrictions": {
+    "count": 22,
+    "countries": 21,
+    "mechanisms": [
+      "screening"
+    ]
+  },
+  "category_group": "dex",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

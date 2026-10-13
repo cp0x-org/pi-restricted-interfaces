@@ -3,13 +3,14 @@ import Stack from '@mui/material/Stack';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { InterfaceEntry } from 'types/restrictions';
+import { InterfaceRow } from 'types/restrictions';
 import { repoShortLabel } from 'utils/restrictions';
 import { useI18n } from 'i18n';
 import { displayName } from 'utils/restrictions';
 
 interface RepoLinkProps {
-  entry: InterfaceEntry;
+  /** A dashboard row; the interface page passes the whole record, whose repo_status fills the tooltip. */
+  entry: InterfaceRow & { repo_status?: string };
   /** Show the full owner/repo/subdir label instead of the state only. */
   full?: boolean;
   /** Table mode: a GitHub icon linking to the repository, or a dash when there is no public code. */

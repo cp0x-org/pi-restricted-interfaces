@@ -1,0 +1,109 @@
+{
+  "id": "aerodrome",
+  "name": "Aerodrome",
+  "description": "Aerodrome is the main AMM and liquidity hub on Base. It follows the ve(3,3) model inherited from Velodrome: AERO emissions go to the pools that veAERO holders vote for, and protocols pay incentives to voters to attract liquidity to their tokens.",
+  "description_zh": "Aerodrome 是 Base 上主要的 AMM 和流动性中心。它沿用 Velodrome 的 ve(3,3) 模型：AERO 排放分配给 veAERO 持有者投票支持的池子，各协议向投票者支付激励，以吸引流动性流向自己的代币。",
+  "category": "DEX",
+  "chains": "Base",
+  "networks": [
+    "Base"
+  ],
+  "url": "https://aerodrome.finance",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed (only aerodrome-finance/docs)",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "tos_only",
+    "countries": [],
+    "close_only": [],
+    "method": "ToS 2026-07 forbids evading 'geofencing'"
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [
+      "US"
+    ],
+    "scope": "tokenized stocks (2026-08) only for non-US users"
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "unknown",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://github.com/aerodrome-finance/docs/blob/main/content/legal.mdx",
+    "updated": "2026-07-28",
+    "us": "partial",
+    "us_scope": "securities",
+    "restricted": "35: AF, BY, BA, BI, CF, CN, CD, CU, ET, GN, GW, HT, IR, IQ, KP, LB, LY, ML, MD, ME, MM, NI, NE, RU, RS, SO, SS, SD, SY, TN, TR, UA, VE, YE, ZW",
+    "restricted_codes": [
+      "AF",
+      "BY",
+      "BA",
+      "BI",
+      "CF",
+      "CN",
+      "CD",
+      "CU",
+      "ET",
+      "GN",
+      "GW",
+      "HT",
+      "IR",
+      "IQ",
+      "KP",
+      "LB",
+      "LY",
+      "ML",
+      "MD",
+      "ME",
+      "MM",
+      "NI",
+      "NE",
+      "RU",
+      "RS",
+      "SO",
+      "SS",
+      "SD",
+      "SY",
+      "TN",
+      "TR",
+      "UA",
+      "VE",
+      "YE",
+      "ZW"
+    ]
+  },
+  "notes": "Closed. Sugar contracts (velodrome-finance/sugar) let you read data directly.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://github.com/aerodrome-finance/docs/blob/main/content/legal.mdx"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 2,
+    "countries": 1,
+    "mechanisms": [
+      "geo_feature"
+    ]
+  },
+  "category_group": "dex",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

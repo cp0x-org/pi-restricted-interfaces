@@ -1,0 +1,73 @@
+{
+  "id": "notional-v2",
+  "name": "Notional",
+  "version": "V2",
+  "family": "notional",
+  "lifecycle": "legacy",
+  "lifecycle_note": "Deprecated when Notional V3 launched (2023); the app still loads with a deprecation banner and points migrated positions to V3.",
+  "description": "Notional V2 was Notional's fixed-rate lending protocol on Ethereum, where lenders and borrowers locked in rates through fCash markets. It was deprecated when Notional V3 launched; the old app at v2.notional.finance still loads with a deprecation banner and a link to migrated positions.",
+  "description_zh": "Notional V2 是 Notional 在以太坊上的固定利率借贷协议，出借人和借款人通过 fCash 市场锁定利率。Notional V3 上线后它已被弃用；v2.notional.finance 上的旧应用仍可打开，显示弃用提示和已迁移头寸的链接。",
+  "category": "Lending / leverage",
+  "chains": "Ethereum",
+  "networks": [
+    "Ethereum"
+  ],
+  "url": "https://v2.notional.finance",
+  "frontend_repo": null,
+  "repo_state": "none_found",
+  "repo_status": "none-found (only contracts-v2 is public)",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "no",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": null,
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "no terms linked from the app",
+    "restricted_codes": []
+  },
+  "notes": "Deprecated; positions were migrated to V3.",
+  "live": [
+    "v2.notional.finance (2026-10-10): app loads with 'Notional V2 is being deprecated' banner; the bundle has no geo or screening code"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://blog.notional.finance/notional-v2-deprecation-plan/",
+    "v2.notional.finance bundle inspection (2026-10-10)"
+  ],
+  "confidence": "low",
+  "alternatives": [],
+  "level": "A",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "lending",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

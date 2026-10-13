@@ -1,0 +1,76 @@
+{
+  "id": "liquity",
+  "name": "Liquity",
+  "version": "V2",
+  "description": "Liquity V2 is an immutable borrowing protocol where users open positions (troves) against ETH and liquid-staking tokens to mint the BOLD stablecoin at an interest rate they choose themselves. Liquity AG runs no official frontend; interfaces are operated by third parties.",
+  "description_zh": "Liquity V2 是一个不可变的借款协议，用户以 ETH 和流动性质押代币开立仓位（trove），按自己选择的利率铸造 BOLD 稳定币。Liquity AG 不运营官方前端，界面由第三方运营。",
+  "category": "CDP / stablecoin",
+  "chains": "Ethereum",
+  "networks": [
+    "Ethereum"
+  ],
+  "url": "https://liquity.app",
+  "frontend_repo": "https://github.com/liquity/bold/tree/main/frontend/app",
+  "repo_state": "open",
+  "repo_status": "open (reference frontend)",
+  "repo_last_commit": "2026-09-26",
+  "geo_site": {
+    "s": "optional",
+    "countries": [],
+    "close_only": [],
+    "method": "NEXT_PUBLIC_BLOCKING_VPNAPI: vpnapi.io country/VPN block, off by default"
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "optional",
+    "note": ""
+  },
+  "screening": {
+    "s": "optional",
+    "provider": "on-chain blocklist contract isBlackListed (NEXT_PUBLIC_BLOCKING_LIST)",
+    "layer": "frontend",
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": null,
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "Liquity AG runs no frontend; frontends are third-party",
+    "restricted_codes": []
+  },
+  "notes": "Built for third-party frontends. Clean by default.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "frontend/app/src/comps/Blocking/Blocking.tsx",
+    "frontend/app/src/env.ts"
+  ],
+  "confidence": "medium",
+  "alternatives": [
+    {
+      "name": "liquity.cp0x.com",
+      "url": "https://liquity.cp0x.com"
+    }
+  ],
+  "lifecycle": "current",
+  "level": "A",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "lending",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

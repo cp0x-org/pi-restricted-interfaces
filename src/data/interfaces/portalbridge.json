@@ -1,0 +1,85 @@
+{
+  "id": "portalbridge",
+  "name": "Portal Bridge",
+  "aka": "Wormhole",
+  "description": "Portal Bridge is the token bridge interface for the Wormhole cross-chain messaging protocol, moving assets between Ethereum and other EVM chains, Solana, Sui, Aptos and more, secured by Wormhole's guardian network.",
+  "description_zh": "Portal Bridge 是 Wormhole 跨链消息协议的代币桥界面，在以太坊和其他 EVM 链、Solana、Sui、Aptos 等之间转移资产，由 Wormhole 守护者网络保障安全。",
+  "category": "Bridge",
+  "chains": "EVM, Solana, Sui, Aptos and more (Wormhole)",
+  "networks": [
+    "Ethereum",
+    "BNB Chain",
+    "Polygon",
+    "Avalanche",
+    "Arbitrum",
+    "Optimism",
+    "Base",
+    "Scroll",
+    "Mantle"
+  ],
+  "url": "https://portalbridge.com",
+  "frontend_repo": null,
+  "repo_state": "archived",
+  "repo_status": "archived (XLabs/portal-bridge-ui, 2025-08); current build closed",
+  "repo_last_commit": "2025-04-16",
+  "geo_site": {
+    "s": "unknown",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [],
+    "scope": "Fusion swaps (market and limit orders): the quote API can refuse the selected tokens with GEO_BLOCKED ('Trading the selected tokens is not available in your region'); which tokens and countries is not published."
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "portalbridge.com checks both wallets of a transfer (checkWalletSanctions) before it starts; the archived UI used TRM Labs (risk score >= 10 -> block, fail-open), the wormhole-connect widget a hardcoded OFAC SDN list",
+    "layer": "api",
+    "fail": "open",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://portalbridge.com/terms-of-service",
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "unknown (client-side)",
+    "restricted_codes": []
+  },
+  "notes": "Base: wormhole-foundation/wormhole-connect (widget) + the archived portal-bridge-ui.",
+  "live": [
+    "WebFetch (US): metadata only"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "portalbridge.com bundle: checkWalletSanctions for both wallets; GEO_BLOCKED quote error",
+    "XLabs/portal-bridge-ui: apps/connect/src/providers/sanctions.ts",
+    "wormhole-foundation/wormhole-connect: src/utils/transferValidation.ts, src/consts/wallet.ts"
+  ],
+  "confidence": "low",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 2,
+    "countries": 0,
+    "mechanisms": [
+      "geo_feature",
+      "screening"
+    ]
+  },
+  "category_group": "bridge",
+  "chain_tags": [
+    "evm",
+    "solana",
+    "sui"
+  ],
+  "observations": []
+}

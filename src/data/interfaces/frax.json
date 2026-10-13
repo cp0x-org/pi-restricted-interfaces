@@ -1,0 +1,147 @@
+{
+  "id": "frax",
+  "name": "Frax Finance",
+  "description": "Frax Finance runs a family of stablecoin and DeFi products: frxUSD (a fiat-backed dollar stablecoin), the sfrxUSD and sfrxETH yield tokens, the Fraxswap AMM and the Fraxtal layer 2. Frax launched in 2020 as a fractional-algorithmic stablecoin and has since moved to fully collateralized designs.",
+  "description_zh": "Frax Finance 运营一系列稳定币和 DeFi 产品：frxUSD（法币支持的美元稳定币）、sfrxUSD 和 sfrxETH 收益代币、Fraxswap AMM 以及二层网络 Fraxtal。Frax 于 2020 年以部分算法稳定币起步，此后转向完全抵押的设计。",
+  "category": "Stablecoin / DeFi suite",
+  "chains": "Ethereum, Fraxtal, Arbitrum, Base, Optimism",
+  "networks": [
+    "Ethereum",
+    "Fraxtal",
+    "Arbitrum",
+    "Base",
+    "Optimism"
+  ],
+  "url": "https://frax.com",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "unknown",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "reported",
+    "provider": "frxUSD contract-level blacklist for sanctions (third-party reviews)",
+    "layer": "contract",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "kyc": {
+    "s": "reported",
+    "layer": null,
+    "scope": "Identity verification with Persona as part of frxUSD compliance (Persona case study)."
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://frax.com/frxUSD",
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "frxUSD Terms of Service not retrieved",
+    "restricted_codes": []
+  },
+  "notes": "Closed frontend. Core Frax contracts are public; frxUSD mint/redeem through the custodian route has compliance requirements.",
+  "live": [],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://llamarisk.com/research/pegkeeper-onboarding-frxusd",
+    "https://chaoslabs.xyz/posts/frxusd-token-review",
+    "https://withpersona.com/customers/frax-builds-a-global-compliance-program-for-crypto-native-users-in-one-month"
+  ],
+  "confidence": "low",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 2,
+    "countries": 0,
+    "mechanisms": [
+      "screening",
+      "kyc"
+    ]
+  },
+  "category_group": "stablecoin",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": [
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:50:59Z",
+      "kind": "site",
+      "url": "https://frax.com",
+      "http_status": 200,
+      "final_url": "https://frax.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:20Z",
+      "kind": "site",
+      "url": "https://frax.com",
+      "http_status": 200,
+      "final_url": "https://frax.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:52:04Z",
+      "kind": "site",
+      "url": "https://frax.com",
+      "http_status": 200,
+      "final_url": "https://frax.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:40Z",
+      "kind": "site",
+      "url": "https://frax.com",
+      "http_status": 200,
+      "final_url": "https://frax.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:48:57Z",
+      "kind": "site",
+      "url": "https://frax.com",
+      "http_status": 200,
+      "final_url": "https://frax.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

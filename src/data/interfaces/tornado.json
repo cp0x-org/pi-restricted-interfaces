@@ -1,0 +1,148 @@
+{
+  "id": "tornado",
+  "name": "Tornado Cash",
+  "description": "Tornado Cash is a non-custodial privacy protocol on Ethereum: users deposit fixed amounts of ETH or tokens into immutable pool contracts and later withdraw to a different address with a zero-knowledge proof, breaking the on-chain link. The US sanctions imposed in 2022 were lifted in March 2025; the interface is published on IPFS under tornadocash.eth.",
+  "description_zh": "Tornado Cash 是以太坊上的非托管隐私协议：用户将固定金额的 ETH 或代币存入不可变的资金池合约，之后通过零知识证明提取到另一个地址，从而切断链上关联。2022 年实施的美国制裁已于 2025 年 3 月解除；其界面通过 tornadocash.eth 发布在 IPFS 上。",
+  "category": "Privacy pool",
+  "chains": "Ethereum, BNB Chain, Polygon, Gnosis, Arbitrum, Optimism, Avalanche",
+  "networks": [
+    "Ethereum",
+    "BNB Chain",
+    "Polygon",
+    "Gnosis",
+    "Arbitrum",
+    "Optimism",
+    "Avalanche"
+  ],
+  "url": "https://tornadocash.eth.limo",
+  "frontend_repo": "https://github.com/tornadocash/tornado-classic-ui",
+  "repo_state": "archived",
+  "repo_status": "GitHub copy archived (last push 2022-08-05); the live UI is served from IPFS via the tornadocash.eth ENS record (sources at sources.tornadocash.eth.limo)",
+  "repo_last_commit": "2022-08-05",
+  "geo_site": {
+    "s": "unknown",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "reported",
+    "provider": "Chainalysis Sanctions Oracle check added to the frontend in April 2022; whether the current IPFS UI still screens is not verified",
+    "layer": "frontend",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": null,
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "No Terms of Service",
+    "restricted_codes": []
+  },
+  "notes": "Contracts are immutable and permissionless; any interface (IPFS copies, tornado.cp0x.com) can use them, and relayers are independent. Verify the IPFS hash of tornadocash.eth before use.",
+  "live": [],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://www.theblock.co/amp/post/142081/ethereum-mixer-tornado-cash-now-blocks-sanctioned-addresses",
+    "https://l2beat.com/privacy/projects/tornado-cash",
+    "https://home.treasury.gov/news/press-releases/sb0057"
+  ],
+  "confidence": "medium",
+  "alternatives": [
+    {
+      "name": "tornado.cp0x.com",
+      "url": "https://tornado.cp0x.com"
+    }
+  ],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 1,
+    "countries": 0,
+    "mechanisms": [
+      "screening"
+    ]
+  },
+  "category_group": "other",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": [
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:51:19Z",
+      "kind": "site",
+      "url": "https://tornadocash.eth.limo",
+      "http_status": 200,
+      "final_url": "https://tornadocash.eth.limo",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:26Z",
+      "kind": "site",
+      "url": "https://tornadocash.eth.limo",
+      "http_status": 200,
+      "final_url": "https://tornadocash.eth.limo",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:52:19Z",
+      "kind": "site",
+      "url": "https://tornadocash.eth.limo",
+      "http_status": 200,
+      "final_url": "https://tornadocash.eth.limo",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:46Z",
+      "kind": "site",
+      "url": "https://tornadocash.eth.limo",
+      "http_status": 200,
+      "final_url": "https://tornadocash.eth.limo",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-09T05:49:06Z",
+      "kind": "site",
+      "url": "https://tornadocash.eth.limo",
+      "http_status": 200,
+      "final_url": "https://tornadocash.eth.limo",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

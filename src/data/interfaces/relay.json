@@ -1,0 +1,84 @@
+{
+  "id": "relay",
+  "name": "Relay",
+  "description": "Relay is an intent-based bridging and cross-chain payments protocol. Solvers fill bridge and swap requests instantly on the destination chain across many EVM and non-EVM networks and are repaid afterwards.",
+  "description_zh": "Relay 是一个基于意图的跨链桥接和跨链支付协议。求解者在众多 EVM 和非 EVM 网络的目标链上即时完成跨链和兑换请求，之后获得偿还。",
+  "category": "Bridge / intents",
+  "chains": "EVM, Solana, BTC...",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Optimism",
+    "Polygon",
+    "BNB Chain",
+    "Avalanche",
+    "Linea",
+    "Scroll",
+    "zkSync",
+    "50+ more"
+  ],
+  "url": "https://relay.link",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed (relayprotocol/relay-kit = SDK/UI kit)",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "Chainalysis + HackBounty + Hermod + internal blocklist; public endpoint api.relay.link/sanctioned/{addr}",
+    "layer": "api",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": null,
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "ToS returns 403 to bots",
+    "restricted_codes": []
+  },
+  "notes": "Screening runs at quote and fill level in the Relay API (public endpoint /sanctioned/{addr}).",
+  "live": [
+    "api.relay.link/sanctioned: SDN -> {sanctioned: true}; control -> false"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://docs.relay.link/security/compliance",
+    "relayprotocol/relay-kit: packages/sdk/src/types/api.ts"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 1,
+    "countries": 0,
+    "mechanisms": [
+      "screening"
+    ]
+  },
+  "category_group": "bridge",
+  "chain_tags": [
+    "bitcoin",
+    "evm",
+    "solana"
+  ],
+  "observations": []
+}

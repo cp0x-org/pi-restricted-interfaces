@@ -1,0 +1,94 @@
+{
+  "id": "etherfi",
+  "name": "ether.fi",
+  "description": "ether.fi is a liquid restaking protocol: users stake ETH for eETH or weETH, which are natively restaked through EigenLayer. The app also offers Liquid vaults with managed DeFi strategies and a crypto payment card.",
+  "description_zh": "ether.fi 是一个流动性再质押协议：用户质押 ETH 获得 eETH 或 weETH，这些代币会通过 EigenLayer 进行原生再质押。其应用还提供托管 DeFi 策略的 Liquid 金库和加密支付卡。",
+  "category": "Restaking / vaults",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Linea",
+    "Scroll",
+    "Blast"
+  ],
+  "url": "https://www.ether.fi/app",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "tos_only",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "tos_only",
+    "countries": [
+      "US",
+      "GB",
+      "US-NY"
+    ],
+    "scope": "Liquid vaults: not US/UK; Liquid Reserve: not NY"
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "tos_only",
+    "provider": "ToS: 'wallet screening' for Trade",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://www.ether.fi/legal/terms-of-use",
+    "updated": "2026-09-09",
+    "us": "partial",
+    "us_scope": "",
+    "restricted": "CA (all services!), BY, BI, Crimea, CU, CD, IR, IQ, LY, KP, SO, SD, SY, VE, ZW",
+    "restricted_codes": [
+      "CA",
+      "BY",
+      "BI",
+      "UA-Crimea",
+      "CU",
+      "CD",
+      "IR",
+      "IQ",
+      "LY",
+      "KP",
+      "SO",
+      "SD",
+      "SY",
+      "VE",
+      "ZW"
+    ]
+  },
+  "notes": "Closed. URL note: app.ether.fi -> 302.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://www.ether.fi/legal/terms-of-use"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "A",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "staking",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

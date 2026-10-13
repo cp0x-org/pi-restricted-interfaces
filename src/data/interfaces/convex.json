@@ -1,0 +1,70 @@
+{
+  "id": "convex",
+  "name": "Convex",
+  "description": "Convex Finance boosts rewards for Curve liquidity providers and CRV stakers. It pools CRV locked as veCRV so depositors earn boosted CRV without locking their own tokens, and CVX holders direct Convex's Curve votes.",
+  "description_zh": "Convex Finance 为 Curve 流动性提供者和 CRV 质押者提升奖励。它把 CRV 集中锁定为 veCRV，存款人无需自己锁仓即可获得加成的 CRV，CVX 持有者决定 Convex 在 Curve 上的投票方向。",
+  "category": "Yield",
+  "chains": "Ethereum",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Polygon",
+    "Fraxtal"
+  ],
+  "url": "https://curve.convexfinance.com",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "unknown",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "unknown",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": null,
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "no ToS",
+    "restricted_codes": []
+  },
+  "notes": "Closed, no ToS.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [],
+  "confidence": "low",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "n/a",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "yield",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

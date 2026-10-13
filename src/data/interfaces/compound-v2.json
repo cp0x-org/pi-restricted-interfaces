@@ -1,0 +1,76 @@
+{
+  "id": "compound-v2",
+  "name": "Compound",
+  "version": "V2",
+  "family": "compound",
+  "lifecycle": "legacy",
+  "lifecycle_note": "Compound governance started deprecating V2; the app at v2-app.compound.xyz asks users to migrate positions to Compound III.",
+  "description": "Compound V2 is the original Compound money market on Ethereum, where each asset had its own pool and cTokens represented deposits. It is being wound down in favour of Compound III; the legacy app at v2-app.compound.xyz shows a deprecation notice and links to migration.",
+  "description_zh": "Compound V2 是以太坊上最初的 Compound 货币市场，每种资产各有资金池，存款以 cToken 表示。它正在逐步退出，由 Compound III 取代；v2-app.compound.xyz 上的旧版应用显示弃用通知并提供迁移链接。",
+  "category": "Lending",
+  "chains": "Ethereum",
+  "networks": [
+    "Ethereum"
+  ],
+  "url": "https://v2-app.compound.xyz",
+  "frontend_repo": "https://github.com/compound-finance/palisade",
+  "repo_state": "open_stale",
+  "repo_status": "open-stale (public code predates the screening endpoint in the deployed app)",
+  "repo_last_commit": "2025-12-12",
+  "geo_site": {
+    "s": "tos_only",
+    "countries": [],
+    "close_only": [],
+    "method": "Privacy notice: automated geo-blocking and sanctions screening of IP-derived location may restrict access; no country list in the bundle"
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "screening.compound.xyz (own service; the privacy notice names TRM Labs / Chainalysis as data providers)",
+    "layer": "api",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://v2-app.compound.xyz/#terms",
+    "updated": "unknown",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "generic sanctions + Foundation discretion",
+    "restricted_codes": []
+  },
+  "notes": "The screening endpoint is injected as an app flag (SCREENING_ENDPOINT); the public palisade code predates it and does not screen.",
+  "live": [
+    "v2-app.compound.xyz (2026-10-10): 'V2 Deprecation has begun' banner; config SCREENING_ENDPOINT=https://screening.compound.xyz and a screening-error overlay"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "v2-app.compound.xyz bundle: SCREENING_ENDPOINT, screening-error-overlay",
+    "v2-app.compound.xyz privacy notice: geo-blocking and sanctions screening (TRM Labs / Chainalysis)",
+    "https://github.com/compound-finance/palisade"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "level": "B",
+  "restrictions": {
+    "count": 1,
+    "countries": 0,
+    "mechanisms": [
+      "screening"
+    ]
+  },
+  "category_group": "lending",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

@@ -49,7 +49,7 @@ The following points should help guide your development:
 The catalog is data, not code. To add or correct an interface:
 
 1. Edit `monitor/data/interfaces.json`. Keep every claim backed by an entry in `evidence` (a repository-relative path, a URL, or `owner/repo: path`). Country lists use ISO 3166-1 alpha-2 codes or region tokens such as `UA-Crimea`; see `monitor/README.md` for the schema.
-2. Run `pnpm monitor:build`. It fails on schema errors and regenerates `src/data/interfaces.json`, `monitor/out/report.md` and `monitor/out/interfaces.csv`. Commit the generated files together with the data change.
+2. Run `pnpm monitor:build`. It fails on schema errors, regenerates `monitor/out/report.md`, `monitor/out/interfaces.csv` and the site files in `src/data/` (`monitor.json`, `interfaces/<id>.json`), and checks the site files against the data. Commit the generated files together with the data change.
 3. Run `pnpm build` to make sure the site still compiles.
 
 Python ≥ 3.9 (standard library only) is required for `pnpm monitor:*` scripts. It is a maintainer tool and is not part of `pnpm build`, so the deterministic-build guarantee above is unaffected.

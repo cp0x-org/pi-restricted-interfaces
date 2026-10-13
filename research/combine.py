@@ -15,7 +15,7 @@ for VPN block > detect). The rating is then computed with the same rule as the s
   rating       = A with 0, B with 1-5, C with 6-20, D above 20; n/a when nothing was established
                  (no restriction and neither the site-level geo status nor the screening status is known).
 
-The result is compared with what the site publishes (src/data/interfaces.json, the dataset the web app is built
+The result is compared with what the site publishes (src/data/monitor.json, the dashboard the web app is built
 from): research/out/report.md lists every interface with its evidence and the differences, --csv writes the table.
 
 Sweeps (rows without a claim) do not change the rating. They fill the coverage matrix (every check family for every
@@ -38,7 +38,7 @@ sys.path.append(os.path.join(common.PROJECT, "monitor", "scripts"))
 import observed  # noqa: E402
 
 KINDS = ("code", "bundle", "docs", "api", "live")
-SITE = os.path.join(common.PROJECT, "src", "data", "interfaces.json")
+SITE = os.path.join(common.PROJECT, "src", "data", "monitor.json")
 CATALOG = os.path.join(common.PROJECT, "monitor", "data", "interfaces.json")
 OBSERVATIONS = os.path.join(common.PROJECT, "monitor", "data", "observations.json")
 RANK = {"block": 7, "detect": 6, "yes": 5, "reported": 4, "optional": 2, "tos_only": 1, "no": 0}
@@ -334,7 +334,7 @@ def write_report(table, meta, path):
     n_match = sum(1 for t in table if t["match"])
     out = ["# Reproduced restrictions table", "",
            f"Generated {now_iso()} by `research/combine.py` from the check results below. "
-           f"Compared with the published dataset `src/data/interfaces.json`: **{n_match} of {n_site}** interfaces have the same "
+           f"Compared with the published dashboard `src/data/monitor.json`: **{n_match} of {n_site}** interfaces have the same "
            "rating and the same number of restrictions.", "",
            "Check runs: " + ", ".join(f"{k} — {v}" for k, v in meta.items()), "",
            "Rating: number of restrictions (each blocked country/region once + 1 per feature gate, wallet screening, VPN "

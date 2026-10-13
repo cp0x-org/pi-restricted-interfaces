@@ -1,13 +1,12 @@
-import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { defineConfig, loadEnv, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import svgr from 'vite-plugin-svgr';
-import { buildSeoFiles } from './src/seo/prerender';
-import type { Dataset } from './src/types/restrictions';
+import { buildSeoFiles, loadDataset } from './src/seo/prerender';
 
 // Prerenders one HTML file per route (own <title>, description, canonical, Open Graph, JSON-LD and a static copy of the
-// content), plus sitemap.xml, robots.txt and 404.html, from src/data/interfaces.json. Part of `pnpm build`, no extra step.
+// content), plus sitemap.xml, robots.txt and 404.html, from the site files in src/data. Part of `pnpm build`, no extra step.
 function seoPrerender(siteUrl: string): Plugin {
   return {
     name: 'seo-prerender',
@@ -16,7 +15,7 @@ function seoPrerender(siteUrl: string): Plugin {
     generateBundle(_options, bundle) {
       const entry = bundle['index.html'];
       if (!entry || entry.type !== 'asset') return;
-      const dataset = JSON.parse(readFileSync(new URL('./src/data/interfaces.json', import.meta.url), 'utf8')) as Dataset;
+      const dataset = loadDataset(fileURLToPath(new URL('./src/data/', import.meta.url)));
       for (const file of buildSeoFiles(String(entry.source), dataset, siteUrl)) {
         if (file.fileName === 'index.html') entry.source = file.source;
         else this.emitFile({ type: 'asset', fileName: file.fileName, source: file.source });
@@ -76,9 +75,9 @@ export default defineConfig(({ mode }) => {
       svgr({
         svgrOptions: {
           icon: true,
-          exportType: 'named',
+          exportType: 'named'
         },
-        include: '**/*.svg',
+        include: '**/*.svg'
       }),
       seoPrerender((env.VITE_SITE_URL || '').trim())
     ]

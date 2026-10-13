@@ -1,0 +1,91 @@
+{
+  "id": "beefy",
+  "name": "Beefy",
+  "description": "Beefy is a multichain yield optimizer. Its vaults auto-compound rewards from farms and liquidity pools across dozens of EVM networks, saving users the gas and effort of harvesting manually.",
+  "description_zh": "Beefy 是一个多链收益优化器。其金库会自动复投数十个 EVM 网络上农场和流动性池的奖励，为用户省去手动收获的 gas 和精力。",
+  "category": "Yield vaults",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Optimism",
+    "Polygon",
+    "BNB Chain",
+    "Avalanche",
+    "Gnosis",
+    "Linea",
+    "Sonic",
+    "30+ more"
+  ],
+  "url": "https://app.beefy.com",
+  "frontend_repo": "https://github.com/beefyfinance/beefy-v2",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-10-07",
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [
+      "US",
+      "CA",
+      "GB",
+      "AU",
+      "SG"
+    ],
+    "scope": "vaults with tokenized equities (Base): US, CA, GB, AU, SG; country from api.beefy.finance/geo/country; fail-closed"
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "no",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "src/config/restrictions.json",
+  "tos": {
+    "url": null,
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "no ToS",
+    "restricted_codes": []
+  },
+  "notes": "Restriction is just a JSON config plus their API. There is a geoCountryOverride flag.",
+  "live": [
+    "api.beefy.finance/geo/country (US) -> {country: US}"
+  ],
+  "geo_endpoints": [
+    "https://api.beefy.finance/geo/country"
+  ],
+  "evidence": [
+    "src/config/restrictions.json",
+    "src/features/data/selectors/restrictions.ts",
+    "src/features/data/actions/restrictions.ts"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "C",
+  "restrictions": {
+    "count": 6,
+    "countries": 5,
+    "mechanisms": [
+      "geo_feature"
+    ]
+  },
+  "category_group": "yield",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

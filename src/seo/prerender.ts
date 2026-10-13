@@ -3,9 +3,21 @@
 // plain-HTML version of its content inside #root, plus sitemap.xml (with hreflang alternates), robots.txt and 404.html.
 // Crawlers and link previews get real content without running JavaScript; the app replaces #root when it starts.
 // Node-only code path: no browser APIs, relative imports only.
+import { readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
 import { LEVELS } from '../types/restrictions';
 import type { Dataset, InterfaceEntry, Status } from '../types/restrictions';
-import { appHref, displayName, evidenceLinks, fullName, lifecycleRank, parentOf, restrictionsText } from '../utils/restrictions';
+import {
+  appHref,
+  assertEntry,
+  assertMonitor,
+  displayName,
+  evidenceLinks,
+  fullName,
+  lifecycleRank,
+  parentOf,
+  restrictionsText
+} from '../utils/restrictions';
 import { LANGS_ALL, Lang, localizePath } from '../i18n/paths';
 import type { Messages } from '../i18n/en';
 import {
@@ -28,6 +40,17 @@ import type { GroupRow } from '../utils/summary';
 interface SeoFile {
   fileName: string;
   source: string;
+}
+
+/** The site files (monitor.json + interfaces/<id>.json, written by monitor/scripts/export.py) as one validated dataset. */
+export function loadDataset(dir: string): Dataset {
+  const monitor = assertMonitor(JSON.parse(readFileSync(join(dir, 'monitor.json'), 'utf8')));
+  const files = new Set(readdirSync(join(dir, 'interfaces')));
+  const interfaces = monitor.interfaces.map((r) => {
+    if (!files.has(`${r.id}.json`)) throw new Error(`site data: interfaces/${r.id}.json is missing (run pnpm monitor:build)`);
+    return assertEntry(JSON.parse(readFileSync(join(dir, 'interfaces', `${r.id}.json`), 'utf8')));
+  });
+  return { meta: monitor.meta, interfaces };
 }
 
 const HEAD_RE = /<!--seo:head-->[\s\S]*?<!--\/seo:head-->/;

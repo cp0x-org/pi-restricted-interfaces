@@ -1,0 +1,128 @@
+{
+  "id": "sushiswap",
+  "name": "SushiSwap",
+  "description": "SushiSwap is a community-run decentralized exchange that started in 2020 as a fork of Uniswap v2. Today it combines classic and concentrated-liquidity AMM pools with a swap aggregator and cross-chain swaps on dozens of EVM networks, plus perpetuals routed to Hyperliquid; SUSHI is its governance token.",
+  "description_zh": "SushiSwap 是一个社区运营的去中心化交易所，2020 年作为 Uniswap v2 的分叉起步。如今它在数十个 EVM 网络上结合了经典 AMM 池与集中流动性池、兑换聚合器和跨链兑换，并通过 Hyperliquid 提供永续合约；SUSHI 是其治理代币。",
+  "category": "DEX",
+  "chains": "EVM (+ perps via Hyperliquid)",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Optimism",
+    "Polygon",
+    "BNB Chain",
+    "Avalanche",
+    "Gnosis",
+    "Linea",
+    "Scroll",
+    "Blast",
+    "30+ more"
+  ],
+  "url": "https://www.sushi.com",
+  "frontend_repo": "https://github.com/sushi-labs/sushiswap/tree/master/apps/web",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-10-03",
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [
+      "US",
+      "CA",
+      "GB",
+      "CH",
+      "CU",
+      "BY",
+      "IR",
+      "KP",
+      "RU",
+      "SY",
+      "UA",
+      "SS",
+      "SD",
+      "MM",
+      "VE"
+    ],
+    "scope": "Robinhood stock tokens: US, CA, GB, CH, CU, BY, IR, KP, RU, SY, UA, SS, SD, MM, VE (via /api/geolocation). Perps: Hyperliquid legalCheck (ipAllowed)"
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "TRM Labs public API api.trmlabs.com/public/v1/sanctions/screening; a sanctioned wallet gets disconnected",
+    "layer": "frontend",
+    "fail": "open",
+    "fail_note": ""
+  },
+  "asset_filter": "token security / list moderation",
+  "tos": {
+    "url": "https://www.sushi.com/legal/terms-of-service",
+    "updated": "unknown",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "24 named: DZ, BO, BY, Crimea, CU, DPR/LPR, CD, IR, IQ, CI, LR, LY, ML, MM, NP, KP, SO, SD, SY, TN, VE, YE, ZW + sanctioned",
+    "restricted_codes": [
+      "DZ",
+      "BO",
+      "BY",
+      "UA-Crimea",
+      "CU",
+      "UA-DPR",
+      "UA-LPR",
+      "CD",
+      "IR",
+      "IQ",
+      "CI",
+      "LR",
+      "LY",
+      "ML",
+      "MM",
+      "NP",
+      "KP",
+      "SO",
+      "SD",
+      "SY",
+      "TN",
+      "VE",
+      "YE",
+      "ZW"
+    ]
+  },
+  "notes": "Geo checks and screening run in the browser; no backend of their own is involved. Perps use the Hyperliquid API, which checks the IP on its side.",
+  "live": [],
+  "geo_endpoints": [
+    "https://www.sushi.com/api/geolocation"
+  ],
+  "evidence": [
+    "apps/web/src/lib/wagmi/components/sanctioned-address-dialog.tsx",
+    "apps/web/src/lib/robinhood/restricted-countries.ts",
+    "apps/web/src/lib/wagmi/systems/checker/stock-token-region.tsx",
+    "apps/web/src/lib/perps/info/use-legal-check.ts"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "C",
+  "restrictions": {
+    "count": 17,
+    "countries": 15,
+    "mechanisms": [
+      "geo_feature",
+      "screening"
+    ]
+  },
+  "category_group": "dex",
+  "chain_tags": [
+    "evm",
+    "hyperliquid"
+  ],
+  "observations": []
+}

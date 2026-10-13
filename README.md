@@ -21,11 +21,12 @@ no third-party requests.
 ## Data
 
 The dataset lives in [`monitor/data/interfaces.json`](monitor/data/interfaces.json) (schema v2, hand-maintained, every claim backed by evidence).
-The web app imports the generated [`src/data/interfaces.json`](src/data/interfaces.json), filtered to EVM networks (an app on its own chain is included when its `networks[]` lists EVM networks); the report
+The web app loads the generated site files in [`src/data/`](src/data/): `monitor.json` (the dashboard, one row per interface with only what the table, its country filter and the summary show) and `interfaces/<id>.json` (the whole record of one interface, loaded when its page opens); filtered to EVM networks (an app on its own chain is included when its `networks[]` lists EVM networks); the report
 and the CSV snapshot in [`monitor/out/`](monitor/out/) cover the whole catalog, the version the site shows (with its checks and evidence) is [`monitor/current/`](monitor/current/), and previous versions live in [`monitor/archive/`](monitor/archive/) as `<scanned>_<archived>/` (`pnpm monitor:update`, see [`monitor/docs/updating.md`](monitor/docs/updating.md)).
 
 ```
-monitor/data/interfaces.json ──(pnpm monitor:build)──▶ src/data/interfaces.json + monitor/out/report.md + monitor/out/interfaces.csv
+monitor/data/interfaces.json + observations.json ──(pnpm monitor:build)──▶ monitor/out/report.md + interfaces.csv (the collected data, derived)
+                                                                         └▶ src/data/monitor.json + src/data/interfaces/<id>.json (what the site loads; checked against the collected data)
 ```
 
 `pnpm monitor:build` validates the data (enums, ISO country tokens, repository consistency), computes `level` (rating by number of technical restrictions (each blocked country/region once + one per feature gate, wallet screening, VPN detection, KYC; ToS-only terms not counted): A 0 (none), B 1–5, C 6–20, D > 20, n/a when nothing could be determined), `restrictions`,
@@ -39,7 +40,7 @@ Independent reproduction: [`research/`](research/) turns every restriction the s
 primary source (code at a pinned commit, the production bundle, docs/Terms/press with Wayback fallback, public APIs
 with a sanctioned vs a control wallet, live requests from a country through a proxy) and rebuilds the table without
 reading the site's data: `pnpm research:all` writes `research/out/report.md` and `research/out/table.csv` and compares
-them with `src/data/interfaces.json`. Stdlib Python, no browser, no AI. How to run it:
+them with `src/data/monitor.json`. Stdlib Python, no browser, no AI. How to run it:
 [`research/README.md`](research/README.md); methodology: [`research/METHODOLOGY.md`](research/METHODOLOGY.md).
 
 ## Languages
@@ -56,7 +57,7 @@ from sources (mechanism details, providers, notes, evidence) stay in English.
 
 ## SEO and deployment
 
-`pnpm build` prerenders every public route from `src/data/interfaces.json` (Vite plugin in `vite.config.mts`, code in
+`pnpm build` prerenders every public route from the site files in `src/data/` (Vite plugin in `vite.config.mts`, code in
 `src/seo/prerender.ts`), so crawlers and link previews get real HTML without running JavaScript:
 
 - for each language (English at the root, Chinese under `zh/`): `monitor.html` (catalog table with links to every

@@ -1,0 +1,89 @@
+{
+  "id": "pancakeswap",
+  "name": "PancakeSwap",
+  "description": "PancakeSwap is the largest decentralized exchange on BNB Chain and also runs on Ethereum, Arbitrum, Base and other networks. Besides AMM swaps with v2 and v3 concentrated-liquidity pools, it offers yield farms, perpetuals and prediction games, with CAKE as its token.",
+  "description_zh": "PancakeSwap 是 BNB Chain 上最大的去中心化交易所，也部署在以太坊、Arbitrum、Base 等网络。除了基于 v2 和 v3 集中流动性池的 AMM 兑换，它还提供流动性挖矿、永续合约和预测游戏，代币为 CAKE。",
+  "category": "DEX",
+  "chains": "BNB, EVM, Solana",
+  "networks": [
+    "BNB Chain",
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "zkSync",
+    "Linea",
+    "opBNB",
+    "Polygon zkEVM"
+  ],
+  "url": "https://pancakeswap.finance",
+  "frontend_repo": null,
+  "repo_state": "private_now",
+  "repo_status": "private-now (pancakeswap/pancake-frontend was public, docs still link to it; now 404/auth)",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "reported",
+    "countries": [
+      "BY",
+      "CU",
+      "CD",
+      "IR",
+      "IQ",
+      "KP",
+      "SD",
+      "SY",
+      "ZW",
+      "UA-Crimea"
+    ],
+    "close_only": [],
+    "method": "IP block announced 2022-03"
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "unknown",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://pancakeswap.finance/terms-of-service",
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "unknown (ToS rendered client-side)",
+    "restricted_codes": []
+  },
+  "notes": "pancake-frontend is no longer public; the last public version survives only as old tags and mirrors. Needs a browser crawl.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://forklog.com/en/pancakeswap-to-block-users-from-ten-jurisdictions/amp",
+    "https://docs.pancakeswap.finance/protocol/developers/contributing/codebase-overview"
+  ],
+  "confidence": "low",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "C",
+  "restrictions": {
+    "count": 10,
+    "countries": 10,
+    "mechanisms": []
+  },
+  "category_group": "dex",
+  "chain_tags": [
+    "evm",
+    "solana"
+  ],
+  "observations": []
+}

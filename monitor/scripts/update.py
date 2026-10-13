@@ -9,7 +9,7 @@ dataset and keep the history of versions.
                (added and removed countries are listed in CHANGES.md). A failed, erroring or skipped check never
                changes the catalog: it is listed under "needs review" instead, as is a counted claim without a check.
   3. build     the monitor:build command from package.json with meta.generated = scan date: regenerates
-               src/data/interfaces.json (what the site shows) and monitor/out/*
+               the site files in src/data/ (what the site shows) and monitor/out/*
   4. compare   research/combine.py: the table rebuilt from the checks, compared with the new site dataset
   5. versions  monitor/current/ (the version the site shows) moves to monitor/archive/<scanned>_<archived>/ and the
                new run is written to monitor/current/: VERSION.json, CHANGES.md, table.csv, report.md, the check

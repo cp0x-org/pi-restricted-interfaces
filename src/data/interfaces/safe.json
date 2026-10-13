@@ -1,0 +1,90 @@
+{
+  "id": "safe",
+  "name": "Safe{Wallet}",
+  "description": "Safe, formerly Gnosis Safe, is a smart-account wallet that can require several owners to approve each transaction (multisig). Safe{Wallet} is its official interface, with built-in swaps, staking and third-party apps on many EVM networks.",
+  "description_zh": "Safe（原 Gnosis Safe）是一种智能账户钱包，可以要求多位所有者共同批准每笔交易（多签）。Safe{Wallet} 是其官方界面，在众多 EVM 网络上内置兑换、质押和第三方应用。",
+  "category": "Wallet / multisig",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Optimism",
+    "Base",
+    "Polygon",
+    "BNB Chain",
+    "Avalanche",
+    "Gnosis",
+    "zkSync",
+    "Linea",
+    "Scroll",
+    "Celo",
+    "Mantle",
+    "Sonic",
+    "Unichain",
+    "World Chain",
+    "Berachain"
+  ],
+  "url": "https://app.safe.global",
+  "frontend_repo": "https://github.com/safe-global/safe-wallet-monorepo/tree/main/apps/web",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-10-07",
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [],
+    "scope": "HEAD /swap -> 403 for OFAC countries -> swap/stake/earn/Safe token hidden; the core wallet works"
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "Chainalysis Sanctions Oracle (on-chain) -> feature-level 'Blocked address'",
+    "layer": "frontend",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://safe.global/terms",
+    "updated": "2025-10",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "generic EU/US sanctions",
+    "restricted_codes": []
+  },
+  "notes": "Only native integrations are restricted (swap via CoW, stake via Kiln and so on). The core wallet is permissionless.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "apps/web/src/components/common/GeoblockingProvider/index.tsx",
+    "apps/web/src/hooks/useSanctionedAddress.ts",
+    "apps/web/src/config/constants.ts"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 2,
+    "countries": 0,
+    "mechanisms": [
+      "geo_feature",
+      "screening"
+    ]
+  },
+  "category_group": "wallet",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

@@ -1,0 +1,1788 @@
+{
+  "id": "kyberswap",
+  "name": "KyberSwap",
+  "description": "KyberSwap is the DEX aggregator and liquidity platform of Kyber Network. It routes swaps across many decentralized exchanges on more than a dozen EVM networks and adds limit orders and zap tools for opening and managing liquidity positions.",
+  "description_zh": "KyberSwap 是 Kyber Network 的 DEX 聚合器和流动性平台。它在十多个 EVM 网络上的众多去中心化交易所之间路由兑换，并提供限价单以及用于建立和管理流动性仓位的 Zap 工具。",
+  "category": "DEX aggregator",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Optimism",
+    "Base",
+    "Polygon",
+    "BNB Chain",
+    "Avalanche",
+    "Linea",
+    "Scroll",
+    "zkSync",
+    "Mantle",
+    "Blast",
+    "Sonic",
+    "Berachain"
+  ],
+  "url": "https://kyberswap.com",
+  "frontend_repo": "https://github.com/KyberNetwork/kyberswap-interface/tree/main/apps/kyberswap-interface",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-10-08",
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "VN",
+      "RU",
+      "BY",
+      "IR",
+      "CU",
+      "MM",
+      "VE"
+    ],
+    "close_only": [],
+    "method": "Cloudflare edge: HTTP 403 'Access from your country is currently restricted in accordance with our Terms of Use', for the site and for the aggregator API the app quotes with (aggregator-api.kyberswap.com). The countries are those of the live probe (see the observations; 2026-10-12: BY, CU, IR, MM, RU, VE, VN)."
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [],
+    "scope": "per-country token restriction, country taken from the browser timezone (the code calls it a 'UX deterrent')"
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "own Blackjack service (blackjack.kyberswap.com/api/v1/check) before each signature",
+    "layer": "api",
+    "fail": "open",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://kyberswap.com/files/KyberSwap%20-%20Terms%20of%20Use%20-%2001%20September%202026.pdf",
+    "updated": "2026-09-01",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "IR, KP, MM, CU, VE, BY, RU, VN, VG, Crimea/Sevastopol, uncontrolled DPR/LPR/Kherson/Zaporizhzhia, FATF high-risk",
+    "restricted_codes": [
+      "IR",
+      "KP",
+      "MM",
+      "CU",
+      "VE",
+      "BY",
+      "RU",
+      "VN",
+      "VG",
+      "UA-Crimea",
+      "UA-DPR",
+      "UA-LPR",
+      "UA-Kherson",
+      "UA-Zaporizhzhia"
+    ]
+  },
+  "notes": "Blackjack is called from the frontend before each signature. The aggregator API is a separate service.",
+  "live": [
+    "kyberswap.com (2026-10-12): VN (Mobifone, VNPT) -> HTTP 403 'country is currently restricted in accordance with our Terms of Use'; 19 other countries -> app served",
+    "Blackjack: sanctioned -> blacklisted:true (reason 2, since 2023-12); control -> blacklisted:false"
+  ],
+  "geo_endpoints": [],
+  "api_probes": [
+    {
+      "name": "aggregator route",
+      "method": "GET",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "note": "The route quote the app requests for a swap (ETH -> USDC on Ethereum); Cloudflare refuses it by country with the same page as the site.",
+      "flags": [
+        "code"
+      ],
+      "rules": [
+        {
+          "match": "restricted in accordance with our Terms",
+          "state": "blocked",
+          "note": "Cloudflare: 'Access from your country is currently restricted in accordance with our Terms of Use'"
+        },
+        {
+          "match": "\"code\"\\s*:\\s*0",
+          "state": "ok",
+          "note": "a route is quoted"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    "apps/kyberswap-interface/src/services/blackjack.ts",
+    "apps/kyberswap-interface/src/utils/sendTransaction.ts",
+    "apps/kyberswap-interface/src/hooks/useRestrictedTokens.ts"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "C",
+  "restrictions": {
+    "count": 9,
+    "countries": 7,
+    "mechanisms": [
+      "geo_feature",
+      "screening"
+    ]
+  },
+  "category_group": "aggregator",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": [
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:01Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:58Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:11Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:08Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:12Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:09Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:13Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:09Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:22Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:19Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:11Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:09Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:43Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 403,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "aggregator route: HTTP 403 with geo wording"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:42Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 403,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 403 with geo wording"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:11Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:09Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:45Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:43Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:52Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:49Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:59Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:57Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:41Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:39Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:12Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:10Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:00Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 403,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "aggregator route: HTTP 403 with geo wording"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:57Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 403,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 403 with geo wording"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:28Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:26Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:38Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:35Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:35Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:33Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:26Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:25Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:29Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:26Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:53Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:50Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:37Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:34Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:06Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:04Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:09Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:06Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IQ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:27Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "IQ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:24Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:55Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 403,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "aggregator route: HTTP 403 with geo wording"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:52Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 403,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 403 with geo wording"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:44Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:41Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:03Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:01Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:29Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:25Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:04Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:01Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:39Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:30Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:26Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:25Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:22Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:58Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:56Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:03Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 403,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "aggregator route: HTTP 403 with geo wording"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:00Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 403,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 403 with geo wording"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:08Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:06Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:38Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:35Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:16Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:13Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:50Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:47Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:30Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:28Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:38Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:35Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:12Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:09Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:46Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:44Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:40Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 403,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "aggregator route: HTTP 403 with geo wording"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:38Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 403,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 403 with geo wording"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:04Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:01Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:30Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:27Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:45Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:43Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:46Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:43Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:53Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "SO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:50Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:32Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:29Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:09Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:07Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:28Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:26Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:57Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:55Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:12Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:08Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:52Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:50Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:13Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:54:09Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": "US-NY",
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:35Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "US",
+      "region": "US-NY",
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:56:33Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:04Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 403,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "aggregator route: HTTP 403 with geo wording"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:01Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 403,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 403 with geo wording"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:27Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 403,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "aggregator route: HTTP 403 with geo wording"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:55:24Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 403,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 403 with geo wording"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:39Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:36Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:47Z",
+      "kind": "api",
+      "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "http_status": 200,
+      "final_url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+      "ui_state": "ok",
+      "flags": {
+        "code": 0
+      },
+      "note": "aggregator route: a route is quoted"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T08:57:43Z",
+      "kind": "site",
+      "url": "https://kyberswap.com",
+      "http_status": 200,
+      "final_url": "https://kyberswap.com",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

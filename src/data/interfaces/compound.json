@@ -1,0 +1,84 @@
+{
+  "id": "compound",
+  "name": "Compound",
+  "version": "III",
+  "family": "compound",
+  "description": "Compound III (Comet) is a lending protocol in which each market lends one base asset, such as USDC or ETH, against several collateral assets. It is a redesign of the earlier Compound money markets and is governed by COMP holders.",
+  "description_zh": "Compound III（Comet）是一个借贷协议，每个市场以一种基础资产（如 USDC 或 ETH）出借，并接受多种抵押资产。它是早期 Compound 货币市场的重新设计，由 COMP 持有者治理。",
+  "category": "Lending",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Polygon",
+    "Optimism",
+    "Scroll",
+    "Mantle",
+    "Linea",
+    "Unichain",
+    "Ronin"
+  ],
+  "url": "https://app.compound.xyz",
+  "frontend_repo": "https://github.com/compound-finance/webb3-frontend",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-05-21",
+  "geo_site": {
+    "s": "tos_only",
+    "countries": [],
+    "close_only": [],
+    "method": "ToS: IP-based geo-blocking"
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "hardcoded list of 38 addresses, incl. the Tornado Cash router 0x8589…DA16 (TC delisted from SDN in 2025, still blocked here)",
+    "layer": "frontend",
+    "fail": "n/a",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://www.compound.xyz/terms-of-service",
+    "updated": "2026-08-11",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "generic OFAC/UN/UK/EU + Foundation discretion",
+    "restricted_codes": []
+  },
+  "notes": "Static list in src/helpers/sanctions.ts. Legacy v2 UI: compound-finance/palisade.",
+  "live": [
+    "WebFetch (US): normal page",
+    "app.compound.finance -> app.compound.xyz (domain moved, 2026-10-10)"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "src/helpers/sanctions.ts",
+    "src/contexts/Web3Context.tsx"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 1,
+    "countries": 0,
+    "mechanisms": [
+      "screening"
+    ]
+  },
+  "category_group": "lending",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

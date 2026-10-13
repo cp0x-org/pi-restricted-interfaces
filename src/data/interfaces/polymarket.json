@@ -1,0 +1,140 @@
+{
+  "id": "polymarket",
+  "name": "Polymarket",
+  "description": "Polymarket is a prediction market where users buy and sell shares on the outcomes of real-world events. Trades are matched in an off-chain order book and settled in USDC on Polygon, with outcomes resolved through UMA's optimistic oracle.",
+  "description_zh": "Polymarket 是一个预测市场，用户买卖关于现实世界事件结果的份额。交易在链下订单簿中撮合，并以 USDC 在 Polygon 上结算，结果通过 UMA 的乐观预言机裁定。",
+  "category": "Prediction market",
+  "chains": "Polygon",
+  "networks": [
+    "Polygon"
+  ],
+  "url": "https://polymarket.com",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "AU",
+      "BE",
+      "BY",
+      "BR",
+      "BI",
+      "CF",
+      "CD",
+      "CU",
+      "DE",
+      "ET",
+      "FR",
+      "GB",
+      "IE",
+      "IR",
+      "IQ",
+      "IT",
+      "JP",
+      "KP",
+      "LB",
+      "LY",
+      "MM",
+      "MT",
+      "NI",
+      "NL",
+      "NZ",
+      "RU",
+      "SK",
+      "SO",
+      "SS",
+      "SD",
+      "SY",
+      "UM",
+      "US",
+      "VE",
+      "YE",
+      "ZW",
+      "CA-AB",
+      "CA-BC",
+      "CA-ON",
+      "CA-QC",
+      "UA-Crimea",
+      "UA-DPR",
+      "UA-LPR"
+    ],
+    "close_only": [
+      "SG",
+      "PL",
+      "TH",
+      "TW"
+    ],
+    "method": "polymarket.com/api/geoblock decides by IP: in blocked countries and regions markets stay viewable but trading is refused; close-only countries can only close positions. Lists from the help center (revision of 2026-08-14)"
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": "Help center: using a VPN to bypass the restrictions violates the Terms (section 2.1.4); no detection mechanism documented"
+  },
+  "screening": {
+    "s": "unknown",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://polymarket.com/tos",
+    "updated": "2026-08-11",
+    "us": "yes",
+    "us_scope": "",
+    "restricted": "40 countries + 7 regions (help center, revision of 2026-08-14)",
+    "restricted_codes": []
+  },
+  "notes": "The CLOB API itself is geo-blocked for the main tiers, not only the website.",
+  "live": [
+    "/api/geoblock (US, 2026-10-11) -> {blocked: true, country: US, region: VA}",
+    "/api/geoblock (US) -> {blocked: true, country: US, region: OH}; overlay 'Trading is blocked in the United States'"
+  ],
+  "geo_endpoints": [
+    "https://polymarket.com/api/geoblock"
+  ],
+  "evidence": [
+    "https://docs.polymarket.com/developers/CLOB/geoblock",
+    "https://help.polymarket.com/en/articles/13364163-geographic-restrictions"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "D",
+  "restrictions": {
+    "count": 47,
+    "countries": 47,
+    "mechanisms": []
+  },
+  "category_group": "prediction",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": [
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "isp",
+      "at": "2026-10-08T15:56:38Z",
+      "kind": "geo_endpoint",
+      "url": "https://polymarket.com/api/geoblock",
+      "http_status": 200,
+      "final_url": "https://polymarket.com/api/geoblock",
+      "ui_state": "blocked",
+      "flags": {
+        "blocked": true,
+        "country": "US",
+        "region": "VA"
+      },
+      "note": "flag true"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "synapse",
+  "name": "Synapse",
+  "description": "Synapse is a cross-chain bridge and messaging protocol that moves assets between EVM chains through liquidity pools and its interchain messaging network.",
+  "description_zh": "Synapse 是一个跨链桥和消息协议，通过流动性池及其跨链消息网络在 EVM 链之间转移资产。",
+  "category": "Bridge",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Optimism",
+    "Base",
+    "Polygon",
+    "BNB Chain",
+    "Avalanche",
+    "Blast",
+    "Scroll",
+    "Linea"
+  ],
+  "url": "https://bridge.synapseprotocol.com",
+  "frontend_repo": "https://github.com/synapsecns/sanguine/tree/master/packages/synapse-interface",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-09-28",
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "bundled blacklist + screener.omnirpc.io/fe/address/{addr} (Chainalysis Entity API behind it); connected + destination address",
+    "layer": "api",
+    "fail": "closed",
+    "fail_note": "error = flagged"
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://explorer.synapseprotocol.com/terms",
+    "updated": "2023-02",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "generic comprehensive US sanctions",
+    "restricted_codes": []
+  },
+  "notes": "Fail-closed: a screener error marks the address as flagged. Screening lives in screenAddress().",
+  "live": [
+    "screener: SDN -> {risk: true}; control -> {risk: false}"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "packages/synapse-interface/utils/screenAddress.ts",
+    "packages/synapse-interface/contexts/UserProvider.tsx",
+    "packages/synapse-interface/store/middleware/destinationAddressMiddleware.ts"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 1,
+    "countries": 0,
+    "mechanisms": [
+      "screening"
+    ]
+  },
+  "category_group": "bridge",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

@@ -1,10 +1,11 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link as RouterLink, useParams } from 'react-router-dom';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
+import CircularProgress from '@mui/material/CircularProgress';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import List from '@mui/material/List';
@@ -24,10 +25,11 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import SubCard from 'ui-component/cards/SubCard';
 
-import { dataset, interfacesById, versionsOf } from 'data/dataset';
+import { dataset, interfacesById, loadInterface, versionsOf } from 'data/dataset';
 import { interfaceMeta, notFoundMeta } from 'seo/meta';
 import { siteUrl, usePageMeta } from 'seo/usePageMeta';
 import { tokenLabel } from 'data/countries';
+import { InterfaceEntry } from 'types/restrictions';
 import { appHref, displayName, evidenceLinks, restrictionsText, tosAgainstGeo } from 'utils/restrictions';
 import CountryTokenChips from './components/CountryTokenChips';
 import EvidenceList from './components/EvidenceList';
@@ -51,12 +53,22 @@ const OBS_TONE: Record<string, Tone> = {
 export default function InterfacePage() {
   const theme = useTheme();
   const { id } = useParams<{ id: string }>();
-  const entry = id ? interfacesById.get(id) : undefined;
+  // The dashboard row is in the bundle; the whole record (notes, evidence, every observation) is its own file, loaded now.
+  const row = id ? interfacesById.get(id) : undefined;
+  const [detail, setDetail] = useState<InterfaceEntry | null>(null);
+  useEffect(() => {
+    let alive = true;
+    setDetail(null);
+    if (row) loadInterface(row.id).then((e) => alive && setDetail(e));
+    return () => {
+      alive = false;
+    };
+  }, [row]);
   const { lang, t, L, path } = useI18n();
   const T = t.iface;
-  usePageMeta(useMemo(() => (entry ? interfaceMeta(entry, dataset.meta, siteUrl(), lang) : notFoundMeta(lang)), [entry, lang]));
+  usePageMeta(useMemo(() => (row ? interfaceMeta(detail ?? row, dataset.meta, siteUrl(), lang) : notFoundMeta(lang)), [row, detail, lang]));
 
-  if (!entry) {
+  if (!row) {
     return (
       <Box sx={{ textAlign: 'center', py: 6 }}>
         <Typography variant="h4" component="h1" gutterBottom>
@@ -72,12 +84,7 @@ export default function InterfacePage() {
     );
   }
 
-  const links = evidenceLinks(entry);
-  const versions = versionsOf(entry);
-  const liveChecks = entry.live;
-
-  // Compare the Terms list with the Geo Block lists above so the page does not repeat a country list.
-  const tosVsGeo = tosAgainstGeo(entry);
+  const versions = versionsOf(row);
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -90,35 +97,36 @@ export default function InterfacePage() {
           <Grid size={{ xs: 12, md: 7 }}>
             <Stack direction="row" spacing={1.5} alignItems="center" sx={{ flexWrap: 'wrap', rowGap: 1 }}>
               <Typography variant="h2" component="h1">
-                {displayName(entry)}
-                {entry.aka && (
+                {displayName(row)}
+                {row.aka && (
                   <Typography component="span" variant="h4" color="text.secondary" sx={{ fontWeight: 400 }}>
-                    {` ${entry.aka}`}
+                    {` ${row.aka}`}
                   </Typography>
                 )}
               </Typography>
-              <LevelChip level={entry.level} size="medium" />
-              {entry.lifecycle === 'legacy' && <ToneChip tone="neutral" size="medium" label={t.chips.legacy} />}
+              <LevelChip level={row.level} size="medium" />
+              {row.lifecycle === 'legacy' && <ToneChip tone="neutral" size="medium" label={t.chips.legacy} />}
             </Stack>
             <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
-              {lang === 'en' ? entry.category : L.CATEGORY_GROUP_LABELS[entry.category_group]} · {entry.chains}
+              {lang === 'en' ? row.category : L.CATEGORY_GROUP_LABELS[row.category_group]}
+              {detail ? ` · ${detail.chains}` : ''}
             </Typography>
-            {entry.description && (
+            {detail?.description && (
               <Typography variant="body1" sx={{ mt: 1.5, maxWidth: 720 }}>
-                {localized(lang, entry.description, entry.description_zh)}
+                {localized(lang, detail.description, detail.description_zh)}
               </Typography>
             )}
-            {entry.networks.length > 0 && (
+            {row.networks.length > 0 && (
               <Stack direction="row" spacing={0.5} sx={{ mt: 1, flexWrap: 'wrap', rowGap: 0.5 }}>
-                {entry.networks.map((n) => (
+                {row.networks.map((n) => (
                   <Chip key={n} size="small" variant="outlined" color="default" label={n} />
                 ))}
               </Stack>
             )}
-            {entry.lifecycle === 'legacy' && (
+            {row.lifecycle === 'legacy' && (
               <Alert severity="warning" variant="outlined" sx={{ mt: 1.5, maxWidth: 720 }}>
                 <AlertTitle>{T.legacyTitle}</AlertTitle>
-                {entry.lifecycle_note}
+                {row.lifecycle_note}
               </Alert>
             )}
             {versions.length > 0 && (
@@ -142,11 +150,11 @@ export default function InterfacePage() {
               </Stack>
             )}
             <Typography variant="body2" sx={{ mt: 1.5, maxWidth: 720 }}>
-              {restrictionsText(entry, t.monitor.restrictionsTip, L.MECHANISM_LABELS, t.seo.listSep, L.LEVEL_DESCRIPTIONS['n/a'])}
+              {restrictionsText(row, t.monitor.restrictionsTip, L.MECHANISM_LABELS, t.seo.listSep, L.LEVEL_DESCRIPTIONS['n/a'])}
             </Typography>
             <Stack direction="row" spacing={1} sx={{ mt: 2, flexWrap: 'wrap', rowGap: 1 }}>
               <Button
-                href={appHref(entry)}
+                href={appHref(row)}
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="outlined"
@@ -155,11 +163,11 @@ export default function InterfacePage() {
                 endIcon={<LaunchIcon />}
                 sx={{ textTransform: 'none' }}
               >
-                {entry.url.replace(/^https?:\/\//, '')}
+                {row.url.replace(/^https?:\/\//, '')}
               </Button>
-              {entry.frontend_repo && (
+              {row.frontend_repo && (
                 <Button
-                  href={entry.frontend_repo}
+                  href={row.frontend_repo}
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="outlined"
@@ -170,7 +178,7 @@ export default function InterfacePage() {
                   {T.frontendCode}
                 </Button>
               )}
-              {entry.alternatives.map((a) => (
+              {row.alternatives.map((a) => (
                 <Button
                   key={a.url}
                   href={a.url}
@@ -192,18 +200,18 @@ export default function InterfacePage() {
               <Grid size={{ xs: 12 }}>
                 <Stack spacing={0.5}>
                   <Box>
-                    <RepoLink entry={entry} />
+                    <RepoLink entry={detail ?? row} />
                   </Box>
                   <Typography variant="body2" sx={{ color: theme.palette.grey[500] }}>
                     {T.frontendCode}
-                    {entry.repo_last_commit ? T.lastCommit(entry.repo_last_commit) : ''}
+                    {detail?.repo_last_commit ? T.lastCommit(detail.repo_last_commit) : ''}
                   </Typography>
                 </Stack>
               </Grid>
               <Grid size={{ xs: 6 }}>
                 <Stack spacing={0.5}>
                   <Typography variant="h5" component="p">
-                    {L.CONFIDENCE_LABELS[entry.confidence]}
+                    {detail ? L.CONFIDENCE_LABELS[detail.confidence] : '…'}
                   </Typography>
                   <Typography variant="body2" sx={{ color: theme.palette.grey[500] }}>
                     {T.confidence}
@@ -225,6 +233,32 @@ export default function InterfacePage() {
         </Grid>
       </Paper>
 
+      {detail ? (
+        <InterfaceDetails entry={detail} />
+      ) : (
+        <Stack direction="row" spacing={1.5} alignItems="center" sx={{ py: 4 }}>
+          <CircularProgress size={20} />
+          <Typography variant="body2" color="text.secondary">
+            {T.loading}
+          </Typography>
+        </Stack>
+      )}
+    </Box>
+  );
+}
+
+/** Everything below the header: mechanisms, Terms, notes, live checks, every observation and the evidence. */
+function InterfaceDetails({ entry }: { entry: InterfaceEntry }) {
+  const { t, L } = useI18n();
+  const T = t.iface;
+  const links = evidenceLinks(entry);
+  const liveChecks = entry.live;
+
+  // Compare the Terms list with the Geo Block lists above so the page does not repeat a country list.
+  const tosVsGeo = tosAgainstGeo(entry);
+
+  return (
+    <>
       <Grid container spacing={3} sx={{ mb: 3 }}>
         <Grid size={{ xs: 12, md: 6 }}>
           <MechanismCard
@@ -453,6 +487,6 @@ export default function InterfacePage() {
           </Grid>
         )}
       </Grid>
-    </Box>
+    </>
   );
 }

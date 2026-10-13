@@ -1,0 +1,73 @@
+{
+  "id": "yearn",
+  "name": "Yearn",
+  "description": "Yearn is a yield aggregator whose vaults automatically move deposits between lending, liquidity and staking strategies to optimize returns. YFI holders govern the protocol.",
+  "description_zh": "Yearn 是一个收益聚合器，其金库会自动在借贷、流动性和质押策略之间调配存款以优化收益。YFI 持有者治理协议。",
+  "category": "Yield vaults",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Polygon",
+    "Optimism",
+    "Katana",
+    "Sonic"
+  ],
+  "url": "https://yearn.fi",
+  "frontend_repo": "https://github.com/yearn/yearn.fi",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-10-07",
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "no",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": null,
+    "updated": "unknown",
+    "us": "unknown",
+    "us_scope": "",
+    "restricted": "no ToS",
+    "restricted_codes": []
+  },
+  "notes": "Clean.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "A",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "yield",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

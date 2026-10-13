@@ -1,0 +1,85 @@
+{
+  "id": "spark",
+  "name": "Spark",
+  "description": "Spark is the lending and savings arm of the Sky (formerly MakerDAO) ecosystem. SparkLend, based on Aave v3, lends USDS and DAI at rates set by Sky governance, and Spark Savings passes the Sky Savings Rate to depositors.",
+  "description_zh": "Spark 是 Sky（原 MakerDAO）生态的借贷和储蓄板块。基于 Aave v3 的 SparkLend 按 Sky 治理设定的利率出借 USDS 和 DAI，Spark Savings 则把 Sky 储蓄利率传递给存款人。",
+  "category": "Lending / savings",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Base",
+    "Arbitrum",
+    "Gnosis",
+    "Optimism",
+    "Unichain",
+    "Avalanche"
+  ],
+  "url": "https://app.spark.fi",
+  "frontend_repo": null,
+  "repo_state": "private_now",
+  "repo_status": "private-now (marsfoundation/spark-app, sparkdotfi/spark-app -> 404)",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "reported",
+    "countries": [
+      "US"
+    ],
+    "close_only": [],
+    "method": "2023: 'Accessing this website via VPN is not allowed'; US block per 2023 reports"
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "block",
+    "note": "2023 reports; current status not confirmed"
+  },
+  "screening": {
+    "s": "reported",
+    "provider": "TRM Labs (2023 reports)",
+    "layer": "api",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://spark.finance/terms-of-use",
+    "updated": "2026-04-02",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "generic; ToS 2.6: by IP, ISP, VPN, device, address",
+    "restricted_codes": []
+  },
+  "notes": "spark-app is no longer public; the last public commits survive in mirrors on GitHub. URL note: now app.spark.finance.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "https://cointelegraph.com/news/makerdao-spark-protocol-block-vpn-users-controversy"
+  ],
+  "confidence": "medium",
+  "alternatives": [
+    {
+      "name": "spark.cp0x.com",
+      "url": "https://spark.cp0x.com"
+    }
+  ],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 3,
+    "countries": 1,
+    "mechanisms": [
+      "screening",
+      "vpn"
+    ]
+  },
+  "category_group": "lending",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

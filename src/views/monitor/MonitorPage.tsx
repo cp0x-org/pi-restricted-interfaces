@@ -45,7 +45,7 @@ import {
   CategoryGroup,
   CountryStatus,
   CountryVerdict,
-  InterfaceEntry,
+  InterfaceRow,
   LAYERS,
   LEVELS,
   Layer,
@@ -107,12 +107,12 @@ interface CountryHit {
   verdict: CountryVerdict;
 }
 
-const hasPermissionless = (i: InterfaceEntry): boolean => i.alternatives.length > 0;
-const geoCount = (i: InterfaceEntry): number => i.geo_site.countries.length + i.geo_site.close_only.length;
+const hasPermissionless = (i: InterfaceRow): boolean => i.alternatives.length > 0;
+const geoCount = (i: InterfaceRow): number => i.geo_site.countries.length + i.geo_site.close_only.length;
 /** Networks listed under the name in the table (the rest is a +N count with the full list in the tooltip), kept short so the
  * one-line cell stays narrow. */
 const TABLE_NETWORKS = 2;
-const officialHost = (i: InterfaceEntry): string => i.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+const officialHost = (i: InterfaceRow): string => i.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
 type SortOrder = 'asc' | 'desc';
 
 const MECHANISMS: MechanismKind[] = ['geo_site', 'geo_feature', 'screening', 'vpn', 'kyc'];
@@ -121,7 +121,7 @@ const REPO_ORDER = ['open', 'open_stale', 'archived', 'private_now', 'closed', '
 const STATUS_ORDER = ['yes', 'reported', 'optional', 'tos_only', 'unknown', 'no'];
 const VPN_ORDER = ['block', 'detect', 'optional', 'tos_only', 'unknown', 'no'];
 
-function compare(a: InterfaceEntry, b: InterfaceEntry, field: SortableField): number {
+function compare(a: InterfaceRow, b: InterfaceRow, field: SortableField): number {
   switch (field) {
     case 'country': // needs the selected country, handled in the component
     case 'permissionless':
@@ -288,7 +288,7 @@ export default function MonitorPage() {
       (hits?.get(id) ?? [])
         .map((h) => h.verdict)
         .sort((x, y) => countryStatusRank(x.status) - countryStatusRank(y.status) || basisRank(x.basis) - basisRank(y.basis))[0];
-    const byCountry = (a: InterfaceEntry, b: InterfaceEntry): number => {
+    const byCountry = (a: InterfaceRow, b: InterfaceRow): number => {
       const va = worst(a.id);
       const vb = worst(b.id);
       if (!va || !vb) return compare(a, b, 'permissionless');
@@ -303,7 +303,7 @@ export default function MonitorPage() {
   }, [baseRows, hits, sortField, sortOrder]);
 
   // Shared captions keep table rows and cards consistent.
-  const geoCaption = (i: InterfaceEntry): string | undefined => {
+  const geoCaption = (i: InterfaceRow): string | undefined => {
     const geoCount = i.geo_site.countries.length;
     const closeOnly = i.geo_site.close_only.length;
     // One short line ("7 + 17 close-only") so the table cell never wraps.
@@ -311,7 +311,7 @@ export default function MonitorPage() {
     if (geoCount) return t.monitor.countries(geoCount);
     return closeOnly ? t.monitor.closeOnly(closeOnly) : undefined;
   };
-  const featureCaption = (i: InterfaceEntry): string | undefined =>
+  const featureCaption = (i: InterfaceRow): string | undefined =>
     i.geo_feature.countries.length ? t.monitor.countries(i.geo_feature.countries.length) : undefined;
 
   const countryLabel =

@@ -1,0 +1,85 @@
+{
+  "id": "balancer",
+  "name": "Balancer",
+  "description": "Balancer is an AMM protocol whose pools can hold several tokens in custom weights, working as self-balancing portfolios and as liquidity infrastructure for other protocols. Balancer v3 adds programmable pool hooks, and governance runs through BAL locked as veBAL.",
+  "description_zh": "Balancer 是一个 AMM 协议，其池子可以按自定义权重持有多种代币，既可作为自动再平衡的投资组合，也可作为其他协议的流动性基础设施。Balancer v3 增加了可编程的池钩子（hooks），治理通过锁定为 veBAL 的 BAL 进行。",
+  "category": "DEX",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Avalanche",
+    "Gnosis",
+    "Optimism",
+    "Polygon",
+    "Sonic"
+  ],
+  "url": "https://balancer.fi",
+  "frontend_repo": "https://github.com/balancer/frontend-monorepo/tree/main/apps/frontend-v3",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-10-08",
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "Hypernative screener (api.hypernative.xyz/screener/reputation, policy OFAC + 3 hops) via /api/wallet-check -> BlockedAddressModal",
+    "layer": "api",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://balancer.fi/terms-of-use",
+    "updated": "2025-11",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "generic",
+    "restricted_codes": []
+  },
+  "notes": "Screening runs in a Next API route that holds the Hypernative keys.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "packages/lib/shared/services/hypernative/checkAddressReputation.ts",
+    "packages/lib/modules/web3/UserAccountProvider.tsx",
+    "packages/lib/modules/web3/BlockedAddressModal.tsx"
+  ],
+  "confidence": "high",
+  "alternatives": [
+    {
+      "name": "balancer.cp0x.com",
+      "url": "https://balancer.cp0x.com"
+    }
+  ],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 1,
+    "countries": 0,
+    "mechanisms": [
+      "screening"
+    ]
+  },
+  "category_group": "dex",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

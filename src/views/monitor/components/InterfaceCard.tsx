@@ -7,7 +7,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import LaunchIcon from '@mui/icons-material/Launch';
 import { useI18n } from 'i18n';
-import { CountryVerdict, InterfaceEntry } from 'types/restrictions';
+import { CountryVerdict, InterfaceRow } from 'types/restrictions';
 import { appHref, displayName, restrictionsText } from 'utils/restrictions';
 import CountryVerdictCell from './CountryVerdictCell';
 import LevelChip from './LevelChip';
@@ -17,7 +17,7 @@ import StatusChip from './StatusChip';
 import ToneChip, { vpnTone } from './ToneChip';
 
 interface InterfaceCardProps {
-  entry: InterfaceEntry;
+  entry: InterfaceRow;
   to: string;
   onOpen: () => void;
   officialHost: string;

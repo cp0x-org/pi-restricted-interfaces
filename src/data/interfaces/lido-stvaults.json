@@ -1,0 +1,88 @@
+{
+  "id": "lido-stvaults",
+  "name": "Lido",
+  "version": "V3",
+  "aka": "stVaults",
+  "family": "lido",
+  "description": "Lido stVaults are the core of Lido V3 on Ethereum: isolated staking vaults that let institutions, node operators and protocols pick their own validator setup while minting stETH against the staked ETH. The stVaults app is where vault owners create and fund vaults and manage stETH minting and withdrawals.",
+  "description_zh": "Lido stVaults 是以太坊上 Lido V3 的核心：机构、节点运营商和协议可以通过独立的质押金库选择自己的验证者配置，并以质押的 ETH 铸造 stETH。金库所有者在 stVaults 应用中创建和注资金库，并管理 stETH 的铸造与提取。",
+  "category": "Liquid staking",
+  "chains": "Ethereum",
+  "networks": [
+    "Ethereum"
+  ],
+  "url": "https://stvaults.lido.fi",
+  "frontend_repo": "https://github.com/lidofinance/staking-vault-widget",
+  "repo_state": "open",
+  "repo_status": "open (footer links the deployed release, 0.23.0)",
+  "repo_last_commit": "2026-10-09",
+  "geo_site": {
+    "s": "no",
+    "countries": [],
+    "close_only": [],
+    "method": ""
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "/api/validation -> external validation API {validationAPI}/v2/check/{addr} (unnamed; the same service as stake.lido.fi), local address file as a fallback",
+    "layer": "api",
+    "fail": "open",
+    "fail_note": "API error and no address file: the address counts as valid; the IPFS build skips the check"
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://lido.fi/terms-of-use",
+    "updated": "2026-09-23",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "Crimea, CU, DPR, IR, LPR, KP, SY + sanctioned; US/UK: Earn only",
+    "restricted_codes": [
+      "UA-Crimea",
+      "CU",
+      "UA-DPR",
+      "IR",
+      "UA-LPR",
+      "KP",
+      "SY",
+      "GB"
+    ]
+  },
+  "notes": "Wallet screening runs through the shared Lido validation API; there is no geo-IP code. Vault limits (paused deposits, jailed vaults) come from the protocol contracts.",
+  "live": [
+    "stvaults.lido.fi/api/validation (2026-10-11): sanctioned 0x098B…2f96 -> isValid:false, control 0x5aAe…eAed -> isValid:true",
+    "stvaults.lido.fi (2026-10-10): loads release 0.23.0; only matomo.lido.fi analytics besides the app"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "pages/api/validation.ts",
+    "providers/address-validation-provider.tsx",
+    "https://github.com/lidofinance/staking-vault-widget",
+    "https://lido.fi/stvaults",
+    "https://lido.fi/terms-of-use"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 1,
+    "countries": 0,
+    "mechanisms": [
+      "screening"
+    ]
+  },
+  "category_group": "staking",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}
