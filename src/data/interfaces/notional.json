@@ -78,9 +78,7 @@
     "notional.finance bundle (2026-10-10): api.notional.finance/geoip + sanctions list incl. US -> /blocked; no VPN detector; app reads registry-v4.notional.finance",
     "WebFetch (US): metadata only (block is client-side)"
   ],
-  "geo_endpoints": [
-    "https://api.notional.finance/geoip"
-  ],
+  "geo_endpoints": [],
   "evidence": [
     "packages/shared/notionable-hooks/src/use-geoip-block.ts",
     "packages/notionable/src/account/communities.ts",

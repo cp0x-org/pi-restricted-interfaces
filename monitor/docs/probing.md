@@ -208,6 +208,8 @@ probed. Probes on 2026-10-12:
 | KyberSwap | `GET aggregator-api.kyberswap.com/ethereum/api/v1/routes` | Cloudflare 403 'Access from your country is currently restricted in accordance with our Terms of Use' (RU, BY, CU, VN on 2026-10-12) |
 | Velora | `GET api.velora.xyz/prices` | an empty HTTP 403 (RU, BY, CU, SY on 2026-10-12): no quote |
 | Jumper | `GET api.jumper.xyz/v1/geo-gates` with `Origin: https://jumper.xyz` | a gate with `Outcome: block` for the visitor's country: the Earn pages under its `PathPrefix` are replaced by 'Access unavailable in your region' (feature-limited); Cloudflare refuses the whole site from CU and SY |
+| Lido | `GET stake.lido.fi/api/geo` | `availability: limited` (staking disabled, withdrawals stay: US), or HTTP 403 'Access to our services from your current location is unavailable' (IR) |
+| Uniswap | `GET interface.gateway.uniswap.org/.../ExploreStats` with `Origin: https://app.uniswap.org` | HTTP 409 `ACCESS_DENIED`: the interface gateway refuses the country (IR on 2026-10-12) |
 
 Not testable over HTTP: Variational answers every request without a browser with a Cloudflare challenge, even its
 `/api/banner`; it needs the browser probe (P4). Drift's `geolocation.drift-labs.workers.dev` only returns the country
@@ -216,7 +218,13 @@ are no longer probed. Checked and left out on 2026-10-12: Spark's `api-v2.spark.
 Notional's `/geoip` return the country (and, for Spark, a VPN flag) while the restricted list sits in the app's code;
 1inch's `/v1.0/location` likewise (the app's `isTradeRestrictedUser` compares the country with a list in its code);
 Sky's `api.sky.money` cannot be reached through the Decodo tunnel; LI.FI `li.quest/v1/quote`, Across
-`app.across.to/api/suggested-fees`, Jupiter `lite-api.jup.ag` and Relay `api.relay.link` answered every country alike.
+`app.across.to/api/suggested-fees`, Jupiter `lite-api.jup.ag`, Relay `api.relay.link` and CoW `api.cow.fi/mainnet/api/v1/quote`
+answered every country alike. For the same reason SushiSwap's `/api/geolocation`, Beefy's `/geo/country` and Notional's
+`/geoip` were taken out of `geo_endpoints` (they return the country, the list is in the app): PancakeSwap, CoW (per token
+list), Beefy (per vault), Lombard (`/app/country.json` + ipinfo.io) and Symbiotic (`/cdn-cgi/trace`) keep their lists in
+the code too. Orca and Jito answer sanctioned countries with Cloudflare's block page (recorded as `unknown`: a firewall
+rule without geo wording); Eigenlayer's 'ACCESS RESTRICTED ... not available to persons in your jurisdiction' page is
+read as a block by the landing-page probe.
 
 A datacenter run to check VPN detection uses the same script with another proxy:
 

@@ -57,6 +57,10 @@ from sources (mechanism details, providers, notes, evidence) stay in English.
 
 ## SEO and deployment
 
+The same site files are served as plain JSON with CORS open, so another site can load the data by URL without rebuilding:
+`/monitor.json` (the dashboard rows) and `/<id>.json` (one interface's whole record, e.g. `/aave.json`); in development the
+dev server answers the same paths.
+
 `pnpm build` prerenders every public route from the site files in `src/data/` (Vite plugin in `vite.config.mts`, code in
 `src/seo/prerender.ts`), so crawlers and link previews get real HTML without running JavaScript:
 

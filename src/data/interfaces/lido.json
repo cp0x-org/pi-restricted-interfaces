@@ -15,17 +15,21 @@
   "repo_status": "open (IPFS build available)",
   "repo_last_commit": "2026-10-08",
   "geo_site": {
-    "s": "no",
-    "countries": [],
+    "s": "yes",
+    "countries": [
+      "IR",
+      "CU",
+      "SY"
+    ],
     "close_only": [],
-    "method": ""
+    "method": "stake.lido.fi/api/geo answers HTTP 403 'Access to our services from your current location is unavailable' to some countries and the app shows the same warning. The countries are those of the live probe (see the observations; 2026-10-12: CU, IR, SY)."
   },
   "geo_feature": {
     "s": "yes",
     "countries": [
       "US"
     ],
-    "scope": "/api/geo (cf-ipcountry): full|limited; remote config geo.limited=[US] -> Earn vaults; Tor/unknown -> limited"
+    "scope": "/api/geo (cf-ipcountry): full|limited; remote config geo.limited=[US] -> Earn vaults; Tor/unknown -> limited Live: /api/geo answers availability=limited from the US (2026-10-12; staking disabled, withdrawals stay), full elsewhere."
   },
   "vpn": {
     "s": "detect",
@@ -60,8 +64,35 @@
   "live": [
     "WebFetch (US): normal page"
   ],
-  "geo_endpoints": [
-    "https://stake.lido.fi/api/geo"
+  "geo_endpoints": [],
+  "api_probes": [
+    {
+      "name": "geo",
+      "method": "GET",
+      "url": "https://stake.lido.fi/api/geo",
+      "note": "The availability the app reads on load: full, or limited (staking disabled, only withdrawals), or a 403 'Access to our services from your current location is unavailable'.",
+      "flags": [
+        "country",
+        "availability"
+      ],
+      "rules": [
+        {
+          "match": "\"availability\"\\s*:\\s*\"limited\"",
+          "state": "feature_limited",
+          "note": "availability=limited: staking is disabled, withdrawals stay"
+        },
+        {
+          "match": "from your current location is unavailable",
+          "state": "blocked",
+          "note": "HTTP 403: 'Access to our services from your current location is unavailable'"
+        },
+        {
+          "match": "\"availability\"\\s*:\\s*\"full\"",
+          "state": "ok",
+          "note": "availability=full"
+        }
+      ]
+    }
   ],
   "evidence": [
     "utilsApi/geo-handler.ts",
@@ -72,10 +103,10 @@
   "confidence": "high",
   "alternatives": [],
   "lifecycle": "current",
-  "level": "B",
+  "level": "C",
   "restrictions": {
-    "count": 4,
-    "countries": 1,
+    "count": 7,
+    "countries": 4,
     "mechanisms": [
       "geo_feature",
       "screening",
@@ -86,5 +117,1692 @@
   "chain_tags": [
     "evm"
   ],
-  "observations": []
+  "observations": [
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:59Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "AE",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:56Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:06Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "AF",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:04Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:00Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "AR",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:15:57Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:53Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "AU",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:50Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:19Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "BD",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:16Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:02Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "BR",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:15:59Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:24Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "BY",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:22Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:15:56Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "CA",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:15:52Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:25Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "CA",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:23Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:47Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "CD",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:44Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:43Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "CH",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:42Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:16Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "CN",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "CN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:11Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:15:57Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "CO",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:15:54Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:41Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 403,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "geo: HTTP 403: 'Access to our services from your current location is unavailable'"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:39Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 403,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "unknown",
+      "flags": {},
+      "note": "HTTP 403 without geo wording (WAF/anti-bot?)"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:29Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "DE",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:27Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:33Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "ES",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:32Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:26Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "FR",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:24Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:17Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "GB",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:16Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:59Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "GE",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:57Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:11Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "HK",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:07Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:28Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "ID",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:24Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:04Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "IL",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:02Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:32Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "IN",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "IQ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:09Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "IQ",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "IQ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:07Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:36Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 403,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "geo: HTTP 403: 'Access to our services from your current location is unavailable'"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:34Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 403,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "unknown",
+      "flags": {},
+      "note": "HTTP 403 without geo wording (WAF/anti-bot?)"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:31Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "IT",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:30Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:54Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "KE",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:51Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:32Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "KR",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:29Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:46Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "KZ",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:44Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:14Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "LB",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:11Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:18Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 403,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "challenge",
+      "flags": {},
+      "note": "geo: Cloudflare challenge (not testable without a browser)"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:17Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 403,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "challenge",
+      "flags": {},
+      "note": "Cloudflare challenge"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:21:06Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "ML",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:21:04Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:04Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "MM",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:59Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:08Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "MX",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:05Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:57Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "MY",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:55Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:46Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "NG",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:43Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:51Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "NI",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:48Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:27Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "NL",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:25Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:55Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "PH",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:53Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:27Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "PK",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:24Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:34Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "PL",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:32Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:28Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "RU",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:26Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:56Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "SA",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:54Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:23Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "SD",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:21Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:52Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "SE",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:51Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:13Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "SG",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:10Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:51Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "SO",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "SO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:49Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:39Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "SS",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:36Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:59Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 403,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "geo: HTTP 403: 'Access to our services from your current location is unavailable'"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:57Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 403,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "unknown",
+      "flags": {},
+      "note": "HTTP 403 without geo wording (WAF/anti-bot?)"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:35Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "TH",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:32Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:51Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "TR",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:50Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:32Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "TW",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:18:29Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:46Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "UA",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:44Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:16:02Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "feature_limited",
+      "flags": {
+        "country": "US",
+        "availability": "limited"
+      },
+      "note": "geo: availability=limited: staking is disabled, withdrawals stay"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:15:59Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": "US-NY",
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:13Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "feature_limited",
+      "flags": {
+        "country": "US",
+        "availability": "limited"
+      },
+      "note": "geo: availability=limited: staking is disabled, withdrawals stay"
+    },
+    {
+      "country": "US",
+      "region": "US-NY",
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:09Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:55Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "VE",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:19:53Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:32Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "VN",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:17:28Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:37Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "YE",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:20:35Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:21:29Z",
+      "kind": "api",
+      "url": "https://stake.lido.fi/api/geo",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi/api/geo",
+      "ui_state": "ok",
+      "flags": {
+        "country": "ZW",
+        "availability": "full"
+      },
+      "note": "geo: availability=full"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T09:21:22Z",
+      "kind": "site",
+      "url": "https://stake.lido.fi",
+      "http_status": 200,
+      "final_url": "https://stake.lido.fi",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
 }
