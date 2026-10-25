@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { OG_IMAGE_PATH, PageMeta, absoluteUrl, catalog, ogLocale } from './meta';
+import { trackPageView } from 'utils/analytics';
 
 /** Public origin of the site (VITE_SITE_URL), falling back to the current origin in the browser. */
 export const siteUrl = (): string => (import.meta.env.VITE_SITE_URL || window.location.origin).replace(/\/+$/, '');
@@ -88,6 +89,8 @@ export function usePageMeta(m: PageMeta) {
     } else {
       old?.remove();
     }
+
+    trackPageView();
     // eslint-disable-next-line react-hooks/exhaustive-deps -- alternates/jsonLd are compared by their serialized form
   }, [m.lang, m.title, m.description, m.path, m.noindex, m.type, ld, alts]);
 }
