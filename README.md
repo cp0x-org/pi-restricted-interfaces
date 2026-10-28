@@ -22,7 +22,7 @@ no third-party requests.
 
 The dataset lives in [`monitor/data/interfaces.json`](monitor/data/interfaces.json) (schema v2, hand-maintained, every claim backed by evidence).
 The web app loads the generated site files in [`src/data/`](src/data/): `monitor.json` (the dashboard, one row per interface with only what the table, its country filter and the summary show) and `interfaces/<id>.json` (the whole record of one interface, loaded when its page opens); filtered to EVM networks (an app on its own chain is included when its `networks[]` lists EVM networks); the report
-and the CSV snapshot in [`monitor/out/`](monitor/out/) cover the whole catalog, the version the site shows (with its checks and evidence) is [`monitor/current/`](monitor/current/), and previous versions live in [`monitor/archive/`](monitor/archive/) as `<scanned>_<archived>/` (`pnpm monitor:update`, see [`monitor/docs/updating.md`](monitor/docs/updating.md)).
+and the CSV snapshot in [`monitor/out/`](monitor/out/) cover the whole catalog, the version the site shows (with its checks and evidence) is [`monitor/current/`](monitor/current/), and previous versions live in [`monitor/archive/`](monitor/archive/) as `<scanned>_<archived>/` (`pnpm monitor:update`, see [`monitor/docs/updating.md`](monitor/docs/updating.md)). Only what the site shows, with the same history, is published in [`dataset/`](dataset/README.md): the place for bots and other sites.
 
 ```
 monitor/data/interfaces.json + observations.json ──(pnpm monitor:build)──▶ monitor/out/report.md + interfaces.csv (the collected data, derived)
@@ -59,7 +59,7 @@ from sources (mechanism details, providers, notes, evidence) stay in English.
 
 The same site files are served as plain JSON with CORS open, so another site can load the data by URL without rebuilding:
 `/monitor.json` (the dashboard rows) and `/<id>.json` (one interface's whole record, e.g. `/aave.json`); in development the
-dev server answers the same paths.
+dev server answers the same paths. The same files, with past versions, are in the repository under [`dataset/`](dataset/README.md).
 
 `pnpm build` prerenders every public route from the site files in `src/data/` (Vite plugin in `vite.config.mts`, code in
 `src/seo/prerender.ts`), so crawlers and link previews get real HTML without running JavaScript:

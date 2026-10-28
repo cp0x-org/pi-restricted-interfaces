@@ -59,6 +59,7 @@
     "monitor:sync": "python3 -I monitor/scripts/sync.py",
     "monitor:update": "python3 -I monitor/scripts/update.py",
     "monitor:update:dry": "python3 -I monitor/scripts/update.py --dry-run",
+    "monitor:publish": "python3 -I monitor/scripts/publish.py",
     "research:code": "python3 -I research/check_code.py",
     "research:bundle": "python3 -I research/check_bundle.py",
     "research:docs": "python3 -I research/check_docs.py",

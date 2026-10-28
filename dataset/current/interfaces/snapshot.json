@@ -1,0 +1,93 @@
+{
+  "id": "snapshot",
+  "name": "Snapshot",
+  "description": "Snapshot is an off-chain voting platform where DAOs run gasless proposals and votes. Votes are signed messages weighted by token holdings or other strategies and are stored off-chain.",
+  "description_zh": "Snapshot 是一个链下投票平台，DAO 在其上进行免 gas 的提案和投票。投票是按代币持有量或其他策略加权的签名消息，存储在链下。",
+  "category": "Governance",
+  "chains": "EVM, Starknet",
+  "networks": [
+    "any EVM (off-chain voting)"
+  ],
+  "url": "https://snapshot.box",
+  "frontend_repo": "https://github.com/snapshot-labs/sx-monorepo/tree/master/apps/ui",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-10-07",
+  "geo_site": {
+    "s": "tos_only",
+    "countries": [],
+    "close_only": [],
+    "method": "ToS reserves geo-restriction"
+  },
+  "geo_feature": {
+    "s": "no",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "no",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://snapshot.box/#/terms-of-use",
+    "updated": "2025-03-04",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "SECO list incl. RU, UA, BY + 19",
+    "restricted_codes": [
+      "BY",
+      "BI",
+      "CF",
+      "CG",
+      "KP",
+      "GN",
+      "GW",
+      "IR",
+      "IQ",
+      "LB",
+      "LY",
+      "ML",
+      "MM",
+      "SS",
+      "RU",
+      "SO",
+      "SD",
+      "SY",
+      "UA",
+      "VE",
+      "YE",
+      "ZW"
+    ]
+  },
+  "notes": "Clean. Legacy snapshot.org client: snapshot-labs/snapshot.",
+  "live": [
+    "WebFetch (US): JS shell"
+  ],
+  "geo_endpoints": [],
+  "evidence": [
+    "apps/ui/src/views/Terms.vue"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "A",
+  "restrictions": {
+    "count": 0,
+    "countries": 0,
+    "mechanisms": []
+  },
+  "category_group": "other",
+  "chain_tags": [
+    "evm",
+    "starknet"
+  ],
+  "observations": []
+}

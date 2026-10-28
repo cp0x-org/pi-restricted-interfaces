@@ -17,6 +17,7 @@ data/interfaces.json ──(build.py)──▶ out/report.md, out/interfaces.csv
 pnpm monitor:sync           # no checks, no network: merge new probe runs from probe/out/ into data/observations.json, then monitor:build
 pnpm monitor:build          # validate data (+ observations, observed blocks counted), regenerate out/report.md, out/interfaces.csv and the site files in src/data, then check them
 pnpm monitor:export         # only the site files (src/data/monitor.json, src/data/interfaces/<id>.json)
+pnpm monitor:publish        # copy the site files to dataset/current/, the previous ones to dataset/archive/ (also the last step of monitor:update)
 pnpm monitor:check          # only the check: ratings, counts, country lists and probe verdicts of the site files vs the collected data
 pnpm monitor:tos            # only out/tos_vs_probe.md: Terms vs probe, per interface
 pnpm monitor:verify         # evidence paths exist in local clones, frontend repos reachable (needs network + repos/)
@@ -56,6 +57,7 @@ git clone --depth 1 --filter=blob:limit=400k https://github.com/<owner>/<repo> m
 | `data/scan_raw.json` | raw ripgrep hits from the last static scan (candidates, not findings) |
 | `scripts/build.py` | validation (enums, ISO country tokens, repo consistency), derived fields, report and CSV; with `--export` it runs the two scripts below |
 | `scripts/export.py` | the files the site loads: `src/data/monitor.json` (dashboard rows) and `src/data/interfaces/<id>.json` (one record per page) |
+| `scripts/publish.py` | copies the site files to `dataset/current/` and keeps the previous versions in `dataset/archive/` (`pnpm monitor:publish`) |
 | `scripts/check_export.py` | recomputes ratings, counts, country lists and probe verdicts from the collected data and compares them with the site files (`pnpm monitor:check`) |
 | `scripts/tos_vs_probe.py` | `out/tos_vs_probe.md`: per interface, the countries the Terms name against the countries the probe saw restricted, and the differences in both directions (`pnpm monitor:tos`, also written by the build) |
 | `scripts/scan.py` | static scan of cloned frontends |
