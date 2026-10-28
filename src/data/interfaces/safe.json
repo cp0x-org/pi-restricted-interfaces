@@ -32,8 +32,8 @@
   "geo_site": {
     "s": "yes",
     "countries": [
-      "RU",
       "BY",
+      "RU",
       "CU"
     ],
     "close_only": [],
@@ -121,14 +121,14 @@
       "country": "AE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:41:31Z",
+      "at": "2026-10-28T21:21:16Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -136,7 +136,7 @@
       "country": "AE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:41:29Z",
+      "at": "2026-10-28T21:21:13Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -149,14 +149,14 @@
       "country": "AF",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:00:05Z",
+      "at": "2026-10-28T22:00:01Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -164,7 +164,7 @@
       "country": "AF",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:00:01Z",
+      "at": "2026-10-28T21:59:58Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -177,14 +177,14 @@
       "country": "AR",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:36:52Z",
+      "at": "2026-10-28T21:08:27Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -192,7 +192,7 @@
       "country": "AR",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:36:46Z",
+      "at": "2026-10-28T21:08:24Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -205,14 +205,14 @@
       "country": "AU",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:51:18Z",
+      "at": "2026-10-28T21:42:28Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -220,7 +220,7 @@
       "country": "AU",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:51:14Z",
+      "at": "2026-10-28T21:42:24Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -233,14 +233,14 @@
       "country": "BD",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:44:16Z",
+      "at": "2026-10-28T21:27:33Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -248,35 +248,7 @@
       "country": "BD",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:44:13Z",
-      "kind": "site",
-      "url": "https://app.safe.global",
-      "http_status": 200,
-      "final_url": "https://app.safe.global",
-      "ui_state": "ok",
-      "flags": {},
-      "note": "page served (client-side gates not evaluated)"
-    },
-    {
-      "country": "BR",
-      "region": null,
-      "proxy_type": "residential",
-      "at": "2026-10-12T20:36:46Z",
-      "kind": "api",
-      "url": "https://safe-client.safe.global/v1/chains?limit=1",
-      "http_status": 200,
-      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
-      "ui_state": "ok",
-      "flags": {
-        "count": 54
-      },
-      "note": "client gateway: the gateway answers"
-    },
-    {
-      "country": "BR",
-      "region": null,
-      "proxy_type": "residential",
-      "at": "2026-10-12T20:36:42Z",
+      "at": "2026-10-28T21:27:29Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -289,7 +261,7 @@
       "country": "BY",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:54:57Z",
+      "at": "2026-10-28T21:48:08Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 403,
@@ -302,7 +274,7 @@
       "country": "BY",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:54:55Z",
+      "at": "2026-10-28T21:48:05Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -315,14 +287,14 @@
       "country": "CA",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:34:50Z",
+      "at": "2026-10-28T21:09:33Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -330,7 +302,7 @@
       "country": "CA",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:34:47Z",
+      "at": "2026-10-28T21:09:30Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -343,14 +315,14 @@
       "country": "CA",
       "region": "CA-ON",
       "proxy_type": "residential",
-      "at": "2026-10-12T20:53:22Z",
+      "at": "2026-10-28T21:47:08Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -358,7 +330,7 @@
       "country": "CA",
       "region": "CA-ON",
       "proxy_type": "residential",
-      "at": "2026-10-12T20:53:20Z",
+      "at": "2026-10-28T21:47:05Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -371,14 +343,14 @@
       "country": "CD",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:05:07Z",
+      "at": "2026-10-28T22:08:31Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -386,7 +358,7 @@
       "country": "CD",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:05:05Z",
+      "at": "2026-10-28T22:08:29Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -399,14 +371,14 @@
       "country": "CF",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:11:03Z",
+      "at": "2026-10-28T22:14:37Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -414,7 +386,7 @@
       "country": "CF",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:11:00Z",
+      "at": "2026-10-28T22:14:34Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -427,14 +399,14 @@
       "country": "CH",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:39:02Z",
+      "at": "2026-10-28T21:16:35Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -442,7 +414,7 @@
       "country": "CH",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:39:00Z",
+      "at": "2026-10-28T21:16:33Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -455,7 +427,7 @@
       "country": "CN",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:50:00Z",
+      "at": "2026-10-28T21:35:21Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -468,14 +440,14 @@
       "country": "CO",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:36:14Z",
+      "at": "2026-10-28T21:09:32Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -483,7 +455,7 @@
       "country": "CO",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:36:11Z",
+      "at": "2026-10-28T21:09:29Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -496,7 +468,7 @@
       "country": "CU",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:59:03Z",
+      "at": "2026-10-28T21:55:32Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 403,
@@ -509,7 +481,7 @@
       "country": "CU",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:08:52Z",
+      "at": "2026-10-28T21:55:29Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -522,14 +494,14 @@
       "country": "DE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:34:28Z",
+      "at": "2026-10-28T21:12:35Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -537,7 +509,7 @@
       "country": "DE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:34:27Z",
+      "at": "2026-10-28T21:12:33Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -550,14 +522,14 @@
       "country": "ES",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:34:18Z",
+      "at": "2026-10-28T21:14:28Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -565,7 +537,7 @@
       "country": "ES",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:34:16Z",
+      "at": "2026-10-28T21:14:26Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -578,14 +550,14 @@
       "country": "FR",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:34:29Z",
+      "at": "2026-10-28T21:12:45Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -593,7 +565,7 @@
       "country": "FR",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:34:27Z",
+      "at": "2026-10-28T21:12:44Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -606,14 +578,14 @@
       "country": "GB",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:34:14Z",
+      "at": "2026-10-28T21:12:04Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -621,7 +593,7 @@
       "country": "GB",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:34:12Z",
+      "at": "2026-10-28T21:12:02Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -634,14 +606,14 @@
       "country": "GE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:52:48Z",
+      "at": "2026-10-28T21:47:22Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -649,7 +621,7 @@
       "country": "GE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:52:46Z",
+      "at": "2026-10-28T21:47:20Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -662,14 +634,14 @@
       "country": "HK",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:47:33Z",
+      "at": "2026-10-28T21:33:52Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -677,7 +649,7 @@
       "country": "HK",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:47:31Z",
+      "at": "2026-10-28T21:33:49Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -690,14 +662,14 @@
       "country": "ID",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:44:03Z",
+      "at": "2026-10-28T21:27:57Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -705,7 +677,7 @@
       "country": "ID",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:44:00Z",
+      "at": "2026-10-28T21:27:54Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -718,14 +690,14 @@
       "country": "IL",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:41:30Z",
+      "at": "2026-10-28T21:22:14Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -733,7 +705,7 @@
       "country": "IL",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:41:27Z",
+      "at": "2026-10-28T21:22:12Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -746,14 +718,14 @@
       "country": "IN",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:42:46Z",
+      "at": "2026-10-28T21:25:50Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -761,35 +733,7 @@
       "country": "IN",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:42:43Z",
-      "kind": "site",
-      "url": "https://app.safe.global",
-      "http_status": 200,
-      "final_url": "https://app.safe.global",
-      "ui_state": "ok",
-      "flags": {},
-      "note": "page served (client-side gates not evaluated)"
-    },
-    {
-      "country": "IQ",
-      "region": null,
-      "proxy_type": "residential",
-      "at": "2026-10-12T20:58:56Z",
-      "kind": "api",
-      "url": "https://safe-client.safe.global/v1/chains?limit=1",
-      "http_status": 200,
-      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
-      "ui_state": "ok",
-      "flags": {
-        "count": 54
-      },
-      "note": "client gateway: the gateway answers"
-    },
-    {
-      "country": "IQ",
-      "region": null,
-      "proxy_type": "residential",
-      "at": "2026-10-12T20:58:53Z",
+      "at": "2026-10-28T21:25:46Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -802,20 +746,22 @@
       "country": "IR",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:59:26Z",
+      "at": "2026-10-28T21:55:14Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
-      "flags": {},
+      "flags": {
+        "count": 57
+      },
       "note": "client gateway: the gateway answers"
     },
     {
       "country": "IR",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:59:23Z",
+      "at": "2026-10-28T21:55:11Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -828,14 +774,14 @@
       "country": "IT",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:35:08Z",
+      "at": "2026-10-28T21:16:24Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -843,7 +789,7 @@
       "country": "IT",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:35:05Z",
+      "at": "2026-10-28T21:16:22Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -856,14 +802,14 @@
       "country": "JP",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:49:12Z",
+      "at": "2026-10-28T21:34:58Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -871,7 +817,7 @@
       "country": "JP",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:49:09Z",
+      "at": "2026-10-28T21:34:55Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -884,14 +830,14 @@
       "country": "KE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:52:38Z",
+      "at": "2026-10-28T21:42:07Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -899,7 +845,7 @@
       "country": "KE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:52:36Z",
+      "at": "2026-10-28T21:42:04Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -912,14 +858,14 @@
       "country": "KR",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:49:25Z",
+      "at": "2026-10-28T21:39:32Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -927,7 +873,7 @@
       "country": "KR",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:49:22Z",
+      "at": "2026-10-28T21:39:29Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -940,14 +886,14 @@
       "country": "KZ",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:07:58Z",
+      "at": "2026-10-28T21:59:28Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -955,7 +901,7 @@
       "country": "KZ",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:07:54Z",
+      "at": "2026-10-28T21:59:26Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -968,14 +914,14 @@
       "country": "LB",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:59:32Z",
+      "at": "2026-10-28T22:02:15Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -983,7 +929,7 @@
       "country": "LB",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:59:30Z",
+      "at": "2026-10-28T22:02:12Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -996,14 +942,14 @@
       "country": "LY",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:57:59Z",
+      "at": "2026-10-28T22:00:45Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1011,7 +957,7 @@
       "country": "LY",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:57:56Z",
+      "at": "2026-10-28T22:00:43Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1024,14 +970,14 @@
       "country": "ML",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:06:11Z",
+      "at": "2026-10-28T22:14:21Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1039,7 +985,7 @@
       "country": "ML",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:06:08Z",
+      "at": "2026-10-28T22:14:17Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1052,14 +998,14 @@
       "country": "MM",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:58:44Z",
+      "at": "2026-10-28T21:57:20Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1067,7 +1013,7 @@
       "country": "MM",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:58:41Z",
+      "at": "2026-10-28T21:57:17Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1080,14 +1026,14 @@
       "country": "MX",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:35:53Z",
+      "at": "2026-10-28T21:07:28Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1095,7 +1041,7 @@
       "country": "MX",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:35:50Z",
+      "at": "2026-10-28T21:07:25Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1108,14 +1054,14 @@
       "country": "MY",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:06:29Z",
+      "at": "2026-10-28T21:33:54Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1123,7 +1069,7 @@
       "country": "MY",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:06:26Z",
+      "at": "2026-10-28T21:33:51Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1136,14 +1082,14 @@
       "country": "NG",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:51:46Z",
+      "at": "2026-10-28T21:40:51Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1151,7 +1097,7 @@
       "country": "NG",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:51:43Z",
+      "at": "2026-10-28T21:40:48Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1164,14 +1110,14 @@
       "country": "NI",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:04:06Z",
+      "at": "2026-10-28T22:07:07Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1179,7 +1125,7 @@
       "country": "NI",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:04:03Z",
+      "at": "2026-10-28T22:07:04Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1192,14 +1138,14 @@
       "country": "NL",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:34:16Z",
+      "at": "2026-10-28T21:13:00Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1207,7 +1153,7 @@
       "country": "NL",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:34:14Z",
+      "at": "2026-10-28T21:12:59Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1220,14 +1166,14 @@
       "country": "PH",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:45:45Z",
+      "at": "2026-10-28T21:32:18Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1235,7 +1181,7 @@
       "country": "PH",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:45:42Z",
+      "at": "2026-10-28T21:32:15Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1248,14 +1194,14 @@
       "country": "PK",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:44:34Z",
+      "at": "2026-10-28T21:24:57Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1263,7 +1209,7 @@
       "country": "PK",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:44:30Z",
+      "at": "2026-10-28T21:24:54Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1276,14 +1222,14 @@
       "country": "PL",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:38:43Z",
+      "at": "2026-10-28T21:15:47Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1291,7 +1237,7 @@
       "country": "PL",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:38:41Z",
+      "at": "2026-10-28T21:15:46Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1304,7 +1250,7 @@
       "country": "RU",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:54:37Z",
+      "at": "2026-10-28T21:48:27Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 403,
@@ -1317,7 +1263,7 @@
       "country": "RU",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:54:35Z",
+      "at": "2026-10-28T21:48:24Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1330,14 +1276,14 @@
       "country": "SA",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:41:29Z",
+      "at": "2026-10-28T21:21:35Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1345,7 +1291,7 @@
       "country": "SA",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:41:27Z",
+      "at": "2026-10-28T21:21:32Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1358,14 +1304,14 @@
       "country": "SD",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:01:55Z",
+      "at": "2026-10-28T22:09:30Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1373,7 +1319,7 @@
       "country": "SD",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:01:53Z",
+      "at": "2026-10-28T22:09:28Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1386,14 +1332,14 @@
       "country": "SE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:38:49Z",
+      "at": "2026-10-28T21:17:18Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1401,7 +1347,7 @@
       "country": "SE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:38:47Z",
+      "at": "2026-10-28T21:17:16Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1414,14 +1360,14 @@
       "country": "SG",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:48:02Z",
+      "at": "2026-10-28T21:34:00Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1429,35 +1375,7 @@
       "country": "SG",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:47:59Z",
-      "kind": "site",
-      "url": "https://app.safe.global",
-      "http_status": 200,
-      "final_url": "https://app.safe.global",
-      "ui_state": "ok",
-      "flags": {},
-      "note": "page served (client-side gates not evaluated)"
-    },
-    {
-      "country": "SO",
-      "region": null,
-      "proxy_type": "residential",
-      "at": "2026-10-12T21:05:36Z",
-      "kind": "api",
-      "url": "https://safe-client.safe.global/v1/chains?limit=1",
-      "http_status": 200,
-      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
-      "ui_state": "ok",
-      "flags": {
-        "count": 54
-      },
-      "note": "client gateway: the gateway answers"
-    },
-    {
-      "country": "SO",
-      "region": null,
-      "proxy_type": "residential",
-      "at": "2026-10-12T21:05:33Z",
+      "at": "2026-10-28T21:33:58Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1470,14 +1388,14 @@
       "country": "SS",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:02:27Z",
+      "at": "2026-10-28T22:04:58Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1485,7 +1403,7 @@
       "country": "SS",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:02:24Z",
+      "at": "2026-10-28T22:04:55Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1498,14 +1416,14 @@
       "country": "SY",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:56:33Z",
+      "at": "2026-10-28T21:53:11Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1513,7 +1431,7 @@
       "country": "SY",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:56:31Z",
+      "at": "2026-10-28T21:53:08Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1526,14 +1444,14 @@
       "country": "TH",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:44:24Z",
+      "at": "2026-10-28T21:28:20Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1541,7 +1459,7 @@
       "country": "TH",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:44:21Z",
+      "at": "2026-10-28T21:28:17Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1554,14 +1472,14 @@
       "country": "TR",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:41:58Z",
+      "at": "2026-10-28T21:20:22Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1569,7 +1487,7 @@
       "country": "TR",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:41:56Z",
+      "at": "2026-10-28T21:20:20Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1582,14 +1500,14 @@
       "country": "TW",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:50:47Z",
+      "at": "2026-10-28T21:41:31Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1597,7 +1515,7 @@
       "country": "TW",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:50:44Z",
+      "at": "2026-10-28T21:41:28Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1610,14 +1528,14 @@
       "country": "UA",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:40:06Z",
+      "at": "2026-10-28T21:17:17Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1625,7 +1543,7 @@
       "country": "UA",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:40:04Z",
+      "at": "2026-10-28T21:17:15Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1638,14 +1556,14 @@
       "country": "US",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:35:35Z",
+      "at": "2026-10-28T21:07:29Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1653,35 +1571,7 @@
       "country": "US",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:35:31Z",
-      "kind": "site",
-      "url": "https://app.safe.global",
-      "http_status": 200,
-      "final_url": "https://app.safe.global",
-      "ui_state": "ok",
-      "flags": {},
-      "note": "page served (client-side gates not evaluated)"
-    },
-    {
-      "country": "US",
-      "region": "US-NY",
-      "proxy_type": "residential",
-      "at": "2026-10-12T20:52:59Z",
-      "kind": "api",
-      "url": "https://safe-client.safe.global/v1/chains?limit=1",
-      "http_status": 200,
-      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
-      "ui_state": "ok",
-      "flags": {
-        "count": 54
-      },
-      "note": "client gateway: the gateway answers"
-    },
-    {
-      "country": "US",
-      "region": "US-NY",
-      "proxy_type": "residential",
-      "at": "2026-10-12T20:52:57Z",
+      "at": "2026-10-28T21:07:26Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1694,14 +1584,14 @@
       "country": "VE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:57:19Z",
+      "at": "2026-10-28T21:53:26Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1709,7 +1599,7 @@
       "country": "VE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:57:17Z",
+      "at": "2026-10-28T21:53:24Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1722,14 +1612,14 @@
       "country": "VN",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:46:17Z",
+      "at": "2026-10-28T21:28:02Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1737,7 +1627,7 @@
       "country": "VN",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:46:14Z",
+      "at": "2026-10-28T21:27:59Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1750,14 +1640,14 @@
       "country": "YE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:10:34Z",
+      "at": "2026-10-28T22:05:44Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1765,7 +1655,7 @@
       "country": "YE",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:10:32Z",
+      "at": "2026-10-28T22:05:42Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1778,14 +1668,14 @@
       "country": "ZA",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:51:08Z",
+      "at": "2026-10-28T21:40:47Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1793,7 +1683,7 @@
       "country": "ZA",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T20:51:05Z",
+      "at": "2026-10-28T21:40:44Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
@@ -1806,14 +1696,14 @@
       "country": "ZW",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:04:15Z",
+      "at": "2026-10-28T22:06:43Z",
       "kind": "api",
       "url": "https://safe-client.safe.global/v1/chains?limit=1",
       "http_status": 200,
       "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
       "ui_state": "ok",
       "flags": {
-        "count": 54
+        "count": 57
       },
       "note": "client gateway: the gateway answers"
     },
@@ -1821,7 +1711,7 @@
       "country": "ZW",
       "region": null,
       "proxy_type": "residential",
-      "at": "2026-10-12T21:04:13Z",
+      "at": "2026-10-28T22:06:41Z",
       "kind": "site",
       "url": "https://app.safe.global",
       "http_status": 200,
