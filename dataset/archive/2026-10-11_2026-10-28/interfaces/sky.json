@@ -1,0 +1,160 @@
+{
+  "id": "sky",
+  "name": "Sky",
+  "aka": "ex-Maker",
+  "description": "Sky, formerly MakerDAO, issues the USDS and DAI stablecoins backed by crypto and real-world assets. Its app offers the Sky Savings Rate, token rewards and upgrades from DAI and MKR, and SKY holders govern the protocol.",
+  "description_zh": "Sky（原 MakerDAO）发行由加密资产和现实世界资产支持的 USDS 和 DAI 稳定币。其应用提供 Sky 储蓄利率、代币奖励以及 DAI 和 MKR 的升级，SKY 持有者治理协议。",
+  "category": "Savings / lending",
+  "chains": "Ethereum, L2",
+  "networks": [
+    "Ethereum",
+    "Base",
+    "Arbitrum",
+    "Optimism",
+    "Unichain"
+  ],
+  "url": "https://app.sky.money",
+  "frontend_repo": "https://github.com/jetstreamgg/tarmac/tree/development/apps/webapp",
+  "repo_state": "open",
+  "repo_status": "open (Jetstream, not the sky-ecosystem org)",
+  "repo_last_commit": "2026-10-07",
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "AF",
+      "BY",
+      "MM",
+      "BI",
+      "CF",
+      "CN",
+      "CU",
+      "CD",
+      "ET",
+      "GN",
+      "GW",
+      "HT",
+      "HK",
+      "IR",
+      "IQ",
+      "LB",
+      "LY",
+      "ML",
+      "NI",
+      "NE",
+      "KP",
+      "RU",
+      "SO",
+      "SS",
+      "SD",
+      "SY",
+      "GB",
+      "VE",
+      "YE",
+      "ZW",
+      "UA-Crimea",
+      "UA-DPR",
+      "UA-Kherson",
+      "UA-LPR",
+      "UA-Zaporizhzhia"
+    ],
+    "close_only": [],
+    "method": "auth service /ip/status -> is_restricted_region -> full-page block 'Access blocked'; the country list is taken from the ToS (not published in code)"
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [],
+    "scope": "api.sky.money/geo-config: per-country modules (savings/rewards/expert); unknown region disables them"
+  },
+  "vpn": {
+    "s": "detect",
+    "note": "not blocked; VPN/US users must sign the terms on every tx"
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "auth service /address/status + /address/status/enhanced before a tx (paid provider, unnamed)",
+    "layer": "api",
+    "fail": "closed",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://docs.sky.money/legal/skybase-international/terms-of-use",
+    "updated": "2026-09-01",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "35: AF, BY, MM, BI, CF, CN, CU, CD, ET, GN, GW, HT, HK, IR, IQ, LB, LY, ML, NI, NE, KP, RU, SO, SS, SD, SY, GB, VE, YE, ZW, Crimea, DPR, Kherson, LPR, Zaporizhzhia",
+    "restricted_codes": [
+      "AF",
+      "BY",
+      "MM",
+      "BI",
+      "CF",
+      "CN",
+      "CU",
+      "CD",
+      "ET",
+      "GN",
+      "GW",
+      "HT",
+      "HK",
+      "IR",
+      "IQ",
+      "LB",
+      "LY",
+      "ML",
+      "NI",
+      "NE",
+      "KP",
+      "RU",
+      "SO",
+      "SS",
+      "SD",
+      "SY",
+      "GB",
+      "VE",
+      "YE",
+      "ZW",
+      "UA-Crimea",
+      "UA-DPR",
+      "UA-Kherson",
+      "UA-LPR",
+      "UA-Zaporizhzhia"
+    ]
+  },
+  "notes": "Geo, screening and the ToS signature all go through the auth service (VITE_AUTH_URL). The repo has a skip-auth build used for e2e tests.",
+  "live": [
+    "api.sky.money/geo-config (US): isRegionRestricted=false, all modules enabled"
+  ],
+  "geo_endpoints": [
+    "https://api.sky.money/geo-config"
+  ],
+  "evidence": [
+    "apps/webapp/src/lib/authCheck.ts",
+    "apps/webapp/src/modules/ui/context/ConnectedContext.tsx",
+    "apps/webapp/src/modules/ui/hooks/useTermsSignatureGate.tsx",
+    "apps/webapp/src/hooks/authentication/useRestrictedAddressCheck.md"
+  ],
+  "confidence": "high",
+  "alternatives": [
+    {
+      "name": "sky.cp0x.com",
+      "url": "https://sky.cp0x.com"
+    }
+  ],
+  "lifecycle": "current",
+  "level": "D",
+  "restrictions": {
+    "count": 38,
+    "countries": 35,
+    "mechanisms": [
+      "geo_feature",
+      "screening",
+      "vpn"
+    ]
+  },
+  "category_group": "lending",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": []
+}

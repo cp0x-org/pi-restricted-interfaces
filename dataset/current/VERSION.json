@@ -1,8 +1,8 @@
 {
-  "version": "2026-10-11",
-  "published_at": "2026-10-28T20:59:10Z",
+  "version": "2026-10-28",
+  "published_at": "2026-10-28T23:44:07Z",
   "archived_at": null,
-  "previous": null,
+  "previous": "dataset/archive/2026-10-11_2026-10-28",
   "schema_version": 3,
   "interfaces": 69,
   "made_by": "monitor/scripts/publish.py",

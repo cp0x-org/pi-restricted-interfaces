@@ -1,0 +1,1933 @@
+{
+  "id": "aster",
+  "name": "Aster",
+  "description": "Aster is a decentralized exchange for perpetual futures and spot trading, with order books running on Aster Chain, its own privacy-focused layer 1 for derivatives. The app takes deposits from BNB Chain, Ethereum, Arbitrum, Solana and Sui.",
+  "description_zh": "Aster 是一个去中心化的永续合约与现货交易所，订单簿运行在其自有的、注重隐私的衍生品一层链 Aster Chain 上。应用接受来自 BNB Chain、以太坊、Arbitrum、Solana 和 Sui 的存款。",
+  "category": "Perps",
+  "chains": "Aster Chain, BNB Chain, Ethereum, Arbitrum, Solana, Sui",
+  "networks": [
+    "BNB Chain",
+    "Ethereum",
+    "Arbitrum"
+  ],
+  "url": "https://www.asterdex.com",
+  "referral_url": "https://www.asterdex.com/en/referral/jjrfpd",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "IR",
+      "CU",
+      "BY",
+      "SY",
+      "IQ",
+      "SD",
+      "SS",
+      "ZW",
+      "CD"
+    ],
+    "close_only": [
+      "US"
+    ],
+    "method": "POST /bapi/futures/v1/public/future/web3/common-check-ip returns {isBlocked, orderLimit, country}: isBlocked refuses the wallet connection (\"Service not available in your region\"), orderLimit leaves only closing positions and withdrawals. The countries are those of the live probe (see the observations; 2026-10-12: isBlocked in BY, CD, CU, IQ, IR, SD, SS, SY, ZW; orderLimit, that is close-only, in the US); the Terms name 11 Prohibited Jurisdictions."
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "tos_only",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://docs.asterdex.com/resources/terms-and-conditions",
+    "updated": "2026-02-25",
+    "us": "yes",
+    "us_scope": "",
+    "restricted": "Prohibited Jurisdictions: US, Canada, UK, China, North Korea, Russia, Ukraine, Cuba, Iran, Venezuela, Syria",
+    "restricted_codes": [
+      "US",
+      "CA",
+      "GB",
+      "CN",
+      "KP",
+      "RU",
+      "UA",
+      "CU",
+      "IR",
+      "VE",
+      "SY"
+    ]
+  },
+  "notes": "Closed frontend. The IP check is a public API call the app makes before connecting a wallet; the answer names the country but the mapping of countries to isBlocked and orderLimit is server-side. The IP check answered isBlocked:false and orderLimit:false from Singapore, Brazil and France on 2026-10-12.",
+  "live": [],
+  "geo_endpoints": [],
+  "api_probes": [
+    {
+      "name": "common-check-ip",
+      "method": "POST",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "body": {
+        "sourceCode": ""
+      },
+      "note": "The IP check the app makes before connecting a wallet.",
+      "flags": [
+        "data.country",
+        "data.isBlocked",
+        "data.orderLimit"
+      ],
+      "rules": [
+        {
+          "match": "\"isBlocked\"\\s*:\\s*true",
+          "state": "blocked",
+          "note": "isBlocked: the app refuses to connect a wallet"
+        },
+        {
+          "match": "\"orderLimit\"\\s*:\\s*true",
+          "state": "close_only",
+          "note": "orderLimit: only closing positions and withdrawals"
+        },
+        {
+          "match": "\"isBlocked\"\\s*:\\s*false",
+          "state": "ok",
+          "note": "isBlocked=false, orderLimit=false"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    "www.asterdex.com bundle: common-check-ip, dex-ip-blocked, 'Only closing positions and withdrawals are available'",
+    "https://docs.asterdex.com/resources/terms-and-conditions",
+    "https://docs.asterdex.com/aster-chain/overview",
+    "https://docs.asterdex.com/overview/smart-contracts"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "C",
+  "restrictions": {
+    "count": 10,
+    "countries": 10,
+    "mechanisms": []
+  },
+  "category_group": "perps",
+  "chain_tags": [
+    "evm",
+    "solana",
+    "sui"
+  ],
+  "observations": [
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:43:01Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "AE",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:42:59Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:01:43Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "AF",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:01:40Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:38:33Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "AR",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:38:30Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:52:56Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "AU",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:52:53Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:45:50Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "BD",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:45:47Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:38:29Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "BR",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:38:26Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:56:09Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "blocked",
+      "flags": {
+        "data.country": "BY",
+        "data.isBlocked": true,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked: the app refuses to connect a wallet"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:56:06Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:36:01Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "CA",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:35:58Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:54:26Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "CA",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:54:24Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:06:39Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "blocked",
+      "flags": {
+        "data.country": "CD",
+        "data.isBlocked": true,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked: the app refuses to connect a wallet"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:06:37Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T07:52:39Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "CF",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T07:52:35Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:40:05Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "CH",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:40:02Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:37:42Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "CO",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:37:39Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T07:50:06Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "blocked",
+      "flags": {
+        "data.country": "CU",
+        "data.isBlocked": true,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked: the app refuses to connect a wallet"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T07:50:04Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:35:30Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "DE",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:35:27Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:35:20Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "ES",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:35:17Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:35:32Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "FR",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:35:30Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:35:15Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "GB",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:35:13Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:53:54Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "GE",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:53:52Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:48:47Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "HK",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:48:44Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:45:29Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "ID",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:45:26Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:42:38Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "IL",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:42:36Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:44:06Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "IN",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:44:04Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IQ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:00:21Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "blocked",
+      "flags": {
+        "data.country": "IQ",
+        "data.isBlocked": true,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked: the app refuses to connect a wallet"
+    },
+    {
+      "country": "IQ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:00:19Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T07:49:55Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "blocked",
+      "flags": {
+        "data.country": "IR",
+        "data.isBlocked": true,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked: the app refuses to connect a wallet"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T07:49:53Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:36:20Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "IT",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:36:17Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:50:38Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "JP",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:50:36Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:54:09Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "KE",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:54:06Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:50:53Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "KR",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:50:50Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T07:51:33Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "LB",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T07:51:28Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:59:00Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "LY",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:58:58Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:08:05Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "ML",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:08:00Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:00:13Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "MM",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:00:11Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:37:16Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "MX",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:37:13Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T07:46:16Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "MY",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T07:46:14Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:53:20Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "NG",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:53:18Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:05:30Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "NI",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:05:27Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:35:15Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "NL",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:35:13Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:47:15Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "PH",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:47:12Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:46:27Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "PK",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:46:24Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:39:43Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "PL",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:39:41Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:57:00Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "RU",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:56:57Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:43:00Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "SA",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:42:56Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:03:37Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "blocked",
+      "flags": {
+        "data.country": "SD",
+        "data.isBlocked": true,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked: the app refuses to connect a wallet"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T07:51:31Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:39:47Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "SE",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:39:44Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:49:39Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "SG",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:49:37Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:07:03Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "SO",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "SO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:07:00Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:04:01Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "blocked",
+      "flags": {
+        "data.country": "SS",
+        "data.isBlocked": true,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked: the app refuses to connect a wallet"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:03:58Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:57:40Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "blocked",
+      "flags": {
+        "data.country": "SY",
+        "data.isBlocked": true,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked: the app refuses to connect a wallet"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:57:37Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:45:39Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "TH",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:45:36Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:43:33Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "TR",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:43:31Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:52:15Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "TW",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:52:12Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:41:15Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "UA",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:41:12Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:36:56Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "close_only",
+      "flags": {
+        "data.country": "US",
+        "data.isBlocked": false,
+        "data.orderLimit": true
+      },
+      "note": "common-check-ip: orderLimit: only closing positions and withdrawals"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:36:53Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": "US-NY",
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:54:16Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "close_only",
+      "flags": {
+        "data.country": "US",
+        "data.isBlocked": false,
+        "data.orderLimit": true
+      },
+      "note": "common-check-ip: orderLimit: only closing positions and withdrawals"
+    },
+    {
+      "country": "US",
+      "region": "US-NY",
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:54:14Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:58:33Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "VE",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:58:30Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:47:51Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "VN",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:47:48Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T07:52:04Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "YE",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T07:52:01Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:52:32Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "ok",
+      "flags": {
+        "data.country": "ZA",
+        "data.isBlocked": false,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked=false, orderLimit=false"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T20:52:30Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:05:47Z",
+      "kind": "api",
+      "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+      "ui_state": "blocked",
+      "flags": {
+        "data.country": "ZW",
+        "data.isBlocked": true,
+        "data.orderLimit": false
+      },
+      "note": "common-check-ip: isBlocked: the app refuses to connect a wallet"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-12T21:05:44Z",
+      "kind": "site",
+      "url": "https://www.asterdex.com",
+      "http_status": 200,
+      "final_url": "https://www.asterdex.com/en",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}
