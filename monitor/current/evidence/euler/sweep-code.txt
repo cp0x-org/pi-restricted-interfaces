@@ -1,7 +1,7 @@
 check: euler/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/euler-xyz/euler-lite/tree/43ba73fadda21d943224742286c7c078562e3769
-checked_at: 2026-10-11T21:03:12Z
+checked_at: 2026-10-28T22:35:44Z
 fetched: https://codeload.github.com/euler-xyz/euler-lite/tar.gz/43ba73fadda21d943224742286c7c078562e3769
 sha256: 41ba4cc0938c642e46186ee1939d5aee6821251b0d0513ced014d018262774ee
 --------------------------------------------------------------------------------

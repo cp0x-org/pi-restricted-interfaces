@@ -1,7 +1,7 @@
 check: beefy/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/beefyfinance/beefy-v2/tree/b7098b467950b1ac01dbb248241bbc9bfae72e0b
-checked_at: 2026-10-11T21:02:59Z
+checked_at: 2026-10-28T22:35:22Z
 fetched: https://codeload.github.com/beefyfinance/beefy-v2/tar.gz/b7098b467950b1ac01dbb248241bbc9bfae72e0b
 sha256: 55e2f63aa381375d8ad29109b5373374000375341cc1087095afb33ca43ad28c
 --------------------------------------------------------------------------------

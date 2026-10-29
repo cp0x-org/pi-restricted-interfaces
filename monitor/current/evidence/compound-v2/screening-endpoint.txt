@@ -1,7 +1,7 @@
 check: compound-v2/screening-endpoint
 about: The V2 app is configured with SCREENING_ENDPOINT=https://screening.compound.xyz and shows a screening-error overlay
 source: https://v2-app.compound.xyz
-checked_at: 2026-10-11T21:15:24Z
+checked_at: 2026-10-28T22:52:16Z
 http_status: 200
 --------------------------------------------------------------------------------
 scripts:

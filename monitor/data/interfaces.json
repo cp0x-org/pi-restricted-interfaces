@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 2,
-    "generated": "2026-10-11",
+    "generated": "2026-10-28",
     "sanctioned_test_address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
     "sanctioned_test_address_note": "Ronin bridge exploiter (Lazarus Group), OFAC SDN since 2022-04-14. Control address: 0x2222...2222 / 0x1111...1111",
     "live_check_egress": "US datacenter (Polymarket /api/geoblock reported country=US, region=OH; Beefy /geo/country = US)",

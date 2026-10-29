@@ -1,9 +1,9 @@
 check: aave/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://aave.com/terms-of-service
-checked_at: 2026-10-11T21:15:47Z
+checked_at: 2026-10-28T22:52:42Z
 fetched: https://aave.com/terms-of-service
-sha256: 8a2cecf661b9925a8952f4321a9ff77a38ec1ed1011e7885974b62bb02581879
+sha256: bfa81ee67a89cd36ff2bd856c2f67fc10d3e9b43dc2970f7fcde784f1421eed2
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

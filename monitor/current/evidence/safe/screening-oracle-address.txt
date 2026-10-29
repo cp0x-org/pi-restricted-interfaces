@@ -1,7 +1,7 @@
 check: safe/screening-oracle-address
 about: Chainalysis Sanctions Oracle contract used for the wallet check
 source: https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/config/constants.ts#L145
-checked_at: 2026-10-11T21:04:43Z
+checked_at: 2026-10-28T22:38:13Z
 fetched: https://raw.githubusercontent.com/safe-global/safe-wallet-monorepo/967145775447eb0375f018ab65d65a15af889412/apps/web/src/config/constants.ts
 sha256: 83a3666904c638c3f67727cd97020f8385cd9000e4ae701ce5e73916a9e007e9
 --------------------------------------------------------------------------------

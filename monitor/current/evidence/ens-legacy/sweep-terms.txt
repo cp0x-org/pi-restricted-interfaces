@@ -1,9 +1,9 @@
 check: ens-legacy/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://ens.domains/legal/terms-of-use
-checked_at: 2026-10-11T21:17:21Z
+checked_at: 2026-10-28T22:54:17Z
 fetched: https://ens.domains/legal/terms-of-use
-sha256: e59eb5e60bf6c65d857620d6ee74999d3c3c96bca2b1024d322500dc5cea2cbb
+sha256: 1e7b7ca2ab42c1e7935e61d7b88c07d150b0d3d1033ca6e602a9b9b5c01b9ff5
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

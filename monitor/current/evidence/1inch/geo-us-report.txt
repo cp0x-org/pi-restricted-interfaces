@@ -1,7 +1,7 @@
 check: 1inch/geo-us-report
 about: Press report (Sep 2021): 1inch began geofencing US IP addresses (historical; the catalog notes US access was later restored, so it records no country list)
 source: https://www.theblock.co/linked/119055/dex-aggregator-1inch-blocks-out-us-trades-in-preparation-for-separate-american-platform
-checked_at: 2026-10-11T21:18:47Z
+checked_at: 2026-10-28T22:56:32Z
 fetched: https://web.archive.org/web/20260703001938id_/https://www.theblock.co/linked/119055/dex-aggregator-1inch-blocks-out-us-trades-in-preparation-for-separate-american-platform
 sha256: 3aa10fa276715ea22384fdafaeb032635bf57c58ecd7d168d9698b4a4f346d5f
 http_status: 200

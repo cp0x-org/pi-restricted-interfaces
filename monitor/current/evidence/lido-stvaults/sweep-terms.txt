@@ -1,9 +1,9 @@
 check: lido-stvaults/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://lido.fi/terms-of-use
-checked_at: 2026-10-11T21:17:46Z
+checked_at: 2026-10-28T22:54:52Z
 fetched: https://lido.fi/terms-of-use
-sha256: d7580ffec13805259990be31fda8e5ca95899aa3169d77d4225c69096a99f5f4
+sha256: c9917efcf5cca7c519e22701493d30229da1c8fc942a089b2cdd4a4366eae25e
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

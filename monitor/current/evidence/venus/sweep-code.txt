@@ -1,7 +1,7 @@
 check: venus/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/VenusProtocol/venus-protocol-interface/tree/86ea4f7aefaaff6685aa97306fc05849a519f0f2
-checked_at: 2026-10-11T21:04:36Z
+checked_at: 2026-10-28T22:37:52Z
 fetched: https://codeload.github.com/VenusProtocol/venus-protocol-interface/tar.gz/86ea4f7aefaaff6685aa97306fc05849a519f0f2
 sha256: 041b9160ccdfbfe3ff4720dadf96036d2755c5b5e627e6fad65dc4dc2b77c8ec
 --------------------------------------------------------------------------------

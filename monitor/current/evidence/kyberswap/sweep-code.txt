@@ -1,7 +1,7 @@
 check: kyberswap/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/KyberNetwork/kyberswap-interface/tree/12c16463eb52d1f13f0961daf9445f907adaeb0e
-checked_at: 2026-10-11T21:03:33Z
+checked_at: 2026-10-28T22:36:11Z
 fetched: https://codeload.github.com/KyberNetwork/kyberswap-interface/tar.gz/12c16463eb52d1f13f0961daf9445f907adaeb0e
 sha256: 639697e04fe61b7444f01d78e0e67b398ce3e914733eea2923c93a734dd0ae07
 --------------------------------------------------------------------------------

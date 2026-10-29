@@ -1,9 +1,9 @@
 check: 1inch/screening-trm
 about: 1inch help center: wallet addresses are screened through TRM Labs
 source: https://help.1inch.com/en/articles/6588963-1inch-address-screening
-checked_at: 2026-10-11T21:18:48Z
+checked_at: 2026-10-28T22:56:32Z
 fetched: https://help.1inch.com/en/articles/6588963-1inch-address-screening
-sha256: 6768d40eb9b0363be365bfbfae900071d7f2418e18c0a5233f5455e51e0c2567
+sha256: 7d5c9363c68544d588d129140fe5c159740abcc26eb8c1b09c7c3e0c63836894
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
@@ -17,9 +17,8 @@ General
 1inch address screening
 1inch address screening
 Why and how 1inch is screening your wallet addresses
-A
-Written by Alexander Neufeld
-Updated this week
+Written by Bruno
+Updated over a week ago
 Table of contents
 1inch monitors and screens wallet addresses for illicit activities through TRM Labs .
 Why does 1inch screen addresses?
@@ -34,10 +33,10 @@ Other than a wallet address, we do not transfer any data to TRM Labs. We do not 
 ​
 Please check out our Privacy Policy
 Related Articles
+What is 1inch?
 How to connect, disconnect, and switch accounts with Metamask on 1inch
-How to use WalletConnect with 1inch Wallet
-1inch Wallet FAQ
-Getting started with 1inch Portfolio
+How to connect Trust wallet to 1inch
+How to use 1inch on Cronos
 How to use 1inch on Arc
 Did this answer your question? Disappointed Reaction 😞 Neutral Reaction 😐 Smiley Reaction 😃
 Table of contents

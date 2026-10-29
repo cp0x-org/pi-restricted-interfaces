@@ -1,14 +1,14 @@
 check: sushiswap/screening-trm-api
 about: The TRM Labs public screening API called by the Sushi frontend answers isSanctioned:true for the sanctioned wallet and false for the control
 source: POST https://api.trmlabs.com/public/v1/sanctions/screening
-checked_at: 2026-10-11T21:19:10Z
+checked_at: 2026-10-28T22:57:17Z
 --------------------------------------------------------------------------------
 === sdn (0x098B716B8Aaf21512996dC57EB0615e2383E2f96) ===
 request: POST https://api.trmlabs.com/public/v1/sanctions/screening
 status: 201
 final_url: https://api.trmlabs.com/public/v1/sanctions/screening
 header server: cloudflare
-header cf-ray: a490e6c54c32e4a7-OTP
+header cf-ray: a51d89dd9fd2e411-OTP
 header content-type: application/json; charset=utf-8
 body: [{"address":"0x098B716B8Aaf21512996dC57EB0615e2383E2f96","isSanctioned":true}]
 
@@ -17,6 +17,6 @@ request: POST https://api.trmlabs.com/public/v1/sanctions/screening
 status: 201
 final_url: https://api.trmlabs.com/public/v1/sanctions/screening
 header server: cloudflare
-header cf-ray: a490e6cabacfe443-OTP
+header cf-ray: a51d89e16850e4b2-OTP
 header content-type: application/json; charset=utf-8
 body: [{"address":"0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed","isSanctioned":false}]

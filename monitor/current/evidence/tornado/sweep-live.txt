@@ -1,7 +1,7 @@
 check: tornado/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://tornadocash.eth.limo
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
@@ -38,7 +38,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "eth.limo"
   }
  },
- "US-NY": {
+ "CA": {
   "app": {
    "status": 200,
    "final_url": "https://tornadocash.eth.limo",
@@ -55,7 +55,41 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "eth.limo"
   }
  },
- "CA-ON": {
+ "MX": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "CO": {
   "app": {
    "status": 200,
    "final_url": "https://tornadocash.eth.limo",
@@ -140,7 +174,75 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "eth.limo"
   }
  },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
  "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "SE": {
   "app": {
    "status": 200,
    "final_url": "https://tornadocash.eth.limo",
@@ -208,6 +310,142 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "eth.limo"
   }
  },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
  "SG": {
   "app": {
    "status": 200,
@@ -242,7 +480,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "eth.limo"
   }
  },
- "JP": {
+ "CN": {
   "app": {
    "status": 200,
    "final_url": "https://tornadocash.eth.limo",
@@ -259,7 +497,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "eth.limo"
   }
  },
- "BR": {
+ "KR": {
   "app": {
    "status": 200,
    "final_url": "https://tornadocash.eth.limo",
@@ -276,7 +514,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "eth.limo"
   }
  },
- "AR": {
+ "TW": {
   "app": {
    "status": 200,
    "final_url": "https://tornadocash.eth.limo",
@@ -291,6 +529,19 @@ checked_at: 2026-10-11T21:24:23Z
    "bytes": 6396,
    "redirects": [],
    "server": "eth.limo"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": null,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
   }
  },
  "NG": {
@@ -310,7 +561,24 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "eth.limo"
   }
  },
- "VN": {
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "KE": {
   "app": {
    "status": 200,
    "final_url": "https://tornadocash.eth.limo",
@@ -345,6 +613,325 @@ checked_at: 2026-10-11T21:24:23Z
   }
  },
  "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": null,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://tornadocash.eth.limo",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Tornado Cash Official - Secure, Decentralized, Private protocol",
+   "scripts": [
+    "/_nuxt/03ba169.js",
+    "/_nuxt/7feff3e.js",
+    "/_nuxt/aad17b0.js"
+   ],
+   "bytes": 6396,
+   "redirects": [],
+   "server": "eth.limo"
+  }
+ },
+ "ML": {
   "app": {
    "status": 200,
    "final_url": "https://tornadocash.eth.limo",

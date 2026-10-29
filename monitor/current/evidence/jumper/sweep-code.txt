@@ -1,7 +1,7 @@
 check: jumper/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/jumperexchange/jumper-exchange/tree/eee099c8390dc8841179f80eaed027756a447e66
-checked_at: 2026-10-11T21:03:28Z
+checked_at: 2026-10-28T22:36:03Z
 fetched: https://codeload.github.com/jumperexchange/jumper-exchange/tar.gz/eee099c8390dc8841179f80eaed027756a447e66
 sha256: c223af5dd50ac3526d4e9702c188bca487c6daaa86d753a42b8387522af5298c
 --------------------------------------------------------------------------------

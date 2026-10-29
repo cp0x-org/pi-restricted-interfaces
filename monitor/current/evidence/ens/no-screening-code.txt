@@ -1,7 +1,7 @@
 check: ens/no-screening-code
 about: No wallet-screening call or sanctions list in the ENS app
 source: https://github.com/ensdomains/ens-app-v3/tree/67b917459591440b637ea5f315eabc4229473506
-checked_at: 2026-10-11T21:04:39Z
+checked_at: 2026-10-28T22:38:02Z
 fetched: https://codeload.github.com/ensdomains/ens-app-v3/tar.gz/67b917459591440b637ea5f315eabc4229473506
 sha256: 1c414dc63a8d26a1576b5d78d0e2543aa47c3459afa150796ccc903322e20472
 --------------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 check: sushiswap/screening-trm
 about: Connected wallet is screened with the TRM Labs public sanctions API and disconnected if sanctioned
 source: https://github.com/sushi-labs/sushiswap/blob/9520c07dabb425a404544cdaf91c8608dc4b197b/apps/web/src/lib/wagmi/components/sanctioned-address-dialog.tsx#L28
-checked_at: 2026-10-11T21:04:43Z
+checked_at: 2026-10-28T22:38:17Z
 fetched: https://raw.githubusercontent.com/sushi-labs/sushiswap/9520c07dabb425a404544cdaf91c8608dc4b197b/apps/web/src/lib/wagmi/components/sanctioned-address-dialog.tsx
 sha256: d43d443176dad18d7ae1d362050bc540156a5a0029d92a58f79fe5d54d2e6017
 --------------------------------------------------------------------------------

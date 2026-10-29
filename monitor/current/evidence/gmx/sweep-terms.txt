@@ -1,7 +1,7 @@
 check: gmx/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://gmx.io/terms-and-conditions
-checked_at: 2026-10-11T21:17:44Z
+checked_at: 2026-10-28T22:54:43Z
 fetched: https://raw.githubusercontent.com/gmx-io/gmx-interface/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c/landing/src/pages/TermsAndConditions/TermsAndConditions.tsx
 sha256: 322c33124d3753cb7a877eb4c1aa4c447e3e25bf5214d34c5762064ff1a20bac
 http_status: 200

@@ -1,183 +1,231 @@
 check: aave-pro/feature-equities-us
 about: Coinbase tokenized stocks on Aave (Equities Hub) are offered only outside the US (Aave's announcement quoted by the press)
 source: https://cryptobriefing.com/coinbase-tokenized-stocks-go-live-on-aave-v4-on-base/
-checked_at: 2026-10-11T21:18:48Z
+checked_at: 2026-10-28T22:56:33Z
 fetched: https://cryptobriefing.com/coinbase-tokenized-stocks-go-live-on-aave-v4-on-base/
-sha256: 8be8d58529a4110c71bb33ea70bb28973c1c2474f53fda19029e89a40f93895d
+sha256: 30f9fbe65c19aec3e565055db6a627ebc3b36fd3e827a75850340a62ee31951f
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
 Coinbase tokenized stocks go live on Aave V4 on Base
+Skip to content
+Crypto
+Stocks
+Finance
+Prediction markets
+Macro
+AI
+Tech
+Markets
+Newsletter
 System Light Dark
-English
-Español
+Log in
+Create account
+Fear & Greed 51 Neutral
+Crypto market $2.77T +0.53% 24h breadth 175 up 78 down Bitcoin $81,306 +0.51% Ethereum $2,362 +0.53% Solana $103 +1.26% XRP $1.33 +0.11% BNB $757 +1.54% Top gainers BICO $0.018 +14.68% BLUR $0.0084 +14.07% PONS $0.290 +12.88% Top losers BLAST $0.000029 −27.74% NIL $0.079 −13.67% OSMO $0.052 −9.06% Stocks NVDA $215 −1.17% TSLA $404 −0.80% AAPL $344 −0.94% MSFT $531 −0.06% COIN $162 +0.76%
+Fear & Greed 51 Neutral
+Crypto market $2.77T +0.53% 24h breadth 175 up 78 down Bitcoin $81,306 +0.51% Ethereum $2,362 +0.53% Solana $103 +1.26% XRP $1.33 +0.11% BNB $757 +1.54% Top gainers BICO $0.018 +14.68% BLUR $0.0084 +14.07% PONS $0.290 +12.88% Top losers BLAST $0.000029 −27.74% NIL $0.079 −13.67% OSMO $0.052 −9.06% Stocks NVDA $215 −1.17% TSLA $404 −0.80% AAPL $344 −0.94% MSFT $531 −0.06% COIN $162 +0.76%
+Advertisement
+Menu
+Search Crypto Briefing
 Crypto
-Finance (2026-09-09 nav taxonomy migration).
-Links to the canonical Finance archive via the resolver, which yields the
-base-dropped /finance/ once the term is renamed and falls back to the live
-/category/markets/ pre-migration. -->
+Stocks
 Finance
-Prediction
-Markets
+Prediction markets
 Macro
 AI
 Tech
 Markets
 Newsletter
-Ads
-Sections
+Crypto sections
 Bitcoin
-DeFi
 Ethereum
+DeFi
 NFTs
-AI Agents
+AI agents
 Regulation
 Web3
 Business
-Ecosystem
-Crypto
-Bitcoin
-DeFi
-Ethereum
-NFTs
-AI Agents
-Regulation
-Web3
-Business
-Ecosystem
-Finance; canonical resolver (base-dropped /finance/ post-migration). -->
-Finance
-Prediction Markets
-Macro
-AI
-Tech
-Markets
-Newsletter
-Ads
+Create account
+Log in
 Appearance System System Light Dark
-, viewability ~27-35%). -->
-SEARCH
-Searching...
-. -->
+Español
 Coinbase tokenized stocks go live on Aave V4 on Base
 Seven tokenized US technology stocks can now be used as collateral to borrow USDC, with Chainlink providing onchain market data.
+by
+Estefano Gomez
+Fri 25 Sep 2026 · 11:42 EDT
+·
+3 min read
+In Ecosystem , Stocks
 Share
 this.removeAttribute('data-copied'), 2000);"
 class="w-7 h-7 border border-foreground/30 text-foreground rounded-full flex items-center justify-center hover:bg-muted transition-colors"
 aria-label="Copy link"
 >
 Add us on Google
-by
-Estefano Gomez
-Sep. 25, 2026
-Coinbase ’s tokenized stocks are moving further into decentralized finance, with seven of the products now live as collateral on Aave V4 on Base.
-Coinbase Tokenized Stocks are live on Aave V4 on @base .
-Tokenized stocks are only available in eligible jurisdictions outside of the U.S. pic.twitter.com/VOL363Ihd9
-— Aave (@aave) September 25, 2026
-AAPLc, AMZNc, GOOGLc, METAc, MSFTc, NVDAc and TSLAc can now be deposited into Aave’s Equities Hub and used to borrow USDC . The products are available to eligible users outside the United States, while Chainlink provides the market data used to value the collateral onchain.
-The integration gives Coinbase’s recently launched tokenized equities a new use case beyond simply holding or trading them. Rather than selling the exposure, users can now borrow against the positions while keeping the underlying economic exposure to companies including Apple , Nvidia , Microsoft and Tesla .
-The tokens are issued by Coinbase Onchain SPV Ltd., with the underlying shares held by Alpaca Securities LLC in segregated custody accounts. Coinbase says the structure gives token holders exposure to actual equities rather than a synthetic instrument that merely tracks their prices.
-Advertisement
-Dividends are also handled differently from traditional stock accounts. Instead of being paid directly to holders, cash distributions are used to purchase additional underlying shares after fees and withholding taxes. Stock splits and other corporate actions are reflected through an onchain multiplier, effectively making the tokens total-return instruments.
-Aave’s setup is relatively simple at launch. The Equities Hub has a single USDC reserve, while all seven stocks can be posted as collateral under their own risk parameters.
-The crypto and markets news you actually need—every morning.
-Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
-Email address
-Subscribe free
-We respect your privacy. Unsubscribe anytime.
-The stocks themselves cannot be borrowed, and users cannot yet open positions that borrow one tokenized equity against another.
-One complication comes from the mismatch between crypto’s always-on markets and traditional equities trading hours.
-Aave remains accessible around the clock, but Chainlink’s tokenized equity feeds publish prices from Sunday evening through Friday evening. During weekends and US market holidays, the most recent price remains fixed until the underlying market reopens.
-That means users can continue to borrow, repay or withdraw during those periods, but the value of the stock collateral does not move with any off-market developments until fresh pricing becomes available.
-Corporate actions can also temporarily interrupt activity. A reserve may be paused during events such as stock splits until the updated token multiplier is applied.
-The launch is expected to expand over time. More Coinbase Tokenized Stocks could be added to the market, while Aave also plans to introduce GHO as another borrowable asset, subject to governance and risk approval.
-The tokenized stocks are available only to eligible users outside the United States and in jurisdictions where the products are permitted.
-Disclosure: This article was edited by Estefano Gomez. For more information on how we create and review content, see our Editorial Policy .
-ECOSYSTEM
-Coinbase tokenized stocks go live on Aave V4 on Base
-Seven tokenized US technology stocks can now be used as collateral to borrow USDC, with Chainlink providing onchain market data.
-by
-Estefano Gomez
-Sep. 25, 2026
-Share
-this.removeAttribute('data-copied'), 2000);"
-class="w-7 h-7 border border-foreground/30 text-foreground rounded-full flex items-center justify-center hover:bg-muted transition-colors"
-aria-label="Copy link"
->
-Add us on Google
-Coinbase ’s tokenized stocks are moving further into decentralized finance, with seven of the products now live as collateral on Aave V4 on Base.
-Coinbase Tokenized Stocks are live on Aave V4 on @base .
-Tokenized stocks are only available in eligible jurisdictions outside of the U.S. pic.twitter.com/VOL363Ihd9
-— Aave (@aave) September 25, 2026
-AAPLc, AMZNc, GOOGLc, METAc, MSFTc, NVDAc and TSLAc can now be deposited into Aave’s Equities Hub and used to borrow USDC . The products are available to eligible users outside the United States, while Chainlink provides the market data used to value the collateral onchain.
-The integration gives Coinbase’s recently launched tokenized equities a new use case beyond simply holding or trading them. Rather than selling the exposure, users can now borrow against the positions while keeping the underlying economic exposure to companies including Apple , Nvidia , Microsoft and Tesla .
-The tokens are issued by Coinbase Onchain SPV Ltd., with the underlying shares held by Alpaca Securities LLC in segregated custody accounts. Coinbase says the structure gives token holders exposure to actual equities rather than a synthetic instrument that merely tracks their prices.
-Advertisement
-Dividends are also handled differently from traditional stock accounts. Instead of being paid directly to holders, cash distributions are used to purchase additional underlying shares after fees and withholding taxes. Stock splits and other corporate actions are reflected through an onchain multiplier, effectively making the tokens total-return instruments.
-Aave’s setup is relatively simple at launch. The Equities Hub has a single USDC reserve, while all seven stocks can be posted as collateral under their own risk parameters.
-The crypto and markets news you actually need—every morning.
-Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
-Email address
-Subscribe free
-We respect your privacy. Unsubscribe anytime.
-The stocks themselves cannot be borrowed, and users cannot yet open positions that borrow one tokenized equity against another.
-One complication comes from the mismatch between crypto’s always-on markets and traditional equities trading hours.
-Aave remains accessible around the clock, but Chainlink’s tokenized equity feeds publish prices from Sunday evening through Friday evening. During weekends and US market holidays, the most recent price remains fixed until the underlying market reopens.
-That means users can continue to borrow, repay or withdraw during those periods, but the value of the stock collateral does not move with any off-market developments until fresh pricing becomes available.
-Corporate actions can also temporarily interrupt activity. A reserve may be paused during events such as stock splits until the updated token multiplier is applied.
-The launch is expected to expand over time. More Coinbase Tokenized Stocks could be added to the market, while Aave also plans to introduce GHO as another borrowable asset, subject to governance and risk approval.
-The tokenized stocks are available only to eligible users outside the United States and in jurisdictions where the products are permitted.
-Disclosure: This article was edited by Estefano Gomez. For more information on how we create and review content, see our Editorial Policy .
-Loading more articles...
-You've reached the end
-Follow Us
-Quick Links
-Bitcoin
-Ethereum
-DeFi
-Finance
-Markets
-NFTs
-AI
-Tech
-AI Agents
-Newsletter
-Regulation
-Macro
-Advertising
-CB Select
+Coinbase Global, Inc. (COIN) price
+Full chart and stats
+Loading chart…
+Last close
+$161
+Close-to-close change
++0.9%
+Market cap
+$42.5B (shares as of 2026-06-30)
+P/E (trailing)
+Not meaningful: trailing loss. Diluted EPS −3.79 for 2025-07-01 to 2026-06-30, rolled from reported annual and year-to-date EPS (approximate) SEC filing
+Annual revenue
+$7.2B USD (FY ended 2025-12-31) 10-K
+Annual revenue growth
++9.4% (FY ended 2025-12-31 vs FY ended 2024-12-31) 10-K
+Annual net income
+1,260,327,000 USD (FY ended 2025-12-31, attributable to the company) 10-K
+Annual operating margin
+20.0% (FY ended 2025-12-31)
+Forward P/E
+Unavailable: no dated forecast source
+Gloria daily close for session Oct 27, 2026. Market cap and trailing P/E use this close with the SEC share total and trailing diluted earnings, each dated next to its figure. Annual revenue, revenue growth, net income and margin show their own fiscal period and link the 10-K. Current context may postdate this article.
+Coinbase Global, Inc. and its peers
 Company
-Team
-Contact
-Advertising
-Account
-Log In
-Quick Links
-Bitcoin
-Ethereum
-DeFi
-Finance
-Markets
-NFTs
-AI
-Tech
-AI Agents
-Newsletter
-Regulation
-Macro
-Advertising
-Contact
-CB Select
-Follow Us
-Account
-Log In
-All content is for informational purposes only and does not constitute investment advice. CryptoBriefing does not provide recommendations to buy, sell, or hold any asset or contract. See our Disclaimer & Risk Disclosure .
+Price
+Market cap
+P/E (trailing)
+Forward P/E
+Annual revenue (USD)
+Annual revenue growth
+Annual net income (USD)
+Operating margin
+Coinbase Global, Inc.
+COIN · Price dated Oct 27, 2026 · tokenized COINx
+$161
+$42.5B
+Not meaningful Loss, diluted EPS −3.79
+to 2026-06-30 · SEC filing
+Unavailable
+$7.2B FY ended 2025-12-31 · 10-K
++9.4% FY ended 2025-12-31 vs 2024-12-31 · 10-K
+1,260,327,000 FY ended 2025-12-31, attributable to the company · 10-K
+20.0% FY ended 2025-12-31
+Strategy Inc
+MSTR · Price dated Oct 27, 2026 · tokenized MSTRx
+$141
+Unavailable
+Not meaningful Loss, diluted EPS −96.98
+to 2026-06-30 · SEC filing
+Unavailable
+$477.2M FY ended 2025-12-31 · 10-K
++3.0% FY ended 2025-12-31 vs 2024-12-31 · 10-K
+−3,848,152,000 FY ended 2025-12-31, attributable to the company · 10-K
+−1,140.8% FY ended 2025-12-31
+Circle Internet Group, Inc.
+CRCL · Price dated Oct 27, 2026 · tokenized CRCLx
+$82
+Unavailable
+16.3
+Unavailable
+$2.7B FY ended 2025-12-31 · 10-K
++63.9% FY ended 2025-12-31 vs 2024-12-31 · 10-K
+−69,508,000 FY ended 2025-12-31, attributable to the company · 10-K
+−3.5% FY ended 2025-12-31
+Bitmine Immersion Technologies, Inc.
+BMNR · Price dated Oct 27, 2026 · tokenized BMNRx
+$22
+$13.0B
+Not meaningful Loss, diluted EPS −4.50
+to 2026-05-31 · SEC filing
+Unavailable
+$6.1M FY ended 2025-08-31 · 10-K
++84.1% FY ended 2025-08-31 vs 2024-08-31 · 10-K
+348,577,000 FY ended 2025-08-31, attributable to the company · 10-K
+7,288.1% FY ended 2025-08-31
+Missing figures stay unavailable. Forward P/E requires a dated source. Annual revenue, revenue growth, net income and margin come from each company's own 10-K, in US dollars, and each row shows that fiscal year. Revenue growth compares the fiscal year with the prior year stated in the same 10-K. Net income is the full year amount attributable to the company, or available to common stockholders where the filing states only that, or consolidated net income. Each row names its basis. Trailing P/E reads "Not meaningful" when the dated trailing diluted EPS is a loss or zero. An operating margin appears only when the filing states both the operating income and the revenue for the same year.
+Sources: SEC filings, Gloria daily closes and CoinGecko. Oldest record refresh: Oct 28, 2026, 4:41 PM EDT. Refresh is not a price or filing date. Each row shows its price date and its annual fiscal period. Peers use industry code and company size, or editorial selection. Market cap multiplies that row price by the company share total the latest SEC filing states for every share class together. Trailing P/E divides it by trailing diluted earnings from SEC filings. Rolled earnings per share are approximate because share counts can change between periods. Both appear only when the SEC data carries its date, so they are estimates at one price date, not synchronized filing valuations. Not investment advice.
+Coinbase ’s tokenized stocks are moving further into decentralized finance, with seven of the products now live as collateral on Aave V4 on Base.
+Coinbase Tokenized Stocks are live on Aave V4 on @base .
+Tokenized stocks are only available in eligible jurisdictions outside of the U.S. pic.twitter.com/VOL363Ihd9
+— Aave (@aave) September 25, 2026
+AAPLc, AMZNc, GOOGLc, METAc, MSFTc, NVDAc and TSLAc can now be deposited into Aave’s Equities Hub and used to borrow USDC . The products are available to eligible users outside the United States, while Chainlink provides the market data used to value the collateral onchain.
+The integration gives Coinbase’s recently launched tokenized equities a new use case beyond simply holding or trading them. Rather than selling the exposure, users can now borrow against the positions while keeping the underlying economic exposure to companies including Apple , Nvidia , Microsoft and Tesla .
+The tokens are issued by Coinbase Onchain SPV Ltd., with the underlying shares held by Alpaca Securities LLC in segregated custody accounts. Coinbase says the structure gives token holders exposure to actual equities rather than a synthetic instrument that merely tracks their prices.
+Advertisement
+Dividends are also handled differently from traditional stock accounts. Instead of being paid directly to holders, cash distributions are used to purchase additional underlying shares after fees and withholding taxes. Stock splits and other corporate actions are reflected through an onchain multiplier, effectively making the tokens total-return instruments.
+Aave’s setup is relatively simple at launch. The Equities Hub has a single USDC reserve, while all seven stocks can be posted as collateral under their own risk parameters.
+The crypto and markets news you actually need—every morning.
+Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
+Email address
+Subscribe free
+We respect your privacy. Unsubscribe anytime.
+The stocks themselves cannot be borrowed, and users cannot yet open positions that borrow one tokenized equity against another.
+One complication comes from the mismatch between crypto’s always-on markets and traditional equities trading hours.
+Aave remains accessible around the clock, but Chainlink’s tokenized equity feeds publish prices from Sunday evening through Friday evening. During weekends and US market holidays, the most recent price remains fixed until the underlying market reopens.
+That means users can continue to borrow, repay or withdraw during those periods, but the value of the stock collateral does not move with any off-market developments until fresh pricing becomes available.
+Corporate actions can also temporarily interrupt activity. A reserve may be paused during events such as stock splits until the updated token multiplier is applied.
+The launch is expected to expand over time. More Coinbase Tokenized Stocks could be added to the market, while Aave also plans to introduce GHO as another borrowable asset, subject to governance and risk approval.
+The tokenized stocks are available only to eligible users outside the United States and in jurisdictions where the products are permitted.
+Advertisement
+Traded on-chain
+Explore tokenized products tracking Coinbase Global, Inc. Open a product to see its price, network and observed pools. Access depends on the venue and where you live.
+COINx Backed · Solana $163.85 ⌄
+Token price
+$163.85
+Issuer
+Backed
+Network
+Solana
+Price from the pool with the highest reported reserves below. Token units may differ from one share.
+Where to trade COINx
+Pool liquidity
+R
+Raydium CLMM COINx / USDC · 24h volume $176K
+$1.4M
+B
+Byreal COINx / USDC · 24h volume $77K
+$164K
+R
+Raydium CLMM COINx / SOL · 24h volume $15K
+$96K
+Source: GeckoTerminal. Retrieved Oct 28, 2026 20:15 UTC. Source and pools · Verify token contract
+Top three active pools by reported total reserves from the provider’s first 20 results. Each list covers this issuer, network and contract only. Products may have different share multipliers and rights. Pool reserves are not executable depth or guaranteed execution quality. Not a recommendation.
+COINon Ondo · BNB Chain $158.28 ⌄
+Token price
+$158.28
+Issuer
+Ondo
+Network
+BNB Chain
+Price from the pool with the highest reported reserves below. Token units may differ from one share.
+Where to trade COINon
+Pool liquidity
+P
+PancakeSwap V3 比特币 / COINon 0.25% · 24h volume $343
+$4K
+Source: GeckoTerminal. Retrieved Oct 28, 2026 20:15 UTC. Source and pools · Verify token contract
+Top three active pools by reported total reserves from the provider’s first 20 results. Each list covers this issuer, network and contract only. Products may have different share multipliers and rights. Pool reserves are not executable depth or guaranteed execution quality. Not a recommendation.
+Disclosure: This article was edited by Estefano Gomez. For more information on how we create and review content, see our Editorial Policy .
+See how the news affects your money, and why. Tell Crypto Briefing Pro the coins and stocks you hold. It follows the news about them across hundreds of publishers.
+Create a free account
+More in Ecosystem
+See all
+Previous story Whitehats rescue $5.7 million in NFTs after Limit Break Payment Processor exploit
+Ripple targets $900M annualized revenue as institutional adoption triples in 2026 7 hours
+Hyperliquid unveils HIP-3* to support regulated US perpetual futures through Payward 2 days
+Evernorth secures $80M equity facility to expand XRP treasury 2 days
+Frax CEO says businesses will drive next wave of stablecoin adoption as firm tests lending product 5 days
+Tech giant LG CNS taps Chainlink to scale Korea’s tokenized finance and stablecoin markets 6 days
+Starknet votes to explore quantum-resistant layer 1 blockchain 6 days
+Crypto and stocks news, every morning.
+Create account
+Log in
+Sections
+Crypto Stocks Finance Prediction markets Macro AI Tech Markets
+Company
+About us Team Contact Newsletter Advertising
+Follow
+X Facebook Telegram LinkedIn
+All content is for informational purposes only and does not constitute investment advice. CryptoBriefing does not provide recommendations to buy, sell, or hold any asset or contract. See our Disclaimer & risk disclosure .
 © Decentral Media and Crypto Briefing® 2026.
-About Us
-Editorial Policy
-Disclaimer
-Privacy Policy
-RSS
+Editorial policy Disclaimer Press release disclaimer Privacy policy RSS Español
 System Light Dark
 The crypto and markets news you actually need—every morning.
 Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
@@ -186,8 +234,9 @@ Email address Subscribe free
 Free daily briefing
 Email address Join
 ×
-×
-The crypto and markets news you actually need—every morning.
-Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
-Email address Subscribe free
-We respect your privacy. Unsubscribe anytime.
+Crypto Briefing Pro
+The news about what you hold
+Follow your stocks and crypto. Read the news about them from hundreds of publishers in Pro.
+Create account
+Not now
+Privacy policy

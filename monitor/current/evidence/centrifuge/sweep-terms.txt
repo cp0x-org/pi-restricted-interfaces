@@ -1,9 +1,9 @@
 check: centrifuge/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://centrifuge.io/terms
-checked_at: 2026-10-11T21:17:09Z
+checked_at: 2026-10-28T22:54:07Z
 fetched: https://web.archive.org/web/9999id_/https://centrifuge.io/terms
-sha256: 4bd87e0fab08a3f064c1857edeb98c5f3f9891a38506382065d19f622dcd2b8c
+sha256: aae3f5765f8d6ad85b55dcfb74ea07805cf5199129aa857168c1db695d7dc791
 http_status: 200
 via: archive
 --------------------------------------------------------------------------------

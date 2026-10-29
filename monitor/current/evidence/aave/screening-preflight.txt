@@ -1,7 +1,7 @@
 check: aave/screening-preflight
 about: /api/preflight-compliance forwards the wallet to a private compliance API (COMPLIANCE_API_URL/check/{address})
 source: https://github.com/aave/interface/blob/32cc548b980baadea36cfea5227fc144d3f49958/pages/api/preflight-compliance.ts#L58
-checked_at: 2026-10-11T21:04:38Z
+checked_at: 2026-10-28T22:37:56Z
 fetched: https://raw.githubusercontent.com/aave/interface/32cc548b980baadea36cfea5227fc144d3f49958/pages/api/preflight-compliance.ts
 sha256: f106502d6d2b3e1ee6f3eebea80bdd52b8b43d3174bfc962c95dfd6102067413
 --------------------------------------------------------------------------------

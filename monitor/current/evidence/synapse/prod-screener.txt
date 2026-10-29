@@ -1,7 +1,7 @@
 check: synapse/prod-screener
 about: Production JS: screener.omnirpc.io call and the riskDetected event
 source: https://bridge.synapseprotocol.com
-checked_at: 2026-10-11T21:15:46Z
+checked_at: 2026-10-28T22:52:40Z
 http_status: 200
 --------------------------------------------------------------------------------
 scripts:
@@ -9,7 +9,7 @@ scripts:
   https://bridge.synapseprotocol.com/_next/static/chunks/webpack-8af8c39c42799367.js  sha256=e7245a71ecb02591b703e6cc6a1bffb5669d45503b8e6d808223b52d3776ba2b
   https://bridge.synapseprotocol.com/_next/static/chunks/framework-b0b93c41d6f05eda.js  sha256=537c9196320b4785c30efebca205e1d8258bcce0be078c892c3519ed7c15fb63
   https://bridge.synapseprotocol.com/_next/static/chunks/main-5cf8ca7d7dc58f31.js  sha256=7e93deb0af6ef53ac389dc6b1cf5887956b2d58cd8ea1021af4d16b9f5c64ab1
-  https://bridge.synapseprotocol.com/_next/static/chunks/pages/_app-636a8d14e9717e20.js  sha256=9a26d88f91942afa203f43a70490718bd5b5cc2b918877267d88821882712725
+  https://bridge.synapseprotocol.com/_next/static/chunks/pages/_app-307869cea444642a.js  sha256=eb37094850fccaadf9a64517ab4e00f5d3c03430bd7a0cb5cd67728fba1797f8
   https://bridge.synapseprotocol.com/_next/static/chunks/8174-31f4e30952c9d345.js  sha256=336e37a4922168051585d6a9a1f84e3a0f5937ac580a5b91edf572736e047120
   https://bridge.synapseprotocol.com/_next/static/chunks/1664-2c56674391423d7c.js  sha256=58eb272f66712f5e03558c3b463af2b764e067e27c5866343982719e1a96b719
   https://bridge.synapseprotocol.com/_next/static/chunks/5050-269905b4a433fd12.js  sha256=45cd4a772cde3b79ef0a60da1bcfcd653b4a2889ac16af695b6dcea35bbae1a6
@@ -18,15 +18,15 @@ scripts:
   https://bridge.synapseprotocol.com/_next/static/chunks/7302-c5062571d8fd77bf.js  sha256=89b5fee604404ec8695a0ce88d5e062a8b61a87098f541e6756f09a4dcaeab56
   https://bridge.synapseprotocol.com/_next/static/chunks/1889-30325312044443da.js  sha256=c24294529f79e937fab08fdbc29ae4b2ba6d7023e9fe0835603f20adb512c464
   https://bridge.synapseprotocol.com/_next/static/chunks/4062-924d0d483dfd0827.js  sha256=0f873fcacc2c1eb6314b973f31e7e86e207ed96834339b59ccabd2fb911dc23c
-  https://bridge.synapseprotocol.com/_next/static/chunks/8788-f6911e929c82526c.js  sha256=85763f492fb8f652ac3ab059c41862921f70cb6c4c3fdd4cea37454e3adaffe3
+  https://bridge.synapseprotocol.com/_next/static/chunks/8788-16fd782fac417c4a.js  sha256=8b583e6dc60208211fe616d7dbf42ae942502a7698d897cd21d5593bc446f1ae
   https://bridge.synapseprotocol.com/_next/static/chunks/7077-c7b8769178dc7261.js  sha256=ddad7a9761a7122f2ad589214e53f2cc2698e9ffae7e42f975202640e2005b72
   https://bridge.synapseprotocol.com/_next/static/chunks/7846-36c25823b4d11521.js  sha256=8d0cfc144a74a7a46fa3f15bbaef63583a05d8076f8a078a9800b10690150fde
   https://bridge.synapseprotocol.com/_next/static/chunks/4097-b61a188108cea92e.js  sha256=9f7e4666b8f8fa8c9712016738567798f154694779dbc6537ed277edca876e70
-  https://bridge.synapseprotocol.com/_next/static/chunks/4364-0c3c1e864fa20188.js  sha256=a68e359d87b6f5df9c5b6a5212b108f259147a23f86e1dde698591505e547a0e
-  https://bridge.synapseprotocol.com/_next/static/chunks/4089-d268ef020b544d0e.js  sha256=236cc177b68455cb3d184fab8359a66afffa9cd172f61b234d2e922872b26ff4
-  https://bridge.synapseprotocol.com/_next/static/chunks/pages/index-9a6da449b6508ff3.js  sha256=1d19d79d2a7238df43b8a5acf5b73ccb373315a6afbfda7f60500ca8a92ac61e
-  https://bridge.synapseprotocol.com/_next/static/HYCiR7xEv9z8CaS0q9_wH/_buildManifest.js  sha256=f848cfee1f2179cc62e420b942960fb208474b4b5d7dd03c7430ab23b9b3ebaf
-  https://bridge.synapseprotocol.com/_next/static/HYCiR7xEv9z8CaS0q9_wH/_ssgManifest.js  sha256=5e47ca65b6b752d2feab5850c79e04aa8ec035c325cdef9ee05507cd8f51fef1
+  https://bridge.synapseprotocol.com/_next/static/chunks/4364-c509032de469a302.js  sha256=801c4aae3f4601a5b246966bdb3b972294d0edcedf2ba56db12aba98b4380374
+  https://bridge.synapseprotocol.com/_next/static/chunks/4089-c451362bda5618ac.js  sha256=e350ee4044d85d1699fddc4b5094946664ee98d9b42d33bcb15748020a6f107b
+  https://bridge.synapseprotocol.com/_next/static/chunks/pages/index-43d1cfdad772fab9.js  sha256=3c46075ec0aacb9f113a0fbd570c4542277066d8e2888e07ae4eda8b5837a164
+  https://bridge.synapseprotocol.com/_next/static/84zYGWbJtNnrcT__Sx7kW/_buildManifest.js  sha256=816ad4e95c65e4db072a60ee0ba31f500d41549f9a52a791d53716ca39b63939
+  https://bridge.synapseprotocol.com/_next/static/84zYGWbJtNnrcT__Sx7kW/_ssgManifest.js  sha256=5e47ca65b6b752d2feab5850c79e04aa8ec035c325cdef9ee05507cd8f51fef1
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/_error-266127b216c062d3.js  sha256=cd49f5a270d91f656c42f1d33db356b27114b2627f8d19e5270be168c23b80d6
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/bridge-fb20072279f95d44.js  sha256=18d2e252f221e9093db7514ede60c5196a8ea67708784e3ca956b5458d181813
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/landing-24efad80d21fe209.js  sha256=0bda8f701078198df45352e94a977b8189a74ffe5968f8c61d390b4498de0126
@@ -38,7 +38,7 @@ scripts:
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/landing/sections/ResourcesSection-3d2f4f4659a7ffec.js  sha256=d90713d317d4d6eb5a2394f3d4889e5890a5f01b49ee6acc086f2d17e734fb26
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/landing/sections/SecuritySection-ea2c57cbd2acb773.js  sha256=fbc7ac9f5f06aea15d378e5fb61d9cf446c2e8b80e809763e078ceae86e3767b
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/landing/sections/UseCasesSection-d35a35226349a380.js  sha256=8540b8fab70d2c1f55a101ed526addc0a9309b5e4103dfe6386e31332d02eb9c
-  https://bridge.synapseprotocol.com/_next/static/chunks/pages/lifi-439cac6a4f5c78ed.js  sha256=8ea71d2219e75ddc11ef666e4982890f63d686b0406ab14465a3c7f8346e1426
+  https://bridge.synapseprotocol.com/_next/static/chunks/pages/lifi-70626682df409981.js  sha256=5b9865ab77d710c7a5308f31d8e330990e8da598eca29ada14078fbd22c539f6
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/pool/NoPoolBody-caaba682aabfaa5b.js  sha256=1788fca2233c2ba634356db371dae3a7b9e06be4c37da0ac945fb4b49b6cef31
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/pool/PoolBody-0c9b302a37e5a81e.js  sha256=529778c0293d2926beb93ceeeb22babbadd5ffa59949bca4104cdf72d289d0c6
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/pool/PoolInfoSection-03481f93dc24d80a.js  sha256=f6a702aa484c8f7e8e14bff44a86ff0a39a571b72c9cd06b7bfb8e8dadf17d19
@@ -55,30 +55,30 @@ scripts:
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/pool/poolManagement/DepositButton-5d69b1b1434732a5.js  sha256=9a7b3b4335a2258603e24295ad6129a91f2643997502b7da8d94520fd282764d
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/pool/poolManagement/Withdraw-372beb5d5d69ced6.js  sha256=28d9234717b42b233c46932fde46be085f86f8ec70657ad92a51908b15b4f189
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/pool/poolManagement/WithdrawButton-634fc7da2274c621.js  sha256=18afa17046a167faebd0e3b2993aad8fc366a616da619fc7f6a02656c8d822fe
-  https://bridge.synapseprotocol.com/_next/static/chunks/pages/pools-4164b14c9167728a.js  sha256=3d2f9f47959b5be3759e466df9dfc4bb6af5d478e83e0611be786acce31cafc3
+  https://bridge.synapseprotocol.com/_next/static/chunks/pages/pools-1b6518cce73d1eba.js  sha256=747f02874ba070a20170da57838a377d4c4a5b043323344c879eed5b48ce9d68
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/pools/PoolCard-6fe1baeb0ef136fa.js  sha256=1fb2c57ded85c6bb7655ba309ca8792d58752414fad6d61c47743f12d2f9566b
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/pools/PoolCards-b7c421964207c12c.js  sha256=5a893885491aa1a8106f9e6c25eaf8251db28bd2fb2c202281054c7f972ca77d
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/returntomonke-9b53ba42f11fabb0.js  sha256=e3d284b11135d09cae84a2b86db9218a98821b4bec2496bd4b97a391c5673ef5
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/returntomonke/ImageUploader-ea2d9789a63b4e8e.js  sha256=8c39e1cba367672da4f736472ecae4423ed64211b835a2af5b77b24745197bb2
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/returntomonke/PfpGeneratorCard-5669dcffd4e56185.js  sha256=264e40c7f73ab2161ce39008d366b09c153fafe843894779bbe0d2d0eab9f398
-  https://bridge.synapseprotocol.com/_next/static/chunks/5887-e68005a147237334.js  sha256=3b5c4051ccc84a5ffd91a151e57a4737ad27bcb47b4ceaae3618a0d32d087bb3
-  https://bridge.synapseprotocol.com/_next/static/chunks/pages/stake-22e9afab5ec36e3b.js  sha256=1da1318f5a7b0e1c5af133796c7f75ed72d21fee206c55858db96dac09a1945c
+  https://bridge.synapseprotocol.com/_next/static/chunks/6782-0b9e91f092e64bd8.js  sha256=cec8963a12e760cc33f5fb62400145f83acbc1a005a48047db9392f00a606c40
+  https://bridge.synapseprotocol.com/_next/static/chunks/pages/stake-0e009549cf240f89.js  sha256=1836253134689e4d6b1756b9b5c4ad14ba10d5e063992d96db5dd1ec6c2caa93
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/stake/StakeCard-8762e31d0c1bdeaf.js  sha256=b17a89e7162fe9a0c47cb65149879d843bb698423f306ba1cf3d2e3c5d050686
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/stake/StakeCardTitle-2d2a4232ade6f22f.js  sha256=e66c6701b017c36ca75162f6eb7ca7ff2786a5af8d0a106d149a04ac777ca82b
-  https://bridge.synapseprotocol.com/_next/static/chunks/6782-0b9e91f092e64bd8.js  sha256=cec8963a12e760cc33f5fb62400145f83acbc1a005a48047db9392f00a606c40
+  https://bridge.synapseprotocol.com/_next/static/chunks/5887-e68005a147237334.js  sha256=3b5c4051ccc84a5ffd91a151e57a4737ad27bcb47b4ceaae3618a0d32d087bb3
   https://bridge.synapseprotocol.com/_next/static/chunks/pages/state-managed-bridge-d236404637a6a34b.js  sha256=64863d17f5362ddb014268f9fd30e968232f2b8bdeb8acdda5ad1c3dee150a27
-  https://bridge.synapseprotocol.com/_next/static/chunks/pages/swap-d4089d6485fca352.js  sha256=4d8ef4f07fcf7a4dbba151bf4d50f961e6dcddd3022f0341f61d1f5dc594dbad
+  https://bridge.synapseprotocol.com/_next/static/chunks/pages/swap-9c387774b33da4c6.js  sha256=91437ba96eecc8b4786172f1007bd6e4e83cbfdfd0bd93b6a9d3fde75d248fc0
   https://bridge.synapseprotocol.com/_next/static/chunks/1246-787c68f7460a9b91.js  sha256=f5ddd1b040107d5360c630ad46303e8b2f409ad22d3885bd8f0d256717c23335
   https://bridge.synapseprotocol.com/_next/static/chunks/1653-80a46d412ba49eb1.js  sha256=6383dc19e5912f837f35ad3c996e841e2e3e4bbd004a6f77e4d64788cf0dd5b0
-  https://bridge.synapseprotocol.com/_next/static/chunks/9138-6c2466b0cfbeef2e.js  sha256=0364c9c4cc20df0caf01426eafcbb8008922f6af4ac6af7f9c7d2c160f584ce6
+  https://bridge.synapseprotocol.com/_next/static/chunks/9138-c0b288d6c707f8f8.js  sha256=a42e2ff16eb14466c6ee02d6887dd2ba3dfd8a752edd2d4898e0f81fdd08f5fb
   https://bridge.synapseprotocol.com/_next/static/chunks/5784-046cba768f4525ee.js  sha256=6676a47f7ad1370aba76bdf3cee7e3c57e2413c294d9c1fc6148be1f30d97dc9
   https://bridge.synapseprotocol.com/_next/static/chunks/3953-f0739726ab33e59d.js  sha256=3f33d0170d81e1d52ad7366c4dcc9b62e5b936014503df4db0440a08dd6f1826
   https://bridge.synapseprotocol.com/_next/static/chunks/5599-8374096dd43e9d67.js  sha256=1984f467cf4fdf675c82eef9920450195253fe5d85dbe3a162b9cf7b3693cb6c
   https://bridge.synapseprotocol.com/_next/static/chunks/9220-93d69fc4285d53b3.js  sha256=9ff5a25c0b6218250d67024ce27c0996b9116bda9fc3be6d2ca0aa15b9229363
   https://bridge.synapseprotocol.com/_next/static/chunks/624-a1dd8f91d0210ffe.js  sha256=e781029b695f856610823809831ed55269ee525792627cfbca44bf5b0cfe7b19
-  https://bridge.synapseprotocol.com/_next/static/chunks/5152-360f93518d9507b8.js  sha256=8a61c101a3525ccb14496825c7ef70e3b900d47223030d1e69cd09669168fc20
+  https://bridge.synapseprotocol.com/_next/static/chunks/5152-864ed8fbc958bba2.js  sha256=fda1db1f91e2c08eef0710e686bc99db32634ff5b74a54398aff1d3f4cee355e
   https://bridge.synapseprotocol.com/_next/static/chunks/2070-5d1f75155ad0f1f0.js  sha256=d36d3184dab0a684663678eb82bb79d8965b4cc0c9d25bb507e4909318a1637c
 
 matches:
-  https://bridge.synapseprotocol.com/_next/static/chunks/pages/_app-636a8d14e9717e20.js: …pport</a>.`}}),l=e=>{let t=u(e);i.Z.dispatchEvent(t)},c=async e=>{let t=`https://screener.omnirpc.io/fe/address/${e}`;if(s(e))return l(e),!0;try{let n=await fetch(t,{method:"GET"}),{risk:r}=await n.json();if(r)return l(e…
-  https://bridge.synapseprotocol.com/_next/static/chunks/pages/_app-636a8d14e9717e20.js: …mentElement.replaceChild(t,document.body)};return iD.Z.addEventListener("riskDetected",e),()=>{iD.Z.removeEventListener("riskDetected",e)}},[])};(L=ei||(ei={})).Destination="DESTINATION",L.Origin="ORIGIN",(U=eo||(eo={}))…
+  https://bridge.synapseprotocol.com/_next/static/chunks/pages/_app-307869cea444642a.js: …pport</a>.`}}),l=e=>{let t=u(e);i.Z.dispatchEvent(t)},c=async e=>{let t=`https://screener.omnirpc.io/fe/address/${e}`;if(s(e))return l(e),!0;try{let n=await fetch(t,{method:"GET"}),{risk:r}=await n.json();if(r)return l(e…
+  https://bridge.synapseprotocol.com/_next/static/chunks/pages/_app-307869cea444642a.js: …mentElement.replaceChild(t,document.body)};return iD.Z.addEventListener("riskDetected",e),()=>{iD.Z.removeEventListener("riskDetected",e)}},[])};(L=ei||(ei={})).Destination="DESTINATION",L.Origin="ORIGIN",(U=eo||(eo={}))…

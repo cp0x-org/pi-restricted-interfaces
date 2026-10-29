@@ -1,7 +1,7 @@
 check: relay/screening-api
 about: Relay's public endpoint /sanctioned/{address} answers sanctioned:true for the SDN wallet and false for the control
 source: https://api.relay.link/sanctioned/{address}
-checked_at: 2026-10-11T21:19:08Z
+checked_at: 2026-10-28T22:57:13Z
 --------------------------------------------------------------------------------
 === sdn (0x098B716B8Aaf21512996dC57EB0615e2383E2f96) ===
 request: GET https://api.relay.link/sanctioned/0x098B716B8Aaf21512996dC57EB0615e2383E2f96

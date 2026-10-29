@@ -1,9 +1,9 @@
 check: uniswap/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://uniswap.org/terms-of-service
-checked_at: 2026-10-11T21:18:46Z
+checked_at: 2026-10-28T22:56:27Z
 fetched: https://web.archive.org/web/9999id_/https://uniswap.org/terms-of-service
-sha256: fa514e397243ad865497de4642d8065204c96c8a6acc38570874445771b71855
+sha256: ba5c95aa584716c5b3784c0cb8346751ececadb6a48f1427ebb1120eca33518d
 http_status: 200
 via: archive
 --------------------------------------------------------------------------------

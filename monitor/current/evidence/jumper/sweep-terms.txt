@@ -1,9 +1,9 @@
 check: jumper/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://jumper.xyz/terms-of-business
-checked_at: 2026-10-11T21:17:45Z
+checked_at: 2026-10-28T22:54:50Z
 fetched: https://jumper.xyz/terms-of-business
-sha256: de906bc06db1a307ffe84aefcfe77b09cfa671dce83288646b107be222e57aa8
+sha256: 84434d1dbe2d6edc25ff9f682f1e53afa249c0dc60f2447739b3266a28afab9d
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
@@ -26,7 +26,7 @@ Residents of the European Union, the United Kingdom, or any jurisdiction whose l
 --- full text ---
 Terms Of Business | Jumper
 Terms Of Business
-Last updated: October 11, 2026
+Last updated: October 28, 2026
 Ultima Liquiditas JE BVI Ltd. (“we”, “us” or “our”) may provide you (“you”, “your”, or “User”) the ability to access the functionality provided by one or more third parties using a native interface (collectively “Functionality”). The Functionality shall include, but not limited to, (a) a website available at https://jumper.xyz and (b) the aggregation of access to various third-party tools and services across multiple blockchain networks, such as decentralized exchange (DEX) and/or yield/staking aggregation protocols. The Functionality is provided on a non-custodial, user-directed basis. We do not custody or control your digital assets at any time, do not serve as a counterparty to any trades or transfers, do not execute trades or transfers on your behalf, and do not operate any proprietary exchange, broker, custodian, or other financial service . These Terms of Business (the “Terms”) constitute a legally binding agreement and explain the terms and conditions by which you may access and use the Functionality. The Terms also incorporate our Privacy Policy by reference, available here: . By using or assessing the Functionality in any manner, including but not limited to connecting your wallet, you, (a) accept and agree to these Terms and (b) consent to the collection, use, disclosure and other handling of information as described in our Privacy Policy.
 ARBITRATION NOTICE: THESE TERMS CONTAIN AN ARBITRATION CLAUSE UNDER THE HEADING “DISPUTE RESOLUTION”. BY ACCEPTING THESE TERMS YOU AGREE THAT DISPUTES WILL BE RESOLVED BY BINDING, INDIVIDUAL ARBITRATION, AND YOU WAIVE YOUR RIGHT TO A TRIAL BY JURY OR TO PARTICIPATE AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS ACTION OR OTHER REPRESENTATIVE PROCEEDING. NOTWITHSTANDING THE FOREGOING, NOTHING IN THESE TERMS SHALL LIMIT OR AFFECT ANY STATUTORY OR MANDATORY CONSUMER RIGHTS THAT CANNOT BE WAIVED UNDER APPLICABLE LAW.
 1. Eligibility

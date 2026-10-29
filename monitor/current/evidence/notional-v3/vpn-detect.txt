@@ -1,7 +1,7 @@
 check: notional-v3/vpn-detect
 about: detect.notional.finance: a non-200 answer marks the visitor as 'VPN'
 source: https://v3.notional.finance
-checked_at: 2026-10-11T21:15:43Z
+checked_at: 2026-10-28T22:52:37Z
 http_status: 200
 --------------------------------------------------------------------------------
 scripts:

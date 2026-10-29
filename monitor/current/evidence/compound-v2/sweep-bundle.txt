@@ -1,7 +1,7 @@
 check: compound-v2/sweep-bundle
 about: Production HTML and JavaScript of the official app, searched for access-restriction signals
 source: https://v2-app.compound.xyz
-checked_at: 2026-10-11T21:06:04Z
+checked_at: 2026-10-28T22:39:50Z
 http_status: 200
 via: direct
 --------------------------------------------------------------------------------
@@ -14,7 +14,7 @@ scripts (10):
   https://v2-app.compound.xyz/static/js/runtime~dapp.87fbfb6d.js  sha256=11a093989f053528a8170ed15da37ceff3cd96bacf19ae3c69be61f86944fa90
   https://v2-app.compound.xyz/static/js/vendors~dapp.1e26303b.chunk.js  sha256=ec4935e9fd9b39ba90008c2599e4ef1c3b876a2e4c468843b645457a7d7f513e
   https://v2-app.compound.xyz/static/js/dapp.49abee4e.chunk.js  sha256=e9eec1278e39cf90dae94a0fc593f9be9620ee0847ea5108dfc37512a46b400a
-  https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920  sha256=3e5bc7ca508f5d5aa7255341243840c8d2b70c8aea323800b51610df3f5a8a2c
+  https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092  sha256=637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e
   https://v2-app.compound.xyz/static/js/7.81d8a449.chunk.js  sha256=42445117fdb18d8cc94460fd7117568c98c12ac1a05f397233e0dc3fa60edba7
   https://v2-app.compound.xyz/static/js/8.138d062f.chunk.js  sha256=6991e6e8dff0900e56dba3b9b8071cfa4883a0a0c5fb097094c51455769c980f
 

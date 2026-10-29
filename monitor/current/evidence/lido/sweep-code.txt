@@ -1,7 +1,7 @@
 check: lido/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/lidofinance/ethereum-staking-widget/tree/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a
-checked_at: 2026-10-11T21:03:34Z
+checked_at: 2026-10-28T22:36:15Z
 fetched: https://codeload.github.com/lidofinance/ethereum-staking-widget/tar.gz/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a
 sha256: 5a3e75d05a0a844cc2fd2d7ed2997ef0c6e2f7458a2f74eee590f40abd824c53
 --------------------------------------------------------------------------------

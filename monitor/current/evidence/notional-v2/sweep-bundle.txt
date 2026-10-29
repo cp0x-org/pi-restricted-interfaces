@@ -1,14 +1,14 @@
 check: notional-v2/sweep-bundle
 about: Production HTML and JavaScript of the official app, searched for access-restriction signals
 source: https://v2.notional.finance
-checked_at: 2026-10-11T21:09:59Z
+checked_at: 2026-10-28T22:45:54Z
 http_status: 200
 via: direct
 --------------------------------------------------------------------------------
 page: https://v2.notional.finance (HTTP 200)
 scripts (90):
-  https://www.googleoptimize.com/optimize.js?id=OPT-P63CDRK  sha256=95717286dff5ccc6b4600b0fb3cf37b82bbb864dece727d12849c4d867e54260
-  https://www.youtube.com/iframe_api  sha256=d1fa92e07268faa87eb90de689fea960fc2ef366fdcc5ba1c825e1aec5976896
+  https://www.googleoptimize.com/optimize.js?id=OPT-P63CDRK  sha256=f6559d805feb381b866ba3ae35ad8995a86b18dbc8f10d7e04a490f1f78e8c69
+  https://www.youtube.com/iframe_api  sha256=04f57fd942f29a29f34affceee7d4edc70b71d64f348ad046250a114cf2f664c
   https://v2.notional.finance/runtime.fbdf61454fb157b5.js  sha256=ff25ae8906152f476783b9d16ffabb2cd1488131f919aabc7511be9bd672c69f
   https://v2.notional.finance/runtime.2e623cc74eceb3b9.es5.js  sha256=a3991c91e76d63506efddfa3c22fdb42cc33ae45adb2e5b742dacc135d6038e2
   https://v2.notional.finance/polyfills.a2d657447a9c429c.js  sha256=462adff560ceed6e5aada574350b3225223777b9eaf26b2b4f5d76f83910e6e0

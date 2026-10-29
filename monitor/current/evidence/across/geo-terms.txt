@@ -1,16 +1,16 @@
 check: across/geo-terms
 about: The Terms reserve blocking activity from a jurisdiction (incl. by IP address) at Risk Labs' discretion
 source: https://across.to/terms-of-service
-checked_at: 2026-10-11T21:18:48Z
+checked_at: 2026-10-28T22:56:33Z
 fetched: https://across.to/terms-of-service
-sha256: 80a24d7c8dd5fdc31c72f9d74fca8cdaa745665f3f95e8f9dc05d7c2c20bb7c8
+sha256: 063538d55a91552bd4f8c536e8d8071cf6d7a14df7e9a10aaf1f93e75ae7baa5
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
 Across Terms of Service
 TRANSFER HISTORY SUPPORT DOCS
 Terms of Service
-Dated: October 22, 2025
+Dated: October 21, 2026
 These Terms of Service (the "Agreement" or the "Terms") explain the terms and conditions by which you may access and use the Products provided by Risk Labs (referred to herein as "Risk Labs", "we", "our", or "us"). The Products shall include, but shall not necessarily be limited to, https://app.across.to, a website-hosted user interface (the "Interface" or "App") and all products and features available via the Interface, including the API and all other software that Risk Labs or a third party has developed for crosschain bridging, crosschain onboarding, crosschain intents, and crosschain settlement on the Interface (collectively, the "Products"). You must read this Agreement carefully as it governs your use of the Products. By accessing or using any of the Products, you signify that you have read, understand, and agree to be bound by this Agreement in its entirety. If you do not agree, you are not authorized to access or use any of our Products and should not use our Products.
 To access or use any of our Products, you must be able to form a legally binding contract with us. Accordingly, you represent that you are at least the age of majority in your jurisdiction (e.g., 18 years old in the United States) and have the full right, power, and authority to enter into and comply with the terms and conditions of this Agreement on behalf of yourself and any company or legal entity for which you may access or use the Interface. If you are entering into this Agreement on behalf of an entity, you represent to us that you have the legal authority to bind such entity.
 You further represent that you are not (a) the subject of economic or trade sanctions administered or enforced by any governmental authority or otherwise designated on any list of prohibited or restricted parties (including but not limited to the list maintained by the Office of Foreign Assets Control of the U.S. Department of the Treasury) (collectively, a "Sanctioned Person") or (b) a resident, citizen or agent of, or organized in, and do not have a registered office in, a jurisdiction or territory that is the subject of comprehensive country-wide, territory-wide, or regional economic sanctions by the United States (collectively, "Restricted Territories"). You further represent that you do not intend to transact with any Sanctioned Person or any person present in a Restricted Territory. Finally, you represent that your access and use of any of our Products will fully comply with all applicable laws, rules and regulations, and that you will not access or use any of our Products to conduct, promote, or otherwise facilitate any illegal activity. If use of our Products are not permitted in your jurisdiction, you may not attempt to use any of our Products. Use of a Virtual Private Network ("VPN") or any other privacy or anonymization tools or techniques to circumvent, or attempt to circumvent, to circumvent any such jurisdictional restrictions is prohibited.
@@ -30,6 +30,7 @@ Risk Labs has no control over and is not responsible for the privacy practices o
 Risk Labs may update the list of Providers and links to Provider Terms from time to time without notice. Current Providers include, without limitation, Uniswap Labs (see: Uniswap Terms of Service and Uniswap Privacy Policy).
 1.4 API Integrators
 If you integrate or access any Risk Labs API, software development kits, or developer tooling ("Across API") to provide functionality to your end users: (1) Binding Terms: Before enabling any end-user access to functionality powered by the Across API, you must ensure such end users expressly agree to legally binding terms and a privacy policy no less protective of Risk Labs than these Terms and the Across Privacy Policy, including with respect to intellectual property, data rights, disclaimers, limitations of liability, class-action waiver, and arbitration; (2) Enforcement: You must incorporate these Terms by reference into your end-user terms and enforce them for Risk Labs' benefit upon request (including suspending or revoking access for violations); (3) Attribution & Accuracy: Where data, routes, or quotes are supplied by Risk Labs, you must clearly attribute such outputs (e.g., "Powered by Across" and must not modify quotes or call-data in a manner that could mislead users; (4) Security & Compliance: You must maintain appropriate technical and organizational measures to protect API keys and data; comply with applicable laws, rules and regulations (including export/sanctions); and not use the Across API to create a competing service; and (5) Suspension: Risk Labs may, in its sole discretion, suspend your or your users' API access where continued use poses security, legal, or compliance risk, or violates these Terms. For additional detail on the required terms for integrations with any of our Products, please contact us by sending an email to: [email protected]
+The revenue-share configuration applicable to your integration applies to all fees you collect on transactions powered by the Across API, including fees collected through separate contracts or otherwise outside the API's app-fee mechanism. Risk Labs may, in its sole discretion, suspend or terminate your API access for noncompliance.
 2. Modifications of this Agreement or Our Products
 2.1 Modifications of this Agreement
 We reserve the right, in our sole discretion, to modify this Agreement from time to time. If we make any material modifications, we will notify you by updating the date at the top of the Agreement and by maintaining a current version of the Agreement at https://across.to/terms-of-service. All modifications will be effective when they are posted, and your continued accessing or use of any of the Products will serve as confirmation of your acceptance of those modifications. If you do not agree with any modifications to this Agreement, you must immediately stop accessing and using all of our Products.
@@ -154,6 +155,7 @@ Support
 Social
 X
 Telegram
+LinkedIn
 Popular Routes
 Bridge to Ethereum
 Bridge to Base

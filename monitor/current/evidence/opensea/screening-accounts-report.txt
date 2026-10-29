@@ -1,9 +1,9 @@
 check: opensea/screening-accounts-report
 about: Press report (Mar 2022): Iranian accounts were deactivated, incl. artists living abroad
 source: https://www.artnews.com/art-news/news/opensea-deplatforms-iranian-users-us-sanctions-1234621105/
-checked_at: 2026-10-11T21:18:56Z
+checked_at: 2026-10-28T22:56:50Z
 fetched: https://www.artnews.com/art-news/news/opensea-deplatforms-iranian-users-us-sanctions-1234621105/
-sha256: 0595d5cdb831dcdf05072bdb57987d843bc4b652c773c0512b0304e883aa39bb
+sha256: a62d678f7d256a178008ee843f6c41c10e1b64298c94ce832d6883086776232e
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ Plus Icon
 Click to expand the Mega Menu
 Menu
 Read Next
-Julianne Moore’s West Village Home Features Work by Louise Bourgeois, Nan Goldin, and David Armstrong
+Leah Ke Yi Zheng Joins Antenna Space, Pérez Art Museum Miami to Honor Nicolas Berggruen, and More: Industry Moves for October 28, 2026
 ARTnews
 Subscribe
 TO ART IN AMERICA
@@ -58,11 +58,12 @@ Shanti Escalante-De Mattei
 Plus Icon
 Shanti Escalante-De Mattei
 More Stories by Shanti
+‘Desiring Machines’ Dares Us to Imagine a Healthy Relationship with Technology
 At Amant, ‘Sentient Earth’ Redirects the Corporate Gaze to Climate Change
 Net.Art Pioneer Olia Lialina on the Practice of Preservation
-In ‘Strange Rules,’ an Epic Show with a Bold Vision For What Counts as Art
 View All
 March 4, 2022 4:04pm
+Add us as a Google Preferred Source
 OpenSea logo displayed on a phone screen.
 PHOTO BY JAKUB PORZYCKI/NURPHOTO VIA A
 The crypto has long been touted as a way to make business transactions outside the interference of international governments, but it became clear this week that the space has its limits this week. Over the past couple days, OpenSea , one of the main NFT marketplaces, has been deleting the accounts of users and collectors from Iran, a country that is currently under sanctions from the U.S., with no prior warning or explanation.
@@ -82,10 +83,10 @@ Read More About:
 NFTs
 opensea
 Most-Read Stories
-Alex Margo Arden Gets Up Close and Personal With Amy…
-How Defunding the Arts Wrought Civic Disintegration
-Jeff Koons Appears to Be the 'Distinguished Collector'…
-Julianne Moore's West Village Home Features Work by Louise…
+Bill Koch to Sell More Than $40 M. in Art at Christie's…
+R.M. Schindler's Modernist Beach House, Built for a…
+Ursula von Rydingsvard, Sculptor of Gigantic Cedar Forms…
+Gagosian to Sell Works from Mr. Chow's Art Collection…
 Art in America
 The World's Premier Art Magazine since 1913. Subscribe today and save!
 Subscribe
@@ -99,13 +100,13 @@ By providing your information, you agree to our Terms of Use and our Privacy Pol
 We use vendors that may also process your information to help provide our services. // This site is protected by reCAPTCHA Enterprise and the Google Privacy Policy and Terms of Service apply.
 Newswire
 RobbReport
-The Soft Power of the Modern Corduroy Suit
+Buffalo Trace Sister Distillery Barton 1792 Just Dropped a New Full-Proof Wheated Bourbon
 WWD
-Nordstrom Offers Rare Chance to Shop Out-of-Stock Reformation x Alexa Chung Pieces Online
+The Best Work Bags for Women to Wear This Fall
 Sportico
-WNBA Finals Pairs League’s Most and Least Valuable Teams
+MLBPA CFO Departs, Marking Latest Change Atop Baseball’s Union
 IndieWire
-‘The Social Reckoning’ Bombs with $5.5 Million Opening. Why Did Aaron Sorkin’s Facebook Follow-Up Fail at the Box Office?
+Barbara Barrie, Oscar-Nominated ‘Breaking Away’ and ‘Private Benjamin’ Star, Dies at 95
 Art Media
 About Us
 Accessibility
@@ -216,8 +217,7 @@ Purchase back issues
 Contact Us
 Partners
 Expand the sub menu
-Rusudan Petviashvili
-Tennoz Art Week
+James Gibson
 Icon Link
 Plus Icon
 ARTnews is a part of PMX Global, LLC, a subsidiary of Penske Media Corporation. © 2026 Art Media, LLC. All rights reserved.

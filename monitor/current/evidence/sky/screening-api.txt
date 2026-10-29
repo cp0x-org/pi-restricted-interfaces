@@ -1,14 +1,14 @@
 check: sky/screening-api
 about: Sky compliance API /address/status answers addressAllowed:false for the sanctioned wallet and true for the control
 source: https://api.sky.money/address/status?address={address}
-checked_at: 2026-10-11T21:19:09Z
+checked_at: 2026-10-28T22:57:16Z
 --------------------------------------------------------------------------------
 === sdn (0x098B716B8Aaf21512996dC57EB0615e2383E2f96) ===
 request: GET https://api.sky.money/address/status?address=0x098B716B8Aaf21512996dC57EB0615e2383E2f96
 status: 200
 final_url: https://api.sky.money/address/status?address=0x098B716B8Aaf21512996dC57EB0615e2383E2f96
 header server: cloudflare
-header cf-ray: a490e6c01a5ee4a7-OTP
+header cf-ray: a51d89ca78f2e45a-OTP
 header content-type: application/json
 body: {"addressAllowed":false}
 
@@ -17,6 +17,6 @@ request: GET https://api.sky.money/address/status?address=0x5aAeb6053F3E94C9b9A0
 status: 200
 final_url: https://api.sky.money/address/status?address=0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed
 header server: cloudflare
-header cf-ray: a490e6c38e4de5ac-OTP
+header cf-ray: a51d89d4da39ca20-OTP
 header content-type: application/json
 body: {"addressAllowed":true}

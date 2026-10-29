@@ -1,24 +1,25 @@
 check: yearn/prod-no-geo
 about: Production JS of Yearn: no geo-IP lookup or country block
 source: https://yearn.fi
-checked_at: 2026-10-11T21:15:46Z
+checked_at: 2026-10-28T22:52:41Z
 http_status: 200
 --------------------------------------------------------------------------------
 scripts:
-  https://yearn.fi/_next/static/immutable/chunks/0vn_c-qtmgve7.js  sha256=34c29ad6438bf544b8c9e4865d00a95f0851ebb5efba09a4306f4e722683307e
-  https://yearn.fi/_next/static/immutable/chunks/3h5p-q3jqyzb8.js  sha256=86a8a8a8ad546401767cd6011232a2353157dfadf6bc6ff3fe30391a59945f60
-  https://yearn.fi/_next/static/immutable/chunks/12fmbqx9yrtlv.js  sha256=0e62b124e69126246ec9e1603d535a677bb184a2deece23f4341651c26cf28fb
-  https://yearn.fi/_next/static/immutable/chunks/turbopack-2fu739is4uppc.js  sha256=bb72597d0beb90c033a767b91fbe2194a1ebd01d9861f3b422a8516eddd5fe3e
-  https://yearn.fi/_next/static/immutable/chunks/3mp4zpxk_f503.js  sha256=b65654724cdee8c63e01d808d30c13539ddeee5b0cd4ae2e5bbe22b931921dc7
-  https://yearn.fi/_next/static/immutable/chunks/3k2xcmgm4koz-.js  sha256=851ae8f41349df3d6710641428aff1df7f8fdcffae7912d6415532d6f55a7f74
-  https://yearn.fi/_next/static/immutable/chunks/2zdb-2ncl3bl1.js  sha256=40b257fd3979269d4925a9ba7d4c9f92966b36bd1a871a7470bf0b40ca5b1b11
-  https://yearn.fi/_next/static/immutable/chunks/10_yjqipzegf3.js  sha256=2648b62784b0ca9473cd3800936d82ce0b5f0b70adde61cb9578540581e0269d
-  https://yearn.fi/_next/static/immutable/chunks/2hagrmbpf3ubc.js  sha256=48c72f9cfa679891efe0222ddd43aa3809075104f9e926875c693d2bfb5e3078
-  https://yearn.fi/_next/static/immutable/chunks/252lozu7wp9-l.js  sha256=e4a6ccabec16732d0fbd2314db7cc598d70e4bb136275943b6fd1a2db5e9ef79
-  https://yearn.fi/_next/static/immutable/chunks/1d3fay67wu0mx.js  sha256=e743348ede1e8dcf989d3f09ff0569a962d58808832c09b547cb4e124942ed35
-  https://yearn.fi/_next/static/immutable/chunks/2k-8-jmak2-4b.js  sha256=16831e59348b7a36d5cda1a7885b64ebaf203935321a1be4d005f06f94442f72
+  https://yearn.fi/_next/static/immutable/chunks/16-26fxdyuc-e.js  sha256=eabf95799bdc816f7fc7a7b1d3b904bcaf676a354816bf2c6eb9c38d7c23ff8a
+  https://yearn.fi/_next/static/immutable/chunks/1niiix3rze_yz.js  sha256=f4e065ef93a764084e022a2daa77f98ac0df882dfe91b82db46a5f9d72b95d64
+  https://yearn.fi/_next/static/immutable/chunks/2n6ts6jxnu296.js  sha256=c6bf2071218a6954beacb0809e6f0b70f60efb9271b0dd69d11a63683f954d50
+  https://yearn.fi/_next/static/immutable/chunks/turbopack-1cvbnb3nlabgn.js  sha256=8bbb58cbfd4633c1d828c6bc37bc32abc768a149c01b1dfc4f5131fd81274551
+  https://yearn.fi/_next/static/immutable/chunks/06udk8l1g35av.js  sha256=2090a52ceeee91c3192b5bb735b2787bea5aad995492829b08d3f79dee2630a5
+  https://yearn.fi/_next/static/immutable/chunks/0cjqdeay-i0jr.js  sha256=50fcdc01522fc2849cd4deffb9bac80e35541aabb32a2192fbcf59e221309955
+  https://yearn.fi/_next/static/immutable/chunks/21v1askfs7lty.js  sha256=6e159cd5c961fd7437f60201dca46338ef8376248a52dd28c6e5ea3f6f5d760f
+  https://yearn.fi/_next/static/immutable/chunks/1bm3td9jl5ibf.js  sha256=04965bc75db3fd0dfc900180f1a8f86a9d93692855e741e93201a83dc39252ac
+  https://yearn.fi/_next/static/immutable/chunks/2e274s9jqr9n6.js  sha256=829faa8a6ff11ee2416a8c09b6cd7d41cea843ec738f412c89c439423ad0f8a1
+  https://yearn.fi/_next/static/immutable/chunks/2ica5ll13kmoa.js  sha256=74a664535598998896120af5171ec1833c216822b5f12b8dc5fad1b39da20b5f
+  https://yearn.fi/_next/static/immutable/chunks/22xxibvtehbrb.js  sha256=e8d63cba21801f1c1d9c5d2a35abdf94fb0f882bd3a2cfadcc04f56289b693d0
+  https://yearn.fi/_next/static/immutable/chunks/07tlfa7w0-0d-.js  sha256=c499703fb99cd8df2f560b2f37a7a2afa0fa42a3438068f993e82af9b28c08a0
+  https://yearn.fi/_next/static/immutable/chunks/3yfny09422ctr.js  sha256=cb6b04ae14b2ef9fb5e0524dbb57084045faaf3e9666a7561edcd2232c476a78
   https://yearn.fi/_next/static/immutable/chunks/0c0hxoamwjsbw.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
-  https://yearn.fi/_next/static/immutable/chunks/2zqsbm8s85161.js  sha256=2530de10810d785f883895182c2049e0a16f0d8e2cfcd73cb7b497e71448cae1
+  https://yearn.fi/_next/static/immutable/chunks/2sdxxyokwb4sj.js  sha256=aff337908407ba058134d028028c245d8886ee67f6f49b69538884a11fc17026
 
 matches:
   none

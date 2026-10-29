@@ -1,7 +1,7 @@
 check: curve/geo-terms
 about: The Terms only reserve the right to restrict access by location (no technical block in code)
 source: https://github.com/curvefi/curve-frontend/blob/f8cfaab057efb97dd9b96eac6ce966245cc45b8c/packages/evm-ui/src/widgets/Legal/components/tabs/Terms.tsx#L70
-checked_at: 2026-10-11T21:04:38Z
+checked_at: 2026-10-28T22:38:01Z
 fetched: https://raw.githubusercontent.com/curvefi/curve-frontend/f8cfaab057efb97dd9b96eac6ce966245cc45b8c/packages/evm-ui/src/widgets/Legal/components/tabs/Terms.tsx
 sha256: 7b774341861ef240f08228d47074a63d9fda4b8c048f3eef07c2125e6d97240f
 --------------------------------------------------------------------------------

@@ -1,9 +1,9 @@
 check: compound/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://www.compound.xyz/terms-of-service
-checked_at: 2026-10-11T21:17:11Z
+checked_at: 2026-10-28T22:54:08Z
 fetched: https://www.compound.xyz/terms-of-service
-sha256: 3beae39e1a64504b0f005e21d71cc57ef2f982bb4d5fc44acd8bfff139e5858c
+sha256: 36ddeda9f6690eb41ca7d3b218f84c11f72758177d61993dde4201297358e491
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

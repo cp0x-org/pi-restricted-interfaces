@@ -1,7 +1,7 @@
 check: uniswap/geo-ukraine-report
 about: Press report (Oct 2025): the Uniswap Labs front-end blocks Ukraine-based IP addresses (asset selection fails)
 source: https://blockworks.com/news/uniswap-labs-blocked-ukraine
-checked_at: 2026-10-11T21:19:01Z
+checked_at: 2026-10-28T22:57:03Z
 fetched: https://web.archive.org/web/20260515232741id_/https://blockworks.com/news/uniswap-labs-blocked-ukraine
 sha256: 8bb7cd08a1ef6f319a6b52a35d8afbbc6b926c2281cb6b5a5f089800cb335a37
 http_status: 200

@@ -1,7 +1,7 @@
 check: curve-classic/no-geo
 about: The classic UI's JavaScript has no geo-IP lookup or country block
 source: https://classic.curve.finance
-checked_at: 2026-10-11T21:15:29Z
+checked_at: 2026-10-28T22:52:21Z
 http_status: 200
 --------------------------------------------------------------------------------
 scripts:

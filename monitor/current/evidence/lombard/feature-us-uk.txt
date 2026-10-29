@@ -1,9 +1,9 @@
 check: lombard/feature-us-uk
 about: Lombard docs: the yield strategy, incl. direct mint and redemption, is not available to US or UK persons
 source: https://docs.lombard.finance/use/lbtc
-checked_at: 2026-10-11T21:18:54Z
+checked_at: 2026-10-28T22:56:44Z
 fetched: https://docs.lombard.finance/use/lbtc
-sha256: b22a8800f76ee75d37b4a353514dbfda171360f60d7306099e40e836243d6fe2
+sha256: da9e83a07ad58173aba840316671d636c9f71d6fd8a9d3225915d48a7e4e4763
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

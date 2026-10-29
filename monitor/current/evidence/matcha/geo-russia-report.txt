@@ -1,7 +1,7 @@
 check: matcha/geo-russia-report
 about: Press report (Mar 2022): Matcha blocks trades from Russia ('Region Unsupported')
 source: https://www.theblock.co/linked/137962/dex-aggregator-matcha-geoblocks-trades-from-russia
-checked_at: 2026-10-11T21:18:54Z
+checked_at: 2026-10-28T22:56:46Z
 fetched: https://web.archive.org/web/20250425030220id_/https://www.theblock.co/linked/137962/dex-aggregator-matcha-geoblocks-trades-from-russia
 sha256: 4cff610b5fa0dd88d8cd71b6893e8ee340f7f2b1b7938619c6e1c4969ae5b191
 http_status: 200

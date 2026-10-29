@@ -1,7 +1,7 @@
 check: notional/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://notional.finance
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
@@ -72,41 +72,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "US-NY": {
-  "app": {
-   "status": 200,
-   "final_url": "https://notional.finance",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
-   "scripts": [
-    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
-    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
-    "/iframe_api",
-    "/js/jquery-3.5.1.min.*.js",
-    "/npm/@finsweet/attributes@2/attributes.js",
-    "/optimize.js",
-    "main.*.js",
-    "polyfills.*.js",
-    "runtime.*.js"
-   ],
-   "bytes": 5138,
-   "redirects": [],
-   "server": "cloudflare"
-  },
-  "https://api.notional.finance/geoip": {
-   "status": 200,
-   "final_url": "https://api.notional.finance/geoip",
-   "state": "ok",
-   "flags": {
-    "country": "US"
-   },
-   "body": "{\"country\":\"US\"}",
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "CA-ON": {
+ "CA": {
   "app": {
    "status": 200,
    "final_url": "https://notional.finance",
@@ -136,6 +102,108 @@ checked_at: 2026-10-11T21:24:23Z
     "country": "CA"
    },
    "body": "{\"country\":\"CA\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MX": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "MX"
+   },
+   "body": "{\"country\":\"MX\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "AR"
+   },
+   "body": "{\"country\":\"AR\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "CO"
+   },
+   "body": "{\"country\":\"CO\"}",
    "redirects": [],
    "server": "cloudflare"
   }
@@ -276,6 +344,72 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "ES"
+   },
+   "body": "{\"country\":\"ES\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": null,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
  "PL": {
   "app": {
    "status": 200,
@@ -306,6 +440,74 @@ checked_at: 2026-10-11T21:24:23Z
     "country": "PL"
    },
    "body": "{\"country\":\"PL\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "CH"
+   },
+   "body": "{\"country\":\"CH\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "SE"
+   },
+   "body": "{\"country\":\"SE\"}",
    "redirects": [],
    "server": "cloudflare"
   }
@@ -412,6 +614,274 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": null,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "IL"
+   },
+   "body": "{\"country\":\"IL\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": null,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "BD"
+   },
+   "body": "{\"country\":\"BD\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "VN"
+   },
+   "body": "{\"country\":\"VN\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "TH"
+   },
+   "body": "{\"country\":\"TH\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "PH"
+   },
+   "body": "{\"country\":\"PH\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "MY"
+   },
+   "body": "{\"country\":\"MY\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
  "SG": {
   "app": {
    "status": 200,
@@ -480,7 +950,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "JP": {
+ "CN": {
   "app": {
    "status": 200,
    "final_url": "https://notional.finance",
@@ -507,14 +977,14 @@ checked_at: 2026-10-11T21:24:23Z
    "final_url": "https://api.notional.finance/geoip",
    "state": "ok",
    "flags": {
-    "country": "JP"
+    "country": "CN"
    },
-   "body": "{\"country\":\"JP\"}",
+   "body": "{\"country\":\"CN\"}",
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "BR": {
+ "KR": {
   "app": {
    "status": 200,
    "final_url": "https://notional.finance",
@@ -541,14 +1011,14 @@ checked_at: 2026-10-11T21:24:23Z
    "final_url": "https://api.notional.finance/geoip",
    "state": "ok",
    "flags": {
-    "country": "BR"
+    "country": "KR"
    },
-   "body": "{\"country\":\"BR\"}",
+   "body": "{\"country\":\"KR\"}",
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "AR": {
+ "TW": {
   "app": {
    "status": 200,
    "final_url": "https://notional.finance",
@@ -575,11 +1045,43 @@ checked_at: 2026-10-11T21:24:23Z
    "final_url": "https://api.notional.finance/geoip",
    "state": "ok",
    "flags": {
-    "country": "AR"
+    "country": "TW"
    },
-   "body": "{\"country\":\"AR\"}",
+   "body": "{\"country\":\"TW\"}",
    "redirects": [],
    "server": "cloudflare"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": null,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
   }
  },
  "NG": {
@@ -616,7 +1118,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "VN": {
+ "ZA": {
   "app": {
    "status": 200,
    "final_url": "https://notional.finance",
@@ -643,11 +1145,43 @@ checked_at: 2026-10-11T21:24:23Z
    "final_url": "https://api.notional.finance/geoip",
    "state": "ok",
    "flags": {
-    "country": "VN"
+    "country": "ZA"
    },
-   "body": "{\"country\":\"VN\"}",
+   "body": "{\"country\":\"ZA\"}",
    "redirects": [],
    "server": "cloudflare"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": null,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
   }
  },
  "KZ": {
@@ -704,6 +1238,640 @@ checked_at: 2026-10-11T21:24:23Z
     "country": "GE"
    },
    "body": "{\"country\":\"GE\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "US"
+   },
+   "body": "{\"country\":\"US\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "CA"
+   },
+   "body": "{\"country\":\"CA\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "RU"
+   },
+   "body": "{\"country\":\"RU\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "BY"
+   },
+   "body": "{\"country\":\"BY\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "CU"
+   },
+   "body": "{\"country\":\"CU\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "SY"
+   },
+   "body": "{\"country\":\"SY\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "VE"
+   },
+   "body": "{\"country\":\"VE\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "MM"
+   },
+   "body": "{\"country\":\"MM\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "AF"
+   },
+   "body": "{\"country\":\"AF\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "IQ"
+   },
+   "body": "{\"country\":\"IQ\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": null,
+   "final_url": "https://notional.finance",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "LB"
+   },
+   "body": "{\"country\":\"LB\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "LY"
+   },
+   "body": "{\"country\":\"LY\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": null,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "ZW"
+   },
+   "body": "{\"country\":\"ZW\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "NI"
+   },
+   "body": "{\"country\":\"NI\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "CD"
+   },
+   "body": "{\"country\":\"CD\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "CF"
+   },
+   "body": "{\"country\":\"CF\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "SO"
+   },
+   "body": "{\"country\":\"SO\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 200,
+   "final_url": "https://notional.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Notional Finance - DeFi's Top Leveraged Yield Protocol",
+   "scripts": [
+    "/6807f00bedf01dce8388f0e2/js/webflow.*.*.js",
+    "/6807f00bedf01dce8388f0e2/js/webflow.schunk.*.js",
+    "/iframe_api",
+    "/js/jquery-3.5.1.min.*.js",
+    "/npm/@finsweet/attributes@2/attributes.js",
+    "/optimize.js",
+    "main.*.js",
+    "polyfills.*.js",
+    "runtime.*.js"
+   ],
+   "bytes": 5138,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.notional.finance/geoip": {
+   "status": 200,
+   "final_url": "https://api.notional.finance/geoip",
+   "state": "ok",
+   "flags": {
+    "country": "ML"
+   },
+   "body": "{\"country\":\"ML\"}",
    "redirects": [],
    "server": "cloudflare"
   }

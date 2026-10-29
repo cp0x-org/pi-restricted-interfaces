@@ -1,7 +1,7 @@
 check: ambient/sweep-bundle
 about: Production HTML and JavaScript of the official app, searched for access-restriction signals
 source: https://ambient.finance
-checked_at: 2026-10-11T21:05:32Z
+checked_at: 2026-10-28T22:39:12Z
 http_status: 200
 via: direct
 --------------------------------------------------------------------------------

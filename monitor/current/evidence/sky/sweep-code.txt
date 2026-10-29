@@ -1,7 +1,7 @@
 check: sky/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/jetstreamgg/tarmac/tree/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb
-checked_at: 2026-10-11T21:03:55Z
+checked_at: 2026-10-28T22:36:44Z
 fetched: https://codeload.github.com/jetstreamgg/tarmac/tar.gz/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb
 sha256: c7bfdd47633cd2907df79dd6166a79701ca2d8d070612c072a91ae31b4f24998
 --------------------------------------------------------------------------------

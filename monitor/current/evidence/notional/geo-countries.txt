@@ -1,7 +1,7 @@
 check: notional/geo-countries
 about: Visitors from SanctionedCountries (country from api.notional.finance/geoip) are sent to /blocked
 source: https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/packages/shared/notionable-hooks/src/use-geoip-block.ts#L38
-checked_at: 2026-10-11T21:04:43Z
+checked_at: 2026-10-28T22:38:11Z
 fetched: https://raw.githubusercontent.com/notional-finance/notional-monorepo/cff15de4b098d101b2a023732efd242496c42888/packages/shared/notionable-hooks/src/use-geoip-block.ts
 sha256: 28620f42d20a8820109d6d2528d44a56ab5e5da79076fcbce67bbc39ef55357e
 --------------------------------------------------------------------------------

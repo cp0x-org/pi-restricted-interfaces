@@ -1,7 +1,7 @@
 check: ambient/prod-blacklist
 about: Production JS: the OFAC address list (incl. the Ronin exploiter) and the redirect to ofac.treasury.gov
 source: https://ambient.finance
-checked_at: 2026-10-11T21:15:20Z
+checked_at: 2026-10-28T22:52:10Z
 http_status: 200
 --------------------------------------------------------------------------------
 scripts:

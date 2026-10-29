@@ -1,9 +1,9 @@
 check: opensea/geo-iran
 about: OpenSea's statement (Mar 2022): it blocks users and territories on the US sanctions list; Iranian users lost access
 source: https://fortune.com/crypto/2022/03/04/opensea-metamask-block-users-sanctions/
-checked_at: 2026-10-11T21:18:56Z
+checked_at: 2026-10-28T22:56:49Z
 fetched: https://fortune.com/crypto/2022/03/04/opensea-metamask-block-users-sanctions/
-sha256: c601de6cc0e98162433ed60e59ba546c41d490dc1074000b82fae65b8b69d75a
+sha256: 71e685c22df0b99ae7e0c79f327c3c099e3ce00408b6c05b470e08250c357ab2
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
@@ -113,7 +113,6 @@ Press Center
 Work At Fortune
 Terms And Conditions
 Site Map
-Latest in NFTs and Culture
-Most Popular
+Recommended For You
 © 2026 Fortune Media IP Limited. All Rights Reserved. Use of this site constitutes acceptance of our Terms of Use and Privacy Policy | CA Notice at Collection and Privacy Notice | Do Not Sell/Share My Personal Information
 FORTUNE is a trademark of Fortune Media IP Limited, registered in the U.S. and other countries. FORTUNE may receive compensation for some links to products and services on this website. Offers may be subject to change without notice.

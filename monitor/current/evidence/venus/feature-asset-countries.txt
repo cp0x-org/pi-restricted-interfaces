@@ -1,7 +1,7 @@
 check: venus/feature-asset-countries
 about: Pools are filtered per asset by restrictedCountries / gatedCountries from the Venus API for the visitor's country
 source: https://github.com/VenusProtocol/venus-protocol-interface/blob/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/clients/api/queries/useGetPools/applyCountryCodeToPools/index.ts#L22
-checked_at: 2026-10-11T21:04:43Z
+checked_at: 2026-10-28T22:38:20Z
 fetched: https://raw.githubusercontent.com/VenusProtocol/venus-protocol-interface/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/clients/api/queries/useGetPools/applyCountryCodeToPools/index.ts
 sha256: 17be92bec051d7dfbc27bd1f7ec23aefab31011bfdba82c5c9c2ee3a978745a4
 --------------------------------------------------------------------------------

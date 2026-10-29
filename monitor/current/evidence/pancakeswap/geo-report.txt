@@ -1,9 +1,9 @@
 check: pancakeswap/geo-report
 about: Press report (Feb 2022): PancakeSwap blocks IP addresses from ten jurisdictions from March 9, 2022
 source: https://forklog.com/en/pancakeswap-to-block-users-from-ten-jurisdictions/amp
-checked_at: 2026-10-11T21:18:58Z
+checked_at: 2026-10-28T22:56:52Z
 fetched: https://forklog.com/en/pancakeswap-to-block-users-from-ten-jurisdictions/amp
-sha256: 50df2c00087c108846c88428b49426b0705c0f7a79c725415b2422d9a6bf8ede
+sha256: 7825b7160e9693375e4b998bce098824c7d9f3f90aed88810ab7f66ad3d4cbb8
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

@@ -1,9 +1,9 @@
 check: sky/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://docs.sky.money/legal/skybase-international/terms-of-use
-checked_at: 2026-10-11T21:18:28Z
+checked_at: 2026-10-28T22:55:51Z
 fetched: https://docs.sky.money/legal/skybase-international/terms-of-use
-sha256: 61040bdd9c78b44f5275bbaba9dd252d01ea13c0d4c9ca249911bff4c1b955b7
+sha256: 241514ef742ec480b39c95659798ec394301d23848ca952899b861d2b104cedc
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
@@ -243,7 +243,7 @@ By using the DEXs through the Web App, you acknowledge and agree that: (i) Skyba
 Independent Subdomains
 Certain sky.money subdomains are not controlled, operated, or maintained by Skybase International. Any website, app, interface, or dashboard available through the sky.money domain or any of its subdomains that is not operated by Skybase International is not part of the Services and is not governed by these Terms. These subdomains are independent websites controlled and managed by independent third parties within the Sky Ecosystem, each of which may have its own terms and conditions, privacy policies, and other governing terms. Skybase International does not endorse, monitor, or accept any liability for any content, functionality, or services provided on any other external sites hosted under the sky.money subdomains.
 By accessing or interacting with these external sites hosted under the sky.money subdomains, you acknowledge and agree that: (i) Skybase International is not liable for any content, services, or any interactions that occur on or through these subdomains; (ii) you are solely responsible for reviewing and understanding the terms and conditions of those independent subdomains; and (iii) any risks associated with using such subdomains are borne entirely by you.
-Last updated 1 month ago
+Last updated 2 months ago
 Skybase International Terms of Use
 Introduction
 You Are Entering Into a Binding Agreement

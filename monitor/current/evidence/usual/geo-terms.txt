@@ -1,9 +1,9 @@
 check: usual/geo-terms
 about: The Terms bar Prohibited Persons (residents or nationals of a long list of countries); no technical geo-block described
 source: https://docs.usual.money/resources-and-ecosystem/legal-documentation/terms-of-services
-checked_at: 2026-10-11T21:19:02Z
+checked_at: 2026-10-28T22:57:03Z
 fetched: https://docs.usual.money/resources-and-ecosystem/legal-documentation/terms-of-services
-sha256: f8e569681fa54110ca7d3d31c9822f8401e2913a60d1e6df6f773ceaa2e39c21
+sha256: 76fd9787b8725eba4f0cb313af86dd38028d134a6323961387be60bda4de0a50
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

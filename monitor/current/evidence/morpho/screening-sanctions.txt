@@ -1,9 +1,9 @@
 check: morpho/screening-sanctions
 about: Morpho docs: addresses subject to U.S. government sanctions are blocked
 source: https://docs.morpho.org/interface/warnings/
-checked_at: 2026-10-11T21:18:55Z
+checked_at: 2026-10-28T22:56:48Z
 fetched: https://docs.morpho.org/interface/warnings/
-sha256: adf076a17dfc92cb0c776ecccbcd6dab7d83191b7d7afceb131f73d54953b78e
+sha256: 8006590b52aa5b9d7ce36f371bbf1b593302ed03797d800d41648a95ada393d1
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
@@ -18,32 +18,25 @@ Get Started
 Introduction Morpho Products Customer Stories Resources Whitepapers Morpho Apps Morpho Interface Listing Policy Contract Addresses Morpho Blog Landing Page Data Page Brand Assets Disclaimer
 Morpho Apps
 Morpho Apps
-This section details the critical applications developed by Morpho Association for vault configuration and ecosystem participation.
-Consumer
-Main App
+Find Morpho applications for vault curation, markets, rewards, data, oracles, and liquidations, with descriptions for users choosing an interface.
+This section details the applications developed by Morpho Association for vault configuration and ecosystem participation.
+Morpho does not run any Telegram or mining bot, and Morpho discord is now deprecated (no activity there). Any bot, account or person asking you for payment, private keys or seed phrases in Morpho's name is a scam. For support, use help.morpho.org .
+Fixed-Rate Markets App
+markets.morpho.org/fixed
+The interface for lending and borrowing at a fixed rate and fixed term on Morpho Midnight through offers and limit orders.
+Learn more about Midnight .
+Vault App
 app.morpho.org
-Purpose: Interface for both lenders interacting with Morpho vaults and Borrowers interacting with Morpho Markets.
-Key Features:
-View listed Morpho Markets & Morpho Vaults
-Deposit, manage, and exit positions in Morpho Vaults
-Enter, manage, and exit from borrow positions
-Track vault performance metrics
-Monitor position health and market statistics
-Version: Production
-If the main App is not accessible
-If you don't want to use the Main Morpho app ( https://app.morpho.org/ ) or if you are not able to access it, it is always possible to interact with Morpho via alternative apps, the Fallback app or at contract level via explorers.
+Lend through Morpho Vaults, borrow or lend in Morpho Variable Rate Markets, manage positions, and track vault performance and market conditions.
+If the Vault app is not accessible
+Use the Fallback App or interact with contracts through block explorers .
 Morpho Warnings
-Morpho has a warning system built into the Morpho API. These warnings surface potential risks that could impact markets or vaults on Morpho. Some warnings are also displayed in the main Morpho app.
-Displayed in main app? means the current main app has user-facing warning copy for that warning type on at least one relevant market or vault surface. Some app surfaces filter warnings by severity, and action-state warnings can affect buttons without rendering a warning icon.
-If you consume warnings from the API:
-The default response returns active warnings only. Market and Vault V1 warnings have no GREEN level at all. Vault V2 defines one for passing checks, but it is not in the default response: level_in replaces the default [YELLOW, RED] filter rather than extending it, so level_in: [GREEN] hides every active warning.
-The API decides the level. Key your logic off level , not type alone: a custom warning can be returned at either level.
-Market warnings do not propagate to vaults. Only oracle_unusable , oracle_price_derivation , and (Vault V2 only) bad_debt_unrealized have vault-level counterparts, computed under the exposure rules below; other market warnings have no vault-side equivalent.
-Two warning types gate the deposit form in the main app: deposit_disabled and oracle_unusable , both at RED. Either one alone blocks deposits, so check for both, not just deposit_disabled .
-Variable Rate Market Warnings
+Morpho has a warning system built into the Morpho API. These warnings surface potential risks that could impact markets or vaults on Morpho. Some warnings are also displayed in the Vault app.
+For API integration details, see the market warnings guide and the Morpho Vault warnings guide .
+Variable Rate Markets Vault V2 Vault V1
 Warning Type
 Level
-Displayed in main app?
+Displayed in Vault app?
 Criteria / Threshold
 Notes
 bad_debt_unrealized
@@ -77,53 +70,9 @@ custom
 Yes
 Operator-defined custom warning with arbitrary content
 Level configured per entry
-Vault V1 Warnings
 Warning Type
 Level
-Displayed in main app?
-Criteria / Threshold
-Notes
-short_timelock
-🔴 RED
-Yes
-Timelock < 3 days
-Governance security
-not_whitelisted
-🟡 YELLOW
-Yes
-Vault is not listed
-If vault was previously listed, will indicate a deprecation message
-deposit_disabled
-🔴 RED
-No
-No supply-queue allocation has remaining cap, or the vault is on the curated deposit-disable list
-Not displayed as a warning icon; it can disable deposits in the main app
-low_liquidity
-🟡 YELLOW
-Yes
-Withdrawable liquidity < 0.5% of total assets
-Empty vaults (total assets = 0) are not flagged
-oracle_unusable
-🔴 RED
-Yes
-Exposure to markets with a RED oracle_unusable exceeds 10% of total assets
-Exposure-gated, see the exposure note below. On its own, it also disables deposits in the main app
-oracle_price_derivation
-🔴 RED
-Yes
-Exposure to markets with a RED oracle_price_derivation exceeds 10% of total assets
-Exposure-gated, see the exposure note below
-custom
-🔴 RED
-🟡 YELLOW
-Yes
-Operator-defined custom warning with arbitrary content
-Level configured per entry
-Vault V1 has no bad-debt warning: bad debt is socialized across depositors as it is realized, so bad_debt_unrealized stays on the market.
-Vault V2 Warnings
-Warning Type
-Level
-Displayed in main app?
+Displayed in Vault app?
 Criteria / Threshold
 Notes
 not_whitelisted
@@ -140,7 +89,7 @@ deposit_disabled
 🔴 RED
 No
 Vault is on the curated deposit-disable list
-Metadata-driven only: Vault V2 has no cap-derived equivalent. Not displayed as a warning icon; it can disable deposits in the main app
+Metadata-driven only: Vault V2 has no cap-derived equivalent. Not displayed as a warning icon; it can disable deposits in the Vault app
 low_liquidity
 🟡 YELLOW
 Yes
@@ -150,24 +99,65 @@ bad_debt_unrealized
 🔴 RED
 Yes
 Exposure to markets with a RED bad_debt_unrealized exceeds 10% of total assets
-Exposure-gated, see the exposure note below
+Exposure-gated, see the Morpho Vault warnings guide
 oracle_unusable
 🔴 RED
 Yes
 Exposure to markets with a RED oracle_unusable exceeds 10% of total assets
-Exposure-gated, see the exposure note below. On its own, it also disables deposits in the main app
+Exposure-gated, see the Morpho Vault warnings guide . On its own, it also disables deposits in the Vault app
 oracle_price_derivation
 🔴 RED
 Yes
 Exposure to markets with a RED oracle_price_derivation exceeds 10% of total assets
-Exposure-gated, see the exposure note below
+Exposure-gated, see the Morpho Vault warnings guide
 custom
 🔴 RED
 🟡 YELLOW
 Yes
 Operator-defined custom warning with arbitrary content
 Level configured per entry
-Vault-level oracle_unusable , oracle_price_derivation (both vault versions) and bad_debt_unrealized (Vault V2) are gated on exposure. The vault raises the warning when its summed exposure to every market carrying that warning at RED exceeds 10% of the vault's total assets , counting both direct market allocations and pro-rata look-through of Vault V1 adapters. Below that threshold the vault carries no warning, though the market still does. Look-through stops at Vault V1: exposure held through a Vault V2 adapter is not traced, so a vault allocating into a nested Vault V2 reads as unaffected even when the nested vault holds a flagged market. To surface every affected vault, inspect its market exposure rather than relying on the vault-level warning alone.
+Warning Type
+Level
+Displayed in Vault app?
+Criteria / Threshold
+Notes
+short_timelock
+🔴 RED
+Yes
+Timelock < 3 days
+Governance security
+not_whitelisted
+🟡 YELLOW
+Yes
+Vault is not listed
+If vault was previously listed, will indicate a deprecation message
+deposit_disabled
+🔴 RED
+No
+No supply-queue allocation has remaining cap, or the vault is on the curated deposit-disable list
+Not displayed as a warning icon; it can disable deposits in the Vault app
+low_liquidity
+🟡 YELLOW
+Yes
+Withdrawable liquidity < 0.5% of total assets
+Empty vaults (total assets = 0) are not flagged
+oracle_unusable
+🔴 RED
+Yes
+Exposure to markets with a RED oracle_unusable exceeds 10% of total assets
+Exposure-gated, see the Morpho Vault warnings guide . On its own, it also disables deposits in the Vault app
+oracle_price_derivation
+🔴 RED
+Yes
+Exposure to markets with a RED oracle_price_derivation exceeds 10% of total assets
+Exposure-gated, see the Morpho Vault warnings guide
+custom
+🔴 RED
+🟡 YELLOW
+Yes
+Operator-defined custom warning with arbitrary content
+Level configured per entry
+Vault V1 has no bad-debt warning: bad debt is socialized across vault users as it is realized, so bad_debt_unrealized stays on the market.
 Refer to this risk documentation to be sure you understand all the risks.
 Tokens checks
 Tokens are added to the Morpho database to enhance their use on the Morpho apps. Before being added to the token database, checks are performed to ensure compatibility.
@@ -194,101 +184,38 @@ Additional disclosures
 Interface Warnings are created using information from third-party data providers. Morpho Association does not guarantee their accuracy and makes no representations or warranties about their relevance or currentness. The Morpho Protocol operates on a permissionless and decentralized basis, allowing Markets and Vaults to be established and administered by any third-party individual or entity. Any information provided by the Morpho Association on Vaults, Markets or any of their parameters does not constitute an endorsement of the Markets or Vaults and is provided solely for informational purposes. It does not represent an endorsement, recommendation, or any form of advice on how to engage with or utilize the Morpho Protocol.
 Morpho Association Token Lists and Interface Warnings are not investment advice and should not be construed as such. Morpho Association strongly advise that before engaging in any financial, legal, technical, or other significant decisions related to the Morpho Protocol, you perform your own research (including, but not limited to, an analysis of the market or vault's structure, the assets involved, the parties responsible for its creation and management, and the potential risks and rewards associated with participation) and consult with an independent professional who is licensed and qualified in the relevant field. Such advice is crucial to ensure that your decisions are well-informed and take into account the specific nuances and complexities of your situation.
 Slippage Considerations
-When interacting with Morpho Markets and Morpho Vaults through the Morpho Interface, slippage protection is implemented to safeguard users against unexpected price movements between transaction submission and execution. Understanding how slippage is handled is crucial for both users and developers.
-Types of Slippage Protection
-Token Wrapping Operations
-Applied to: stETH → wstETH conversions, ERC4626 deposits (including Morpho Vaults deposits)
-Fixed maximum slippage: 3 basis points (0.03%)
-Market Operations
-Formula:
-e 4 ⋅ r target ⋅ d − 1 e^{4 \cdot r_{\text{target}} \cdot d} - 1 e 4 ⋅ r target ​ ⋅ d − 1
-Where:
-r_target is the target interest rate
-d is the expected transaction duration (15 minutes for EOA, 45 minutes for Safe)
-Vault Operations
-Formula:
-( 1 + r a p y ) d y e a r I n S e c o n d s − 1 \left( 1 + r_{apy} \right)^{\frac{d}{yearInSeconds}} - 1 ( 1 + r a p y ​ ) y e a r I n S eco n d s d ​ − 1
-Where:
-r_apy is the Annual Percentage Yield
-d is the expected transaction duration (15 minutes for EOA, 45 minutes for Safe)
-yearInSeconds is the number of seconds in a year
-Shares Conversion and Slippage
-In operations involving asset-to-share conversions (e.g. borrowing, repaying, Morpho Vaults deposits/withdrawals), the interface accounts for worst-case slippage scenarios. This is particularly important in the following cases:
-Asset-Based Operations : Borrowing, partial repayments, Morpho Vaults deposits/partial withdrawals, supplying/withdrawing collateral
-Shares-Based Operations : Maximum repayments, Morpho Vaults deposits in rehypothecation, maximum Morpho Vaults withdrawals
-Note : Slippage can significantly impact transactions combining asset-based and shares-based operations for the same token.
-Special Considerations for Morpho Vaults
-Morpho Vaults ERC4626-compliant tokens are treated differently depending on the context:
-As assets when supplied as collateral
-As shares when supplied as deposits
-In rehypothecation, they are treated as shares during Morpho Vaults Deposit and as assets during Supply Collateral.
-At which level is it implemented?
-These slippage calculations are automatically applied in relevant bundlerActions to protect users from adverse price movements during transaction processing.
+The Vault app protects most Morpho Vault and Variable Rate Market transactions, such as vault deposits and withdrawals, against price moves. They include a limit with a fixed 0.03% tolerance: if the price moves beyond it before execution, the transaction reverts instead of going through at a worse price.
+Before you sign, the app simulates the transaction and asks you to retry if the price has already moved beyond that tolerance.
 Fallback App
 fallback.morpho.org
-Purpose: Built for emergencies, this app prioritizes resilience over speed. This interface is for both lenders interacting with Morpho vaults and Borrowers interacting with Morpho Markets.
-Key Features:
-View your Morpho Markets & Morpho Vaults positions
-Exit positions from Morpho Vaults and Morpho Markets
-Version: Production
+Emergency fallback for viewing Morpho Variable Rate Market and Vault positions and exiting them when the Vault app is unavailable; it prioritizes resilience over speed.
 Data Dashboard
 data.morpho.org
-Purpose: Provides on-chain data and analytics for the Morpho ecosystem.
-Version: Production
+On-chain data and analytics for the Morpho ecosystem.
 Rewards
 campaigns.morpho.org
-Purpose: Monitor reward campaigns on Morpho, track rewards linked to a specific address, and claim rewards.
+Track Morpho reward campaigns and rewards linked to an address, and claim available rewards.
 Merkl is an application developed by a third party allowing to interact with rewards distributed on Morpho.
 The Morpho Association does not endorse or guarantee its functionality. Use at your own discretion.
-Prime
 Curator App V2
 curator.morpho.org
-Purpose: Delivers specialized tools for Morpho Vault V2 curators to manage vault operations.
-Key Features:
-Create and deploy new vaults V2
-Create and manage Fee Wrappers
-Curate adapter listings and parameters
-Configure vault settings and permissions
-Set allocation caps, parameters and timelocks
-Version: Beta deployment with ongoing feature development
+App for creating and managing Vault V2s, fee wrappers, adapter listings, allocations, parameters, and permissions.
 Implementation Note: For actions not yet implemented in the Curator App, use direct interaction with vault contracts through verified sources such as Etherscan. Always verify contract addresses before interaction. See curate section here .
 Curator App V1
 curator-v1.morpho.org
-Purpose: Delivers specialized tools for Morpho Vault V1 curators to manage vault operations.
-Key Features:
-Create and deploy new vaults V1
-Curate market listings and parameters
-Configure vault settings and permissions
-Set allocation caps, parameters and timelocks
-Version: Beta deployment with ongoing feature development
+Beta app for creating and managing Vault V1s, market listings, allocations, parameters, permissions, and timelocks.
 Implementation Note: For actions not yet implemented in the Curator App, use direct interaction with vault contracts through verified sources such as Etherscan. Always verify contract addresses before interaction. See curate section here .
-Other
 Oracle Portal
 oracles.morpho.dev
-Purpose: Aid oracle configurations to ensure price feed accuracy and security.
-Key Features:
-Decode oracle configurations
-Verify price accuracy against reference sources
-Test oracle configurations
-Identify configuration issues
-Version: Production
-Implementation Note: Always verify oracle data configurations before deploying to production environments. Use this tool to:
-Confirm correct asset pricing
-Validate operational parameters
-Test edge case scenarios
+Decode, test, and verify oracle configurations against reference prices to identify potential issues.
+Implementation Note: Always verify oracle configurations before production deployment by confirming asset pricing, validating operational parameters, and testing edge cases.
 Liquidation App
 liquidation.morpho.org
-Purpose: Provides manual liquidation capabilities for unhealthy positions.
-Key Features:
-Identify liquidatable positions
-Execute manual liquidations
-Calculate liquidation profitability
-Monitor position health metrics
-Version: Production and requires supplemental automation
+Manually identify and liquidate unhealthy positions, assess profitability, and monitor position health. Production use requires supplemental automation.
 Implementation Note: Develop and deploy automated liquidation bots for production environments. The liquidation app serves primarily as a backup mechanism when bots fail or for testing purposes.
 Whitepapers
 Previous Page
 Morpho Interface Listing Policy
 Next Page
 On this page
-Main App Fallback App Data Dashboard Rewards Curator App V2 Curator App V1 Oracle Portal Liquidation App
+Fixed-Rate Markets App Vault App Morpho Warnings Fallback App Data Dashboard Rewards Curator App V2 Curator App V1 Oracle Portal Liquidation App

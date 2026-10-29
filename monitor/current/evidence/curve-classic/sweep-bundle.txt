@@ -1,7 +1,7 @@
 check: curve-classic/sweep-bundle
 about: Production HTML and JavaScript of the official app, searched for access-restriction signals
 source: https://classic.curve.finance
-checked_at: 2026-10-11T21:06:36Z
+checked_at: 2026-10-28T22:40:26Z
 http_status: 200
 via: direct
 --------------------------------------------------------------------------------

@@ -1,9 +1,9 @@
 check: sky/geo-terms-list
 about: Prohibited Jurisdictions named in the Sky Terms of Use (the region list the /ip/status block applies; not published in code)
 source: https://docs.sky.money/legal/skybase-international/terms-of-use
-checked_at: 2026-10-11T21:18:59Z
+checked_at: 2026-10-28T22:56:57Z
 fetched: https://docs.sky.money/legal/skybase-international/terms-of-use
-sha256: ab6d3fc84cad2a7a980cb43876c8e8cf611ce8b6ba6be97f60292bc547f3cdc9
+sha256: a962fa4d18d8e72b76625c443ee64fdbfe458c200b3ac10fa960de0dcb20e4c7
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
@@ -218,7 +218,7 @@ By using the DEXs through the Web App, you acknowledge and agree that: (i) Skyba
 Independent Subdomains
 Certain sky.money subdomains are not controlled, operated, or maintained by Skybase International. Any website, app, interface, or dashboard available through the sky.money domain or any of its subdomains that is not operated by Skybase International is not part of the Services and is not governed by these Terms. These subdomains are independent websites controlled and managed by independent third parties within the Sky Ecosystem, each of which may have its own terms and conditions, privacy policies, and other governing terms. Skybase International does not endorse, monitor, or accept any liability for any content, functionality, or services provided on any other external sites hosted under the sky.money subdomains.
 By accessing or interacting with these external sites hosted under the sky.money subdomains, you acknowledge and agree that: (i) Skybase International is not liable for any content, services, or any interactions that occur on or through these subdomains; (ii) you are solely responsible for reviewing and understanding the terms and conditions of those independent subdomains; and (iii) any risks associated with using such subdomains are borne entirely by you.
-Last updated 1 month ago
+Last updated 2 months ago
 Skybase International Terms of Use
 Introduction
 You Are Entering Into a Binding Agreement

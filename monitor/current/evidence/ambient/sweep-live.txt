@@ -1,7 +1,7 @@
 check: ambient/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://ambient.finance
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
@@ -34,7 +34,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Netlify"
   }
  },
- "US-NY": {
+ "CA": {
   "app": {
    "status": 200,
    "final_url": "https://ambient.finance",
@@ -49,7 +49,37 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Netlify"
   }
  },
- "CA-ON": {
+ "MX": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "CO": {
   "app": {
    "status": 200,
    "final_url": "https://ambient.finance",
@@ -124,7 +154,67 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Netlify"
   }
  },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
  "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "SE": {
   "app": {
    "status": 200,
    "final_url": "https://ambient.finance",
@@ -184,6 +274,122 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Netlify"
   }
  },
+ "SA": {
+  "app": {
+   "status": null,
+   "final_url": "https://ambient.finance",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "IL": {
+  "app": {
+   "status": null,
+   "final_url": "https://ambient.finance",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
  "SG": {
   "app": {
    "status": 200,
@@ -214,7 +420,20 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Netlify"
   }
  },
- "JP": {
+ "CN": {
+  "app": {
+   "status": null,
+   "final_url": "https://ambient.finance",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "KR": {
   "app": {
    "status": 200,
    "final_url": "https://ambient.finance",
@@ -229,7 +448,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Netlify"
   }
  },
- "BR": {
+ "TW": {
   "app": {
    "status": 200,
    "final_url": "https://ambient.finance",
@@ -244,7 +463,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Netlify"
   }
  },
- "AR": {
+ "AU": {
   "app": {
    "status": 200,
    "final_url": "https://ambient.finance",
@@ -274,7 +493,22 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Netlify"
   }
  },
- "VN": {
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "KE": {
   "app": {
    "status": 200,
    "final_url": "https://ambient.finance",
@@ -306,6 +540,19 @@ checked_at: 2026-10-11T21:24:23Z
  },
  "GE": {
   "app": {
+   "status": null,
+   "final_url": "https://ambient.finance",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "US-NY": {
+  "app": {
    "status": 200,
    "final_url": "https://ambient.finance",
    "state": "ok",
@@ -316,6 +563,276 @@ checked_at: 2026-10-11T21:24:23Z
    ],
    "bytes": 5668,
    "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Ambient | Zero-to-One Decentralized Trading Protocol",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 5668,
+   "redirects": [],
+   "server": "Netlify"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
+   "server": "Netlify"
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 200,
+   "final_url": "https://ambient.finance/blocked.html",
+   "state": "blocked",
+   "why": "redirect -> https://ambient.finance/blocked.html",
+   "title": "Access Restricted",
+   "scripts": [],
+   "bytes": 18184,
+   "redirects": [
+    "https://ambient.finance/blocked.html"
+   ],
    "server": "Netlify"
   }
  }

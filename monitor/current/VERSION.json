@@ -1,10 +1,10 @@
 {
-  "version": "2026-10-11",
-  "scanned_at": "2026-10-11T21:29:40Z",
+  "version": "2026-10-28",
+  "scanned_at": "2026-10-28T23:44:52Z",
   "archived_at": null,
-  "previous": "monitor/archive/2026-10-11_2026-10-11-3",
-  "site_interfaces": 64,
-  "reproduced": 64,
+  "previous": "monitor/archive/2026-10-28_2026-10-28",
+  "site_interfaces": 69,
+  "reproduced": 67,
   "checks": {
     "sweep-code": {
       "pass": 30
@@ -16,42 +16,43 @@
       "pass": 15
     },
     "sweep-bundle": {
-      "pass": 57,
+      "pass": 62,
       "error": 7
     },
     "bundle": {
-      "pass": 57
+      "fail": 6,
+      "pass": 58
     },
     "sweep-terms": {
       "skip": 4,
-      "pass": 49,
+      "pass": 54,
       "error": 1
     },
     "page": {
-      "pass": 45
+      "pass": 49
     },
     "api": {
-      "pass": 9
+      "pass": 10
     },
     "sweep-live": {
-      "pass": 64
+      "pass": 69
     },
     "live": {
       "pass": 10
     }
   },
   "check_runs": {
-    "code": "2026-10-11T21:04:44Z",
-    "bundle": "2026-10-11T21:15:46Z",
-    "docs": "2026-10-11T21:19:02Z",
-    "api": "2026-10-11T21:19:11Z",
-    "live": "2026-10-11T21:29:29Z"
+    "code": "2026-10-28T22:38:21Z",
+    "bundle": "2026-10-28T22:52:41Z",
+    "docs": "2026-10-28T22:57:04Z",
+    "api": "2026-10-28T22:57:18Z",
+    "live": "2026-10-28T23:07:56Z"
   },
   "catalog_changes": 0,
-  "needs_review": 0,
-  "sweep_findings": 0,
+  "needs_review": 11,
+  "sweep_findings": 27,
   "not_checked": 12,
-  "git_head_before": "7ff6849",
+  "git_head_before": "348e704",
   "made_by": "monitor/scripts/update.py",
   "files": {
     "CHANGES.md": "what changed since the previous version and what needs review",

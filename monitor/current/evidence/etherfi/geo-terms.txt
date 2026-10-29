@@ -1,9 +1,9 @@
 check: etherfi/geo-terms
 about: The Terms exclude residents of Canada and of Restricted Jurisdictions (www.ether.fi blocks scripts with a Vercel challenge; the same Terms are read from the ether.fi GitBook)
 source: https://etherfi.gitbook.io/etherfi/legal/ether.fi-legal/terms-of-use
-checked_at: 2026-10-11T21:18:51Z
+checked_at: 2026-10-28T22:56:40Z
 fetched: https://etherfi.gitbook.io/etherfi/legal/ether.fi-legal/terms-of-use
-sha256: 0fadd24f34b987a7e685b9ceb44307f3856c6b9e3e99d339aa9bbcf2c03fb3c0
+sha256: 9b8c4e9cb7b7ce59f8b4b8e5e6b57654d725eeb8aaf075aedd959c6a1470dc5b
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

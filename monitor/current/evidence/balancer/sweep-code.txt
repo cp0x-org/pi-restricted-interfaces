@@ -1,7 +1,7 @@
 check: balancer/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/balancer/frontend-monorepo/tree/046d0100891916cda92a0aef5a0f2d059bd309d0
-checked_at: 2026-10-11T21:02:54Z
+checked_at: 2026-10-28T22:35:13Z
 fetched: https://codeload.github.com/balancer/frontend-monorepo/tar.gz/046d0100891916cda92a0aef5a0f2d059bd309d0
 sha256: a763e21efaf68de3c4fca31bfd986153db51ed46607966ba66a44909937fe2eb
 --------------------------------------------------------------------------------

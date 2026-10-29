@@ -1,7 +1,7 @@
 check: snapshot/geo-terms
 about: The Terms list SECO-embargoed countries and only reserve the right to restrict access by location
 source: https://github.com/snapshot-labs/sx-monorepo/blob/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef/apps/ui/src/views/Terms.vue#L13
-checked_at: 2026-10-11T21:04:43Z
+checked_at: 2026-10-28T22:38:16Z
 fetched: https://raw.githubusercontent.com/snapshot-labs/sx-monorepo/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef/apps/ui/src/views/Terms.vue
 sha256: 46f648ef49eb2add5443302894c1d50cfd40f590aec6cc940d278e65cf1bbebe
 --------------------------------------------------------------------------------

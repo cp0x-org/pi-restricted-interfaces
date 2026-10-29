@@ -1,7 +1,7 @@
 check: lido/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://stake.lido.fi
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
@@ -12,17 +12,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -47,17 +47,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -74,7 +74,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "US-NY": {
+ "CA": {
   "app": {
    "status": 200,
    "final_url": "https://stake.lido.fi",
@@ -82,52 +82,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
-   "redirects": [],
-   "server": "cloudflare"
-  },
-  "https://stake.lido.fi/api/geo": {
-   "status": 200,
-   "final_url": "https://stake.lido.fi/api/geo",
-   "state": "feature_limited",
-   "flags": {
-    "availability": "limited",
-    "country": "US"
-   },
-   "body": "{\"country\":\"US\",\"availability\":\"limited\"}",
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "CA-ON": {
-  "app": {
-   "status": 200,
-   "final_url": "https://stake.lido.fi",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Stake with Lido | Lido",
-   "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/runtime/window-env.js"
-   ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -144,6 +109,111 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
+ "MX": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "MX"
+   },
+   "body": "{\"country\":\"MX\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "AR"
+   },
+   "body": "{\"country\":\"AR\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "CO"
+   },
+   "body": "{\"country\":\"CO\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
  "GB": {
   "app": {
    "status": 200,
@@ -152,17 +222,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -181,25 +251,15 @@ checked_at: 2026-10-11T21:24:23Z
  },
  "DE": {
   "app": {
-   "status": 200,
+   "status": null,
    "final_url": "https://stake.lido.fi",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Stake with Lido | Lido",
-   "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/runtime/window-env.js"
-   ],
-   "bytes": 156829,
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
    "redirects": [],
-   "server": "cloudflare"
+   "server": null
   },
   "https://stake.lido.fi/api/geo": {
    "status": 200,
@@ -222,17 +282,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -257,17 +317,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -284,6 +344,76 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "ES"
+   },
+   "body": "{\"country\":\"ES\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "IT"
+   },
+   "body": "{\"country\":\"IT\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
  "PL": {
   "app": {
    "status": 200,
@@ -292,17 +422,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -319,6 +449,76 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "CH"
+   },
+   "body": "{\"country\":\"CH\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "SE"
+   },
+   "body": "{\"country\":\"SE\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
  "UA": {
   "app": {
    "status": 200,
@@ -327,17 +527,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -362,17 +562,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -397,17 +597,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -424,6 +624,286 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "SA"
+   },
+   "body": "{\"country\":\"SA\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "IL"
+   },
+   "body": "{\"country\":\"IL\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "PK"
+   },
+   "body": "{\"country\":\"PK\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "BD"
+   },
+   "body": "{\"country\":\"BD\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "VN"
+   },
+   "body": "{\"country\":\"VN\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "TH"
+   },
+   "body": "{\"country\":\"TH\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "PH"
+   },
+   "body": "{\"country\":\"PH\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "MY"
+   },
+   "body": "{\"country\":\"MY\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
  "SG": {
   "app": {
    "status": 200,
@@ -432,17 +912,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -467,17 +947,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -494,7 +974,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "JP": {
+ "CN": {
   "app": {
    "status": 200,
    "final_url": "https://stake.lido.fi",
@@ -502,17 +982,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -522,14 +1002,14 @@ checked_at: 2026-10-11T21:24:23Z
    "state": "ok",
    "flags": {
     "availability": "full",
-    "country": "JP"
+    "country": "CN"
    },
-   "body": "{\"country\":\"JP\",\"availability\":\"full\"}",
+   "body": "{\"country\":\"CN\",\"availability\":\"full\"}",
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "BR": {
+ "KR": {
   "app": {
    "status": 200,
    "final_url": "https://stake.lido.fi",
@@ -537,17 +1017,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -557,14 +1037,14 @@ checked_at: 2026-10-11T21:24:23Z
    "state": "ok",
    "flags": {
     "availability": "full",
-    "country": "BR"
+    "country": "KR"
    },
-   "body": "{\"country\":\"BR\",\"availability\":\"full\"}",
+   "body": "{\"country\":\"KR\",\"availability\":\"full\"}",
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "AR": {
+ "TW": {
   "app": {
    "status": 200,
    "final_url": "https://stake.lido.fi",
@@ -572,17 +1052,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -592,9 +1072,44 @@ checked_at: 2026-10-11T21:24:23Z
    "state": "ok",
    "flags": {
     "availability": "full",
-    "country": "AR"
+    "country": "TW"
    },
-   "body": "{\"country\":\"AR\",\"availability\":\"full\"}",
+   "body": "{\"country\":\"TW\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "AU"
+   },
+   "body": "{\"country\":\"AU\",\"availability\":\"full\"}",
    "redirects": [],
    "server": "cloudflare"
   }
@@ -607,17 +1122,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -634,7 +1149,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "VN": {
+ "ZA": {
   "app": {
    "status": 200,
    "final_url": "https://stake.lido.fi",
@@ -642,17 +1157,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -662,9 +1177,44 @@ checked_at: 2026-10-11T21:24:23Z
    "state": "ok",
    "flags": {
     "availability": "full",
-    "country": "VN"
+    "country": "ZA"
    },
-   "body": "{\"country\":\"VN\",\"availability\":\"full\"}",
+   "body": "{\"country\":\"ZA\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "KE"
+   },
+   "body": "{\"country\":\"KE\",\"availability\":\"full\"}",
    "redirects": [],
    "server": "cloudflare"
   }
@@ -677,17 +1227,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -712,17 +1262,17 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Stake with Lido | Lido",
    "scripts": [
-    "/_next/static/6ee927e3/_buildManifest.js",
-    "/_next/static/6ee927e3/_ssgManifest.js",
     "/_next/static/chunks/framework-*.js",
     "/_next/static/chunks/main-*.js",
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
     "/runtime/window-env.js"
    ],
-   "bytes": 156829,
+   "bytes": 179525,
    "redirects": [],
    "server": "cloudflare"
   },
@@ -735,6 +1285,635 @@ checked_at: 2026-10-11T21:24:23Z
     "country": "GE"
    },
    "body": "{\"country\":\"GE\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "feature_limited",
+   "flags": {
+    "availability": "limited",
+    "country": "US"
+   },
+   "body": "{\"country\":\"US\",\"availability\":\"limited\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "CA"
+   },
+   "body": "{\"country\":\"CA\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "RU"
+   },
+   "body": "{\"country\":\"RU\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "BY"
+   },
+   "body": "{\"country\":\"BY\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 403,
+   "final_url": "https://stake.lido.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "UI warning",
+   "scripts": [],
+   "bytes": 1230,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 403,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> <title>UI warning</title> <style> body {",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://stake.lido.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "UI warning",
+   "scripts": [],
+   "bytes": 1230,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 403,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> <title>UI warning</title> <style> body {",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "VE"
+   },
+   "body": "{\"country\":\"VE\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "MM"
+   },
+   "body": "{\"country\":\"MM\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "AF"
+   },
+   "body": "{\"country\":\"AF\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "IQ"
+   },
+   "body": "{\"country\":\"IQ\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": null,
+   "final_url": "https://stake.lido.fi",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "LB"
+   },
+   "body": "{\"country\":\"LB\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "LY"
+   },
+   "body": "{\"country\":\"LY\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "SS"
+   },
+   "body": "{\"country\":\"SS\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "ZW"
+   },
+   "body": "{\"country\":\"ZW\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "NI"
+   },
+   "body": "{\"country\":\"NI\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "CD"
+   },
+   "body": "{\"country\":\"CD\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "CF"
+   },
+   "body": "{\"country\":\"CF\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 179525,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "SO"
+   },
+   "body": "{\"country\":\"SO\",\"availability\":\"full\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Stake with Lido | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/e256fd6d/_buildManifest.js",
+    "/_next/static/e256fd6d/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 178445,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://stake.lido.fi/api/geo": {
+   "status": 200,
+   "final_url": "https://stake.lido.fi/api/geo",
+   "state": "ok",
+   "flags": {
+    "availability": "full",
+    "country": "ML"
+   },
+   "body": "{\"country\":\"ML\",\"availability\":\"full\"}",
    "redirects": [],
    "server": "cloudflare"
   }

@@ -1,7 +1,7 @@
 check: uniswap/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/Uniswap/interface/tree/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada
-checked_at: 2026-10-11T21:04:34Z
+checked_at: 2026-10-28T22:37:49Z
 fetched: https://codeload.github.com/Uniswap/interface/tar.gz/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada
 sha256: f559a054edc96ba5590a291d6504f1a438d64a4745a23803cfd0ffa8c499d24b
 --------------------------------------------------------------------------------

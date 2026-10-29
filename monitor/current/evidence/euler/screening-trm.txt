@@ -1,7 +1,7 @@
 check: euler/screening-trm
 about: Wallet screening through the Euler data API (TRM Labs), fail-closed
 source: https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/server/utils/screening.ts#L75
-checked_at: 2026-10-11T21:04:39Z
+checked_at: 2026-10-28T22:38:04Z
 fetched: https://raw.githubusercontent.com/euler-xyz/euler-lite/43ba73fadda21d943224742286c7c078562e3769/server/utils/screening.ts
 sha256: b1537510e7d9e3e88024fb78df0523a2b072b284c5ef55ff16057628b89202b7
 --------------------------------------------------------------------------------

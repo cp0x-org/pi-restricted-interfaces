@@ -1,7 +1,7 @@
 check: aave/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://app.aave.com
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
@@ -12,13 +12,13 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Aave - Open Source Liquidity Protocol",
    "scripts": [
-    "/_next/static/chunks/1283-*.js",
     "/_next/static/chunks/2526-*.js",
     "/_next/static/chunks/4016-*.js",
     "/_next/static/chunks/4843-*.js",
     "/_next/static/chunks/6655-*.js",
     "/_next/static/chunks/6840-*.js",
     "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
     "/_next/static/chunks/7730-*.js",
     "/_next/static/chunks/8430-*.js",
     "/_next/static/chunks/8916-*.js",
@@ -29,10 +29,10 @@ checked_at: 2026-10-11T21:24:23Z
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
    ],
-   "bytes": 5589,
+   "bytes": 5950,
    "redirects": [],
    "server": "cloudflare"
   }
@@ -45,13 +45,13 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Aave - Open Source Liquidity Protocol",
    "scripts": [
-    "/_next/static/chunks/1283-*.js",
     "/_next/static/chunks/2526-*.js",
     "/_next/static/chunks/4016-*.js",
     "/_next/static/chunks/4843-*.js",
     "/_next/static/chunks/6655-*.js",
     "/_next/static/chunks/6840-*.js",
     "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
     "/_next/static/chunks/7730-*.js",
     "/_next/static/chunks/8430-*.js",
     "/_next/static/chunks/8916-*.js",
@@ -62,15 +62,15 @@ checked_at: 2026-10-11T21:24:23Z
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
    ],
-   "bytes": 5589,
+   "bytes": 5950,
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "US-NY": {
+ "CA": {
   "app": {
    "status": 200,
    "final_url": "https://app.aave.com",
@@ -78,13 +78,13 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Aave - Open Source Liquidity Protocol",
    "scripts": [
-    "/_next/static/chunks/1283-*.js",
     "/_next/static/chunks/2526-*.js",
     "/_next/static/chunks/4016-*.js",
     "/_next/static/chunks/4843-*.js",
     "/_next/static/chunks/6655-*.js",
     "/_next/static/chunks/6840-*.js",
     "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
     "/_next/static/chunks/7730-*.js",
     "/_next/static/chunks/8430-*.js",
     "/_next/static/chunks/8916-*.js",
@@ -95,15 +95,15 @@ checked_at: 2026-10-11T21:24:23Z
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
    ],
-   "bytes": 5589,
+   "bytes": 5950,
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "CA-ON": {
+ "MX": {
   "app": {
    "status": 200,
    "final_url": "https://app.aave.com",
@@ -111,13 +111,13 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Aave - Open Source Liquidity Protocol",
    "scripts": [
-    "/_next/static/chunks/1283-*.js",
     "/_next/static/chunks/2526-*.js",
     "/_next/static/chunks/4016-*.js",
     "/_next/static/chunks/4843-*.js",
     "/_next/static/chunks/6655-*.js",
     "/_next/static/chunks/6840-*.js",
     "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
     "/_next/static/chunks/7730-*.js",
     "/_next/static/chunks/8430-*.js",
     "/_next/static/chunks/8916-*.js",
@@ -128,406 +128,10 @@ checked_at: 2026-10-11T21:24:23Z
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
    ],
-   "bytes": 5589,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "GB": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.aave.com",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Aave - Open Source Liquidity Protocol",
-   "scripts": [
-    "/_next/static/chunks/1283-*.js",
-    "/_next/static/chunks/2526-*.js",
-    "/_next/static/chunks/4016-*.js",
-    "/_next/static/chunks/4843-*.js",
-    "/_next/static/chunks/6655-*.js",
-    "/_next/static/chunks/6840-*.js",
-    "/_next/static/chunks/715-*.js",
-    "/_next/static/chunks/7730-*.js",
-    "/_next/static/chunks/8430-*.js",
-    "/_next/static/chunks/8916-*.js",
-    "/_next/static/chunks/9520-*.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
-   ],
-   "bytes": 5589,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "DE": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.aave.com",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Aave - Open Source Liquidity Protocol",
-   "scripts": [
-    "/_next/static/chunks/1283-*.js",
-    "/_next/static/chunks/2526-*.js",
-    "/_next/static/chunks/4016-*.js",
-    "/_next/static/chunks/4843-*.js",
-    "/_next/static/chunks/6655-*.js",
-    "/_next/static/chunks/6840-*.js",
-    "/_next/static/chunks/715-*.js",
-    "/_next/static/chunks/7730-*.js",
-    "/_next/static/chunks/8430-*.js",
-    "/_next/static/chunks/8916-*.js",
-    "/_next/static/chunks/9520-*.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
-   ],
-   "bytes": 5589,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "FR": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.aave.com",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Aave - Open Source Liquidity Protocol",
-   "scripts": [
-    "/_next/static/chunks/1283-*.js",
-    "/_next/static/chunks/2526-*.js",
-    "/_next/static/chunks/4016-*.js",
-    "/_next/static/chunks/4843-*.js",
-    "/_next/static/chunks/6655-*.js",
-    "/_next/static/chunks/6840-*.js",
-    "/_next/static/chunks/715-*.js",
-    "/_next/static/chunks/7730-*.js",
-    "/_next/static/chunks/8430-*.js",
-    "/_next/static/chunks/8916-*.js",
-    "/_next/static/chunks/9520-*.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
-   ],
-   "bytes": 5589,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "NL": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.aave.com",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Aave - Open Source Liquidity Protocol",
-   "scripts": [
-    "/_next/static/chunks/1283-*.js",
-    "/_next/static/chunks/2526-*.js",
-    "/_next/static/chunks/4016-*.js",
-    "/_next/static/chunks/4843-*.js",
-    "/_next/static/chunks/6655-*.js",
-    "/_next/static/chunks/6840-*.js",
-    "/_next/static/chunks/715-*.js",
-    "/_next/static/chunks/7730-*.js",
-    "/_next/static/chunks/8430-*.js",
-    "/_next/static/chunks/8916-*.js",
-    "/_next/static/chunks/9520-*.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
-   ],
-   "bytes": 5589,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "PL": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.aave.com",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Aave - Open Source Liquidity Protocol",
-   "scripts": [
-    "/_next/static/chunks/1283-*.js",
-    "/_next/static/chunks/2526-*.js",
-    "/_next/static/chunks/4016-*.js",
-    "/_next/static/chunks/4843-*.js",
-    "/_next/static/chunks/6655-*.js",
-    "/_next/static/chunks/6840-*.js",
-    "/_next/static/chunks/715-*.js",
-    "/_next/static/chunks/7730-*.js",
-    "/_next/static/chunks/8430-*.js",
-    "/_next/static/chunks/8916-*.js",
-    "/_next/static/chunks/9520-*.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
-   ],
-   "bytes": 5589,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "UA": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.aave.com",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Aave - Open Source Liquidity Protocol",
-   "scripts": [
-    "/_next/static/chunks/1283-*.js",
-    "/_next/static/chunks/2526-*.js",
-    "/_next/static/chunks/4016-*.js",
-    "/_next/static/chunks/4843-*.js",
-    "/_next/static/chunks/6655-*.js",
-    "/_next/static/chunks/6840-*.js",
-    "/_next/static/chunks/715-*.js",
-    "/_next/static/chunks/7730-*.js",
-    "/_next/static/chunks/8430-*.js",
-    "/_next/static/chunks/8916-*.js",
-    "/_next/static/chunks/9520-*.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
-   ],
-   "bytes": 5589,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "TR": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.aave.com",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Aave - Open Source Liquidity Protocol",
-   "scripts": [
-    "/_next/static/chunks/1283-*.js",
-    "/_next/static/chunks/2526-*.js",
-    "/_next/static/chunks/4016-*.js",
-    "/_next/static/chunks/4843-*.js",
-    "/_next/static/chunks/6655-*.js",
-    "/_next/static/chunks/6840-*.js",
-    "/_next/static/chunks/715-*.js",
-    "/_next/static/chunks/7730-*.js",
-    "/_next/static/chunks/8430-*.js",
-    "/_next/static/chunks/8916-*.js",
-    "/_next/static/chunks/9520-*.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
-   ],
-   "bytes": 5589,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "AE": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.aave.com",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Aave - Open Source Liquidity Protocol",
-   "scripts": [
-    "/_next/static/chunks/1283-*.js",
-    "/_next/static/chunks/2526-*.js",
-    "/_next/static/chunks/4016-*.js",
-    "/_next/static/chunks/4843-*.js",
-    "/_next/static/chunks/6655-*.js",
-    "/_next/static/chunks/6840-*.js",
-    "/_next/static/chunks/715-*.js",
-    "/_next/static/chunks/7730-*.js",
-    "/_next/static/chunks/8430-*.js",
-    "/_next/static/chunks/8916-*.js",
-    "/_next/static/chunks/9520-*.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
-   ],
-   "bytes": 5589,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "SG": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.aave.com",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Aave - Open Source Liquidity Protocol",
-   "scripts": [
-    "/_next/static/chunks/1283-*.js",
-    "/_next/static/chunks/2526-*.js",
-    "/_next/static/chunks/4016-*.js",
-    "/_next/static/chunks/4843-*.js",
-    "/_next/static/chunks/6655-*.js",
-    "/_next/static/chunks/6840-*.js",
-    "/_next/static/chunks/715-*.js",
-    "/_next/static/chunks/7730-*.js",
-    "/_next/static/chunks/8430-*.js",
-    "/_next/static/chunks/8916-*.js",
-    "/_next/static/chunks/9520-*.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
-   ],
-   "bytes": 5589,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "HK": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.aave.com",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Aave - Open Source Liquidity Protocol",
-   "scripts": [
-    "/_next/static/chunks/1283-*.js",
-    "/_next/static/chunks/2526-*.js",
-    "/_next/static/chunks/4016-*.js",
-    "/_next/static/chunks/4843-*.js",
-    "/_next/static/chunks/6655-*.js",
-    "/_next/static/chunks/6840-*.js",
-    "/_next/static/chunks/715-*.js",
-    "/_next/static/chunks/7730-*.js",
-    "/_next/static/chunks/8430-*.js",
-    "/_next/static/chunks/8916-*.js",
-    "/_next/static/chunks/9520-*.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
-   ],
-   "bytes": 5589,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "JP": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.aave.com",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Aave - Open Source Liquidity Protocol",
-   "scripts": [
-    "/_next/static/chunks/1283-*.js",
-    "/_next/static/chunks/2526-*.js",
-    "/_next/static/chunks/4016-*.js",
-    "/_next/static/chunks/4843-*.js",
-    "/_next/static/chunks/6655-*.js",
-    "/_next/static/chunks/6840-*.js",
-    "/_next/static/chunks/715-*.js",
-    "/_next/static/chunks/7730-*.js",
-    "/_next/static/chunks/8430-*.js",
-    "/_next/static/chunks/8916-*.js",
-    "/_next/static/chunks/9520-*.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
-   ],
-   "bytes": 5589,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "BR": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.aave.com",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Aave - Open Source Liquidity Protocol",
-   "scripts": [
-    "/_next/static/chunks/1283-*.js",
-    "/_next/static/chunks/2526-*.js",
-    "/_next/static/chunks/4016-*.js",
-    "/_next/static/chunks/4843-*.js",
-    "/_next/static/chunks/6655-*.js",
-    "/_next/static/chunks/6840-*.js",
-    "/_next/static/chunks/715-*.js",
-    "/_next/static/chunks/7730-*.js",
-    "/_next/static/chunks/8430-*.js",
-    "/_next/static/chunks/8916-*.js",
-    "/_next/static/chunks/9520-*.js",
-    "/_next/static/chunks/framework-*.js",
-    "/_next/static/chunks/main-*.js",
-    "/_next/static/chunks/pages/_app-*.js",
-    "/_next/static/chunks/pages/index-*.js",
-    "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
-   ],
-   "bytes": 5589,
+   "bytes": 5950,
    "redirects": [],
    "server": "cloudflare"
   }
@@ -540,13 +144,13 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Aave - Open Source Liquidity Protocol",
    "scripts": [
-    "/_next/static/chunks/1283-*.js",
     "/_next/static/chunks/2526-*.js",
     "/_next/static/chunks/4016-*.js",
     "/_next/static/chunks/4843-*.js",
     "/_next/static/chunks/6655-*.js",
     "/_next/static/chunks/6840-*.js",
     "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
     "/_next/static/chunks/7730-*.js",
     "/_next/static/chunks/8430-*.js",
     "/_next/static/chunks/8916-*.js",
@@ -557,15 +161,15 @@ checked_at: 2026-10-11T21:24:23Z
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
    ],
-   "bytes": 5589,
+   "bytes": 5950,
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "NG": {
+ "CO": {
   "app": {
    "status": 200,
    "final_url": "https://app.aave.com",
@@ -573,13 +177,13 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Aave - Open Source Liquidity Protocol",
    "scripts": [
-    "/_next/static/chunks/1283-*.js",
     "/_next/static/chunks/2526-*.js",
     "/_next/static/chunks/4016-*.js",
     "/_next/static/chunks/4843-*.js",
     "/_next/static/chunks/6655-*.js",
     "/_next/static/chunks/6840-*.js",
     "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
     "/_next/static/chunks/7730-*.js",
     "/_next/static/chunks/8430-*.js",
     "/_next/static/chunks/8916-*.js",
@@ -590,10 +194,538 @@ checked_at: 2026-10-11T21:24:23Z
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
    ],
-   "bytes": 5589,
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
    "redirects": [],
    "server": "cloudflare"
   }
@@ -606,13 +738,13 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Aave - Open Source Liquidity Protocol",
    "scripts": [
-    "/_next/static/chunks/1283-*.js",
     "/_next/static/chunks/2526-*.js",
     "/_next/static/chunks/4016-*.js",
     "/_next/static/chunks/4843-*.js",
     "/_next/static/chunks/6655-*.js",
     "/_next/static/chunks/6840-*.js",
     "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
     "/_next/static/chunks/7730-*.js",
     "/_next/static/chunks/8430-*.js",
     "/_next/static/chunks/8916-*.js",
@@ -623,10 +755,386 @@ checked_at: 2026-10-11T21:24:23Z
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
    ],
-   "bytes": 5589,
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CN": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.aave.com",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "KR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
    "redirects": [],
    "server": "cloudflare"
   }
@@ -652,13 +1160,13 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Aave - Open Source Liquidity Protocol",
    "scripts": [
-    "/_next/static/chunks/1283-*.js",
     "/_next/static/chunks/2526-*.js",
     "/_next/static/chunks/4016-*.js",
     "/_next/static/chunks/4843-*.js",
     "/_next/static/chunks/6655-*.js",
     "/_next/static/chunks/6840-*.js",
     "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
     "/_next/static/chunks/7730-*.js",
     "/_next/static/chunks/8430-*.js",
     "/_next/static/chunks/8916-*.js",
@@ -669,10 +1177,477 @@ checked_at: 2026-10-11T21:24:23Z
     "/_next/static/chunks/pages/index-*.js",
     "/_next/static/chunks/polyfills-*.js",
     "/_next/static/chunks/webpack-*.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_buildManifest.js",
-    "/_next/static/q7d92BbcLx80v9MuveclQ/_ssgManifest.js"
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
    ],
-   "bytes": 5589,
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.aave.com",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 5843,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.aave.com",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 5842,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.aave.com",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 5843,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.aave.com",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 5844,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.aave.com",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 5842,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.aave.com",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 5843,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.aave.com",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 5844,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.aave.com",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 5841,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.aave.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aave - Open Source Liquidity Protocol",
+   "scripts": [
+    "/_next/static/chunks/2526-*.js",
+    "/_next/static/chunks/4016-*.js",
+    "/_next/static/chunks/4843-*.js",
+    "/_next/static/chunks/6655-*.js",
+    "/_next/static/chunks/6840-*.js",
+    "/_next/static/chunks/715-*.js",
+    "/_next/static/chunks/7493-*.js",
+    "/_next/static/chunks/7730-*.js",
+    "/_next/static/chunks/8430-*.js",
+    "/_next/static/chunks/8916-*.js",
+    "/_next/static/chunks/9520-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_buildManifest.js",
+    "/_next/static/jzT-T_nF04W_TBMeTett8/_ssgManifest.js"
+   ],
+   "bytes": 5950,
    "redirects": [],
    "server": "cloudflare"
   }

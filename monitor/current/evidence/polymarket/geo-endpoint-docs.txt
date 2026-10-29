@@ -1,7 +1,7 @@
 check: polymarket/geo-endpoint-docs
 about: Polymarket docs: orders from blocked regions are rejected; the verdict comes from GET polymarket.com/api/geoblock
 source: https://docs.polymarket.com/developers/CLOB/geoblock
-checked_at: 2026-10-11T21:18:59Z
+checked_at: 2026-10-28T22:56:55Z
 fetched: https://web.archive.org/web/20260122064721id_/https://docs.polymarket.com/developers/CLOB/geoblock
 sha256: bbf8e0e1f3123dfef05b726f8e70f8624f0a2cd94b6b6f9befaec965f4139521
 http_status: 200

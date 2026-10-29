@@ -1,7 +1,7 @@
 check: curve-classic/no-screening
 about: The classic UI's JavaScript has no wallet-screening call or sanctions list
 source: https://classic.curve.finance
-checked_at: 2026-10-11T21:15:31Z
+checked_at: 2026-10-28T22:52:23Z
 http_status: 200
 --------------------------------------------------------------------------------
 scripts:

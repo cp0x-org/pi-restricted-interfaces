@@ -1,7 +1,7 @@
 check: notional-v3/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/notional-finance/notional-monorepo/tree/cff15de4b098d101b2a023732efd242496c42888
-checked_at: 2026-10-11T21:03:41Z
+checked_at: 2026-10-28T22:36:25Z
 fetched: https://codeload.github.com/notional-finance/notional-monorepo/tar.gz/cff15de4b098d101b2a023732efd242496c42888
 sha256: c0e4574560f915f13365e6b0608db8e1acac567707e6ce0aa30673deb01ca458
 --------------------------------------------------------------------------------

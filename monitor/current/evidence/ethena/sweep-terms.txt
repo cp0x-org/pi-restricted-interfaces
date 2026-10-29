@@ -1,9 +1,9 @@
 check: ethena/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://docs.ethena.fi/resources/terms-of-service
-checked_at: 2026-10-11T21:17:22Z
+checked_at: 2026-10-28T22:54:17Z
 fetched: https://docs.ethena.fi/resources/terms-of-service
-sha256: db7f2db4223ef57b94eace8d020f3af12436ed412aa06424dd05596a1fb88ae3
+sha256: a05f263a1694c15965f2591be5981fb29690904eb670375dc9c00f6554a23291
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 check: sky/screening-address-status
 about: Wallet screening through {authUrl}/address/status before the terms and before a transaction
 source: https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/hooks/authentication/useRestrictedAddressCheck.ts#L42
-checked_at: 2026-10-11T21:04:43Z
+checked_at: 2026-10-28T22:38:15Z
 fetched: https://raw.githubusercontent.com/jetstreamgg/tarmac/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/hooks/authentication/useRestrictedAddressCheck.ts
 sha256: bbaad2b3de9a371b796323821fb48258f766e43b206a27ff3ed702dcfabc89f7
 --------------------------------------------------------------------------------

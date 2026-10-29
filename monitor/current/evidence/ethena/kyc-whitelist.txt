@@ -1,9 +1,9 @@
 check: ethena/kyc-whitelist
 about: Ethena FAQ: minting addresses must be whitelisted after KYC/AML checks
 source: https://docs.ethena.fi/resources/faq
-checked_at: 2026-10-11T21:18:51Z
+checked_at: 2026-10-28T22:56:39Z
 fetched: https://docs.ethena.fi/resources/faq
-sha256: 229a7b04795465d69b169b284be66b2f36c86d7e48aa9774086615486661eca6
+sha256: 3411083b8f1b865178e35116ce22e4f18f1849161393957cdfe76391877e1ee2
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

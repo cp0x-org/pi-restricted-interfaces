@@ -1,9 +1,9 @@
 check: morpho/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://morpho.org/terms-of-use
-checked_at: 2026-10-11T21:17:54Z
+checked_at: 2026-10-28T22:55:01Z
 fetched: https://morpho.org/terms-of-use
-sha256: b6d6be09c68b39f7aeccfcd0f163e4c7eac3bcfa34e983409d7765a0b10e7900
+sha256: ab9fbaa549b2f658b766c4f670355cfd6fe6757c9992318160f54caa90694821
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

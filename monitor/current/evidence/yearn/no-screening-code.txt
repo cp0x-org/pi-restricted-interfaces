@@ -1,7 +1,7 @@
 check: yearn/no-screening-code
 about: No wallet-screening call or sanctions list in the frontend
 source: https://github.com/yearn/yearn.fi/tree/ad153cba6e55862634ad6a7b8e8061832a5e91cb
-checked_at: 2026-10-11T21:04:44Z
+checked_at: 2026-10-28T22:38:21Z
 fetched: https://codeload.github.com/yearn/yearn.fi/tar.gz/ad153cba6e55862634ad6a7b8e8061832a5e91cb
 sha256: 80887df87b9ec7babe1b7ff5ccf8a5da453a6e7a8f1ed3a0e228da736b061681
 --------------------------------------------------------------------------------
