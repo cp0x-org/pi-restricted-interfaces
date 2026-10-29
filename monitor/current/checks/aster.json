@@ -1,0 +1,46 @@
+{
+  "id": "aster",
+  "name": "Aster",
+  "targets": {
+    "app": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+    "repo": null,
+    "terms": "https://docs.asterdex.com/resources/terms-and-conditions",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "prod-check-ip",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Production JS: the app asks common-check-ip and, for a blocked region, refuses the wallet connection (dex-ip-blocked) or leaves only closing positions and withdrawals",
+      "source": {
+        "url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT"
+      },
+      "expect": [
+        "common-check-ip",
+        "dex-ip-blocked",
+        "Only closing positions and withdrawals are available"
+      ]
+    },
+    {
+      "id": "geo-terms-list",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "tos_only",
+      "about": "Prohibited Jurisdictions named in the Aster Terms (documentation only until a per-country check confirms which countries the IP check blocks)",
+      "source": {
+        "url": "https://docs.asterdex.com/resources/terms-and-conditions",
+        "kind": "terms"
+      },
+      "expect": [
+        "Prohibited Jurisdiction"
+      ],
+      "section": {
+        "start": "\\(each a .Prohibited Jurisdiction.\\):",
+        "end": "This prohibition extends"
+      },
+      "countries": "names"
+    }
+  ]
+}

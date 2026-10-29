@@ -1,0 +1,120 @@
+check: ethena/geo-us-faq
+about: Ethena FAQ: US users are not able to access the application
+source: https://docs.ethena.fi/resources/faq
+checked_at: 2026-10-11T21:18:50Z
+fetched: https://docs.ethena.fi/resources/faq
+sha256: 229a7b04795465d69b169b284be66b2f36c86d7e48aa9774086615486661eca6
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+FAQ | Ethena
+⌘ Ctrl k
+Overview
+Ethena Overview
+Genesis Story
+How USDe Works
+Size of the Opportunity
+Off Exchange Custody
+USDtb
+ENA
+Ethena Whitelabel
+Backing Assets
+Overview
+Crypto Basis Trade
+Non-Crypto Basis Trade
+DeFi Lending
+Institutional Lending
+Real World Assets (RWA)
+Liquid Stablecoins
+Protocol Revenue
+Protocol Overview
+Rewards Mechanism
+Underlying Derivatives
+Peg Arbitrage Mechanism
+Scenario Analysis
+Risks
+Governance
+Reserve Fund
+Backing Custody & Security
+Overview
+Backing Asset Custody
+Real-Time Dashboards
+Technical Design
+Overview
+Key Trust Assumptions
+Minting USDe
+Staking USDe
+Use of Oracles
+Hedging System
+Key Addresses
+API Documentation
+Overview
+Video Guides
+How to Buy USDe
+How to Stake USDe
+How to Stake ENA
+How to [Un]lock positions
+Resources
+Custodian Attestations
+FAQ
+Data Repository
+USDe + sUSDe Custodian Availability
+USDe Exchange Collateral Availability
+Audits
+Media Assets
+General Risk Disclosures
+Privacy Policy
+Terms of Service
+USDe Terms and Conditions
+USDe Mint User Agreement
+Testnet
+Powered by GitBook
+On this page
+For the complete documentation index, see llms.txt . This page is also available as Markdown .
+Copy
+On this page
+Resources
+FAQ
+Frequently Asked Questions
+Our FAQ aims to answer every question we've been asked on Ethena and USDe.
+Link to the full FAQ here .
+Ethena FAQs | Notion ethena on Notion
+General Questions
+Can anyone mint/redeem USDe ?
+All addresses will need to be whitelisted by the Ethena Protocol after satisfying KYC/AML checks. US users are not able to access the application. Feel free to reach out in our Telegram or Discord for help onboarding.
+Peg Stability
+How is stability supported?
+USDe's peg stability is supported through the protocol immediately hedging the delta of protocol backing assets. This aims to protect the underlying backing supporting USDe from significant variance in "USD" equivalent value under volatile market conditions or price action.
+Security & Safety of Protocol Backing
+How is protocol backing kept safe from hacks or exchange failures?
+Protocol backing is held solely in audited smart contracts as well as regulated & licensed custodians and MPC wallet providers. The custodian and MPC wallet provider partners have the highest possible security and are used by all institutional participants in the space. The use of custodians and MPC wallet providers also enables the system to custody funds off-exchange, but to still have funds available on the exchanges to collateralize the delta hedging derivatives positions. In the event of an exchange failure, the funds are NOT expected to be locked or party to the bankruptcy and Ethena should retain control to support all mint & redeem requests of USDe on demand.
+Why doesn't the protocol just hold assets with the exchanges?
+Holding protocol backing with exchanges exposes the protocol to risks if an exchange were to limit/delay withdrawals or were to close suddenly like FTX. The ability to use off-exchange custody providers enables Ethena to enjoy the benefits of a disintermediation of incentives as well as the availability of backed assets to trade on the most liquid markets.
+Rewards Explanation
+The protocol shares rewards with certain users, how is that received?
+The protocol-level revenue Ethena generates come from three different sources:
+Staked ETH yield
+Perpetual Futures Funding Rates or Expiry Futures Basis
+Fixed rewards on Liquid Stables
+On the backing asset side, staked Ethereum backing USDe will offer rewards that are currently around 3-4%. The delta hedged derivative positions offsetting the backing assets can also earn income on both perpetual futures funding rates and the basis on dated futures. Lastly, the rewards from liquid stables held by the protocol are in line with the TradFi risk free rate.
+Basis refers to the difference between the spot price of an asset and the price of the corresponding expiring futures contract. More on basis trades here .
+Funding Rates are periodic payments made to traders who are long or short depending on the difference between spot prices and perpetual contract markets. Consequently, traders will either pay or get funding based on open positions depending on demand for long or short positions. When the funding rate is positive, long positions pay shorts; when it is negative, short positions pay those long the contract. This mechanism ensures avoiding long-term divergence in the prices of the two markets.
+Both dated futures basis and perpetual funding rates have, on average, returned a yield to the short side of c.6-7% over the last 3 years, leading to an excess return over staked Ethereum and liquid stables holdings.
+These protocol level rewards are variable, transparent, sustainable, and partially distributed to users (net of revenue that accrues to the reserve fund) according to the staking mechanism.
+Perpetual Futures
+Aren't perpetual futures funding rates volatile?
+Perpetual futures funding rates have two primary components: the interest rate and the premium. The venue determines how funding rates are calculated. Funding rates may exhibit sharp behavior during times of market volatility, they may go negative for significant periods but usually revert closer to zero or positive and display mean-reverting characteristics.
+Historically, long positions have paid the funding rate to the short side, which on average are expected to provide Ethena with an excess return over rewards from ETH staking and liquid stables holdings. The table below summarizes the distribution of funding rates since inception. We can see that the mean for annualized open interest-weighted funding rates is 9.03% for ETH and 7.79% for BTC.
+How does this affect the combined protocol yield?
+Combining the different income sources gives the system an excess return, which is broken down below for each perpetual future contract per quarter. Q3 2022 was the only quarter with a negative excess return on some exchanges thanks to an arbitrage opportunity related to the ETH Proof of Work token airdrop post-Merge.
+There are "Quick Answers" available throughout the documentation as well.
+We would love to answer any unanswered questions. Join us in Telegram & Discord .
+Last updated 1 month ago
+Was this helpful?
+Our FAQ aims to answer every question we've been asked on Ethena and USDe.
+General Questions
+Peg Stability
+Security & Safety of Protocol Backing
+Rewards Explanation
+Perpetual Futures
+Was this helpful?

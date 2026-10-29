@@ -1,0 +1,375 @@
+check: morpho/sweep-terms
+about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
+source: https://morpho.org/terms-of-use
+checked_at: 2026-10-11T21:17:54Z
+fetched: https://morpho.org/terms-of-use
+sha256: b6d6be09c68b39f7aeccfcd0f163e4c7eac3bcfa34e983409d7765a0b10e7900
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+countries: US GB FR
+
+clauses:
+  geofencing: e for compliance with the laws and regulations applicable to you, including any restriction on the access to, or use of, crypto-assets or DeFi in your jurisdiction. 8. ASSUMPTION OF RISK The following section outlines key risks associated with accessing or using the Services. While
+  vpn: have a registered office in a Restricted Territory (as defined below). Use of a virtual private network (“VPN”) to circumvent the restrictions set forth herein is strictly prohibited. 1. DEFINITIONS In addition to the terms
+  screening: se restrictions. The Morpho Association may use onchain analytics and sanctions-screening tools to identify Wallet addresses associated with Restricted Territories or with persons subject to sanctions, and may restrict or revoke access on the
+  sanctions: ry, region, or territory that is the subject of comprehensive or territory-wide sanctions or trade embargoes administered or enforced by the U.S. Department of the Treasury’s Office of Foreign Assets Control
+  us_persons: None
+  kyc: None
+
+--- restriction paragraphs ---
+Important notice: no Services (as defined below) are offered to persons or entities who reside in, are citizens of, are located in, are incorporated in, or have a registered office in a Restricted Territory (as defined below). Use of a virtual private network (“VPN”) to circumvent the restrictions set forth herein is strictly prohibited.
+Restricted Territories : means any country, region, or territory that is the subject of comprehensive or territory-wide sanctions or trade embargoes administered or enforced by the U.S. Department of the Treasury’s Office of Foreign Assets Control (“OFAC”), the European Union, the United Nations Security Council, or His Majesty’s Treasury of the United Kingdom.
+Sanctions and anti-money laundering . The representations in this Article are deemed repeated each time you access or use the Services. You further represent and warrant that you will not use the Services to engage in or facilitate money laundering, terrorist financing, tax evasion, sanctions evasion, or any other illegal activity, and that the crypto-assets you use in connection with the Services are not derived from, and will not be used for, any unlawful activity. You will not access or use the Services from, or for the benefit of any person located in, a Restricted Territory, and will not use a VPN or other means to conceal your location or circumvent these restrictions. The Morpho Association may use onchain analytics and sanctions-screening tools to identify Wallet addresses associated with Restricted Territories or with persons subject to sanctions, and may restrict or revoke access on the grounds, and in the manner, set out in Article 17.
+You, as an individual or an entity, or your wallet address is listed on the Specially Designated Nationals and Blocked Persons List (“SDN List”), Consolidated Sanctions List (“Non-SDN Lists”), or any other sanctions lists administered by OFAC;
+You are located, organized, or resident in a Restricted Territory (as defined in Article 1);
+You are not identified on any sanctions-related list, including without limitation the OFAC Specially Designated Nationals and Blocked Persons List or Consolidated Non-SDN Sanctions Lists;
+You are not located, organized, or resident in a country or territory that is, or whose government is, the subject of sanctions, including but not limited to the Restricted Territories (as defined in Article 1).
+In the absence of an amicable resolution, all disputes – with Users who qualify as professionals within the meaning of Applicable Law and consumers who are not domiciled within the European Union – arising out of or in connection with the present TOU shall be finally settled under the Rules of Arbitration of the International Chamber of Commerce by one or more arbitrators appointed in accordance with the said Rules (the “Arbitration Clause”). The emergency arbitrator provisions shall not apply. The expedited procedure provisions shall not apply. No award or procedural order made in the arbitration shall be published. The place of establishment of the tribunal shall be Paris. The arbitration proceedings will be conducted in English. The number of arbitrators will be one. The Parties will share equally the costs of arbitration, but each Party will bear its own attorneys’ fees and related costs, unless otherwise provided by law or statute. The Parties agree that any action that may not be submitted to arbitration under applicable law will be tried by a court of competent jurisdiction located in France, and the Parties submit to the jurisdiction of France for this limited purpose.
+
+--- full text ---
+Terms of use | Morpho
+Brand
+Guidelines Guidelines
+Logo SVG dark Copied
+Logo SVG light Copied
+Social
+Twitter Twitter
+LinkedIn LinkedIn
+Youtube Youtube
+Contact
+Contact Contact
+Institutions
+Fintechs
+Users
+Jobs
+Resources
+Blog
+Security
+Customer Stories
+Documentation
+Data Dashboard
+Developers
+Resources Hub Resources Hub
+Use Morpho Use Morpho
+Use
+Fixed Rate Markets
+Variable Rate Markets
+Morpho Vaults
+Curator
+Integrate
+Earn API (coming soon)
+Borrow API (coming soon)
+Midnight API
+Blue API
+Menu
+Home Institutions Fintechs Users Jobs Resources Morpho
+Resources
+Blog
+Security
+Customer Stories
+Documentation
+Data Dashboard
+Developers
+Resources Hub Resources Hub
+Morpho
+Brand
+Guidelines Guidelines
+Logo SVG dark Copied
+Logo SVG light Copied
+Social
+Twitter Twitter
+LinkedIn LinkedIn
+Youtube Youtube
+Contact
+Contact Contact
+Use
+Fixed Rate Markets
+Variable Rate Markets
+Morpho Vaults
+Curator
+Integrate
+Earn API (coming soon)
+Borrow API (coming soon)
+Midnight API
+Blue API
+Terms of use
+Version dated September 11, 2026
+These Terms of Use (hereinafter referred to as the “TOU“) are concluded between:
+firstly, the Morpho Association, a French Association having its registered office at 24 rue de Clichy 75009 Paris, registered at the National register of associations (Répertoire national des associations) under number W751263773, with EU VAT number FR 44911156933 and SIREN number 911 156 933, duly represented (hereinafter referred to as “Morpho Association”, the “Association”, “Us”, “We”, “Our”),
+and,
+secondly, a natural person or legal entity (hereinafter referred to as the “User“, “You”, “Yours”), who visits or uses Morpho Association’s Sites, Services, Apps and/or Protocols.
+Morpho Association and the User are hereafter individually referred to as a “Party” and referred to jointly as the “Parties“.
+These TOU – as may be updated from time to time – govern the terms upon which Morpho Association shall provide you with the Services (as defined below). Please read these TOU carefully before you use the Services. By using our Services, you expressly and irrevocably acknowledge that you have read, understood, and accepted everything outlined herein, including the risks set forth in Article 8.
+These TOU don’t apply to the protocol itself or any Morpho protocols interfaces outside of those owned by the Morpho Association. For the latter, please read the disclaimer carefully. By accessing or using any external Morpho protocols interfaces, you acknowledge and agree to the terms of this disclaimer.
+Important notice: no Services (as defined below) are offered to persons or entities who reside in, are citizens of, are located in, are incorporated in, or have a registered office in a Restricted Territory (as defined below). Use of a virtual private network (“VPN”) to circumvent the restrictions set forth herein is strictly prohibited.
+1. DEFINITIONS
+In addition to the terms defined elsewhere in these TOU, capitalized terms will have the meanings indicated below, whether in the singular or plural.
+For your information, Morpho Association has also made available a glossary via the following URL: https://docs.morpho.org/
+App (and collectively, the “Apps”): means a front-end application or interface to the various Protocols that is hosted, maintained, operated, or otherwise made available by the Morpho Association, including but not limited to all applications accessible through Morpho’s domains and subdomains, namely the main application (app.morpho.org), the Morpho website (morpho.org), the developer environment (morpho.dev), the Prime curator application (curator.morpho.org), the rewards and campaigns interface (campaigns.morpho.org), the data dashboard (data.morpho.org), the Documentation (docs.morpho.org), and any other current or future domain or subdomain published, maintained, or operated by the Morpho Association. References in these TOU to the “App” or the “Apps” shall be construed accordingly.
+Morpho Association : means the Association which promotes and works on the development of the Protocol by allowing its decentralization, as the Protocol has been deployed open source.
+APY : means Annual Percentage Yield.
+Blockchain : means a transparent, secure information storage and transmission technology that operates without a central control body. It is not legally defined but constitutes a database containing the history of all exchanges made between its users since its creation. It is distributed, as it is shared by its various users, without intermediaries, enabling anyone to verify the validity of the chain. There are public blockchains, open to all, and private blockchains, whose access and use are limited to a certain number of players. A public blockchain can therefore be likened to a public, anonymous and unforgeable accounting ledger.
+CMF : means French Monetary and Financial Code (Code Monétaire et Financier).
+DeFi : means decentralized finance, Blockchain-based financial services developed in a highly automated manner with minimal or no intermediaries.
+Crypto-asset : pursuant to Article 3 of the EU Regulation on Markets in crypto-assets (MiCA) means a digital representation of a value or of a right that is able to be transferred and stored electronically using distributed ledger technology or similar technology, e.g. ETH, BITCOIN, etc.
+Force Majeure : means an event beyond the control of the affected Party, which could not reasonably be foreseen at the time of acceptance of these TOU and the effects of which cannot be avoided by appropriate measures, preventing the performance of that Party’s obligation, within the meaning of Article 1218 of the French Code civil. Force Majeure includes, where the foregoing criteria are met and without limitation: natural disasters, epidemics or pandemics, acts of war, terrorism or civil unrest, acts of public authorities or changes in law or regulation, failures or disruptions of the internet, of electricity or telecommunications infrastructure, or of any Blockchain network, and Blockchain-specific events such as forks, chain reorganizations, consensus failures, oracle failures, or network-wide attacks.
+IRM : means the interest rate model for a given Market.
+Listing Policy : means the public listing policy published by the Morpho Association in Morpho's Documentation, as may be updated from time to time, which describes the non-contractual criteria and process pursuant to which the Morpho Association may, at its sole discretion, display or cease to display Vaults and/or Curators on any of the Apps.
+LTV : means Loan To Value.
+LLTV : means Liquidation Loan-to-Value.
+Market: means a set consisting of (i) collateral, (ii) one loan asset, (iii) the price of which is determined through an oracle, and (iv) a predefined LLTV.
+Morpho Tokens : means the Protocol’s governance $MORPHO tokens.
+Morpho Token Holders : means owners of Morpho Tokens as part of the Morpho Decentralized Autonomous Organization (“DAO”). For more information on the DAO, please consult the following site: https://docs.morpho.org/learn/governance/organization/
+Protocol or collectively the Protocols means the set of decentralized, immutable, permissionless, and non-custodial liquidity protocols developed by the Morpho Association and other members of the Morpho community, and deployed on various blockchains as determined by the Morpho DAO. The Protocols include but are not limited to:
+Morpho Optimizer Protocols means a set of DeFi protocols built on an infrastructure of smart contracts written in IT languages stored in a Blockchain and automatically executed. The Morpho Optimizer Protocols are peer-to-peer layers built on top of supply pools such as Compound and Aave and work as supply pools optimizers.
+Morpho Markets Protocols means a set of decentralized noncustodial protocols enabling the supplying and borrowing of Crypto-assets. They are onchain trustless primitives.
+Morpho Vaults Protocols (including the Protocol formerly known as MetaMorpho) means a set of protocols for noncustodial risk management.
+Services : means the services provided to the Users by Morpho Association subject to these TOU, including but not limited to the Apps and/or Protocols.
+Restricted Territories : means any country, region, or territory that is the subject of comprehensive or territory-wide sanctions or trade embargoes administered or enforced by the U.S. Department of the Treasury’s Office of Foreign Assets Control (“OFAC”), the European Union, the United Nations Security Council, or His Majesty’s Treasury of the United Kingdom.
+Site or collectively the Sites : means the websites and/or URLs published by Morpho Association and made accessible to Users on the Morpho.org and Morpho.dev domains and all of their subdomains, including those identified in the definition of “App” above.
+Timelock : means a mechanism within the Morpho Vaults Protocol that introduces a delay before certain functions or actions can be executed. This tool allows Users of a Morpho Vault to review and react to proposed changes during a certain period of time.
+Users : a natural person or legal entity who visits or uses Morpho Association’s Sites, Services, Apps and/or Protocols. Users may, in connection with the Services, perform different onchain roles, the definitions of which are set forth below.
+Borrower means a User that opens or maintains a debt position by borrowing the loan asset against collateral. Interest accrues on the position in accordance with the Market’s Interest Rate Model (“IRM”) or the terms agreed upon at the time the position is opened. The position becomes subject to liquidation when its Loan-to-Value (“LTV”) ratio meets or exceeds the Market’s Liquidation Loan-to-Value (“LLTV”) threshold. All interactions are conducted via a Wallet (either an Externally Owned Account (“EOA”) or a smart contract), directly or through Apps.
+Lender means a User that supplies the loan asset to a Market or a Vault for the purpose of earning yield. Interest accrues on the position in accordance with the Market’s IRM. Supplied assets, together with accrued interest, are withdrawable, subject to the liquidity conditions applicable to that Market. All interactions are conducted via a Wallet (either an EOA or a smart contract), directly or through Apps.
+Owner appoints and manages key roles that govern the Vault. Each Vault may have only one Owner, represented by a single address. The Owner may assign additional roles, which may include one Curator, one Guardian, one or more Sentinels, and multiple Allocators. The specific roles and their powers may vary across different versions of the Protocol.
+Curator means the User responsible for setting various aspects of a Vault, including enabling or disabling yield sources connected to the Vault, setting risk caps applicable to specific assets, oracles, or yield sources, and performing other operational tasks.
+Allocator means the User responsible for allocating liquidity among the yield sources selected by the Curator of the relevant Morpho Vault, within the risk caps established by that Curator.
+Guardian means the User authorized to trigger predefined protective functions. The Guardian has the authority to revoke any action subject to Timelock, including but not limited to: (i) the replacement of the Guardian by the Owner, (ii) modifications to the Timelock, and (iii) modifications to supply caps.
+Sentinel means a User acting as an emergency circuit breaker for the Vault. The Sentinel may reduce the Vault’s exposure by deallocating funds from yield sources, immediately decreasing risk caps, and revoking any pending Timelocked actions.
+The specific permissions associated with each role may vary between Vault versions. Roles and their nomenclature can also differ between different versions of the Morpho Protocols. Comprehensive information regarding such permissions is available in Morpho’s Documentation https://docs.morpho.org/ .
+Utility token : pursuant to Article 3 of the EU Regulation on Markets in crypto-assets (MiCA), means a type of crypto-asset that is only intended to provide access to a good or a service supplied by its issuer, e.g. Morpho Tokens.
+Morpho Vaults : a set of protocols for noncustodial risk management.
+Wallet : means a digital storage unit that grants Users access to their crypto-assets and that allows them to store, send, and receive crypto-assets. When using the Services, Morpho Association has no control over Users’ Wallets and may not be held responsible for their use, as Users own, set up and manage their own Wallets independently. Wallet external services providers may – for instance – be: MetaMask, Wallet Connect, Trezor, Coinbase Wallet, Trust Wallet, XDEFI Wallet, etc.
+2. DOCUMENTATION
+The Site provides resources about the fundamentals of the Protocols and provides information about the ecosystem, governance, DAO, community, and various interfaces and integrations to the Protocols.
+The User hereby acknowledges and agrees that the Services are based on protocols and technologies which are inherently subject to rapid and recurrent developments. In light of the frequency and multiplicity of such updates, it is not feasible to provide within these TOU an exhaustive description.
+Accordingly, the User is required to consult, on a regular basis, the technical documentation made available in Morpho’s Documentation https://docs.morpho.org/ , which constitutes a reliable source of information regarding the characteristics, evolution, and functioning of the said Protocols.
+Please note that links to documents published by Morpho Association (including blog posts, data, articles, links to third-party content, discord content, news feeds, tutorials, tweets, and videos) have been made available in order to provide you with information on the Protocols and how they work. These links and resources are non-contractual and provided for informational purposes only.
+Although we strive to communicate in a clear, precise and non-misleading manner, You should not take, or refrain from taking, any action based on any information contained on the Site or any other information that we make available, including blog posts, data, articles, links to third-party content, discord content, news feeds, tutorials, tweets, and videos.
+3. PRECONTRACTUAL INFORMATION
+Important notice: MORPHO ASSOCIATION IS NOT A FINANCIAL, CREDIT, OR INVESTMENT INSTITUTION AND IS NOT SUBJECT TO SUPERVISION UNDER THE EU REGULATION ON MARKETS IN CRYPTO-ASSETS (“MICA”) OR ANY OTHER FINANCIAL REGULATORY REGIME. THE PROTOCOLS OPERATES AS DECENTRALIZED SOFTWARE INFRASTRUCTURE, AND ITS USE DOES NOT CONSTITUTE A REGULATED FINANCIAL SERVICE OR ACTIVITY.
+Important notice: BY ACCESSING OR USING ANY OF THE SITES AND SERVICES YOU ARE ENTERING INTO A BINDING AGREEMENT WITH US THAT INCLUDES THESE TOU.
+To the extent that there is a conflict between these TOU and any applicable additional documents, these TOU will apply unless expressly stated otherwise.
+If you don’t agree with these TOU, you may not use the Services and should not visit the Sites or otherwise engage with the Services.
+We strongly recommend that you do not use the Sites, the Protocols or the Apps, if you are not an expert in crypto-assets and Blockchain technology. By using the App or otherwise accessing the Sites, you shall be deemed to acknowledge that you do so with full consent and full knowledge of these TOU having first read these TOU entirely and your participation will be deemed to be your unequivocal and express agreement to be bound by these TOU.
+To use the Services, you must legally be able to enter into the TOU. By using the Services you represent and warrant that you meet the eligibility requirement, as provided in Article 21 below. If you do not meet the requirement, you must not access or use the Sites.
+We may update any part of the TOU at any time, for any reason, at our sole discretion. Once any part of the TOU is updated and in effect, you will be bound by the TOU if you continue to use the Services including by accessing the Sites and using the Apps. We may, at any time, and without liability to you, modify or discontinue all or part of the Services. You may contact us with questions about your use of the Services at contact@morpho.xyz When you communicate with us electronically, you consent to receive communications from us electronically.
+YOU SHOULD REVIEW THE TOU FROM TIME TO TIME TO ENSURE THAT YOU UNDERSTAND THE TOU AND CONDITIONS THAT APPLY TO YOU WHEN YOU ACCESS OR USE THE SITES AND SERVICES.
+4. THE PROTOCOLS
+The Protocols are immutable, permissionless, autonomous, transparent and auditable by all. The Morpho Association does not control or operate any version of any Protocol on any Blockchain network.
+Morpho Protocol refers collectively to the non-custodial smart-contract systems that (i) operate isolated and permissionless lending markets (“Markets”), and (ii) provide Vaults that receive User deposits and allocate such deposits across supported onchain opportunities.
+This includes (i) Vaults v1 (MetaMorpho), which are ERC-4626-compliant Vaults designed to route deposits across multiple Markets within the risk parameters established by the relevant Curator and Allocator, and (ii) Vaults v2, which are protocol-agnostic, adapter-based Vaults implementing role-segregated management and capable of allocating assets to Morpho Markets, Vaults v1, or other supported protocols.
+For clarity, the Protocols are non-custodial, self-executing smart contracts deployed and managed independently; yields/returns are not guaranteed; positions may be liquidated per Market parameters; deposits and withdrawals are subject to onchain liquidity.
+The Morpho Association does not control, direct, or operate the Morpho DAO or its governance processes. The Morpho DAO is a decentralized organization of Morpho Token Holders, and governance decisions are taken onchain by Morpho Token Holders independently of the Morpho Association. The Morpho Token is a governance utility token within the meaning of Article 3 of MiCA; it confers governance rights in respect of the Protocols and is not offered, sold, distributed, listed for purchase, or otherwise made available by the Morpho Association through the Apps, the Sites, or the Services. Any participation in governance, including any delegation, proposal, discussion, or vote, is undertaken at the User’s own risk. The Morpho Association makes no representation as to, and assumes no liability for, the conduct, outcome, or effect of any governance process or decision.
+The Apps are not the exclusive means of access. The Apps are neither the exclusive nor a required means of accessing the Protocols. The Protocols are permissionless and may be accessed directly onchain, or through other independent interfaces, without using the Apps. The Apps are only one of several possible means of interacting with the Protocols, and the Morpho Association neither controls nor guarantees the existence, availability, or functioning of any other means of access. Any unavailability, interruption, restriction, or discontinuation of the Apps does not prevent access to the Protocols by other means and does not affect the operation of the Protocols, which continue to function independently of the Morpho Association.
+5. THE SERVICES
+The Services provided by Morpho Association include the Services set forth below, any other App offered by the Morpho Association through morpho.org or any other domain or subdomain referenced in the definition of “App” in Article 1, and any other features, tools, resources, communications, support, or functionalities provided by the Morpho Association from time to time, whether through the Site, the Apps, or by other means (including but not limited to informational content, technical support, or user assistance).
+The access and use of the Services described below may require the User to connect a Wallet, by clicking on the relevant tab “Connect your wallet”.
+Users acknowledge and agree that the Services provided by Morpho Association are limited to granting Users the access to the Apps. By using the Apps, you understand and acknowledge that Morpho Association does not control or operate any version of any Protocol on any Blockchain network. You also acknowledge that the Morpho Association does not setup, manage, allocate or operate any Morpho Vault or any Morpho Markets. Risk setting is performed externally, hence any adverse outcomes, such as fund losses from technical issues or poor setting do not affect Morpho Association which may not be held liable.
+The web and API interfaces run by the Morpho Association that let Users read information from – and submit transactions to – the permissionless Morpho Protocols across supported blockchains.
+Through the Apps, Users can (i) deposit into Vaults, (ii) borrow assets in Markets, and (iii) where applicable, deploy and operate Vaults in a non-custodial manner via onchain roles.
+Additional Apps may be made available to enable Users to interact with further functionalities of the Protocol, including, without limitation:
+Delegation : allowing Users to delegate their tokens for governance purposes;
+Liquidation : enabling Users to monitor the health of positions within Markets and to initiate liquidations where a position’s LTV meets or exceeds the Market’s LLTV;
+Migration : permitting Users to migrate positions across different Markets or Protocols; and
+Deleveraging : allowing third parties, under certain conditions, to partially or fully unwind a User’s position.
+The Services and any information displayed are provided “as is” and “as available,” without warranties (including as to accuracy, completeness, reliability, or uptime).
+Third-Party Services (including Rewards). Certain features or sections of the Sites/Apps (for example, Rewards) may be developed, hosted, operated, or supplied by independent third parties. Your use of those services is subject to their separate terms and privacy policies, and your relationship is solely with the applicable third party. Morpho Association does not control, endorse, guarantee, or assume responsibility for the availability, accuracy, reliability, or performance of third-party services, content, data, or campaigns surfaced through the Apps, and disclaims any liability for losses arising from their use.
+Use of the Services requires that you have compatible computer equipment, an Internet connection, and a compatible web browser. All costs related to access to the Services and its use, whether hardware, software, or internet access costs, are exclusively at your expense. You are solely responsible for the proper functioning of your computer equipment and its access to the Internet. Our Services may become inaccessible or may not function properly with your web browser, mobile device, and/or operating system without entitling you to any claim or compensation.
+6. FEES
+The Morpho Association does not charge any fee for any Service, but there may be other fees (charged by third parties) associated with the use of the Sites and/or the Protocols. For example:
+There may be associated blockchain fees. Using the Protocol may require that the User must pay a fee on the Blockchain to perform a transaction, such as gas charges or gas fees, which are essentially transaction fees paid on every transaction that occurs on the selected Blockchain network. The User is informed that gas fees are non-refundable. The User must ensure that he/she has sufficient balance to complete any transaction on the Protocol before initiating such transaction.
+There may be performance fees associated with Morpho Vaults (the “Performance Fees”). A Performance Fee may be set in the sole discretion of a Vault’s Owner. The Performance Fee is calculated as a percentage (up to a limit of 50%) of the generated yield. Performance Fees can be claimed by a fee recipient address determined by the Vault’s Owner. For more information on the Performance Fees, please consult the following link: https://docs.morpho.org/ .
+There may be management fees associated with Morpho Vaults (the “Management Fees”). Certain Vaults charge an ongoing management fee – set by the applicable Curator – that is calculated on the Vault’s total deposits/assets and accrues regardless of performance. The fee accrues pro-rata over time at the annualized rate set by the Curator and is periodically collected from the Vault. Management fees are in addition to any other fees. The applicable rate and recipients are set by the Curator per onchain permissions, with changes taking effect prospectively as disclosed. The Morpho Association does not set, receive, or control any management fees.
+There may be fees associated with fixed-rate Markets , bounded by an immutable cap that sets a permanent maximum on the amount the relevant smart contracts can charge: (i) a settlement fee, charged at the time a trade is executed, which applies as a spread between the settlement prices of the two sides of the trade. The fee varies with the time remaining to the Market’s maturity and is capped such that its implied annualized rate does not exceed 0.50% (50 basis points), subject to a distinct cap applicable at maturity; and (ii) a continuous fee, which accrues over time on outstanding credit positions and is borne by lenders, capped at 1% annualized. The Morpho Association does not set, collect, receive, hold, or control these fees.
+Vault fees set by Curators. All Vault-level fees, including any performance or management fees, are determined exclusively by the applicable Curator (or any other onchain role vested with fee-setting authority). Such fees are paid directly to the fee recipient address designated by that Curator.
+The Morpho Association does not set, collect, receive, hold, or direct any Vault-related fees. Fee parameters and recipient addresses are programmatically enforced by the Vault smart contracts and are transparently viewable both in-app and onchain. Any modification to fee parameters may only be executed by the Curator (or another authorized onchain role) in accordance with their onchain permissions.
+The User acknowledges and agrees that Morpho Association has no control over any transactions, the method of payment of any transactions, or any actual payments of transactions. Morpho Association does not deliver, hold, and/or receive payment of crypto-assets and does not receive any fees for any transactions, the Services, or the Sites.
+Additionally, the User acknowledges that all information provided in connection with your APY and estimated yield is for informational purposes only.
+7. GENERAL PROVISIONS
+Before you make any financial, legal, technical, or other decisions involving the Services, you should seek independent professional advice from a licensed and qualified individual in the area for which such advice would be appropriate. The Services provide, or third parties may provide, links to other sites, applications, or resources. You acknowledge and agree that we are not responsible for the availability of such external sites, applications or resources, and do not endorse and are not responsible or liable for any content, advertising, products, or other materials on or available from such sites or resources.
+You further acknowledge and agree that we bear no liability, directly or indirectly, on the way you have obtained or acquired the crypto-assets that you are supplying as collateral. Users are solely responsible for ensuring that they are allowed to hold and use those crypto-assets in accordance with the regulations of their respective jurisdictions.
+You further acknowledge and agree that we shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods, or services available on or through any such site or resource. Because the Site provides information about the Protocols, these TOU also provide some information about the use of the Protocols. This information is not intended to be comprehensive or address all aspects of the Protocols. There is additional documentation on the Site about the functioning of the Protocols or its ecosystem or community.
+IT IS IMPORTANT TO UNDERSTAND THAT NEITHER WE NOR ANY AFFILIATED ENTITY IS A PARTY TO ANY TRANSACTION ON THE BLOCKCHAIN NETWORKS UNDERLYING THE PROTOCOL; WE DO NOT HAVE POSSESSION, CUSTODY OR CONTROL OVER ANY CRYPTO-ASSETS APPEARING ON THE TRANSACTIONS; AND WE DO NOT HAVE POSSESSION, CUSTODY, OR CONTROL OVER ANY USER’S CRYPTO-ASSETS.
+Further, we do not store, send, or receive any crypto-assets. You understand that when you interact with any Protocol’s smart contracts, you retain control over your crypto-assets at all times. The private key associated with the wallet address from which you transfer crypto-assets or the private key associated is the only private key that can control the crypto-assets you transfer into the smart contracts.
+You alone are responsible for securing your private keys. We do not have access to your private keys. Due to the non-custodial and decentralized nature of the technology, we are not intermediaries, agents, advisors, or custodians, and we do not have a fiduciary relationship or obligation to you regarding any other decisions or activities that you affect when using our Services. You acknowledge that we, for the avoidance of doubt, do not have any information regarding any users, users’ identities, or services beyond what is available or obtainable publicly via the blockchain. We are not responsible for any activities you engage in when using Services, and you should understand the risks associated with crypto-assets, blockchain technology generally, and our Services.
+THE PROTOCOL MAY BE DEPLOYED ON MULTIPLE BLOCKCHAIN-BASED NETWORKS, AND WE ARE NOT RESPONSIBLE FOR THE OPERATION OF SUCH NETWORKS.
+The software underlying blockchain networks on which the Protocol is deployed, including, for example, the Ethereum blockchain, is open source, which means that anyone can use, utilize, and build on top of it. By using the Services, you acknowledge and agree that:
+we are not responsible for the operation of the blockchain-based software and networks underlying the Protocol;
+there exists no guarantee of the functionality, security, or availability of that software and networks; and
+the underlying blockchain-based networks are subject to sudden changes in operating rules, such as those commonly referred to as “forks”.
+Transactions on the blockchain are not anonymous. A widespread belief is that transactions involving blockchains are anonymous. In fact, a central feature of blockchains and thus, blockchain-based transactions, are that they are transparent. Your public key and your wallet address, which you need to buy or sell items on the blockchain, are visible to anyone. To the extent your public key or wallet address can be linked back to you, it would be possible for someone to determine your identity and the crypto-assets you own.
+Personal data and privacy . The Morpho Association acts as data controller, within the meaning of Regulation (EU) 2016/679 (the “GDPR”), for the limited personal data it processes in connection with the Apps and the Sites. Such data is processed in accordance with the Morpho Association’s Privacy Policy, available at https://morpho.org/privacy-policy/ , which is incorporated into these TOU by reference. The Privacy Policy describes the categories of personal data processed, the purposes and lawful bases of processing (which may include the performance of these TOU, the Morpho Association’s legitimate interests, compliance with a legal obligation, and, where applicable, consent), the retention of data, and the rights available to data subjects. Users acknowledge that data recorded on a public Blockchain, including Wallet addresses and transaction history, is public, immutable, and replicated outside the control of the Morpho Association, which is therefore unable to rectify, erase, or restrict the processing of such onchain data. In case of conflict between the Privacy Policy and these TOU on the processing of personal data, the Privacy Policy prevails.
+Morpho Association ecosystem and community contributors are independent. All community contributors to the ecosystem around the Protocol are independent of us, and we will not have and do not assume any liability or responsibility for their actions or omissions.
+Foreign access . The Sites, the Apps, and the Services are operated and administered by the Morpho Association from France. The Morpho Association makes no representation that the Sites, the Apps, the Services, or the Protocols are appropriate, lawful, or available for use in any particular jurisdiction. If you access or use them from outside France, you do so on your own initiative and are solely responsible for compliance with the laws and regulations applicable to you, including any restriction on the access to, or use of, crypto-assets or DeFi in your jurisdiction.
+8. ASSUMPTION OF RISK
+The following section outlines key risks associated with accessing or using the Services. While the Morpho Association makes its best efforts to provide a clear and comprehensive overview, this list of risks is not exhaustive. There may be other risks, known or unknown, inherent to blockchain technologies, smart contracts, or decentralized finance (“DeFi”) that are not expressly mentioned here. By using the Services, you acknowledge and accept that Morpho Association cannot foresee or list all possible risks, and that you are solely responsible for assessing whether the Services are appropriate given your specific situation.
+Blockchain & Smart Contract Risk. Users of the Apps interact directly with blockchain-based smart contracts. All transactions are automatically processed by smart contracts, and at no time does the Morpho Association custody or control your funds or assets. You acknowledge that these smart contracts govern how crypto-assets and funds are transferred, without manual intervention or refunds from the Morpho Association. By using the Services, you accept all risks associated with new and experimental technologies like smart contracts and blockchain-based systems. These technologies, especially crypto-assets, are inherently volatile and blockchain-based systems may experience errors, bugs, cyberattacks, smart contract vulnerabilities, forks, attacks, downtime, or failures, potentially leading to a total loss of your crypto-assets or funds. By using the Apps, you acknowledge these risks and agree that Morpho Association is not liable for any resulting damages.
+Irreversible Transactions. Blockchain entries are permanent and immutable. Once confirmed, transactions (including crypto-assets transfers and programmed data) cannot be undone by you, us, or anyone. Double-check before finalizing any transaction.
+Wallet Security. You are fully responsible for securing your crypto-assets, wallet and private keys. Any unauthorized access may lead to loss or theft of your crypto-assets. We have no control over, and no liability for, the security of your wallet.
+Third-Party Tools. We are not responsible for third-party tools and or services (e.g., MetaMask, Discord, or other Users who interact with the Protocols) or any errors, losses, or inaccuracies that result from using them. Morpho Association further disclaims responsibility for any failure or asset losses caused by third-party services integrated with or linked to the Apps. Third-party services may be governed by separate terms of use with such third-party provider.
+Service and Data Availability. Access to the Apps and the Services may be interrupted or unavailable due to technical failures, maintenance, or third-party issues. We do not guarantee uninterrupted access or the quality of any feature. Data displayed within the Apps, including market metrics and Vault configurations, may be delayed, incomplete, or contain errors due to technical malfunctions, bugs, or external disruptions. Users are solely responsible for verifying critical details independently before taking actions. Morpho Association disclaims liability for any losses arising from technical issues, inaccuracies, market conditions, or User mismanagement.
+No Financial Advice. Decisions made by the Morpho Association or any User are not personalized or based on your individual financial situation. You must do your own research and due diligence before using any part of the Services.
+Use at Your Own Risk. All use of the Services, Apps, or Protocols is at your sole risk. You acknowledge that blockchain-based transactions may not be suitable for everyone. We disclaim all liability for any loss or damage resulting from your use of the Services.
+Regulation. Users should note that DeFi services are only partially regulated today and remain subject to evolving legal and regulatory frameworks. The Morpho Association is not a financial, credit, or investment institution and is not subject to supervision or authorization under MiCA or any other financial or monetary regulatory framework. The Protocols operates as decentralized software infrastructure and the Morpho Association does not provide, offer, or facilitate any regulated financial service or activity. Users access and interact with the Services / Apps / Protocols at their own discretion and risk. Each User is solely responsible for assessing and complying with any applicable legal or regulatory requirements.
+Correct addresses, supported assets, and authentic smart contracts . You are solely responsible for verifying, before you sign or submit any transaction, that the destination address is correct, that the asset is supported, and that you are interacting with the authentic Morpho Protocol smart contracts. The official contract addresses are published in Morpho’s Documentation at https://docs.morpho.org/get-started/resources/addresses/ , and you should verify against that source even when you access the Protocols through the Apps, since an interface may be spoofed, compromised, impersonated, or display incorrect data. A transfer to an incorrect or unsupported address, or an interaction with a smart contract that is not an authentic Morpho Protocol contract, may result in the irreversible loss of your crypto-assets. Because Blockchain transactions are immutable, neither the Morpho Association nor any other person can reverse, cancel, or recover such a transaction, and the Morpho Association bears no liability for any resulting loss.
+Advances in cryptography . Cryptography is an evolving field. Advances in code-breaking techniques, or the development of technologies such as quantum computing, could present risks to crypto-assets, Blockchains, and the Protocols by weakening or defeating the cryptographic mechanisms on which they rely, and could result in the theft or loss of your crypto-assets. The Morpho Association does not control, and does not warrant against, these risks, and disclaims all liability for any resulting loss.
+9. TAXES
+You are responsible for your taxes and duties. Users bear sole responsibility for paying any and all taxes, duties, and assessments now or hereafter claimed or imposed by any governmental authority associated with their use of the Services, and/or payable as the result of using and/or exploiting any crypto-assets and interacting with smart contracts.
+10. ACCESS TO THE SERVICES
+We grant you a license to use our Services. Contingent upon your ongoing compliance with the TOU, we grant you a personal, worldwide, revocable, non-exclusive and non-assignable license to use the software provided to you as part of our Services. The only purpose of this license is to allow you to use and enjoy the Services solely as permitted by these TOU.
+We own all rights in the Services. We own any and all right, title, and interest in and to the Services including, without limitation, any and all copyrights in and to any content, code, data, or other materials that you may access or use on or through the Services; however, the code for the Apps is open-sourced pursuant to the terms of their associated licenses. Except as expressly set forth herein, your use of or access to the Services does not grant you any ownership or other rights therein.
+We may use and share your feedback. Any comments, bug reports, ideas, or other feedback that you may provide about our Services, including suggestions about how we might improve our Services, are entirely voluntary. You agree that we are free to use or not use any feedback that we receive from you as we see fit, including copying and sharing such feedback with third parties, without any obligation to you.
+11. PROHIBITED CONTENT
+You may only use the Services if you comply with these TOU, applicable third-party policies, and all applicable laws, rules, regulations and related guidance. The following conduct is strictly prohibited:
+using the Services for, or to promote or facilitate, illegal activity (including, without limitation, money laundering, financing terrorism, tax evasion, buying or selling illegal drugs, contraband, counterfeit goods, or illegal weapons);
+exploiting the Services for any unauthorized commercial purpose;
+uploading or transmitting viruses, worms, Trojan horses, time bombs, cancel bots, spiders, malware or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Services;
+attempting to or actually copying or making unauthorized use of all or any portion of the Services, including by attempting to reverse compile, reformatting or framing, disassemble, reverse engineer any part of the Services;
+harvesting or otherwise collecting information from the Services for any unauthorized purpose;
+using the Services under false or fraudulent pretenses or otherwise being deceitful;
+interfering with other users’ access to or use of the Services;
+interfering with or circumventing the security features of the Services or any third party’s systems, networks or resources used in the provision of Services;
+engaging in any attack, hack, denial-of-service attack, interference, or exploit of any App or smart contract in connection with use of the Service (and operations performed by a user that are technically permitted by a smart contract may nevertheless be a violation of our TOU, including these TOU, and the law); or
+engaging in any anticompetitive behavior or other misconduct.
+Sanctions and anti-money laundering . The representations in this Article are deemed repeated each time you access or use the Services. You further represent and warrant that you will not use the Services to engage in or facilitate money laundering, terrorist financing, tax evasion, sanctions evasion, or any other illegal activity, and that the crypto-assets you use in connection with the Services are not derived from, and will not be used for, any unlawful activity. You will not access or use the Services from, or for the benefit of any person located in, a Restricted Territory, and will not use a VPN or other means to conceal your location or circumvent these restrictions. The Morpho Association may use onchain analytics and sanctions-screening tools to identify Wallet addresses associated with Restricted Territories or with persons subject to sanctions, and may restrict or revoke access on the grounds, and in the manner, set out in Article 17.
+Violating our rules may result in our intervention. You agree and acknowledge that if you use the Services to engage in conduct prohibited by applicable law, we permanently reserve the right to completely or partially restrict or revoke your access to the Services, either completely or for a period of time, at our sole discretion.
+We reserve the right to investigate violations. We reserve the right to investigate and prosecute any suspected breaches of these TOU. We may disclose any information as necessary to satisfy any law, regulation, legal process, or governmental request.
+12. SPECIFIC PROVISIONS
+12.1 Applicable Provisions to Owners
+Responsibility for Vault configuration. Morpho Association provides the tools and functionalities enabling the Owner to configure the Vault. However, the Owner bears sole responsibility for the proper use of such tools and for ensuring compliance with all applicable obligations. This responsibility also extends to any Curator appointed by the Owner.
+Appointment of Curator. The Owner remains solely responsible for the choice of any Curator and shall exercise due care in such appointment. Morpho shall bear no liability for the Owner’s selection of a Curator.
+Listing and display of Vaults. The Morpho Association may, at its sole discretion, display or cease to display any Vault and/or Curator on any of the Apps. For information purposes, the Morpho Association has published a Listing Policy in Morpho's Documentation. The Listing Policy is provided for informational purposes only; it is non-contractual, does not form part of these TOU, is not binding upon the Morpho Association, and may be amended, supplemented, or withdrawn at any time without notice. Meeting the criteria set out in the Listing Policy does not entitle any Vault, Owner, or Curator to be listed, displayed, or to remain listed or displayed on any App, and the Morpho Association does not guarantee that any Vault will be listed or displayed, nor the continuity of any listing or display.
+12.2 Applicable provisions to Curators
+Liability for data accuracy. The Curator shall remain responsible for the accuracy, completeness, and reliability of all data it provides or maintains in relation to the Vault.
+No guarantee of access. Morpho Association does not guarantee that all Users will have access to any Vault operated by a Curator. A warning shall be displayed to Users to this effect. Morpho does not guarantee universal accessibility.
+12.3 Applicable provisions to all Users
+No corporate information. Morpho does not possess or provide corporate, legal, or identifying information about Owners or Curators. Users acknowledge that such information is outside the scope of Morpho’s Services.
+Listing is not an endorsement. The display or indexing of a Vault, a Market, a Curator, or any related data on the Apps, whether or not pursuant to the Listing Policy, is provided for informational purposes only. It does not constitute an endorsement, recommendation, solicitation, or financial or other advice of any kind by the Morpho Association, nor any representation or warranty as to a Vault or a Market, its configuration or parameters (including, in the case of a Market, its collateral asset, loan asset, oracle, interest rate model, or liquidation parameters), its Curator, Owner, or any other onchain role, or the risks and variable yield associated with it. The display or indexing of a Market or Vault does not constitute an offer, solicitation, marketing, or distribution of any asset used, including any asset qualifying as a financial instrument under applicable law. Any eligibility, holding, or transfer restrictions attaching to such assets are determined solely by their issuers, and Users remain solely responsible for verifying that they satisfy any such restrictions before interacting with it. Users remain solely responsible for their own assessment and due diligence before interacting with any Vault or Market.
+12.4 Morpho Vaults
+Adoption of Registry. For a Vault to be designated as a Morpho Vault, the Owner must adopt the Morpho Registry (the “Registry”), which lists the protocols eligible to connect to the Vault, approved by the Morpho DAO.
+No modification right. By adopting the Registry, the Owner irrevocably waives any right or capacity to amend, alter, or otherwise modify the Registry.
+13. INTELLECTUAL PROPERTY
+Notwithstanding the provisions of Article 10, these TOU do not entail any transfer, concession or licence of intellectual property rights or sui generis right of the database producer for the benefit of the User.
+The Apps, Sites, and Services, as well as each of the elements comprising each of them taken independently, notably the Sites, programs and developments, their structure, and the contents including data, texts, fixed or animated images, logos, sounds, graphics, photographs, files, are the exclusive property of Morpho Association or of third parties that have provided it or conceded the right to exploit them.
+Any representation or reproduction, total or partial, of the Sites or of any of its elements without the express authorisation of Morpho Association is prohibited and would constitute an infringement and/or an act of unfair competition or parasitism. In any case, on any representation or reproduction authorised by Morpho Association of all or part of the Sites or the elements that comprise it, the words “Copyright [current year] MORPHO – all rights reserved” must appear.
+The databases present on the Sites are protected by intellectual property and any extraction or reuse of qualitatively or quantitatively substantial content of the databases is prohibited and subject to penalty.
+The brands and logos appearing on the Sites, social networks, etc., are trademarks registered by Morpho Association or by third parties. Any reproduction, imitation, or use, total or partial, of these distinctive signs without the express authorisation of Morpho Association or in violation of its intellectual property rights results in liability on the part of their author.
+The other distinctive signs, notably the corporate names, commercial names, signs, domain names reproduced on the Sites are the property of Morpho Association or of third parties, and any reproduction thereof without express authorisation is likely to constitute identity theft that results in liability on the part of its author.
+14. THIRD PARTY SERVICES
+If you access or use any third-party services through or in connection with the Morpho Apps, you acknowledge and agree that your use of those services is subject to the separate terms and conditions, privacy policies, and practices of the applicable third parties. Morpho is not responsible for any third-party services, and your interactions with such services are solely between you and the third party.
+15. DISCLAIMERS AND LIMITATION OF LIABILITY
+We make no representations or warranties. THE SERVICES ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS WITHOUT ANY GUARANTEES. MORPHO ASSOCIATION AND OUR PARENTS, SUBSIDIARIES, AFFILIATES, RELATED COMPANIES, OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR REPRESENTATIVES (COLLECTIVELY, THE “INDEMNIFIED PARTIES”) MAKE NO GUARANTEES OF ANY KIND IN CONNECTION WITH THE SERVICES. TO THE MAXIMUM EXTENT PERMITTED UNDER APPLICABLE LAW, THE INDEMNIFIED PARTIES DISCLAIM ALL WARRANTIES AND CONDITIONS, WHETHER EXPRESS OR IMPLIED, OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT AND DISCLAIM ALL RESPONSIBILITY AND LIABILITY FOR:
+THE SERVICES BEING ACCURATE, COMPLETE, CURRENT, RELIABLE, UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE. INFORMATION (INCLUDING, WITHOUT LIMITATION, THE VALUE OR OUTCOME OF ANY TRANSACTION) AVAILABLE THROUGH THE SERVICE IS PROVIDED FOR GENERAL INFORMATION ONLY AND SHOULD NOT BE RELIED UPON OR USED AS THE SOLE BASIS FOR MAKING DECISIONS. ANY RELIANCE ON THE SERVICES IS AT YOUR OWN RISK.
+INJURY OR DAMAGE RESULTING FROM THE SERVICES. FOR EXAMPLE, YOU EXPRESSLY ACKNOWLEDGE, UNDERSTAND, AND AGREE THAT THE SERVICES MAY CONTAIN AUDIO-VISUAL EFFECTS, STROBE LIGHTS OR OTHER MATERIALS THAT MAY AFFECT YOUR PHYSICAL SENSES AND/OR PHYSICAL CONDITION. FURTHER, YOU EXPRESSLY ACKNOWLEDGE THAT THE INDEMNIFIED PARTIES ARE NOT RESPONSIBLE FOR LOSS OR DAMAGE CAUSED BY (I.) ANOTHER USER’S CONDUCT, (II.) THIRD PARTIES USING THE PROTOCOLS, SITES, APPS AND/OR SERVICES, (III.) UNAUTHORIZED ACTORS, OR (IV.) ANY UNAUTHORIZED ACCESS TO OR USE OF THE SERVICES.
+VIRUSES, WORMS, TROJAN HORSES, TIME BOMBS, CANCEL BOTS, SPIDERS, MALWARE OR OTHER TYPE OF MALICIOUS CODE THAT MAY BE USED IN ANY WAY TO AFFECT THE FUNCTIONALITY OR OPERATION OF THE SERVICES.
+Limitation of Liability. TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL ANY INDEMNIFIED PARTY BE LIABLE TO YOU FOR ANY LOSS, DAMAGE, OR INJURY OF ANY KIND INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, CONSEQUENTIAL, OR PUNITIVE LOSSES OR DAMAGES, OR DAMAGES FOR SYSTEM FAILURE OR MALFUNCTION OR LOSS OF PROFITS, DATA, USE, BUSINESS OR GOOD-WILL OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR IN CONNECTION WITH: (A) THE SERVICES OR YOUR INABILITY TO USE OR ACCESS THE SERVICES; (B) MISUSE OF THE SERVICES (INCLUDING WITHOUT LIMITATION, UNAUTHORIZED ACCESS OF THE SERVICES); (C) ANY USER CONDUCT ON THE SERVICES; OR (D) TERMINATION, SUSPENSION OR RESTRICTION OF ACCESS TO ANY THE SERVICES.
+IN ADDITION TO THE FOREGOING, NO INDEMNIFIED PARTY SHALL BE LIABLE FOR ANY DAMAGES CAUSED IN WHOLE OR IN PART BY: (A) USER ERROR, SUCH AS FORGOTTEN PASSWORDS OR INCORRECTLY CONSTRUCTED SMART CONTRACTS OR OTHER TRANSACTIONS; (B) SERVER FAILURE OR DATA LOSS; (C) THE MALFUNCTION, UNEXPECTED FUNCTION OR UNINTENDED FUNCTION OF THE BLOCKCHAIN, ANY COMPUTER OR CRYPTO-ASSET NETWORK (INCLUDING ANY WALLET PROVIDER), INCLUDING WITHOUT LIMITATION LOSSES ASSOCIATED WITH NETWORK FORKS, REPLAY ATTACKS, DOUBLE-SPEND ATTACKS, SYBIL ATTACKS, 51% ATTACKS, GOVERNANCE DISPUTES, MINING DIFFICULTY, CHANGES IN CRYPTOGRAPHY OR CONSENSUS RULES, HACKING, OR CYBERSECURITY BREACHES; (D) ANY CHANGE IN VALUE OF ANY CRYPTO-ASSET; (E) ANY CHANGE IN LAW, REGULATION, OR POLICY; (F) EVENTS OF FORCE MAJEURE; OR (G) ANY THIRD PARTY.
+THIS LIMITATION OF LIABILITY IS INTENDED TO APPLY WITHOUT REGARD TO WHETHER OTHER PROVISIONS OF THESE TOU HAVE BEEN BREACHED OR HAVE PROVEN INEFFECTIVE. THE LIMITATIONS SET FORTH IN THIS SECTION SHALL APPLY REGARDLESS OF THE FORM OF ACTION, WHETHER THE ASSERTED LIABILITY OR DAMAGES ARE BASED ON CONTRACT, INDEMNIFICATION, TORT, STRICT LIABILITY, STATUTE, OR ANY OTHER LEGAL OR EQUITABLE THEORY, AND WHETHER OR NOT THE INDEMNIFIED PARTIES HAVE BEEN INFORMED OF THE POSSIBILITY OF ANY SUCH DAMAGE.
+IN NO EVENT WILL THE INDEMNIFIED PARTIES CUMULATIVE LIABILITY TO YOU OR ANY OTHER USER, FROM ALL CAUSES OF ACTION AND ALL THEORIES OF LIABILITY EXCEED TEN THOUSAND U.S. DOLLARS (U.S. $10,000.00).
+USERS EXPRESSLY ACKNOWLEDGE AND AGREE THAT THIS LIMITATION OF LIABILITY REPRESENTS A FAIR, REASONABLE, AND PROPORTIONATE AMOUNT AND THAT THE ABOVE MENTIONNED AMOUNT SHALL NOT BE CONSIDERED INSIGNIFICANT OR DISPROPORTIONATE UNDER ANY CIRCUMSTANCES.
+UNDER NO CIRCUMSTANCES SHALL ANY INDEMNIFIED PARTY BE REQUIRED TO DELIVER TO YOU ANY VIRTUAL CURRENCY AS DAMAGES, MAKE SPECIFIC PERFORMANCE, OR ANY OTHER REMEDY. IF YOU WOULD BASE YOUR CALCULATIONS OF DAMAGES IN ANY WAY ON THE VALUE OF VIRTUAL CURRENCY, YOU AND WE AGREE THAT THE CALCULATION SHALL BE BASED ON THE LOWEST VALUE OF THE VIRTUAL CURRENCY DURING THE PERIOD BETWEEN THE ACCRUAL OF THE CLAIM AND THE AWARD OF DAMAGES.
+Some jurisdictions do not allow the exclusion or limitation of certain warranties and liabilities provided in this section; accordingly, some of the above limitations and disclaimers may not apply to you. To the extent applicable law does not permit the Indemnified Parties to disclaim certain warranties or limit certain liabilities, the extent of the Indemnified Parties’ liability and the scope of any such warranties will be as permitted under applicable law.
+Force Majeure . Neither Party shall be liable for any failure or delay in the performance of its obligations under these TOU to the extent that such failure or delay results from an event of Force Majeure as defined in Article 1, in accordance with Article 1218 of the French Code civil. If the impediment is temporary, performance of the affected obligation is suspended, unless the resulting delay justifies termination of the TOU; if the impediment is definitive, the TOU is terminated by operation of law and the Parties are released from their obligations under the conditions provided in Articles 1351 and 1351-1 of the French Code civil. For the avoidance of doubt, this clause does not relieve any User of obligations that are technically enforced onchain and outside the Morpho Association’s control.
+16. INDEMNIFICATION
+You agree to indemnify, defend, and hold harmless the Indemnified Parties from any claim or demand, including reasonable attorneys’ fees, made by any third party due to or arising out of: (a) your breach or alleged breach of the TOU (including, without limitation, these TOU); (b) anything you contribute to the Services; (c) your misuse of the Services, or any smart contract and/or script related thereto; (d) your violation of any laws, rules, regulations, codes, statutes, ordinances, or orders of any governmental or quasi-governmental authorities; (e) your violation of the rights of any third party, including any intellectual property right, publicity, confidentiality, property, or privacy right; (f) your use of a third-party product, service, and/or website; or (g) any misrepresentation made by you. We reserve the right to assume, at your expense, the exclusive defense and control of any matter subject to indemnification by you. You agree to cooperate with our defense of any claim. You will not in any event settle any claim without our prior written consent.
+17. TERMINATION - CANCELLATION
+These TOU are effective unless and until terminated by either you or us. You may terminate the TOU with us at any time by ceasing all access to the Apps or the Services. If, in our sole judgment, you fail, or we suspect that you have failed, to comply with any term or provision of the TOU, we reserve the right to terminate the TOU with you and deny you access to the Services.
+We further reserve the right to restrict your access to the Services or to stop providing you with all or a part of the Services at any time and for no reason, including, without limitation, if we reasonably believe:
+your use of the Services exposes us to risk or liability;
+You are using the Services for unlawful purposes (such as but not limited to money laundering or any illegal activity);
+You have acquired crypto-assets using inappropriate methods, including the use of stolen funds to purchase such assets;
+You are the target of any sanctions administered or enforced by the U.S. Department of the Treasury’s Office of Foreign Assets Control (“OFAC”), the United Nations Security Council, the European Union, His Majesty’s Treasury, or any other legal or regulatory authority in any applicable jurisdiction;
+You, as an individual or an entity, or your wallet address is listed on the Specially Designated Nationals and Blocked Persons List (“SDN List”), Consolidated Sanctions List (“Non-SDN Lists”), or any other sanctions lists administered by OFAC;
+You are located, organized, or resident in a Restricted Territory (as defined in Article 1);
+You have otherwise acted in violation of these TOU;
+it is not commercially viable to continue providing you with our Services.
+All of these are in addition to any other rights and remedies that may be available to us, whether in equity or at law, all of which we expressly reserve.
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, WE RESERVE THE RIGHT TO MODIFY THE SERVICES AT ANY TIME, BUT WE HAVE NO OBLIGATION TO UPDATE THE SERVICES. YOU AGREE THAT IT IS YOUR RESPONSIBILITY TO MONITOR CHANGES TO THE SERVICES THAT MAY AFFECT YOU. YOU AGREE THAT WE MAY REMOVE THE SERVICES AND/OR ANY CONTENT THEREON FOR INDEFINITE PERIODS OF TIME OR CANCEL THE SERVICES AT ANY TIME, WITHOUT NOTICE TO YOU.
+18. SEVERABILITY
+If any provision of the TOU is determined to be unlawful, void, or unenforceable, such provision shall nonetheless be enforceable to the fullest extent permitted by applicable law, and the unenforceable portion shall be deemed to be severed from the TOU. Such determination shall not affect the validity and enforceability of any other remaining provisions.
+19. ASSIGNMENT
+The User formally agrees, in advance, that Morpho Association can assign or transfer to a third party the TOU or all or part of its rights and obligations under the TOU, without notice or prior information for the User.
+20. ENTIRE AGREEMENT
+The TOU and any policies or operating rules posted by the Morpho Association on the Services constitute the entire agreement and understanding between you and us and govern your use of the Services, superseding any prior or contemporaneous agreements, communications, and proposals, whether oral or written, between you and us (including, but not limited to, any prior versions of these TOU). Any failure by us to exercise or enforce any right or provision of the TOU shall not constitute a waiver of such right or provision.
+21. ELIGIBILITY
+By accessing or using the Services, you represent and warrant that:
+You are of legal age in your jurisdiction of residence and have full legal capacity to enter into and comply with these TOU. You are not a minor under the laws applicable to you.
+You are not subject of any sanctions administered or enforced by the U.S. Department of the Treasury’s OFAC, the United Nations Security Council, the European Union, His Majesty’s Treasury, or any other relevant sanctions authority in any applicable jurisdiction;
+You are not identified on any sanctions-related list, including without limitation the OFAC Specially Designated Nationals and Blocked Persons List or Consolidated Non-SDN Sanctions Lists;
+You are not located, organized, or resident in a country or territory that is, or whose government is, the subject of sanctions, including but not limited to the Restricted Territories (as defined in Article 1).
+You acknowledge that it is your responsibility to ensure that your access to and use of the Services complies with all applicable laws and regulations.
+22. NO RIGHT OF WITHDRAWAL
+All Users expressly acknowledge that the Services are provided on the blockchain, and as such are to be carried out immediately. Therefore, You expressly waive such right of withdrawal and give their express consent for the execution of the TOU and the Services before the end of the right of withdrawal.
+23. LANGUAGE
+These TOU are written in English. If they are translated into one or more foreign languages, only the English text will be deemed authentic in case of a dispute.
+24. APPLICABLE LAW
+The Services are governed by the laws of France.
+All disputes arising between the Morpho Association and any User out of the validity, breach, termination, enforcement, interpretation and/or application of these TOU or resulting directly or indirectly from the use of the Services are governed by the laws of France (the “Applicable Law”).
+This provision applies to all substantive and procedural rules, regardless of whether the obligations performed occurred in whole or in part in any other jurisdiction.
+25. COMPETENT JURISDICTION
+In the absence of an amicable resolution, the Judicial Courts of Paris (Tribunal Judiciaire de Paris) shall have sole competence to hear disputes arising – with Users who qualify as consumers within the meaning of Applicable Law and are domiciled within the European Union – out of from the validity, breach, termination, enforcement, interpretation and/or application of these TOU or resulting directly or indirectly from the use of the Sites, the Services, the Apps or the Protocols (the “Competent Jurisdiction”).
+26. MEDIATION
+In case of dispute as to the validity, interpretation or execution of the TOU, the Parties will make every effort to find an amicable solution.
+Any User who is a consumer – within the meaning of applicable law – may, free of charge, refer to the services of a consumer mediator with a view to the amicable resolution of a dispute with Morpho Association.
+The body appointed by the Morpho Association for this purpose is Mediation Solution.
+In order to contact this body, the User may:
+go to the website: https://sasmediationsolution-conso.fr/
+send an email to: contact@sasmediationsolution-conso.fr
+or send their complaint by post to the following address:
+Médiation Solution, 222, chemin de la bergerie 01800 SAINT JEAN DE NIOST. Tel : +33 04 82 53 93 06.
+A dispute may only be examined by the consumer mediator if:
+the User justifies having tried, beforehand, to resolve his dispute directly with Morpho Association by a written complaint expressly identified as such detailing the reasons for his complaint as well as all the information useful to Morpho Association to understand, study and appreciate the causes, consequences and incidences of this complaint, and sent by e-mail to: legal@morpho.xyz
+the claim is not manifestly unfounded or abusive;
+the dispute has not been previously examined or is not being examined by another mediator or by a court;
+the User submits his request to the mediator within a maximum of one year from the date of his written complaint to Morpho Association;
+the dispute falls within the competence of the mediator.
+The User will be informed by the mediator of the action taken on his or her request for mediation.
+Furthermore, the User is informed that in accordance with Article 14 of Regulation (EU) No. 524/2013, the European Commission has set up an Online Dispute Resolution platform, facilitating the independent settlement by extrajudicial means of online disputes between consumers and professionals in the European Union. This platform is accessible at the following link: https://webgate.ec.europa.eu/odr/ .
+27. CLASS ACTION WAIVER
+Any class actions or any group actions shall not be authorized under the present TOU, which Users expressly and irrevocably accept.
+Accordingly, You hereby expressly, knowingly, and irrevocably waive any right to initiate, participate in, or benefit from any class, collective, or representative action or proceeding, whether as a named plaintiff, class member, or otherwise, against the Morpho Association before any court, tribunal, or arbitral forum, irrespective of the nature of the claims asserted.
+Notwithstanding the above, if You qualify as a consumer within the meaning of Applicable Law and are domiciled within the European Union, this clause shall not prevent you to initiate or take part in a class action, provided that such action is brought exclusively before the Competent Jurisdiction and is authorized under Applicable Law, as nothing in this clause shall be construed as limiting or excluding any non-waivable rights or remedies to which You may be entitled under mandatory provisions of Applicable Law.
+28. ARBITRATION
+In the absence of an amicable resolution, all disputes – with Users who qualify as professionals within the meaning of Applicable Law and consumers who are not domiciled within the European Union – arising out of or in connection with the present TOU shall be finally settled under the Rules of Arbitration of the International Chamber of Commerce by one or more arbitrators appointed in accordance with the said Rules (the “Arbitration Clause”). The emergency arbitrator provisions shall not apply. The expedited procedure provisions shall not apply. No award or procedural order made in the arbitration shall be published. The place of establishment of the tribunal shall be Paris. The arbitration proceedings will be conducted in English. The number of arbitrators will be one. The Parties will share equally the costs of arbitration, but each Party will bear its own attorneys’ fees and related costs, unless otherwise provided by law or statute. The Parties agree that any action that may not be submitted to arbitration under applicable law will be tried by a court of competent jurisdiction located in France, and the Parties submit to the jurisdiction of France for this limited purpose.
+29. CONTACT US
+Should you have any question about this TOU, or wish to contact us for any reason whatsoever, please do so by sending us an email at contact@morpho.xyz
+Stay in the loop.
+Get the latest from Morpho.
+Stay updated Stay updated
+Customers
+Institutions Institutions
+Fintechs Fintechs
+Curators Curators
+Users Users
+Resources Resources
+Customer Stories Customer Stories
+Company
+Jobs Jobs
+Blog Blog
+Brand Brand
+Contact us Contact us
+Resources
+Developers Tools Developers Tools
+Whitepapers Whitepapers
+Github Github
+Documentation Documentation
+Governance Governance
+Bug Bounty Bug Bounty
+Audits Audits
+Solutions
+Earn Earn
+Borrow Borrow
+BTC-Backed Loans BTC-Backed Loans
+Legal
+Legal Notice Legal Notice
+Terms of Use Terms of Use
+Privacy Policy Privacy Policy
+Disclaimers Disclaimers
+Social
+Twitter Twitter
+LinkedIn LinkedIn
+Youtube Youtube
+The open credit network for the world
+MORPHO

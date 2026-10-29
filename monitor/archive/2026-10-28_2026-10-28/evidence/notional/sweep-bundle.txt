@@ -1,0 +1,32 @@
+check: notional/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://notional.finance
+checked_at: 2026-10-28T22:46:10Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://notional.finance (HTTP 200)
+scripts (13):
+  https://www.googleoptimize.com/optimize.js?id=OPT-P63CDRK  sha256=8b4e05d4a813ed80f87c041df72993d7358c3932e0f54e766fbbe2551fc6f1e9
+  https://www.youtube.com/iframe_api  sha256=04f57fd942f29a29f34affceee7d4edc70b71d64f348ad046250a114cf2f664c
+  https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js  sha256=67584fbeb46f3d91e43c0f0a9c0f2a4f0fc2e0485773e2164967653f7294c363
+  https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6807f00bedf01dce8388f0e2  sha256=f7f6a5894f1d19ddad6fa392b2ece2c5e578cbf7da4ea805b6885eb6985b6e3d
+  https://cdn.prod.website-files.com/6807f00bedf01dce8388f0e2/js/webflow.schunk.36b8fb49256177c8.js  sha256=8b7d0de9f3df9103d70ed000c17b348240623ac4e4053d56fa0d5cfd8d74d79d
+  https://cdn.prod.website-files.com/6807f00bedf01dce8388f0e2/js/webflow.schunk.ff560088e0bd9e74.js  sha256=35d777cc55a8a643b73114415c3dc3ea6d7e5565a55b12e86a743bdd8d5cf44f
+  https://cdn.prod.website-files.com/6807f00bedf01dce8388f0e2/js/webflow.schunk.984baa16f3dccae4.js  sha256=28e7cecbb21cc7b6eb735460b9ffb126f8c9a1ad17f48b090ec8a47e295b3fff
+  https://cdn.prod.website-files.com/6807f00bedf01dce8388f0e2/js/webflow.schunk.81d4076e6d91b8b0.js  sha256=3adee47dd01043ae7c5070ef9de7af43d24b566e71754498e526ade9f54d84fb
+  https://cdn.prod.website-files.com/6807f00bedf01dce8388f0e2/js/webflow.schunk.7a5bf95df786b33a.js  sha256=a5901b7bdc9befab0caad4c9c2b0043db0edf5f5b1fb5a6db76885d73d14f3e9
+  https://cdn.prod.website-files.com/6807f00bedf01dce8388f0e2/js/webflow.8dc3fdb6.b5b6575ce065d7b6.js  sha256=12b8f232e96798dd72a83ee00434055d4f7f1a866e815887ad6e41886dbaaba6
+  https://notional.finance/runtime.a2fb3d482a7a4add.js  sha256=179d5767bf96de330a50d8425845688bf9de38e2d5a5b6f09544d4a31912acae
+  https://notional.finance/polyfills.5e9e0722c8980baa.js  sha256=40819357c4870aebcb5c8cd0fd3ea8175ef8a1bccd0eaa780e4a93fda9a76c9a
+  https://notional.finance/main.af0a49d5513340f6.js  sha256=8a0dab54526c1846b43eaf55f34e5e19f33a9412c115732cb5c7cc081d08716e
+
+signals:
+  [strong] geo: geo endpoint — 1 file(s)
+      /main.af0a49d5513340f6.js: set(n,i)});const i=yield fetch("https://api.notional.finance/geoip").then(e=>e.json());console.log("[DEBUG] Geo IP Country: ",JSON.stringify(i)),e
+  [weak] geo: HTTP 451 text — 1 file(s)
+      /main.af0a49d5513340f6.js: t Found"}]},451:{id:"hEWN9M",defaultMessage:[{type:0,value:"Unavailable For Legal Reasons"}]},500:{id:"/R93b+",defaultMessage:[{type:0,value:"Internal System Error"}]}},
+  [weak] geo: geo-block words — 1 file(s)
+      /main.af0a49d5513340f6.js: ntrol list here: https://orpa.princeton.edu/export-controls/sanctioned-countries"}]},500:{id:"XrNdt+",defaultMessage:[{type:0,value:"Internal system error"}]
+  [strong] screening: sanctions oracle — 1 file(s)
+      /main.af0a49d5513340f6.js: stringify({}));const n=await function(e){return new XWe.NZ("0x40c57923924b5c5c5455c48d93317139addac8fb",["function isSanctioned(address) view returns (bool)"],(0,na.wN)(na.lg.mainnet

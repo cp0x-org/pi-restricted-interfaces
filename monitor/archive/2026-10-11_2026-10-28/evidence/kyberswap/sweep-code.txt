@@ -1,0 +1,21 @@
+check: kyberswap/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/KyberNetwork/kyberswap-interface/tree/12c16463eb52d1f13f0961daf9445f907adaeb0e
+checked_at: 2026-10-11T21:03:33Z
+fetched: https://codeload.github.com/KyberNetwork/kyberswap-interface/tar.gz/12c16463eb52d1f13f0961daf9445f907adaeb0e
+sha256: 639697e04fe61b7444f01d78e0e67b398ce3e914733eea2923c93a734dd0ae07
+--------------------------------------------------------------------------------
+repository: https://github.com/KyberNetwork/kyberswap-interface/tree/12c16463eb52d1f13f0961daf9445f907adaeb0e
+files scanned: 2044
+
+signals:
+  [strong] geo: block text — 2 file(s)
+      https://github.com/KyberNetwork/kyberswap-interface/blob/12c16463eb52d1f13f0961daf9445f907adaeb0e/apps/kyberswap-interface/src/hooks/useRestrictedTokens.ts#L18  const name = symbol || t`This token` return t`${name} is not available in your jurisdiction` } /** * The set of restricted token keys for the user's resolved country. *
+      https://github.com/KyberNetwork/kyberswap-interface/blob/12c16463eb52d1f13f0961daf9445f907adaeb0e/packages/token-selector/src/TokenSelector.tsx#L115  _ROW_HEIGHT = 52; // Restricted rows are taller to fit the "not available in your jurisdiction" line. const RESTRICTED_TOKEN_ROW_HEIGHT = 88; interface TokenRowData { toke
+  [weak] screening: screening words — 4 file(s)
+      https://github.com/KyberNetwork/kyberswap-interface/blob/12c16463eb52d1f13f0961daf9445f907adaeb0e/apps/kyberswap-interface/src/pages/Earns/utils/index.ts#L9  sendEVMTransaction } from 'utils/sendTransaction' import { BlacklistedWalletError, ErrorName } from 'utils/transactionError' import { Hash, Log, keccak256,
+      https://github.com/KyberNetwork/kyberswap-interface/blob/12c16463eb52d1f13f0961daf9445f907adaeb0e/apps/kyberswap-interface/src/utils/sendTransaction.ts#L11  alculateGasMarginBigInt } from 'utils/transaction' import { BlacklistedWalletError, ErrorName, TransactionError } from 'utils/transactionError' import { Hex
+      https://github.com/KyberNetwork/kyberswap-interface/blob/12c16463eb52d1f13f0961daf9445f907adaeb0e/apps/kyberswap-interface/src/utils/transactionError.ts#L44  ck when the active wallet is on the deny list. export class BlacklistedWalletError extends Error { constructor() { super('There was an error with your
+  [weak] kyc: KYC words — 2 file(s)
+      https://github.com/KyberNetwork/kyberswap-interface/blob/12c16463eb52d1f13f0961daf9445f907adaeb0e/apps/kyberswap-interface/src/pages/ElasticSnapshot/components/SelectTreasuryGrant.tsx#L106  // to viem `walletClient.sendTransaction`. ZkMe KYC runs on Polygon only. if (!account) throw new Error('Wallet is no
+      https://github.com/KyberNetwork/kyberswap-interface/blob/12c16463eb52d1f13f0961daf9445f907adaeb0e/apps/kyberswap-interface/src/pages/ElasticSnapshot/components/TermAndPolicyModal.tsx#L44  t Program”) will be subject to my completion of KYC screening to the satisfaction of KyberSwap and further subject to terms

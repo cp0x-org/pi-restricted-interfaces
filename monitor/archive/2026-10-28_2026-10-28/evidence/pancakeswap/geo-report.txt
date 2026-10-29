@@ -1,0 +1,115 @@
+check: pancakeswap/geo-report
+about: Press report (Feb 2022): PancakeSwap blocks IP addresses from ten jurisdictions from March 9, 2022
+source: https://forklog.com/en/pancakeswap-to-block-users-from-ten-jurisdictions/amp
+checked_at: 2026-10-28T22:56:52Z
+fetched: https://forklog.com/en/pancakeswap-to-block-users-from-ten-jurisdictions/amp
+sha256: 7825b7160e9693375e4b998bce098824c7d9f3f90aed88810ab7f66ad3d4cbb8
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+PancakeSwap to block users from ten jurisdictions | ForkLog
+News
+Longreads
+101
+Search
+Ру
+Artificial Intelligence
+Cryptocurrency Prices
+#Bitcoin
+#Ethereum
+#Opinions
+#Forecasts
+#Technical Analysis
+Telegram (AI)
+YouTube
+Facebook
+X
+Ру
+-->
+News
+Longreads
+101
+Artificial Intelligence
+Cryptocurrency Prices
+#Bitcoin
+#Ethereum
+#Opinions
+#Forecasts
+#Technical Analysis
+The iconic magazine about Bitcoin, blockchain technology and the digital economy.
+AI translated #Bans and Restrictions #DEX #PancakeSwap
+PancakeSwap to block users from ten jurisdictions
+11.02.2022
+ForkLog
+The decentralized platform PancakeSwap warned that, effective March 9, 2022, it will block access to its services from IP addresses in ten jurisdictions.
+The following jurisdictions were included:
+Belarus;
+Cuba;
+Democratic Republic of the Congo;
+Iran;
+Iraq;
+North Korea;
+Sudan;
+Syria;
+Zimbabwe;
+Crimea.
+All of them are on the U.S. government’s sanctions lists.
+When visiting the PancakeSwap site from these jurisdictions, a corresponding notice appears.
+Data: PancakeSwap .
+In the Iranian crypto community CryptoClub confirmed the geolocation-based blocking warning. Users began asking about the possibility of using VPNs.
+📌Decentralized exchange PancakeSwap will not serve Iranian users from March 9! pic.twitter.com/niUBaaNHox
+— CryptoClub | کریپتوکلاب (@irCryptoClub) February 10, 2022
+According to DeFiLlama , PancakeSwap is the largest by value of assets locked in the Binance Smart Chain ecosystem. It accounts for $4.81 billion — about 36% of the total $13.25 billion.
+Data: DeFiLlama
+In October 2021, the U.S. Treasury’s Office of Foreign Assets Control published guidance for crypto industry participants on complying with U.S. sanctions. The document recommended using ‘geolocation tools’ to identify and block IP addresses from sanctioned jurisdictions.
+Earlier in September, the decentralized platform 1inch began blocking US users ahead of the launch of a product designed for them.
+Binance, a centralized exchange, also resorted to restricting access for American users to avoid violating the country’s laws.
+Follow ForkLog on social media
+Telegram (main channel)
+Facebook
+X
+Found a mistake in the text? Select it and press CTRL+ENTER
+Related articles
+What is PancakeSwap? A Uniswap-style DEX on Binance Smart Chain
+PancakeSwap unveils third version of its protocol
+PancakeSwap adds support for Arbitrum One, the most popular L2 solution
+How to earn on stablecoins in a bear market
+PancakeSwap token jumps 20% after Binance partnership announcement
+Unknown actors launched a fake ‘Sbercoin’ on PancakeSwap
+PancakeSwap caps CAKE supply at 750 million tokens
+Binance Labs Invested in PancakeSwap; CAKE Token Rises 10%
+PancakeSwap proposes adding Aptos network support
+-->
+ForkLog is a cult magazine about Bitcoin, blockchain technology and the digital economy. We have been providing daily news and analysis on the cryptocurrency market since 2014.
+All published materials belong to ForkLog. You may reprint our materials only after obtaining permission from the editorial office and providing an active link to ForkLog.
+News and Analysis
+Opinion
+Investigations
+Guides
+Rates
+Occupy the Internet
+Telegram (AI)
+YouTube
+Facebook
+X
+Privacy policy
+Terms of service
+About
+Advertise
+ForkLog ©2014 — 2026
+We use cookies to improve the quality of our service.
+By using this website, you agree to the Privacy policy .
+OK
+
+--- section the countries were read from ---
+The following jurisdictions were included:
+Belarus;
+Cuba;
+Democratic Republic of the Congo;
+Iran;
+Iraq;
+North Korea;
+Sudan;
+Syria;
+Zimbabwe;
+Crimea.

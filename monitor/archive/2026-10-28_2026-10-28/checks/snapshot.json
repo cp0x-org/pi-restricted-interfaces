@@ -1,0 +1,89 @@
+{
+  "id": "snapshot",
+  "name": "Snapshot",
+  "targets": {
+    "app": "https://snapshot.box",
+    "repo": {
+      "repo": "snapshot-labs/sx-monorepo",
+      "ref": "9790f736a6cff474c710fb7bb7b51f0bbf8d6fef"
+    },
+    "terms": "https://snapshot.box/#/terms-of-use",
+    "endpoints": [],
+    "terms_fallback": "https://github.com/snapshot-labs/sx-monorepo/blob/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef/apps/ui/src/views/Terms.vue"
+  },
+  "checks": [
+    {
+      "id": "geo-terms",
+      "type": "code",
+      "claim": "geo_site",
+      "status": "tos_only",
+      "about": "The Terms list SECO-embargoed countries and only reserve the right to restrict access by location",
+      "source": {
+        "repo": "snapshot-labs/sx-monorepo",
+        "ref": "9790f736a6cff474c710fb7bb7b51f0bbf8d6fef",
+        "path": "apps/ui/src/views/Terms.vue"
+      },
+      "expect": [
+        "Prohibited Jurisdictions",
+        "reserves the right to technically restrict access to Snapshot"
+      ]
+    },
+    {
+      "id": "no-geo-code",
+      "type": "code-scan",
+      "claim": "geo_site",
+      "status": "no",
+      "about": "No geo-IP lookup or country block in the Snapshot UI (apps/ui)",
+      "source": {
+        "repo": "snapshot-labs/sx-monorepo",
+        "ref": "9790f736a6cff474c710fb7bb7b51f0bbf8d6fef",
+        "dir": "apps/ui"
+      },
+      "absent": [
+        "api\\.country\\.is|ipapi\\.co|ipinfo\\.io|freeipapi|ip-api\\.com|cdn-cgi/trace|/geoip\\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country|req(uest)?\\.geo\\b"
+      ]
+    },
+    {
+      "id": "no-screening-code",
+      "type": "code-scan",
+      "claim": "screening",
+      "status": "no",
+      "about": "No wallet-screening call or sanctions list in the Snapshot UI (apps/ui)",
+      "source": {
+        "repo": "snapshot-labs/sx-monorepo",
+        "ref": "9790f736a6cff474c710fb7bb7b51f0bbf8d6fef",
+        "dir": "apps/ui"
+      },
+      "absent": [
+        "trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\\w-])|preflight-compliance|/address/status\\b|compliance/screen|/v\\d/check/"
+      ]
+    },
+    {
+      "id": "prod-no-geo",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "no",
+      "about": "Production JS of Snapshot: no geo-IP lookup or country block (the Sequence wallet SDK, whose API client has a GeoblockedError class, is not counted)",
+      "source": {
+        "url": "https://snapshot.box"
+      },
+      "absent": [
+        "api\\.country\\.is|ipapi\\.co|ipinfo\\.io|freeipapi|ip-api\\.com|cdn-cgi/trace|/geoip\\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country"
+      ],
+      "skip_scripts": "0xsequence"
+    },
+    {
+      "id": "prod-no-screening",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "no",
+      "about": "Production JS of Snapshot: no wallet-screening call or sanctions oracle",
+      "source": {
+        "url": "https://snapshot.box"
+      },
+      "absent": [
+        "trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\\w-])|preflight-compliance|/address/status\\b|compliance/screen|/v\\d/check/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+check: cowswap/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://swap.cow.fi
+checked_at: 2026-10-28T22:40:10Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://swap.cow.fi (HTTP 200)
+scripts (148):
+  https://swap.cow.fi/emergency.js  sha256=1e1498e5538b15488f76f7080e77fe2944415e70a4f0acc16e83221766c0aed8
+  https://swap.cow.fi/static/index-EhqoReUy.js  sha256=f896aad3a04fd177acd9a648dd3e6ef601e12dcb08805fbfa7e752211d933ab5
+  https://swap.cow.fi/static/@safe-global-safe-apps-sdk-BBILyogx.js  sha256=2c3134b8dec95bb97bc988fce5b6ae8c6280d00e37443d2a369635d6a33e1b5a
+  https://swap.cow.fi/static/@sentry-CBsSFTMB.js  sha256=f3607e87cb4856f4da5ff9f3a5732d13b2f04d1d23e4dbc7b24625a08e2dccd2
+  https://swap.cow.fi/static/base16-BvyjfwQU.js  sha256=5fc229056f02bfe397d276f586f782bf00e7153ccefc6bc178f70d9da1e0bc83
+  https://swap.cow.fi/static/base-B3SP2EaZ.js  sha256=8b85df4e52a7304c0f365a4f4827c83eebfba800a995bd84605ca9046cdeba5b
+  https://swap.cow.fi/static/cid-DDxw0xim.js  sha256=778f4eb55cc5fa1605ee64b56c7856bbcca62872cc950fbb55e88cde607994f9
+  https://swap.cow.fi/static/ajv-BUXMjdNq.js  sha256=8bb600d56bc5c259b0e462b22c400d5dde1f2c07fdac1330693fcc6cdc8b5820
+  https://swap.cow.fi/static/ajv-CyAcG74T.js  sha256=efe302754fb22739b79a5b544a9575d9568571616710ee36746e7727c51442e4
+  https://swap.cow.fi/static/@safe-global-api-kit-esm-BKwtywCO.js  sha256=14596600de92f4df4e4c22345e2a32ac58197821e80081fe74f06773190370e9
+  https://swap.cow.fi/static/index-gC4KrZme.js  sha256=c87ee74d500274042d79f08fd328d5e390e98d9979d5d053e9794d8db38316cb
+  https://swap.cow.fi/static/clsx.m-CH7BE6MN.js  sha256=9af0bd9612a2e56f1f0cba952792b4edc08253c6413a607ae7c55536a37d4f8f
+  https://swap.cow.fi/static/index-B3MJou_2.js  sha256=d2ba787f70df9a3eaed59434bc1a2247236c725a3ea85767b02171b0df446133
+  https://swap.cow.fi/static/@walletconnect-ethereum-provider-t0X9cVjW.js  sha256=b5d63365859c70e4cf4fc9ed43f300a671b57da19550cdc95815055206f048b9
+  https://swap.cow.fi/static/features-DQWiePhM.js  sha256=e4cda26597e61c53e6b99816fc6f06a954c90f747e6d121290dd5aa44d785011
+  https://swap.cow.fi/static/embedded-wallet-Dz7GOwKw.js  sha256=ba7460667c26142aad67d705a8ffe88fed07c8b39594e4e58dc1691063f667ad
+  https://swap.cow.fi/static/email-CIZi2737.js  sha256=df856ad714a946c27775576c4cac4667f33b31e639a23a08dbc2a17c7425c82d
+  https://swap.cow.fi/static/index-DLpV5xZe.js  sha256=285eab887cf930c585642d79ddc1604792c569dc8fa505fe0a70ecda30482c8b
+  https://swap.cow.fi/static/socials-SrganHvj.js  sha256=1d33f7064449a7a44d990fabb806028527f80ea70ce8cea6765d3a5862e71c9b
+  https://swap.cow.fi/static/swaps-BnhzcZ9D.js  sha256=60dc11f9fef104ef68f8a8ee74401e9799993603806d776b4af87b1db4e171c0
+  https://swap.cow.fi/static/SwapController-BT3hqtF3.js  sha256=2f6c9ffc55175c52824c1ff96fccfb6db1c90339aa8873de502bf0ae2f82fc68
+  https://swap.cow.fi/static/index-CU5V86gx.js  sha256=927cc76ca964e69a72157237c7ab6cc82e5f45a47822115c399d07fc984196c0
+  https://swap.cow.fi/static/send-BO3IFadZ.js  sha256=f0f51ac36e0c5befa4356c924c248b22d512b0c0556c0dfffeb33ee6d8619f3b
+  https://swap.cow.fi/static/index-D_K5nvsh.js  sha256=0c213ff7b7d906d28031facf7d189c06b518c4617fc6073dc490205b2ea50327
+  https://swap.cow.fi/static/receive-3dHy54VD.js  sha256=60d0f6fb384f1b7cb540514ef4b96615e9cde79984373bf6fc3820bafeb7e2db
+  https://swap.cow.fi/static/onramp-Cg1XlTc4.js  sha256=0deab232b4b23d38a808f6cc5857ea13c429f3ebdcb09fb2e77fefe9b9c5b119
+  https://swap.cow.fi/static/pay-with-exchange-DJuzAqZv.js  sha256=aaf5182adc5c49e97c3ba5e6ef0f4f13b3401629b9df9d9f4402af3c50dd5092
+  https://swap.cow.fi/static/transactions-Du6SSKNJ.js  sha256=dc602ca90cb4c0fe8fca0bd8c2bde8761e74e8ba0889591ea9a118cc1361147d
+  https://swap.cow.fi/static/index-Dc7y6HfK.js  sha256=8438755d1fa2820a5506a489e62b84a8a31d8720e4dccd2d453476037e6c4c0d
+  https://swap.cow.fi/static/index-Gk2yfyQT.js  sha256=6014bec68c03b32a5fd528b0bd1cff56ce16c5c150aa0c6f89b2fe12044623ce
+  https://swap.cow.fi/static/data-capture-BZUwDdai.js  sha256=5164a61a29ab71ab2816a5fca56e3d7825aabe04245da21c4fb946a479ef082e
+  https://swap.cow.fi/static/w3m-modal-BU40LLU7.js  sha256=31b768f6c1be428c5e25bfa06b4374b41e2099b3d2fd461fc18e86ae0a3a9011
+  https://swap.cow.fi/static/PhArrowCircleDown-BtlNV0TZ.js  sha256=7ee0652efd5835148075370ad11290eb1104862209788a76927f6cf415c5ff2a
+  https://swap.cow.fi/static/property-CnFDNXw5.js  sha256=ae667ffa52baa9f4e4e17c4aa68d8bcbe0ae7e359df21e7a55602c60acfb61ed
+  https://swap.cow.fi/static/PhArrowClockwise-mOiWYLMV.js  sha256=16ce0ca5f23e3a6cd88217c492d86d115dd69c253fb9dd759dd5dabe16241406
+  https://swap.cow.fi/static/PhArrowDown-CkoOD89h.js  sha256=3f2713467c3e1255d9c5403ce5531cec16c11a9714ada899f824a106d9c08d44
+  https://swap.cow.fi/static/PhArrowLeft-C0jlxVhM.js  sha256=81d132470ed3b9540abd37c0c0d62b004c54af4536b8869ce4619b007153044a
+  https://swap.cow.fi/static/PhArrowRight-BI-V03Xf.js  sha256=25a0bc351819ba8e54b2f93949753c413a83658efb796c3b08eacbbab08da283
+  https://swap.cow.fi/static/PhArrowSquareOut-DnQ7n_B4.js  sha256=283dab4c26bb768af259b55686c081e16f64592d0cb55b8eba94792d9263a33c
+  https://swap.cow.fi/static/PhArrowsDownUp-PZosTqZG.js  sha256=506fac619fe918aad23528995c27641614e30aacd01f60cfb2061401ab3e6c6b
+  https://swap.cow.fi/static/PhArrowsLeftRight-CYsRQ2qh.js  sha256=9a3ef7acdebafaefc6d7c37b882176b95247938d59d496ee3ae34505bb35e338
+  https://swap.cow.fi/static/PhArrowUp-izKvURUW.js  sha256=3da463c66734729e1c26ada0008a8b98d60ca19ba424fd382fce2cd1bafc0b15
+  https://swap.cow.fi/static/PhArrowUpRight-Bn-JhHsY.js  sha256=36470b1709b3c015e501eac40f30702687629c323e5c21bfad7eab3968929788
+  https://swap.cow.fi/static/PhArrowsClockwise-Brtx2Re-.js  sha256=11e451dc4545e0838ff8566cf9ea02c099d0adc12388a9994e8dddbb8207e684
+  https://swap.cow.fi/static/PhBank-hhPAIPVb.js  sha256=e6653cdccee4f34722195e794709d7814a53d8e89bab9d5835d8d6e285621115
+  https://swap.cow.fi/static/PhBrowser-BjzAmrHO.js  sha256=f56577f483dee6ed182afa43be5b2db35fc01a4922b521e35a6ff7b18754239d
+  https://swap.cow.fi/static/PhCaretDown-ddSjwcwm.js  sha256=f3e4a53b0fc970100ac25dce3f5a8c2ac30f581ede94ddf4487eb3e2be2f16c8
+  https://swap.cow.fi/static/PhCaretLeft-B7YLoNEF.js  sha256=dbf51b49d527a643451b9568260e2d71e9c511a2b262db460bc178410a7bf7c7
+  https://swap.cow.fi/static/PhCaretRight-BY8D5MIg.js  sha256=ee30adf4d7f67e64f71fe79212874af8a3ad39459f500848a32571b3ed199893
+  https://swap.cow.fi/static/PhCaretUp-BG10nSut.js  sha256=432ec501b88c1353e4f39ae9e176bb7c1dd839c3025b6a705c23ce2d742d8dca
+  https://swap.cow.fi/static/PhCheck-DrKd7pBC.js  sha256=ed9431630e526643e53aabe5778579bc971708966b24cf5b346f4e1e9a9a7936
+  https://swap.cow.fi/static/PhCircleHalf-Bk9C4DvT.js  sha256=5dda041360670fe9d7983da55968ddbaf6717cbc7b129f23042c6454728f4865
+  https://swap.cow.fi/static/PhClock-Sj17weCB.js  sha256=17a460eb9d7905d0f3819397eea347d0c6deb152495f57e331f64533ac7402f8
+  https://swap.cow.fi/static/PhCompass-Df1ugFO-.js  sha256=9d061037b4adff81c37ec79d499925a13401af3516c0d8d41571d7e00282c073
+  https://swap.cow.fi/static/PhCopy-rgttky8E.js  sha256=3ba369bddc32ff0185b08bd9227a5283a45983653062c229d4effd3b581aa386
+  https://swap.cow.fi/static/PhCreditCard-CZpdid2n.js  sha256=89011dd1475c3f2f2c1c4768a3d91569314dc6b2ab2a26f46508d5072123eef2
+  https://swap.cow.fi/static/PhCurrencyDollar-B6IKKjue.js  sha256=a37485d147d7a6bd08bacbf9debbba4595f03c8088d46f212db2950f480501ca
+  https://swap.cow.fi/static/PhDesktop-BuCDXYJj.js  sha256=3bcf0ba96fc0a8b1499e1ecd7fc36f08fa272c540b6a5803ccc435c3e1c631d0
+  https://swap.cow.fi/static/PhDeviceMobile-CnybhXY-.js  sha256=9cd7dbf4a5a0c628c71216ac3fd6e8ff1b93acb4ff94cda98c08999ac868fcbf
+  https://swap.cow.fi/static/PhDotsThree-CSAEcba1.js  sha256=b3c1d48ac1b28a46ce00994c63010740f4f57803d4424b7f8ffe3388dfe4c522
+  https://swap.cow.fi/static/PhVault-B8m1usHw.js  sha256=2903433aba9766ff6bfcd3dd297ca3c3d8a5b5803badba90802798f1c1ec1cde
+  https://swap.cow.fi/static/PhEnvelope-SmaNeXoQ.js  sha256=ca15e4b4bb185b5107b04607cc820d125158535ffcf5ba33b251f3f7173be7a0
+  https://swap.cow.fi/static/PhFunnelSimple-DKx35ITq.js  sha256=5f2c2a31d96531703c1044066041c73d2fdf023abb8d79e340b8047b92f29745
+  https://swap.cow.fi/static/PhGlobe-q1mqj65V.js  sha256=15a4f5c883ce4a5dbae780dfec9e0c1cb3762ae2b40b76a8a9cfdc0d9c37834a
+  https://swap.cow.fi/static/PhIdentificationCard-BeLXJpfZ.js  sha256=6a4afb68705c9ba26d944f51bbeb2d4d8118402700f63530691e910e781e4a07
+  https://swap.cow.fi/static/PhImage-BYrKfN9k.js  sha256=40d1a66a1df512a3b7019c855a4425d52601c8ae329bdb648da492afb7331c3a
+  https://swap.cow.fi/static/PhInfo-X33f06Ej.js  sha256=b5ce46a9507f9dbf354948c025f5c644f56fbf137793fa1e01e3b41518b400a9
+  https://swap.cow.fi/static/PhLightbulb-DMZJsowR.js  sha256=2cd69be469f1b99c60cbd0df3479e9ffcbc23320e36f7d0890b93ed06b9d9b89
+  https://swap.cow.fi/static/PhMagnifyingGlass-B6D0sWFL.js  sha256=ed79bfc4e2b12857666126b3cbd8e99431d4c4e4380d090178ea82ec83b51584
+  https://swap.cow.fi/static/PhPaperPlaneRight-Dvo-nXr9.js  sha256=4c8e920132acf434f5355979a250661a17c7534a5e7f569e4dcc9beca6e717f6
+  https://swap.cow.fi/static/PhPlus-CBvZvLax.js  sha256=96070a16a0447a77d390064657cee3d784a5c1571cf100f3efa2dbe840721c1b
+  https://swap.cow.fi/static/PhPower-D8-AcNM6.js  sha256=e4da152269869fad48f9e0a39c429fdce238cfdb3dae5d4e892969f707f8b7fe
+  https://swap.cow.fi/static/PhPuzzlePiece-C-7mYqGO.js  sha256=3eb52bd86e4999dfc904f96c7c65cee300736828bfbacc23c068ded04cc4b2af
+  https://swap.cow.fi/static/PhQrCode-uIXlI5ER.js  sha256=fb486557e1879b7d79b2277399d787b63a3f3e7a95b627ebe71fdbc9e3866378
+  https://swap.cow.fi/static/PhQuestion-rUoqC2sC.js  sha256=5ee8e2b8994701f48a135c42efc767b2a68083746ddc4ee6335b0c087f194844
+  https://swap.cow.fi/static/PhQuestionMark-W55Txvvb.js  sha256=277072142171cf56176a5fe3624d87dc1247779d42b7bc209e05b648c698d6a3
+  https://swap.cow.fi/static/PhSealCheck-BeVLq9PH.js  sha256=acef55f72baa0b5539e867beb23d1975ad136f22e8b566c70cbf35c00e8e69c3
+  https://swap.cow.fi/static/PhSignOut-Cq2PivQ6.js  sha256=2632fc8c170fe7125dddaa2042fd75e914add25094fe387ac9c208e8d96274e0
+  https://swap.cow.fi/static/PhSpinner-CZMtAFdX.js  sha256=a0049d8b5e94cae062d5609bdb82eb4bef0149dd1e0d425e2127d4fbcf2d7b5f
+  https://swap.cow.fi/static/PhTrash-BamrmMsN.js  sha256=b15d3d02e2bc85d00a3f86989d4ebe43ab25e48d06fd9dd3f6394c08b3e2bd17
+  https://swap.cow.fi/static/PhUser-A2fxqIV0.js  sha256=45e2007ed20be9b9a9e4196ec4d19a7e6c88caf9d8e3986c1c53e5c96b4aabc7
+  https://swap.cow.fi/static/PhWallet-WVAuHGpA.js  sha256=e1616f3a17eb7abdcd5e60c608d37c76a85877169d1f1546b30acd6cfc10bcf6
+  https://swap.cow.fi/static/PhWarning-CpkID9oi.js  sha256=156d1013e25d78d2640b25de9d74bfaa897687535a990aed3caba70a32259609
+  https://swap.cow.fi/static/PhWarningCircle-Cm58gXb9.js  sha256=6746777b202fad4d6c80daa97683d411bf0690bcc55cb8b72a8e5c902ae4315f
+  https://swap.cow.fi/static/PhX-C3b4cCEy.js  sha256=4595b1cb005ff23d3e30be31760c4c342840c7f43b366355e32d69080f2ed184
+  https://swap.cow.fi/static/wallet-standard-BnGqO10H.js  sha256=337c390aa5e8bc1da2bbe935f6d9e15c4cc8619947d18b084ecfc7bc313debf6
+  https://swap.cow.fi/static/index-bykfjwra.js  sha256=f1c906e780b44becc6e2de0de4ca3f4b6fe315403ef6a97f4fabddbf1f4656ea
+  https://swap.cow.fi/static/index-DyUvPggi.js  sha256=88410c2c00e6fea7f5ee67ac64dd517333fd51732ae300550880b14be852c6c2
+  https://swap.cow.fi/static/1inchPermitUtils-BJS3ls-O.js  sha256=921de7e4b1191bda0849a918c6f0875cd8e2be2fa52eb581a889abb4ef38d001
+  https://swap.cow.fi/static/lottie-react-build.es-BMfpRq1b.js  sha256=5157df962b1eb1047dc3e38ffe1d79ead6ab2984f648d9de6fbb49d50446a775
+  https://swap.cow.fi/static/framer-motion-dist-es-CH2Q-8rN.js  sha256=bf0e096e6185901992545192d9c9f2372a166cd7fea03613eff3c75915e8906f
+  https://swap.cow.fi/static/page-Account-Balances-BjrQ03DO.js  sha256=dfec588d4177e317e7cb366024410372da5084703a0ab781b107e3403d481216
+  https://swap.cow.fi/static/cow_token-UNUDpKE5.js  sha256=9f8892fbe8614a6a95e2b63161ff7f424fc24039209181e59799d0162afcc73f
+  https://swap.cow.fi/static/page-Account-Governance-CeULBEja.js  sha256=24bd02d8c4705330ced5f732ae1ce04416441fa40d722225ff72afe1eeba0d3a
+  https://swap.cow.fi/static/constants-DqA7korj.js  sha256=48955d003a378e5870c10892e047612fdf6ffdf1915edccd8ec0f01b84522f44
+  https://swap.cow.fi/static/page-Account-Delegate-Cg9xmSY0.js  sha256=aad580552a18e7f7c27b255a069e36c43616d873bbe0a52a1c6000251fef4ea0
+  https://swap.cow.fi/static/page-error-NotFound-4zQUIPen.js  sha256=0e33c5033d5be14e9aa2e174102896600aa8141ea9547576e5d270fa757ef824
+  https://swap.cow.fi/static/page-games-CowRunner-D1xOyMMI.js  sha256=b9bf023c7e350dae5b1f85ed65bc2a596f4816dcc9819dd498d92d20d95751e6
+  https://swap.cow.fi/static/page-games-MevSlicer-CrZRAxMc.js  sha256=dc862f4398ddf2127261306da0f83aec835a0e37d2ba276d3e264931b67602fa
+  https://swap.cow.fi/static/page-Account-Tokens-CCGG1GJ7.js  sha256=d5be546d441481bbdefbfa601fa6a3f8dbd02b73c0a2a80a4b831a1923323cd3
+  https://swap.cow.fi/static/page-Account-AffiliatePartner-qiw1OGNT.js  sha256=4b1dd1903393ffd9ce10ce2a88c8ddfe40b88c0f3efffda32d8fa5ea9d7779ff
+  https://swap.cow.fi/static/MetricsCard-DOjJ5vL9.js  sha256=ebfb262e5fbee5976287d91099d8b7378bd6fb0b0537361cf50e88a9cc13e327
+  https://swap.cow.fi/static/page-Account-AffiliateTrader-BFbvKMvA.js  sha256=76a2484b3fd087dbcded04e6db84fd1b0ab6b439cdd21f69122f55eb7255ddca
+  https://swap.cow.fi/static/v0.1.0-452JMA5G-CxDlBNav.js  sha256=54f670e8893111c8ec5b36381ea2b9bb3e9520f7912c44e7045798b35f24a7b8
+  https://swap.cow.fi/static/v0.10.0-OHB5VFCY-BxLkbVOM.js  sha256=eeddc88dc5f7951dd6e9711eee3c9040049fcacd1e03f75f2bfe0167e18fb984
+  https://swap.cow.fi/static/v0.11.0-YC4BNGSG-ZJUKLJPn.js  sha256=f46f14a314fbc841de8c6f31f082fa7353693bf178c2f7b529ff8ba4c55d5824
+  https://swap.cow.fi/static/v0.2.0-RZSAEYWJ-BO42Ib25.js  sha256=014611b1b905f567592dc61cbb62234c153a2a02dd9aa7592f09f028505e5c77
+  https://swap.cow.fi/static/v0.3.0-QEEYHNXA-C8R-2dRU.js  sha256=0a17a88ae9a7f53ee2cab575be68bd69e0980ad40931e0dcede17d9f10f445a6
+  https://swap.cow.fi/static/v0.4.0-XWYIU6OQ-dtmZJ7oB.js  sha256=22f937d9d03bd23a9b255f68d1a7df5884442115305b8058d01fa261e98240bc
+  https://swap.cow.fi/static/v0.5.0-6JWER4SU-B0qvJgU-.js  sha256=8e3c2dae8e153a12a3ddb5343fed2d9dd203623a35ef94a3f6a28ad524484866
+  https://swap.cow.fi/static/v0.6.0-DCUHOIX6-D0nK_KNa.js  sha256=5c85f70f683d819f68ff45923c319a7e295835690b83835dc81a2d2e308f8558
+  https://swap.cow.fi/static/v0.7.0-WUIYE67P-DHAtTBPF.js  sha256=2f3dd1a9ff64b2240253fa74aed94a3a3f36488a509439b957cb1d3c9526a9e6
+  https://swap.cow.fi/static/v0.8.0-MA4RCSXJ-BzWVU6mD.js  sha256=d5a49d4c61a16e8461e0c0115452276cd7e1b84a02754ccabdeaddbaecda9ee3
+  https://swap.cow.fi/static/v0.9.0-MODYXNNJ-CW56i5Hn.js  sha256=1dac760fde4c4f89efd20f0f004b519e96e97e8b211f5092bb20ab761bd01383
+  https://swap.cow.fi/static/v1.0.0-LO3INJ7G-Cn81q8wR.js  sha256=3d02da472ee9921a635ca2106dc07005a4e3eedd4704fa13b405eaa581b57ac2
+  https://swap.cow.fi/static/v1.1.0-VDZLWY4U-BWHazOd8.js  sha256=8360eb67c49c75452fbee3b09078e819ba0a4a299c6e7cf4fea8f9e3b34f0551
+  https://swap.cow.fi/static/v1.10.0-HV5QAMRI-DtfFbtUQ.js  sha256=cf7f49d90e9d9f8301cf7a7f830ab6e6a8cd27f3fa8bd63393feaf5dcd01387e
+  https://swap.cow.fi/static/v1.11.0-7OORRXZT-CGwSLHNc.js  sha256=0a24f1da0acb56b9ca938fa3054ad33d44b503cdadcc15d6b5bf1a0dbbb6280a
+  https://swap.cow.fi/static/v1.12.0-JRP6T6PK-BrocjUYM.js  sha256=8633093a52104ef0d41f16b1e7d8b4ac5592f95196d491390279ac3838a0a2b4
+  https://swap.cow.fi/static/v1.13.0-F46Z6ASK-CtOs43cv.js  sha256=32fa795dc6c13647ef0e5b6b79b299b67f968b5ddb4e73371795b9aa1058f298
+  https://swap.cow.fi/static/v1.14.0-4GFOYRNY-B8nGQ1Rg.js  sha256=24470e2940eb7112864663c2536da24328ed07970f6d406ea2586bebd93c0fbf
+  https://swap.cow.fi/static/v1.15.0-4YFUPOOT-Bi1u4Jfv.js  sha256=3eaed9a09c314f42a4e7e18766ebd6efa0799a7f297c663f2059f8707fcad047
+  https://swap.cow.fi/static/v1.2.0-J7HBJ6X3-DAO9TS_K.js  sha256=e4cd354dc1a04428057be9b838fa9cb814524509a6ad79df8436d12268ff6358
+  https://swap.cow.fi/static/v1.3.0-YE5Z6DA7-WxjICRnn.js  sha256=6f8563c6e660d07ec98390abd984709341f48ea6eacdf6844fc9395a981bc8ce
+  https://swap.cow.fi/static/v1.4.0-XW4S4BWH-BE1DD-uT.js  sha256=2453e5be71bb2b1b07ed4689a23c23546ef8e289a3014d12ecb752677bac8d33
+  https://swap.cow.fi/static/v1.5.0-RPBY3HCV-BChBsCfx.js  sha256=fcd7d106f0de896fd0e049341db72b78c55fd3fe78023c1e7c4355753a00e362
+  https://swap.cow.fi/static/v1.6.0-WTOLS5Y6-BrJvDjHz.js  sha256=3153f3286d8f001f9b936226c9deb142d4ecab5fd2c32080d49921790a51702c
+  https://swap.cow.fi/static/v1.7.0-7V2ZPHKV-1d-zW9eS.js  sha256=bc6b2bbc7bf0fd898782c489c48b83100a007dc28ba1e5532daca3b3a3513793
+  https://swap.cow.fi/static/v1.8.0-UKWSFP36-wayCITfA.js  sha256=afebcef508831736df13e328a7ebbaec9afa455f47b23741eba0353404380022
+  https://swap.cow.fi/static/v1.9.0-SQYL3FIK-ehOfOIud.js  sha256=d8ddf7b9fd07c5c909d53eaa25219eb757cd55f18ad09c552054bc234af27c19
+  https://swap.cow.fi/static/de-DE-DxmmRTCB.js  sha256=8390b22a5b7bb179eef069ad0c349dec9846e01fba463114ca32aad1c4d8466a
+  https://swap.cow.fi/static/el-GR-DxmmRTCB.js  sha256=9ad8db15ed2292315a70c9bd204aa16d3ac9b8d1925a86cbc85457b5702b82df
+  https://swap.cow.fi/static/en-US-DxmmRTCB.js  sha256=62ed7b91bc494e9476f1fb2967a30a1504cefd6a25598b53037c6c6fa3746032
+  https://swap.cow.fi/static/es-ES-BMLOKrzM.js  sha256=b3bba96bda2d7e6c6e3631c00d60884b15f8fe051f2f01c25b8ca904937ca628
+  https://swap.cow.fi/static/fr-FR-BxVlf0if.js  sha256=8795e178783361870185fcbe1889716a8ac084ebb55c5f70818793a005eaeb60
+  https://swap.cow.fi/static/nl-NL-DxmmRTCB.js  sha256=6ccc0cc1b1ff7504ac48e24fc98641a7691884b2584564ef7669efd85d016c1a
+  https://swap.cow.fi/static/pl-PL-DxmmRTCB.js  sha256=89c678d427bb932c235e005228d4ad9cda8e41207896f688bfb03b842a657d0b
+  https://swap.cow.fi/static/pt-BR-sskmVEBU.js  sha256=1ced567062f62443ab3a9b063df40835dc96d96ef267068ae5bafaecf7e0237f
+  https://swap.cow.fi/static/ru-RU-CIhHAB55.js  sha256=28c6594476fc624a3eb9c1e581f65391f3b8c617e680020e14e142bd94f42e1d
+  https://swap.cow.fi/static/tr-TR-DxmmRTCB.js  sha256=d549780bb2dcc364a50d5a73d484547e81e05e7765810f265afb97f0a3b80f78
+  https://swap.cow.fi/static/@uniswap-BGCGWDiR.js  sha256=b567225ded6c85c85dc6fb6e2b84f0482cce3f2ec78f7f66f6fb12a4320c7c9c
+  https://swap.cow.fi/static/surprised-cow-dark-BsNCHNSh.js  sha256=67b43adeca680894a2f10ef2717dbb3b3a32422e78ba5e236fe0876ad8de9a4e
+  https://swap.cow.fi/static/surprised-cow--rHqVQnv.js  sha256=5d4dee1f5558cb0b0cc00ba48604fc3857f0c8d6ee4af15c60ef3185d40fc735
+  https://swap.cow.fi/static/progressbar-step-nextbatch-D45wupql.js  sha256=f0f056c46d80cb0c3578e195e209d01e60229dbe3f76d7e3f5582d75d5fa485d
+  https://swap.cow.fi/static/progressbar-step-executing-Bb0tziv-.js  sha256=51aa4328b092da2a2b95192b3ff2cad728078958a8fc4790aeff00aa37ebf537
+  https://swap.cow.fi/static/fetch-npm-browserify-JlhnwwjK.js  sha256=96e52d61b0ed27f8e80f6097c892630623fe2affa06e7e2c765056319b61cc3d
+  https://swap.cow.fi/static/core-BpcArGU3.js  sha256=c31693400fec80b21967f436fda93320dd7031ab8a1fa6b0bb9d80b26243fb92
+  https://swap.cow.fi/static/index-Bl8kggss.js  sha256=40c780139b3a45fcf0f46b0eb4609964696b06add727a03301eb5df18416f583
+
+signals:
+  [strong] geo: geo-IP service — 1 file(s)
+      /static/index-EhqoReUy.js: {...t,isLoading:!0});try{const r=await(await fetch("https://api.country.is")).json();e({country:r.country||null,isLoading:!1,error:null})}catch(n){e({coun
+  [strong] geo: block text — 6 file(s)
+      /static/de-DE-DxmmRTCB.js: oVlnN":["Update fallback handler"],"Bs37MX":["This token is not available in your region"],"BsGIMG":["Please read more in this"],"BvFQHO":["Additional confirmation requ
+      /static/el-GR-DxmmRTCB.js: oVlnN":["Update fallback handler"],"Bs37MX":["This token is not available in your region"],"BsGIMG":["Please read more in this"],"BvFQHO":["Additional confirmation requ
+      /static/en-US-DxmmRTCB.js: oVlnN":["Update fallback handler"],"Bs37MX":["This token is not available in your region"],"BsGIMG":["Please read more in this"],"BvFQHO":["Additional confirmation requ
+  [weak] geo: geo-block words — 1 file(s)
+      /static/index-EhqoReUy.js: O"],jYt={name:"Ondo Tokenized Stocks List",tokenListUrl:DYt,restrictedCountries:[...R8]},BYt={name:"xStocks Token List",tokenListUrl:"https://raw.githubuser
+  [weak] screening: screening words — 11 file(s)
+      /static/index-EhqoReUy.js: nt of any country subject to international sanctions (e.g., OFAC, UN lists)."}),d.jsx("li",{children:"A resident of any jurisdiction where tradi
+      /static/de-DE-DxmmRTCB.js: nt of any country subject to international sanctions (e.g., OFAC, UN lists)."],"HRHisn":[["typeLabel"]," hooks are externally hosted code which
+      /static/el-GR-DxmmRTCB.js: nt of any country subject to international sanctions (e.g., OFAC, UN lists)."],"HRHisn":[["typeLabel"]," hooks are externally hosted code which
+  [weak] vpn: VPN words — 11 file(s)
+      /static/index-EhqoReUy.js: [0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,bpn=/^#([0-9a-fA-F]{6})$/,vpn=/^#([0-9a-fA-F]{8})$/;function wpn(e){let t;return typeof e=="number"?e>>>0===e
+      /static/de-DE-DxmmRTCB.js: ld not reliably determine your location (for example due to VPN or privacy settings). Before you can proceed with ",["displaySymbol"],", you ne
+      /static/el-GR-DxmmRTCB.js: ld not reliably determine your location (for example due to VPN or privacy settings). Before you can proceed with ",["displaySymbol"],", you ne

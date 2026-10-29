@@ -1,0 +1,10 @@
+check: euler/geo-middleware
+about: Server middleware answers HTTP 451 to /api/* for sanctioned countries (and fails closed when the country is unknown)
+source: https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/server/middleware/geo-gate.ts#L56
+checked_at: 2026-10-28T22:38:02Z
+fetched: https://raw.githubusercontent.com/euler-xyz/euler-lite/43ba73fadda21d943224742286c7c078562e3769/server/middleware/geo-gate.ts
+sha256: a8aecd4884d1c348ea1c00d52d851fb62ba80b75009d7fb86473f42bda62336c
+--------------------------------------------------------------------------------
+L39:       'blocked: country undetermined',
+L42:       statusCode: 451,
+L56:   if (country && SANCTIONED_COUNTRIES.includes(country)) {

@@ -1,0 +1,9 @@
+check: sky/vpn-terms-signature
+about: VPN (and US) users are detected and must sign the Terms before every transaction
+source: https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/ui/hooks/useTermsSignatureGate.tsx#L40
+checked_at: 2026-10-28T22:38:15Z
+fetched: https://raw.githubusercontent.com/jetstreamgg/tarmac/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/ui/hooks/useTermsSignatureGate.tsx
+sha256: 58954c8f296eb850deebeeb607eb7074838112d65f2add5be6579e6313435c3a
+--------------------------------------------------------------------------------
+L40:       connection to ensure compliance, including checks for VPN use or location within the US.
+L58:  *  2. Location — only US and VPN users owe the per-transaction signature.

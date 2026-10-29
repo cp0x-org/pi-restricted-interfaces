@@ -1,0 +1,15 @@
+check: kelp/geo-api-us
+about: Live: Kelp's geoData API answers isRestricted:true to a visitor from the US
+source: https://universe.kelpdao.xyz/rseth/geoData from US
+checked_at: 2026-10-11T21:24:31Z
+http_status: 200
+via: proxy
+vantage: {"requested": "US", "seen": ["US", "US", "US"], "org": "AS7922 Comcast Cable Communications, LLC", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
+--------------------------------------------------------------------------------
+{"requested": "US", "seen": ["US", "US", "US"], "org": "AS7922 Comcast Cable Communications, LLC", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
+
+request: GET https://universe.kelpdao.xyz/rseth/geoData
+status: 200
+final_url: https://universe.kelpdao.xyz/rseth/geoData
+header content-type: application/json
+body: {"isRestricted":true,"region":"Florida","countryCode":"US","country":"United States"}

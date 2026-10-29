@@ -1,0 +1,88 @@
+check: ondo/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://app.ondo.finance
+checked_at: 2026-10-11T21:10:23Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://app.ondo.finance (HTTP 200)
+scripts (59):
+  https://app.ondo.finance/_next/static/chunks/4bd1b696-3286b1a49c14c75f.js  sha256=b605beee94fb79da234440a1e35d891a0740616fb07075fbcbfbad9b2def2a82
+  https://app.ondo.finance/_next/static/chunks/1255-9158194afd425ee6.js  sha256=f73ee44fd65840639a8fc74bc78fa36931d7c80831d73a90634c5021fcb484f0
+  https://app.ondo.finance/_next/static/chunks/main-app-81ca2c48000d2025.js  sha256=30483734a3005852fa21f8ce933548cc2f230f43434c957db4e96d809537e4da
+  https://app.ondo.finance/_next/static/chunks/4566-1afaa543ee966acb.js  sha256=a1d2957a1da9d8f0e00237d88fcf375aa552208ccd0891c7ad3581a68144fed0
+  https://app.ondo.finance/_next/static/chunks/app/global-error-9ae294e5951a5857.js  sha256=415ec6fa03e4c61ef560c666717e1aaef5b902641be1d061f3bda86545e9f098
+  https://app.ondo.finance/_next/static/chunks/50f238d9-a7e740ec78d317dc.js  sha256=03ce1276aa5d6b6c9ba35a2214de6d20502b06f2592393a3eb31679bbad2d3c1
+  https://app.ondo.finance/_next/static/chunks/be197179-327e17c1a811955d.js  sha256=778ac4339e9df413f0e31fe6df9fd3f4375157d83fcca737b666c3714f70cb4c
+  https://app.ondo.finance/_next/static/chunks/990a3170-8e524cd4ffa152a7.js  sha256=2c78ee598ecf33b34bb6816fa1c0c69873932eb019ac7aff5160bdffa924085a
+  https://app.ondo.finance/_next/static/chunks/c74153a6-1e40f2eedf0307fa.js  sha256=5659b6261785c077a249ed8f499502b54ae3bf480287f7306274579d010987e2
+  https://app.ondo.finance/_next/static/chunks/a29c7a05-ba52dd2afb1dac1a.js  sha256=a9dd3ce8f3d52a8b2a6fd0ca1669d12b5c15be10079b502facf27acb87a0494e
+  https://app.ondo.finance/_next/static/chunks/e2c7f2b4-5e7edf56609bee09.js  sha256=52c24d6a221d89104e31e573fba0c90445b58c9f41a5459c321ed4aea1608a92
+  https://app.ondo.finance/_next/static/chunks/6f8f4f9c-7ce9367cfc63b1a3.js  sha256=2237583c0f6913da5d50c3009dd1486e195e7928c59f3af8d0947a4586d904dc
+  https://app.ondo.finance/_next/static/chunks/3434f773-1160078c0c905a00.js  sha256=3c466530136ec1ffac725e02697bc72cc23118ee77c36f587ad3344fe12647d8
+  https://app.ondo.finance/_next/static/chunks/d0a9d1a1-73104c972596fec9.js  sha256=d825b984fba58e92a8ac6b84d71bfa5cd07e11d214823e545cc56e9de291c29d
+  https://app.ondo.finance/_next/static/chunks/b3ffa0be-21233c69380f1f10.js  sha256=9694c34c419294f3f3b1f0e1eef93f0196b1e0aa01b716843751d38a085ab1a8
+  https://app.ondo.finance/_next/static/chunks/2c344fa8-53e57957f5d83c14.js  sha256=3a96c163d313bc20bc441ea8abd894b582c0f4d2a1037f9c29000cd5b4f90369
+  https://app.ondo.finance/_next/static/chunks/4eb5b067-ed22512cc36d4c44.js  sha256=b0642ff3a61093c60402cd9511f26239a6f9d3a9d9e6a041e7aca5bedc9bac84
+  https://app.ondo.finance/_next/static/chunks/efe120fc-3b68b403f8537fc8.js  sha256=e06488a21c9073332a9e052821efe845878ac8aaebf11aea98307b373cbe782a
+  https://app.ondo.finance/_next/static/chunks/865ecd89-e4c26e7c1b79fa98.js  sha256=68353253f9d22acd7fabd30a82acffa947964c5c9f2499b772fe17e43534263f
+  https://app.ondo.finance/_next/static/chunks/5f04a956-354cbaf91e9090c5.js  sha256=7bde80baabe61ca87c3a0401d76efced2c147464247ec036da4d015fe142ba5e
+  https://app.ondo.finance/_next/static/chunks/4cc4ab89-30c85c6286b8f88b.js  sha256=145bc31b6d914651ff14e3b6576abfe9b2dc11811e8346c154c2d5800e726c61
+  https://app.ondo.finance/_next/static/chunks/ac22cc25-61c57804ec6e7f0a.js  sha256=1de73bf2136ac65ff8078079f45f21ebb8bd7cb26eb374e80ae852cedc300941
+  https://app.ondo.finance/_next/static/chunks/54d4cd7b-8b8ca8cb5f51b2e4.js  sha256=852ac2b5f7958f1ef4d53337f28b7427f129299da0681b34ddb16bce65451a08
+  https://app.ondo.finance/_next/static/chunks/5150-e856f0b52c1632ca.js  sha256=d4847a0599aca757cb5cdc4009b405158bdce45c213454c1c1e66c103ac1857c
+  https://app.ondo.finance/_next/static/chunks/9736-b3bb07dcb3f4e029.js  sha256=aef20064e1db7731c0a2a80973a2bde49c85adc253ef4bfd12112c58f70bb89e
+  https://app.ondo.finance/_next/static/chunks/9246-b0918fff31add0e1.js  sha256=1aad16bcdcd14b10a760e130137ea035a6eb9e4e3e5fb94fb6a91ab4137bf77e
+  https://app.ondo.finance/_next/static/chunks/202-960d908fa3f7f194.js  sha256=d8c95046ce87ff56d5cdb9a1041da33c343cbaf22583f4b809ea0fe5b37326d1
+  https://app.ondo.finance/_next/static/chunks/7663-5ededa0e54668b13.js  sha256=e11a3b3ff3d417a9d64f2809dd378b0e53bfdce5ca28b9d5a903da8655cf31ba
+  https://app.ondo.finance/_next/static/chunks/8955-3d4517743710747f.js  sha256=22cbaa995274dff749555645926540fe345765ef4e8bda3e917ef71c8f3e806d
+  https://app.ondo.finance/_next/static/chunks/5912-205badf015d434c2.js  sha256=3e846eeb347a5b2fb3197608a198a8780362d9e60d4442d1070179fb54eb92e4
+  https://app.ondo.finance/_next/static/chunks/6081-bb96a4981a8658a2.js  sha256=ed9ca81eec91b54b55ab96a7a09035d0e3e23caed6818f9bd1531b0ca7a9543f
+  https://app.ondo.finance/_next/static/chunks/6883-5293bf3fa587e63b.js  sha256=089d5cf576c960bd7dd19288d6064e7badeccf9f8cbe59613d3b9610f3467896
+  https://app.ondo.finance/_next/static/chunks/4432-89d6263e233c76a9.js  sha256=4d8c14c1b666dcc1f435ae47a24f5f9e5c1760d4bb49e90f09cc7ad73800075a
+  https://app.ondo.finance/_next/static/chunks/5239-40da9680c1b5c97e.js  sha256=99e0b9a2588ced93463fccd7156e674da7a4f551b3aab80f8ade3c8f420b931b
+  https://app.ondo.finance/_next/static/chunks/849-266df9595c056c26.js  sha256=d55b130d2f300ca9ed893bb148980df62c890077e63bfd9b2e7ce82b11dec080
+  https://app.ondo.finance/_next/static/chunks/1676-ceddab7d54125f77.js  sha256=82457dd16d0f2f8870dacc71bcdcb60db375dd0285fd9622235b87664416e47f
+  https://app.ondo.finance/_next/static/chunks/8388-e4f4ecdd091d3d8c.js  sha256=9a12453db444e442583cc76e1c498eaf70d91121c9f207150ab190e480746438
+  https://app.ondo.finance/_next/static/chunks/4876-2db75ad74d98b0d6.js  sha256=3f4ff97ae4921a43ccd563d7857144d75532d48bdc43b335ba665f2d7e836edc
+  https://app.ondo.finance/_next/static/chunks/906-1c55ca4ef3c4af35.js  sha256=b9f3f29bc2d4a38a89d73e721525780d6829f1219cfc063c8765c95df0da5a0e
+  https://app.ondo.finance/_next/static/chunks/7784-0b5779a6a7320854.js  sha256=557db39af6bb73fa541796a69645d1d0cbb9d2adb5821cd38e134f4bf2dcf0e7
+  https://app.ondo.finance/_next/static/chunks/974-f03afad9f448fff3.js  sha256=be7e7b01a19690e927742b7ab100f27d8fc366b98b1457267b0b39d6eaeb828c
+  https://app.ondo.finance/_next/static/chunks/3525-055f91e234eb5336.js  sha256=690295d1b23587e23c96061f1220c0d242339e7eccee687a7fa991383d595e54
+  https://app.ondo.finance/_next/static/chunks/8498-77de0406cf148c43.js  sha256=4c2184b9f2e28c58ef3e5e3de2a9b29f7a3baa624bb431a23856a8fea15c528b
+  https://app.ondo.finance/_next/static/chunks/5162-f2aba71fa4ce1a56.js  sha256=1bab56ff43308f8a14a9fa0df58f6d09e7aad793cf103160ebd146d2b5d98cde
+  https://app.ondo.finance/_next/static/chunks/429-efde5994de319c82.js  sha256=1fc4b79cb93cac14938adf1e99a121b24b0aa66397fa3cc67c5bc329656cc75f
+  https://app.ondo.finance/_next/static/chunks/1560-724b87bf383fb568.js  sha256=a0f05a6ed6541cf76f12d4cd97992d37d5b8946fc9b3443012aca2771081bf42
+  https://app.ondo.finance/_next/static/chunks/5536-bd38c8b7cb63ae17.js  sha256=2c25d17b61102cd1aac052f88a5e1968c51fedf15523d1cd9a5b3e09ac8b5642
+  https://app.ondo.finance/_next/static/chunks/1379-b71282358521da1b.js  sha256=dbe2c3fbc4a38fecc3247193f967f681baadc02f1a19fef22a91805c74d63c44
+  https://app.ondo.finance/_next/static/chunks/1634-c280c9a97fdc3a31.js  sha256=01632cd9ce4d14ce1efaef5cd081cf1157087c8f1950e3656830d74c3321afd5
+  https://app.ondo.finance/_next/static/chunks/app/layout-3c4ade09f2e09b1a.js  sha256=798efb6fd8979067c24b3b8fa2f8fdb71c70bddfd625113b874344d14531ffdb
+  https://app.ondo.finance/_next/static/chunks/polyfills-42372ed130431b0a.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
+  https://app.ondo.finance/_next/static/chunks/webpack-ab5c1ce6b1c145f6.js  sha256=7587c5c56ed415e57c04b45c6fe55ad9504427a8077efd7eb34e734a2fea9de1
+  https://app.ondo.finance/_next/static/chunks/5183eff0-bc0172d915c85045.js  sha256=f145332ac127a5aadcbecdb126dba71ec53b60f3778a624f17e7e58868b3b266
+  https://app.ondo.finance/_next/static/chunks/184-c7fabff152030ed7.js  sha256=a8b52a2df8aea93a23d46abdbb34d9cf6fe4bd78b38649b77be4e707169a1110
+  https://app.ondo.finance/_next/static/chunks/7264-db28e3c433d9cf32.js  sha256=4d30cc25b1a96544f16be4925bb3a5854353c65cb55e32120bbc4c72477641b5
+  https://app.ondo.finance/_next/static/chunks/1886-586f76ece7dc21ef.js  sha256=084c060977c885f24d3d20ceaea94b0e3a7b985e08294d715d6b37a0449ccacf
+  https://app.ondo.finance/_next/static/chunks/846-dece82b4551064f0.js  sha256=00046f6c2a1cae1a50cb8fcda2fc4c6862ee1cfcb6135929202ef0b86d04cd2c
+  https://app.ondo.finance/_next/static/chunks/81-7ea4b3b1a1ee99c7.js  sha256=e280660b4aed525d81ca2e97158a2032bde92226569bd23ad721e43e31a4a9f0
+  https://app.ondo.finance/_next/static/chunks/2398-9addb0145d1edbc3.js  sha256=f845495e6481316b4390ef505e6acb489f693d5985339c4776237e34ae956ac2
+
+signals:
+  [strong] geo: geo-IP service — 1 file(s)
+      /_next/static/chunks/849-266df9595c056c26.js: d 0,function*(){if(r)return r;try{let e=yield fetch("http://ip-api.com/json");if(!e.ok)return;let t=yield e.json();if("success"!==t.status)return;let{
+  [strong] geo: block text — 1 file(s)
+      / (HTML and inline scripts): to Home\"},\"geofence\":{\"notice\":{\"accessRestricted\":\"Access Restricted\",\"notAvailable\":\"The content you are trying to access is not accessible in
+  [weak] geo: geo-block words — 5 file(s)
+      / (HTML and inline scripts): onfirm that you are not a U.S. person, are not located in a restricted jurisdiction, and that you agree to the\",\"attestationTosLink\":\"Terms of Service\",\"atte
+      /_next/static/chunks/5162-f2aba71fa4ce1a56.js: m_invite_clicked",e.LANGUAGE_SWITCHED="language_switched",e.GEOBLOCKED="geoblocked",e}({});let i=function(e){let t=arguments.length>1&&void 0!==argu
+      /_next/static/chunks/1560-724b87bf383fb568.js: return(0,s.useMemo)(()=>e?(e=>{var t,r;let{pathname:n,isUSDYGeofenced:l,assetsData:a,geofencePending:i,isAssetLoading:s}=e,u=n.startsWith("/assets/
+  [weak] screening: risk-lookup link — 1 file(s)
+      /_next/static/chunks/849-266df9595c056c26.js: ",e.Shopify="shopify",e.Zksync="zksync",e.Kraken="kraken",e.Blockaid="blockaid",e.Passkey="passkey",e.Okta="okta",e.Sendgrid="sendgrid",e.Resend="re
+  [weak] screening: screening words — 1 file(s)
+      /_next/static/chunks/849-266df9595c056c26.js: es:(0,i.t2)(t,"blockedAddresses")?t.blockedAddresses:void 0,sanctionCheckId:(0,i.t2)(t,"sanctionCheckId")?t.sanctionCheckId:void 0}}!function(e){e.Allow=
+  [weak] vpn: VPN words — 1 file(s)
+      /_next/static/chunks/849-266df9595c056c26.js: in":t,"in-berlin":t,"in-brb":t,"in-butter":t,"in-dsl":t,"in-vpn":t,iservschule:t,"mein-iserv":t,schulplattform:t,schulserver:t,"test-iserv":t,k
+  [weak] kyc: KYC words — 3 file(s)
+      / (HTML and inline scripts): ",\"tradeNow\":\"Trade Now\",\"eligibility\":\"Available to KYC-verified Ondo Stocks users. Your existing verification applies. No additional K
+      /_next/static/chunks/849-266df9595c056c26.js: :(0,n.t2)(t,"customFields")?t.customFields.map(u.QE):void 0,kyc:t.kyc.map(u.QE),design:(0,c.Ff)(t.design),general:(0,d.Vb)(t.general),privacy:(
+      /_next/static/chunks/1379-b71282358521da1b.js: laws of any other jurisdiction, and are available solely to accredited investors (as defined in Rule 501 of Regulation D under the Act) and qualified purchaser

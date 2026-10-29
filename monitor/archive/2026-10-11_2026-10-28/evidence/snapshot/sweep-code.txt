@@ -1,0 +1,17 @@
+check: snapshot/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/snapshot-labs/sx-monorepo/tree/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef
+checked_at: 2026-10-11T21:03:57Z
+fetched: https://codeload.github.com/snapshot-labs/sx-monorepo/tar.gz/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef
+sha256: 7861337dd1e6fcdd38681d6e532dcc0a25bf3ae1940975b62a9d8c19a7640e7f
+--------------------------------------------------------------------------------
+repository: https://github.com/snapshot-labs/sx-monorepo/tree/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef
+files scanned: 838
+
+signals:
+  [weak] geo: geo-block words — 1 file(s)
+      https://github.com/snapshot-labs/sx-monorepo/blob/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef/apps/ui/src/views/Terms.vue#L13  mediately cease all use of Snapshot. ## 1. Eligibility and prohibited jurisdictions By accessing or using Snapshot, you represent and warrant that you: a) have
+  [weak] screening: risk-lookup link — 1 file(s)
+      https://github.com/snapshot-labs/sx-monorepo/blob/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef/apps/sequencer/src/helpers/monitoring/blockaid.ts#L3  import { fetchWithKeepAlive } from '../utils'; const BLOCKAID_API_URL = 'https://api.blockaid.io/dapp/v1/scan'; const BLOCKAID_API_KEY = proc
+  [weak] kyc: KYC words — 1 file(s)
+      https://github.com/snapshot-labs/sx-monorepo/blob/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef/apps/ui/src/views/Policy.vue#L51  ou to comply with such requirements (“Know Your Customer”, “KYC”) or as otherwise required by law and legal authorities. Furthermore, we may pr

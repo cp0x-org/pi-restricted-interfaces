@@ -1,0 +1,9 @@
+check: notional/screening-oracle
+about: The connected wallet is checked with the Chainalysis Sanctions Oracle on-chain (isSanctioned)
+source: https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/packages/notionable/src/account/communities.ts#L114
+checked_at: 2026-10-11T21:04:43Z
+fetched: https://raw.githubusercontent.com/notional-finance/notional-monorepo/cff15de4b098d101b2a023732efd242496c42888/packages/notionable/src/account/communities.ts
+sha256: ecbaaa9c21208f768c6d0723660af10e0603a8a4822954686d5cffc09c2320d8
+--------------------------------------------------------------------------------
+L114:     '0x40c57923924b5c5c5455c48d93317139addac8fb',
+L115:     ['function isSanctioned(address) view returns (bool)'],

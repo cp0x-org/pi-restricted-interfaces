@@ -1,0 +1,9 @@
+check: uniswap/screening-modal
+about: A blocked EVM or Solana wallet gets the BlockedAccount modal
+source: https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/web/src/hooks/useAccountRiskCheck.ts#L9
+checked_at: 2026-10-28T22:38:19Z
+fetched: https://raw.githubusercontent.com/Uniswap/interface/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/web/src/hooks/useAccountRiskCheck.ts
+sha256: 8ea75ff9d5cb08abaaab0ba6bb517084d4905d0cc3c85530234f340384533e4f
+--------------------------------------------------------------------------------
+L9:   const { isBlocked: isEvmBlocked, isBlockedLoading: isEvmBlockedLoading } = useIsBlockedAddress(
+L26:       dispatch(setOpenModal({ name: ModalName.BlockedAccount, initialState: { blockedAddress: addresses.evmAddress } }))

@@ -1,0 +1,11 @@
+check: quickswap/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/QuickSwap/interface-v2/tree/8799993562503860a266feb3d8bf376acc80596a
+checked_at: 2026-10-11T21:03:47Z
+fetched: https://codeload.github.com/QuickSwap/interface-v2/tar.gz/8799993562503860a266feb3d8bf376acc80596a
+sha256: 0b4b9b3a1b3ca14d46e98c943238e491c43f0d41df95fe74c8c134a0ca2c35aa
+--------------------------------------------------------------------------------
+repository: https://github.com/QuickSwap/interface-v2/tree/8799993562503860a266feb3d8bf376acc80596a
+files scanned: 863
+
+signals:

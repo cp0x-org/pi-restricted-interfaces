@@ -1,0 +1,58 @@
+check: 1inch/screening-trm
+about: 1inch help center: wallet addresses are screened through TRM Labs
+source: https://help.1inch.com/en/articles/6588963-1inch-address-screening
+checked_at: 2026-10-28T22:56:32Z
+fetched: https://help.1inch.com/en/articles/6588963-1inch-address-screening
+sha256: 7d5c9363c68544d588d129140fe5c159740abcc26eb8c1b09c7c3e0c63836894
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+1inch address screening | 1inch Help Center Skip to main content
+1inch.com Blog Contact support English 日本語 한국어 Pусский 简体中文 Español English
+1inch.com Blog Contact support English 日本語 한국어 Pусский 简体中文 Español English
+Search for articles...
+All Collections
+FAQ
+General
+1inch address screening
+1inch address screening
+Why and how 1inch is screening your wallet addresses
+Written by Bruno
+Updated over a week ago
+Table of contents
+1inch monitors and screens wallet addresses for illicit activities through TRM Labs .
+Why does 1inch screen addresses?
+Mainly for two reasons:
+1inch dApp is a safe and compliant space aiming at building and developing a secure and stable DeFi community;
+1inch strives to comply with all applicable sanctions and embargo lists as well as other AML and Terrorist Financing Prevention regulations and efforts of the international community.
+1inch receives the compliance data provided by TRM Labs . TRM labs uses on-chain data to detect sanctions and AML risks, including whether an addresses are owned or associated with clearly illegal behavior like: sanctions, terrorism financing, hacked or stolen funds, ransomware, human trafficking, and child sexual abuse material (CSAM).
+When 1inch receives a “risk” warning regarding your wallet address - you are automatically blocked from using the 1inch interface.
+Please be aware that 1inch contributors are not responsible for and have no control over the determinations and data provided by TRM Labs, they simply comply with them by default. 1inch does not automatically report any of the received data to the authorities, but might do so if required.
+If you believe your address has been blocked from the user interface by mistake, contact us at [email protected] .
+Other than a wallet address, we do not transfer any data to TRM Labs. We do not collect any additional data with regard to the monitoring.
+​
+Please check out our Privacy Policy
+Related Articles
+What is 1inch?
+How to connect, disconnect, and switch accounts with Metamask on 1inch
+How to connect Trust wallet to 1inch
+How to use 1inch on Cronos
+How to use 1inch on Arc
+Did this answer your question? Disappointed Reaction 😞 Neutral Reaction 😐 Smiley Reaction 😃
+Table of contents
+Products
+Swap
+1inch Wallet
+Portfolio
+Developer Portal
+Need help?
+Support
+Documentation
+Suggest a feature
+Company
+About
+Security
+Blog
+Terms of Use
+Privacy Policy
+1inch is the DeFi ecosystem building financial freedom for everyone.

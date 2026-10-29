@@ -1,0 +1,26 @@
+{
+  "id": "debridge",
+  "name": "deBridge",
+  "targets": {
+    "app": "https://app.debridge.finance",
+    "repo": null,
+    "terms": "https://docs.debridge.foundation/legal/terms-of-service",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-terms",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "tos_only",
+      "about": "The Terms list restricted countries including the United States; technical enforcement not verified",
+      "source": {
+        "url": "https://docs.debridge.foundation/legal/terms-of-service",
+        "kind": "terms"
+      },
+      "expect": [
+        "\\(d\\) any of the following countries: The United States, Afghanistan, China"
+      ]
+    }
+  ]
+}

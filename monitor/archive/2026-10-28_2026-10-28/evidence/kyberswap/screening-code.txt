@@ -1,0 +1,9 @@
+check: kyberswap/screening-code
+about: Every transaction first asks the Blackjack service; a blacklisted wallet gets BlacklistedWalletError
+source: https://github.com/KyberNetwork/kyberswap-interface/blob/12c16463eb52d1f13f0961daf9445f907adaeb0e/apps/kyberswap-interface/src/utils/sendTransaction.ts#L52
+checked_at: 2026-10-28T22:38:08Z
+fetched: https://raw.githubusercontent.com/KyberNetwork/kyberswap-interface/12c16463eb52d1f13f0961daf9445f907adaeb0e/apps/kyberswap-interface/src/utils/sendTransaction.ts
+sha256: a196ceb48e19644ca1daea8036f2cffd0a75e8b0d7d01d5c0e3c68bdcba4c3e5
+--------------------------------------------------------------------------------
+L52: export async function ensureNotBlacklisted(account: string) {
+L62:     if (res?.data?.blacklisted) throw new BlacklistedWalletError()

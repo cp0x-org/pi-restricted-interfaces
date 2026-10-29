@@ -1,0 +1,120 @@
+{
+  "id": "euler",
+  "name": "Euler",
+  "targets": {
+    "app": "https://app.euler.finance",
+    "repo": {
+      "repo": "euler-xyz/euler-lite",
+      "ref": "43ba73fadda21d943224742286c7c078562e3769"
+    },
+    "terms": "https://www.euler.finance/terms",
+    "endpoints": [
+      "https://app.euler.finance/api/ping"
+    ]
+  },
+  "checks": [
+    {
+      "id": "geo-middleware",
+      "type": "code",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Server middleware answers HTTP 451 to /api/* for sanctioned countries (and fails closed when the country is unknown)",
+      "source": {
+        "repo": "euler-xyz/euler-lite",
+        "ref": "43ba73fadda21d943224742286c7c078562e3769",
+        "path": "server/middleware/geo-gate.ts"
+      },
+      "expect": [
+        "SANCTIONED_COUNTRIES\\.includes\\(country\\)",
+        "statusCode: 451",
+        "blocked: country undetermined"
+      ]
+    },
+    {
+      "id": "geo-countries",
+      "type": "code",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "SANCTIONED_COUNTRIES used by that middleware (Ukraine is commented out)",
+      "source": {
+        "repo": "euler-xyz/euler-lite",
+        "ref": "43ba73fadda21d943224742286c7c078562e3769",
+        "path": "entities/country-constants.ts"
+      },
+      "expect": [
+        "export const SANCTIONED_COUNTRIES"
+      ],
+      "section": {
+        "start": "export const SANCTIONED_COUNTRIES",
+        "end": "^\\]"
+      },
+      "exclude": [
+        "//.*"
+      ],
+      "countries": "codes"
+    },
+    {
+      "id": "feature-vault-geo",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Per-vault and per-asset hard and soft blocks by country (repo documentation)",
+      "source": {
+        "repo": "euler-xyz/euler-lite",
+        "ref": "43ba73fadda21d943224742286c7c078562e3769",
+        "path": "docs/geo-blocking.md"
+      },
+      "expect": [
+        "Blocked \\(Hard Block\\)",
+        "Restricted \\(Soft Block\\)"
+      ]
+    },
+    {
+      "id": "screening-trm",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Wallet screening through the Euler data API (TRM Labs), fail-closed",
+      "source": {
+        "repo": "euler-xyz/euler-lite",
+        "ref": "43ba73fadda21d943224742286c7c078562e3769",
+        "path": "server/utils/screening.ts"
+      },
+      "expect": [
+        "/v3/compliance/address-screening",
+        "TRM",
+        "failing closed"
+      ]
+    },
+    {
+      "id": "vpn-detect",
+      "type": "code",
+      "claim": "vpn",
+      "status": "detect",
+      "about": "VPN/proxy use reported by the edge is detected and logged (not blocked)",
+      "source": {
+        "repo": "euler-xyz/euler-lite",
+        "ref": "43ba73fadda21d943224742286c7c078562e3769",
+        "path": "server/middleware/geo-gate.ts"
+      },
+      "expect": [
+        "if \\(edge\\.vpnIsUsed === true\\)",
+        "'VPN/proxy detected'"
+      ]
+    },
+    {
+      "id": "prod-country-gate",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production JS: the country from the x-country-code header and region errors for operations",
+      "source": {
+        "url": "https://app.euler.finance"
+      },
+      "expect": [
+        "headers\\.get\\(`x-country-code`\\)",
+        "This operation is not available in your region"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "ondo",
+  "name": "Ondo",
+  "targets": {
+    "app": "https://app.ondo.finance",
+    "repo": null,
+    "terms": "https://docs.ondo.finance/general-access-products/usdy/eligibility",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "feature-usdy-countries",
+      "type": "page",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "USDY eligibility: persons in the listed jurisdictions (and US persons) may not subscribe, acquire or redeem",
+      "source": {
+        "url": "https://docs.ondo.finance/general-access-products/usdy/eligibility",
+        "kind": "docs"
+      },
+      "expect": [
+        "are prohibited from subscribing for, acquiring or redeeming USDY tokens"
+      ],
+      "section": {
+        "start": "any jurisdiction listed below",
+        "end": "\\* Persons who place buy orders"
+      },
+      "exclude": [
+        "\\(Ukraine\\)"
+      ],
+      "countries": "names"
+    },
+    {
+      "id": "kyc-onboarding",
+      "type": "page",
+      "claim": "kyc",
+      "status": "yes",
+      "about": "Ondo onboarding: KYC/KYB via Persona; linked wallets are reviewed and approved by Ondo",
+      "source": {
+        "url": "https://docs.ondo.finance/ondo-stocks/onboarding-and-kyc",
+        "kind": "docs"
+      },
+      "expect": [
+        "conducts KYC/KYB verification via Persona",
+        "linked wallet address\\(es\\) are subject to review and approval"
+      ]
+    }
+  ]
+}

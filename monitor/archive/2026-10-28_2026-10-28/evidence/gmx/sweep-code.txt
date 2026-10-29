@@ -1,0 +1,18 @@
+check: gmx/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/gmx-io/gmx-interface/tree/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c
+checked_at: 2026-10-28T22:36:00Z
+fetched: https://codeload.github.com/gmx-io/gmx-interface/tar.gz/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c
+sha256: acf4c536472547a11c96c50c3402aef7b44054cebf3a3816ed1a324665b860f3
+--------------------------------------------------------------------------------
+repository: https://github.com/gmx-io/gmx-interface/tree/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c
+files scanned: 2691
+
+signals:
+  [weak] screening: screening words — 1 file(s)
+      https://github.com/gmx-io/gmx-interface/blob/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c/landing/src/pages/TermsAndConditions/TermsAndConditions.tsx#L75  mental authority; or otherwise, you are not a member of any sanctions list or equivalent maintained by the United States government,
+  [weak] vpn: VPN words — 1 file(s)
+      https://github.com/gmx-io/gmx-interface/blob/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c/landing/src/pages/TermsAndConditions/TermsAndConditions.tsx#L89  1.1.7. You do not, and will not, use VPN software or any other privacy or anonymization tools or t
+  [weak] kyc: KYC words — 2 file(s)
+      https://github.com/gmx-io/gmx-interface/blob/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c/landing/src/pages/Home/FaqSection/FaqSection.tsx#L30  started on GMX?`}> <Trans> <p>No KYC, no lengthy onboarding, and no deposit required. All you need is a self-custody
+      https://github.com/gmx-io/gmx-interface/blob/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c/landing/src/pages/TraderAffiliateProgram/FaqSection.tsx#L44  </FaqItem> <FaqItem title={t`Do I need to pass KYC?`} iconClassName="size-12 text-slate-500"> <Trans> <p

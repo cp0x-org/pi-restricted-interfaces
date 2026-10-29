@@ -1,0 +1,9 @@
+check: kyberswap/feature-token-geo
+about: Per-country token restriction; the country is taken from the browser (described in code as a UX deterrent)
+source: https://github.com/KyberNetwork/kyberswap-interface/blob/12c16463eb52d1f13f0961daf9445f907adaeb0e/apps/kyberswap-interface/src/hooks/useRestrictedTokens.ts#L27
+checked_at: 2026-10-28T22:38:08Z
+fetched: https://raw.githubusercontent.com/KyberNetwork/kyberswap-interface/12c16463eb52d1f13f0961daf9445f907adaeb0e/apps/kyberswap-interface/src/hooks/useRestrictedTokens.ts
+sha256: 6000c0769399515e0433f6484410839feab1c7be70ab87d44e0e8a8dc0e589d9
+--------------------------------------------------------------------------------
+L27:   const countryCode = useMemo(() => getUserCountryCode(), [])
+L28:   const { data } = useGetRestrictedTokensQuery({ countryCode: countryCode ?? '' }, { skip: !countryCode })

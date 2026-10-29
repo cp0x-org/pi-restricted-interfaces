@@ -1,0 +1,20 @@
+check: sushiswap/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/sushi-labs/sushiswap/tree/9520c07dabb425a404544cdaf91c8608dc4b197b
+checked_at: 2026-10-11T21:04:00Z
+fetched: https://codeload.github.com/sushi-labs/sushiswap/tar.gz/9520c07dabb425a404544cdaf91c8608dc4b197b
+sha256: 04122fc3c58e1379bd79868942665243d9507d35b50f388d85463f63b6592a3e
+--------------------------------------------------------------------------------
+repository: https://github.com/sushi-labs/sushiswap/tree/9520c07dabb425a404544cdaf91c8608dc4b197b
+files scanned: 2824
+
+signals:
+  [strong] geo: geo endpoint — 1 file(s)
+      https://github.com/sushi-labs/sushiswap/blob/9520c07dabb425a404544cdaf91c8608dc4b197b/apps/web/src/lib/hooks/use-country-code.ts#L20  async ({ signal }) => { const response = await fetch('/api/geolocation', { cache: 'no-store', signal, }) if (!response.ok)
+  [weak] geo: geo-block words — 13 file(s)
+      https://github.com/sushi-labs/sushiswap/blob/9520c07dabb425a404544cdaf91c8608dc4b197b/apps/web/src/app/(networks)/(evm)/perps/[...viewAll]/view-all-page.tsx#L7  sushi' import type { EvmAddress } from 'sushi/evm' import { GeoBlockedMessage, PerpsCard } from '../_ui/_common' import { DepositsWithdrawalsTable }
+      https://github.com/sushi-labs/sushiswap/blob/9520c07dabb425a404544cdaf91c8608dc4b197b/apps/web/src/app/(networks)/(evm)/perps/_ui/_common/geo-blocked-message.tsx#L6  ' import { useAccount } from 'src/lib/wallet' export const GeoBlockedMessage = () => { const address = useAccount('evm') const { data, isLoadin
+      https://github.com/sushi-labs/sushiswap/blob/9520c07dabb425a404544cdaf91c8608dc4b197b/apps/web/src/app/(networks)/(evm)/perps/_ui/_common/index.ts#L17  ut' export * from './value-sensitive-text' export * from './geo-blocked-message' export * from './asset-selector-and-stats' export * from './favorite
+  [strong] screening: screening vendor — 2 file(s)
+      https://github.com/sushi-labs/sushiswap/blob/9520c07dabb425a404544cdaf91c8608dc4b197b/apps/web/content-security-policy.mjs#L67  re.snapshot.org', 'https://api.gopluslabs.io', 'https://api.trmlabs.com', 'https://api.enso.finance', 'https://api.merkl.xyz', 'https://api.j
+      https://github.com/sushi-labs/sushiswap/blob/9520c07dabb425a404544cdaf91c8608dc4b197b/apps/web/src/lib/wagmi/components/sanctioned-address-dialog.tsx#L28  nc () => { const resp = await fetch( 'https://api.trmlabs.com/public/v1/sanctions/screening', { method: 'POST',

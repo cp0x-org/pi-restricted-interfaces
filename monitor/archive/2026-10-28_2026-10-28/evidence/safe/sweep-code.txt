@@ -1,0 +1,35 @@
+check: safe/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/safe-global/safe-wallet-monorepo/tree/967145775447eb0375f018ab65d65a15af889412
+checked_at: 2026-10-28T22:36:40Z
+fetched: https://codeload.github.com/safe-global/safe-wallet-monorepo/tar.gz/967145775447eb0375f018ab65d65a15af889412
+sha256: 667c858bfccf71b272e6f76c2a179535470828ba13da996fcdae9b154dfff721
+--------------------------------------------------------------------------------
+repository: https://github.com/safe-global/safe-wallet-monorepo/tree/967145775447eb0375f018ab65d65a15af889412
+files scanned: 4279
+
+signals:
+  [strong] geo: block text — 1 file(s)
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/pages/403.tsx#L12  ize: '2rem', fontWeight: 700, marginBottom: '1rem' }}>403 – Access Restricted</h1> <p> Safe{'{Wallet}'} is not available in your region. See ou
+  [weak] geo: HTTP 451 text — 2 file(s)
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/hooks/useSafeUnavailableMessage.ts#L7  seSafeAddressFromUrl' /** * Copy for a blocked Safe (`451 Unavailable for legal reasons`), or `undefined` for any other * outcome. Reads the same cache entry as `useL
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/utils/rtkQuery.ts#L35  == 'string' ? message : undefined } /** * Copy for a `451 Unavailable for legal reasons` response, or `undefined` for any other failure. * Callers use it to tell a bl
+  [weak] geo: geo-block words — 9 file(s)
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/components/common/GeoblockingProvider/index.tsx#L5  e ReactElement, type ReactNode } from 'react' export const GeoblockingContext = createContext<boolean | null>(null) const checkBlocked = async ()
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/features/actions-tray/components/ActionsTray/ActionsTray.tsx#L11  CheckWallet from '@/components/common/CheckWallet' import { GeoblockingContext } from '@/components/common/GeoblockingProvider' import { AppRoutes }
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/features/earn/hooks/useIsEarnFeatureEnabled.ts#L4  s/utils/chains' import { useContext } from 'react' import { GeoblockingContext } from '@/components/common/GeoblockingProvider' export function use
+  [strong] screening: sanctions oracle — 2 file(s)
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/components/wrappers/SanctionWrapper/index.tsx#L28  tWallet() const { data: isSafeAddressBlocked = false } = isSanctioned(safeAddress || skipToken) const { data: isWalletAddressBlocked = false } = isS
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/config/constants.ts#L145  BRAND_LOGO || '' export const CHAINALYSIS_OFAC_CONTRACT = '0x40c57923924b5c5c5455c48d93317139addac8fb' export const SAFE_GLOBAL_DOMAIN = 'https://safe.global' export const ECOSYSTE
+  [strong] screening: screening vendor — 4 file(s)
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/features/hypernative/config/oauth.ts#L18  e to authorize the application * Production: https://api.hypernative.xyz/oauth/authorize */ authUrl: `${HYPERNATIVE_API_BASE_URL}/oauth/authorize`,
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/packages/utils/src/config/constants.ts#L13  .env.EXPO_PUBLIC_HYPERNATIVE_API_BASE_URL || 'https://api.hypernative.xyz' // Access keys export const INFURA_TOKEN = process.env.NEXT_PUBLIC_INFURA_TOKE
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/packages/views/src/features/hypernative/components/HnActivatedSettingsBanner/config.ts#L8  ative', // Dummy URL for now dashboardUrl: 'https://app.hypernative.xyz/guardian', } as const
+  [weak] screening: risk-lookup link — 29 file(s)
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/mobile/src/features/ConfirmTx/components/TransactionChecks/TransactionChecks.tsx#L25  const security = useTransactionSecurity(txDetails) const blockaidEnabled = useHasFeature(FEATURES.RISK_MITIGATION) ?? false const tenderlyEnabl
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/mobile/src/features/ConfirmTx/components/TransactionChecks/components/TransactionChecksBottomContent.tsx#L22  es detected!" orientation="left" /> } // Show error if blockaid check failed if (security.error) { return ( <Alert type="wa
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/mobile/src/features/ConfirmTx/components/TransactionChecks/hooks/useTransactionSecurity.ts#L3  ctiveSafe } from '@/src/store/hooks/activeSafe' import { useBlockaid } from '@/src/features/TransactionChecks/blockaid/useBlockaid' import { createE
+  [weak] screening: screening words — 8 file(s)
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/components/common/BlockedAddress/index.tsx#L29  ayAddress} content={`The above address is part of the OFAC SDN list and the ${featureTitle} is unavailable for sanctioned addresses.`}
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/components/common/GeoblockingProvider/index.tsx#L13  int returns a 403 if the requesting user is from one of the OFAC sanctioned countries */ const GeoblockingProvider = ({ children }: { children:
+      https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/components/wrappers/SanctionWrapper/index.tsx#L7  allet' import { useGetIsSanctionedQuery } from '@/store/api/ofac' import { getKeyWithTrueValue } from '@/utils/helpers' import madProps from '@/

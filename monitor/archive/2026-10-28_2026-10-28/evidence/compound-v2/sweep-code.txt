@@ -1,0 +1,11 @@
+check: compound-v2/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/compound-finance/palisade/tree/02d5b227029987bf840d095f05885f5cea906fb6
+checked_at: 2026-10-28T22:35:26Z
+fetched: https://codeload.github.com/compound-finance/palisade/tar.gz/02d5b227029987bf840d095f05885f5cea906fb6
+sha256: fe7dd211527b640888048debadc21124a9f819d779e83213b39d20f98ee3aed9
+--------------------------------------------------------------------------------
+repository: https://github.com/compound-finance/palisade/tree/02d5b227029987bf840d095f05885f5cea906fb6
+files scanned: 44
+
+signals:

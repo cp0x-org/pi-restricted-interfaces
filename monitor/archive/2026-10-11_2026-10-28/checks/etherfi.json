@@ -1,0 +1,26 @@
+{
+  "id": "etherfi",
+  "name": "ether.fi",
+  "targets": {
+    "app": "https://www.ether.fi/app",
+    "repo": null,
+    "terms": "https://www.ether.fi/legal/terms-of-use",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-terms",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "tos_only",
+      "about": "The Terms exclude residents of Canada and of Restricted Jurisdictions (www.ether.fi blocks scripts with a Vercel challenge; the same Terms are read from the ether.fi GitBook)",
+      "source": {
+        "url": "https://etherfi.gitbook.io/etherfi/legal/ether.fi-legal/terms-of-use",
+        "kind": "terms"
+      },
+      "expect": [
+        "not available to residents or citizens of Canada or any Restricted Jurisdiction"
+      ]
+    }
+  ]
+}

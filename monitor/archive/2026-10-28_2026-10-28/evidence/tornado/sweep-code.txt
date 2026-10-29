@@ -1,0 +1,25 @@
+check: tornado/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/tornadocash/tornado-classic-ui/tree/a83fae0772c8da084c0e76b3a756b456f5b9f5bb
+checked_at: 2026-10-28T22:37:30Z
+fetched: https://codeload.github.com/tornadocash/tornado-classic-ui/tar.gz/a83fae0772c8da084c0e76b3a756b456f5b9f5bb
+sha256: 7cda0f9bbaa221b42ead01532b1369c397d4301cfe26f2ff1e7e235f5d84636c
+--------------------------------------------------------------------------------
+repository: https://github.com/tornadocash/tornado-classic-ui/tree/a83fae0772c8da084c0e76b3a756b456f5b9f5bb
+files scanned: 235
+
+signals:
+  [weak] geo: HTTP 451 text — 2 file(s)
+      https://github.com/tornadocash/tornado-classic-ui/blob/a83fae0772c8da084c0e76b3a756b456f5b9f5bb/pages/451.vue#L3  <h1 class="title is-size-1 is-size-2-mobile is-spaced">Unavailable For Legal Reasons</h1> </div> </template> <script> export default { layout: 'geofence' } </s
+      https://github.com/tornadocash/tornado-classic-ui/blob/a83fae0772c8da084c0e76b3a756b456f5b9f5bb/static/451.html#L5  lang="en"> <head> <meta charset="utf-8" /> <title>Unavailable For Legal Reasons</title> </head> <body> <h1>Unavailable For Legal Reasons</h1> </body>
+  [weak] geo: geo-block words — 2 file(s)
+      https://github.com/tornadocash/tornado-classic-ui/blob/a83fae0772c8da084c0e76b3a756b456f5b9f5bb/layouts/geofence.vue#L2  <template> <div class="wrapper geofence"> <nav class="navbar header" role="navigation" aria-label="main navigation
+      https://github.com/tornadocash/tornado-classic-ui/blob/a83fae0772c8da084c0e76b3a756b456f5b9f5bb/pages/451.vue#L9  </div> </template> <script> export default { layout: 'geofence' } </script>
+  [strong] screening: sanctions oracle — 1 file(s)
+      https://github.com/tornadocash/tornado-classic-ui/blob/a83fae0772c8da084c0e76b3a756b456f5b9f5bb/store/metamask.js#L333  networkChangeHandler', err.message) } }, async checkIsSanctioned({ rootGetters }, { address }) { const ethProvider = rootGetters['relayer/eth
+  [weak] screening: screening words — 1 file(s)
+      https://github.com/tornadocash/tornado-classic-ui/blob/a83fae0772c8da084c0e76b3a756b456f5b9f5bb/store/metamask.js#L10  import { walletConnectConnector } from '@/services' import SanctionsListAbi from '@/abis/SanctionsList.abi' const { toChecksumAddress } = require('web3
+  [weak] vpn: VPN words — 7 file(s)
+      https://github.com/tornadocash/tornado-classic-ui/blob/a83fae0772c8da084c0e76b3a756b456f5b9f5bb/langs/en.json#L436  g keys, please check your internet connection or try to use VPN.", "mobileWallet": { "reconnect": { "message": "Your current connec
+      https://github.com/tornadocash/tornado-classic-ui/blob/a83fae0772c8da084c0e76b3a756b456f5b9f5bb/langs/es.json#L418  de prueba, verifique la conexión a Internet o intente usar VPN.", "mobileWallet": { "loading": { "alert": "Si no ha recibido una n
+      https://github.com/tornadocash/tornado-classic-ui/blob/a83fae0772c8da084c0e76b3a756b456f5b9f5bb/langs/fr.json#L418  illez vérifier la connexion Internet ou essayer utiliser un VPN.", "mobileWallet": { "loading": { "alert": "Si vous n'avez pas reçu

@@ -1,0 +1,14 @@
+check: superstate/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://superstate.com
+checked_at: 2026-10-11T21:13:26Z
+http_status: 200
+via: proxy US
+--------------------------------------------------------------------------------
+page: https://superstate.com (HTTP 200)
+scripts (0):
+
+
+signals:
+  [weak] kyc: KYC words — 1 file(s)
+      / (HTML and inline scripts): elaware Statutory Trust"},{name:"Eligible investors",value:"Qualified Purchasers in supported jurisdictions"},{name:"Minimum investment",value:"$100,000"},{nam

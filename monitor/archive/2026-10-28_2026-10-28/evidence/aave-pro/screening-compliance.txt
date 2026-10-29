@@ -1,0 +1,61 @@
+check: aave-pro/screening-compliance
+about: ComplianceProvider checks the connected wallet and shows ComplianceBlockedScreen (provider not disclosed)
+source: https://pro.aave.com
+checked_at: 2026-10-28T22:52:10Z
+http_status: 200
+--------------------------------------------------------------------------------
+scripts:
+  https://pro.aave.com/_next/static/immutable/chunks/02cjtk1a1xsni.js  sha256=c265d2ad4ee6ca5c8d548f19a447ddc0c48d2ca933ab929376657beb3f83d6cb
+  https://pro.aave.com/_next/static/immutable/chunks/1ajfvucmh35me.js  sha256=fda09fb5d4a57e0cde3848ecee8d0fb4f83f097b1c3d0e0de4dfb84e69a2dda8
+  https://pro.aave.com/_next/static/immutable/chunks/3fca5svy_flvz.js  sha256=bc82474dcaadf9c5d94885aa6cb9cc2e55fd18e2b8d500dc1e29f7884da9e15f
+  https://pro.aave.com/_next/static/immutable/chunks/0w1h-h2hiaas_.js  sha256=8c93616c7c9b8209f0121cb93d0a3ba254b2a42c919f41a6ed4325a92e450f1e
+  https://pro.aave.com/_next/static/immutable/chunks/turbopack-2_04ewhudzrza.js  sha256=b87076f04fb7da9ad77c690fc904d0fd6f29f66cd6f95e1b25587af16af81a29
+  https://pro.aave.com/_next/static/immutable/chunks/2107p5b0yh6pq.js  sha256=b5fe84c7165c0ce497d64a992974891a61e4b7b81d647304ce7e3797460bf698
+  https://pro.aave.com/_next/static/immutable/chunks/274-_o6hnzp57.js  sha256=2517d1c00d56b39511e92d3091635508da001646ba5e2f97e65ff61fee088820
+  https://pro.aave.com/_next/static/immutable/chunks/04192z4-36l6w.js  sha256=01fd82497a1aa8ef2906b3d34e6836386568b57374290c6699dbcac7542d2239
+  https://pro.aave.com/_next/static/immutable/chunks/2wdf83ztfh7da.js  sha256=0709e91094163650705f897b8f5f3c71fe8ed075720294cdfda48c070a4f540a
+  https://pro.aave.com/_next/static/immutable/chunks/1k44_3-yl9do0.js  sha256=67303d52bb7bc4f835fa268bc07da8b6064ead3589b5646b9d2cae4a3e14af33
+  https://pro.aave.com/_next/static/immutable/chunks/1j78nphe-u0-6.js  sha256=fb9de8effc0894d0fbe73e1a4c812a4ff230e978d1c4a14609362b694f818e54
+  https://pro.aave.com/_next/static/immutable/chunks/1dzbel70jobu4.js  sha256=e1258e4ea19ab86e605625ed508cbbb5894e4264ebf0442f6398515e9b1f03bc
+  https://pro.aave.com/_next/static/immutable/chunks/1p2zc7zrrks_w.js  sha256=5bd21919a54b5b55cbc7c6cd698bd052fdb567ac05902997326dfac84190846b
+  https://pro.aave.com/_next/static/immutable/chunks/03mb47ieldkqp.js  sha256=bbea17fc86e6534026821726b3c88ac1675f0cfa3192709d0337e90aad83ae95
+  https://pro.aave.com/_next/static/immutable/chunks/008o9lx5j-b-4.js  sha256=0f14e09adeada3813d0e92b7d2f11b9d9665bb11ce604c84841149c6214fec3a
+  https://pro.aave.com/_next/static/immutable/chunks/1fkl3if9kdzwa.js  sha256=3264054c9ea1b0b00beda4465f6c5609718572d6c9d9b9980bc8cd18186f245b
+  https://pro.aave.com/_next/static/immutable/chunks/0c5hb8aj9gofe.js  sha256=591a213a0693da21c7bb7286a455e48c6416b341af158735a3de8f0f41716249
+  https://pro.aave.com/_next/static/immutable/chunks/0hxsd1w34z_3f.js  sha256=35270df613d1d3ab186e51ff81f78286feed98366928beea3c5d5f4a88d1d656
+  https://pro.aave.com/_next/static/immutable/chunks/093n7-__lf7u1.js  sha256=688c7d4dc2b67e6be794feca7d454bdc1b12d8bb99b968b09783d9d1f29b2e52
+  https://pro.aave.com/_next/static/immutable/chunks/0tjzszx24n7-n.js  sha256=8e167631b710c3df7eb8f6d30de3ec5a0f7e81e3658219c7bffd00b904963c91
+  https://pro.aave.com/_next/static/immutable/chunks/2hj3844pq--x8.js  sha256=0a3b3825226e5bc6c4da8c0acd2c4c2fe9719fd0032f5b11279a18262bd2c1ba
+  https://pro.aave.com/_next/static/immutable/chunks/14n5dp8oi7nnt.js  sha256=7c0a7584b8df158a862e599b769b7e087a05274f706d56a31f9eb543c4d83757
+  https://pro.aave.com/_next/static/immutable/chunks/1e7re2u25uc76.js  sha256=e62303ebd02e5f7a21bb72132cae051248868ae9dd4d8e7455cb3c83336249b6
+  https://pro.aave.com/_next/static/immutable/chunks/2y46i8t72_5g-.js  sha256=940041259cf3d0c43cda4102a492538e5a0ed027d67a7421f8f2aefa7009c35e
+  https://pro.aave.com/_next/static/immutable/chunks/19-b7-m4nuve2.js  sha256=dd82fc20c7162df35cc4c52036243548b53535a9fc88ed5e857d14fdedcf6ace
+  https://pro.aave.com/_next/static/immutable/chunks/2bk3cbnf0btjp.js  sha256=bcf47ffdd05e1d8281c499db8767114480f96f5497b990d16d37e9cc84d7a8e0
+  https://pro.aave.com/_next/static/immutable/chunks/0xr01n8tcwveb.js  sha256=57d3301e6eda02d1893d4b0a0f57093f0c084021f9a4bebb4fcf5189cc7c087e
+  https://pro.aave.com/_next/static/immutable/chunks/0g6a15xbmtr_s.js  sha256=5103ff5cf5163b0dcbcf6e47ac8836adf8003fd5ca7d8da318886d5ea786c5b3
+  https://pro.aave.com/_next/static/immutable/chunks/2me96r3ic9aqf.js  sha256=ae7dde796668fb6b00437f17f37fcc78f52e9ee5a182b4115cd7fb543a6c78d9
+  https://pro.aave.com/_next/static/immutable/chunks/1a5p9icycoub9.js  sha256=02395b995cf324845520c91ca9accf38c6833f8d3c551b3be4c399822fe77035
+  https://pro.aave.com/_next/static/immutable/chunks/1assfd6d7cc2d.js  sha256=d32ff07a7d86571c20b5dfb4a297c2e5b43a9303a815d24b9bf88902a8aa2d58
+  https://pro.aave.com/_next/static/immutable/chunks/3jg5u46w9cu-d.js  sha256=de9bba12b62628a4c318f7fbbbfaec7a1375b2d32f19f8daaedbd2f36e2543e2
+  https://pro.aave.com/_next/static/immutable/chunks/051ihh-e2gult.js  sha256=254c789d6b906370305613b0f3397a392dddc2f74e03495e4a2b5f695b49c2eb
+  https://pro.aave.com/_next/static/immutable/chunks/242g6xixin8tu.js  sha256=0bfdcce2745bc1820ca0e8d0852d9f35676f3704e1efc7e93a886b3b92527ed9
+  https://pro.aave.com/_next/static/immutable/chunks/3gk298z88sgku.js  sha256=b83458548229c3b2d1e7f9d63fb27c6d49b372eb2f12bab1234aee5be7bf0c11
+  https://pro.aave.com/_next/static/immutable/chunks/0yorlfg8nd4c4.js  sha256=a4e3843acaea5514e0c206b1fa52941f393024a0a13850fbbff0e95191852f92
+  https://pro.aave.com/_next/static/immutable/chunks/2uxtbuy2soy61.js  sha256=fda58b94b63c965bc579239bffb35fea84624114a580836f5fcb12a3fb2dcb09
+  https://pro.aave.com/_next/static/immutable/chunks/44t5aq_1nzrzj.js  sha256=ca7aba5ace44506b4ce087fe9068c128177befaf757df0a0cb6d6169203e7249
+  https://pro.aave.com/_next/static/immutable/chunks/3hoa9zs0qjrq-.js  sha256=51e92e96a0568af8b8a64f996f3010c5cc3bf372f5593ba5f56ec18c4a4c50bf
+  https://pro.aave.com/_next/static/immutable/chunks/19_jh1a107a1u.js  sha256=6c098722f59a5a080d677a00064ebb5d1ad48ef2c92f37115d3c0309e282e32b
+  https://pro.aave.com/_next/static/immutable/chunks/14isxg8c_9-s9.js  sha256=43db28b853e7e60bc29cda2fad74591a75708ce4b2a0f61d1107af012e015a6e
+  https://pro.aave.com/_next/static/immutable/chunks/0or7qsffz0bxp.js  sha256=fbbe07581325a516a68f3a3a4ef5e60111e073c908d470cf645ca4675b762400
+  https://pro.aave.com/_next/static/immutable/chunks/2d6g_pci4paj3.js  sha256=00dc52177660a579ac7b8492145a2aa9616d89462d2816870f24695878622576
+  https://pro.aave.com/_next/static/immutable/chunks/3uz7ckaktqo0g.js  sha256=ce9ce8cc549e3e6f63de822815b279e7e939efc0a352c14574f6605dce0db026
+  https://pro.aave.com/_next/static/immutable/chunks/1ybg5my15-e6_.js  sha256=947cfad41358426cef0865cfce7cf3fa729e836989dded24f0fd760b0ecaf8ef
+  https://pro.aave.com/_next/static/immutable/chunks/1ky4w1sx1w1kh.js  sha256=68cb4778e81cf4e1d8fd1d947ac15998b8f304775a83e222a3a6e19669a564fe
+  https://pro.aave.com/_next/static/immutable/chunks/0fla25tf_2y8e.js  sha256=2b8170943160c85450c502c104a73abfeebd827659449d876cb92b7817ef7952
+  https://pro.aave.com/_next/static/immutable/chunks/0vfw10pyp41z7.js  sha256=cced066707d49ab9ed1cacfb259203cdb7ff0da1f5185b47d9626d25c83e3cb7
+  https://pro.aave.com/_next/static/immutable/chunks/2_m_jwu73gaxy.js  sha256=52e45d2b944dc805111d7ff90f3917d1530f0be25a2567c94e49ed77106ebd61
+  https://pro.aave.com/_next/static/immutable/chunks/0c0hxoamwjsbw.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
+  https://pro.aave.com/_next/static/immutable/chunks/3pq0unkcz2_8k.js  sha256=fe8596a9ce03eb64668130a016e28200755a66ba3c28729a8061b0d3a3811849
+
+matches:
+  https://pro.aave.com/_next/static/immutable/chunks/1p2zc7zrrks_w.js: …:()=>{},hideDemo:()=>{}}),s=t=>!t||new Date(t).getTime()<Date.now();t.s(["ComplianceProvider",0,({children:t})=>{let{address:u,isConnected:l}=(0,n.f)(),[f,c]=(0,o.f)("compliance-state",{defaultValue:{}}),[h,_]=(0,r.useSt…

@@ -1,0 +1,41 @@
+{
+  "id": "1inch",
+  "name": "1inch",
+  "targets": {
+    "app": "https://1inch.com",
+    "repo": null,
+    "terms": "https://1inch.com/assets/1inch_com_terms_of_use.pdf",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-us-report",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "reported",
+      "about": "Press report (Sep 2021): 1inch began geofencing US IP addresses (historical; the catalog notes US access was later restored, so it records no country list)",
+      "source": {
+        "url": "https://www.theblock.co/linked/119055/dex-aggregator-1inch-blocks-out-us-trades-in-preparation-for-separate-american-platform",
+        "kind": "press",
+        "archive": "https://web.archive.org/web/20260703001938/https://www.theblock.co/linked/119055/dex-aggregator-1inch-blocks-out-us-trades-in-preparation-for-separate-american-platform"
+      },
+      "expect": [
+        "1inch has begun geofencing U\\.S\\. IP addresses"
+      ]
+    },
+    {
+      "id": "screening-trm",
+      "type": "page",
+      "claim": "screening",
+      "status": "yes",
+      "about": "1inch help center: wallet addresses are screened through TRM Labs",
+      "source": {
+        "url": "https://help.1inch.com/en/articles/6588963-1inch-address-screening",
+        "kind": "help"
+      },
+      "expect": [
+        "1inch monitors and screens wallet addresses for illicit activities through TRM Labs"
+      ]
+    }
+  ]
+}

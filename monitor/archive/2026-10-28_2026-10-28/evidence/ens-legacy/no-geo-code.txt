@@ -1,0 +1,13 @@
+check: ens-legacy/no-geo-code
+about: No geo-IP lookup or country block in the legacy ENS app
+source: https://github.com/ensdomains/ens-app/tree/1cc872b5738e811fc416e8fc6ca3671e3cc4454b
+checked_at: 2026-10-28T22:38:02Z
+fetched: https://codeload.github.com/ensdomains/ens-app/tar.gz/1cc872b5738e811fc416e8fc6ca3671e3cc4454b
+sha256: 80efd2acb78e68e0f8f1f852d51e198e988908e7312249494d9737ea05e485a3
+--------------------------------------------------------------------------------
+files scanned: 250
+patterns that must be absent:
+  api\.country\.is|ipapi\.co|ipinfo\.io|freeipapi|ip-api\.com|cdn-cgi/trace|/geoip\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country|req(uest)?\.geo\b
+
+hits:
+  none

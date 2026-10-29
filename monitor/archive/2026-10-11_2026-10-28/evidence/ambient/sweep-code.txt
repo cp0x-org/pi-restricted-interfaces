@@ -1,0 +1,23 @@
+check: ambient/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/CrocSwap/ambient-ts-app/tree/90e569a9bbcab62907c7713ce25c6ab5b0246baf
+checked_at: 2026-10-11T21:02:51Z
+fetched: https://codeload.github.com/CrocSwap/ambient-ts-app/tar.gz/90e569a9bbcab62907c7713ce25c6ab5b0246baf
+sha256: e922a0bfc2fdca670e8d7bcc07aeb06267c6947967cded4f4fc99eaf80d2193c
+--------------------------------------------------------------------------------
+repository: https://github.com/CrocSwap/ambient-ts-app/tree/90e569a9bbcab62907c7713ce25c6ab5b0246baf
+files scanned: 728
+
+signals:
+  [strong] geo: geo-IP service — 1 file(s)
+      https://github.com/CrocSwap/ambient-ts-app/blob/90e569a9bbcab62907c7713ce25c6ab5b0246baf/public/blocked.html#L57  /h1> <script> // fetch('https://ipapi.co/json/') // .then((res) => res.json()) //
+  [strong] geo: block text — 3 file(s)
+      https://github.com/CrocSwap/ambient-ts-app/blob/90e569a9bbcab62907c7713ce25c6ab5b0246baf/public/blocked.html#L5  <head> <meta charset="UTF-8" /> <title>Access Restricted</title> <meta name="viewport" content="width=device-width, initial-scal
+      https://github.com/CrocSwap/ambient-ts-app/blob/90e569a9bbcab62907c7713ce25c6ab5b0246baf/src/pages/common/TermsOfService/CrocodileLabsTermsOfService.html#L4968  nd may contain references to services and content that are not available in your country. These references do not imply that Crocodile Labs intends to announce such se
+      https://github.com/CrocSwap/ambient-ts-app/blob/90e569a9bbcab62907c7713ce25c6ab5b0246baf/src/pages/common/TermsOfService/TermsOfService.tsx#L1768  o services and content that are not available in your country. These references do not imply that Crocodile Labs
+  [weak] geo: geo-block words — 1 file(s)
+      https://github.com/CrocSwap/ambient-ts-app/blob/90e569a9bbcab62907c7713ce25c6ab5b0246baf/netlify.toml#L45  ps.ambient.finance/" status = 302 force = true # Allow blocked countries to access /blocked.html [[redirects]] from = "/blocked.html" to = "/bloc
+  [weak] screening: screening words — 4 file(s)
+      https://github.com/CrocSwap/ambient-ts-app/blob/90e569a9bbcab62907c7713ce25c6ab5b0246baf/src/App/hooks/useBlacklist.ts#L11  disconnectUser(); location.replace('https://ofac.treasury.gov'); } }, [account]); }
+      https://github.com/CrocSwap/ambient-ts-app/blob/90e569a9bbcab62907c7713ce25c6ab5b0246baf/src/ambient-utils/constants/blacklist.ts#L475  return isOnBlacklist; // }; /* sdn_list=$(curl -L https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML) input=( $(echo "
+      https://github.com/CrocSwap/ambient-ts-app/blob/90e569a9bbcab62907c7713ce25c6ab5b0246baf/src/pages/common/PrivacyPolicy/CrocodileLabsPrivacyPolicy.html#L4667  ily:Calibri;mso-bidi-theme-font: minor-latin'>conduct OFAC and similar checks;<o:p></o:p></span></li> <li class=MsoNormal style='color:b

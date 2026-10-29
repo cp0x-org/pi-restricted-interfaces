@@ -1,0 +1,71 @@
+{
+  "id": "hyperliquid",
+  "name": "Hyperliquid",
+  "targets": {
+    "app": "https://app.hyperliquid.xyz",
+    "repo": null,
+    "terms": "https://app.hyperliquid.xyz/terms",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "screening-legalcheck",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Hyperliquid's info API legalCheck, which the app calls for the connected wallet, answers userAllowed:false for the sanctioned wallet and true for the control (the app then shows the 'flagged by Chainalysis' banner and disables actions)",
+      "source": {
+        "method": "POST",
+        "url": "https://api.hyperliquid.xyz/info",
+        "body": {
+          "type": "legalCheck",
+          "user": "{address}"
+        }
+      },
+      "expect_sdn": [
+        "^status: 200$",
+        "\"userAllowed\":\\s*false"
+      ],
+      "expect_control": [
+        "^status: 200$",
+        "\"userAllowed\":\\s*true"
+      ]
+    },
+    {
+      "id": "prod-legalcheck-block",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Production JS: the app calls the info API legalCheck and, for the BlockActions restriction 'a', disables trading with 'Not available in your jurisdiction'",
+      "source": {
+        "url": "https://app.hyperliquid.xyz"
+      },
+      "expect": [
+        "Not available in your jurisdiction",
+        "type:`legalCheck`",
+        "BlockActions=`a`"
+      ]
+    },
+    {
+      "id": "prod-terms-countries",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "tos_only",
+      "about": "Production JS: Terms 1.6 bundled in the app name the United States and Ontario (documentation only until a per-country check confirms where the legalCheck block applies)",
+      "source": {
+        "url": "https://app.hyperliquid.xyz"
+      },
+      "expect": [
+        "1\\.6 The Interface is not available"
+      ],
+      "section": {
+        "start": "1\\.6 The Interface is not available",
+        "end": "\\(b\\)"
+      },
+      "exclude": [
+        ",\\s*Canada"
+      ],
+      "countries": "names"
+    }
+  ]
+}

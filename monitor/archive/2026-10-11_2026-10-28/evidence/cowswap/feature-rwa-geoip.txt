@@ -1,0 +1,8 @@
+check: cowswap/feature-rwa-geoip
+about: The visitor's country for that gate comes from api.country.is
+source: https://github.com/cowprotocol/cowswap/blob/7f861f9d12a0f9b0db33f9b0b1679ec309025120/apps/cowswap-frontend/src/modules/rwa/state/geoDataAtom.ts#L21
+checked_at: 2026-10-11T21:04:38Z
+fetched: https://raw.githubusercontent.com/cowprotocol/cowswap/7f861f9d12a0f9b0db33f9b0b1679ec309025120/apps/cowswap-frontend/src/modules/rwa/state/geoDataAtom.ts
+sha256: 4c565433e40cec77749806bb9fb9e9e16cef25a4cae66e6d9ec1a259c90d1eb1
+--------------------------------------------------------------------------------
+L21:     const response = await fetch('https://api.country.is')

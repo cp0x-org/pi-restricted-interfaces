@@ -1,0 +1,847 @@
+check: kelp/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://kerneldao.com/kelp
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Romania",
+    "countryCode": "RO",
+    "region": "Bucharest"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Bucharest\",\"countryCode\":\"RO\",\"country\":\"Romania\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "blocked",
+   "flags": {
+    "isRestricted": true,
+    "country": "United States",
+    "countryCode": "US",
+    "region": "Ohio"
+   },
+   "body": "{\"isRestricted\":true,\"region\":\"Ohio\",\"countryCode\":\"US\",\"country\":\"United States\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "blocked",
+   "flags": {
+    "isRestricted": true,
+    "country": "United States",
+    "countryCode": "US",
+    "region": "New York"
+   },
+   "body": "{\"isRestricted\":true,\"region\":\"New York\",\"countryCode\":\"US\",\"country\":\"United States\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "blocked",
+   "flags": {
+    "isRestricted": true,
+    "country": "Canada",
+    "countryCode": "CA",
+    "region": "Ontario"
+   },
+   "body": "{\"isRestricted\":true,\"region\":\"Ontario\",\"countryCode\":\"CA\",\"country\":\"Canada\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "blocked",
+   "flags": {
+    "isRestricted": true,
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "region": "England"
+   },
+   "body": "{\"isRestricted\":true,\"region\":\"England\",\"countryCode\":\"GB\",\"country\":\"United Kingdom\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Germany",
+    "countryCode": "DE",
+    "region": "Baden-Wurttemberg"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Baden-Wurttemberg\",\"countryCode\":\"DE\",\"country\":\"Germany\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "France",
+    "countryCode": "FR",
+    "region": "Brittany"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Brittany\",\"countryCode\":\"FR\",\"country\":\"France\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "The Netherlands",
+    "countryCode": "NL",
+    "region": "South Holland"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"South Holland\",\"countryCode\":\"NL\",\"country\":\"The Netherlands\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Poland",
+    "countryCode": "PL",
+    "region": "Subcarpathia"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Subcarpathia\",\"countryCode\":\"PL\",\"country\":\"Poland\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Ukraine",
+    "countryCode": "UA",
+    "region": "Lviv"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Lviv\",\"countryCode\":\"UA\",\"country\":\"Ukraine\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Türkiye",
+    "countryCode": "TR",
+    "region": "Istanbul"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Istanbul\",\"countryCode\":\"TR\",\"country\":\"Türkiye\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "United Arab Emirates",
+    "countryCode": "AE",
+    "region": "Abu Dhabi"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Abu Dhabi\",\"countryCode\":\"AE\",\"country\":\"United Arab Emirates\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Singapore",
+    "countryCode": "SG",
+    "region": "South West"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"South West\",\"countryCode\":\"SG\",\"country\":\"Singapore\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Hong Kong",
+    "countryCode": "HK",
+    "region": "Kwun Tong District"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Kwun Tong District\",\"countryCode\":\"HK\",\"country\":\"Hong Kong\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Japan",
+    "countryCode": "JP",
+    "region": "Chiba"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Chiba\",\"countryCode\":\"JP\",\"country\":\"Japan\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Brazil",
+    "countryCode": "BR",
+    "region": "Mato Grosso"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Mato Grosso\",\"countryCode\":\"BR\",\"country\":\"Brazil\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Argentina",
+    "countryCode": "AR",
+    "region": "Buenos Aires"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Buenos Aires\",\"countryCode\":\"AR\",\"country\":\"Argentina\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Nigeria",
+    "countryCode": "NG",
+    "region": "Lagos"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Lagos\",\"countryCode\":\"NG\",\"country\":\"Nigeria\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Vietnam",
+    "countryCode": "VN",
+    "region": "Can Tho"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Can Tho\",\"countryCode\":\"VN\",\"country\":\"Vietnam\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Kazakhstan",
+    "countryCode": "KZ",
+    "region": "Karaganda"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Karaganda\",\"countryCode\":\"KZ\",\"country\":\"Kazakhstan\"}",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kerneldao.com/kelp/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum &amp; Stay Liqui",
+   "scripts": [
+    "/gtag/js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_buildManifest.js",
+    "/kelp/_next/static/bCjbWHi9k_-6pNjMnI50_/_ssgManifest.js",
+    "/kelp/_next/static/chunks/9005-*.js",
+    "/kelp/_next/static/chunks/framework-*.js",
+    "/kelp/_next/static/chunks/main-*.js",
+    "/kelp/_next/static/chunks/pages/_app-*.js",
+    "/kelp/_next/static/chunks/pages/index-*.js",
+    "/kelp/_next/static/chunks/polyfills-*.js",
+    "/kelp/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 219857,
+   "redirects": [
+    "https://kerneldao.com/kelp/"
+   ],
+   "server": "AmazonS3"
+  },
+  "https://universe.kelpdao.xyz/rseth/geoData": {
+   "status": 200,
+   "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+   "state": "ok",
+   "flags": {
+    "isRestricted": false,
+    "country": "Georgia",
+    "countryCode": "GE",
+    "region": "Tbilisi"
+   },
+   "body": "{\"isRestricted\":false,\"region\":\"Tbilisi\",\"countryCode\":\"GE\",\"country\":\"Georgia\"}",
+   "redirects": [],
+   "server": null
+  }
+ }
+}

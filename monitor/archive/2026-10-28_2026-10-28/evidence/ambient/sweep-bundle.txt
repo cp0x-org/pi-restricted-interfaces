@@ -1,0 +1,18 @@
+check: ambient/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://ambient.finance
+checked_at: 2026-10-28T22:39:12Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://ambient.finance (HTTP 200)
+scripts (1):
+  https://ambient.finance/assets/index-C4YoGpvK.js  sha256=12813c8f9ea050cc5260ef7d783eda9ec4346cc9eaf11ece2955b3c643f3587b
+
+signals:
+  [strong] geo: block text — 1 file(s)
+      /assets/index-C4YoGpvK.js: and may contain references to services and content that are not available in your country. These references do not imply that Crocodile Labs intends to announce such ser
+  [weak] screening: screening words — 1 file(s)
+      /assets/index-C4YoGpvK.js: ,H.useEffect)(()=>{e&&FV(e)&&(t(),location.replace(`https://ofac.treasury.gov`))},[e])}var sin=e=>{let[t,n]=(0,H.useState)([]);return(0,H.useEff
+  [weak] vpn: VPN words — 1 file(s)
+      /assets/index-C4YoGpvK.js: n i!==r&&(n=(r=i)&&gpn(e,i)),n}return i._value=t,i}function vpn(e,t){var n,r;function i(){var i=t.apply(this,arguments);return i!==r&&(n=(r=i)&

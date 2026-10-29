@@ -1,0 +1,23 @@
+check: balancer/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/balancer/frontend-monorepo/tree/046d0100891916cda92a0aef5a0f2d059bd309d0
+checked_at: 2026-10-11T21:02:54Z
+fetched: https://codeload.github.com/balancer/frontend-monorepo/tar.gz/046d0100891916cda92a0aef5a0f2d059bd309d0
+sha256: a763e21efaf68de3c4fca31bfd986153db51ed46607966ba66a44909937fe2eb
+--------------------------------------------------------------------------------
+repository: https://github.com/balancer/frontend-monorepo/tree/046d0100891916cda92a0aef5a0f2d059bd309d0
+files scanned: 1525
+
+signals:
+  [strong] screening: screening vendor — 1 file(s)
+      https://github.com/balancer/frontend-monorepo/blob/046d0100891916cda92a0aef5a0f2d059bd309d0/packages/lib/shared/services/hypernative/checkAddressReputation.ts#L22  3 hops away) Hypernative reputation docs: https://docs.hypernative.xyz/hypernative-product-docs/developers/hypernative-api/screener/address-reputation
+  [strong] screening: screening call — 4 file(s)
+      https://github.com/balancer/frontend-monorepo/blob/046d0100891916cda92a0aef5a0f2d059bd309d0/apps/frontend-v3/app/(app)/debug/page.tsx#L27  ry </Link> <Link as={NextLink} href="/debug/wallet-check"> Wallet check </Link> <Link as={NextLink} href="/deb
+      https://github.com/balancer/frontend-monorepo/blob/046d0100891916cda92a0aef5a0f2d059bd309d0/apps/frontend-v3/app/(app)/debug/wallet-check/page.tsx#L13  function checkWallet() { const res = await fetch(`/api/wallet-check/${address}`) const data = await res.json() setData(data) console.lo
+      https://github.com/balancer/frontend-monorepo/blob/046d0100891916cda92a0aef5a0f2d059bd309d0/packages/lib/modules/web3/UserAccountProvider.tsx#L18  romise<boolean> { try { const res = await fetch(`/api/wallet-check/${address}`, { cache: 'no-store' }) const data = await res.json() retu
+  [weak] screening: screening words — 3 file(s)
+      https://github.com/balancer/frontend-monorepo/blob/046d0100891916cda92a0aef5a0f2d059bd309d0/apps/beets-frontend-v3/app/(marketing)/terms-of-use/page.tsx#L66  erms and you are not indirectly or directly included on any sanctions list and at least 18 years old or the age of majority where you reside
+      https://github.com/balancer/frontend-monorepo/blob/046d0100891916cda92a0aef5a0f2d059bd309d0/apps/frontend-v3/app/(marketing)/terms-of-use/page.tsx#L60  erms and you are not indirectly or directly included on any sanctions list and at least 18 years old or the age of majority where you reside
+      https://github.com/balancer/frontend-monorepo/blob/046d0100891916cda92a0aef5a0f2d059bd309d0/packages/lib/shared/services/hypernative/checkAddressReputation.ts#L19  native based on their understanding of the required rules (OFAC + Related to OFAC up to 3 hops away) Hypernative reputation docs: https://
+  [weak] kyc: KYC words — 1 file(s)
+      https://github.com/balancer/frontend-monorepo/blob/046d0100891916cda92a0aef5a0f2d059bd309d0/packages/lib/modules/portfolio/PortfolioClaim/recovered-funds/RecoveredFundsLearnMoreModal.tsx#L78  stItem mb="xs"> <Text> NO KYC is required, but you will need to make an onchain signature to acknowledge

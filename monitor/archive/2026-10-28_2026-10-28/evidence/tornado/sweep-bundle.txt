@@ -1,0 +1,24 @@
+check: tornado/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://tornadocash.eth.limo
+checked_at: 2026-10-28T22:50:18Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://tornadocash.eth.limo (HTTP 200)
+scripts (3):
+  https://tornadocash.eth.limo/_nuxt/7feff3e.js  sha256=2b24c94fa8f50018280f57ae3d9dbc3857cb39affccfcd1fd68fcf3ce89d4134
+  https://tornadocash.eth.limo/_nuxt/aad17b0.js  sha256=f4536272f0dd57cc8491817fcb15cfdcdbcdaa0dd7e07cac8c66a2b686f8d0f3
+  https://tornadocash.eth.limo/_nuxt/03ba169.js  sha256=1adf0f97cc0365e62bf521798d9914e39faaa3cf1f6f8bb2ebcd8746d2d4bfbf
+
+signals:
+  [weak] geo: HTTP 451 text — 2 file(s)
+      /_nuxt/aad17b0.js: o Many Requests",431:"Request Header Fields Too Large",451:"Unavailable For Legal Reasons",500:"Internal Server Error",501:"Not Implemented",502:"Bad Gateway",503:"Servi
+      /_nuxt/03ba169.js: ass:"title is-size-1 is-size-2-mobile is-spaced"},[this._v("Unavailable For Legal Reasons")])])}],!1,null,null,null);t.a=component.exports},792:function(e,t,r){"use stri
+  [weak] geo: geo-block words — 2 file(s)
+      /_nuxt/aad17b0.js: i++)f[i]=e[i];return f}var ja={_default:Object(oa.r)(Pa.a),_geofence:Object(oa.r)(Na.a)},Da={render:function(e,c){var f=e("NuxtLoading",{ref:"loadi
+      /_nuxt/03ba169.js: en and (max-width:374px){.notices .toast{font-size:.85rem}}.geofence .break,.geofence .dropdown-langs,.geofence .footer .footer-address{display:non
+  [weak] screening: screening words — 1 file(s)
+      /_nuxt/03ba169.js: inkTwo} and how to {linkThree}","rpcDisclaimerLinkOneText":"OFAC sanctions","rpcDisclaimerLinkTwoText":"chainlist.org","rpcDisclaimerLinkThreeTe
+  [weak] vpn: VPN words — 1 file(s)
+      /_nuxt/03ba169.js: g keys, please check your internet connection or try to use VPN.","mobileWallet":{"reconnect":{"message":"Your current connection will be termi

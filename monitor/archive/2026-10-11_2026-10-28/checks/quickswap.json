@@ -1,0 +1,69 @@
+{
+  "id": "quickswap",
+  "name": "QuickSwap",
+  "targets": {
+    "app": "https://dapp.quickswap.exchange",
+    "repo": {
+      "repo": "QuickSwap/interface-v2",
+      "ref": "8799993562503860a266feb3d8bf376acc80596a"
+    },
+    "terms": "https://dapp.quickswap.exchange/tos",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "no-geo-code",
+      "type": "code-scan",
+      "claim": "geo_site",
+      "status": "no",
+      "about": "No geo-IP lookup or country block in the public frontend code (the repository is stale: production may differ)",
+      "source": {
+        "repo": "QuickSwap/interface-v2",
+        "ref": "8799993562503860a266feb3d8bf376acc80596a"
+      },
+      "absent": [
+        "api\\.country\\.is|ipapi\\.co|ipinfo\\.io|freeipapi|ip-api\\.com|cdn-cgi/trace|/geoip\\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country|req(uest)?\\.geo\\b"
+      ]
+    },
+    {
+      "id": "no-screening-code",
+      "type": "code-scan",
+      "claim": "screening",
+      "status": "no",
+      "about": "No wallet-screening call or sanctions list in the public frontend code",
+      "source": {
+        "repo": "QuickSwap/interface-v2",
+        "ref": "8799993562503860a266feb3d8bf376acc80596a"
+      },
+      "absent": [
+        "trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\\w-])|preflight-compliance|/address/status\\b|compliance/screen|/v\\d/check/"
+      ]
+    },
+    {
+      "id": "prod-no-geo",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "no",
+      "about": "Production JS of QuickSwap: no geo-IP lookup or country block",
+      "source": {
+        "url": "https://dapp.quickswap.exchange"
+      },
+      "absent": [
+        "api\\.country\\.is|ipapi\\.co|ipinfo\\.io|freeipapi|ip-api\\.com|cdn-cgi/trace|/geoip\\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country"
+      ]
+    },
+    {
+      "id": "prod-no-screening",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "no",
+      "about": "Production JS of QuickSwap: no wallet-screening call or sanctions oracle",
+      "source": {
+        "url": "https://dapp.quickswap.exchange"
+      },
+      "absent": [
+        "trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\\w-])|preflight-compliance|/address/status\\b|compliance/screen|/v\\d/check/"
+      ]
+    }
+  ]
+}

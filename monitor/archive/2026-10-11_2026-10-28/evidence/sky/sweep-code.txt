@@ -1,0 +1,35 @@
+check: sky/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/jetstreamgg/tarmac/tree/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb
+checked_at: 2026-10-11T21:03:55Z
+fetched: https://codeload.github.com/jetstreamgg/tarmac/tar.gz/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb
+sha256: c7bfdd47633cd2907df79dd6166a79701ca2d8d070612c072a91ae31b4f24998
+--------------------------------------------------------------------------------
+repository: https://github.com/jetstreamgg/tarmac/tree/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb
+files scanned: 926
+
+signals:
+  [strong] geo: geo endpoint — 28 file(s)
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/playwright-parallel.config.ts#L97  skip auth/ip checks so WalletChip doesn't block on unmocked /ip/status. command: `VITE_PARALLEL_TEST=true VITE_SKIP_AUTH_CHECK=true ${process.env.
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/hooks/authentication/useVpnCheck.ts#L15  ng auth URL'); } const vpnRes = await fetch(`${authUrl}/ip/status`); if (!vpnRes.ok) { throw new Error('Could not fetch VPN status'); }
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/lib/authCheck.ts#L20  _AUTH_CHECK === 'true'; }; /** The compliance API origin (`/ip/status`, `/address/status`). */ export const getAuthUrl = (): string => import.meta.en
+  [strong] geo: block text — 1 file(s)
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/ui/components/TermsModal.tsx#L217  <Text className="text-text text-center"> <Trans>Access restricted</Trans> </Text> </ResponsiveModalTitle> <Text className="te
+  [weak] geo: geo-block words — 18 file(s)
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/components/product/EarnTable.tsx#L213  p * both actions — neither destination is reachable from a restricted region. * Design has no mobile comp for that section yet (APP-432 item 8). */ functi
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/hooks/authentication/useVpnCheck.ts#L6  ks'; type VpnResponse = { isConnectedToVpn: boolean; isRestrictedRegion: boolean; countryCode: string; }; const checkVpn = async (authUrl: string):
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/analytics/constants.ts#L56  locked' | 'error' | 'unknown'; export type BlockReason = 'restricted_region' | 'address_restricted' | 'network_error' | 'auth_error' | 'unknown'; export ty
+  [strong] screening: screening call — 13 file(s)
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/playwright-parallel.config.ts#L73  ts', '**/terms-signature-gate.spec.ts', '**/address-screening.spec.ts', '**/base-savings.spec.ts', '**/arbitrum-savings.spec.
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/hooks/authentication/enhancedAddressScreening.ts#L1  import type { AddressScreeningResult } from './useRestrictedAddressCheck'; /** * Enhanced address screening
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/hooks/authentication/useRestrictedAddressCheck.ts#L4  y'; import { ReadHookParams } from '../hooks'; export type AddressScreeningResult = { addressAllowed: boolean; }; /** * How old a screening verdict may
+  [weak] screening: screening words — 1 file(s)
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/ui/components/TermsModal.tsx#L53  tricted jurisdiction, are not subject to sanctions (OFAC, EU, UK or UN lists), and are not acting on behalf of anyone who is. Certain fe
+  [strong] vpn: VPN detection — 8 file(s)
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/hooks/authentication/useVpnCheck.ts#L5  { ReadHookParams } from '../hooks'; type VpnResponse = { isConnectedToVpn: boolean; isRestrictedRegion: boolean; countryCode: string; }; const check
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/analytics/constants.ts#L53  t behind the per-transaction signature instead, // and the `is_vpn` property on the events carries the fact. export type VpnCheckResult = 'allowed
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/analytics/contract.ts#L102  Destination; } export interface VpnCheckCompletedProps { is_vpn: boolean | null; is_restricted_region: boolean | null; country_code: string
+  [weak] vpn: VPN words — 13 file(s)
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/hooks/authentication/useVpnCheck.ts#L17  ); if (!vpnRes.ok) { throw new Error('Could not fetch VPN status'); } const { country_code, is_vpn, is_restricted_region } = await v
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/lib/isPrivateDeployment.ts#L2  as "private" (Cloudflare Access-gated) deployments where // VPN + geo checks should be bypassed. Set via VITE_PRIVATE_HOSTNAMES as a // comma-s
+      https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/analytics/PostHogProvider.tsx#L184  ing() // so its $opt_in event carries them. Keeping the VPN properties on the new // anonymous identity is deliberate: they are IP-deri

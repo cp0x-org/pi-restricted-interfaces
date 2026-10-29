@@ -1,0 +1,364 @@
+check: lombard/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://www.lombard.finance/app
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.lombard.finance/app/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Lombard Finance",
+   "scripts": [
+    "/app/assets/index-*.js"
+   ],
+   "bytes": 3481,
+   "redirects": [
+    "https://www.lombard.finance/app/"
+   ],
+   "server": "AmazonS3"
+  }
+ }
+}

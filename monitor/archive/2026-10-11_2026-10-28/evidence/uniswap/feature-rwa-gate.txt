@@ -1,0 +1,9 @@
+check: uniswap/feature-rwa-gate
+about: Swap marks RWA tokens as restricted when the compliance API gates the caller's region (GatedFeature.ISSUER_SPECIFIC_RWA)
+source: https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/packages/uniswap/src/features/transactions/swap/hooks/useGeoRestrictionMode.ts#L50
+checked_at: 2026-10-11T21:04:43Z
+fetched: https://raw.githubusercontent.com/Uniswap/interface/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/packages/uniswap/src/features/transactions/swap/hooks/useGeoRestrictionMode.ts
+sha256: 5f4fe5410779061e35feac43d3cd4c84b55c752828c4f5925505352a22bc7911
+--------------------------------------------------------------------------------
+L50:   const isRWARegionBlocked = useIsFeatureGated(GatedFeature.ISSUER_SPECIFIC_RWA)
+L52:   return isRWARegionBlocked && isRWA ? 'restricted' : classifyReasons(reasons)

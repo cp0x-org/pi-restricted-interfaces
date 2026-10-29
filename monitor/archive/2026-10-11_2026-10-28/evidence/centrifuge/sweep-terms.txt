@@ -1,0 +1,122 @@
+check: centrifuge/sweep-terms
+about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
+source: https://centrifuge.io/terms
+checked_at: 2026-10-11T21:17:09Z
+fetched: https://web.archive.org/web/9999id_/https://centrifuge.io/terms
+sha256: 4bd87e0fab08a3f064c1857edeb98c5f3f9891a38506382065d19f622dcd2b8c
+http_status: 200
+via: archive
+--------------------------------------------------------------------------------
+countries: 
+
+clauses:
+  geofencing: None
+  vpn: None
+  screening: None
+  sanctions: None
+  us_persons: None
+  kyc: None
+
+--- restriction paragraphs ---
+Some or all of the services described on this website may not be available in your jurisdiction or place of residence or may be restricted to certain types of sophisticated, accredited or qualified investors. Signing up for any free or subscription-based content is not an indication that other services offered by us will be made available to you.
+The materials contained on this website are for your personal use only. The materials contained on this website are not directed or intended to be targeted at and are not intended for distribution or publication to, or use by any person who is a resident of or located in any jurisdiction in which the targeting, direction, distribution or publication or use of such materials would be contrary to applicable laws or which would subject us to any registration or licensing requirements in respect of that jurisdiction.
+Neither Centrifuge nor any affiliated entity is licensed in your jurisdiction and we do not promote or market tokens, pools or our services in your jurisdiction. The distribution of materials found on this website may also be restricted by law, and any person into whose possession such materials come should inform themselves about and observe any applicable restrictions.
+
+--- full text ---
+Centrifuge Terms of Use | Platform Policies
+New York Life Investment Management Partners with Centrifuge to Tokenize U.S. High Yield Corporate Bond Strategy
+New York Life Investment Management Partners with Centrifuge to Tokenize U.S. High Yield Corporate Bond Strategy Learn more
+Solutions
+For issuers and builders
+Build on Centrifuge
+Launch tokenized products on audited infrastructure. Faster, at scale, under your own brand.
+Distribute via deRWA
+Wrap institutional-grade assets into freely transferable tokens, ready for seamless use across DeFi platforms.
+Full-service with Anemoy
+Bespoke fund structuring, onchain operations, and reporting fully managed by our asset management arm.
+For investors
+Access tokenized assets
+Access diverse asset classes, new markets, enhanced liquidity, and faster settlement with tokenized assets.
+Didn’t find what you are looking for?
+Contact us to discuss
+Community
+Tokenized Vault Foundation
+The TVF advances the leading token standards that power secure digital asset custody and yield generation.
+Real-World Asset Summit
+Event series uniting capital markets and crypto leaders. Join us to shape the future of the tokenized asset industry.
+RWA Documentary
+Tokenized, Unwrapped Documentary
+Watch "Tokenization, Unwrapped" to explore how tokenizing real-world assets is transforming finance.
+Learn more
+Resources
+Blog
+Read Centrifuge thinking on tokenized assets, onchain finance, product updates, and market structure.
+Documentation
+Access detailed guides and technical documentation for Centrifuge’s platform.
+Case studies
+Discover how Centrifuge powers real-world asset tokenization and drives innovation in DeFi.
+Tokenization Outlook 2026
+A survey-based industry report on where real-world asset tokenization stands and where it's heading.
+Featured news
+Janus Henderson, SMT and Centrifuge Launch Onchain Vaults to Manage Loyalty Program Reserves
+Janus Henderson expands from tokenized funds into active onchain portfolio management, using Centrifuge vault technology to manage reserves behind SMT’s loyalty programs.
+About
+Company
+Learn about Centrifuge's vision, leadership, and open roles.
+Newsroom
+Explore official announcements, press coverage, reports, and media resources from Centrifuge.
+Performance
+Live metrics, protocol data, and regular updates on Centrifuge's progress.
+Brand
+Explore Centrifuge’s brand assets and guidelines.
+Launch app
+Contact us
+Launch app
+Contact us
+Website Terms of Use
+This website is provided for informational purposes only. General information is provided herein about the types of services that are made available or facilitated by us. Purchases of tokens and investment in specific pools may be accessed only following compliance with the customer onboarding and other requirements.
+These Terms of Use govern your access to and use of this website and its subdomains and any information, documents, text, graphics, images, photos, or other content uploaded to, downloaded from, or appearing on this website, and any products, software, hardware authentication device, services, accounts, data feeds and tools provided by us or requested by you.
+By accessing this website, you agree that you have read, understood and agree to be bound by these Terms of Use and such other policies that we adopt and publish on this website from time to time, each of which are expressly incorporated herein by reference. Your access and use of this website are conditioned on your acceptance of and compliance with these Terms and applicable laws and regulations to which you are subject. If you do not agree, accept or comply with these Terms, you must not access this website.
+Where you are subject to prohibitions or restrictions by law or otherwise to access or use this website, you may not access this website.
+None of the information contained in this website should be considered as an offer, invitation or solicitation to buy, sell or subscribe for securities, derivatives, investment contracts or financial instruments, or to provide any service or advice in relation to the same or to provide any consumer credit services, facilitate or take deposits or provide any other financial services of any kind in any jurisdiction.
+Some or all of the services described on this website may not be available in your jurisdiction or place of residence or may be restricted to certain types of sophisticated, accredited or qualified investors. Signing up for any free or subscription-based content is not an indication that other services offered by us will be made available to you.
+The materials contained on this website are for your personal use only. The materials contained on this website are not directed or intended to be targeted at and are not intended for distribution or publication to, or use by any person who is a resident of or located in any jurisdiction in which the targeting, direction, distribution or publication or use of such materials would be contrary to applicable laws or which would subject us to any registration or licensing requirements in respect of that jurisdiction.
+Neither Centrifuge nor any affiliated entity is licensed in your jurisdiction and we do not promote or market tokens, pools or our services in your jurisdiction. The distribution of materials found on this website may also be restricted by law, and any person into whose possession such materials come should inform themselves about and observe any applicable restrictions.
+Virtual assets and pools may be high risk products and are unregulated by any governing bodies. Provision of services relating to virtual assets may also be subject to legal or regulatory restrictions or requirements in different jurisdictions, failure to comply with which may result in your personal liability or the imposition of fines. You should check the position in your jurisdiction and seek professional advice if you are unsure.
+Neither Centrifuge nor any of our group companies nor any of its directors, officers, or employees makes any warranty or representation as to the appropriateness of virtual assets or pools as an investment or to the availability and/or liquidity of the same in your jurisdiction. You should consult your professional advisor in your jurisdiction before making any decision to invest, or otherwise deal, in virtual assets or pools and you acknowledge and agree you do so at your own risk.
+The materials on this website are not and should not be construed as an advertisement, recommendation, solicitation or offer to sell, purchase or subscribe for any virtual assets or specific pools. Any market information provided within the materials is subject to change and is obtained from sources believed to be reliable but neither the information, nor its source, have been verified. No guarantee, representation or warranty is made as to its accuracy or completeness.
+Neither Centrifuge nor its directors, officers or employees are responsible for, have any control over or endorse any market information published within the materials, and all such market information is attributable to its source. Any information on prices or levels are indicative only and are subject to change at any time. Make sure you always access the most current information before making any decision to access any products and/or the services described in this website.
+Unless otherwise required by applicable law, in no event shall we or any of our affiliates, agents, advisors, directors, officers, or employees and shareholders be liable for any damages (direct or indirect) of any kind, under any theory of liability (including tort, contract, statute, or equity), including, but not limited to, loss of use, loss of profits, or loss of data or any other losses (financial or otherwise) arising out of or in any way connected with this website, materials and/or the services described therein, or arising out of omissions from the information in this website or materials, or resulting from the use of the information therein by you.
+Customers
+Solutions
+Build on Centrifuge
+Distribute via deRWA
+Full-service with Anemoy
+Access tokenized assets
+About
+Centrifuge
+Performance
+RWA Summit
+Careers
+Resources
+Newsroom
+Case Studies
+Blog
+Brand Kit
+Build
+Documentation
+GitHub
+Brand
+Security
+Centrifugescan
+Monthly Newsletter
+Join 5000+ subscribers who receive Tokenized Market Commentary with monthly insights, latest market trends, and Centrifuge updates
+Thank You!
+Your submission has been sent.
+Oops! Something went wrong while submitting the form.
+© 2026 Centrifuge. All rights reserved.
+Privacy Policy Terms of Use Imprint
+Rights of use to the contents
+This website is subject to copy and other protection rights. Any duplication or distribution of layout or contents in part or in entirety, in changed or unchanged form, requires written consent.
+Disclaimer
+All provided information has been carefully researched and checked. In spite of taking due care, Centrifuge does not accept any warranty for the information being correct, complete, and up to date.

@@ -1,0 +1,92 @@
+{
+  "id": "lido-stvaults",
+  "name": "Lido stVaults",
+  "targets": {
+    "app": "https://stvaults.lido.fi",
+    "repo": {
+      "repo": "lidofinance/staking-vault-widget",
+      "ref": "f258fb091d3ca01e5baf98128d01818e407a7877"
+    },
+    "terms": "https://lido.fi/terms-of-use",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "no-geo-code",
+      "type": "code-scan",
+      "claim": "geo_site",
+      "status": "no",
+      "about": "No geo-IP lookup or country block in the stVaults widget",
+      "source": {
+        "repo": "lidofinance/staking-vault-widget",
+        "ref": "f258fb091d3ca01e5baf98128d01818e407a7877"
+      },
+      "absent": [
+        "api\\.country\\.is|ipapi\\.co|ipinfo\\.io|freeipapi|ip-api\\.com|cdn-cgi/trace|/geoip\\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country|req(uest)?\\.geo\\b"
+      ]
+    },
+    {
+      "id": "prod-no-geo",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "no",
+      "about": "Production JS of Lido stVaults: no geo-IP lookup or country block",
+      "source": {
+        "url": "https://stvaults.lido.fi"
+      },
+      "absent": [
+        "api\\.country\\.is|ipapi\\.co|ipinfo\\.io|freeipapi|ip-api\\.com|cdn-cgi/trace|/geoip\\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country"
+      ]
+    },
+    {
+      "id": "screening-validation",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "/api/validation forwards the wallet to Lido's external validation API ({validationAPI}/v2/check/{address}), as on stake.lido.fi",
+      "source": {
+        "repo": "lidofinance/staking-vault-widget",
+        "ref": "f258fb091d3ca01e5baf98128d01818e407a7877",
+        "path": "pages/api/validation.ts"
+      },
+      "expect": [
+        "`/v2/check/\\$\\{validatedAddress\\}`"
+      ]
+    },
+    {
+      "id": "screening-api",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "stVaults /api/validation answers isValid:false for the sanctioned wallet and true for the control",
+      "source": {
+        "method": "GET",
+        "url": "https://stvaults.lido.fi/api/validation?address={address}"
+      },
+      "expect_sdn": [
+        "^status: 200$",
+        "\"isValid\":\\s*false"
+      ],
+      "expect_control": [
+        "^status: 200$",
+        "\"isValid\":\\s*true"
+      ]
+    },
+    {
+      "id": "screening-fail-open",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "The app validates every connected address with the API (falls back to a local address file, else lets it through)",
+      "source": {
+        "repo": "lidofinance/staking-vault-widget",
+        "ref": "f258fb091d3ca01e5baf98128d01818e407a7877",
+        "path": "providers/address-validation-provider.tsx"
+      },
+      "expect": [
+        "API enabled \\+ success → return API\\.isValid",
+        "API enabled \\+ error \\+ NO file → return true \\(DEFAULT\\)"
+      ]
+    }
+  ]
+}

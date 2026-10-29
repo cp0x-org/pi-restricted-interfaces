@@ -1,0 +1,11 @@
+check: beefy/feature-tequities-countries
+about: Vaults with tokenized equities on Base are restricted for these countries
+source: https://github.com/beefyfinance/beefy-v2/blob/b7098b467950b1ac01dbb248241bbc9bfae72e0b/src/config/restrictions.json#L2
+checked_at: 2026-10-11T21:04:38Z
+fetched: https://raw.githubusercontent.com/beefyfinance/beefy-v2/b7098b467950b1ac01dbb248241bbc9bfae72e0b/src/config/restrictions.json
+sha256: 13f65488d5fb5f208a1862cc3f23364e79bbca9f5ee3bae92cef02294a01c09e
+--------------------------------------------------------------------------------
+L2:   "base-tequities": {
+
+--- section the countries were read from ---
+"countries": ["US", "CA", "GB", "AU", "SG"

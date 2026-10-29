@@ -1,0 +1,63 @@
+{
+  "id": "gtrade",
+  "name": "gTrade",
+  "targets": {
+    "app": "https://gains.trade",
+    "repo": null,
+    "terms": "https://gains.trade/terms-of-service",
+    "endpoints": [
+      "https://wrkr.randomdegenerator.xyz/main/api/geo"
+    ]
+  },
+  "checks": [
+    {
+      "id": "geo-terms",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "tos_only",
+      "about": "The Terms prohibit use from the US regardless of IP address and threaten blocking of VPN users (no technical block verified)",
+      "source": {
+        "url": "https://gains.trade/terms-of-service",
+        "kind": "terms"
+      },
+      "expect": [
+        "IS STRICTLY PROHIBITED, REGARDLESS OF THE USER.S IP ADDRESS",
+        "MAY RESULT IN PERMANENT BLOCKING OF USE OF THE SITE"
+      ]
+    },
+    {
+      "id": "prod-geoblock-hook",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production JS: the useGeoblock hook reads per-group flags from gTrade's geoblock API and blocks the pairs of a flagged group",
+      "source": {
+        "url": "https://gains.trade"
+      },
+      "expect": [
+        "\"geoblock-features\"",
+        "https://wrkr\\.randomdegenerator\\.xyz/main/api/geo",
+        "!0===\\w+\\.features\\[\\w+\\]"
+      ]
+    },
+    {
+      "id": "geo-api-us",
+      "type": "live",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Live: gTrade's geoblock API flags stocks and indices for a visitor from the US",
+      "source": {
+        "url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+        "country": "US"
+      },
+      "expect": [
+        "\"stocks\":\\s*true",
+        "\"indices\":\\s*true",
+        "\"country\":\\s*\"US\""
+      ],
+      "countries": [
+        "US"
+      ]
+    }
+  ]
+}

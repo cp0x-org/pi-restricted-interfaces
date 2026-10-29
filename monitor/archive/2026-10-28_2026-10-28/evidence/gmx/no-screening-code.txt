@@ -1,0 +1,13 @@
+check: gmx/no-screening-code
+about: No wallet-screening call or sanctions list in the frontend
+source: https://github.com/gmx-io/gmx-interface/tree/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c
+checked_at: 2026-10-28T22:38:07Z
+fetched: https://codeload.github.com/gmx-io/gmx-interface/tar.gz/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c
+sha256: acf4c536472547a11c96c50c3402aef7b44054cebf3a3816ed1a324665b860f3
+--------------------------------------------------------------------------------
+files scanned: 2691
+patterns that must be absent:
+  trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\w-])|preflight-compliance|/address/status\b|compliance/screen|/v\d/check/
+
+hits:
+  none

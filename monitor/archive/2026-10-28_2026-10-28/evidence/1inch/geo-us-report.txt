@@ -1,0 +1,69 @@
+check: 1inch/geo-us-report
+about: Press report (Sep 2021): 1inch began geofencing US IP addresses (historical; the catalog notes US access was later restored, so it records no country list)
+source: https://www.theblock.co/linked/119055/dex-aggregator-1inch-blocks-out-us-trades-in-preparation-for-separate-american-platform
+checked_at: 2026-10-28T22:56:32Z
+fetched: https://web.archive.org/web/20260703001938id_/https://www.theblock.co/linked/119055/dex-aggregator-1inch-blocks-out-us-trades-in-preparation-for-separate-american-platform
+sha256: 3aa10fa276715ea22384fdafaeb032635bf57c58ecd7d168d9698b4a4f346d5f
+http_status: 200
+via: archive
+--------------------------------------------------------------------------------
+DEX aggregator 1inch blocks out US trades in preparation for separate American platform | The Block
+Discover the institutional crypto exchange LMAX Digital through high-level info and live data here.
+✕
+Institutional crypto intel
+Explore
+Try it free
+News
+Data
+Research
+Prices
+Learn
+Treasuries
+Ratings
+Elections Hub
+NEW
+BTCUSD $61,304.30 -0.27%
+ETHUSD $1,698.37 -0.23%
+SOLUSD $80.59 -0.33%
+PYTHUSD $0.0385 -0.39%
+LINKUSD $7.72 0.07%
+Latest Crypto News
+Securitize becomes first to debut shares on NYSE and onchain, but it won't be the last
+Jul 02, 2026, 4:10PM EDT • Markets
+eToro leads $12.5 million round in onchain perps exchange Extended
+Jul 02, 2026, 3:23PM EDT • Deals
+CFTC’s Selig says Illinois lawmakers ‘decided they know better’ on crypto tax
+Jul 02, 2026, 3:12PM EDT • Regulation
+JPMorgan says Strategy's bitcoin sale policy introduced 'avoidable' risk into crypto markets
+Jul 02, 2026, 2:52PM EDT • Markets
+See More Latest Crypto News
+DEX aggregator 1inch blocks out US trades in preparation for separate American platform
+By Kollen Post
+DeFi • September 29, 2021, 4:38PM EDT
+UPDATED: September 29, 2021, 4:51PM EDT
+Make us preferred on Google Share
+Partner offers The Block may earn a commission if you use our partner offers, at no extra cost to you.
+We'd love your feedback.
+Take a 30-second survey to help improve The Block.
+Start Survey
+Advertisement
+As of September 29, the decentralized exchange aggregator 1inch has begun geofencing U.S. IP addresses.
+Source: 1inch
+Though the platform's terms of use have apparently restricted U.S. users since April, that restriction has only recently come online on a technical level.
+When reached for comment, Sergey Maslennikov, chief communications officer of the 1inch Network, told The Block that "Today we've just added one more pop-up notification and technical layer to control this."
+The move aims to pave the way for a new product to launch in the U.S. The representative wrote:
+"The 1inch Network is in the process of collecting the Series B funding round that has now grown to $175M (instead of $70M as was planned before). A significant part of these funds will be used for the development and launch of the 1inch Pro product which is specifically designed for the US market and for global institutional investors in accordance with all the regulatory requirements."
+Per data from The Block, 1inch is the dominant DEX aggregator on the market, accounting for almost two-thirds of overall volume.
+Expand Chart
+U.S. regulations are relatively stringent on what sorts of investments are available to U.S. users, particularly without the provision of know-your-customer information. Decentralized exchanges and aggregators like 1inch often don't require more information than a wallet address. Though a number of international exchanges limit U.S. (and other jurisdictions') access to their platforms , decentralized exchanges have been less apt to do so.
+Such geofencing is notoriously simple to circumvent using VPNs.
+The degree of regulatory scrutiny is changing DeFi, however. Earlier this summer, leading DEX Uniswap delisted a host of tokens that resembled securities or derivatives offerings, a move that came as the Securities and Exchange Commission began to devote more attention to the DeFi space.
+RATINGS
+Best crypto cards with token rewards in 2026
+See more ratings
+SPONSORED
+tx Launches Mobile App that Unifies Fragmented Worldwide RWA Markets
+June 29, 2026, 9:01AM EDT
+© 2026 the block. all rights reserved.
+Privacy Policy • Terms of Service • Cookie Settings • Security
+Do Not Sell or Share My Personal Information

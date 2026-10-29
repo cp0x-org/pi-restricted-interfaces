@@ -1,0 +1,176 @@
+check: polymarket/geo-close-only
+about: Help center: close-only countries, where users can close existing positions but cannot open new ones
+source: https://help.polymarket.com/en/articles/13364163-geographic-restrictions
+checked_at: 2026-10-28T22:56:56Z
+fetched: https://web.archive.org/web/20261006180258id_/https://help.polymarket.com/en/articles/13364163-geographic-restrictions
+sha256: 90c309cd8d7b45c5b8c6a451b6c408df3059357396314f647736f6f2ed0b0ef2
+http_status: 200
+via: archive
+--------------------------------------------------------------------------------
+Geographic Restrictions | Polymarket Help Center Skip to main content
+Community Developer Docs
+Community Developer Docs
+Search for articles...
+All Collections
+FAQs
+Geographic Restrictions
+Geographic Restrictions
+Countries and regions where Polymarket is restricted
+August 14, 2026
+Table of contents
+Polymarket is not available in certain countries and regions due to regulatory requirements and compliance with international sanctions. This page provides a comprehensive list of all geographically restricted locations.
+Polymarket strictly prohibits the use of VPNs or similar tools to bypass geographic restrictions. Such actions are considered violations of the platform's Terms of Service (Section 2.1.4). Users are required to comply with these guidelines to avoid penalties.
+​Server Infrastructure
+Primary Servers : eu-west-2
+Closest Non-Georestricted Region : eu-west-1
+​Blocked Countries
+The following 39 countries are completely restricted from accessing Polymarket:
+Country Code
+Country Name
+AU
+Australia
+BE
+Belgium
+BY
+Belarus
+BR
+Brazil
+BI
+Burundi
+CF
+Central African Republic
+CD
+Congo (Kinshasa)
+CU
+Cuba
+DE
+Germany
+ET
+Ethiopia
+FR
+France
+GB
+United Kingdom
+IE
+Ireland
+IR
+Iran
+IQ
+Iraq
+IT
+Italy
+JP
+Japan
+KP
+North Korea
+LB
+Lebanon
+LY
+Libya
+MM
+Myanmar
+MT
+Malta
+NI
+Nicaragua
+NL
+Netherlands
+NZ
+New Zealand
+PL
+Poland
+RU
+Russia
+SG
+Singapore
+SK
+Slovakia
+SO
+Somalia
+SS
+South Sudan
+SD
+Sudan
+SY
+Syria
+TW
+Taiwan
+TH
+Thailand
+UM
+United States Minor Outlying Islands
+US
+United States
+VE
+Venezuela
+YE
+Yemen
+ZW
+Zimbabwe
+​Blocked Regions
+In addition to fully blocked countries, the following specific regions within otherwise accessible countries are also restricted:
+Country
+Region
+Region Code
+Canada (CA)
+Alberta
+AB
+Canada (CA)
+British Columbia
+BC
+Canada (CA)
+Ontario
+ON
+Canada (CA)
+Quebec
+QC
+Ukraine (UA)
+Crimea
+43
+Ukraine (UA)
+Donetsk
+14
+Ukraine (UA)
+Luhansk
+09
+Country-specific examples include:
+Ontario, Canada : Trading services are unavailable. Users can access market data globally but cannot deposit or trade, including via the iOS app.
+Italy : Trading is restricted. Users can view markets and data but cannot trade.
+Germany : Trading is prohibited. Existing positions must be held until market resolution to redeem shares, after which funds can be withdrawn without restrictions. Market data and commenting features are available.
+​Blocking Logic
+The geoblocking system includes:
+OFAC-Sanctioned Countries : Countries sanctioned by the U.S. Office of Foreign Assets Control (OFAC)
+Additional Regulatory Restrictions : Countries added for specific regulatory compliance reasons
+​Close-Only Countries
+Some countries have a “close-only” restriction status. Users in these countries can:
+✅ Close existing positions
+❌ Open new positions
+Countries with close-only status include:
+Singapore (SG)
+Poland (PL)
+Thailand (TH)
+Taiwan (TW) For example:
+Singapore (SG): Users may close their existing positions but cannot open new ones and should adhere to all local trading laws.
+Poland (PL): Users may view market data and close-out positions only, no new position-taking is allowed.
+Trading While Traveling
+Polymarket allows trading for users traveling to non-restricted countries. Permissions are based on physical location rather than residency; for instance, users traveling to non-restricted regions, such as Bulgaria, can continue to trade.
+​Why These Restrictions?
+Geographic restrictions are implemented to ensure compliance with:
+International sanctions and embargoes
+Local financial regulations
+Gambling and prediction market laws
+Anti-money laundering (AML) requirements
+Know Your Customer (KYC) regulations
+​Need Help?
+If you believe you are incorrectly restricted or have questions about geographic availability, please contact Polymarket Support
+Related Articles
+Website vs App - What's the Difference?
+Did this answer your question? Disappointed Reaction 😞 Neutral Reaction 😐 Smiley Reaction 😃
+Table of contents
+
+--- section the countries were read from ---
+Countries with close-only status include:
+Singapore (SG)
+Poland (PL)
+Thailand (TH)
+Taiwan (TW) 

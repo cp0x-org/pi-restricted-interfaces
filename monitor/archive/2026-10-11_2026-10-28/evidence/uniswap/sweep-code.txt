@@ -1,0 +1,39 @@
+check: uniswap/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/Uniswap/interface/tree/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada
+checked_at: 2026-10-11T21:04:34Z
+fetched: https://codeload.github.com/Uniswap/interface/tar.gz/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada
+sha256: f559a054edc96ba5590a291d6504f1a438d64a4745a23803cfd0ffa8c499d24b
+--------------------------------------------------------------------------------
+repository: https://github.com/Uniswap/interface/tree/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada
+files scanned: 7997
+
+signals:
+  [strong] geo: country header — 2 file(s)
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/web/functions/components/metaTagInjector.ts#L172  flare sets * `x-blocked-paths: /` on GB, CloudFront sends `CloudFront-Viewer-Country`. * * CloudFront wins outright where present, never merged with the other. *
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/packages/analytics/src/client-identity.ts#L54  rom edge-injected headers. * * Resolution priority: * 1. x-vercel-ip-country — set by Vercel at the edge * 2. cf-ipcountry — set by Cloudflare at the edge
+  [weak] geo: HTTP 451 text — 1 file(s)
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/web/public/451.html#L5  lang="en"> <head> <meta charset="utf-8" /> <title>Unavailable For Legal Reasons</title> </head> <body> <h1>Unavailable For Legal Reasons</h1> </body>
+  [weak] geo: geo-block words — 6 file(s)
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/mobile/src/components/TokenDetails/TokenDetailsActionButtons.tsx#L284  lance states (see useMultichainBuyVariant). The geo-blocked override sets a title even for holders, who still need Send/Receive from the
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/packages/compliance/src/client.ts#L99  Id, address }), }) } /** * Returns the product features geo-blocked for the caller's region. The region * is resolved server-side from the Entry
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/packages/compliance/src/gatedFeaturesQuery.ts#L30  Y, type: 'active' }) } /** * Returns the product features geo-blocked for the caller's region. The region * is resolved server-side, so the result
+  [weak] screening: risk-lookup link — 74 file(s)
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/extension/src/app/features/dappRequests/DappRequestContent.tsx#L58  n disableConfirm?: boolean /** * Malicious (critical Blockaid risk) requests reorder and restyle the footer * buttons: cancel becomes the
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/extension/src/app/features/dappRequests/requestContent/Connection/ConnectionRequestContent.tsx#L12  /components/dappRequests/DappConnectionContent' import { useBlockaidVerification } from 'wallet/src/features/dappRequests/hooks/useBlockaidVerificat
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/extension/src/app/features/dappRequests/requestContent/EthSend/EthSend.tsx#L75  GasValues) }, [onCancel, requestWithGasValues]) // Use Blockaid transaction scanning for ALL transaction types // If the API fails, the Error
+  [strong] screening: screening call — 4 file(s)
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/web/src/components/PrivacyPolicy.tsx#L85  https://support.uniswap.org/hc/en-us/articles/8671777747597-Address-Screening-Guide"> {t('common.button.learn')} </ExternalLink>
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/packages/compliance/src/client.ts#L21  nput = { chainId: number address: string } export type ScreenAddressInput = { address: string /** Optional; omitting it (`CHAIN_ID_UNSPECIFIED`)
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/packages/compliance/src/index.ts#L9  pb' export type { ComplianceTokenInput, ComplianceV2Client, ScreenAddressInput } from '@universe/compliance/src/client' export { createComplianceV2Client
+  [weak] screening: screening words — 9 file(s)
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/web/src/components/GeoRestriction/useToucanGeoRestriction.ts#L2  { hasUnrecognizedReason, isAckGated, isHardBlocked, useTokenComplianceStatus } from '@universe/compliance' import { useTranslation } from 'react-i18next' im
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/web/src/test-utils/render.tsx#L28  tsx) so components that read // useIsFeatureGated / useTokenComplianceStatus (e.g. the swap token selector) render in tests. The stub // fails open (nothing
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/packages/compliance/src/ComplianceClientProvider.tsx#L9  the web app). Mount it * above every consumer of `useTokenComplianceStatus` / `useComplianceClient`. Pass * `client` to inject a stub in tests. */ expor
+  [weak] vpn: VPN words — 2 file(s)
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/config/vitest-presets/vitest/setup.js#L145  uetooth', ethernet: 'ethernet', wimax: 'wimax', vpn: 'vpn', other: 'other', }, })) // TODO: Remove this mock after mocks in
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/packages/utilities/vitest-setup.ts#L43  uetooth', ethernet: 'ethernet', wimax: 'wimax', vpn: 'vpn', }, })) // Mock chrome API (replacing jest-chrome functionality) cons
+  [weak] kyc: KYC words — 34 file(s)
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/extension/src/app/features/dappRequests/requestContent/EthSend/Swap/PermissionedSwapBlockedContent.tsx#L13  ion; // the footer's cancel button rejects the request. The KYC link opens in a normal // browser tab, matching the user-initiated swap surface
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/extension/src/app/features/dappRequests/requestContent/EthSend/Swap/SwapRequestContent.tsx#L86  put ? nativeCurrencyInfo : outputCurrencyInfo // Key the KYC check on the account this request will be signed with (currentAccount), not the
+      https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/extension/src/app/features/dappRequests/requestContent/EthSend/Swap/useDappSwapPermissionedBlock.ts#L26  t a connected account that isn't the active one; keying the KYC check on the active // account would fail open for a non-allowlisted connected

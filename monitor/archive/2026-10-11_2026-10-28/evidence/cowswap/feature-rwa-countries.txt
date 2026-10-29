@@ -1,0 +1,62 @@
+check: cowswap/feature-rwa-countries
+about: Restricted (RWA / tokenized stock) token lists are hidden for visitors from RESTRICTED_COUNTRIES
+source: https://github.com/cowprotocol/cowswap/blob/7f861f9d12a0f9b0db33f9b0b1679ec309025120/libs/core/src/cms/consts.ts#L13
+checked_at: 2026-10-11T21:04:38Z
+fetched: https://raw.githubusercontent.com/cowprotocol/cowswap/7f861f9d12a0f9b0db33f9b0b1679ec309025120/libs/core/src/cms/consts.ts
+sha256: d10ca12a5f6f87786d56ae3efc13302196ff4977d1edb514511901de4f88b461
+--------------------------------------------------------------------------------
+L13: export const RESTRICTED_COUNTRIES = [
+L69:   restrictedCountries: [...RESTRICTED_COUNTRIES],
+
+--- section the countries were read from ---
+export const RESTRICTED_COUNTRIES = [
+  'AF',
+  'DZ',
+  'BY',
+  'CA',
+  'CN',
+  'CU',
+  'KP',
+  'ER',
+  'IR',
+  'LY',
+  'MM',
+  'MA',
+  'NP',
+  'RU',
+  'SO',
+  'SS',
+  'SD',
+  'SY',
+  'US',
+  'VE',
+  'AT',
+  'BE',
+  'BG',
+  'HR',
+  'CY',
+  'CZ',
+  'DK',
+  'EE',
+  'FI',
+  'FR',
+  'DE',
+  'GR',
+  'HU',
+  'IE',
+  'IT',
+  'LV',
+  'LT',
+  'LU',
+  'MT',
+  'NL',
+  'PL',
+  'PT',
+  'RO',
+  'SK',
+  'SI',
+  'ES',
+  'SE',
+  'IS',
+  'LI',
+  'NO',

@@ -1,0 +1,11 @@
+{
+  "id": "fluid",
+  "name": "Fluid",
+  "targets": {
+    "app": "https://fluid.io",
+    "repo": null,
+    "terms": "https://instadapp.io/terms",
+    "endpoints": []
+  },
+  "checks": []
+}

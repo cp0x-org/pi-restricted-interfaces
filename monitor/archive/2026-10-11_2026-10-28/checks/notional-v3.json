@@ -1,0 +1,82 @@
+{
+  "id": "notional-v3",
+  "name": "Notional V3",
+  "targets": {
+    "app": "https://v3.notional.finance",
+    "repo": {
+      "repo": "notional-finance/notional-monorepo",
+      "ref": "cff15de4b098d101b2a023732efd242496c42888"
+    },
+    "terms": "https://v3.notional.finance/terms",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-countries",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "The V3 app sends visitors from a hardcoded country list (country from api.notional.finance/geoip) to /error?code=451",
+      "source": {
+        "url": "https://v3.notional.finance",
+        "scripts": "^https://v3\\.notional\\.finance/"
+      },
+      "expect": [
+        "fetch\\(\"https://api\\.notional\\.finance/geoip\"\\)",
+        "\"/error\\?code=451\""
+      ],
+      "section": {
+        "start": "\\[\"CU\",\"IR\",\"IQ\"",
+        "end": "\\]"
+      },
+      "countries": "codes",
+      "case": true
+    },
+    {
+      "id": "feature-us-leverage",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Leveraged products are disabled in the US and for VPN users",
+      "source": {
+        "url": "https://v3.notional.finance",
+        "scripts": "^https://v3\\.notional\\.finance/"
+      },
+      "expect": [
+        "Leveraged products are not available in the US or to VPN users"
+      ],
+      "countries": [
+        "US"
+      ]
+    },
+    {
+      "id": "screening-oracle",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "The connected wallet is checked with the Chainalysis Sanctions Oracle (isSanctioned)",
+      "source": {
+        "url": "https://v3.notional.finance",
+        "scripts": "^https://v3\\.notional\\.finance/"
+      },
+      "expect": [
+        "\"0x40c57923924b5c5c5455c48d93317139addac8fb\",\\[\"function isSanctioned\\(address\\) view returns \\(bool\\)\"\\]"
+      ]
+    },
+    {
+      "id": "vpn-detect",
+      "type": "bundle",
+      "claim": "vpn",
+      "status": "detect",
+      "about": "detect.notional.finance: a non-200 answer marks the visitor as 'VPN'",
+      "source": {
+        "url": "https://v3.notional.finance",
+        "scripts": "^https://v3\\.notional\\.finance/"
+      },
+      "expect": [
+        "fetch\\(\"https://detect\\.notional\\.finance/\"\\)",
+        "200!==a\\.status\\?\"VPN\""
+      ]
+    }
+  ]
+}

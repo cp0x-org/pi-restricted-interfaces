@@ -1,0 +1,57 @@
+{
+  "id": "spark",
+  "name": "Spark",
+  "targets": {
+    "app": "https://app.spark.fi",
+    "repo": null,
+    "terms": "https://spark.finance/terms-of-use",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-us-report",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "reported",
+      "about": "Press report (Aug 2023): Spark restricts United States users",
+      "source": {
+        "url": "https://cointelegraph.com/news/makerdao-spark-protocol-block-vpn-users-controversy",
+        "kind": "press"
+      },
+      "expect": [
+        "restrict United States users from accessing the crypto lending platform"
+      ],
+      "countries": [
+        "US"
+      ]
+    },
+    {
+      "id": "screening-trm-report",
+      "type": "page",
+      "claim": "screening",
+      "status": "reported",
+      "about": "Press report (Aug 2023): Spark is said to use TRM Labs to block wallets",
+      "source": {
+        "url": "https://cointelegraph.com/news/makerdao-spark-protocol-block-vpn-users-controversy",
+        "kind": "press"
+      },
+      "expect": [
+        "use TRM.s blockchain intelligence services to block wallets"
+      ]
+    },
+    {
+      "id": "vpn-block-report",
+      "type": "page",
+      "claim": "vpn",
+      "status": "block",
+      "about": "Press report (Aug 2023): VPN visitors see 'Accessing this website via VPN is not allowed'",
+      "source": {
+        "url": "https://cointelegraph.com/news/makerdao-spark-protocol-block-vpn-users-controversy",
+        "kind": "press"
+      },
+      "expect": [
+        "Accessing this website via VPN is not allowed"
+      ]
+    }
+  ]
+}

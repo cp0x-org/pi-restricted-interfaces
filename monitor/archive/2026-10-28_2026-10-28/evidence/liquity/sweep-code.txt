@@ -1,0 +1,18 @@
+check: liquity/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/liquity/bold/tree/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0
+checked_at: 2026-10-28T22:36:20Z
+fetched: https://codeload.github.com/liquity/bold/tar.gz/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0
+sha256: dcec1691132a8fc79be26269a48ceb12ec654807e2a1be4a35fab0e74b6f5b7a
+--------------------------------------------------------------------------------
+repository: https://github.com/liquity/bold/tree/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0
+files scanned: 558
+
+signals:
+  [weak] geo: geo-block words — 1 file(s)
+      https://github.com/liquity/bold/blob/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0/frontend/app/src/comps/Blocking/Blocking.tsx#L43  api.data?.isCountryBlocked) { blocked = { title: "Blocked country", message: `This app cannot be accessed from this country (${accountVpna
+  [strong] vpn: VPN detection — 2 file(s)
+      https://github.com/liquity/bold/blob/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0/frontend/app/.env#L15  LIST=0x97044531D0fD5B84438499A49629488105Dc58e6 # format: {vpnapi.io key}|{comma separated country codes} e.g. 1234|US,CA # NEXT_PUBLIC_BLOCKING_VPN
+      https://github.com/liquity/bold/blob/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0/frontend/app/src/comps/Blocking/Blocking.tsx#L103  ry: false, refetchInterval: false, }, }); } // vpnapi.io blocking const VpnapiResponseSchema = v.pipe( v.object({ ip: v.string(),
+  [weak] vpn: VPN words — 1 file(s)
+      https://github.com/liquity/bold/blob/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0/frontend/app/src/comps/Blocking/Blocking.tsx#L36  { blocked = { title: "Routed connection detected (VPN or similar)", message: "This app cannot be accessed from a routed connect

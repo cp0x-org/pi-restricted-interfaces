@@ -1,0 +1,10 @@
+check: liquity/geo-optional
+about: Country block via vpnapi.io exists in the code but runs only when NEXT_PUBLIC_BLOCKING_VPNAPI is set (off by default)
+source: https://github.com/liquity/bold/blob/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0/frontend/app/src/comps/Blocking/Blocking.tsx#L5
+checked_at: 2026-10-11T21:04:43Z
+fetched: https://raw.githubusercontent.com/liquity/bold/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0/frontend/app/src/comps/Blocking/Blocking.tsx
+sha256: 41d83ccec6a825807b7879642c0cf840732c49261ab3bfa7f340c485aeba67bc
+--------------------------------------------------------------------------------
+L5: import { BLOCKING_LIST, BLOCKING_VPNAPI } from "@/src/env";
+L41:   if (accountVpnapi.data?.isCountryBlocked) {
+L44:       message: `This app cannot be accessed from this country (${accountVpnapi.data.country}).`,

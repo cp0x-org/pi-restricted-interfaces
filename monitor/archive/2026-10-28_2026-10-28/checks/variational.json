@@ -1,0 +1,48 @@
+{
+  "id": "variational",
+  "name": "Variational",
+  "targets": {
+    "app": "https://omni.variational.io",
+    "repo": null,
+    "terms": "https://docs.variational.io/legal/terms-of-use",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "prod-restricted-jurisdiction",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Production JS: the app reads isRestrictedJurisdiction from the /banner API and reloads into the Cloudflare block page when a request answers 'access restricted'",
+      "source": {
+        "url": "https://omni.variational.io"
+      },
+      "expect": [
+        "isRestrictedJurisdiction",
+        "/access restricted/i\\.test\\("
+      ]
+    },
+    {
+      "id": "geo-restricted-persons",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "tos_only",
+      "about": "Territories named on Variational's Restricted Persons page (documentation only until a per-country check confirms where the block applies)",
+      "source": {
+        "url": "https://docs.variational.io/legal/restricted-persons",
+        "kind": "docs"
+      },
+      "expect": [
+        "These restricted territories are currently:"
+      ],
+      "section": {
+        "start": "These restricted territories are currently:",
+        "end": "Any person \\(natural or legal\\) that is"
+      },
+      "exclude": [
+        "regions of Ukraine"
+      ],
+      "countries": "names"
+    }
+  ]
+}

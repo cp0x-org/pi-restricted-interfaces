@@ -1,0 +1,280 @@
+check: etherfi/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://www.ether.fi/app
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 33939,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 33943,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 33945,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34150,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34150,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 33939,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34145,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 33943,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 33944,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 33944,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 33948,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 33943,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 33939,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34154,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 33950,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34144,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34154,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34159,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34156,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": null,
+   "final_url": "https://www.ether.fi/app",
+   "state": "error",
+   "why": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 429,
+   "final_url": "https://www.ether.fi/app",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 33944,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ }
+}

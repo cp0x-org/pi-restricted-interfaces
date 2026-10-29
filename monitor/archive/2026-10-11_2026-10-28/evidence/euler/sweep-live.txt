@@ -1,0 +1,511 @@
+check: euler/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://app.euler.finance
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"P2eGR5jXI0Y3lJdpIatT/A==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"6OksEo5+g/0/ZTEC7wkK/Q==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"YEkUKsELH9JuEzcRUJpzoA==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"kjCDj6DGxTFXT5MeT3YHxA==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"fOngjbXkmsG68/J8oCVNzw==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"uq3AJSu+3qq28R6sN1JtZQ==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"zkotC+gYbOBKvjySFeN/kw==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"frqU0DjwVg7OMDNaJOJ1ng==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"wojsa8tCIh58mHuCLojVMQ==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"WNrf+AtI9CFz8u2C0d2kdA==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"tzt8vXpUxwHgsCxoWMTVsQ==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"vOczYVLyJLSCe3a02mhBCQ==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"2itJzVQ7Co5YpCshHEHYqA==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"sAKImm965HlsPGTuoTikLg==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"muF5+gzx/rSQ+b7n63OM8g==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"2ycjcmw6LMLl1De3Xzn/hA==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"TrBCgxrXEzBA7hTEqgzk4g==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"dwSjD81Kewb5ac9TrVsD0w==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"CXQ5Qcf1Z4bybI5Nnjqp9Q==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"vhQtSrEdtszzNeGu/Gr2PA==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.euler.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Euler Finance",
+   "scripts": [
+    "/_nuxt/CLxFAitc.js"
+   ],
+   "bytes": 16895,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://app.euler.finance/api/ping": {
+   "status": 403,
+   "final_url": "https://app.euler.finance/api/ping",
+   "state": "unknown",
+   "flags": {},
+   "body": "<!DOCTYPE html><html lang=\"en\" data-theme=\"dark\"><head><script nonce=\"+T1muxsa/LX9kBw5xMsbMg==\">(function(){if(window.self===window.top)return;document.documentElement.style.display='none';try{window",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ }
+}

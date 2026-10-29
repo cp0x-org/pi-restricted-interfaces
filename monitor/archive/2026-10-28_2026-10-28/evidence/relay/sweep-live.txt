@@ -1,0 +1,735 @@
+check: relay/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://relay.link
+checked_at: 2026-10-28T23:07:44Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34234,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34228,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CA": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34218,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "MX": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34219,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 40673,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CO": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34228,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 40682,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34227,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34220,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34227,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "ES": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34223,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34218,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34227,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34227,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34222,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34223,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34217,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34228,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SA": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34222,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34221,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34226,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34219,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34217,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34217,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34238,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34228,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34228,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34223,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CN": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34225,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "KR": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 40673,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "TW": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34223,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34217,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 40676,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "ZA": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 40679,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": null,
+   "final_url": "https://relay.link",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34219,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34224,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34218,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34217,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": null,
+   "final_url": "https://relay.link",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34227,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 403,
+   "final_url": "https://relay.link",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "403: Forbidden",
+   "scripts": [],
+   "bytes": 7255,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34217,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34224,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34222,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34227,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34221,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": null,
+   "final_url": "https://relay.link",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34224,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": null,
+   "final_url": "https://relay.link",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 40677,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34229,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 40672,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 40678,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 34218,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 429,
+   "final_url": "https://relay.link",
+   "state": "challenge",
+   "why": "HTTP 429 anti-bot challenge",
+   "title": "Vercel Security Checkpoint",
+   "scripts": [],
+   "bytes": 40672,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ }
+}

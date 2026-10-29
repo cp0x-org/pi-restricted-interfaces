@@ -1,0 +1,531 @@
+check: frax/kyc-report
+about: LlamaRisk review: full KYC/KYB will be required for minting or redeeming through FraxNet bank and fiat rails
+source: https://llamarisk.com/research/pegkeeper-onboarding-frxusd
+checked_at: 2026-10-28T22:56:43Z
+fetched: https://llamarisk.com/research/pegkeeper-onboarding-frxusd
+sha256: 1d377090f1b7ccc19449b525a9c3c388aee2b7ddc769fb8999bb55af8e9bcf96
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+Skip to main content
+Risk Intelligence (opens in a new tab) LlamaGuard (opens in a new tab) Research Company
+Research
+Research
+Pegkeeper Onboarding Review: Frax frxUSD
+August 1, 2025 38 minutes
+Curve
+Asset Risk Assessment
+Pegkeeper Onboarding Review: Frax frxUSD
+Table of contents
+1.1 Description of the Stablecoin
+1.1.1 User Flow
+1.1.2 Reserves Overview
+1.1.3 Fees and Business Model
+1.1.4 Organizational Structure
+1.1.5 Third Party Relations
+1.1.6 History
+1.2 System Architecture
+1.2.1 Stablecoin Overview
+1.2.2 Architecture Diagram
+1.2.3 Key Components
+2.1 Market Performance
+2.1.1 Outstanding and Free-Float Supply
+2.1.2 Market Share in Overall Stablecoins Supply
+2.1.3 Supply Distribution
+2.1.4 Transaction Count and Volume
+2.1.5 Transfer Value Distribution
+2.1.6 Stablecoin Velocity
+2.1.7 Active Users
+2.1.8 User Growth
+2.1.9 Activity Distribution
+2.2 Peg Stability Metrics
+2.2.1 Peg Deviation Frequency
+2.2.2 Maximum Peg Deviation
+2.2.3 Standard Deviation of Pegged Value
+2.2.4 Market Depth at Pegged Value
+2.2.5 Peg Recovery Time
+2.3 Liquidity
+2.3.1 Supported CEXs and DEXs
+2.3.2 On-chain Liquidity TVL and Depth
+2.3.3 Liquidity Pool Distribution
+2.3.4 Liquidity Incentives and Yield
+2.3.5 DEX Trading Volume
+2.3.6 Liquidity Utilization Rate
+2.3.7 Liquidity Pool Resilience
+2.3.8 Stablecoin Usage in DeFi
+2.3.9 Net Cross-Chain Flow
+3.1 Operational Overview
+3.1.1 Smart Contracts
+3.1.2 Dependencies
+3.1.3 Access Control
+3.1.4 Operational Security Practices
+3.2 Development and Security Metrics
+3.2.1 Development Activity
+3.2.2 Number of Active Developers
+3.2.3 Documentation Quality
+3.2.4 Upgrade Frequency
+3.2.5 Smart Contract Audits
+3.2.6 Known Vulnerabilities Count
+3.2.7 Bug Bounty Program Size
+3.2.8 Historical Downtime
+4.1 Reserves Management
+4.1.1 Reserve Assets
+4.1.2 Overcollateralization Buffer
+4.1.3 Custody of Reserves
+4.1.4 Payment Rails
+4.1.5 Attestations
+4.1.6 Legal Qualification of Collateral
+4.2 Regulations
+4.2.1 License
+4.2.2 Enforcement Actions/Lawsuits
+4.2.3 Legal Opinion
+4.2.4 Sanctions Compliance
+4.2.5 User Restrictions
+4.2.6 Restrictions for Illegal Use
+4.2.7 Customer Protection
+5.1 Comparative Analysis of Pegkeeper Assets
+5.1.1 Geographical Correlation
+5.1.2 Peg Stability
+5.1.3 Pegkeeper Relative Exposure
+5.2 Recommendation
+A comprehensive risk review of Frax frxUSD for crvUSD Pegkeeper Onboarding Consideration
+# Section 1: Stablecoin Fundamentals
+This section addresses the fundamentals of the proposed pegkeeper asset. It is essential to convey (1) the value proposition/utility of the stablecoin, and (2) an overview of the on-chain technical architecture. This section contains descriptive elements that cannot be quantified and serves as a descriptive introduction to the stablecoin.
+This section is divided into 2 sub-sections:
+1.1: Description of the Stablecoin
+1.2: System Architecture
+# 1.1 Description of the Stablecoin
+# 1.1.1 User Flow
+Users can obtain frxUSD by depositing an eligible reserve token to an enshrined custodian contract to mint or swap for frxUSD on a secondary marketplace.
+Source: LlamaRisk, July 27th, 2025
+The primary redemption method for frxUSD is through an enshrined custodian contract, where frxUSD is burned in exchange for the corresponding reserve tokens. Users can also swap out of frxUSD on a secondary marketplace.
+Source: LlamaRisk, July 27th, 2025
+Currently, the only direct method of minting/redeeming is through enshrined custodian contracts, which require the use of RWAs. However, Frax is in the process of launching Frax Net, which will feature direct fiat on-ramp/off-ramp capabilities.
+# 1.1.2 Reserves Overview
+Reserves for frxUSD are held by enshrined custodians in reserve tokens. These reserve tokens are mandated to be backed by cash and cash-equivalents. There are currently 5 enshrined custodians that support 6 different reserve tokens.
+Custodian
+Asset
+Securitize
+BUIDL
+Superstate
+USCC
+Superstate
+USTB
+Agora
+AUSD
+Centrifuge
+JTRSY
+WisdomTree
+WTGXX
+Should off-chain book-entry holdings be used, the Frax team reports they will undergo quarterly audits and public attestations similarly to other leading RWA projects. frxUSD also currently has USDB by Bridge as a reserve token, but USDB is not listed as an accepted reserve token in Frax's documentation. View the current breakdown of reserve tokens here .
+# 1.1.3 Fees and Business Model
+Revenue for the staked version of frxUSD, sfrxUSD, is generated from either a blend of on-chain sources [or AMOs] (Aave, Curve, Convex, Compound), RWA, or carry-trade partners (Ethena, Superstate, Securitize, FinresPBC), managed by a purported Benchmark Yield Strategy that automatically shifts 100% of vault capital to whichever venue offers the highest risk-adjusted return - be it carry-trade, DeFi AMO, or short-dated US T-bills. The current allocations can be viewed here . The Frax team does retain some protocol revenue to cover operational and regulatory expenses, but it is stated that excess profit is transferred back to the Frax DAO.
+Mint/redeem and operational fees vary by custodian, but Frax itself does not charge fees for mint/redeem. The only custodian with a mint/redeem fee is Securitize with a 0.15% fee, while Superstate, Agora, Centrifuge, and WisdomTree have none.
+BUIDL charges a "unitary fee" on the net asset value by blockchain. View the unitary fee here . Superstate charges a 0.75% and 0.15% management fee on USCC and USTB, respectively. WTGXX and JTRSY have a 0.25% management fee. A third-party listed AUSD as having no fees, but this could not be found in the Agora documentation.
+# 1.1.4 Organizational Structure
+Financial Reserves & Asset Exploration Inc., a Delaware-incorporated public-benefit C-corporation, now trades under the doing-business-as name “Frax Inc.” Company directors are obliged to balance shareholder interests with the stated public benefit—bringing “cash-equivalent real-world assets on-chain for the Frax Protocol.” The company is formally non-profit-seeking : its charter prohibits activities outside that mission and requires any yield it earns on reserves to flow back to the protocol.
+The company is privately held. While its cap table has not been published, governance proposals disclose that the Frax DAO is the economic beneficiary : Frax Inc. may retain only the revenue needed to cover legal, audit, and operating costs, and must return all surplus income to the DAO treasury. Day-to-day management sits primarily with the founders Sam Kazemian and Travis Moore, and senior Frax protocol contributors.
+# 1.1.5 Third Party Relations
+The Frax protocol is supported by significant venture capital investment, having conducted multiple fundraising rounds. Records indicate a seed round in 2021 and other strategic funding events involving investors such as Crypto.com Capital, Ascensive Assets, and a consortium of other funds. PitchBook lists a total of 26 investors, including names like A195 Capital and BlackDragon. The aggregate disclosed proceeds are approximately $1.2M. No traditional venture Series A has been attempted.
+Convex’s vlCVX holds a sizeable part of the veFXS voting power; via its gauge-weight votes, it steers the bulk of emission incentives that maintain secondary-market liquidity for frxUSD pairs. On-chain growth is anchored in Fraxtal, Frax’s Optimism-stack L2. Launch-partner integrations, such as Safe multisig, Chainlink oracles, Axelar and LayerZero bridges, extend immediate composability, while infrastructure collaborations with Noble (Cosmos IBC), Alchemy (account abstraction), and Sonic widen distribution rails for frxUSD and its yield-bearing wrappers.
+# 1.1.6 History
+frxUSD has had numerous Frax governance proposals enacted by the Frax multisig. Most of these governance proposals are to onboard new custodians and reserve tokens. Here's a list of key Frax governance proposals for frxUSD:
+Name
+Description
+Date
+FIP-418
+Add BUIDL as reserve token
+12/20/24
+FIP-419
+Launch frxUSD and migrate FRAX
+12/21/24
+FIP-420
+Add USCC as reserve token
+12/20/24
+FIP-421
+Add USTB as reserve token
+12/20/24
+FIP-425
+Add AUSD as reserve token
+1/21/25
+FIP-426
+Add JTRSY as reserve token
+2/10/25
+FIP-427
+Add WTGXX as reserve token
+3/7/25
+FIP-430
+Prepare frxUSD for US regulatory requirements
+4/21/25
+FIP-432
+Transfer frxUSD compliance and collateral management to FRAX Inc
+7/6/25
+# 1.2 System Architecture
+# 1.2.1 Stablecoin Overview
+A user that passes whitelisting with custodians may mint or redeem frxUSD with said custodians for no fee (Superstate, Agora, Centrifuge, WisdomTree), or a 0.15% fee (Securitize). The flow of funds when a user wants to mint is as follows:
+A whitelisted user requests frxUSD from a custodian and deposits accepted RWA.
+The custodian increases its cap limit for frxUSD and mints frxUSD equivalent to the deposited RWA.
+frxUSD is sent back to the user.
+The process for redeeming frxUSD is as follows:
+A whitelisted user sends frxUSD to the custodian.
+The custodian burns the frxUSD and decreases its cap limit for frxUSD.
+RWA equivalent to the burnt frxUSD is sent back to the user.
+It should also be noted that frxUSD can be obtained and sold through secondary markets on-chain. Liquidity for frxUSD is present on several DEXes on several chains.
+Mint/redeem requests are either processed intra-business day or by the next business day, depending on the custodian and time of request.
+frxUSD can also be staked for sfrxUSD, an ERC-4626 vault. To receive sfrxUSD, users stake frxUSD to receive an equivalent amount of sfrxUSD; subsequently, the deposited frxUSD is used to generate yield. sfrxUSD is available on multiple chains through LayerZero, similar to frxUSD.
+# 1.2.2 Architecture Diagram
+Source: LlamaRisk, July 27th, 2025
+# 1.2.3 Key Components
+Frax utilizes the LayerZero Omnichain Fungible Token (OFT) Standard to enable the bridging of frxUSD across multiple blockchains. frxUSD is natively supported on Ethereum and Fraxtal, but is represented as an OFT on other chains. OFTs operate in the same manner as normal ERC-20 tokens with the added functionality of cross-chain bridging through LayerZero.
+Lockboxes hold native tokens in their contract to facilitate the conversion between OFTs and native tokens. Frax utilizes a dual-lockbox design where users can exit their frxUSD OFT into native frxUSD on both Ethereum and Fraxtal. Both OFTs and lockboxes are audited and managed by a 3/5 multisig on each supported chain. It should be noted that using a bridged asset brings additional third-party risks.
+There are two models that frxUSD is bridged:
+Hub: A centralized bridging model where each transaction is routed through Fraxtal (ex. Chain A => Fraxtal => Chain B)
+Mesh: A direct connection between chains (ex. Chain A => Chain B)
+Notable chains using the Hub model:
+zkSync
+Aptos
+Linea
+Notable chains using the Mesh model:
+Sonic
+Arbitrum
+Optimism
+Polygon
+Avalanche
+BSC
+Base
+A full list of supported chains can be viewed here .
+# Section 2: Performance Analytics
+This section evaluates the pegkeeper candidate from a quantitative perspective. It analyzes stablecoin performance metrics in terms of market adoption, peg stability, and liquidity.
+This section is divided into 3 sub-sections:
+2.1: Market Performance
+2.2: Peg Stability Metrics
+2.3: Liquidity
+# 2.1 Market Performance
+# 2.1.1 Outstanding and Free-Float Supply
+Outstanding Supply : Total amount of stablecoins in circulation over time
+Free-Float Supply : Applies a standardized criterion for units of supply to exclude from free float. (source: Coinmetrics formula )
+Total Outstanding Supply
+Source: DefilLlama (Accessed 23-07-2025)
+Free-Float Supply of frxUSD on Ethereum
+In order to calculate the Free Float Supply of frxUSD on Ethereum, exclude the sfrxUSD Token 0xcf62f905562626cfcdd2261162a51fd02fc9c5b6 , the Fraxtal: L1 Standard Bridge Proxy 0x34c0bd5877a5ee7099d0f5688d65f4bb9158bde2 and the Frax Finance: Comptroller 0xb1748c79709f4ba2dd82834b8c82d4a505003f27 .
+Source: Dune - @xm3van (Accessed 23-07-2025)
+The Free Float Supply of frxUSD on Ethereum is approximately 8.1m at the time of writing.
+# 2.1.2 Market Share in Overall Stablecoins Supply
+According to Frax Facts , frxUSD's market cap is $65m. However, this doesn't take LayerZero frxUSD assets into account. Using DefiLlama statistics, this places frxUSD as the 57th largest stablecoin by market cap. Stablecoins with similar market caps include Liquity BOLD ($43m), Resupply USD ($72.8m), and Binance USD ($57.5m).
+# 2.1.3 Supply Distribution
+Between Fraxtal and Ethereum, approximately 42% of the frxUSD supply is staked into sfrxUSD. Only 74% of native frxUSD is on Ethereum, with the remaining supply on Fraxtal. There are additional LayerZero frxUSD assets on chains such as Solana, Linea, and Sonic. On Ethereum, the two biggest DEX pools make up 7% of the total supply of frxUSD (3.2m in sUSDS/frxUSD and 900k in FRAX/frxUSD). Nearly 100% of sUSDS/frxUSD liquidity is held in Convex Finance.
+Supply Distribution Across Chains Source:
+DefilLlama (Accessed 22-07-2025)
+Ethereum
+Source: Etherscan (Accessed 23-07-2025)
+Fraxtal
+Source: Fraxscan (Accessed 23-07-2025)
+# 2.1.4 Transaction Count and Volume
+With overall volume decreasing over the past 90 days, it shows a decline in frxUSD usage, consistent with its market cap decreasing.
+Source: Dune - @xm3van (Accessed 23-07-2025)
+# 2.1.5 Transfer Value Distribution
+If stablecoins are used as a means of payment for retail users, we should see that the majority of transfer value falls below $100 (PayPal’s average transaction value in Q1 2020 was around $58). On the other hand, if one sees stablecoins as liquidity rails for traders, the majority of payments should be of high value.
+The transfer value distribution shows that frxUSD is dominated by large capital holders.
+Source: Dune - @xm3van (Accessed 23-07-2025)
+# 2.1.6 Stablecoin Velocity
+Stablecoin velocity measures the rate at which the stablecoin changes hands on-chain. The frxUSD stablecoin velocity for the past 30 days has averaged around 15%, close to its all-time average of 13%. This indicates a high amount of transaction volume relative to its outstanding supply.
+Source: Dune - @xm3van (Accessed 23-07-2025)
+# 2.1.7 Active Users
+Over the past 7 days, there was a little over 200 active users of frxUSD. The small amount of active users may be partially attributed to users staking frxUSD for sfrxUSD and then leaving it be to accure passive yield.
+Source: Dune - @xm3van (Accessed 23-07-2025)
+# 2.1.8 User Growth
+The unique user addresses that utilize frxUSD has seen steady growth since its inception early in 2025.
+Source: Dune - @xm3van (Accessed 23-07-2025)
+# 2.1.9 Activity Distribution
+The top 5% of active addresses have contributed to over 80% of on-chain transactions involving frxUSD, indicating a potential lack of use for the token outside of a few venues.
+Source: Dune - @xm3van (Accessed 23-07-2025)
+# 2.2 Peg Stability Metrics
+# 2.2.1 Peg Deviation Frequency
+The price of frxUSD on Curve pools (which represent nearly all of frxUSD liquidity on Ethereum) shows one price deviation greater than 0.5% that occurred on 6/26/25. Besides this instance, the frxUSD peg generally stayed within a ± 10 bps range. Notably, in the past 3 months, frxUSD has only seen 3 price deviations beyond this 10 bps range.
+Source: LlamaRisk, July 13th, 2025
+# 2.2.2 Maximum Peg Deviation
+Cross-referencing the Curve API and Chainlink Data Feed, the maximum peg deviation since frxUSD was deployed to ETH was $0.00985.
+Source: frxUSD Daily Off-peg, LlamaRisk
+# 2.2.3 Standard Deviation of Pegged Value
+Since 2/7/25 when frxUSD was first introduced to Curve on Ethereum, the frxUSD peg has had a standard deviation of $0.00184 on an hourly basis. Comparatively, USDe has a standard deviation of $0.00101 and USDT has a standard deviation of $0.0005.
+# 2.2.4 Market Depth at Pegged Value
+There is currently around $5.5m of frxUSD sell liquidity within a .16% slippage tolerance.
+Source: DeFiLlama , July 13th, 2025
+There is around $3.25m of frxUSD buy liquidity within a .19% slippage tolerance.
+Source: DeFiLlama , July 13th, 2025
+These slippage tolerance bounds fall within the normal range of the frxUSD peg.
+# 2.2.5 Peg Recovery Time
+Using 0.1% as a threshold for being properly pegged, here are frxUSD's peg recovery times from the past three months:
+Date
+Time to Recovery
+5/30/25
+1 hour
+6/26/25
+6 hours
+7/11/25
+2 hours
+It should be noted that when frxUSD was originally deployed to Ethereum, the peg was quite volatile and was consistently below peg. However, over the past three months, the peg has become tighter around $1 and reduced in volatility.
+# 2.3 Liquidity
+# 2.3.1 Supported CEXs and DEXs
+Currently, frxUSD is exclusively traded on DEXs and is not listed on any centralized exchange.
+The DEXs that have frxUSD are:
+SwapX (Sonic)
+Orca (Solana)
+Thena (BSC)
+Nile (Linea)
+Shadow Exchange (Sonic)
+Curve Finance (Ethereum/Sonic)
+Ra Exchange (Fraxtal)
+# 2.3.2 On-chain Liquidity TVL and Depth
+Source: frxUSD Liquidity on Ethereum, ODOS , July 7, 2025.
+There is ± 10% slippage for selling 6.875m frxUSD on Ethereum.
+# 2.3.3 Liquidity Pool Distribution
+The total frxUSD liquidity across DEXs on Ethereum is approximately $10.7m, with most frxUSD held in the Curve frxUSD/sUSDS Liquidity Pool . All meaningful liquidity is in Curve liquidity pools. The volume for frxUSD is split relatively evenly across Curve pools.
+It should also be noted that sfrxUSD, which is obtained through free and instantaneous staking of frxUSD, has an additional $150k of liquidity on Ethereum.
+# 2.3.4 Liquidity Incentives and Yield
+Nearly all of frxUSD and sfrxUSD Ethereum liquidity exists on Curve Finance. Many of the pools hover between a base APY of 1-5% with CRV/CVX emissions bringing the effective APY as high as 30%.
+Source: DefiLlama , July 14th, 2025
+# 2.3.5 DEX Trading Volume
+Over the past 7 days, frxUSD has seen approximately $11m in trading volume. Over the last 30 days, the volume reached $83m, and over the past 90 days, it totaled $193m.
+Source: LlamaRisk, July 14th, 2025
+# 2.3.6 Liquidity Utilization Rate
+Over the past 7 days, frxUSD liquidity utilization has had an average of 14.6% on Ethereum. Over the last 30 days, the liquidity utilization averaged 25.6%, but over the last 90 days, the average was only 13.7%.
+Source: LlamaRisk, July 14th, 2025
+# 2.3.7 Liquidity Pool Resilience
+The resilience of Curve pools containing frxUSD is assessed by analyzing average slippage on trades exceeding $10,000, categorized by trade size (small, mid, large, whale). Slippage is defined as the percentage deviation from the assumed $1 peg and is plotted against daily BTC volatility, which serves as a proxy for market stress.
+Across all trade size categories and a broad range of BTC volatility levels, most trades demonstrate minimal slippage (less than 2%), suggesting that frxUSD pools generally maintain pricing efficiency under the conditions observed. However, it is important to acknowledge that this analysis may not fully capture behavior during extreme market events or in the case of exceptionally large trades not represented in the sample.
+Source: Dune , July 20th, 2025
+# 2.3.8 Stablecoin Usage in DeFi
+The highest base APY comes from staking frxUSD into sfrxUSD. The majority of yield-generating venues for frxUSD on Ethereum come from incentivized liquidity pools. However, there is a Resupply markets for sfrxUSD and a Curve LlamaLend market currently offering a 3.7% APY for supply sfrxUSD.
+Source: DefiLlama , July 14th, 2025
+# 2.3.9 Net Cross-Chain Flow
+Here is the current relevant distribution of LayerZero frxUSD assets:
+Chain
+frxUSD Supply
+Linea
+146k
+Sonic
+1.77m
+Binance Smart Chain
+181k
+Solana
+1.36m
+In total, this adds 3.5m of frxUSD supply. LayerZero frxUSD supply may exist on other chains, but these amounts are negligible.
+# Section 3: On-chain Management
+This section addresses the technological properties of the stablecoin. It aims to convey (1) how the on-chain system is architected and where technological risk can arise, and (2) historical performance metrics involving the stablecoin's development and security.
+This section is divided into 3 sub-sections:
+3.1: Operational Overview
+3.2: Development and Security Metrics
+# 3.1 Operational Overview
+# 3.1.1 Smart Contracts
+Native frxUSD on Ethereum is deployed here and is upgradable via a proxy . Similarly, native frxUSD is deployed on Fraxtal here with the same proxy configuration.
+A full list of LayerZero OFTs across available chains can be viewed here , along with the corresponding lockboxes and multisigs.
+Users can deposit frxUSD into sfrxUSD on Ethereum or Fraxtal , both of which have logic implemented via a TransparentUpgradeableProxy proxy pattern.
+To mint/redeem frxUSD, a user must interact with an enshrined custodian contract, but these contract addresses are not currently listed in public documentation.
+Source: LlamaRisk, July 28th, 2025
+# 3.1.2 Dependencies
+frxUSD’s solvency hinges on institutional partners—most notably BlackRock’s BUIDL fund and Superstate’s tokenized T‑bill products (USTB, USCC). Currently, USTB and BUIDL make up over 90% of the frxUSD backing. Users must trust that custodians safely hold and manage the underlying assets; underlying assets accepted for frxUSD all have a proof-of-reserve. The Frax team stresses that no off-chain book-entry holdings are currently used and that, should they ever be, public audits and regular attestations will be available.
+Depending on current yield rates, sfrxUSD may rely heavily on Algorithmic Market Operations (AMOs) that deploy assets into various lending markets (FraxLend, Aave, Curve, Convex, Compound, etc.). Any failure or exploit in one of these integrated platforms could weaken frxUSD’s backing, yet the precise allocation across AMOs is neither documented nor auditable. Without any transparent mechanism or third-party audit, users cannot verify actual yields, slippage costs, or how losses would be socialized among vault participants. Potential losses in the sfrxUSD vault could lead to additional stress on the frxUSD peg, even if frxUSD backing remains solid.
+frxUSD can be redeemed 1:1 for USD via licensed partners like Kado, so the availability of those partners (and their regulatory compliance) affects users’ ability to move between frxUSD and real dollars. Similarly, frxUSD’s presence on new networks like Sonic depends on Frax’s bridging infrastructure (LayerZero OFT or Frax Ferry). A bridge malfunction or security breach could distort supply or block redemptions on those chains.
+These opaque reserve, DeFi, bridging, and yield‑strategy dependencies introduce a material “unknown unknowns” risk that significantly elevates the protocol’s overall dependency risk. Frax does publish real-time reserve composition by custodian and asset on Frax Facts for frxUSD, which helps to clarify dependencies for frxUSD. Frax has also stated intentions to provide additional attestations in order to provide further clarity to Frax users.
+# 3.1.3 Access Control
+frxUSD was deployed as an upgradeable proxy, allowing its logic to be modified by an admin. The address 0xB1748C79709f4Ba2Dd82834B8c82D4a505003f27 is identified as the owner of the frxUSD contract on Ethereum. This address is a Frax-controlled multisig with 3 out of 5 quorum required. The signers are as below:
+0x6933BCC3e96f1C4d2cb73Cb391d854b18Ab7A4F2
+0xcbc616D595D38483e6AdC45C7E426f44bF230928
+0x17e06ce6914E3969f7BD37D8b2a563890cA1c96e
+0xc8dE9f45601DA8C76158b8CAF3E56E8A037F2228
+0x6e74053a3798e0fC9a9775F7995316b27f21c4D2
+# 3.1.4 Operational Security Practices
+Protocol upgrades go through community forums before being voted on in a Snapshot vote . While there are plans to move governance fully on-chain, currently, admin multisigs have full control to upgrade contracts, change parameters, or pause functionality. This allows for a quick response in case of a security threat, but also introduces centralization risk. A malicious admin could unilaterally change protocol functionality.
+There are currently no timelocks implemented in frxUSD contracts, meaning that administrative actions have no enforced delay.
+# 3.2 Development and Security Metrics
+# 3.2.1 Development Activity
+According to DefiLlama data, the frequency of developer commits has dropped off significantly since late 2023 across all Frax products. This may not have much implication directly for frxUSD, which, as a custodial stablecoin, does not require frequent development activity, but it does signal the declining trend in Frax's development activity generally.
+Source: DefiLlama
+# 3.2.2 Number of Active Developers
+Mirroring the decline in commit frequency, the number of monthly unique developers contributing to the Frax codebase has declined from a peak of 46 monthly unique developers in 2023 to a range of 2-15 monthly unique developers active in 2025.
+Source: DefiLlama
+# 3.2.3 Documentation Quality
+Documentation on frxUSD is far from comprehensive. Both protocol documentation and governance forums offer a high-level overview of frxUSD, but many technical details are hard to find. Important details such as fees and smart contract functions are either not publicly documented or hard to find.
+# 3.2.4 Upgrade Frequency
+The frxUSD has a proxy implementation at 0xA8F9e149cCE34ec7F68aF720D8551cb9B39ed1f1. Since frxUSD was deployed to Ethereum, the proxy contract has not been utilized, signaling no upgrades to the frxUSD contract.
+# 3.2.5 Smart Contract Audits
+frxUSD and sfrxUSD are not explicitly audited . Significant differences between frxUSD and FRAX (Legacy Frax Dollar) can be seen here . sfrxUSD has fewer differences to sFRAX, but has large additions to its code.
+While these are ERC20 tokens, the architecture behind them is complex, and this, too, is unaudited. This presents a risk that external smart contract review helps to mitigate. Frax has a long history of auditing its contracts ; therefore, this lack of audits covering new assets and contracts needs to be addressed by the Frax team to ensure sufficient security standards.
+The Frax Governance contracts have been audited by Trail of Bits.
+# 3.2.6 Known Vulnerabilities Count
+Since neither frxUSD nor sfrxUSD has been audited, no audit firm has identified security vulnerabilities. The Frax Governance contracts did have two high severity vulnerabilities identified, both pertaining to multisig wallets passing malicious transactions through the FraxGovernorOmega contract.
+A recent vulnerability was discovered by Curve developer Roman Agureev that affected an open-source library used for cross-chain bridging operations by several protocols, including Frax. Fortunately, the vulnerability was responsibly disclosed and did not result in any loss of funds.
+# 3.2.7 Bug Bounty Program Size
+Frax Finance has an internal Bug Bounty Program for exploits where user funds or protocol-controlled funds/collateral are at risk. Participants can reach out anonymously to disclose vulnerabilities. Any contract deployed by FRAX-Deployer is in scope, including frxUSD and sfrxUSD. The bounty is calculated as the lower value of 10% of the total possible exploit or $10m worth paid in FRAX+FXS (evenly split), with a “no questions asked” policy.
+The program only covers smart contract code (not front-end or server-side code) and applies to any chain managing Frax Protocol or user-deposited value. Slow arbitrage opportunities receive a base compensation of 50,000 FRAX.
+We recommend the use of a third-party provider such as ImmuneFi or Cantina as this provides guarantees to whitehats their findings will be treated in the fairest possible manner. Involving a third party increases the likelihood of responsible disclosure and successful user deposit protection.
+# 3.2.8 Historical Downtime
+There has been no reported downtime for frxUSD mints or redemptions. Frax experienced a DNS hack in November 2023, but protocol funds were not at risk, and the situation was quickly resolved.
+# Section 4: Regulation and Compliance
+This section addresses the extent of consumer protections from a regulatory perspective. The reader should get a clear idea of (1) the solvency and transparency assurances provided by reserves management requirements, and (2) the current state and historical track record of the issuer's regulatory compliance.
+This section is divided into 2 subsections:
+4.1: Reserves Management
+4.2: Regulations
+# 4.1 Reserves Management
+# 4.1.1 Reserve Assets
+frxUSD’s collateral is held entirely in “enshrined custodian” tokens that represent cash-equivalent real-world assets. Since January 2025, the dominant backing has been the BlackRock USD Institutional Digital Liquidity Fund (BUIDL), a tokenised money-market fund that invests exclusively in U.S. Treasury bills, overnight repo, and cash.
+On-chain, the FraxFacts balance-sheet feed shows a collateral ratio of 103.7 % as of 7 July 2025, with roughly US$40 million of liquidity intentionally locked to absorb short-term outflows.
+Frax’s investment policy is embedded in FIP-277, which restricts FinresPBC — the reserve-holding public-benefit corporation — to “cash-equivalent RWAs” and forbids rehypothecation or leverage. The framework is high-level rather than granular: maturity ladders, concentration limits, and stress scenarios are not published.
+Legal briefs on enshrined custodians are provided below:
+# 1. Securitize BUIDL
+BUIDL is organised as “BlackRock USD Institutional Digital Liquidity Fund Ltd.”, a BVI limited company that files Form D as a U.S. private fund relying on the Investment Company Act § 3(c)(7) exemption. The offering is therefore limited to “qualified purchasers” and not subject to the 1940 Act or U.S. mutual-fund rules. Securitize Markets, an SEC-registered transfer agent and broker-dealer, tokenizes and distributes the shares.
+Only qualified purchasers with at least USD 5 million in investable assets may subscribe. The investment mandate is a cash-plus liquidity sleeve: overnight repo, Treasury bills, and cash, managed by BlackRock Financial Management.
+BNY Mellon is the primary custodian; PwC audits the fund; Securitize serves as placement agent, transfer agent, and on-chain registrar. Anchorage Digital, BitGo, Coinbase, and Fireblocks provide digital-asset custody for the tokens.
+# 2. Superstate USCC
+USCC is a series of a Delaware statutory trust and is treated as a private investment company under § 3(c)(7). Superstate Inc. is an SEC “exempt reporting adviser”; the fund is not itself SEC-registered.
+Subscriptions are restricted to qualified purchasers who have passed full KYC/AML and are whitelisted on-chain. The fund harvests basis-trade and staking yield across BTC, ETH, and U.S. Treasuries, creating a hybrid RWA/crypto strategy.
+Anchorage Digital is the qualified custodian for both fiat and digital positions; Ernst & Young audits; NAV Fund Services handles fund accounting.
+# 3. Superstate USTB
+USTB is likewise a Delaware statutory trust series but holds only Treasuries and repos. Superstate has filed a Form N-1A to transition the fund into a 1940-Act registered investment company; until effectiveness, it is still a § 3(c)(7) private fund.
+Qualified purchasers only, subject to an on-chain allow-list and daily dealing windows. Maximum dollar-weighted average maturity is ninety days. Federated Hermes is appointed sub-advisor, adding traditional money-fund expertise.
+UMB Bank, an OCC-chartered national bank, acts as custodian; Ernst & Young audits; NAV Fund Services performs administration.
+# 4. Agora AUSD
+AUSD is issued by Agora Forge Ltd., with reserves held in “The Agora Reserve Fund”, a bankruptcy-remote Delaware statutory trust. The fund is managed by VanEck and structured as a private trust.
+Marketing materials indicate availability to “select markets outside the United States”; U.S. persons are currently excluded, suggesting reliance on Regulation S. Reserves are 100% cash and very short-dated Treasury repos.
+VanEck is investment manager; an unnamed “G-SIB global custodian” (market sources identify BNY Mellon) holds cash; PwC audits the reserve fund.
+# 5. Centrifuge JTRSY
+JTRSY is a Segregated Portfolio of Anemoy Capital SPC, licensed as a “professional fund” under the British Virgin Islands Securities and Investment Business Act and supervised by the BVI FSC.
+The vehicle is open only to non-U.S. “professional investors”. Minimum subscription disclosed in the offering deck is USD 100,000, with KYC/AML screening under BVI rules. The fund holds a ladder of sub-six-month Treasury bills, rebalanced daily, targeting a risk-free yield with minimal duration. S&P Global assigns an AA+f/S1+ rating.
+Janus Henderson Investors acts as discretionary manager; underlying securities are custodied at BNY Mellon; PwC provides audit; Centrifuge runs on-chain administration and investor registry.
+# 6. WisdomTree WTGXX
+WTGXX is a series of WisdomTree Digital Trust, a fully registered open-end investment company under the 1940 Act; the fund’s shares are recorded both on traditional books and on-chain via the WisdomTree Prime smart-contract system.
+The fund is available to U.S. retail and institutional investors. Like a conventional government money-market fund, WTGXX must keep at least 99.5% in cash, Treasuries, and repos; weighted-average maturity is capped at sixty days .
+BNY Mellon is the independent custodian; State Street provides fund accounting; Ernst & Young serves as the independent public accountant; WisdomTree Transfers, Inc. is the transfer agent.
+# 4.1.2 Overcollateralization Buffer
+The protocol currently runs a 3-4% surplus above outstanding frxUSD, visible on FraxFacts. This buffer is entirely discretionary; U.S. statutes and agency-level guidance that are currently in force—or poised to come into force once the GENIUS Act is enacted—require fiat-redeemable stablecoins to be backed at least 1:1 with specified high-quality liquid assets, but they do not prescribe any fixed over-collateralisation or “statutory margin” above that ratio.
+There is no separate “insurance fund”; losses beyond the surplus presumably would waterfall first to locked liquidity and then to the DAO treasury, a structure materially thinner than the established bankruptcy-remote trust remedies.
+# 4.1.3 Custody of Reserves
+Legal title to the assets is held by FinresPBC, whose sole mandate is to interface with TradFi custodians for Frax. The governance proposal, [FIP-277] , onboarding FinresPBC commits to monthly asset reports and forbids any profit-seeking activity.
+Because every designated custodian admits only “Qualified Purchasers” who have successfully completed full KYC/AML screening, Finres PBC functions as the intermediary through which those verifications are performed. Acting in that capacity, it satisfies the requisite diligence standards and thereby secures eligibility to subscribe to—or otherwise allocate funds into—the authorised tokenised RWAs.
+Each RWA position is maintained in a ring-fenced custodial account at a duly licensed depository institution, ensuring that title remains unencumbered at all times.
+Pursuant to the latest proposal, [FIP-432] , the DAO will confer upon Frax Inc. the entirety of the off-chain “vault-keeper” function for frxUSD. That delegation vests the corporation with expansive managerial authority: it may open or close bank and brokerage accounts, execute tri-party custody agreements with BlackRock, Fidelity, Superstate, or other approved RWA sponsors, and rebalance the composition of reserve assets—provided all such actions remain consistent with applicable United States law.
+# 4.1.4 Payment Rails
+BUIDL permits same-day redemption into U.S. dollars by wire when requests are received before 3:00 p.m. ET on a business day; instructions submitted later settle on the next business day. Holders may convert BUIDL to USDtb instantaneously at any hour, and those swaps are uncapped. Subsequent conversions from USDtb into USDC or USDT are limited only by the liquidity available for USDtb’s on-demand redemption window.
+USTB supports daily liquidity in either U.S. dollars or USDC. Frax may redeem around the clock—24 hours a day, 365 days a year—in USDC, and the issuer imposes no redemption fee.
+USCC processes redemption instructions received before 5:00 p.m. ET on a market day at that day’s closing net-asset value per share, with settlement in USDC or U.S. dollars on T+1. Requests lodged after 5:00 p.m. are priced at the next market day’s close and settle on T+2.
+AUSD is designed for continuous, twenty-four-hour redemption in USDC or USDT.
+JTRSY offers standard redemptions each business day, ordinarily settling on T+1 but never later than seven U.S. business days, with no associated fee. For participants in the Anemoy Liquidity Network, intra-day or immediate redemptions are available subject to a liquidity surcharge.
+WTGXX targets same-day settlement (T+0) on U.S. trading days for orders received before 1:00 p.m. ET; instructions submitted thereafter settle on T+1. Redemption proceeds are distributed shortly after the 4:00 p.m. ET NAV strike once the cut-off criteria have been satisfied.
+# 4.1.5 Attestations
+FinresPBC is required to publish a full reserve breakdown every month to the governance forum and FraxFacts dashboard. These are self-reported spreadsheets rather than SOC-attested reserve reports; no independent accounting firm has yet issued an assurance opinion on FinresPBC’s statements. By contrast, the underlying BUIDL fund undergoes PwC audit under traditional fund rules, and BNY Mellon now broadcasts daily fund-accounting data on-chain, providing a secondary verification path. The hybrid model, therefore, offers richer real-time data than most peers but lacks an external attestation covering the entire liability stack.
+# 4.1.6 Legal Qualification of Collateral
+All six vehicles rely on the rule that treats Treasuries and overnight repos as “government securities,” so the underlying assets need not be registered under the Securities Act. What sets them apart is the legal wrapper around those assets. WTGXX already follows the strict Rule 2a-7 money-market-fund regime, and USTB will join once its Form N-1A goes live. BUIDL and the two Superstate funds use the more flexible section 3(c)(7) exemption: they skip formal liquidity tests but admit only very wealthy investors, and BUIDL adds BlackRock’s well-known governance oversight. JTRSY and AUSD sit offshore or under Regulation S, where disclosure is largely optional and enforcement rests more on fiduciary duty and sponsor reputation than on detailed SEC rules.
+From Frax’s reserve-management perspective, the spectrum runs from BUIDL and USTB—first-class collateral in private-fund wrappers—through the offshore or Reg S structures of JTRSY and AUSD, and ends with WTGXX, the sole fully SEC-registered mutual-fund token. Custody risk is minimal where assets are held at BNY Mellon or UMB Bank under clear trust arrangements; it is higher for AUSD, whose custodian has not been disclosed.
+Because Frax depends on these third-party tokenised RWA vehicles, its legal risk rises or falls with the statutory protections in each wrapper and with how quickly Finres PBC can redeem tokens for U.S. dollars. The key variables are (i) the regulatory wrapper—Rule 2a-7 fund, 3(c)(7) private fund, or offshore vehicle, (ii) the quality of the custodian, (iii) the tenor and credit quality of the underlying Treasuries, and (iv) the strength of the redemption process in contract, law, and daily operations.
+Using WTGXX, USTB, and BUIDL as collateral brings low legal risk: WTGXX is fully SEC-regulated, and the other two are run by investment-grade managers under familiar private-fund law. JTRSY and USCC carry more risk because their offshore or hybrid mandates lie outside retail-fund oversight and allow redemption gates; even so, their custodians and ratings frameworks support the view that the assets count as “high-quality liquid” under draft U.S. stablecoin rules. AUSD is the outlier: without public audits or U.S. regulatory filings, it could prompt claims that part of frxUSD’s backing is an unregistered security.
+# 4.2 Regulations
+# 4.2.1 License
+FinresPBC is incorporated in Delaware as a public-benefit C-corporation. It holds ordinary commercial bank accounts and brokerage accounts, but does not possess any state money-transmitter licenses, trust-company charter, or OCC limited-purpose authority. 
+FinresPBC has recently adopted “Frax Inc.” as its doing-business-as (DBA) designation. The protocol team explains that this rebranding is intended to signal unambiguously that the entity—whether referred to as FinresPBC or Frax Inc.—is the formal issuer of frxUSD and the prospective applicant for a GENIUS-chartered license from the Office of the Comptroller of the Currency (OCC). For all practical and legal purposes, the two names are interchangeable.
+The team further represents that Frax Inc. has been architected to satisfy the anticipated requirements of the GENIUS Act by: (i) maintaining a one-to-one reserve of bankruptcy-remote, cash-equivalent U.S. Treasury instruments; (ii) employing segregated custodial arrangements implemented through on-chain frxUSD Custodian contracts; (iii) preparing a comprehensive OCC application package for a GENIUS license charter; and (iv) constructing a robust compliance stack encompassing KYC/KYB onboarding, on-chain blacklist functionality, and front-end geo-blocking.
+# 4.2.2 Enforcement Actions/Lawsuits
+A sweep of the SEC, CFTC, and federal court dockets returns no recorded enforcement actions, settlements, or private lawsuits naming Frax Finance, FinresPBC, or core founders to date. 
+# 4.2.3 Legal Opinion
+To date, no formal legal opinion or memorandum addressing frxUSD’s regulatory status has been furnished to us. Nevertheless, the Frax team has provided detailed briefings on each of the foregoing initiatives and has confirmed that the work is intended to underpin the forthcoming GENIUS license application.
+# 4.2.4 Sanctions Compliance
+Frax Inc. is developing a multi-layered compliance framework designed to align with both current regulations and the projected GENIUS standards. Notably, blacklist controls are being embedded directly in the frxUSD smart contracts to enable sanctions screening and wallet-level blocking. The user interface will incorporate geo-blocking and IP-based restrictions to deter access from sanctioned or otherwise restricted jurisdictions. It must, however, be observed that no Terms of Use or Terms of Service have yet been published; accordingly, these compliance features are not presently memorialised in a binding contractual instrument.
+# 4.2.5 User Restrictions
+Likewise, user-identification obligations are not ascertainable from any extant ToS. The team’s explanatory notes indicate that full KYC/KYB verification will be required for wallets interacting with the FraxNet infrastructure—particularly for minting or redeeming via bank rails and fiat on/off-ramp partners such as Stripe or Bridge. Conversely, no identity checks will be imposed for purely crypto-native functions, such as exchanging frxUSD one-for-one against other stablecoins.
+# 4.2.6 Restrictions for Illegal Use
+At present, the documentation contains no explicit prohibitions on the illegal use of Frax services or assets, nor does it delineate any monitoring or enforcement mechanisms beyond the planned blacklist controls.
+# 4.2.7 Customer Protection
+The project’s materials disclose no contractual matrix of rights and obligations, disclaimers, risk warnings, or limitations of liability. Until comprehensive Terms of Service are published, users lack a legally enforceable framework defining Frax Inc.’s duties and their own remedies.
+# Section 5: Pegkeeper Suitability
+This section concludes the review of the pegkeeper asset by conducting a comparative analysis with the existing pegkeeper assets. The aim is to diversify the pegkeeper basket without introducing undue risk. Finally, we provide a pegkeeper score and onboarding recommendation.
+This section is divided into 2 sub-sections:
+5.1 Comparative Analysis of Pegkeeper Assets
+5.2 Recommendation
+# 5.1 Comparative Analysis of Pegkeeper Assets
+# 5.1.1 Geographical Correlation
+We conduct a comparative analysis of the regulatory oversight applied to various stablecoins recognized as Pegkeeper assets, including USDT, USDC, and PYUSD. The aim is to evaluate the geographical risk associated with reliance on a singular regulatory jurisdiction that could potentially become hostile or restrictive for business operations.
+PYUSD is issued by Paxos Trust Company, LLC, a regulated financial institution based in New York. Paxos issues PYUSD in partnership with PayPal, ensuring that the stablecoin is fully backed 1:1 by U.S. dollar deposits, short-term U.S. Treasuries, and similar cash equivalents. Paxos has broadened its own global licensing perimeter—obtaining full approval in Singapore under MAS’s stablecoin framework and building out ADGM permissions—but PYUSD itself remains a New York-chartered product.
+USDC is supervised across multiple first-tier jurisdictions, which materially dilutes single-country risk. In the United States, Circle issues USDC under a nationwide patchwork of state money-transmitter and virtual-currency licences, including New York oversight; in the European Union, Circle’s French EMI licence brings USDC issuance under MiCA, with Circle Mint France offering local mint/redeem. Furthermore, Circle is recognized as an Electronic Money Institution by the U.K.'s Financial Conduct Authority, a Major Payment Institution by the Monetary Authority of Singapore, and holds a Bermuda Digital Asset Business (DAB) License issued by the Bermuda Monetary Authority.
+USDT is now anchored to El Salvador via a DASP licence, placing its corporate nexus outside U.S. or EU prudential regimes. The Salvadoran DASP regime, while younger and less stringent than NYDFS or MiCA, provides a local statutory base that may be more permissive if U.S. policy tightens. That shift reduces direct exposure to U.S. state licensing, but it does not eliminate dependence on U.S. market infrastructure because a dominant share of USDT reserves are invested in U.S. Treasury bills reportedly custodied with Cantor Fitzgerald.
+frxUSD today operates under an indirect U.S. oversight model. The Frax protocol issues frxUSD but outsources most prudential guardrails to “enshrined custodians”. These vehicles—and their transfer agents, custodians, and auditors—sit squarely in U.S. securities and transfer-agent frameworks, even though Frax Inc. itself does not yet hold a money-transmitter or trust charter. As a result, supervisory exposure for frxUSD flows through the RWA wrappers and the fund regimes they inhabit, rather than a dedicated issuer licence for Frax Inc. at this time.
+Under the GENIUS Act, frxUSD's model must become directly licensed at the issuer level. Given the quality of the reserve stack (BUIDL/USTB/WTGXX) and Frax Inc.’s newly consolidated mandate, regulatory upgrade looks feasible, but success will turn on how quickly Frax Inc. can stand up OCC-grade AML/sanctions controls, disclosure, and audit—well before the federal effective date and certainly before the July 18, 2028, end of the transition window.
+# 5.1.2 Peg Stability
+Source: LlamaRisk, July 24th, 2025
+The graph above compares is a graph depicting each current PegKeeper's z-score from a $1 peg over the past 3 months. Generally, frxUSD seems to exhibit less volatility than PYUSD.
+# 5.1.3 Pegkeeper Relative Exposure
+We can compare the relative exposure crvUSD has to each Pegkeeper by the ratio of stablecoin liquidity or market cap to Pegkeeper debt ceiling. This can help indicate if the relative ceilings are assigned in a uniform way and inform how we may set the frxUSD debt ceiling.
+Liquidity Ratio
+Currently, the liquidity depth (defined as the swap size for 1% slippage on Ethereum) divided by the current debt ceiling for each Pegkeeper asset is as follows:
+Asset
+Liq. Depth / Debt Ceiling
+USDC
+27.6%
+USDT
+27.6%
+PYUSD
+80%
+If we take an average exposure ratio of 45% between the three Pegkeepers, the appropriate debt ceiling for frxUSD at this time measures at 8.75m/.45 = $19.4m. Comparing the min/average/and max ratios as a comparative exercise yields the following debt ceiling values:
+Comparison
+Reference Ratio
+Implied Debt Ceiling
+Min
+27.6%
+31.7m
+Max
+80%
+10.9m
+Average
+45%
+19.4m
+Stablecoin Market Cap Ratio
+To reference the relative market exposure, the Pegkeeper debt ceiling can be compared to the overall market cap for each Pegkeeper asset.
+Note that, following a proposal execution on 4/10/25 , all Pegkeeper assets increased relative exposure to the market. Since 4/10/2025, the average Pegkeeper debt ceiling as a percentage of total market cap has been 0.073% for USDC and 0.029% for USDT. In contrast, PYUSD has historically had a higher relative exposure, averaging 1.67% over the same period.
+Source: CoinGecko
+If we compare each stablecoin exposure to the implied ceiling for frxUSD at its current market cap of 55m, we yield the following values.
+Comparison
+Reference Ratio
+Implied Debt Ceiling
+USDT
+0.029%
+16k
+USDC
+0.073%
+40.2k
+PYUSD
+1.67%
+918.5k
+From the disparity found in the market cap ratio versus the liquidity ratio, it is apparent that frxUSD has a much lower market cap than the existing Pegkeepers stablecoins, and it has an exceptional onchain liquidity profile relative to its market cap.
+# 5.2 Recommendation
+Onboard frxUSD as a crvUSD Pegkeeper with debt ceiling set to $3m.
+Frax has long been an aligned participant within the Curve ecosystem. As one of the earliest adopters and most consistent users of Curve’s liquidity infrastructure, Frax has demonstrated sustained integration, particularly through its gauge weight participation, AMO strategies, and Curve LP incentives. The team behind Frax has a multi-year track record of reliable protocol operation, including successful deployment of complex mechanisms such as FRAX, FraxLend, and now frxUSD. This continuity and shared ecosystem presence offer Curve DAO a level of familiarity and institutional maturity not often found among newer stablecoin issuers.
+frxUSD itself is a relatively recent product, but has already exhibited strong performance characteristics in terms of peg stability and capital efficiency. On Ethereum, frxUSD maintains a tight peg adherence, with deviations beyond ±10 basis points occurring infrequently and resolving promptly. Liquidity conditions are also favorable, with over $10 million in DEX liquidity and low slippage across most trade sizes. This is particularly notable given frxUSD’s smaller overall market cap and reflects the protocol’s design around capital-efficient reserve deployment and incentive alignment.
+That said, certain limitations suggest caution in scaling Pegkeeper exposure too quickly. frxUSD remains at an early stage of adoption, with limited active users and much of its circulating supply staked passively in sfrxUSD. While its reserve assets—primarily tokenized U.S. Treasuries—are of high quality, the transparency of reserve composition, allocation, and associated yield strategies remains incomplete. The lack of public smart contract audits for frxUSD and sfrxUSD also introduces technical risk, particularly given the upgradeable proxy architecture and admin-controlled contract design. Additionally, frxUSD has yet to undergo live testing through a full market cycle or liquidity stress event.
+Given these considerations, we recommend onboarding frxUSD as a crvUSD Pegkeeper asset with an initial debt ceiling of $3 million. This recommendation reflects the strengths of the Frax ecosystem—namely, its Curve alignment, peg robustness, and high collateral quality—while also acknowledging the prudent need to limit exposure at this stage due to frxUSD’s relatively short track record, lapses in transparent operation, and still-maturing user adoption.
+A $3 million ceiling allows Curve to safely diversify its Pegkeeper basket with a uniquely designed stablecoin that is poised for GENIUS compliance, while preserving flexibility to scale the ceiling upward as frxUSD continues to demonstrate strong performance, greater transparency, and deeper ecosystem integration. We view this as a measured, risk-conscious first step in supporting an issuer that shares Curve’s long-term ethos and infrastructure focus.
+Solutions
+Advisory
+Risk Intelligence
+LlamaGuard
+Research
+Company
+About
+Careers
+Brand Kit
+Legal
+Privacy
+Terms
+© Copyright 2026 LlamaRisk. All Rights Reserved.
+Solutions
+Advisory
+Risk Intelligence
+LlamaGuard
+Research
+Company
+About
+Careers
+Brand Kit
+Legal
+Privacy
+Terms
+© Copyright 2026 LlamaRisk. All Rights Reserved.
+Pegkeeper Onboarding Review: Frax frxUSD | LlamaRisk Research | LlamaRisk

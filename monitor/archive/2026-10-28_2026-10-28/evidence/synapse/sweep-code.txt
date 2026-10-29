@@ -1,0 +1,19 @@
+check: synapse/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/synapsecns/sanguine/tree/7c8126288846909d65660c4018b042eb5a498d32
+checked_at: 2026-10-28T22:37:24Z
+fetched: https://codeload.github.com/synapsecns/sanguine/tar.gz/7c8126288846909d65660c4018b042eb5a498d32
+sha256: c7848d7a5d872c06a3e9cb8181c681c4ceab56a79cb66a4828c300934879dda2
+--------------------------------------------------------------------------------
+repository: https://github.com/synapsecns/sanguine/tree/7c8126288846909d65660c4018b042eb5a498d32
+files scanned: 3076
+
+signals:
+  [strong] screening: screening call — 15 file(s)
+      https://github.com/synapsecns/sanguine/blob/7c8126288846909d65660c4018b042eb5a498d32/contrib/opbot/botmd/commands.go#L135  rr) } return } isScreened, err := b.screener.ScreenAddress(ctx.Context(), rawRequest.Bridge.Sender) if err != nil { _, err := ctx.R
+      https://github.com/synapsecns/sanguine/blob/7c8126288846909d65660c4018b042eb5a498d32/contrib/screener-api/chainalysis/chainalysisapi.go#L28  s requests to the Chainalysis API. type Client interface { ScreenAddress(ctx context.Context, address string) (bool, error) } // clientImpl is the impl
+      https://github.com/synapsecns/sanguine/blob/7c8126288846909d65660c4018b042eb5a498d32/contrib/screener-api/client/client.go#L24  face for the Screener API. type ScreenerClient interface { ScreenAddress(ctx context.Context, address string) (blocked bool, err error) BlacklistAddres
+  [weak] screening: screening words — 12 file(s)
+      https://github.com/synapsecns/sanguine/blob/7c8126288846909d65660c4018b042eb5a498d32/contrib/screener-api/client/client.go#L120  l } // BlackListBody is the json payload that represents a blacklisted address. type BlackListBody struct { Type string `json:"type"` ID string `json:"id"
+      https://github.com/synapsecns/sanguine/blob/7c8126288846909d65660c4018b042eb5a498d32/contrib/screener-api/db/db.go#L9  reener-api. package db import ( "context" "errors" ) // BlacklistedAddressWriterDB provides methods to write blacklisted addresses to the database. type B
+      https://github.com/synapsecns/sanguine/blob/7c8126288846909d65660c4018b042eb5a498d32/contrib/screener-api/db/db_test.go#L13  Address := gofakeit.BitcoinAddress() blacklistBody := db.BlacklistedAddress{ Type: "create", ID: "testId", Address: testAddress, Networ

@@ -1,0 +1,191 @@
+check: aerodrome/feature-stocks-us
+about: Tokenized equities on Aerodrome (Base, Aug 2026) are available only to eligible users outside the United States (press)
+source: https://cryptobriefing.com/aerodrome-tokenized-equities-base/
+checked_at: 2026-10-11T21:18:48Z
+fetched: https://cryptobriefing.com/aerodrome-tokenized-equities-base/
+sha256: 3d6ee0acdba9d5279804eb4a8dee39eaacb61566b64734698fbcd654de56441b
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+Aerodrome expands trading to tokenized global equities on Base
+System Light Dark
+English
+Español
+Crypto
+Finance (2026-09-09 nav taxonomy migration).
+Links to the canonical Finance archive via the resolver, which yields the
+base-dropped /finance/ once the term is renamed and falls back to the live
+/category/markets/ pre-migration. -->
+Finance
+Prediction
+Markets
+Macro
+AI
+Tech
+Markets
+Newsletter
+Ads
+Sections
+Bitcoin
+DeFi
+Ethereum
+NFTs
+AI Agents
+Regulation
+Web3
+Business
+Ecosystem
+Crypto
+Bitcoin
+DeFi
+Ethereum
+NFTs
+AI Agents
+Regulation
+Web3
+Business
+Ecosystem
+Finance; canonical resolver (base-dropped /finance/ post-migration). -->
+Finance
+Prediction Markets
+Macro
+AI
+Tech
+Markets
+Newsletter
+Ads
+Appearance System System Light Dark
+, viewability ~27-35%). -->
+SEARCH
+Searching...
+Photo: Photo: David Yu / Pexels / Pexels
+. -->
+Aerodrome expands trading to tokenized global equities on Base
+The leading DEX on Coinbase's Base network hit $103 million in tokenized stock volume within days of launch, offering 24/7 trading of Nvidia, Apple, Meta, and Alphabet shares onchain.
+Share
+this.removeAttribute('data-copied'), 2000);"
+class="w-7 h-7 border border-foreground/30 text-foreground rounded-full flex items-center justify-center hover:bg-muted transition-colors"
+aria-label="Copy link"
+>
+Add us on Google
+by
+Editorial Team
+Aug. 29, 2026
+Aerodrome, the dominant decentralized exchange on Coinbase ’s Base blockchain, has gone live with onchain trading pools for tokenized versions of some of the world’s most valuable stocks. Nvidia , Apple , Meta , and Alphabet are now tradeable around the clock as tokenized assets, and traders showed up fast: roughly $103 million in volume flowed through the pools in the days following the August 24 launch.
+Daily trading volume peaked at approximately $27 million, and Aerodrome’s governance token AERO jumped about 11% to roughly $0.53 on the news.
+How the tokenized stocks actually work
+Each tokenized equity, denoted with a “c” suffix (NVDAc, AAPLc, METAc, GOOGLc), represents a 1:1 claim on actual shares held in regulated custody. The custodial framework runs through Alpaca under the Abu Dhabi Global Market (ADGM) regulatory umbrella, meaning every token minted corresponds to a real share sitting in a compliant account somewhere.
+The tokens are built on Coinbase’s B20 standard, which is designed to handle the messy corporate-action stuff that makes traditional equity infrastructure so cumbersome. Stock splits, dividend distributions, and similar events get processed onchain rather than through the labyrinthine back-office plumbing of traditional brokerages.
+Advertisement
+The underlying asset stays in a vault; the digital representation moves freely across DeFi protocols. These tokens can plug into lending protocols like Aave , opening the door to borrowing against equity positions or earning yield by supplying tokenized stock as collateral.
+US residents are excluded. The tokenized equities are available only to eligible users outside the United States.
+The news moving money, markets, and the world—before your day starts.
+Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
+Email address
+Subscribe free
+We respect your privacy. Unsubscribe anytime.
+Liquidity depth and early trading patterns
+Aerodrome positioned itself as the primary liquidity venue for these assets from day one. The deepest initial pool belonged to NVDAc, which launched with approximately $957,000 in liquidity.
+The $103 million in cumulative volume across all four pools in the early days suggests strong demand. Daily figures reached around $25 million in early reports before settling at the $27 million figure cited in more recent data.
+On August 28, four days after launch, a project called Bankr rolled out an AI-agent-powered tool for managing liquidity positions in the tokenized stock pools. The tool lets users issue natural-language commands to adjust their positions, essentially letting someone type “rebalance my NVDAc position” instead of manually interacting with smart contracts.
+Why this matters beyond the numbers
+The 11% surge in AERO’s price reflects the market’s read on what this means for the protocol’s competitive positioning. Coinbase has indicated that more tokenized equities are on the way, suggesting this initial batch of four mega-cap stocks is a proof of concept rather than the final product roster.
+The geographic restriction is the most significant limitation. Excluding US users from onchain equity trading removes the single largest pool of retail equity investors from the addressable market.
+Disclosure: This article was edited by Editorial Team. For more information on how we create and review content, see our Editorial Policy .
+FINANCE
+Aerodrome expands trading to tokenized global equities on Base
+The leading DEX on Coinbase's Base network hit $103 million in tokenized stock volume within days of launch, offering 24/7 trading of Nvidia, Apple, Meta, and Alphabet shares onchain.
+by
+Editorial Team
+Aug. 29, 2026
+Share
+this.removeAttribute('data-copied'), 2000);"
+class="w-7 h-7 border border-foreground/30 text-foreground rounded-full flex items-center justify-center hover:bg-muted transition-colors"
+aria-label="Copy link"
+>
+Add us on Google
+Photo: Photo: David Yu / Pexels / Pexels
+Aerodrome, the dominant decentralized exchange on Coinbase ’s Base blockchain, has gone live with onchain trading pools for tokenized versions of some of the world’s most valuable stocks. Nvidia , Apple , Meta , and Alphabet are now tradeable around the clock as tokenized assets, and traders showed up fast: roughly $103 million in volume flowed through the pools in the days following the August 24 launch.
+Daily trading volume peaked at approximately $27 million, and Aerodrome’s governance token AERO jumped about 11% to roughly $0.53 on the news.
+How the tokenized stocks actually work
+Each tokenized equity, denoted with a “c” suffix (NVDAc, AAPLc, METAc, GOOGLc), represents a 1:1 claim on actual shares held in regulated custody. The custodial framework runs through Alpaca under the Abu Dhabi Global Market (ADGM) regulatory umbrella, meaning every token minted corresponds to a real share sitting in a compliant account somewhere.
+The tokens are built on Coinbase’s B20 standard, which is designed to handle the messy corporate-action stuff that makes traditional equity infrastructure so cumbersome. Stock splits, dividend distributions, and similar events get processed onchain rather than through the labyrinthine back-office plumbing of traditional brokerages.
+Advertisement
+The underlying asset stays in a vault; the digital representation moves freely across DeFi protocols. These tokens can plug into lending protocols like Aave , opening the door to borrowing against equity positions or earning yield by supplying tokenized stock as collateral.
+US residents are excluded. The tokenized equities are available only to eligible users outside the United States.
+The news moving money, markets, and the world—before your day starts.
+Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
+Email address
+Subscribe free
+We respect your privacy. Unsubscribe anytime.
+Liquidity depth and early trading patterns
+Aerodrome positioned itself as the primary liquidity venue for these assets from day one. The deepest initial pool belonged to NVDAc, which launched with approximately $957,000 in liquidity.
+The $103 million in cumulative volume across all four pools in the early days suggests strong demand. Daily figures reached around $25 million in early reports before settling at the $27 million figure cited in more recent data.
+On August 28, four days after launch, a project called Bankr rolled out an AI-agent-powered tool for managing liquidity positions in the tokenized stock pools. The tool lets users issue natural-language commands to adjust their positions, essentially letting someone type “rebalance my NVDAc position” instead of manually interacting with smart contracts.
+Why this matters beyond the numbers
+The 11% surge in AERO’s price reflects the market’s read on what this means for the protocol’s competitive positioning. Coinbase has indicated that more tokenized equities are on the way, suggesting this initial batch of four mega-cap stocks is a proof of concept rather than the final product roster.
+The geographic restriction is the most significant limitation. Excluding US users from onchain equity trading removes the single largest pool of retail equity investors from the addressable market.
+Disclosure: This article was edited by Editorial Team. For more information on how we create and review content, see our Editorial Policy .
+Loading more articles...
+You've reached the end
+Follow Us
+Quick Links
+Bitcoin
+Ethereum
+DeFi
+Finance
+Markets
+NFTs
+AI
+Tech
+AI Agents
+Newsletter
+Regulation
+Macro
+Advertising
+CB Select
+Company
+Team
+Contact
+Advertising
+Account
+Log In
+Quick Links
+Bitcoin
+Ethereum
+DeFi
+Finance
+Markets
+NFTs
+AI
+Tech
+AI Agents
+Newsletter
+Regulation
+Macro
+Advertising
+Contact
+CB Select
+Follow Us
+Account
+Log In
+All content is for informational purposes only and does not constitute investment advice. CryptoBriefing does not provide recommendations to buy, sell, or hold any asset or contract. See our Disclaimer & Risk Disclosure .
+© Decentral Media and Crypto Briefing® 2026.
+About Us
+Editorial Policy
+Disclaimer
+Privacy Policy
+RSS
+System Light Dark
+The news moving money, markets, and the world—before your day starts.
+Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
+Email address Subscribe free
+×
+Free daily briefing
+Email address Join
+×
+×
+The news moving money, markets, and the world—before your day starts.
+Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
+Email address Subscribe free
+We respect your privacy. Unsubscribe anytime.

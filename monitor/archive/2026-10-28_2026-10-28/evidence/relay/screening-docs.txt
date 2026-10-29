@@ -1,0 +1,92 @@
+check: relay/screening-docs
+about: Relay compliance docs: sanctions screening with Chainalysis, HackBounty and Hermod
+source: https://docs.relay.link/security/compliance
+checked_at: 2026-10-28T22:56:56Z
+fetched: https://docs.relay.link/security/compliance
+sha256: 53bd24067cb7fccaaf882cdb37bbc49e01697887bd336226538a81beb5a86039
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+Transaction Screening - Relay
+Documentation Index
+Fetch the complete documentation index at: /llms.txt
+Use this file to discover all available pages before exploring further.
+Skip to main content
+Assistant
+Responses are generated using AI and may contain mistakes.
+Relay home page
+Search...
+⌘ K Ask Assistant ⌘ I
+Support
+Get in Touch
+Try Relay
+Try Relay
+Search...
+Navigation
+Safety & Security
+Transaction Screening
+Relay Platform
+API Reference
+RelayKit
+Relay Protocol
+Changelog
+Introduction
+What is Relay?
+How Relay Works
+Solutions
+Payment Service Providers
+Wallets & Wallet Providers
+Multichain Apps
+Chains
+Commerce & Payments
+Use Cases
+Bridging & Onboarding
+Swaps
+Call Execution
+Features
+App Fees
+Fee Sponsorship
+Deposit Addresses
+Gas Top-Up
+Gasless Execution
+Fast Fill
+Gasless Swaps
+Price Stabilization
+Routing Integration Models
+Safety & Security
+Transaction Screening
+Unsupported Exchanges
+Bug Bounty Program
+MEV protection
+Community Support
+Contract Audits
+Resources
+Supported Chains
+Integrating using AI
+Support
+Brand Assets
+On this page
+Back to top
+How It Works
+Blocked Transactions
+Safety & Security
+Transaction Screening
+Copy page Copy page
+Understand address screening and blocked transactions on the Relay platform
+Copy page Copy page
+The Relay platform screens transaction addresses using third-party risk data and an internal blocklist. Screening can prevent a quote or fill from proceeding.
+​
+How It Works
+Screening uses:
+Third-party data — Risk and sanctions databases, including HackBounty and Chainalysis, identify flagged addresses.
+Internal blocklist — The platform maintains additional address restrictions based on threat reports and investigations.
+​
+Blocked Transactions
+A flagged address can produce a “Detected sanctioned address” notification or a blocked-wallet error. See Unsupported Exchanges before sending from an exchange.
+A fill-time screening failure does not trigger an automatic refund. See Execution Errors and contact Support for review.
+Was this page helpful?
+Yes No
+Routing Integration Models
+Unsupported Exchanges
+twitter
+Powered by This documentation is built and hosted on Mintlify, a developer documentation platform

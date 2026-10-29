@@ -1,0 +1,126 @@
+{
+  "id": "sushiswap",
+  "name": "SushiSwap",
+  "targets": {
+    "app": "https://www.sushi.com",
+    "repo": {
+      "repo": "sushi-labs/sushiswap",
+      "ref": "9520c07dabb425a404544cdaf91c8608dc4b197b"
+    },
+    "terms": "https://www.sushi.com/legal/terms-of-service",
+    "endpoints": [
+      "https://www.sushi.com/api/geolocation"
+    ]
+  },
+  "checks": [
+    {
+      "id": "feature-stock-countries",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Robinhood stock tokens: list of countries where they are not offered",
+      "source": {
+        "repo": "sushi-labs/sushiswap",
+        "ref": "9520c07dabb425a404544cdaf91c8608dc4b197b",
+        "path": "apps/web/src/lib/robinhood/restricted-countries.ts"
+      },
+      "expect": [
+        "ROBINHOOD_STOCK_TOKEN_RESTRICTED_COUNTRIES"
+      ],
+      "section": {
+        "start": "new Set\\(\\[",
+        "end": "\\]\\)"
+      },
+      "countries": "codes"
+    },
+    {
+      "id": "feature-stock-gate",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "The swap checker refuses stock tokens when the visitor's country code is in that list",
+      "source": {
+        "repo": "sushi-labs/sushiswap",
+        "ref": "9520c07dabb425a404544cdaf91c8608dc4b197b",
+        "path": "apps/web/src/lib/wagmi/systems/checker/stock-token-region.tsx"
+      },
+      "expect": [
+        "useCountryCode\\(\\)",
+        "ROBINHOOD_STOCK_TOKEN_RESTRICTED_COUNTRIES\\.has\\(countryCode\\)"
+      ]
+    },
+    {
+      "id": "screening-trm",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Connected wallet is screened with the TRM Labs public sanctions API and disconnected if sanctioned",
+      "source": {
+        "repo": "sushi-labs/sushiswap",
+        "ref": "9520c07dabb425a404544cdaf91c8608dc4b197b",
+        "path": "apps/web/src/lib/wagmi/components/sanctioned-address-dialog.tsx"
+      },
+      "expect": [
+        "https://api\\.trmlabs\\.com/public/v1/sanctions/screening",
+        "if \\(isSanctioned\\)",
+        "disconnect\\("
+      ]
+    },
+    {
+      "id": "prod-stock-countries",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production JS: the stock-token country list and the /api/geolocation lookup",
+      "source": {
+        "url": "https://www.sushi.com"
+      },
+      "expect": [
+        "fetch\\(\"/api/geolocation\""
+      ],
+      "section": {
+        "start": "new Set\\(\\[\"US\",\"CA\",\"GB\",\"CH\"",
+        "end": "\\]"
+      },
+      "countries": "codes",
+      "case": true
+    },
+    {
+      "id": "prod-screening-trm",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Production JS: the TRM Labs public sanctions screening call",
+      "source": {
+        "url": "https://www.sushi.com"
+      },
+      "expect": [
+        "https://api\\.trmlabs\\.com/public/v1/sanctions/screening"
+      ]
+    },
+    {
+      "id": "screening-trm-api",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "The TRM Labs public screening API called by the Sushi frontend answers isSanctioned:true for the sanctioned wallet and false for the control",
+      "source": {
+        "method": "POST",
+        "url": "https://api.trmlabs.com/public/v1/sanctions/screening",
+        "body": [
+          {
+            "address": "{address}"
+          }
+        ]
+      },
+      "expect_sdn": [
+        "^status: 20[01]$",
+        "\"isSanctioned\":\\s*true"
+      ],
+      "expect_control": [
+        "^status: 20[01]$",
+        "\"isSanctioned\":\\s*false"
+      ]
+    }
+  ]
+}

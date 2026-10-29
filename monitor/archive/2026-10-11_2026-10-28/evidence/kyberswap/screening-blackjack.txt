@@ -1,0 +1,22 @@
+check: kyberswap/screening-blackjack
+about: Blackjack API answers blacklisted:true for the sanctioned wallet and false for the control
+source: https://blackjack.kyberswap.com/api/v1/check?wallets={address}
+checked_at: 2026-10-11T21:19:05Z
+--------------------------------------------------------------------------------
+=== sdn (0x098B716B8Aaf21512996dC57EB0615e2383E2f96) ===
+request: GET https://blackjack.kyberswap.com/api/v1/check?wallets=0x098B716B8Aaf21512996dC57EB0615e2383E2f96
+status: 200
+final_url: https://blackjack.kyberswap.com/api/v1/check?wallets=0x098B716B8Aaf21512996dC57EB0615e2383E2f96
+header server: cloudflare
+header cf-ray: a490e6aabf470534-OTP
+header content-type: application/json
+body: {"code":0,"message":"OK","data":{"wallets":[{"wallet":"0x098B716B8Aaf21512996dC57EB0615e2383E2f96","blacklisted":true,"updatedMs":"1702373842393","expiryMs":"4102444799999","reason":2}]}}
+
+=== control (0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed) ===
+request: GET https://blackjack.kyberswap.com/api/v1/check?wallets=0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed
+status: 200
+final_url: https://blackjack.kyberswap.com/api/v1/check?wallets=0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed
+header server: cloudflare
+header cf-ray: a490e6ab09a1e4ad-OTP
+header content-type: application/json
+body: {"code":0,"message":"OK","data":{"wallets":[{"wallet":"0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed","blacklisted":false,"updatedMs":"1791739723724","reason":4}]}}

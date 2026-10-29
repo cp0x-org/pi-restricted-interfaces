@@ -1,0 +1,29 @@
+check: compound-v2/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://v2-app.compound.xyz
+checked_at: 2026-10-11T21:06:04Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://v2-app.compound.xyz (HTTP 200)
+scripts (10):
+  https://v2-app.compound.xyz/static/js/runtime~polyfills.f9a7e4d8.js  sha256=2e5eaf34e05ba2f6d16b1623c6156fc4a8bdc034fea15a6c53d9202c3f835ddb
+  https://v2-app.compound.xyz/static/js/vendors~dapp~polyfills.bc168b73.chunk.js  sha256=9a44cd80b5ec2c99ae09f26ff942da7335e373c9f1db34dd70a2d14f96aa503e
+  https://v2-app.compound.xyz/static/js/vendors~polyfills.1d1fd6f0.chunk.js  sha256=47e8385a1123ff9b93753819d00dcb9f41b355bcc0fdedfc1576f1d21b44ae79
+  https://v2-app.compound.xyz/static/js/polyfills.700daa4e.chunk.js  sha256=b68189bd2f87c622d0e277326663f5b224285cececed839e93f71e815d89c73e
+  https://v2-app.compound.xyz/static/js/runtime~dapp.87fbfb6d.js  sha256=11a093989f053528a8170ed15da37ceff3cd96bacf19ae3c69be61f86944fa90
+  https://v2-app.compound.xyz/static/js/vendors~dapp.1e26303b.chunk.js  sha256=ec4935e9fd9b39ba90008c2599e4ef1c3b876a2e4c468843b645457a7d7f513e
+  https://v2-app.compound.xyz/static/js/dapp.49abee4e.chunk.js  sha256=e9eec1278e39cf90dae94a0fc593f9be9620ee0847ea5108dfc37512a46b400a
+  https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920  sha256=3e5bc7ca508f5d5aa7255341243840c8d2b70c8aea323800b51610df3f5a8a2c
+  https://v2-app.compound.xyz/static/js/7.81d8a449.chunk.js  sha256=42445117fdb18d8cc94460fd7117568c98c12ac1a05f397233e0dc3fa60edba7
+  https://v2-app.compound.xyz/static/js/8.138d062f.chunk.js  sha256=6991e6e8dff0900e56dba3b9b8071cfa4883a0a0c5fb097094c51455769c980f
+
+signals:
+  [weak] geo: HTTP 451 text — 1 file(s)
+      /static/js/vendors~dapp.1e26303b.chunk.js: o Many Requests",431:"Request Header Fields Too Large",451:"Unavailable For Legal Reasons",500:"Internal Server Error",501:"Not Implemented",502:"Bad Gateway",503:"Servi
+  [weak] geo: geo-block words — 1 file(s)
+      /static/js/dapp.49abee4e.chunk.js: gal or similarly significant effects, except that automated geo-blocking and sanctions screening may restrict access to the Interface as required to
+  [strong] screening: screening call — 1 file(s)
+      /static/js/dapp.49abee4e.chunk.js: ","implementing IP-based geographic restrictions and wallet address screening to support compliance with sanctions and other legal obligations; responding to
+  [weak] screening: screening words — 1 file(s)
+      /static/js/dapp.49abee4e.chunk.js: allet addresses and IP-derived locations against government sanctions lists and against risk databases and analytics provided by third-party blockchain in

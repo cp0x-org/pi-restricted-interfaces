@@ -1,0 +1,13 @@
+check: quickswap/no-geo-code
+about: No geo-IP lookup or country block in the public frontend code (the repository is stale: production may differ)
+source: https://github.com/QuickSwap/interface-v2/tree/8799993562503860a266feb3d8bf376acc80596a
+checked_at: 2026-10-11T21:04:43Z
+fetched: https://codeload.github.com/QuickSwap/interface-v2/tar.gz/8799993562503860a266feb3d8bf376acc80596a
+sha256: 0b4b9b3a1b3ca14d46e98c943238e491c43f0d41df95fe74c8c134a0ca2c35aa
+--------------------------------------------------------------------------------
+files scanned: 863
+patterns that must be absent:
+  api\.country\.is|ipapi\.co|ipinfo\.io|freeipapi|ip-api\.com|cdn-cgi/trace|/geoip\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country|req(uest)?\.geo\b
+
+hits:
+  none

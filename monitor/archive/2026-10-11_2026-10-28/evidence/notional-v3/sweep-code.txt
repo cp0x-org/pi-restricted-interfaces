@@ -1,0 +1,28 @@
+check: notional-v3/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/notional-finance/notional-monorepo/tree/cff15de4b098d101b2a023732efd242496c42888
+checked_at: 2026-10-11T21:03:41Z
+fetched: https://codeload.github.com/notional-finance/notional-monorepo/tar.gz/cff15de4b098d101b2a023732efd242496c42888
+sha256: c0e4574560f915f13365e6b0608db8e1acac567707e6ce0aa30673deb01ca458
+--------------------------------------------------------------------------------
+repository: https://github.com/notional-finance/notional-monorepo/tree/cff15de4b098d101b2a023732efd242496c42888
+files scanned: 1039
+
+signals:
+  [strong] geo: geo endpoint — 3 file(s)
+      https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/apps/api/src/index.ts#L51  ht options router.options('*', handleOptions); router.get('/geoip', handleGeoIP); router.get('/nft/*', handleNFT); router.post('/dd-forward', han
+      https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/apps/api/src/routes/index.ts#L1  import { handleGeoIP } from './geoip'; import { handleNewsletter } from './newsletter'; import { handleNFT } from '.
+      https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/packages/notionable/src/stores/wallet-store.ts#L252  const country = yield fetch('https://api.notional.finance/geoip').then( (r) => r.json() ); console.log('[DEBUG] Geo I
+  [weak] geo: HTTP 451 text — 1 file(s)
+      https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/apps/web/src/containers/ServerError/server-error.tsx#L30  tMessage: 'Not Found', }, '451': { defaultMessage: 'Unavailable For Legal Reasons', }, '500': { defaultMessage: 'Internal System Error', }, }); export
+  [weak] geo: geo-block words — 3 file(s)
+      https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/apps/web/src/containers/ServerError/server-error.tsx#L16  ntrol list here: https://orpa.princeton.edu/export-controls/sanctioned-countries', description: 'server error message', }, '500': { defaultMessag
+      https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/apps/web/src/containers/TermsView/blocked.tsx#L28  ntrol list here: https://orpa.princeton.edu/export-controls/sanctioned-countries" /> )} </Paragraph> </Box> ); };
+      https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/packages/shared/notionable-hooks/src/use-geoip-block.ts#L7  ['NODE_ENV']; // https://orpa.princeton.edu/export-controls/sanctioned-countries const SanctionedCountries = [ 'CU', // Cuba 'IR', // Iran 'IQ', // Ira
+  [strong] screening: sanctions oracle — 1 file(s)
+      https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/packages/notionable/src/account/communities.ts#L114  ccount: string) { const sanctionList = new Contract( '0x40c57923924b5c5c5455c48d93317139addac8fb', ['function isSanctioned(address) view returns (bool)'], getProviderFr
+  [strong] screening: screening vendor — 2 file(s)
+      https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/apps/exponent-liquidator/src/index.ts#L56  as Error, { hypernativeUrl: 'https://api.hypernative.xyz/lists/6ac143d9-9d99-40f1-b26c-458361c695f3', network: env.NETWORK,
+      https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/apps/exponent-liquidator/src/utils/dataService.ts#L9  ing ): Promise<Position[]> { const url = 'https://api.hypernative.xyz/lists/6ac143d9-9d99-40f1-b26c-458361c695f3'; const response = await fetch(ur
+  [weak] screening: screening words — 1 file(s)
+      https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/packages/notionable/src/account/communities.ts#L113  function checkSanctionedAddress(account: string) { const sanctionList = new Contract( '0x40c57923924b5c5c5455c48d93317139addac8fb', ['functio

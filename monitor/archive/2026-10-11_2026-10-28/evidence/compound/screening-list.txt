@@ -1,0 +1,9 @@
+check: compound/screening-list
+about: Hardcoded list of sanctioned addresses, incl. the Tornado Cash router 0x8589…DA16
+source: https://github.com/compound-finance/webb3-frontend/blob/5e556e553f223d37842fd91c2eed2f21efb98a6d/src/helpers/sanctions.ts#L1
+checked_at: 2026-10-11T21:04:38Z
+fetched: https://raw.githubusercontent.com/compound-finance/webb3-frontend/5e556e553f223d37842fd91c2eed2f21efb98a6d/src/helpers/sanctions.ts
+sha256: 8cdf0b6c7c0dd97d6856cb64e175a619aec70d9ed4b53be71a29a3cf6ab6352b
+--------------------------------------------------------------------------------
+L1: export function isSanctioned(address: string): boolean {
+L3:     '0x8589427373D6D84E98730D7795D8f6f8731FDA16',

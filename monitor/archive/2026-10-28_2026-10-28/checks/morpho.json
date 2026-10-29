@@ -1,0 +1,40 @@
+{
+  "id": "morpho",
+  "name": "Morpho",
+  "targets": {
+    "app": "https://app.morpho.org",
+    "repo": null,
+    "terms": "https://morpho.org/terms-of-use",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "feature-markets",
+      "type": "page",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Morpho docs: the Morpho Association blocks access to certain markets and vaults in its interface (legal and regulatory requirements)",
+      "source": {
+        "url": "https://docs.morpho.org/interface/warnings/",
+        "kind": "docs"
+      },
+      "expect": [
+        "Morpho Association blocks access to certain markets and vaults"
+      ]
+    },
+    {
+      "id": "screening-sanctions",
+      "type": "page",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Morpho docs: addresses subject to U.S. government sanctions are blocked",
+      "source": {
+        "url": "https://docs.morpho.org/interface/warnings/",
+        "kind": "docs"
+      },
+      "expect": [
+        "will block individual or smart contract addresses that are subject to U\\.S\\. government sanctions"
+      ]
+    }
+  ]
+}

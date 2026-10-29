@@ -1,0 +1,602 @@
+check: lombard/sweep-terms
+about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
+source: https://docs.lombard.finance/resources/terms
+checked_at: 2026-10-28T22:54:53Z
+fetched: https://docs.lombard.finance/resources/terms
+sha256: 07ad6bb9e892126880356a187005a97a98dccf9015f03e1400ca7d229f171989
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+countries: BY BI UA-Crimea UA-DPR UA-LPR UA CU CD IR IQ LY KP RU SO SD SY VE ZW US GB
+
+clauses:
+  geofencing: ctions (including the restrictions relating to Sanctioned Jurisdictions and the restrictions on access to Restricted Products from Restricted Jurisdictions), evade Sanctions screening, or otherwise circumvent any restriction imposed by these Terms or Applicable Law or defea
+  vpn: y responsible for determining and ensuring such compliance; and (h) not use any virtual private network (“ VPN ”), proxy service, or other method or technology to misrepresent your location, circumvent geographic or jurisdi
+  screening: certain actions to respond to security incidents, suspected exploits or hacks, Sanctions screening or other legal and Compliance Obligations, or court or governmental orders. The Company’s involvement in any such funct
+  sanctions: cluding but not limited to, anti-money laundering, counter-terrorism financing, Sanctions, tax reporting, know-your-customer or identity verification requirements, anti-bribery and anti-corruption laws, anti-
+  us_persons: None
+  kyc: , anti-money laundering, counter-terrorism financing, Sanctions, tax reporting, know-your-customer or identity verification requirements, anti-bribery and anti-corruption laws, anti-fraud measures or other regulatory o
+
+--- restriction paragraphs ---
+6. Eligibility, Compliance, and Prohibited Users
+10. Prohibited Uses and User Conduct
+“ Prohibited User ” has the meaning set forth in Section 6.5. For the avoidance of doubt, Prohibited Users include all Sanctioned Persons, all individuals and entities in Sanctioned Jurisdictions, and all individuals and entities in Restricted Jurisdictions (other than solely with respect to BTC.b Activities as further described in Section 6.3).
+“ Restricted Jurisdiction ” has the meaning set forth in Section 6.3.
+“ Restricted Person ” means any individual or entity that is or that is acting at the direction of or on behalf of an individual or entity that is (a) a Sanctioned Person, (b) located in, incorporated in or a resident of any Sanctioned Jurisdiction or Restricted Jurisdiction (provided that, solely with respect to BTC.b Activities, an individual or entity shall not be a Restricted Person solely by reason of its connection to a Restricted Jurisdiction), or (c) otherwise prohibited from accessing or using the User Interface or Protocol under these Terms or Applicable Law.
+“ Sanctioned Jurisdiction ” has the meaning set forth in Section 6.2.
+“ Sanctioned Person ” has the meaning set forth in Section 6.4.
+6. Eligibility, Compliance, and Prohibited Users
+(c) not be located in, a resident of, citizen of, national of, or agent of, nor an entity organized, incorporated, or doing business in, any Sanctioned Jurisdiction or any Restricted Jurisdiction (except solely with respect to BTC.b Activities as permitted under Section 6.3);
+(d) not be a Sanctioned Person nor accessing the Products on behalf of, for the benefit of or at the direction of any Sanctioned Person;
+(f) if you are an entity (which for the avoidance of doubt shall not include AI Agents), be duly incorporated, validly existing, and in good standing under the laws of the jurisdiction of your incorporation, authorized to use the User Interface and the Protocol, and not accessing the User Interface or the Protocol by, through, or on behalf of a Sanctioned Person, Restricted Person or Prohibited User;
+(h) not use any virtual private network (“ VPN ”), proxy service, or other method or technology to misrepresent your location, circumvent geographic or jurisdictional restrictions (including the restrictions relating to Sanctioned Jurisdictions and the restrictions on access to Restricted Products from Restricted Jurisdictions), evade Sanctions screening, or otherwise circumvent any restriction imposed by these Terms or Applicable Law or defeat any compliance controls implemented by the Company.
+Users who are in strict compliance with the foregoing are deemed eligible users (“ Eligible User ”). Your continued use of the User Interface and the Protocol constitutes a deemed representation that each of the foregoing conditions remains satisfied and that you are and remain an Eligible User at all times while using the User Interface and the Protocol. You agree to notify the Company immediately if your eligibility status changes. The Company reserves the right to verify your eligibility at any time and, in its sole discretion, restrict, suspend, or terminate access immediately, without notice or liability, if eligibility cannot be confirmed or if there is a reasonable suspicion that you are or may become a Sanctioned Person, Restricted Person or Prohibited User.
+6.2 Sanctioned Jurisdictions. As of the “Updated and effective” date above, the list of sanctioned jurisdictions (each, a “ Sanctioned Jurisdiction ”) is as follows:
+Belarus
+Burundi
+Crimea, Donetsk, and Luhansk regions in Ukraine
+Cuba
+Democratic Republic of Congo
+Iran
+Iraq
+Libya
+North Korea (DPRK)
+Russia
+Somalia
+Sudan
+Syria
+Venezuela
+Zimbabwe
+The Company reserves the right to update or amend this list at any time, with or without notice to you.
+6.3 Restricted Jurisdictions. In addition to the restrictions applicable to Sanctioned Jurisdictions, the Restricted Products are not available to, and may not be accessed or used by, individuals or entities located in, incorporated in, or residing in the following jurisdictions (each, a “ Restricted Jurisdiction ”) due to regulatory, legal, or business considerations:
+The United States of America (including its territories and possessions)
+The United Kingdom (including its territories and possessions)
+For the avoidance of doubt, individuals and entities in Restricted Jurisdictions are Prohibited Users under these Terms, except that they may, subject to these Terms and Applicable Law, access the Site, the User Interface, and the Protocol solely to engage in BTC.b Activities. Such individuals and entities may not, directly or indirectly, access or use any Restricted Product, and no access to or use of a Restricted Product may be for their benefit. The Company may use geo-blocking, IP address or Wallet screening, or other measures to restrict access to Restricted Products from Restricted Jurisdictions, and any access to or use of a Restricted Product in breach of this Section 6.3 is a breach of these Terms. For the avoidance of doubt, nothing in this Section 6.3 modifies any restriction on individuals or entities in Restricted Jurisdictions contained in any Company Product Terms, including the LBTC Product Terms, which shall continue to apply in full.
+Each time an individual or entity located in, incorporated in, or residing in a Restricted Jurisdiction accesses the User Interface or the Protocol, such individual or entity represents and certifies that it is doing so solely to engage in BTC.b Activities and that it will not access, use, acquire, hold, or receive any Restricted Product. The Company may, in its sole and absolute discretion, require such representation and certification to be given affirmatively prior to any transaction.
+6.4 Sanctioned Persons. For purposes of this Section 6.4, a Sanctioned Person is any of the following:
+(a) an individual or entity that is designated under blocking and asset-freeze-type Sanctions of any jurisdiction, including but not limited to the U.S. Treasury Department’s list of Specially Designated Nationals and Blocked Persons (“ SDN List ”), the U.S. Department of Commerce Denied Person’s List or Entity List, the HM Treasury Financial Sanctions List, and the Consolidated Financial Sanctions List enforced by member states of the European Union;
+(b) any entity that is owned 50% or more, directly or indirectly, either individually or in the aggregate, by one or more Sanctioned Persons, or otherwise subject to the control of a Sanctioned Person;
+(c) the government of any Sanctioned Jurisdiction, including any subdivision or instrumentality thereof; or
+(d) any individual or entity located in, incorporated in, or residing in any Sanctioned Jurisdiction.
+6.5 Prohibited Users. For purposes of these Terms, a “Prohibited User” is any of the following: (a) a user who engages in any Prohibited Use, as defined in Section 10; (b) any Sanctioned Person; (c) any individual or entity located in, incorporated in, or residing in any Sanctioned Jurisdiction or, except solely with respect to BTC.b Activities as permitted under Section 6.3, any Restricted Jurisdiction; (d) any individual or entity acting on behalf of, for the benefit of, or at the direction of any person or entity described in clauses (a) through (c); (e) any user who deploys, authorizes or permits an AI Agent to access or interact with the User Interface or Protocol where such AI Agent’s compute infrastructure, transaction routing or network access originates from, or passes through, any Sanctioned Jurisdiction (or, except where such AI Agent engages solely in BTC.b Activities, any Restricted Jurisdiction); (f) any user who in the Company’s sole discretion, is deemed to not be an Eligible User; or (g) any user who would, in the Company’s sole discretion, expose the Company to regulatory, legal, enforcement, Sanctions, export control, reputational, or compliance risk (in each case, a “ Prohibited User ”).
+Prohibited Users are strictly prohibited from directly or indirectly accessing or using the User Interface and the Protocol, and no transaction conducted through the User Interface or the Protocol may be for the economic or other benefit of a Prohibited User. Any violation of this Section 6.5 may result in immediate termination of access, reporting to relevant authorities, and other legal consequences.
+(d) any internal investigation conducted by or on behalf of the Company relating to potential Prohibited Uses, Prohibited Users, or suspicious activity; or
+7.2 Process; No Prior Notice. The Company shall have no obligation to provide prior notice before implementing any Restricted Action and shall not be required to disclose the basis for any such action except to the extent required by Applicable Law. Restricted Actions may remain in place for as long as the Company deems necessary to complete its investigation or satisfy any applicable legal or regulatory requirement, and the Company shall have no obligation to resolve any Restricted Action within any particular timeframe. You agree to cooperate fully with any investigation or information request relating to a Compliance Event, including by providing such documentation, identity verification, source-of-funds information, or other evidence as the Company may request. Failure to cooperate may result in the continuation of the Restricted Action and/or termination of your access to the User Interface and to the Protocol through the User Interface.
+10. Prohibited Uses and User Conduct
+The Prohibited Uses listed above are representative, but not exhaustive, and the Company reserves the right to update or amend such list in its sole discretion at any time, with or without notice to you. Any user who engages in any of the foregoing shall, at the Company’s sole discretion, be considered a Prohibited User.
+(d) You acknowledge that the Company may, at any time, be required to remove, suspend, or restrict the participation of any Consortium member that becomes a Sanctioned Person, becomes subject to regulatory action, or is otherwise determined by the Company in its sole discretion to present a sanctions, legal, reputational or compliance risk. Such removal may affect the composition, capacity, or security characteristics of the Consortium. The Company shall have no liability for any consequences arising from the removal, suspension, or restriction of any Consortium member for sanctions or compliance reasons.
+
+--- full text ---
+Global Terms of Service
+Skip to Content
+Documentation
+CTRL K
+Lombard
+Community
+Developers
+Open App CTRL K
+Introduction
+Overview
+Learn
+Products Overview
+Assets
+Infrastructure
+Yield
+Yield Strategy
+Protocol Architecture
+Protocol Architecture
+Strategies
+Overview
+Deposits and Redemptions
+Accounting
+Fee System
+Shards
+Shard Validators
+Roles and Security
+Security Model
+Consortium Members
+Audits
+Bug Bounty
+Transparency
+Transparency Dashboard
+Oracles
+Smart Contracts
+Bridging Architecture
+Risks
+Token Economics
+Lombard Finance Foundation
+Community
+Lux Rewards
+Referral Program
+Kaito Yappers
+Use
+Use LBTC
+Understanding Yield
+Fees
+Use BTC.b
+Bitcoin Smart Accounts
+Bitcoin Earn
+Onchain Credit Strategy
+Use BARD
+Bridging
+Access DeFi
+FAQ
+General FAQ
+LBTC FAQ
+BTC.b FAQ
+$BARD FAQ
+Troubleshooting
+Chain Support Update, September 2026
+Build
+The Lombard SDK
+How Integration Works
+The SDK Playground
+Start Here
+Configure PartnerID
+Connect Wallets
+Testing and Sandbox
+Concepts
+Action Lifecycle
+Fee Authorization
+Event Handling
+Error Handling
+BTC Deposit Addresses
+Referral System
+Data API
+API Methods
+Capabilities
+Bitcoin
+BTC Stake
+BTC Deposit
+BTC Stake and Deploy
+BTC Deposit and Deploy
+EVM
+EVM Unstake
+EVM Deploy
+EVM Redeem
+EVM Withdraw
+Non-EVM
+Solana Deposit
+Solana Redeem
+Solana Unstake
+Sui Unstake
+Starknet Unstake
+Reference
+TypeScript Types
+Events Reference
+Error Codes
+SDK FAQ
+Builder Support
+Bitcoin for AI Agents
+Quickstart
+Configure Partner ID
+Flow Coverage Matrix
+Common Agent Flows
+Capabilities
+Fee Authorization
+Action Lifecycle
+README
+Direct Integrations
+BTC.b/LBTC Swaps
+Oracle
+GMP Redeem Tracing
+LBTC GMP Mint Tracing
+Unstake Fee
+Resources
+Glossary
+Brand Assets
+Airdrop Terms
+Terms of Service
+LBTC Product Terms
+Risk Disclosures
+Privacy Policy
+MiCA Whitepaper
+Bsa Partner Integration
+BSA Integration Overview
+BSA Integration Guide
+API States
+BSA Arbitration Oracle Handbook
+Editor
+Index
+Preview
+Introduction
+Overview
+Learn
+Products Overview
+Assets
+Infrastructure
+Yield
+Yield Strategy
+Protocol Architecture
+Protocol Architecture
+Strategies
+Overview
+Deposits and Redemptions
+Accounting
+Fee System
+Shards
+Shard Validators
+Roles and Security
+Security Model
+Consortium Members
+Audits
+Bug Bounty
+Transparency
+Transparency Dashboard
+Oracles
+Smart Contracts
+Bridging Architecture
+Risks
+Token Economics
+Lombard Finance Foundation
+Community
+Lux Rewards
+Referral Program
+Kaito Yappers
+Use
+Use LBTC
+Understanding Yield
+Fees
+Use BTC.b
+Bitcoin Smart Accounts
+Bitcoin Earn
+Onchain Credit Strategy
+Use BARD
+Bridging
+Access DeFi
+FAQ
+General FAQ
+LBTC FAQ
+BTC.b FAQ
+$BARD FAQ
+Troubleshooting
+Chain Support Update, September 2026
+Build
+The Lombard SDK
+How Integration Works
+The SDK Playground
+Start Here
+Configure PartnerID
+Connect Wallets
+Testing and Sandbox
+Concepts
+Action Lifecycle
+Fee Authorization
+Event Handling
+Error Handling
+BTC Deposit Addresses
+Referral System
+Data API
+API Methods
+Capabilities
+Bitcoin
+BTC Stake
+BTC Deposit
+BTC Stake and Deploy
+BTC Deposit and Deploy
+EVM
+EVM Unstake
+EVM Deploy
+EVM Redeem
+EVM Withdraw
+Non-EVM
+Solana Deposit
+Solana Redeem
+Solana Unstake
+Sui Unstake
+Starknet Unstake
+Reference
+TypeScript Types
+Events Reference
+Error Codes
+SDK FAQ
+Builder Support
+Bitcoin for AI Agents
+Quickstart
+Configure Partner ID
+Flow Coverage Matrix
+Common Agent Flows
+Capabilities
+Fee Authorization
+Action Lifecycle
+README
+Direct Integrations
+BTC.b/LBTC Swaps
+Oracle
+GMP Redeem Tracing
+LBTC GMP Mint Tracing
+Unstake Fee
+Resources
+Glossary
+Brand Assets
+Airdrop Terms
+Terms of Service
+LBTC Product Terms
+Risk Disclosures
+Privacy Policy
+MiCA Whitepaper
+Bsa Partner Integration
+BSA Integration Overview
+BSA Integration Guide
+API States
+BSA Arbitration Oracle Handbook
+Editor
+Index
+Preview
+1. Introduction and Agreement
+2. Definitions
+3. Modification of Terms
+4. The Protocol
+5. Protocol Disclaimers and Acknowledgments
+6. Eligibility, Compliance, and Prohibited Users
+7. Compliance-Related Restrictions
+8. Wallets, Transactions, and Digital Assets
+9. Yield and Token Distributions
+10. Prohibited Uses and User Conduct
+11. Intellectual Property and Content
+12. Third-Party Services and Technologies
+13. Limitation of Liability
+14. Indemnification
+15. Dispute Resolution
+16. Termination
+17. Miscellaneous
+Scroll to top
+Resources Terms of Service
+Global Terms of Service
+Updated and effective: 23 October 2026
+1. Introduction and Agreement
+1.1 Overview. Welcome These Terms of Service (“ Terms ”) govern your access to and use of the website accessible at www.lombard.finance (the “ Site ”) and the application accessible at www.lombard.finance/app/ (the “ User Interface ”) that facilitates interactions with a software system comprised of five core components the Lombard Ledger, CubeSigner, Bascule Drawbridge, Smart Contracts, and Trustless Relayers, that facilitate the deployment of Digital Assets in yield-generating strategies (which may include staking, lending, options-based, and other strategies as in effect from time to time, as described in these Terms and applicable Company Product Terms), the programmatic creation, allocation and redemption of the digital asset LBTC, and the creation, allocation, and redemption of the digital asset BTC.b (the “ Lombard Protocol ” or the “ Protocol ”). The User Interfaces are made available through LF Operations Inc., a Panama Corporation, or its affiliates (the “ Company ”, “ we ” or “ us ”). You may use the User Interfaces to access the Protocol and certain other products and services. You further understand that the products and services accessible to you through the User Interfaces are offered by third parties and not by the Company except as described herein.
+1.2 Binding Agreement. These Terms form a legally binding agreement between you (“ you ” or “ your ”) and the Company. By accessing or using the Site, the User Interface, or the Protocol, you confirm that you accept these Terms and agree to comply with them. If you do not agree, you must cease using the Site, the User Interface, and the Protocol immediately.
+For the avoidance of doubt, “you” includes any AI Agent(s) (as defined below) accessing the Site, the User Interface, or the Protocol on your behalf or at your direct or indirect instruction. Any such agent is deemed authorized by you to accept these Terms on your behalf and you remain solely responsible for all activity conducted through any such agent, whether or not you reviewed or approved each individual action.
+1.3 Incorporation of Other Terms and Policies. Your use of the Site and the User Interface is also subject to the Risk Disclosures and Privacy Policy which are both incorporated herein by reference. Certain products and services accessible through the User Interface may be offered by separate legal entities (“ Third-Party Products ”) and may be governed by separate specific terms of use with those entities (“ Third-Party Product Terms ”). By using any such product, you agree to the applicable Third-Party Product Terms with the applicable counterparty. The Company is not a party to those Third-Party Product Terms and has no liability in connection with those Third-Party Products except as expressly stated in these Terms.
+Third-Party Products and Third-Party Product Terms may be modified, suspended or discontinued at any time without notice to the Company or to Users. If possible, the Company will provide reasonable notice of material changes to Third-Party Products or Third-Party Product Terms that are accessible through the User Interface, but assumes no obligation to monitor or notify Users of changes to such terms and shall not be liable for any losses arising from such changes.
+Additionally, the User Interface may include integrations, links or other access to Third-Party Technologies (as defined below) which may provide certain services, sites, technology, APIs, content and resources. Your access and use of the Third-Party Technologies may also be subject to additional terms and conditions, privacy policies, or other agreements with such Third-Party (collectively, “ Third-Party Terms ”), and you may be required to authenticate to or create separate accounts to use Third-Party Technologies on the websites or via the technology platforms of their respective providers. For the avoidance of doubt, by using the User Interface or accessing the Protocol, you may be deemed an end user of certain Third-Party Technologies and will be bound by the applicable Third-Party Terms whether or not your affirmative consent is required. You agree to comply with all terms, conditions, and policies applicable to any Third-Party Technologies integrated with or made available through the Products. The Company does not control, endorse or accept responsibility for any Third-Party Terms. You acknowledge that such Third-Party Technologies are owned by their respective licensors, and you further agree not to take any action that would violate the applicable licensor’s ownership or intellectual property rights in the Third-Party Technologies.
+Third-Party Technologies and Third-Party Terms may be modified, suspended or discontinued at any time without notice to the Company or to Users. If possible, the Company will provide reasonable notice of material changes to Third-Party Technologies or Third-Party Terms that are integrated with or made available through the Protocol, but assumes no obligation to monitor or notify Users of changes to such terms and shall not be liable for any losses arising from such changes.
+The Company may also offer products and services of its own, the use, acquisition, or holding of which is governed by product-specific terms published by the Company (each, “ Company Product Terms ”). Company Product Terms supplement these Terms, are incorporated into the agreement between you and the Company upon your acceptance of them or your use, acquisition, or holding of the applicable product, and control over these Terms with respect to the product they govern in the event of any conflict. The LBTC Product Terms are Company Product Terms.
+If you use the Site, the User Interface, or the Protocol on behalf of an entity, you represent and warrant that you have authority to bind that entity to these Terms, and references to “you” include that entity.
+1.4 Arbitration and Class Action Waiver Notice. NOTICE: SECTION 15 OF THESE TERMS CONTAINS A MANDATORY BINDING ARBITRATION PROVISION AND CLASS ACTION WAIVER. EXCEPT FOR CERTAIN TYPES OF DISPUTES MENTIONED IN THAT SECTION, YOU AND THE COMPANY AGREE THAT ANY DISPUTES RELATING TO THE SITE, USER INTERFACE, OR PROTOCOL WILL BE RESOLVED BY MANDATORY BINDING INDIVIDUAL ARBITRATION, AND YOU WAIVE ANY RIGHT TO A TRIAL BY JURY OR TO PARTICIPATE IN A CLASS ACTION LAWSUIT OR CLASS-WIDE ARBITRATION.
+2. Definitions
+In these Terms, the following terms have the meanings set out below. Additional defined terms may be introduced throughout these Terms:
+“ AI Agent ” means software that uses large language models to pursue high-level user initiated objectives by planning and executing multi-step sequences of actions, including interactions with external software interfaces, without human intervention at each step.
+“ Applicable Law ” means all municipal, state, federal, and international laws, rules, regulations, orders, directives, and guidelines applicable to your use of the Site, User Interface, Protocol, or any Digital Assets.
+“ BARD ” means the governance and utility token of the Protocol.
+“ Bascule Drawbridge ” means a core technological component of the Protocol that provides an independent verification layer that cross-checks Consortium operations before they are executed.
+“ Blockchain Technologies ” means the Third-Party Technologies, the Protocol, and related blockchain networks, cryptographic systems, smart contracts, and Digital Assets.
+“ BTC.b Activities ” means, solely, (a) the minting of BTC.b through the Protocol against the deposit of BTC, (b) the redemption of BTC.b through the Protocol for BTC, and (c) the holding and transfer of BTC.b obtained through the foregoing, in each case excluding any use of a Restricted Product.
+“ Class Action ” has the meaning set forth in Section 15.4.
+“ Compliance Event ” has the meaning set forth in Section 7.1.
+“ Compliance Obligation ” means any obligation arising under Applicable Law, including but not limited to, anti-money laundering, counter-terrorism financing, Sanctions, tax reporting, know-your-customer or identity verification requirements, anti-bribery and anti-corruption laws, anti-fraud measures or other regulatory or law enforcement requirements applicable to the Company, its affiliates, or the User Interface or Protocol.
+“ Consortium ” or “ Lombard Security Consortium ” means a group of independent institutional members that collectively govern Protocol operations by, among other things, validating transactions, authorizing the minting and redemption of liquid staking tokens (including LBTC), facilitating staking and unstaking operations, and overseeing protocol upgrades. Consortium members act pursuant to their own obligations; the Company does not control the Consortium and cannot unilaterally compel any Consortium action with respect to user Digital Assets or the Protocol.
+“ CubeSigner ” means a core technological component of the Protocol that is a hardware-backed key management system that protects cryptographic keys in the Lombard system by storing them in Hardware Security Modules (“ HSMs ”) such that these cryptographic keys cannot be seen or extracted.
+“ Digital Assets ” means any digital currency, cryptocurrency, virtual asset, token, or other digital representation of value recorded on a distributed ledger or blockchain network, including without limitation Bitcoin (BTC), LBTC, BTC.b.
+“ Dispute Notice ” has the meaning set forth in Section 15.2.
+“ Disputes ” has the meaning set forth in Section 15.3.
+“ Eligible User ” has the meaning set forth in Section 6.1.
+“ Emerging Technology Laws ” means any rules, regulations, and laws that address crypto assets, blockchain technology, digital assets, decentralized finance, or related technologies, as may be adopted or modified by any jurisdiction from time to time.
+“ Lombard Finance Parties ” means the Company and its respective past, present, and future employees, officers, directors, contractors, consultants, equity holders, suppliers, vendors, service providers, parent companies, subsidiaries, affiliates, agents, representatives, predecessors, successors, and assigns, individually and collectively.
+“ Lombard Ledger ” means the Byzantine fault-tolerant Cosmos-based appchain on which Consortium operations and transaction validations are recorded and is a core technological component of the Protocol.
+“ Privacy Policy ” means the Company’s privacy policy, as may be updated from time to time, available at https://docs.lombard.finance/resources/privacy , which governs the collection, use, storage and disclosure of personal data in connection with the User Interface or Protocol.
+“ Prohibited User ” has the meaning set forth in Section 6.5. For the avoidance of doubt, Prohibited Users include all Sanctioned Persons, all individuals and entities in Sanctioned Jurisdictions, and all individuals and entities in Restricted Jurisdictions (other than solely with respect to BTC.b Activities as further described in Section 6.3).
+“ Prohibited Uses ” has the meaning set forth in Section 10.
+“ Protocol ” has the meaning set forth in Section 1.1.
+“ Restricted Action ” has the meaning set forth in Section 7.1.
+“ Restricted Jurisdiction ” has the meaning set forth in Section 6.3.
+“ Restricted Person ” means any individual or entity that is or that is acting at the direction of or on behalf of an individual or entity that is (a) a Sanctioned Person, (b) located in, incorporated in or a resident of any Sanctioned Jurisdiction or Restricted Jurisdiction (provided that, solely with respect to BTC.b Activities, an individual or entity shall not be a Restricted Person solely by reason of its connection to a Restricted Jurisdiction), or (c) otherwise prohibited from accessing or using the User Interface or Protocol under these Terms or Applicable Law.
+“ Restricted Products ” means (a) LBTC, including the minting, redemption, acquisition, holding and transfer of LBTC; (b) Rewards; (c) Strategies; and (d) any other product, service, or functionality accessible through the User Interface or the Protocol other than BTC.b Activities, together with the features of the User Interface through which any of the foregoing are made available. For the avoidance of doubt, BTC.b Activities are not a Restricted Product, but any deposit of BTC.b into LBTC or a Strategy shall constitute use of a Restricted Product.
+“ Rewards ” means any points, incentive or rewards program made available by or on behalf of the Company in connection with the User Interface or the Protocol, and any points, Yield or Third-Party Tokens allocated or accrued under any such program or under Section 9.2.
+“ Risk Disclosures ” means the standalone risk disclosures document published by the Company at https://docs.lombard.finance/resources/risk-disclosures , as may be updated from time to time.
+“ Sanctions ” means any economic or trade sanctions, export controls or similar restrictive measures imposed, administered or enforced by any governmental authority.
+“ Sanctioned Jurisdiction ” has the meaning set forth in Section 6.2.
+“ Sanctioned Person ” has the meaning set forth in Section 6.4.
+“ Services ” means, collectively, all services, tools, infrastructure, and functions made available by or on behalf of the Company or in connection with the Protocol, including without limitation the User Interfaces, staking and restaking functionality, Consortium-validated transaction processing, cross-chain bridging, and any ancillary services. References to the “Services” in these Terms include all components described in this definition unless the context requires otherwise.
+“ Protocol Smart Contracts ” means the LBTC and BTC.b token contracts deployed on each supported chain that are a core component of the Protocol.
+“ Strategies ” means vaults and other yield-generating strategies (including staking, lending, options-based and other strategies) made available through the User Interface, including Bitcoin Earn and Bitcoin Onchain Credit Strategy.
+“ Third-Party Products ” has the meaning set forth in Section 1.3.
+“ Third-Party Materials ” has the meaning set forth in Section 12.1.
+“ Third-Party Technologies ” means all third-party software, protocols, networks, platforms, nodes, services and infrastructure that are controlled or operated by parties other than the Company and that are integrated with, accessible through or otherwise used in connection with the Site, the User Interface, or the Protocol, including, without limitation:
+(a) The Babylon Protocol, and any other Bitcoin staking protocols, through which Digital Assets may be staked.
+(b) The Bitcoin Staking Partners engaged by Lombard to co-operate independent Finality Providers on the Babylon Protocol.
+(c) The blockchain networks on which the Protocol is deployed or to which Digital Assets may be bridged, staked, or otherwise transferred.
+(d) Cross-chain bridges and bridging infrastructure through which Digital Assets may be transferred between blockchain networks.
+(e) DeFi protocols and smart contracts that are integrated with or accessible through the User Interface or the Protocol.
+(f) Oracles and data feeds used to determine pricing, yields, or other parameters within the Protocol or Third-Party Technologies accessible through the User Interface or Protocol.
+(g) Third-party wallet applications, browser extensions, cold wallets and custody solutions connected by Users to access the User Interface or the Protocol.
+“ Third-Party Tokens ” has the meaning set forth in Section 9.2.
+“ Trustless Relayer ” means infrastructure services that facilitate communication between blockchain networks and automate routine operations that are a core technological component of the Protocol.
+“ User ” means any individual or entity that accesses or uses the User Interface or Protocol, including any AI Agent acting on behalf of or at the instruction of such individual or entity.
+“ User Interfaces ” has the meaning set forth in Section 1.1.
+“ Wallet ” means a third-party digital wallet used to interact with blockchain networks and the Protocol.
+“ Yield ” means, for purposes of these Terms only, certain Digital Assets that may accumulate and/or transfer to an account or Wallet of yours as a result of your engagement of the Protocol or Third-Party Services.
+3. Modification of Terms
+3.1 Right to Modify. The Company reserves the right to modify, amend, or update these Terms at its discretion with or without notice. Any changes will be effective immediately upon posting. Notice of modifications may also be provided via email, pop-up notifications, or announcements on or through the Site at the Company’s sole discretion. Your continued use of the User Interface or Protocol constitutes acceptance of the changes.
+3.2 Material Changes and Opt-In. Certain modifications to these Terms or to the User Interface or Protocol may constitute material changes to the nature, risk profile, or operational characteristics of the Services, including, without limitation, changes to the manner in which Digital Assets are held, deployed, managed, or redeployed, changes to the custodial or control structure of the Services, or changes to the regulatory classification or treatment of the Protocol or any Digital Assets. Where the Company determines, in its sole discretion, that a modification constitutes a material change, the Company may require your affirmative opt-in or re-acceptance of the updated Terms as a condition of continued access to the affected User Interface or Protocol. If an opt-in is required and you do not opt in, your access to the User Interface or Protocol may be restricted and you may be required to withdraw your Digital Assets within a specified timeframe. The Company shall have no liability for any determination made or not made under this Section 3.2.
+4. The Protocol
+4.1 Protocol Independence. You acknowledge that the Protocol architecture and/or operation may evolve over time, and that certain administrative, operational, or governance functions may currently be performed or influenced by the Company, the Consortium, or other designated parties. For example, the Company and certain authorized parties may, in their sole discretion, take certain actions to respond to security incidents, suspected exploits or hacks, Sanctions screening or other legal and Compliance Obligations, or court or governmental orders. The Company’s involvement in any such functions does not create a duty of care, fiduciary obligation, or ongoing operational commitment to you, and the Company may reduce, modify, or cease any such involvement at any time without notice or liability. Notwithstanding any current involvement by the Company in Protocol operations, all responsibility for the ultimate operation, performance, or security of the Protocol is disclaimed to the fullest extent permitted by Applicable Law. Users are solely responsible for reviewing and understanding any updates, forks, or modifications to the Protocol before interacting with it. No liability is accepted for any interactions with the Protocol based on outdated or incorrect information, or on assumptions about the Protocol’s governance structure or degree of decentralization.
+The User Interface provides a means of interacting with the Protocol, but does not include the Protocol itself. The User Interface is only one means of accessing and interacting with the Protocol, and you may access or interact with the Protocol directly or through third-party access services. The Company does not, and does not intend to, manage or control individual user transactions on the Protocol; however, you acknowledge that certain operational, administrative, and governance functions, including Consortium-validated transaction processing, and compliance-related Restricted Actions, may be initiated by the Company, the Consortium, or other designated parties. Such involvement does not make the Company a party to your individual transactions and does not create a custodial, fiduciary, or trust-based relationship.
+4.2 Assumption of the Risk. Before using the User Interface to access the Protocol or Third-Party Products or Third-Party Technologies, you are strongly encouraged to thoroughly review the Risk Disclosures which outline the significant risks associated with decentralized finance applications, blockchain technology, staking and restaking, and Digital Assets. BY USING THE USER INTERFACE TO ACCESS THE PROTOCOL, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND ACCEPTED THE RISKS DETAILED IN THE RISK DISCLOSURES. All liability for losses resulting from these risks is disclaimed, including but not limited to smart contract vulnerabilities, market volatility, slashing events, validator misconduct, bridge failures, governance decisions, unforeseen interactions with other blockchain protocols, services, and products, administrative or upgrade key compromise, Consortium consensus failures, oracle manipulation, lack of warranties or other performance guarantees, lack of maintenance obligations, cyberattack vulnerabilities, and potential intellectual property infringement claims, and deviations in the reference price or market value of collateral assets.
+You acknowledge the open source and experimental nature of blockchain technology and are solely responsible for your use of the User Interface to access the Protocol and for your interactions with the Protocol, any transactions that you conduct when using the Protocol, and for understanding and complying with any tax, legal, or regulatory obligations arising from your use of the User Interface to access and interact with the Protocol, or any Digital Assets. Your continued use of the User Interface to access the Protocol signifies your acceptance of these risks and your agreement to be bound by these Terms and the Risk Disclosures.
+4.3 No Warranties on User Interface or Protocol. We make no representations or warranties, express or implied, regarding the security, reliability, functionality, or availability of the User Interface or the Protocol. You acknowledge that the Protocol is intended to operate through the Consortium on a byzantine fault tolerant basis and that the Company does not guarantee the continued operation, security, or performance of the Protocol, regardless of any current involvement by the Company, the Consortium, or any other party in Protocol operations or governance. We assume no responsibility for any bugs, vulnerabilities, or failures in the Protocol.
+5. Protocol Disclaimers and Acknowledgments
+5.1 No Custodial Services. The Company does not intend to offer custodial services and does not intend to exercise custody over your Digital Assets. You are responsible for managing your Wallet and private keys, securing your Digital Assets, and safeguarding against unauthorized access. All liability for any loss or damage resulting from your loss of control over these keys or any unauthorized access to your Wallet or Digital Assets is disclaimed. The private keys and/or seed phrases necessary to access the assets held in your Third-Party Wallet are not held by the Company. The Company has no ability to help you access or recover your private keys and/or seed phrases for your Wallet. The Company also has no ability to reverse unauthorized transactions or to recover Digital Assets that have been the subject of unauthorized transactions. Notwithstanding the foregoing, you acknowledge that certain technical, operational, or compliance functions with respect to the Protocol may result in Protocol transactions that are influenced by the Company, the Consortium, or their agents. Such involvement does not constitute the provision of custodial services and does not create a custodial, fiduciary, or trust-based relationship between the Company and you.
+5.2 No Financial Advice. All data and information generated by or otherwise available through the User Interface or Protocol are provided solely for informational and educational purposes and do not constitute legal, financial, investment, or tax advice. You should not take, or refrain from taking, any action based on any information accessible through the User Interface or the Protocol. Some information available through the User Interface and Protocol may contain forward-looking statements which are inherently uncertain and should not be seen as a forecast of future events or a guarantee of future results. You should conduct your own independent research and consult qualified professional advisors before using and/or making decisions related to engaging in any transactions with the Protocol.
+5.3 No Fiduciary Relationship. These Terms are not intended to, and do not, create or impose any fiduciary duties on us. To the fullest extent permitted by law, you acknowledge and agree that we owe no fiduciary duties or liabilities to you or any other party, and that to the extent any such duties or liabilities may exist at law or in equity, those duties and liabilities are hereby irrevocably disclaimed, waived, and eliminated. You further agree that the only duties and obligations that we owe you are those set out expressly in these Terms.
+5.4 Not a Broker, Exchange, Financial Institution, or Fund. THE COMPANY IS NOT REGISTERED AS A BROKER, DEALER, EXCHANGE, FINANCIAL INSTITUTION, MONEY SERVICES BUSINESS, MONEY TRANSMITTER, CREDITOR, COMMODITY POOL OPERATOR, COMMODITY TRADING ADVISOR, INVESTMENT COMPANY, INVESTMENT ADVISER, FUND MANAGER, OR PORTFOLIO MANAGER. THE PRODUCTS ARE OFFERED PRIMARILY AS ADMINISTRATIVE AND TECHNICAL INFRASTRUCTURE. The Company does not match buyers and sellers, does not provide an order book, does not execute trades on behalf of users, and does not operate a market. The Company does not intend to exercise custody over Users’ Digital Assets, although users acknowledge that certain technical, operational, or compliance functions of the Protocol may result in Protocol transactions that are influenced by the Company, the Consortium, or their agents.
+Except as otherwise provided in applicable Company Product Terms (as defined in Section 1.3): The Services and any associated staking, restaking, yield generation, or capital deployment activities, are not intended to constitute, and shall not be construed as constituting, a pooled investment vehicle, collective investment scheme, managed fund, common enterprise, investment contract, or similar arrangement under the laws of any jurisdiction. Nothing in these Terms creates or is intended to create an investment fund, a pooled vehicle for the investment of assets, or any similar structure. Users’ Digital Assets are not commingled for the purpose of collective investment, and the Company does not manage users’ assets on a discretionary or advisory basis. Where Company Product Terms apply, the treatment of Digital Assets is as described in those terms. For the avoidance of doubt, any holding, processing, routing, or aggregation of Digital Assets through shared smart contracts, pooled staking positions, shared validator slots, or other shared infrastructure as described in Section 8.3 is effected solely for operational and technical purposes in connection with staking and the functioning of the Protocol, and does not constitute the pooling or commingling of assets for collective investment, the management of assets on a discretionary or advisory basis, or the operation of a common enterprise or managed fund.
+5.5 Not Registered with Financial Regulators. The Company is not registered with, authorized by, or regulated by any financial regulatory authority in any jurisdiction, including without limitation any securities regulator, commodities regulator, banking regulator, money transmission or payment services regulator, crypto-asset service regulator, or financial intelligence unit, in connection with the Protocol, or BARD. No registration, authorization, licensing, or regulatory approval should be inferred from the availability of User Interface or the Protocol. LBTC, BTC.b, and BARD have not been registered as a security, financial instrument, commodity interest, regulated crypto-asset, or regulated product under the laws of any jurisdiction.
+The Company does not intend to provide any services constituting portfolio management, reception, routing and transmission of orders, exchange or trading of financial instruments or crypto-assets, custody of financial instruments or crypto-assets, or any other regulated financial or crypto-asset service under any applicable regulatory framework. No protections provided by any investor compensation scheme, depositor protection scheme, financial ombudsman service, or similar regulatory safety net in any jurisdiction are available to you when using the Products.
+No communication, content, or material made available through the User Interface, the Protocol, or by the Company is intended to constitute a financial promotion, prospectus, offering document, or marketing communication within the meaning of any applicable securities, financial services, or crypto-asset regulatory framework. You should not treat any information provided through the User Interface, the Protocol, or by the Company as an invitation or inducement to engage in investment activity.
+Users acknowledge that regulatory authorities in any jurisdiction may, at any time, determine that LBTC, BTC.b, BARD, or the operation of the Protocol, constitutes a security, financial instrument, regulated crypto-asset service, commodity interest, or other regulated product or activity. Such a determination may restrict the availability, transferability, or use of the relevant Digital Asset or the Protocol, may require the Company to cease or modify operations, and may expose users to regulatory consequences. The Company makes no representations regarding the current or future regulatory classification of the User Interface or the Protocol in any jurisdiction.
+6. Eligibility, Compliance, and Prohibited Users
+6.1 Eligibility Requirements. To access and use the User Interface and to access the Protocol, you must, on an ongoing and continuous basis:
+(a) be at least 18 years old or of legal age to form a binding contract in your jurisdiction;
+(b) have sufficient technical knowledge necessary to understand and evaluate the risks of using the User Interface, the Protocol, the Third-Party Technologies and blockchain-based systems generally, including the risks described in the Risk Disclosure;
+(c) not be located in, a resident of, citizen of, national of, or agent of, nor an entity organized, incorporated, or doing business in, any Sanctioned Jurisdiction or any Restricted Jurisdiction (except solely with respect to BTC.b Activities as permitted under Section 6.3);
+(d) not be a Sanctioned Person nor accessing the Products on behalf of, for the benefit of or at the direction of any Sanctioned Person;
+(e) not be an individual or entity whose access to or use of the User Interface or the Protocol would, in the Company’s sole discretion, expose the Company to regulatory, legal, enforcement, Sanctions, export control, reputational, or compliance risk;
+(f) if you are an entity (which for the avoidance of doubt shall not include AI Agents), be duly incorporated, validly existing, and in good standing under the laws of the jurisdiction of your incorporation, authorized to use the User Interface and the Protocol, and not accessing the User Interface or the Protocol by, through, or on behalf of a Sanctioned Person, Restricted Person or Prohibited User;
+(g) comply with all Applicable Laws in connection with your use of the User Interface and the Protocol, and you are solely responsible for determining and ensuring such compliance; and
+(h) not use any virtual private network (“ VPN ”), proxy service, or other method or technology to misrepresent your location, circumvent geographic or jurisdictional restrictions (including the restrictions relating to Sanctioned Jurisdictions and the restrictions on access to Restricted Products from Restricted Jurisdictions), evade Sanctions screening, or otherwise circumvent any restriction imposed by these Terms or Applicable Law or defeat any compliance controls implemented by the Company.
+Users who are in strict compliance with the foregoing are deemed eligible users (“ Eligible User ”). Your continued use of the User Interface and the Protocol constitutes a deemed representation that each of the foregoing conditions remains satisfied and that you are and remain an Eligible User at all times while using the User Interface and the Protocol. You agree to notify the Company immediately if your eligibility status changes. The Company reserves the right to verify your eligibility at any time and, in its sole discretion, restrict, suspend, or terminate access immediately, without notice or liability, if eligibility cannot be confirmed or if there is a reasonable suspicion that you are or may become a Sanctioned Person, Restricted Person or Prohibited User.
+6.2 Sanctioned Jurisdictions. As of the “Updated and effective” date above, the list of sanctioned jurisdictions (each, a “ Sanctioned Jurisdiction ”) is as follows:
+Belarus
+Burundi
+Crimea, Donetsk, and Luhansk regions in Ukraine
+Cuba
+Democratic Republic of Congo
+Iran
+Iraq
+Libya
+North Korea (DPRK)
+Russia
+Somalia
+Sudan
+Syria
+Venezuela
+Zimbabwe
+The Company reserves the right to update or amend this list at any time, with or without notice to you.
+6.3 Restricted Jurisdictions. In addition to the restrictions applicable to Sanctioned Jurisdictions, the Restricted Products are not available to, and may not be accessed or used by, individuals or entities located in, incorporated in, or residing in the following jurisdictions (each, a “ Restricted Jurisdiction ”) due to regulatory, legal, or business considerations:
+The United States of America (including its territories and possessions)
+The United Kingdom (including its territories and possessions)
+For the avoidance of doubt, individuals and entities in Restricted Jurisdictions are Prohibited Users under these Terms, except that they may, subject to these Terms and Applicable Law, access the Site, the User Interface, and the Protocol solely to engage in BTC.b Activities. Such individuals and entities may not, directly or indirectly, access or use any Restricted Product, and no access to or use of a Restricted Product may be for their benefit. The Company may use geo-blocking, IP address or Wallet screening, or other measures to restrict access to Restricted Products from Restricted Jurisdictions, and any access to or use of a Restricted Product in breach of this Section 6.3 is a breach of these Terms. For the avoidance of doubt, nothing in this Section 6.3 modifies any restriction on individuals or entities in Restricted Jurisdictions contained in any Company Product Terms, including the LBTC Product Terms, which shall continue to apply in full.
+Each time an individual or entity located in, incorporated in, or residing in a Restricted Jurisdiction accesses the User Interface or the Protocol, such individual or entity represents and certifies that it is doing so solely to engage in BTC.b Activities and that it will not access, use, acquire, hold, or receive any Restricted Product. The Company may, in its sole and absolute discretion, require such representation and certification to be given affirmatively prior to any transaction.
+6.4 Sanctioned Persons. For purposes of this Section 6.4, a Sanctioned Person is any of the following:
+(a) an individual or entity that is designated under blocking and asset-freeze-type Sanctions of any jurisdiction, including but not limited to the U.S. Treasury Department’s list of Specially Designated Nationals and Blocked Persons (“ SDN List ”), the U.S. Department of Commerce Denied Person’s List or Entity List, the HM Treasury Financial Sanctions List, and the Consolidated Financial Sanctions List enforced by member states of the European Union;
+(b) any entity that is owned 50% or more, directly or indirectly, either individually or in the aggregate, by one or more Sanctioned Persons, or otherwise subject to the control of a Sanctioned Person;
+(c) the government of any Sanctioned Jurisdiction, including any subdivision or instrumentality thereof; or
+(d) any individual or entity located in, incorporated in, or residing in any Sanctioned Jurisdiction.
+Violating this Section 6.4 may result in immediate termination of your access to the Services, reporting to authorities, and other legal consequences.
+6.5 Prohibited Users. For purposes of these Terms, a “Prohibited User” is any of the following: (a) a user who engages in any Prohibited Use, as defined in Section 10; (b) any Sanctioned Person; (c) any individual or entity located in, incorporated in, or residing in any Sanctioned Jurisdiction or, except solely with respect to BTC.b Activities as permitted under Section 6.3, any Restricted Jurisdiction; (d) any individual or entity acting on behalf of, for the benefit of, or at the direction of any person or entity described in clauses (a) through (c); (e) any user who deploys, authorizes or permits an AI Agent to access or interact with the User Interface or Protocol where such AI Agent’s compute infrastructure, transaction routing or network access originates from, or passes through, any Sanctioned Jurisdiction (or, except where such AI Agent engages solely in BTC.b Activities, any Restricted Jurisdiction); (f) any user who in the Company’s sole discretion, is deemed to not be an Eligible User; or (g) any user who would, in the Company’s sole discretion, expose the Company to regulatory, legal, enforcement, Sanctions, export control, reputational, or compliance risk (in each case, a “ Prohibited User ”).
+Prohibited Users are strictly prohibited from directly or indirectly accessing or using the User Interface and the Protocol, and no transaction conducted through the User Interface or the Protocol may be for the economic or other benefit of a Prohibited User. Any violation of this Section 6.5 may result in immediate termination of access, reporting to relevant authorities, and other legal consequences.
+6.6 Cooperation with Authorities. You agree that the Company may cooperate with government or regulatory authorities in investigating any suspected illegal activities. This may include the provision of information about your activities or identity as may be required by law. The Company reserves the right, but has no obligation, to monitor activities conducted through the User Interface and the Protocol for compliance with these Terms and Applicable Laws. Any suspicious activity may be reported to law enforcement or regulatory authorities.
+7. Compliance-Related Restrictions
+7.1 Restricted Actions. You acknowledge and agree that the Company, the Consortium, or their agents may, at any time, freeze, suspend, restrict, or delay any transaction, transfer, withdrawal, or other operation involving your Wallet, Digital Assets, use of the User Interface to access the Protocol, or use of the Protocol (each, a “ Restricted Action ”) where it is determined, at the discretion of the Company, the Consortium, or their agents, that such action is necessary or advisable in connection with:
+(a) any actual or suspected violation of Applicable Law, including any anti-money laundering, counter-terrorism financing, Sanctions, or tax laws or regulations;
+(b) any risk flag, alert, or report generated by the Company’s compliance monitoring systems or any third-party compliance service provider;
+(c) any investigation, inquiry, or request by any governmental, regulatory, or law enforcement authority;
+(d) any internal investigation conducted by or on behalf of the Company relating to potential Prohibited Uses, Prohibited Users, or suspicious activity; or
+(e) any other circumstance in which the Company reasonably believes that a Restricted Action is necessary to protect the Company, its affiliates, or any third-party from legal, regulatory, financial, or reputational risk (collectively, “ Compliance Events ”).
+Notwithstanding the foregoing, the Company, the Consortium, their agents, or certain authorized parties may screen Users, Wallets, transactions, and Digital Assets against applicable Sanctions, anti-money-laundering, and other legal and regulatory requirements, and may at any time, in their sole discretion, take action to reject, block, freeze, segregate, or decline to process any transaction or Digital Asset where they determine or reasonably suspect such a transaction would constitute a Restricted Action and/or violate any applicable Sanctions or other Compliance Obligation. Where Digital Assets are blocked or frozen pursuant to applicable Sanctions, such assets will remain blocked, and the Company, the Consortium, or their agents will have no obligation or ability to release, return, or transfer them, unless and until authorized or directed to do so by the relevant governmental authority or otherwise according to the Company’s sole discretion. The Company may voluntarily report blocked or rejected transactions and related information to governmental authorities or may do so as required by Applicable Law. The Company shall have no liability for any action taken, or omitted to be taken, in connection with any actual, potential, or suspected Compliance Obligation, including any over-inclusive blocking, delay or good-faith error.
+7.2 Process; No Prior Notice. The Company shall have no obligation to provide prior notice before implementing any Restricted Action and shall not be required to disclose the basis for any such action except to the extent required by Applicable Law. Restricted Actions may remain in place for as long as the Company deems necessary to complete its investigation or satisfy any applicable legal or regulatory requirement, and the Company shall have no obligation to resolve any Restricted Action within any particular timeframe. You agree to cooperate fully with any investigation or information request relating to a Compliance Event, including by providing such documentation, identity verification, source-of-funds information, or other evidence as the Company may request. Failure to cooperate may result in the continuation of the Restricted Action and/or termination of your access to the User Interface and to the Protocol through the User Interface.
+7.3 No Liability for Restricted Actions. You expressly acknowledge and agree that the Lombard Finance Parties shall have no liability whatsoever to you or any Third-Party for any Restricted Action or Compliance Event, including, without limitation, any liability for:
+(a) any fluctuation in the value, price, or market conditions of any Digital Assets during the period of any Restricted Action;
+(b) any lost profits, lost revenue, lost opportunity, opportunity cost, or inability to execute transactions, trades, or strategies during or as a result of a Restricted Action;
+(c) any losses arising from liquidation, slashing, or other Protocol-level events that occur during a Restricted Action;
+(d) any delay in the processing, settlement, or completion of any transaction; or
+(e) any consequential, incidental, indirect, special, or punitive damages of any kind arising from or related to a Restricted Action.
+This disclaimer applies regardless of whether such losses were foreseeable and regardless of whether the Company has been advised of the possibility of such losses. The Company may also be compelled by Applicable Law, court order, or governmental directive to freeze, seize, transfer, or otherwise dispose of Digital Assets or restrict access to the Products, and shall have no liability for compliance with any such order or directive.
+8. Wallets, Transactions, and Digital Assets
+8.1 Wallet Terms. To use the User Interface or the Protocol you may need to link a third-party Wallet. By using a Wallet in connection with the User Interface or the Protocol, you agree that (a) you or your AI Agent are using the Wallet under the terms and conditions of the applicable third-party provider of such Wallet; (b) Wallets are not associated with, maintained by, supported by, or affiliated with the Company; (c) you assume all risks associated with using an Internet-based blockchain network; and (d) the Company does not intend to take possession, custody, or control over Digital Assets in your Wallet. You further acknowledge and agree that the Company does not intend to be a party to individual transactions conducted while accessing the User Interface or the Protocol. The Company has no responsibility or liability in connection with your use of a Wallet, and no representations or warranties are made regarding how the User Interface or the Protocol will operate with any specific Wallet. The private keys and seed phrases necessary to access your Wallet are not held by the Company, and the Company has no ability to help you access or recover them.
+8.2 Transactions and Fees. Transactions on blockchain networks are irreversible once executed. Except as provided in Sections 4.1 and 7 and as required by Applicable Law, the Company does not, in the ordinary course, pause, reverse, cancel, or modify a transaction you submit through the Protocol, including, without limitation, transactions sent to an incorrect address, in an incorrect amount, or that you later seek to reverse. You are solely responsible for ensuring all transaction details are correct before submission and best practices dictate that a test transaction be conducted prior to any material transaction. All transactions are final and non-refundable. Your use of the Products, Services or Protocol may incur various fees, including but not limited to gas fees, transaction execution fees, protocol fees, or other charges applicable to specific interactions. Fees may vary depending on network conditions, market factors, and protocol parameters. The Company bears no responsibility for failed transactions, excess gas usage, or other losses arising from fee execution logic.
+8.3 Shared Infrastructure. You acknowledge and agree that Digital Assets staked, deposited, bridged, or otherwise committed through the Protocol may be held, processed, or routed through shared smart contracts, pooled staking positions, shared validator slots, or other aggregated infrastructure in which your Digital Assets are not individually segregated from those of other users. In such circumstances:
+(a) Your Digital Assets may not be separately identifiable on-chain or in any underlying infrastructure from those of other users, and may be commingled with assets of users in different jurisdictions, including jurisdictions with different legal, regulatory, or sanctions frameworks.
+(b) The Company does not guarantee individual segregation of assets and makes no representation that your specific Digital Assets will be held in a separate wallet, smart contract, or account.
+(c) In the event of a loss, exploit, slashing event, regulatory seizure, or insolvency event affecting any pooled staking position or other shared infrastructure, losses may be distributed across all users with assets committed to such shared infrastructure, and you may not recover the full amount of your Digital Assets regardless of whether the loss was attributable to your activity or assets.
+(d) You accept all risks associated with the use of shared infrastructure, including the risk that regulatory actions targeting other users’ assets in the same shared infrastructure may affect your assets.
+(e) You acknowledge that the use of shared infrastructure may present sanctions, regulatory, or legal risks — including the risk that Digital Assets in shared infrastructure may become tainted, frozen, or subject to seizure as a result of the activity, identity, or jurisdictional status of other users whose assets are commingled in the same infrastructure. The Company shall have no liability for any losses arising from sanctions screening, regulatory seizure, or taint analysis affecting shared infrastructure.
+8.4 KYC, AML, and Data Collection. Company may implement or be required to implement know-your-customer (“ KYC ”), anti-money laundering (“ AML ”), combating the financing of terrorism (“ CFT ”), or other identity verification and compliance procedures in connection with the User Interface or the Protocol. By submitting personal data in connection with such procedures, you acknowledge that:
+(a) Personal data may be subject to applicable data protection and privacy laws, including the General Data Protection Regulation (EU) 2016/679 (“ GDPR ”) and other applicable data privacy legislation.
+(b) Personal data may be shared with third-party compliance screening providers, regulatory authorities, and law enforcement agencies as required by Applicable Law.
+(c) The Company shall process all personal data in accordance with its Privacy Policy.
+You are solely responsible for understanding the data privacy implications of providing personal data in connection with your use of the User Interface or the Protocol and for ensuring that your participation is consistent with your own data privacy requirements and preferences.
+8.5 Withdrawal and Retrieval of Digital Assets. The ability to withdraw, unstake or otherwise retrieve Digital Assets from the Protocol depends on the continued operation of the Protocol, the Consortium, the relevant blockchain networks, and any applicable Third-Party Technologies. Withdrawal and retrieval may be subject to unbonding periods, processing delays, liquidity constraints, smart contract limitations, Restricted Actions, or other operational or compliance-related restrictions. Third-Party Technology Terms or Third-Party Terms may impose additional conditions, limitations, or procedures on withdrawal. You should not commit Digital Assets to the Protocol unless you are prepared for the possibility that withdrawal or retrieval may be delayed, restricted, or temporarily unavailable. The Company does not guarantee or warrant that withdrawal or retrieval of Digital Assets from the Protocol will be available at any particular time or within any particular timeframe and shall have no liability for any change in the value, price, or market conditions of Digital Assets occurring during any unbonding period, withdrawal queue, processing delay, or other period during which withdrawal or retrieval is delayed, restricted, or unavailable.
+9. Yield and Token Distributions
+9.1 Yield. Your engagement with the Protocol, Third-Party Products, or Third-Party Technologies may result in the accumulation and/or transfer of certain Digital Assets (referred to for purposes of these Terms only as “ Yield ”). The amount of Yield you accumulate and/or actually receive, if any, is determined by the Protocol and/or the applicable Third-Party Products or Third-Party Technologies, or, for Company-issued products, as described in the applicable Company Product Terms. No offer or guarantee of the receipt of Yield is made in connection with your use of the User Interface or your engagement with the Protocol and/or Third-Party Products or Third-Party Technologies.
+9.2 Token Allocations from Third-Party Platforms. From time to time, the Company may receive tokens or other Digital Assets (“ Third-Party Tokens ”) from protocols, platforms, or other third-party sources and may, at its discretion, allocate such Third-Party Tokens to you based on certain pre-defined criteria (e.g., staking activity). The Company’s allocation of these Third-Party Tokens is purely ministerial. The Company does not control, guarantee, or influence their issuance, liquidity, market value, yield, or conversion. No guarantees are made regarding the receipt, amount, timing, or availability of Third-Party Tokens. All allocations are subject to token availability and the pre-defined criteria. Third-Party Tokens, if allocated, are provided “as-is” with no warranties regarding value, functionality, or compatibility. The Company may modify, suspend, or terminate any allocation of Third-Party Tokens at any time, with or without notice, and without incurring liability. You are solely responsible for providing accurate and up-to-date Wallet addresses or other required information to receive any Third-Party Tokens, including complying with any applicable AML, KYC or other identity verification requirements.
+9.3 BARD. The Company makes no representations about BARD’s value, liquidity, or tradability. Any value BARD may have is determined entirely by third-party markets and is outside the Company’s control. Use of the Protocol does not create any entitlement, expectation, or claim with respect to BARD. The terms governing the BARD token are available at https://docs.lombard.finance/resources/airdrop-terms .
+9.4 Tax Matters. You are solely responsible for determining and satisfying any tax obligations that may arise from your receipt of Yield, Third-Party Tokens, BARD, or any other Digital Assets through your use of the Products or Protocol. The Company does not provide tax advice and makes no representations regarding the tax treatment of any Digital Assets in any jurisdiction. You should consult with a qualified tax professional before engaging in any transactions that may have tax implications.
+10. Prohibited Uses and User Conduct
+Without limiting the foregoing, you will not, in connection with your use of the User Interface or the Protocol, do or undertake any of the following on or through the User Interface or the Protocol, as determined by the Company in its sole discretion (collectively, “ Prohibited Uses ”):
+(a) Abusive Activity: Actions, including those undertaken by AI Agents, which (i) conduct, facilitate, authorize, or permit any text or data mining or web scraping, (ii) impose an unreasonable or disproportionately large load on the User Interface or the Protocol infrastructure, or detrimentally interfere with, intercept, or expropriate any system, data, or information, including by engaging in denial-of-service attacks, excessive automated requests, flooding, or other activities that degrade performance (iii) transmit or upload any material to the User Interface or the Protocol that contains viruses, Trojan horses, worms, bots, or any other malicious code, software, or tools intended to harm, disrupt, or gain unauthorized control over the User Interface, the Protocol, or any related infrastructure, (iv) exceed the scope of authority to access or use the User Interface or the Protocol or (v) attempt to gain unauthorized access to the User Interface or the Protocol. Notwithstanding the foregoing, the use of AI Agents to access or interact with the User Interface or the Protocol through the Company’s supported connection mechanisms shall not constitute Abusive Activity, provided that such access complies with all other provisions of the Terms herein.
+(b) Abuse Other Users: Interfere with another individual’s access to or use of the User Interface or the Protocol; defame, abuse, extort, harass, stalk, threaten, or otherwise violate or infringe the legal or other rights (such as, but not limited to, rights of privacy, publicity, and intellectual property) of others; or harvest or otherwise collect information from the User Interface or the Protocol about others, including, without limitation, email addresses, without proper consent.
+(c) Fraud: Activity which operates to defraud the Company or any other person, or provide any false, inaccurate, or misleading information to the Company.
+(d) Market Manipulation: Any activity intended to manipulate the User Interface or the Protocol metrics, Rewards, eligibility criteria, or distributions.
+(e) Wash Trading and Sybil Activity: Creating multiple accounts, Wallets, or identities to artificially inflate activity, manipulate distributions, or circumvent any restrictions.
+(f) Reverse Engineering: Reverse engineering, decompiling, or attempting to derive source code from any non-public component of the User Interface or the Protocol, unless permitted by open-source licensing or Applicable Law.
+(g) Facilitation: Facilitating or encouraging any Third-Party to do any of the foregoing.
+The Prohibited Uses listed above are representative, but not exhaustive, and the Company reserves the right to update or amend such list in its sole discretion at any time, with or without notice to you. Any user who engages in any of the foregoing shall, at the Company’s sole discretion, be considered a Prohibited User.
+11. Intellectual Property and Content
+11.1 Ownership and License. The Company owns all intellectual property and other rights in the User Interface or Protocol and all content and other materials contained therein, including, without limitation, software, text, graphics, trademarks, service marks, copyrights, patents, designs, logos, data, sound files, and the selection and arrangement thereof (collectively, “ Content ”). Content is protected under applicable copyrights, trademarks, and other proprietary rights laws. All rights not expressly granted herein are reserved by the Company or its affiliates or licensors.
+Subject to these Terms, the Company grants you a limited, revocable, non-exclusive, non-sublicensable, non-transferable license to access and use the Products solely in accordance with these Terms. You agree that you will not use, modify, distribute, tamper with, copy, create derivative works based on, reverse engineer, disassemble, or decompile any of the Products or Content for any purpose other than as expressly permitted pursuant to these Terms. You will not delete or alter any copyright, trademark, or other proprietary rights notices from copies of materials available through the Products. You will not use Content in conjunction with any third-party content without authorization. Except as set forth in these Terms, the Company grants you no rights to any of the Products or Content, including any intellectual property rights.
+For the avoidance of doubt, Content includes any smart contracts, scripts, or other on-chain code authored by or on behalf of the Company and deployed in connection with the Products, regardless of whether such code is publicly visible or verifiable on a blockchain network.
+11.2 User Content and Feedback. By using any of the Products, you grant the Company a worldwide, non-exclusive, sublicensable, royalty-free license to use, copy, modify, and display any content, including but not limited to text, materials, images, files, communications, comments, feedback, suggestions, ideas, concepts, questions, and data, that you post on or through any of the Products for the Company’s current and future business purposes, including to provide, promote, and improve the Services. You further grant to the Company a non-exclusive, transferable, worldwide, perpetual, irrevocable, fully-paid, royalty-free license, with the right to sublicense, under any and all intellectual property rights that you own or control to use, copy, modify, and create derivative works based upon any suggestions or feedback for any purpose.
+You represent and warrant that you have, or have obtained, all rights, licenses, consents, permissions, power, and authority necessary to grant the rights granted herein for any material that you post on or through any of the Products. You represent and warrant that such content does not contain material subject to copyright, trademark, publicity rights, or other intellectual property rights, unless you have necessary permission or are otherwise legally entitled to post the material and to grant the Company the license described above, and that the Content does not violate any laws.
+11.3 Protocol and Third-Party Intellectual Property. As described herein, the Products are separate and distinct from the Protocol. The Protocol code and any other Protocol intellectual property that is a component of the Products or that is accessible using the Products may be subject to separate open-source or source-available license terms. Where applicable, those separate license terms will govern the use of the Protocol code and intellectual property.
+Notwithstanding anything to the contrary in these Terms, the Products and Content may include software components provided by the Company or its affiliates or a Third-Party that are subject to separate license terms, in which case those license terms will govern the usage of such software components, as applicable.
+11.4 Intellectual Property Infringement Notices and Content Licensing Requests. If you wish to make any use of Content other than that set out in this Section 11 or if you believe that content available through the Products infringes your intellectual property rights, you may address your request or submit a notice to: legal@lombard.finance . The alleged infringement must be described in sufficient detail to allow the Company to investigate. The Company reserves the right, but has no obligation, to remove or disable access to any content that it determines, in its sole discretion, may infringe the intellectual property rights of any Third-Party.
+12. Third-Party Services and Technologies
+12.1 Third-Party Services and Technologies. Your use of the User Interface or the Protocol may involve interactions with Third-Party Products or Third-Party Technologies. These Third-Party Products or Third-Party Technologies may include decentralized applications, front-ends, integrations, blockchain nodes, validators, oracles, bridges, data, feeds, or any other services or products integrated or used in conjunction with the products. The Products may also contain links to third-party websites (“ Third-Party Websites ”) and applications (“ Third-Party Applications ,” and together with Third-Party Products, Third-Party Technologies, and Third-Party Websites, “ Third-Party Materials ”).
+No Third-Party Materials are endorsed or recommended. You agree that your access to and use of Third-Party Materials is governed solely by the Third-Party Terms or the Third-Party Product Terms, as applicable, and that you are solely responsible for reviewing and understanding such terms, including restrictions on AI Agents’ access, rate limits, data-usage policies or acceptable-use restrictions imposed by those providers. The Company has no responsibility or liability for, and makes no representations or warranties with respect to, any aspect of such Third-Party Materials, including their accuracy, availability, reliability, completeness, security or privacy practices.
+You agree that any losses incurred in connection with your interaction with Third-Party Materials are solely your responsibility, and you hold the Company harmless from any related claims. The Company expressly disclaims any responsibility for, and shall not be held liable for, the actions or inactions of any third-party vendors or service providers. Third-Party Materials are not provided by the Company. The Company does not own, operate, control or assume any responsibility for any Third-Party Materials. Any reliance on Third-Party Materials is solely at your risk, and the Company shall not be responsible for any interruptions, failures, inaccuracies, or damages caused by such services. You irrevocably waive any claims against the Lombard Finance Parties with respect to Third-Party Materials. The Company is not affiliated with, and accepts no responsibility or liability for any losses, damages, or claims arising from, your use of any third-party AI Agents that connect to your account via API or other programmatic means.
+12.2 Lombard Security Consortium.
+(a) You acknowledge that the Protocol relies on the Consortium to validate transactions, authorize the minting and redemption of Digital Assets, including liquid staking tokens, facilitate staking and unstaking operations, oversee Protocol upgrades, and enable cross-chain bridging. The Consortium is composed of independent third-party institutions that operate their own infrastructure.
+(b) The Company does not control, and is not responsible for, the conduct, performance, security practices, operational decisions, or continued participation of any individual Consortium member.
+(c) The Company makes no representations or warranties regarding: (i) the continued availability, composition, or minimum number of Consortium members, (ii) the security, accuracy, or reliability of the consensus mechanism or the Lombard Ledger, (iii) the timeliness of transaction validation or processing by the Consortium or (iv) the ability of the Consortium to prevent unauthorized transactions, asset losses, or other adverse outcomes.
+(d) You acknowledge that the Company may, at any time, be required to remove, suspend, or restrict the participation of any Consortium member that becomes a Sanctioned Person, becomes subject to regulatory action, or is otherwise determined by the Company in its sole discretion to present a sanctions, legal, reputational or compliance risk. Such removal may affect the composition, capacity, or security characteristics of the Consortium. The Company shall have no liability for any consequences arising from the removal, suspension, or restriction of any Consortium member for sanctions or compliance reasons.
+(e) You expressly agree that the Lombard Finance Parties shall have no liability whatsoever for any losses, damages, or adverse consequences arising from the acts, omissions, failures, compromises, collusion, misconduct, or decisions of the Consortium or any of its members, whether individually or collectively, including but not limited to losses arising from: consensus failures or delays; member unavailability, withdrawal, or removal; key compromise; unauthorized or erroneous transaction validation; governance or upgrade decisions made by the Consortium; sanctions-related member removal or suspension; or any failure or vulnerability of the Lombard Ledger.
+13. Limitation of Liability
+13.1 “As Is” / “As Available”. EXCEPT AS EXPRESSLY PROVIDED TO THE CONTRARY IN A WRITING BY THE COMPANY, THE USER INTERFACE, THE PROTOCOL, AND ANY BLOCKCHAIN TECHNOLOGIES REFERENCED THEREIN ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED. THE COMPANY (AND ITS AFFILIATES, LICENSORS, AND/OR OTHER BUSINESS ASSOCIATES) MAKES NO WARRANTY THAT THE PRODUCTS: (A) WILL MEET YOUR REQUIREMENTS; (B) WILL BE AVAILABLE ON AN UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE BASIS; OR (C) WILL BE ACCURATE, RELIABLE, COMPLETE, LEGAL, OR SAFE. THE COMPANY DISCLAIMS ALL OTHER WARRANTIES OR CONDITIONS, EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT AND FREEDOM FROM COMPUTER VIRUS OR OTHER MALICIOUS, DESTRUCTIVE, OR CORRUPTING CODE, AGENT, PROGRAM, OR MACROS AS TO THE PRODUCTS, CONTENT CONTAINED THEREIN. YOU ACCEPT THE INHERENT SECURITY RISKS OF PROVIDING INFORMATION AND DEALING ONLINE OVER THE INTERNET AND WILL NOT HOLD THE COMPANY RESPONSIBLE FOR ANY BREACH OF SECURITY UNLESS IT IS DUE TO THE COMPANY’S GROSS NEGLIGENCE. NO ADVICE OR INFORMATION, WHETHER ORAL OR WRITTEN, OBTAINED BY YOU FROM ANY SOURCE SHALL CREATE ANY WARRANTY NOT EXPRESSLY STATED IN THESE TERMS. YOU ACKNOWLEDGE THAT YOU HAVE NOT RELIED UPON ANY REPRESENTATIONS OR WARRANTIES MADE BY THE COMPANY OR BY ANY PERSON ON BEHALF OF THE COMPANY.
+13.2 Exclusion of Consequential Damages. TO THE FULLEST EXTENT PROVIDED BY LAW, IN NO EVENT WILL THE COMPANY OR ITS AFFILIATES, OR ITS OR THEIR LICENSORS, SERVICE PROVIDERS, EMPLOYEES, CONTRACTORS, AGENTS, OFFICERS, OR DIRECTORS, BE LIABLE FOR ANY INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO, PERSONAL INJURY, PAIN AND SUFFERING, EMOTIONAL DISTRESS, LOSS OF REVENUE, LOSS OF PROFITS, LOSS OF BUSINESS OR ANTICIPATED SAVINGS, LOSS OF USE, LOSS OF GOODWILL, LOSS OF DATA, LOSS OF DIGITAL ASSETS, LOSS OF PRIVATE KEY, LOSS OF SEED PHRASE, LOSS OF ACCESS TO ANY DIGITAL WALLET, THE COST OF PROCUREMENT OF SUBSTITUTE GOODS AND/OR SERVICES RESULTING FROM ANY GOODS, DATA, INFORMATION, CONTENT AND/OR ANY OTHER PRODUCTS PURCHASED OR OBTAINED FROM OR THROUGH THE PRODUCTS, OPPORTUNITY COST, OR ANY OTHER DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE USER INTERFACE OR THE PROTOCOL, WHETHER CAUSED BY TORT (INCLUDING NEGLIGENCE), BREACH OF CONTRACT, OR OTHERWISE, EVEN IF FORESEEABLE.
+13.3 Aggregate Liability Cap. THE COMPANY’S TOTAL LIABILITY FOR ANY CLAIM ARISING OUT OF OR RELATING TO THE USER INTERFACE OR PROTOCOL SHALL NOT EXCEED DIRECT DAMAGES IN AN AMOUNT OF THE GREATER OF (A) ONE HUNDRED DOLLARS ($100 USD) OR (B) THE TOTAL FEES PAID BY YOU TO THE COMPANY IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR ITS EQUIVALENT IN THE LOCAL CURRENCY OF THE APPLICABLE JURISDICTION.
+13.4 Protocol Losses Exclusion. THE COMPANY SHALL HAVE NO LIABILITY FOR ANY LOSS ARISING FROM THE OPERATION OF THE PROTOCOL, INCLUDING WITHOUT LIMITATION ANY LOSS RESULTING FROM SMART CONTRACT EXECUTION, GOVERNANCE DECISIONS, VALIDATOR CONDUCT, SLASHING EVENTS, CONSENSUS FAILURES, FORKS, BRIDGE FAILURES, ORACLE MALFUNCTIONS, ACTS OR OMISSIONS OF THE CONSORTIUM OR ANY OF ITS MEMBERS (INCLUDING CONSENSUS DELAYS, MEMBER UNAVAILABILITY, KEY COMPROMISE, COLLUSION, OR ERRONEOUS TRANSACTION VALIDATION), FAILURES OR VULNERABILITIES OF THE LOMBARD LEDGER, OR ANY OTHER PROTOCOL-LEVEL EVENT, REGARDLESS OF WHETHER THE USER ACCESSED THE PROTOCOL THROUGH THE PRODUCTS OR ANY OTHER MEANS.
+13.5 Comprehensive Causes of Action. TO THE FULLEST EXTENT PERMISSIBLE BY LAW, THE LIMITATIONS IN THIS SECTION 13 APPLY TO ALL CAUSES OF ACTION, IN THE AGGREGATE INCLUDING, BUT NOT LIMITED TO, BREACH OF CONTRACT, BREACH OF WARRANTY, NEGLIGENCE, STRICT LIABILITY, VIOLATIONS OF LAW AND CIVIL REMEDIES BASED THEREON, CONSUMER PROTECTION CLAIMS, MISREPRESENTATIONS AND ANY AND ALL OTHER TORTS, WHETHER ARISING IN LAW, EQUITY, OR OTHERWISE.
+13.6 Essential Basis. THE LIMITATIONS OF LIABILITY SET FORTH IN THIS SECTION 13 ARE AN ESSENTIAL BASIS OF THE BARGAIN BETWEEN YOU AND THE COMPANY, WITHOUT WHICH THE COMPANY WOULD NOT MAKE THE PRODUCTS AVAILABLE. THE COMPANY WOULD NOT ENTER INTO THESE TERMS WITHOUT THESE LIMITATIONS ON ITS LIABILITY.
+13.7 Jurisdictional Savings. THIS SECTION DOES NOT AFFECT ANY LIABILITY THAT CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
+WITHOUT LIMITING THE FOREGOING:
+(a) European Union: Nothing in these Terms is intended to exclude or restrict any rights that you may have under Council Directive 93/13/EEC on unfair terms in consumer contracts, Regulation (EU) 2023/1114 (MiCA), or any national implementing legislation applicable to you, to the extent that such rights cannot be excluded or restricted by contract. To the extent that any provision of these Terms would be deemed unfair or unenforceable under applicable EU consumer protection law, such provision shall be limited or disapplied to the minimum extent necessary, and the remainder of these Terms shall continue in full force and effect.
+(b) General: The indemnification, arbitration, class action waiver, and liability limitation provisions of these Terms are enforceable only to the extent permitted by the laws of your jurisdiction. Where any such provision is prohibited or restricted by mandatory local law, it shall be narrowed or disapplied to the minimum extent necessary to comply with such mandatory law.
+14. Indemnification
+14.1 User Responsibility. To the fullest extent permitted by Applicable Law, you agree to indemnify, defend, and hold harmless the Lombard Finance Parties from and against all actual or alleged claims, expenses (including reasonable attorneys’ fees), suits, damages, awards, judgments, losses, costs, demands, liabilities of every kind and nature whatsoever, whether known or unknown, that are caused by, arise out of, or are related to:
+(a) your use or misuse of the Products, Services or Protocol;
+(b) your violation of these Terms or violation of Applicable Law or any right(s) of any Third-Party;
+(c) any dispute between you and any other users and/or other third parties;
+(d) any claim that the Company owes any taxes, fees, penalties, or fines in connection with your use of the Products, Services or Protocol;
+(e) any Restricted Action taken by the Company in connection with a Compliance Event, including any claim by you or any Third-Party arising from, relating to, or in connection with any such Restricted Action;
+(f) any regulatory enforcement action, investigation, or proceeding against the Company arising from or related to your activity on the User Interface or Protocol;
+(g) your interactions with any Third-Party Services or platforms accessed through the Products, Services or Protocol;
+(h) Digital Assets associated with your blockchain address(es);
+14.2 Defense and Control. You agree to promptly notify the Company of any claim(s) and shall cooperate fully with the Lombard Finance Parties in defending such claims. You further agree that the Lombard Finance Parties shall have control of the defense or settlement of any third-party claims. THIS INDEMNITY IS IN ADDITION TO, AND NOT IN LIEU OF, ANY OTHER INDEMNITIES SET FORTH IN ANY WRITTEN AGREEMENT(S) BETWEEN YOU AND THE COMPANY.
+14.3 Third-Party Enforcement Rights. Any Lombard Finance Party not being a direct party to these Terms may enforce any rights granted to it under this Section 14 as if it were a party to these Terms. The Lombard Finance Parties shall retain all rights under this Section 14, and any such rights are cumulative and not exclusive of any other rights available at law or in equity.
+15. Dispute Resolution
+15.1 Governing Law. These Terms shall be governed by and construed in accordance with the laws of the Cayman Islands, without regard to any choice or conflict of law provision or rule that would require or permit the application of the laws of any jurisdiction other than those of the Cayman Islands. The United Nations Convention on the International Sale of Goods is expressly excluded and shall not apply to these Terms or any of the transactions contemplated hereby.
+15.2 Informal Process. You agree that in the event of any dispute between you and the Company, you will first contact the Company in a writing that specifically references this Section 15.2, and which describes the dispute and your position in relation to it in sufficient detail for the Company to engage in meaningful discussions about the dispute (“ Dispute Notice ”). For a period of no less than thirty (30) days after receipt of the Dispute Notice, or such longer period as the parties may agree in writing, you shall make a good faith and sustained effort to resolve the dispute before resorting to more formal means of resolution.
+15.3 Mandatory Binding Individual Arbitration.
+Agreement to Arbitrate. All claims, disputes, and controversies directly or indirectly arising out of or in connection with or directly or indirectly relating to these Terms or any of the matters or transactions contemplated by these Terms (for the avoidance of doubt, including any claim seeking to invalidate, or alleging that, all or any part of these Terms is unenforceable, void, or voidable) (such claims, disputes, and controversies, collectively, “ Disputes ”) shall be referred to and finally determined by arbitration in accordance with the Arbitration Rules of the Cayman International Mediation and Arbitration Centre Ltd (“ Rules ”) in force as at the date of these Terms, which Rules are deemed to be incorporated by reference into this clause. The number of arbitrators shall be one. The seat, or legal place, of arbitration shall be George Town, Cayman Islands. The language to be used in the arbitral proceedings shall be English.
+Confidentiality. The arbitration shall be confidential, and the arbitrator, the parties, and any involved persons shall maintain the confidentiality of the arbitration proceedings and any related information unless disclosure is required by law. The parties agree to limit the scope of discovery to what is strictly necessary for the resolution of the dispute.
+Award. The award or decision of the arbitrator shall be final and binding upon the parties and the parties expressly waive any right under the laws of any jurisdiction to appeal or otherwise challenge the award, ruling, or decision of the arbitrator. The judgment of any award or decision may be entered in any court having competent jurisdiction to the extent necessary. The arbitrator shall have no authority to award punitive or exemplary damages and shall limit any award of damages to damages proven by the claiming party, subject to the limitations of Section 13 above. The arbitrator shall issue a reasoned award explaining the basis of any decision.
+Injunctive Relief. If any party elects to have a Dispute resolved by arbitration pursuant to this provision, no party hereto shall (or shall permit its representatives to) commence, continue, or pursue any Dispute in any court; provided, however, that the Company shall be entitled to obtain an injunction or injunctions to prevent breaches of this provision and to enforce specifically the terms and provisions thereof, this being in addition to any other remedy to which the Company is entitled at law or in equity, and the parties hereto hereby waive the requirement of any posting of a bond in connection with such injunctive relief or specific performance.
+Fees. Each party shall bear its own filing and administrative fees in the first instance. The Company will reimburse those fees for claims where the amount in dispute is less than $10,000, unless the arbitrator determines the claims are frivolous, and the Company will not seek attorneys’ fees and costs in arbitration unless the arbitrator determines the claims are frivolous.
+Arbitrator Authority. The arbitrator, and not any federal, state, or local court, will have exclusive authority to resolve any dispute relating to the interpretation, applicability, unconscionability, arbitrability, enforceability, or formation of this arbitration agreement, including any claim that all or any part of this arbitration agreement is void or voidable. However, the preceding sentence will not apply to the “Class Action Waiver” section below.
+This mandatory arbitration agreement applies to you and to the Company. However, this arbitration agreement does not (a) govern any Dispute initiated by the Company for infringement of its intellectual property, or (b) bar you from making use of applicable small claims court procedures in appropriate cases.
+15.4 Class Action Waiver. Any claim must be brought in the respective party’s individual capacity, and not as a plaintiff or class member in any purported class, collective, representative, multiple plaintiff, or similar proceeding (“ Class Action ”). The parties expressly waive any ability to maintain any Class Action in any forum. If the claim is subject to arbitration, the arbitrator will not have authority to combine or aggregate similar claims or conduct any Class Action nor make an award to any person or entity not a party to the arbitration. Any claim that all or part of this Class Action Waiver is unenforceable, unconscionable, void, or voidable may be determined only by a court of competent jurisdiction and not by an arbitrator. The parties understand that any right to litigate in court, to have a judge or jury decide their case or to be a party to a class or representative action is waived, and that any claims must be decided individually, through arbitration.
+15.5 Non-Arbitrable Disputes. For any disputes that are not subject to arbitration under these Terms, you agree that such disputes will be governed by the laws of the Cayman Islands (as set forth in Section 15.1) and will be resolved exclusively in the courts of the Grand Court of the Cayman Islands. You hereby irrevocably submit to the exclusive jurisdiction of these courts and waive any objection to the venue of any such proceeding on the grounds of venue, jurisdiction, or inconvenience of the forum.
+15.6 Limitation on Time to File Claims. Any claim arising out of or relating to these Terms or the use of the Products, Services or Protocol must be brought within twelve (12) months from the date the cause of action accrues, or the date you become aware of the facts giving rise to the claim, whichever is later. Any claims not filed within this period shall be deemed waived and time-barred.
+16. Termination
+16.1 Termination by the Company. The Company may suspend, restrict, or terminate your access to any or all of the User Interface or Protocol at any time, for any reason, without notice. Termination may also occur if: (i) so required by a facially valid subpoena, court order, or binding order of any government authority; (ii) there is a reasonable suspicion that you are using the Products in connection with any Prohibited Uses; (iii) your use of the Products is subject to any pending litigation, investigation, or government proceeding and/or a heightened risk of legal or regulatory non-compliance is perceived, in the Company’s sole discretion, to be associated with your activity; (iv) any service partners are unable to support your use thereof; (v) you take any action that the Company deems in its sole discretion as circumventing the Company’s controls, or abusing promotions which may be offered from time to time; or (vi) you breach these Terms or violate any Applicable Law. The right is reserved, in the Company’s sole discretion, to modify, suspend, or discontinue, temporarily or permanently, any part of the User Interface or Protocol at any time, with or without prior notice. No liability shall attach to the Company or any Lombard Finance Party for any modification, suspension, or discontinuance of any User Interface or Protocol.
+If the Company suspends your access or terminates your use of the Products for any reason, notice of such actions will be provided, unless a court order or other legal process prevents or prohibits the provision of such notice. You acknowledge that the Company’s decision to take certain actions, including limiting access to or suspending your use, may be based on confidential criteria that are essential to the Company’s risk management and/or security protocols. You agree that the Company is under no obligation to disclose the details of its risk management and/or security procedures to you.
+16.2 Effect of Termination. Upon termination, your right to access the User Interface or Protocol ceases immediately. All rights granted to you under these Terms will immediately cease, and you must discontinue all use of the User Interface or Protocol.
+16.3 Regulatory Wind-Down. In the event that the Company is required by any governmental or regulatory authority to cease or substantially modify operations in a manner that materially affects your access to the User Interface or Protocol, the Company will use commercially reasonable efforts, subject to applicable legal constraints, to provide users with reasonable notice and an opportunity to withdraw Digital Assets from the Protocol. Notwithstanding the foregoing, the Company shall have no liability for any inability to provide notice or facilitate withdrawals where prohibited by law, court order, or regulatory directive.
+16.4 Survival. Upon termination of your access to the User Interface or the Protocol or the discontinuation of any services, the following sections of these Terms will survive: Section 4 (The Protocol), Section 5 (Protocol Disclaimers and Acknowledgments), Section 7 (Compliance-Related Restrictions), Section 8 (Wallets, Transactions, and Digital Assets), Section 9 (Yield and Token Distributions), Section 11 (Intellectual Property and Content), Section 13 (Limitation of Liability), Section 14 (Indemnification), Section 15 (Dispute Resolution), Section 17 (Miscellaneous), and any other provision that by its nature is intended to survive termination.
+17. Miscellaneous
+17.1 Entire Agreement. These Terms, along with the Risk Disclosures, Privacy Policy, any applicable Third-Party Product Terms and any other terms incorporated herein by reference, constitute the entire agreement between you and the Company regarding the use of the User Interface and the Protocol and supersede all prior and contemporaneous agreements.
+17.2 Severability. If any term, clause, or provision of these Terms is held invalid or unenforceable, then that term, clause, or provision will be severable from these Terms and will not affect the validity or enforceability of any remaining part of that term, clause, or provision, or any other term, clause, or provision of these Terms. The invalid or unenforceable provision shall be deemed modified so that it is valid and enforceable to the maximum extent permitted by law. To the extent that anything in or associated with the User Interface or Protocol is in conflict or inconsistent with these Terms, these Terms shall take precedence, except that applicable Company Product Terms control with respect to the products they govern (Section 1.3).
+17.3 Waiver. If the Company fails to insist that you perform any of your obligations under these Terms, or does not enforce its rights against you, or delays in doing so, that will not mean that the Company has waived its rights against you and will not mean that you do not have to comply with those obligations. If a default by you is waived, such waiver will only be made in writing and will not mean that any later default by you will be automatically waived. Any waiver of any provision of these Terms will be effective only if in writing and signed by a duly authorized representative of the Company.
+17.4 Assignment. These Terms are not assignable, transferable, or sublicensable by you except with the Company’s prior written consent. The Company may freely assign these Terms or any of its rights and/or obligations hereunder to any successor.
+17.5 Force Majeure. The Company shall not be liable for any delays or failures to perform any obligation under these Terms due to events beyond its reasonable control, including, but not limited to, acts of God, war, terrorism, civil unrest or natural disasters, government actions or regulations, labor disputes or shortages, network or infrastructure failures or Consortium consensus failures. In the event of a force majeure occurrence, the Company will use commercially reasonable efforts to resume performance as soon as practicable.
+17.6 No Agency or Partnership. The parties do not intend that any agency or partnership relationship be created through operation of these Terms.
+17.7 Language. These Terms are provided in the English language, which shall be the official and binding version for all purposes. Any translations of these Terms into other languages are provided for convenience only and shall have no legal effect. In the event of any discrepancy between the English version and a translation, the English version shall prevail.
+17.8 Notices. All notices under these Terms will be in writing and will be deemed to have been duly given when received, if personally delivered or sent by certified or registered mail, return receipt requested; when receipt is electronically confirmed, if transmitted by facsimile or e-mail; or the day after it is sent, if sent for next day delivery by recognized overnight delivery service. You also agree that any notices, agreements, disclosures, or other communications sent to you electronically will satisfy any legal communication requirements, including, but not limited to, that such communications be in writing.
+17.9 Electronic Acceptance. By accessing or using the User Interface or Protocol, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use, as well as the Risk Disclosures, and Privacy Policy. Your continued use of the User Interface or Protocol constitutes your electronic signature and acceptance of these Terms.
+17.10 Contact Information. If you have any questions or concerns regarding these Terms or the Products, or for legal notices, please contact the Company at:
+LF Operations Inc. PH The Century Tower, Office 317, Suite 270, Vía Ricardo J. Alfaro, Betania, Panamá District, Panamá Province, Panama; Email: legal@lombard.finance
+Last updated on September 29, 2026
+Airdrop Terms LBTC Product Terms
+Infrastructure that makes Bitcoin productive onchain capital.
+Products
+LBTC BTC.b Bitcoin Earn BARD Token
+Developers
+Bitcoin Connect GitHub Lombard SDK
+Resources
+Blog Brand Assets Help Centre
+Legal
+Privacy Policy Terms of Service LBTC Product Terms Risk Disclosures
+© 2026 Lombard Finance. All rights reserved.

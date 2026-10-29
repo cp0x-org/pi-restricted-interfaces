@@ -1,0 +1,430 @@
+check: lombard/feature-us-uk
+about: Lombard docs: the yield strategy, incl. direct mint and redemption, is not available to US or UK persons
+source: https://docs.lombard.finance/use/lbtc
+checked_at: 2026-10-11T21:18:54Z
+fetched: https://docs.lombard.finance/use/lbtc
+sha256: b22a8800f76ee75d37b4a353514dbfda171360f60d7306099e40e836243d6fe2
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+LBTC, The Leading Yield-Bearing Bitcoin
+Skip to Content
+Documentation
+CTRL K
+Lombard
+Community
+Developers
+Open App CTRL K
+Introduction
+Overview
+Learn
+Products Overview
+Assets
+Infrastructure
+Yield
+Yield Strategy
+Protocol Architecture
+Protocol Architecture
+Strategies
+Overview
+Deposits and Redemptions
+Accounting
+Fee System
+Shards
+Shard Validators
+Roles and Security
+Security Model
+Consortium Members
+Audits
+Bug Bounty
+Transparency
+Transparency Dashboard
+Oracles
+Smart Contracts
+Bridging Architecture
+Risks
+Token Economics
+Lombard Finance Foundation
+Community
+Lux Rewards
+Referral Program
+Kaito Yappers
+Use
+Use LBTC
+Understanding Yield
+Fees
+Use BTC.b
+Bitcoin Smart Accounts
+Bitcoin Earn
+Onchain Credit Strategy
+Use BARD
+Bridging
+Access DeFi
+FAQ
+General FAQ
+LBTC FAQ
+BTC.b FAQ
+$BARD FAQ
+Troubleshooting
+Chain Support Update, September 2026
+Build
+The Lombard SDK
+How Integration Works
+The SDK Playground
+Start Here
+Configure PartnerID
+Connect Wallets
+Testing and Sandbox
+Concepts
+Action Lifecycle
+Fee Authorization
+Event Handling
+Error Handling
+BTC Deposit Addresses
+Referral System
+Data API
+API Methods
+Capabilities
+Bitcoin
+BTC Stake
+BTC Deposit
+BTC Stake and Deploy
+BTC Deposit and Deploy
+EVM
+EVM Unstake
+EVM Deploy
+EVM Redeem
+EVM Withdraw
+Non-EVM
+Solana Deposit
+Solana Redeem
+Solana Unstake
+Sui Unstake
+Starknet Unstake
+Reference
+TypeScript Types
+Events Reference
+Error Codes
+SDK FAQ
+Builder Support
+Bitcoin for AI Agents
+Quickstart
+Configure Partner ID
+Flow Coverage Matrix
+Common Agent Flows
+Capabilities
+Fee Authorization
+Action Lifecycle
+README
+Direct Integrations
+BTC.b/LBTC Swaps
+Oracle
+GMP Redeem Tracing
+LBTC GMP Mint Tracing
+Unstake Fee
+Resources
+Glossary
+Brand Assets
+Airdrop Terms
+Terms of Service
+LBTC Product Terms
+Risk Disclosures
+Privacy Policy
+MiCA Whitepaper
+Bsa Partner Integration
+BSA Integration Overview
+BSA Integration Guide
+API States
+BSA Arbitration Oracle Handbook
+Editor
+Index
+Preview
+Introduction
+Overview
+Learn
+Products Overview
+Assets
+Infrastructure
+Yield
+Yield Strategy
+Protocol Architecture
+Protocol Architecture
+Strategies
+Overview
+Deposits and Redemptions
+Accounting
+Fee System
+Shards
+Shard Validators
+Roles and Security
+Security Model
+Consortium Members
+Audits
+Bug Bounty
+Transparency
+Transparency Dashboard
+Oracles
+Smart Contracts
+Bridging Architecture
+Risks
+Token Economics
+Lombard Finance Foundation
+Community
+Lux Rewards
+Referral Program
+Kaito Yappers
+Use
+Use LBTC
+Understanding Yield
+Fees
+Use BTC.b
+Bitcoin Smart Accounts
+Bitcoin Earn
+Onchain Credit Strategy
+Use BARD
+Bridging
+Access DeFi
+FAQ
+General FAQ
+LBTC FAQ
+BTC.b FAQ
+$BARD FAQ
+Troubleshooting
+Chain Support Update, September 2026
+Build
+The Lombard SDK
+How Integration Works
+The SDK Playground
+Start Here
+Configure PartnerID
+Connect Wallets
+Testing and Sandbox
+Concepts
+Action Lifecycle
+Fee Authorization
+Event Handling
+Error Handling
+BTC Deposit Addresses
+Referral System
+Data API
+API Methods
+Capabilities
+Bitcoin
+BTC Stake
+BTC Deposit
+BTC Stake and Deploy
+BTC Deposit and Deploy
+EVM
+EVM Unstake
+EVM Deploy
+EVM Redeem
+EVM Withdraw
+Non-EVM
+Solana Deposit
+Solana Redeem
+Solana Unstake
+Sui Unstake
+Starknet Unstake
+Reference
+TypeScript Types
+Events Reference
+Error Codes
+SDK FAQ
+Builder Support
+Bitcoin for AI Agents
+Quickstart
+Configure Partner ID
+Flow Coverage Matrix
+Common Agent Flows
+Capabilities
+Fee Authorization
+Action Lifecycle
+README
+Direct Integrations
+BTC.b/LBTC Swaps
+Oracle
+GMP Redeem Tracing
+LBTC GMP Mint Tracing
+Unstake Fee
+Resources
+Glossary
+Brand Assets
+Airdrop Terms
+Terms of Service
+LBTC Product Terms
+Risk Disclosures
+Privacy Policy
+MiCA Whitepaper
+Bsa Partner Integration
+BSA Integration Overview
+BSA Integration Guide
+API States
+BSA Arbitration Oracle Handbook
+Editor
+Index
+Preview
+What You Get
+Where the Yield Comes From
+Collateral That Pays for Itself
+Deposit BTC to Mint LBTC
+Before You Start
+Steps
+If Auto-Mint is Disabled
+Minimum Deposit
+Redeem BTC
+Before You Start
+Supported Bitcoin Addresses
+Steps
+Minimum Redemption
+Can I Speed This Up?
+Risks
+Strategy Risk
+Depeg Risk
+Technical Risk
+Frequently Asked Questions
+Next Steps
+Scroll to top
+Use Use LBTC
+Use LBTC
+LBTC is a yield-bearing Bitcoin asset, combining an institutional off-chain yield strategy with yield denominated in Bitcoin and full composability across DeFi. LBTC targets a 2.5% APY, from off-chain covered-call options, strategy managed by Bitwise Investment Manager, LLC. LBTC is deeply integrated as collateral across DeFi applications on 10 chains, allowing holders to earn yield and access liquidity. LBTC is secured by a multi-institution Security Consortium, and qualified custodians.
+70%+ Market share among yield-bearing BTC
+10 Chains
+50+ DeFi integrations
+$800M+ Bitcoin under management
+The target yield is 2.5% net APY in BTC terms at full strategy deployment. This is a variable target, not a guarantee: it moves with Bitcoin volatility and with how much of the backing is deployed, and during the deployment ramp it runs below target and builds over time.
+What You Get
+When you deposit BTC with Lombard, you receive LBTC on your chosen blockchain. Your LBTC:
+Earns BTC-denominated yield automatically (target 2.5% net APY at full deployment, variable and not guaranteed, with losses possible)
+Works across 10 chains including Ethereum, Base, Solana, and Sui
+Can be used as collateral, traded, or deposited into DeFi protocols
+Is redeemable for native BTC (up to a 10-day withdrawal window)
+LBTC is non-rebasing: your token balance never changes. Instead, the exchange rate between LBTC and BTC rises as yield accrues, so each LBTC is worth more BTC over time. When you redeem, you receive the current BTC value of your LBTC, which grows as yield accrues. For the full mechanics, see Understanding Yield .
+Where the Yield Comes From
+LBTC earns from a covered-call options strategy run by Bitwise Investment Manager, LLC, the strategy manager. In a covered call, the holder sells another party the right to buy BTC at a fixed strike price by a fixed date in exchange for an upfront premium. Bitwise writes calls against the deployed portion of the backing, and the premiums, in BTC terms, accrue to LBTC through the rising exchange rate.
+Real market income
+Premiums are income the options market pays for optionality, not token emissions or a subsidy that decays over time.
+Fully collateralized
+No leverage, no puts, no lending. Every option is financially (cash) settled, so no BTC ever leaves custody as a result of trading.
+Earned in Bitcoin
+Premiums accrue in BTC terms and compound into the exchange rate, so your stack grows in Bitcoin rather than dollars.
+The deployed active allocation targets 50-60% of the backing. The rest of the backing sits in a passive allocation that earns nothing and is what funds redemption without having to unwind the options book.
+The deployed Bitcoin is held at qualified custodians in segregated, Lombard-owned accounts. Bitwise holds discretionary trading authority only, with no authority to withdraw or transfer the assets.
+For the strategy manager’s credentials and track record, the risk limits, and the full custody structure, see Yield Strategy .
+Collateral That Pays for Itself
+Most Bitcoin collateral just sits there. When you post plain wrapped BTC against a loan, it earns nothing while it secures your borrow, so you pay the full interest rate out of pocket. LBTC keeps Bitcoin price exposure and keeps earning its 2.5% BTC-denominated target while it is posted, so the yield offsets part of your borrow cost.
+Plain wrapped BTC
+Yield while posted None
+Effect on borrow cost You pay the full rate
+DeFi composability Wide
+Best for: Simple collateral with no yield strategy
+LBTC
+Yield while posted 2.5% target in BTC terms (variable and not guaranteed)
+Effect on borrow cost Yield offsets part of the rate
+DeFi composability 50+ protocols
+Best for: Collateral that keeps earning while it secures a borrow
+Deposit BTC to Mint LBTC
+You can deposit from any Bitcoin wallet, including hardware wallets, DeFi wallets, or exchanges that allow BTC withdrawals.
+Before You Start
+You need native BTC in a wallet that can send to SegWit addresses
+Choose which chain you want to receive LBTC on (Ethereum, Base, Solana, etc.)
+Have a wallet address ready on your destination chain
+Steps
+1
+Go to Lombard
+lombard.finance/app/stake
+2
+Connect wallet
+Destination chain + address
+3
+Select chain
+Get LBTC on your chain
+4
+Get deposit address
+Unique address for you
+5
+Send BTC
+From any Bitcoin wallet
+6
+Wait for confirmations
+6 confirmations, ~40-60 min
+7
+Receive LBTC
+Auto-minted to your wallet
+Note: If you mint on Ethereum, a small amount of LBTC is deducted to cover gas costs. Other chains have no minting fee. See Fees for details.
+If Auto-Mint is Disabled
+During high gas periods, auto-mint pauses to protect you from fees. You can always mint manually:
+Go to lombard.finance/app/activity
+Find your pending deposit
+Click Mint and confirm the transaction
+Minimum Deposit
+Each deposit must meet the minimum threshold displayed in the app. The minimum is approximately 0.0002 BTC, but check the app for the current threshold. Deposits below this amount are not processed.
+Redeem BTC
+You can redeem your BTC at any time. The process takes up to 10 days due to Lombard’s redemption and rebalancing cycle. Withdrawals are funded from the passive allocation, so redemptions do not normally require unwinding the deployed positions.
+Before You Start
+You need LBTC on any supported chain
+Have a Bitcoin address ready (Native SegWit or Taproot only)
+Supported Bitcoin Addresses
+bc1q Native SegWit
+Supported
+bc1p Taproot (P2TR)
+Supported
+1... Legacy (P2PKH)
+Not supported
+3... Nested SegWit (P2SH)
+Not supported
+Steps
+Go to lombard.finance/app/unstake
+Verify the correct network is selected (top right)
+Enter the amount of LBTC to redeem
+Enter your Bitcoin withdrawal address
+Confirm the transaction
+Wait up to 10 days for BTC to arrive
+Minimum Redemption
+The minimum redemption amount is 0.00013300 LBTC (includes the 0.0001 LBTC network security fee).
+Can I Speed This Up?
+No. The withdrawal window is how the protocol keeps redemptions orderly. Withdrawals are funded from the passive allocation first; if a request is large enough to reach the active allocation, the 10-day window is what lets those positions be unwound without fire-sale conditions. The design has no separate “stressed” timeline and no gate or pause mechanism. For a faster exit, you can sell LBTC on secondary markets at the prevailing price.
+Risks
+Medium risk
+Strategy Risk
+The covered-call strategy can see temporary mark-to-market drawdowns during sharp Bitcoin rallies, and yield falls below target in low-volatility periods.
+Medium risk
+Depeg Risk
+LBTC prices on secondary markets can deviate from redemption value during the redemption window (up to 10 days).
+Low risk
+Technical Risk
+Smart contract bugs or network attacks could affect funds. Multiple audits and real-time monitoring are active.
+Strategy Risk
+This risk applies to LBTC only. BTC.b has no yield strategy.
+The active allocation (maximum 60% of backing) can see temporary mark-to-market losses during sharp Bitcoin rallies, and income compresses when Bitcoin volatility is low, an income risk rather than a capital-loss risk. The strategy uses no leverage and no puts, all options are financially settled, and the Bitcoin sits in segregated, Lombard-owned custody accounts. Bitwise holds trading authority only and cannot withdraw or transfer assets. The passive allocation is isolated from the strategy entirely and is always available for redemptions.
+Depeg Risk
+LBTC trades on secondary markets where prices can deviate from the redemption value. During the redemption window (up to 10 days), you cannot exit instantly. However, you can always redeem at the protocol rate through the Lombard app.
+Technical Risk
+Smart contract bugs or network attacks could affect funds. Lombard has been audited by OpenZeppelin, Veridise, and others. Real-time threat monitoring is active. See Risks for the full risk framework.
+Note: The yield strategy, including direct mint and redemption, is not available to US or UK persons or to other restricted jurisdictions. See the Terms of Service and yield disclosure for the restricted-jurisdiction list before using it.
+Frequently Asked Questions
+01 What is LBTC? LBTC is a yield-bearing Bitcoin asset, combining an institutional off-chain yield strategy with yield denominated in Bitcoin and full composability across DeFi. LBTC targets a 2.5% APY, from off-chain covered-call options strategy managed by Bitwise Investment Manager, LLC. LBTC is deeply integrated as collateral across DeFi applications on 10 chains, allowing holders to earn yield and access liquidity. LBTC is secured by a multi-institution Security Consortium, and qualified custodians.
+02 How does LBTC earn yield? LBTC earns from covered-call option premiums, real market income denominated in BTC, reflected through a rising exchange rate. Your LBTC balance never changes because it's non-rebasing, but each token is worth more BTC over time, with no claiming or action required. The APY is variable and targets 2.5% net in BTC terms at full strategy deployment.
+03 Why is the target 2.5%? Only a portion of the backing is deployed into the strategy (target 50-60%); the rest sits and earns nothing but keeps redemptions available within the standard 10-day window. The 2.5% target is quoted after fees.
+04 Where is the Bitcoin custodied? In two allocations; passive and active. The passive allocation (40-50% of backing) stays in Lombard's decentralized Security Consortium custody, earning nothing and available for redemptions. The active allocation is held at qualified custodians in segregated, Lombard-owned accounts at Kraken Institutional and Anchorage Digital Bank, with Bitwise holding trading authority only.
+05 Can I use LBTC as collateral in DeFi? Yes. LBTC is accepted across 50+ DeFi protocols and keeps earning its BTC-denominated yield while posted, so the yield offsets part of your borrow cost while you keep full Bitcoin price exposure. See Access DeFi for where it's supported.
+06 How long does it take to redeem BTC? Redeeming LBTC for native BTC takes up to 10 days, Lombard's redemption and rebalancing cycle, available from the passive allocation. There is no gate or pause mechanism. For a faster exit, you can sell LBTC on secondary markets or DeFi pools at the prevailing market price.
+07 Why did I receive less LBTC than the BTC I deposited? Because LBTC is non-rebasing, its exchange rate against BTC rises as yield accrues, so 1 LBTC is worth more than 1 BTC and that gap grows over time. When you deposit, you receive the equivalent value in LBTC at the current rate, fewer LBTC than the BTC you sent. Your value isn't lost: that smaller LBTC balance redeems for the full BTC amount plus accrued yield.
+08 Who can use LBTC? LBTC itself is a self-custodied, transferable token usable in DeFi and on secondary markets. The yield strategy, including direct mint and redemption through the Lombard app, is not available to US or UK persons or other restricted jurisdictions. Check the Terms of Service before using it.
+Next Steps
+Understanding Yield , how LBTC yield works, exchange rates, and APY details
+Strategy , the covered-call strategy, its risk limits, and custody structure
+Fees , complete breakdown of minting, redemption, and protocol fees
+Access DeFi , deploy your LBTC in DeFi protocols for additional yield
+Bitcoin Earn , a simple way to put BTC to work across strategies
+Last updated on September 29, 2026
+Kaito Yappers Understanding Yield
+Infrastructure that makes Bitcoin productive onchain capital.
+Products
+LBTC BTC.b Bitcoin Earn BARD Token
+Developers
+Bitcoin Connect GitHub Lombard SDK
+Resources
+Blog Brand Assets Help Centre
+Legal
+Privacy Policy Terms of Service LBTC Product Terms Risk Disclosures
+© 2026 Lombard Finance. All rights reserved.

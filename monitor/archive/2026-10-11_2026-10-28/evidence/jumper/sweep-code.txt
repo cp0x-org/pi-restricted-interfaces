@@ -1,0 +1,15 @@
+check: jumper/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/jumperexchange/jumper-exchange/tree/eee099c8390dc8841179f80eaed027756a447e66
+checked_at: 2026-10-11T21:03:28Z
+fetched: https://codeload.github.com/jumperexchange/jumper-exchange/tar.gz/eee099c8390dc8841179f80eaed027756a447e66
+sha256: c223af5dd50ac3526d4e9702c188bca487c6daaa86d753a42b8387522af5298c
+--------------------------------------------------------------------------------
+repository: https://github.com/jumperexchange/jumper-exchange/tree/eee099c8390dc8841179f80eaed027756a447e66
+files scanned: 1689
+
+signals:
+  [weak] geo: geo-block words — 1 file(s)
+      https://github.com/jumperexchange/jumper-exchange/blob/eee099c8390dc8841179f80eaed027756a447e66/src/components/TermsOfBusiness/lists.tsx#L16  ained by any governmental authority.', }, { title: 'Restricted Jurisdictions', description: "Without limiting Clause 2.2, access to and use of th
+  [weak] screening: screening words — 1 file(s)
+      https://github.com/jumperexchange/jumper-exchange/blob/eee099c8390dc8841179f80eaed027756a447e66/src/components/TermsOfBusiness/lists.tsx#L13  tment of the Treasury\'s Office of Foreign Assets Control ("OFAC"), the United Nations Security Council, the European Union, Her Majesty\'s Trea
