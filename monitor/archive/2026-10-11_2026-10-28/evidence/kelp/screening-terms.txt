@@ -1,0 +1,790 @@
+check: kelp/screening-terms
+about: Users represent they are not sanctioned (OFAC, UN, EU, UK, HKMA, MAS); no screening mechanism verified
+source: https://kerneldao.com/kelp/terms-of-service/
+checked_at: 2026-10-11T21:18:53Z
+fetched: https://kerneldao.com/kelp/terms-of-service/
+sha256: 83004c352bcf103bd8c9f39fb17370e175a7ebd8ea4bd5c54f01b58eda24dcf1
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+Kelp – The Leading Liquid Restaking Protocol | Restake Ethereum & Stay Liquid
+Governance
+Blogs
+Ecosystem
+More
+Restake now
+Kelp DAO - Terms of Service
+Preface
+Kelp is a distributed set of specially-developed infrastructure-level smart
+contracts (each, a "Smart Contract") deployed on the Ethereum Blockchain
+Network or such other relevant Blockchain Network, as the case may be (each, a
+“**Relevant Blockchain Network**”) which comprises a set of modular tools
+allowing users (delegators) to participate in and manage their digital assets
+restaked with various third-party Restaking Protocols such as EigenLayer or
+such other compatible restaking protocol, as the case may be (each, the
+"**relevant Restaking Protocol**"), accessible via a user-friendly platform
+("**Kelp**"). All interactions between restakers and protocols operate in a
+peer-to-peer manner.
+The restaking arrangements may be visualised on a user interface that the user
+can interact with, or accessed by interacting with our smart contracts through
+APIs, including but not limited to the website at
+https://kelpdao.xyz/
+and each of their subdomains, or our mobile or web applications (the
+"**Site**"). The collection of vaults which are smart contracts that automate
+airdrop and reward farming opportunities and strategies are collectively
+referred to in these Terms as (the “**Kelp Gain**”). The Smart Contracts, Kelp
+Gain and the Site are collectively referred to in these Terms as (the
+"**App**"). Using the App, users can interact with the underlying Smart
+Contracts to manage their restaking with third party protocols. The Smart
+Contracts are designed to be modular and open, and interoperable across
+different restaking protocols, so users may also leverage these components to
+build their own restaking solutions and decentralised applications.
+Evercrest Technologies Inc. (the "**Company**", "**we**", "**our**" or
+"**us**") is making the App available to you. Before you use the App, the
+Smart Contracts, or the Site, however, you will need to agree to these Terms
+of Use, any terms and conditions incorporated herein by reference
+(collectively, these "**Terms**") and the privacy notice available at Privacy
+Policy (“ Notice ”).
+PLEASE READ THESE TERMS AND THE NOTICE CAREFULLY BEFORE USING THE APP, THE
+SMART CONTRACTS, OR THE SITE. THESE TERMS AND THE NOTICE GOVERN YOUR USE OF
+THE APP, THE SMART CONTRACTS, AND THE SITE, UNLESS WE HAVE EXECUTED A
+SEPARATE WRITTEN AGREEMENT WITH YOU FOR THAT PURPOSE. WE ARE ONLY WILLING TO
+MAKE THE APP, THE SMART CONTRACTS, AND THE SITE AVAILABLE TO YOU IF YOU
+AGREE TO BE BOUND BY ALL OF THESE TERMS AND THE NOTICE. BY USING THE APP,
+THE SMART CONTRACTS, THE SITE, OR ANY PART OF THEM, OR BY CLICKING "I
+ACCEPT" BELOW OR INDICATING YOUR ACCEPTANCE IN AN ADJOINING BOX, YOU ARE
+CONFIRMING THAT YOU UNDERSTAND AND AGREE TO BE BOUND BY ALL OF THESE TERMS
+AND THE NOTICE. IF YOU ARE ACCEPTING THESE TERMS AND THE NOTICE ON BEHALF OF
+A COMPANY OR OTHER LEGAL ENTITY, YOU REPRESENT THAT YOU HAVE THE LEGAL
+AUTHORITY TO ACCEPT THESE TERMS AND THE NOTICE ON THAT ENTITY’S BEHALF, IN
+WHICH CASE "YOU" WILL MEAN THAT ENTITY. IF YOU DO NOT HAVE SUCH AUTHORITY,
+OR IF YOU DO NOT ACCEPT ALL OF THESE TERMS AND THE NOTICE, THEN WE ARE
+UNWILLING TO MAKE THE APP, THE SMART CONTRACTS, OR THE SITE AVAILABLE TO
+YOU. IF YOU DO NOT AGREE TO THESE TERMS AND THE NOTICE, YOU MAY NOT ACCESS
+OR USE THE APP, THE SMART CONTRACTS, OR THE SITE.
+By clicking "I Accept" or otherwise indicating your Acceptance, you agree to
+be bound by these Terms and affirm that you are of legal age to enter into
+these Terms where you live and have the legal capacity to enter into these
+Terms. Without limiting the foregoing, by using the App, you acknowledge and
+understand that laws regarding digital assets, financial instruments, or
+investment products which may include digital assets, may vary from
+jurisdiction to jurisdiction, and it is your sole obligation to ensure that
+you fully comply with any law, regulation or directive, relevant to your
+jurisdiction with regard to the use of the App. For the avoidance of doubt,
+the ability to access the App does not necessarily mean that the App, or your
+activities through it, are legal under the laws, regulations or directives
+relevant to your jurisdiction. All of the App or the services made available
+through the App may not be available to all users, and we reserve the right to
+assess or reassess at any time your eligibility to use all or part of the App.
+The App does not constitute, and may not be used for the purposes of, an offer
+or solicitation to anyone in any jurisdiction in which such offer or
+solicitation is not authorised, or to any person to whom it is unlawful to
+make such an offer or solicitation.
+Supplemental terms and conditions or documents that may be posted on the App
+from time to time are hereby expressly incorporated herein by reference. We
+reserve the right, in our sole discretion, to make changes to the Terms from
+time to time. We will alert you of any changes by updating the “Last Updated"
+date of these Terms (on the last page hereof), and you waive any right to
+receive specific notice of each such change. It is your responsibility to
+periodically review these Terms to stay informed of updates. You will be
+subject to and will be deemed to have been made aware of and to have accepted,
+the changes in any revised Terms by your continued use of the Site, the App,
+and the Smart Contracts after the date such revised Terms are posted.
+The App
+To access the App, you must be at least eighteen (18) years old or of
+legal age to enter into an agreement as determined by the laws of the
+country/ territory where you live.
+To conveniently access the App, you may first install a web browser (such
+as the Google Chrome web browser) and an electronic wallet (the
+User’s Wallet App ) compatible with the relevant
+Blockchain Network and relevant Restaking Protocol, such as the User’s
+Wallet App. The User’s Wallet App allows you to purchase, store, and
+engage in transactions using relevant Blockchain Network and the relevant
+Restaking Protocol or other digital assets. You will not be able to engage
+in any transactions on the App other than through the User’s Wallet App,
+or other browsers not compatible with the relevant Blockchain Network and
+relevant Restaking Protocols.
+All transactions (including restaking transactions) that take place on the
+App are managed and confirmed via the relevant Blockchain Network. You
+understand that your public address on the relevant Blockchain Network and
+the relevant Restaking Protocol will be made publicly visible whenever you
+engage in a transaction on the App.
+Kelp is a non-custodial protocol, therefore the App does not hold or
+control your digital assets. Any digital assets which you may restake with
+Smart Contracts, or which you acquire through the usage of the App will be
+held and administered solely by you through your selected electronic
+wallet, and we shall have no access to or responsibility in regard to such
+electronic wallet or digital asset held therein. It is solely your
+responsibility to select the wallet service provider to use in connection
+with the App, and your use of such electronic wallet will be subject to
+the governing terms of use or privacy policy of the provider of such
+wallet. We neither own nor control the User’s Wallet App, browsers such as
+Google Chrome, any electronic wallet, relevant Blockchain Network, the
+relevant Restaking Protocol, or any other third party site, product, or
+service that you might access, visit, or use for the purpose of enabling
+you to use the various features of the App. We will not be liable for the
+acts or omissions of any such third parties, nor will we be liable for any
+damage that you may suffer as a result of your transactions or any other
+interaction with any such third parties.
+The Company will not create any hosted wallet for you or otherwise custody
+digital assets on your behalf, and it is your sole responsibility to
+maintain the security of your selected electronic wallet. In the event
+that you lose access to your electronic wallet, private key(s),
+password(s), or other method(s) of securing your Wallet, all digital
+assets held in such a wallet may be irretrievable, and the Company will be
+unable to assist you in any way. You hereby irrevocably waive, release and
+discharge all claims, whether known or unknown to you, against the
+Company, its affiliates and their respective shareholders, members,
+directors, officers, employees, agents and representatives related to your
+use of any wallet software, associated loss of digital assets, transaction
+failures, or any other defects that arise in the course of your use of
+your electronic wallet, including any losses that may obtain as a result
+of any failure of any Smart Contracts, the Site or the App.
+The Company reserves the right to modify, suspend or discontinue,
+temporarily or permanently, all or any part of the Site or the App with or
+without notice. You agree that the Company will not be liable to you or to
+any third party for any modification, suspension or discontinuance of all
+or any part of the Site or the App.
+The publicly deployed Smart Contracts you interact with are experimental
+in nature and you should not utilise the Smart Contracts or App for
+deployment of any substantial amount of digital assets.
+Services
+The App is a client-side, non-custodial technical smart-contract based
+data processing solution which allows users to manage their direct
+interactions with a variety of third party restaking protocols, Actively
+Validated Services (AVS), and validators (computing/storage resource
+providers), deposit digital assets with these third party restaking
+protocols and parties, withdraw assets from such protocols, all without
+assets being held by any intermediaries and remaining at all times in
+control of their digital assets. For Kelp Gain, the App includes smart
+contracts, built by August, that automate asset deployments according to
+prescribed reward farming strategies. These strategies are managed by a
+strategy manager (** Strategy Manager **) who determines the yield
+strategies to be included, allocates vault deposits across these
+strategies, and periodically readjusts these allocations.
+When you access certain features of the services, the user interface will
+allow you to access a non-custodial Smart Contract to perform a variety of
+transactions. However, you remain in full control of your private keys and
+digital assets, and your digital assets, tokens and coins are not held or
+controlled in any way by Kelp. Kelp does not collect or hold your keys or
+information - accordingly Kelp cannot access your digital assets; recover
+keys, passwords, or other information; reset passwords; or reverse
+transactions. You are solely responsible for the safety of your digital
+assets and your use of the services, including without limitation for
+storing, backing-up, and maintaining the confidentiality of your private
+keys, passwords, and information, and for the security of any transactions
+you perform using the App. You expressly relieve and release Kelp from any
+and all liability and/or loss arising from your use of the services. The
+Notice provides details regarding our collection and processing of your
+information.
+When you access Kelp Gain, digital assets that you deposit are into one or
+more vaults through August (for a description, see
+https://institutional-docs.fractalprotocol.org/o6pxRk8iuJtUnSajR9d6
+) (**August**). You acknowledge and agree that we make no representations
+with respect to August’s services, including its vaults, and your use
+thereof, including through Gain is entirely at your own risk. You agree
+that your use of August’s services, including its vaults via Gain, is
+governed by the terms and conditions of August available at https://institutional-docs.fractalprotocol.org/o6pxRk8iuJtUnSajR9d6/smart-contracts/risks-and-audits
+.
+Kelp provides the interface connecting users directly with various
+supported third party protocols, Actively Validated Services, Validators
+and relevant Restaking Protocol on the relevant Blockchain Network,
+allowing users to potentially earn fees and token rewards from these third
+party protocols and Actively Validated Services. These interactions may
+include participating in the network consensus mechanism, or providing
+liquidity for said third party protocols. Users will be providing their
+own digital assets directly to these third party protocols. The level of
+fees, and token rewards are independently determined by these third party
+protocols and Actively Validated Services, and Kelp does not provide any
+representation or guarantee in connection with the same. Kelp may add or
+remove support for supported Blockchain Networks, third party restaking
+protocols, Actively Validated Services, Validators from time to time by
+revising these Terms and updating the Website.
+The App will also allow Actively Validated Services (i.e. Any system that
+requires its own distributed validation semantics for verification, such
+as sidechains, data availability layers, new virtual machines, keeper
+networks, oracle networks, bridges, threshold cryptography schemes, and
+trusted execution environments etc.) or pools of such AVSs (“each a
+Actively Validated Service ”) to use utilise the
+decentralised security provided by the delegation of the users’ assets,
+and individual validators and node operators (i.e. users which provide
+computing/storage resources for utilisation by others without such
+resources) or pools of such validators ("each a
+Validator Service Provider ") to offer their resources and
+services to users on the App which require these resources in order to
+participate in restaking on third party restaking protocols. The App
+allows these Validator Service Providers and Actively Validated Services
+to share their historical performance/uptime/service standards and
+Rewards/Fees structure respectively. Users may select the Validator
+Service Provider and Actively Validated Services they wish to utilise and
+enter into direct contractual arrangements with these Validator Service
+Providers and Actively Validated Services for resources in exchange for a
+fee.
+The Company does not endorse any particular Validator Service Provider and
+Actively Validated Services or otherwise advise you with respect to a
+particular Validator Service Provider and Actively Validated Services, and
+cannot be responsible for any content or other services provided by such
+Validator Service Providers and Actively Validated Services. Such
+obligations shall be the exclusive liability of the relevant user,
+Validator Service Provider and Actively Validated Service under their
+direct contractual relationship. In particular, the App's proprietary
+screening system and report are provided to users for informational
+purposes only, and users should refrain from taking any action in reliance
+on any information contained in these Terms or provided by or on behalf of
+the Company. You acknowledge, agree, and understand that you are solely
+responsible for assessing whether to interact with any third party
+restaking protocol, Validator Service Provider or Actively Validated
+Service. Before you decide to make any financial, legal, or other
+decisions relating to any third party restaking protocol, Validator
+Service Provider Actively Validated Service, you shall conduct all
+appropriate due diligence and seek all appropriate legal, tax or financial
+advice from independent professionals in connection with the same. You
+acknowledge and agree that the Company does not, in any way, supervise,
+direct, control, or evaluate any third party restaking protocol, Validator
+Service Provider or Actively Validated Service and accordingly cannot be
+responsible for the same. The Company assumes no liability or obligations
+under or related to any user, Validator Service Provider, Actively
+Validated Service or any acts or omissions by any such parties.
+The third party Restaking Protocols, Each Validator Service Provider and
+Actively Validated Service are free to set their overall rewards/fee
+structure and scope of resources/serviced provided or required, all of
+which will be notified to the user prior to any delegation arrangement
+being set up. The contractual relationship between the user, the Validator
+Service Provider and the Actively Validated Service will be governed by
+the separate terms notified directly between the parties, and the
+Validator Service Provider and Actively Validated Service wholly
+individually assume all responsibility towards the user for whom they are
+providing services. The Company shall in no circumstances be construed as
+a party to said contract, is not liable for performance of obligations
+thereunder, nor does it bear any financial or commercial risk in
+connection with the same.
+Blockchain Networks, Restaking Platforms, Validator Service Providers and
+Actively Validated Services shall indemnify and hold harmless the Company
+from and against any and all financial losses, liabilities, direct and
+indirect damages, claims, costs and expenses (including attorney’s fees
+and expenses and third party claims) which the Company or any of its
+directors/personnel may incur or suffer as a result of non-availability or
+failure of their services or due to any breach of its obligations under
+the relevant agreements.
+Neither the Company, the Site nor the App provides any portfolio/fund
+management services in connection with the services. You should carefully
+review all claims and representations made by third party restaking
+protocols, Validator Service Providers and Actively Validated Service
+before making any decision to interact with those third party staking
+protocols, Validator Service Providers and Actively Validated Service. If
+you choose to engage in transactions based on information provided to you
+by these third parties, other users, any content on the Site or the App,
+then such decisions and transactions and any consequences flowing
+therefrom are your sole responsibility. In no event shall the Company, its
+affiliates or their respective directors or employees be responsible or
+liable to you or anyone else, directly or indirectly, for any damage or
+loss arising from or relating to any interaction or continued interaction
+with any third party staking protocols, Validator Service Providers or
+Actively Validated Services, or reliance on any information provided on
+the Site or the App (including, without limitation, directly or indirectly
+resulting from errors in, omissions of or alterations to any such
+information).
+THE APP AND UNDERLYING SMART CONTRACTS FUNCTION SOLELY AS AN
+ADMINISTRATIVE PLATFORM WHICH CONNECTS USERS WITH VARIOUS THIRD PARTY
+RESTAKING PROTOCOLS, VALIDATOR SERVICE PROVIDERS AND ACTIVELY VALIDATED
+SERVICES. IN NO CIRCUMSTANCES SHALL THE COMPANY, THE SMART CONTRACTS, THE
+SITE OR THE APP BE CONSTRUED AS A BANK, BROKER, DEALER, FUND MANAGER,
+FINANCIAL INSTITUTION, EXCHANGE, CUSTODIAN, ROBO-ADVISOR, INTERMEDIARY, OR
+CREDITOR. THE SITE DOES NOT FACILITATE TRANSACTIONS BETWEEN BUYERS AND
+SELLERS, INCLUDING WITH RESPECT TO ANY RESTAKING TRANSACTIONS, WHICH
+TRANSACTIONS OCCUR ON THE RELEVANT BLOCKCHAIN NETWORK AND THE RELEVANT
+RESTAKING PROTOCOL AND/OR THIRD-PARTY, UNAFFILIATED PLATFORMS. THE COMPANY
+IS NOT A COUNTERPARTY TO ANY TRANSACTION RELATING TO THE SMART CONTRACTS,
+THE SITE OR THE APP OR FOR ANY USER OF THE SITE. NEITHER THE SMART
+CONTRACTS, THE SITE OR THE APP PROVIDES FINANCIAL ADVISORY, LEGAL,
+REGULATORY, OR TAX SERVICES DIRECTLY, INDIRECTLY, IMPLICITLY, OR IN ANY
+OTHER MANNER, AND YOU SHOULD NOT CONSIDER ANY CONTENT CONTAINED IN THESE
+TERMS OR OTHERWISE POSTED ON THE SITE TO BE A SUBSTITUTE FOR PROFESSIONAL
+FINANCIAL, LEGAL, REGULATORY, TAX OR OTHER ADVICE. THE COMPANY DOES NOT
+SUPPORT OR ENDORSE ANY THIRD PARTY RESTAKING PROTOCOL, ACTIVELY VALIDATED
+SERVICE OR VALIDATOR SERVICE PROVIDER, AND EACH THIRD PARTY RESTAKING
+PROTOCOL, VALIDATOR SERVICE PROVIDER AND ACTIVELY VALIDATED SERVICE IS AN
+INDEPENDENT AGENT WITH NO EMPLOYMENT OR OTHER CONTRACTUAL RELATIONSHIP
+WITH THE COMPANY.
+The Company reserves the right to suspend or terminate access to the Site
+or the App by any user, Validator Service Provider or Actively Validated
+Service for any reason whatsoever. You agree that the Company will not be
+liable to you or to any third party for any such suspension or
+termination.
+Fees and Payment
+If you elect to interact with third party restaking protocols, Validator
+Service Providers or Actively Validated Service, all digital asset
+transactions will be conducted solely through the relevant Blockchain
+Network. We will have no insight into or control over these payments or
+transactions, nor do we have the ability to reverse any transactions. With
+that in mind, we will have no liability to you or to any third party for
+any claims or damages that may arise as a result of any transactions that
+you engage in via the App, using the Smart Contracts, with any other user,
+Validator Service Provider or Actively Validated Service, or any other
+transactions that you conduct via the relevant Blockchain Network.
+The relevant Blockchain Network Protocol typically requires the payment of
+a transaction fee (a "**Gas Fee**") for every transaction that occurs on
+the relevant Blockchain Network. The Gas Fee funds the network of
+computers that run the decentralised network. This means that you will
+need to pay a Gas Fee for each transaction that occurs via the App.
+You may be subject to certain additional fees and commissions, including
+fees for Kelp Gain, fees imposed by Validator Service Providers and the
+relevant Restaking Protocol for provision of resources or services, as
+notified to you by such parties. The Company also reserves the right to
+levy additional fees for access via the Smart Contracts, the Site or the
+App in the future. You agree to promptly pay all aforementioned fees and
+commissions.
+Notwithstanding anything in these Terms to the contrary, you will be
+solely responsible to pay any and all sales, use, value-added and other
+taxes, duties, and assessments (except taxes on our net income) now or
+hereafter claimed or imposed by any governmental authority (collectively,
+"**Taxes**") associated with your use of the App (including, without
+limitation, any Taxes that may become payable as the result of your
+ownership or transfer of digital assets or interaction with any third
+party staking protocol or Validator Service Provider, or relating to
+Kelp).
+The Company does not have any control over the funds, the strategies
+implemented within Kelp Gain, or the management of Kelp Gain. The Company
+does not have any control over the airdrops granted by L2 Providers while
+interacting with Kelp Gain.
+The yield generated by Kelp Gain represents the annualised rate of returns
+earned by Users through their deposits. The returns are subject to change
+and depend on various factors, including but not limited to the strategies
+employed by Strategy Manager, market conditions, and the performance of
+the underlying assets. As a result, the Annualised Percentage Rate (APR)
+and Annualised Percentage Yield (APY)can fluctuate over time without prior
+notice.
+Intellectual Property and Content
+The Company owns the site and the App. You acknowledge and agree that the
+Company (or, as applicable, its affiliates) owns all legal right, title
+and interest in and to all other elements of the site and the App, and all
+intellectual property rights therein (including, without limitation, all
+designs, systems, methods, information, computer code, software, services,
+website design, "look and feel", organisation, compilation of the content,
+code, data and database, functionality, audio, video, text, photograph,
+graphics, and all other elements of the App (collectively, the
+"**Materials**"). You acknowledge that the Materials are protected by
+copyright, trade dress, patent, and trademark laws, international
+conventions, other relevant intellectual property and proprietary rights,
+and applicable laws. All Materials are the copyrighted property of The
+Company or its licensors, and all trademarks, service marks, and trade
+names associated with the App or otherwise contained in the Materials are
+proprietary to The Company or its licensors. Additionally, you acknowledge
+and agree that the smart contracts and all intellectual property related
+to Kelp Gain are owned by August. August retains all rights, title, and
+interest in and to the smart contracts and Kelp Gain intellectual
+property, including all related copyrights, patents, trademarks, and other
+proprietary rights. Except as expressly set forth herein, your use of the
+App does not grant you ownership of or any other rights with respect to
+any content, code, data, or other Materials that you may access on or
+through the App. We reserve all rights in and to the Materials that are
+not expressly granted to you in these Terms. For the sake of clarity, you
+understand and agree: that
+your interaction with any third party restaking protocol, Validator
+Service Provider or Actively Validated Service or usage of the Smart
+Contracts, the Site or the App does not give you any rights or
+licenses in or to the Materials other than those expressly contained
+in these Terms;
+you do not have the right to license, sell, rent, lease, transfer,
+assign, distribute, host, reproduce, distribute, or otherwise
+commercialise any elements of the Materials without our prior written
+consent in each case, which consent we may withhold in our sole and
+absolute discretion;
+you shall not modify, make derivative works of, disassemble, reverse
+compile or reverse engineer any part of the Materials; and
+you will not apply for, register, or otherwise use or attempt to use
+any of the Company's trademarks or service marks, or any confusingly
+similar marks, anywhere in the world.
+By interacting with the App, you are granted a limited, non-exclusive,
+non-transferable, revocable license to use the site and the App for your
+personal use. Neither these Terms nor your access to the Smart Contracts,
+the site and the App transfers to you or any third party any rights, title
+or interest in or to intellectual property rights in the Materials, except
+for the limited access rights expressly set forth in these Terms. The
+Company expressly reserves all rights not granted in these Terms. There
+are no implied licenses granted under these Terms.
+By acceptance of these Terms, you agree and acknowledge that all
+information and content provided by you, including your username, your
+contact list, any third party restaking protocol, Validator Service
+Provider or Actively Validated Service interacted with, any messages,
+posts, comments or user generated content (the "**UGC**") shall be
+considered non-confidential and non-proprietary information and may be
+publicly shown on the App. By providing such UGC, you specifically grant
+the Company a non-exclusive, irrevocable, transferable, sub-licensable,
+royalty-free, worldwide license to use, copy, duplicate store, present and
+publish all or any part of the UGC, and the Company shall be free to use
+such UGC in any manner or media whatsoever, on an unrestricted basis and
+without any attribution or royalties or other compensation to you,
+including, without limitation, within or outside the Site or the App, and
+in any digital or printed media.
+You acknowledge that you shall be responsible for any UGC that you submit
+or transmit through the Site or the App, including your responsibility as
+to the legality, reliability, appropriateness, originality and copyright
+of any such information or material. Additionally, you represent and
+warrant that: (a) you own all right title and interest in any UGC provided
+by you, (b) such UGC does not violate any applicable laws, and (c) the
+posting of your UGC by us (in any manner or media whatsoever, on an
+unrestricted basis) does not (and will not) violate the privacy rights,
+publicity rights, copyright, contract rights or any other rights of any
+individual or make derogatory remarks regarding, defame or otherwise
+criticise any person or entity. You shall be solely liable for any damage
+resulting from any infringement or other violation of the copyright,
+trademarks or other proprietary rights of any individual or entity, and
+for any other harm or losses resulting from any UGC.
+You acknowledge and agree that any questions, comments, suggestions,
+ideas, feedback or other information regarding the Smart Contracts, the
+Site and the App ("**Feedback**") provided by you to us are
+non-confidential and should become our sole property. We would own
+exclusive rights, including all intellectual property rights, and should
+be entitled to the unrestricted use and dissemination of these Feedback to
+any lawful purpose, commercial, or otherwise, without acknowledgment or
+compensation for you. You hereby waive any moral rights to any such
+Feedback, and you hereby warrant that any such Feedback are original with
+you or that you have the right to submit such Feedback. You agree there
+should be no recourse against us for any alleged or actual infringement or
+misappropriation of any proprietary right in your Feedback.
+Limitation of liability
+YOU UNDERSTAND AND AGREE THAT WE, OUR SUBSIDIARIES, AFFILIATES, SERVICES
+PROVIDERS, CONTRACTUAL COUNTERPARTIES AND LICENSORS WILL NOT BE LIABLE TO
+YOU OR TO ANY THIRD PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+CONSEQUENTIAL, OR EXEMPLARY DAMAGES WHICH YOU MAY INCUR IN CONNECTION WITH
+THE SMART CONTRACTS, THE SITE, THE APP, ANY THIRD PARTY RESTAKING
+PROTOCOL, VALIDATOR SERVICE PROVIDER OR ACTIVELY VALIDATED SERVICE,
+HOWSOEVER CAUSED AND UNDER ANY THEORY OF LIABILITY, INCLUDING, WITHOUT
+LIMITATION, ANY LOSS OF PROFITS (WHETHER INCURRED DIRECTLY OR INDIRECTLY),
+LOSS OF GOODWILL OR BUSINESS REPUTATION, LOSS OF DATA, COST OF PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES, OR ANY OTHER INTANGIBLE LOSS, EVEN IF WE
+HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+YOU AGREE THAT OUR TOTAL, AGGREGATE LIABILITY, OR THAT OF OUR
+SUBSIDIARIES, AFFILIATES, SERVICES PROVIDERS, CONTRACTUAL COUNTERPARTIES
+AND LICENSORS, TO YOU FOR ANY AND ALL CLAIMS ARISING OUT OF OR RELATING TO
+THESE TERMS OR YOUR ACCESS TO OR USE OF (OR YOUR INABILITY TO ACCESS OR
+USE) ANY PORTION OF THE SMART CONTRACTS, THE SITE, THE APP, ANY THIRD
+PARTY RESTAKING PROTOCOL, VALIDATOR SERVICE PROVIDER OR ACTIVELY VALIDATED
+SERVICE, WHETHER IN CONTRACT, TORT, STRICT LIABILITY, OR ANY OTHER LEGAL
+THEORY, IS LIMITED TO THE GREATER OF (A) THE AMOUNTS YOU ACTUALLY PAID US
+UNDER THESE TERMS IN THE 12 MONTH PERIOD PRECEDING THE DATE THE CLAIM
+AROSE, OR (B) US$200.
+YOU ACKNOWLEDGE AND AGREE THAT WE HAVE MADE THE EXPERIMENTAL SMART
+CONTRACTS, THE SITE AND THE APP AVAILABLE TO YOU AND ENTERED INTO THESE
+TERMS IN RELIANCE UPON THE WARRANTY DISCLAIMERS AND LIMITATIONS OF
+LIABILITY SET FORTH HEREIN, WHICH REFLECT A REASONABLE AND FAIR ALLOCATION
+OF RISK BETWEEN THE PARTIES AND FORM AN ESSENTIAL BASIS OF THE BARGAIN
+BETWEEN US. WE WOULD NOT BE ABLE TO PROVIDE THE APP TO YOU WITHOUT THESE
+LIMITATIONS.
+SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL
+OR CONSEQUENTIAL DAMAGES, AND SOME JURISDICTIONS ALSO LIMIT DISCLAIMERS OR
+LIMITATIONS OF LIABILITY FOR PERSONAL INJURY FROM CONSUMER PRODUCTS, SO
+THE ABOVE LIMITATIONS MAY NOT APPLY TO PERSONAL INJURY CLAIMS.
+User Terms
+User Obligations. You agree that you are responsible for your own conduct
+while accessing or using the App, and for any consequences thereof. You
+agree to use the App only for purposes that are legal, proper and in
+accordance with these Terms and any applicable laws or regulations. By way
+of example, and not as a limitation, you may not, and may not allow any
+third party to:
+send, upload, distribute or disseminate any unlawful, defamatory,
+harassing, abusive, fraudulent, obscene, or otherwise objectionable
+content;
+distribute viruses, worms, defects, Trojan horses, corrupted files,
+hoaxes, or any other items of a destructive or deceptive nature;
+impersonate another person (via the use of an email address or
+otherwise);
+upload, post, transmit or otherwise make available through the App any
+content that infringes the intellectual proprietary rights of any
+party;
+use the App to violate the legal rights (such as rights of privacy and
+publicity) of others;
+engage in, promote, or encourage illegal activity (including, without
+limitation, money laundering);
+interfere with other users' enjoyment of the App;
+exploit the App for any unauthorised commercial purpose;
+modify, adapt, translate, decompile, disassemble or reverse engineer
+any portion of the App;
+attempt to bypass any measure of the Site designed to prevent or
+restrict access to the Site, or any portion of the Site or the App;
+harass, intimidate, or threaten any of our employees or agents engaged
+in providing any portion of the Site or the App to you;
+Remove any copyright, trademark or other proprietary rights notices
+contained in or on the App, the Contents or any part of it;
+reformat or frame any portion of the App;
+display any content on the App that contains any hate-related or
+violent content or contains any other material, products or services
+that violate or encourage conduct that would violate any criminal
+laws, any other applicable laws, or any third party rights;
+use any robot, spider, site search/retrieval application, or other
+device to retrieve or index any portion of the App or the content
+posted on the App, or to collect information about its users for any
+unauthorised purpose;
+upload or transmit (or attempt to upload or to transmit) any material
+that acts as a passive or active information collection or
+transmission mechanism, including without limitation, clear graphics
+interchange formats (“gifs”), 1×1 pixels, web bugs, cookies, or other
+similar devices (sometimes referred to as “spyware” or “passive
+collection mechanisms” or “pcms”);
+access or use the App by automated means or under false or fraudulent
+pretences;
+access or use the App for the purpose of creating a product or service
+that is competitive with any of our products or services;
+use the Site, the App and the Smart Contracts to advertise or offer to
+sell goods and services; or
+disparage, tarnish, or otherwise harm, in our opinion, us and/or the
+Site, the App, and the Smart Contracts. If you engage in any of the
+activities prohibited by this Section 5, we may, at our sole and
+absolute discretion, without notice to you, and without limiting any
+of our other rights or remedies at law or in equity, immediately
+suspend or terminate your access to the Site or the App and delete
+your UGC from the Site.***
+In addition to the above, you are not permitted to host, display, upload,
+send, modify, publish, transmit, update or share any information, that
+belongs to another person and to which the user does not have any right;
+is obscene, pornographic, paedophilic, invasive of another’s privacy
+including bodily privacy, insulting or harassing on the basis of gender,
+racially or ethnically objectionable, relating or encouraging money
+laundering or gambling, or an online game that causes user harm, or
+promoting enmity between different groups on the grounds of religion or
+caste with the intent to incite violence;
+is harmful to child;
+infringes any patent, trademark, copyright or other proprietary rights;
+deceives or misleads the addressee about the origin of the message or
+knowingly and intentionally communicates any misinformation or information
+which is patently false and untrue or misleading in nature or is
+identified as fake or false or misleading;
+threatens the unity, integrity, defence, security or sovereignty of any
+state, its friendly relations with foreign states, or public order, or
+causes incitement to the commission of any cognisable offence, or prevents
+investigation of any offence, or is insulting other nation;
+contains software virus or any other computer code, file or program
+designed to interrupt, destroy or limit the functionality of any computer
+resource;
+violates any law for the time being in force.
+User Representations. By using the Site, the App and the Smart Contracts,
+you represent and warrant that: (a) you have read and understood these
+Terms and all documentation on the App or the Site; (b) you have good and
+sufficient experience and understanding of the functionality, usage,
+storage, transmission mechanisms and other material characteristics of
+cryptographic tokens, token storage mechanisms (such as token wallets),
+blockchain technology, blockchain-like technology and blockchain-based
+software systems to understand these Terms and to appreciate the risks and
+implications of interacting with any third party restaking protocol,
+Validator Service Provider or Actively Validated Service; (c) you
+acknowledge and agree that we may impose eligibility criteria to access
+certain functionality in respect of Kelp which may require you to incur
+additional time and money costs; (d) you interact with any third party
+restaking protocol, Actively Validated Service or Validator Service
+Provider for your own account and shall not interact with any third party
+restaking protocol, Actively Validated Service or Validator Service
+Provider on behalf of any other entity or person; (e) your interaction
+with any third party restaking protocol, Actively Validated Service or
+Validator Service Provider complies with applicable law and regulation in
+your jurisdiction, and the law and regulation of any jurisdiction to which
+you may be subject (including, but not limited to legal capacity and any
+other threshold requirements for interacting with any third party
+restaking protocol, Actively Validated Service or Validator Service
+Provider, and interacting with other users of Kelp, any foreign exchange
+or regulatory restrictions applicable to interacting with any third party
+restaking protocol, Actively Validated Service or Validator Service
+Provider, and any governmental or other consents that may need to be
+obtained); (f) all information you submit will be true, accurate, current,
+and complete (if you provide any information that is untrue, inaccurate,
+not current, or incomplete, we have the right to refuse or terminate your
+current or future use of the Site and the App (or any portion thereof));
+(g) you will maintain the accuracy of such information and promptly update
+such information as necessary; (h) you have the legal capacity and you
+agree to comply with these Terms; (i) you are not a minor in the
+jurisdiction in which you reside; (j) you will not use the Site, the App
+and the Smart Contracts for any illegal and unauthorised purpose; (k) you
+will not use the Site, the App and the Smart Contracts for any commercial
+purpose (save as approved by The Company in writing); (l) your use of the
+Site, the App and the Smart Contracts will not violate any applicable law
+or regulation; (m) you are not (i) the subject of any sanctions
+administered or enforced by any country or government or international
+authority, including the US Department of the Treasury’s Office of Foreign
+Assets Control ("**OFAC**"), the US Department of State, the United
+Nations Security Council, the European Union, Her Majesty's Treasury, the
+Hong Kong Monetary Authority or the Monetary Authority of Singapore
+(collectively, "**Sanctions**"); (ii) located, organised, citizen or
+resident in a country or territory that is, or whose government is, the
+subject of Sanctions; (iii) listed in any list of sanctioned persons
+including those maintained under the Sanctions including the List of
+Specially Designated Nationals and Blocked Persons or the Foreign
+Sanctions Evaders List maintained by OFAC; or (iv) directly or indirectly
+owned or controlled by any person subject to sub-clauses (m)(i), (m)(ii)
+and (m)(iii) above; and (n) any funds or digital assets staked, restaked
+or deposited in any third party restaking protocol, Actively Validated
+Service or Validator Service Provider are not derived from or related to
+any unlawful activities, including but not limited to money laundering or
+terrorist financing and all applicable statutes of all jurisdictions in
+which you are located, resident, organised or operating, and/or to which
+it may otherwise be subject and the rules and regulations thereunder
+(collectively, the "**Compliance Regulations**"), and you will not use the
+Smart Contracts, the Site or the App to finance, engage in, or otherwise
+support any unlawful activities or in a manner which aids or facilitates
+another party in the same. To the extent required by applicable laws and
+regulations, you shall fully comply with all Compliance Regulations
+Know Your Customer and Anti-Money Laundering. We reserve the right to
+conduct "Know Your Customer" and "Anti-Money Laundering" checks on you if
+deemed necessary by us (at our sole discretion) or such checks become
+required under applicable laws in any jurisdiction. Upon our request, you
+shall immediately provide us with information and documents that we, in
+our sole discretion, deem necessary or appropriate to conduct "Know Your
+Customer" and "Anti-Money Laundering" checks. Such documents may include,
+but are not limited to, passports, driver's licenses, utility bills,
+photographs of associated individuals, government identification cards or
+sworn statements before notaries or other equivalent professionals.
+Notwithstanding anything herein, we may, in its sole discretion, refuse to
+provide access to the Site or the Site to you until such requested
+information is provided, or in the event that, based on information
+available to us, you are suspected of using the Smart Contracts, the Site
+or the App in connection with any money laundering, terrorism financing,
+or any other illegal activity. In addition, we shall be entitled to use
+any possible efforts for preventing money laundering, terrorism financing
+or any other illegal activity, including without limitation blocking of
+your access to the Smart Contracts, the App or the Site or providing your
+information to any regulatory authority.
+You are responsible for complying with applicable laws (including tax
+laws) in connection with usage of the Smart Contracts, the Site, the App
+or interactions with any third party restaking protocol, Actively
+Validated Service or Validator Service Provider. You agree that we are not
+responsible for determining whether or which laws may apply to said
+interactions. You are advised to consult your own lawyers regarding the
+legality and implications of any such activities. You are solely
+responsible for reporting and paying any taxes arising from your usage of
+the Smart Contracts, the Site, the App or interactions with any third
+party restaking protocol, Actively Validated Service or Validator Service
+Provider.
+Risks borne by users
+Use of the App and interaction with third party restaking protocols,
+Actively Validated Services or Validator Service Providers carry financial
+risk. You acknowledge and agree that you are aware of such risks,
+including the following: (a) transactions relating to digital assets are
+very risky, (b) such digital assets are, by their nature, highly
+experimental, risky, volatile and generally irreversible and (c) the
+information provided by these third party restaking protocols, Actively
+Validated Service or Validator Service Providers may be misleading, untrue
+or incomplete in material aspects. You should not make any transactional
+decision without first conducting your own research. You are solely and
+exclusively responsible for determining whether any third party restaking
+protocol, Actively Validated Service or Validator Service Provider is
+appropriate or suitable for you based on your own objectives and personal
+and financial situation. You acknowledge and agree that you will access
+and use the Smart Contracts, the Site and the App and interact with third
+party restaking protocols, Actively Validated Services and Validator
+Service Providers at your own risk.
+You represent that you have sufficient knowledge, market sophistication,
+professional advice and experience to make your own evaluation of the
+merits and risks of any interaction with third party restaking protocols,
+Actively Validated Services or Validator Service Providers, and the
+underlying digital assets. You accept all consequences of participating in
+such interactions, including the risk that you may lose access to your
+digital assets indefinitely. All decisions to interact with any third
+party restaking protocol, Actively Validated Service or Validator Service
+Provider are made solely by you. Notwithstanding anything in these Terms,
+the Company accepts no responsibility whatsoever for and will in no
+circumstances be liable to you in connection with any interaction with any
+third party restaking protocol, Actively Validated Service or Validator
+Service Provider and the underlying digital assets. Under no circumstances
+will the operation of all or any portion of the Smart Contracts, the Site
+or the App be deemed to create a relationship that includes any management
+of any assets, or the provision or tendering of investment advice.
+The prices of blockchain assets are extremely volatile. Fluctuations in
+the price of other digital assets could materially and adversely affect
+the value of your digital assets held with third party restaking
+protocols, Actively Validated Services or Validator Service Providers,
+which may also be subject to significant price volatility. We cannot
+guarantee or assume any liability for any losses to any users interacting
+with third party restaking protocols, Actively Validated Services or
+Validator Service Providers.
+Neither the Smart Contracts, Site, or the App hold in custody, store,
+send, or receive any of your digital assets. This is because your digital
+assets exist only by virtue of the ownership record maintained on the
+relevant Blockchain Network. Any transfer of digital assets occurs within
+the relevant Blockchain Network, and not on the Smart Contracts, Site, or
+the App.
+The Smart Contracts may contain security vulnerabilities, errors,
+failures, bugs or economic loopholes which may be exploited by third
+parties. Interaction with these Smart Contracts are entirely at your own
+responsibility and liability, and the Company is not a party to the Smart
+Contracts. Further, when you interact with any third party restaking
+protocol, Actively Validated Service or Validator Service Provider and
+place digital assets therein, these digital assets may be re-deployed with
+various third party DeFi or smart contract protocols. The development team
+for these third party protocols is independent from the Company, so the
+Company has no control over these third party protocols or the underlying
+smart contracts. These smart contracts may contain security
+vulnerabilities, errors, failures, bugs or economic loopholes which may be
+exploited by third parties, causing you to suffer losses in connection
+with any re-deployed digital assets. The Company cannot be held
+responsible for any security vulnerabilities, errors, failures, bugs or
+economic loopholes in respect of these third party protocols or the
+underlying smart contracts.
+No third party restaking protocol, Actively Validated Service or Validator
+Service Provider will be able to guarantee the future performance of
+digital assets held with any third party restaking protocol, Actively
+Validated Service or Validator Service Provider, any specific level of
+performance, the success of any strategy or your overall results from
+interacting with the same. When reviewing the information, portfolio,
+performance, opinions of these parties, do not assume that the user is
+unbiased, independent or qualified to provide financial information or
+opinions. Past performance and risk scores have many inherent limitations
+and are not indicative of future results. No representation or guarantee
+is being made that any third party restaking protocol, Actively Validated
+Service or Validator Service Provider is likely to achieve gains or losses
+similar to the past performance. The actual percentage gains or losses
+experienced by investors will vary depending on many factors.
+Hackers or other malicious groups or organisations may attempt to
+interfere with the Smart Contracts, the Site, the App or third party
+staking protocols in a variety of ways, including, but not limited to,
+malware attacks, denial of service attacks, consensus-based attacks, Sybil
+attacks, smurfing and spoofing, which may result in losses incurred by
+you.
+The regulatory regime governing blockchain technologies, cryptocurrencies,
+and tokens is uncertain, and new regulations or policies may materially
+adversely affect the development of Kelp ecosystem, and therefore the
+potential utility, value of or services provided by Kelp.
+Upgrades to the relevant Blockchain Network and the relevant Restaking
+Protocol, a hard fork in the relevant Blockchain Network or the relevant
+Restaking Protocol, or a change in how transactions are confirmed on the
+relevant Blockchain Network, or the relevant Restaking Protocol may have
+unintended, adverse effects on the smart contracts built thereon,
+including Kelp ecosystem.
+External Sites
+The Site or the App may include hyperlinks to other web sites or resources
+(collectively, "**External Sites**"), which are provided solely for your
+convenience. We have no control over any External Sites. You acknowledge
+and agree that we are not responsible for the availability of any External
+Sites, and that we do not endorse any advertising, products or other
+materials on or made available from any External Sites. Furthermore, you
+acknowledge and agree that we are not liable for any loss or damage which
+may be incurred as a result of the availability or unavailability of the
+External Sites, or as a result of any reliance placed by you upon the
+completeness, accuracy or existence of any advertising, products or other
+materials on, or made available from, any External Sites.
+Grievance Redressal
+For any concerns or grievances related to the use of our services or any
+violation of these Terms of Use, you can contact our Grievance Officer:
+Name - Rushabh Gurav
+Email -
+Legal@kelpdao.xyz
+If you have any complaints, feedback, or grievances, please reach out to
+our Grievance Redressal Officer using the provided contact details. Our
+officer will review your concerns and take appropriate action within a
+reasonable time frame.
+We strive to provide a satisfactory resolution to any issues raised by our
+users and maintain a transparent and accountable approach to addressing
+grievances.
+Please note that we encourage users to first attempt to resolve any
+disputes or concerns by contacting our Grievance Redressal Officer.
+However, if you believe that your concerns have not been adequately
+addressed, you have the right to escalate the matter to the relevant
+supervisory authority or regulatory body.
+We are committed to ensuring a positive user experience and appreciate
+your cooperation in bringing any issues to our attention.
+Kelp reserves the right to modify or update this Grievance Redressal
+Officer Clause as necessary. Any changes will be communicated through our
+website or other appropriate channels.
+Restake now
+© Copyright 2025 Kelp Dao. All rights reserved.
+Terms of service
+|
+Privacy policy

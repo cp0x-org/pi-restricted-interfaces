@@ -1,9 +1,9 @@
 check: debridge/geo-terms
 about: The Terms list restricted countries including the United States; technical enforcement not verified
 source: https://docs.debridge.foundation/legal/terms-of-service
-checked_at: 2026-10-11T21:18:49Z
+checked_at: 2026-10-28T22:56:36Z
 fetched: https://docs.debridge.foundation/legal/terms-of-service
-sha256: 40764871fefcb6f5fba5d7e11aec4a7266132f47100faf63461e1e2cdb9b2d8d
+sha256: fc57a39416f4451c51570ed703fb65f0ee719bc4538788026ed101bb29ad83e8
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

@@ -1,0 +1,153 @@
+{
+  "id": "lido",
+  "name": "Lido",
+  "targets": {
+    "app": "https://stake.lido.fi",
+    "repo": {
+      "repo": "lidofinance/ethereum-staking-widget",
+      "ref": "7fa7f1a7fec66f4db742b0f2178338c2c2beb54a"
+    },
+    "terms": "https://lido.fi/terms-of-use",
+    "endpoints": [
+      "https://stake.lido.fi/api/geo"
+    ]
+  },
+  "checks": [
+    {
+      "id": "feature-geo-config",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Remote config: countries that get the 'limited' experience (Earn vault deposits closed)",
+      "source": {
+        "repo": "lidofinance/ethereum-staking-widget",
+        "ref": "7fa7f1a7fec66f4db742b0f2178338c2c2beb54a",
+        "path": "REMOTE_CONFIG_MANIFEST.json"
+      },
+      "expect": [
+        "\"geo\":\\s*\\{\\s*\"limited\""
+      ],
+      "section": {
+        "start": "\"limited\":",
+        "end": "\\]"
+      },
+      "countries": "codes"
+    },
+    {
+      "id": "feature-geo-handler",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "/api/geo answers 'limited' for a listed country (country from Cloudflare's cf-ipcountry)",
+      "source": {
+        "repo": "lidofinance/ethereum-staking-widget",
+        "ref": "7fa7f1a7fec66f4db742b0f2178338c2c2beb54a",
+        "path": "utilsApi/geo-handler.ts"
+      },
+      "expect": [
+        "const CF_COUNTRY_HEADER = 'cf-ipcountry'",
+        "availability: GEO_AVAILABILITY\\.limited"
+      ]
+    },
+    {
+      "id": "feature-geo-live",
+      "type": "live",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Live: stake.lido.fi/api/geo answers availability=limited to a visitor from the US",
+      "source": {
+        "url": "https://stake.lido.fi/api/geo",
+        "country": "US"
+      },
+      "expect": [
+        "\"country\":\\s*\"US\"",
+        "\"availability\":\\s*\"limited\""
+      ],
+      "countries": [
+        "US"
+      ]
+    },
+    {
+      "id": "screening-validation",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "/api/validation forwards the wallet to an external validation API ({validationAPI}/v{n}/check/{address})",
+      "source": {
+        "repo": "lidofinance/ethereum-staking-widget",
+        "ref": "7fa7f1a7fec66f4db742b0f2178338c2c2beb54a",
+        "path": "pages/api/validation.ts"
+      },
+      "expect": [
+        "secretConfig\\.validationAPI \\+ `/v\\$\\{version\\}/check/\\$\\{validatedAddress\\}`"
+      ]
+    },
+    {
+      "id": "vpn-tor",
+      "type": "code",
+      "claim": "vpn",
+      "status": "detect",
+      "about": "Tor exit nodes (Cloudflare country T1) are treated as unresolved and get the limited experience",
+      "source": {
+        "repo": "lidofinance/ethereum-staking-widget",
+        "ref": "7fa7f1a7fec66f4db742b0f2178338c2c2beb54a",
+        "path": "utilsApi/geo-handler.ts"
+      },
+      "expect": [
+        "`T1` for Tor exit nodes",
+        "UNRESOLVED_COUNTRY_CODES = new Set\\(\\['XX', 'T1'\\]\\)"
+      ]
+    },
+    {
+      "id": "prod-geo-limited",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production HTML: the remote config shipped to the browser limits these countries",
+      "source": {
+        "url": "https://stake.lido.fi"
+      },
+      "expect": [
+        "\"geo\":\\{\"limited\":\\["
+      ],
+      "section": {
+        "start": "\"geo\":\\{\"limited\":\\[",
+        "end": "\\]"
+      },
+      "countries": "codes",
+      "case": true
+    },
+    {
+      "id": "prod-geo-notice",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production JS: the 'not available in your region' notice for Earn vaults",
+      "source": {
+        "url": "https://stake.lido.fi"
+      },
+      "expect": [
+        "This vault is not available in your region"
+      ]
+    },
+    {
+      "id": "screening-api",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Lido's /api/validation answers isValid:false for the sanctioned wallet and true for the control",
+      "source": {
+        "method": "GET",
+        "url": "https://stake.lido.fi/api/validation?address={address}"
+      },
+      "expect_sdn": [
+        "^status: 200$",
+        "\"isValid\":\\s*false"
+      ],
+      "expect_control": [
+        "^status: 200$",
+        "\"isValid\":\\s*true"
+      ]
+    }
+  ]
+}

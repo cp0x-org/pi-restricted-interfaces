@@ -1,112 +1,112 @@
 check: spark/sweep-bundle
 about: Production HTML and JavaScript of the official app, searched for access-restriction signals
 source: https://app.spark.fi
-checked_at: 2026-10-11T21:13:17Z
+checked_at: 2026-10-28T22:49:17Z
 http_status: 200
 via: direct
 --------------------------------------------------------------------------------
 page: https://app.spark.finance/ (HTTP 200)
 scripts (89):
   https://app.spark.finance/scripts/theme-init.js  sha256=bd0fd03a402519b82c48fa9e2c6c3069dfafc631b47740a2c5106974aab0ae58
-  https://app.spark.finance/assets/index-BoLd_7-U.js  sha256=eb8b6c623f210703b93a3e71ea8baf512a8af8e91dd0ff40797f44b2458fd0d0
-  https://app.spark.finance/assets/chunk-BI8BEp_Q.js  sha256=146652b4f2cf49c6c135f6df8dc3291ee867873c30ff1f3a3ba1ab121b07bf91
-  https://app.spark.finance/assets/utils-CChIZHwH.js  sha256=8a399334bb6c819ad1d6841cfbb70a8d5c9a251cee7da450b9e39bd49d7e3e1b
-  https://app.spark.finance/assets/ccip-LjMeiyiI.js  sha256=fd47dee3dcb2812d112865e443c862f58e4aad4a0c9cf0076ed6ecb4a5f463b8
-  https://app.spark.finance/assets/secp256k1-DldiFRvD.js  sha256=247089748464b1ea0a31afc468cc8ee53f470b5df062c183a2cad81ed7854075
-  https://app.spark.finance/assets/_esm-Duhf43zc.js  sha256=92cf2c12751ff29176a33f1fa1c6853ac1b1dc9bfff9948d728c1e36d8e76014
-  https://app.spark.finance/assets/ModalController-DD9m6tVB.js  sha256=b5b623e4ee436f809e2a859e0d510c94fd65a5ec0817f4651f15cca188121b2c
-  https://app.spark.finance/assets/events-CWubVvUG.js  sha256=804294294ddf9ca02a4006ea31bce43012a566bbc3fc669ac475d0e50847feed
-  https://app.spark.finance/assets/wui-text-BebYfvNg.js  sha256=085372c9a518841f7ebf735077aaf7f17bc08a542956350eb7ce336d5539bd62
-  https://app.spark.finance/assets/ConstantsUtil-CYdbWpGX.js  sha256=0aa568bcbf708604502f9ce8775dce777f2d7a49670b144e47c83e500feb13ed
-  https://app.spark.finance/assets/if-defined-DZxwuk48.js  sha256=90675ebded364f7670db68df84880248ba018f168992d3d6d02e418c594502f9
-  https://app.spark.finance/assets/wui-image-qsbrCk4M.js  sha256=27643ab40159467079cb86827a5c9faeb544661d2b0a28b2accb5fab0ce6883a
-  https://app.spark.finance/assets/wui-icon-box-DTs-WN96.js  sha256=247c31a10f71503087d4fc23cea209a54e0123492945443dc1eb22b70a91f69c
-  https://app.spark.finance/assets/ref-DQrLb05K.js  sha256=82e6b3724adcad8eecd6a5440e62e831aa082b1b3b07d01ac7b0f900d78be75e
-  https://app.spark.finance/assets/dist-2NxOjwrB.js  sha256=72955561e97332018f2089289404a70ab1512b334f5c303f559d2d8435682e3b
-  https://app.spark.finance/assets/esm-DttEs3ym.js  sha256=e567cd3e484e33434ae957ab6ac086fda63243835590464d4cddb1e7c87ec8e3
-  https://app.spark.finance/assets/dist-6W7IdzO5.js  sha256=977a0ece06c9b84944a9f8f57993b24c97f20635bb39e6be8798f77a0a3d9e15
-  https://app.spark.finance/assets/dist-CBD0762F.js  sha256=21fbdcf42c3bd440685e108eb48b5d3392ef9f6e6d5d4bf3780cc551ae32b393
-  https://app.spark.finance/assets/features-zyAS1YeB.js  sha256=05b2a5027e887710a2e0ff33f67e67f97184314b52950100bd003af567ed4ebc
-  https://app.spark.finance/assets/embedded-wallet-De4fKcUu.js  sha256=083b70c36d11b8e30a7968f1c37b8b38ac88993dccd007c0cb6b7bbbeb6cd680
-  https://app.spark.finance/assets/email-BEkEgFxR.js  sha256=d8099248ed46ce9fb3edc4c68f3b5da939258bdddbdd9d072505aec60ba3e573
-  https://app.spark.finance/assets/w3m-email-otp-widget-CM_3LLuk.js  sha256=3c316dcde8041bb6af8740322719ecf95efbd685fba572693a9b781fb135c927
-  https://app.spark.finance/assets/socials-DUhUjwYg.js  sha256=5e2bab9069514ca09169db8dd5bf15c49e814861706157c58d8940c10f4c4121
-  https://app.spark.finance/assets/swaps-c3uIJUyh.js  sha256=4793ffbe612534d7aca49031c77c0cee81a172f5fe4a8a99466c4ab8a2653442
-  https://app.spark.finance/assets/wui-token-button-D7iaNrGr.js  sha256=b417b029c93e343f0898711c741d5078be144d54e6ea1ec79095a9f069cd254d
-  https://app.spark.finance/assets/send-s_AdXMdu.js  sha256=d51cad5238b46505c14ef7e8c24f1f7230510eb0607d7a8a5a2b23f9af122849
-  https://app.spark.finance/assets/wui-input-amount-BXiKrPsU.js  sha256=cb1d27695a564e3ab5efe52942237215f5815f6b65a1d38eae4f28544c8e2c55
-  https://app.spark.finance/assets/receive-BhK439Ul.js  sha256=49fec8383382653f5de356bec9d384cbff9961df24da6a4eac6504f3424f51a8
-  https://app.spark.finance/assets/onramp-BISsxx-o.js  sha256=f3918f0535315ac9e42b00d3e4fac587887b61fa1744de8049a205f5642a1c12
-  https://app.spark.finance/assets/wui-image-ZmJauuKq.js  sha256=b3fbfc11fbacd7b6b049c90842f9107b9d87385e40f89cc7764c4df1038991f5
-  https://app.spark.finance/assets/pay-with-exchange-_SEZcuEf.js  sha256=fb0cf98882284aed3cdb19d822c5a98c04eb998d9b0ed7d658777f8e581bcab5
-  https://app.spark.finance/assets/transactions-CSmnfa9n.js  sha256=18f593f15ab740e12cc8ad942b33452da8d290e920982a6c720fa5efcf0bfbce
-  https://app.spark.finance/assets/exports-DXZ-bmLF.js  sha256=6bb331d7eb90092853880d48ad3c3680eac60a980768b1defe7e82801fa03374
-  https://app.spark.finance/assets/data-capture-B0lhWnUv.js  sha256=1891192be85f4b292698ee1d9ff375d6722abb5cebee9dfb055f6bf6e0900e92
-  https://app.spark.finance/assets/w3m-modal-Cl-Hprxx.js  sha256=01382888354e40c99e4f84dcf7796c4b9f8438e16c8c9b6f44c9ed41a49bdbcf
-  https://app.spark.finance/assets/PhArrowCircleDown-Dn_ticOe.js  sha256=64c593e59ddfdb7b8e8a094156dcfe6a1ddad79ed5e878d5de5cf33afd1dfb0b
-  https://app.spark.finance/assets/property-662so3S_.js  sha256=35d905e00278b43d6c8cd805f7da0f73439af7d5eac07075dc4d54f1855436d8
-  https://app.spark.finance/assets/PhArrowClockwise-DMifckq8.js  sha256=f0cd72acf78a1c6cf1df034522acf38ec3f73b03317b206516cd94aa05dca30d
-  https://app.spark.finance/assets/PhArrowDown-CJCVZgR_.js  sha256=a59cbcf00f68621aecf3b95d20680ddccfa833283dd3e090af193054f86842e8
-  https://app.spark.finance/assets/PhArrowLeft-B48z7CB-.js  sha256=dd69f21baf19ce001598ca2a327063b6f5869aa483806ff64fefb32c25e0e093
-  https://app.spark.finance/assets/PhArrowRight-D9JShFq8.js  sha256=3cfb43825bea83752bcad9221c6277aad0e40157dbaaf91b7b6b2e91b8632370
-  https://app.spark.finance/assets/PhArrowSquareOut-OXTUOgMu.js  sha256=566a5fc1090ac1a0865996bc0cdc8c260a00c51e976950391a3d45b228c3d6b7
-  https://app.spark.finance/assets/PhArrowsDownUp-t5sbzeGK.js  sha256=663a0e2406ec73395a886944dcc732fbccd2c11e29d4b55544f738e8399bb89e
-  https://app.spark.finance/assets/PhArrowsLeftRight-N2x48uaq.js  sha256=0bfe127f7306d1d5cab42465453ccade71bbc96db2a7f2013ce9b51e01dc43b2
-  https://app.spark.finance/assets/PhArrowUp-C45dYH20.js  sha256=140ac1a86c6bf9742def95dd4fe45c4dbbd15fee3e314f7862b6a49f8fee0df2
-  https://app.spark.finance/assets/PhArrowUpRight-Cx6tuaUx.js  sha256=36e5b0ca67ac47a57b5397510f46c57d7a69ac70eeea40d76d82386353b047f2
-  https://app.spark.finance/assets/PhArrowsClockwise-B52y_dP4.js  sha256=a071d2a4e248de9533f98c7194cb3e9914022eb31a1a8cd3b36c6aeee775855c
-  https://app.spark.finance/assets/PhBank-DvIFMjfR.js  sha256=38969658451e4d8752d814cb62135b98661a0ccf3c344ed515922343517ef969
-  https://app.spark.finance/assets/PhBrowser-XDZz8YoS.js  sha256=fa3ee1afa6cd64152b10e4cb4a76766fd9233fd740d9ab188854fdb035336d6b
-  https://app.spark.finance/assets/PhCaretDown-Dbi8heb_.js  sha256=fa5d2a70074e15c7ec7317964f4911b461f9652a1089bc09b5305e122cbfd838
-  https://app.spark.finance/assets/PhCaretLeft-BjrgOMP6.js  sha256=775f17296461b489fa0ae922e987824884e6e586cd8f1581cd8154c4435b07ff
-  https://app.spark.finance/assets/PhCaretRight-BrYqs4QW.js  sha256=4c8ee19273d17674474d259ad87c9be58fe8b83c5c01ff273f086c5e51c3a113
-  https://app.spark.finance/assets/PhCaretUp-DnnEiL4M.js  sha256=44d2d3517e49b833c1c706baf83a4f3cd58a343fd62cc14135edc34336ed1592
-  https://app.spark.finance/assets/PhCheck-A6AknjbS.js  sha256=1b82c1345957fc1710143dc11e23e4042c8594ed1448f8dae4838f8c3dd25010
-  https://app.spark.finance/assets/PhCircleHalf-DV-R66l_.js  sha256=84851d08c27769c92ef3b0640fbeb8c16757792f4bbf3b0e4e9d8874497103d4
-  https://app.spark.finance/assets/PhClock-DeOK1pq2.js  sha256=d62c7c4f4aed116b670e1103f351d7b4445934dcdec51f2337a55f688c86a096
-  https://app.spark.finance/assets/PhCompass-B5-oRjDi.js  sha256=3401c402f49d1f501ec938c9d9ccf5dbac4292f0faac96c6e69660e264dd2f37
-  https://app.spark.finance/assets/PhCopy-C0GT572a.js  sha256=86dec35724791448962915ca0b7390766fad0334610d1c8e0338f490e5a05278
-  https://app.spark.finance/assets/PhCreditCard-Co6xe7yJ.js  sha256=9bf50f2f263b2343934b9494db17f0e9c6387ce6d89492236d15f300f6a3c331
-  https://app.spark.finance/assets/PhCurrencyDollar-DQ7-BdVu.js  sha256=1f50028ed1cb119c4943826e040ca3cf23c53aab38a4970f31ba1d9efb6d86a3
-  https://app.spark.finance/assets/PhDesktop-Jzm45dw-.js  sha256=ca0259648b4571ea6571e6f90569b4455fa6f1881f915c347608efa5f5a43e8c
-  https://app.spark.finance/assets/PhDeviceMobile-CQix8EGB.js  sha256=462f8423abfd40c816796e84f717e4627af04430074a717cfb56f2fe090320bf
-  https://app.spark.finance/assets/PhDotsThree-CVAPqSh3.js  sha256=74fd330fe740279d7e52e4fd2cc16ae9f3c26db2af20b3066631c3179d01dddc
-  https://app.spark.finance/assets/PhVault-xLbGxzJe.js  sha256=87c6ec43da5adf7029a15c18f5bad7ccd8aa8e1ca4f5b91f36883ec4b7185d33
-  https://app.spark.finance/assets/PhEnvelope-9K1bNhgX.js  sha256=1e7734532c682c547017e0465334bb52f7e803cdc3ab807170433d4b45a81a8c
-  https://app.spark.finance/assets/PhFunnelSimple-CfQamlI2.js  sha256=edbc5204e9fe1019188f8c5c4a087f814602c810c86fe553f119153a5ad70e48
-  https://app.spark.finance/assets/PhGlobe-Dw0HQjoF.js  sha256=118c2fcd8fe545a73e4aca77fd72e7ce45f58ba7df0ab404c837b50fca058563
-  https://app.spark.finance/assets/PhIdentificationCard-B0ovvIQC.js  sha256=e807a1440f217401c378cdf3e96083a5ad032c0dd99cde70f824b039cc20437d
-  https://app.spark.finance/assets/PhImage-QWOg8WyK.js  sha256=e1d61de635781a58c8f07a342ca253f964f54a3a4ef1d6f13366063478aca2a6
-  https://app.spark.finance/assets/PhInfo-0vuRidJR.js  sha256=a9e42c393e33542551294d15734ebbdcc2b0d0128a030864af6bcf73377ff46a
-  https://app.spark.finance/assets/PhLightbulb-DE46LTg7.js  sha256=22614c648a66b87d4e28f6b12939b16ecf9a50f2d897951d79ab347d87bfd00d
-  https://app.spark.finance/assets/PhMagnifyingGlass-BrAQNQzv.js  sha256=edb0bcb8164a3b33100fcad31a79935d489ecce2694128aead200f5d85c384bf
-  https://app.spark.finance/assets/PhPaperPlaneRight-BHhjCED0.js  sha256=5da2fe432fb5a4707d4bd556fddbc48c55370dab7214ebf92bee8bb591e2334f
-  https://app.spark.finance/assets/PhPlus-6HDgxlAR.js  sha256=8f1b3e62a0a105da71747a5d6b68ea942ccea590d07d75b037776a53ea0c52ba
-  https://app.spark.finance/assets/PhPower-VibvGxRX.js  sha256=4378448e3e99f29016d8987f3361b900b7edea4c89daaffd71bb63aefff5eff0
-  https://app.spark.finance/assets/PhPuzzlePiece-Dx6GXbgz.js  sha256=e4129f9366de11381fb6781845bb87690a2bab0f93589c2d9ba5927196d9ec2d
-  https://app.spark.finance/assets/PhQrCode-CC3cz_vE.js  sha256=3dcb16b04cbf6c600520b3b544e0c590040031a1b8209902eb36b7251cde450d
-  https://app.spark.finance/assets/PhQuestion-ht6_mDHS.js  sha256=b00f7517db7d53e151091b40877251be3cb47428977aca46be0c04e9e9ffa2df
-  https://app.spark.finance/assets/PhQuestionMark-PzIC-8x9.js  sha256=1b841846f86c8b2fbce00826b06f6e4a7f9483522a974936d2fe888df5496ef0
-  https://app.spark.finance/assets/PhSealCheck-DCk81sMK.js  sha256=dc13b7203b8810a204fa34fddc8ecf29e33214083f6d5df8424f0cf57f276ed8
-  https://app.spark.finance/assets/PhSignOut-Ec5vMxYJ.js  sha256=3fab78099228d530c29441bc72fc27db713a777ec73125977c1a5f68b3ed1ea8
-  https://app.spark.finance/assets/PhSpinner-BsOZTDfV.js  sha256=6a630cb40c70fd6d7d054c63660431b148dddfdf57c3985da77657ef52dee2ff
-  https://app.spark.finance/assets/PhTrash-qq97Ddy0.js  sha256=d7c0c2ef9fc9778200c900cc12c20cb685718b09d4f8c6c59dc2e1d432d70d98
-  https://app.spark.finance/assets/PhUser-vefH1EmG.js  sha256=e3abb7967e364c368d61ef670b0c270cb01e519303d808f061179e30b3a194b5
-  https://app.spark.finance/assets/PhWallet-BgSg-37k.js  sha256=0ac9b9ddf3205f5a448eb9350323cdfa9aa96b8020d7810011a14c2ec9bb1515
-  https://app.spark.finance/assets/PhWarning-nvKI9XnT.js  sha256=3695434d3ca1f992710d9578a3cbba80eea65bd036757a7cdf1a29ff1445a990
-  https://app.spark.finance/assets/PhWarningCircle-YUYaoka0.js  sha256=0e1706ebceff99f199b44d8466246d2bbcd5016794d5028a7678c8550b5d33a5
-  https://app.spark.finance/assets/PhX-zR7gTSyt.js  sha256=f7bc029d7d531498db344326dc209461744aec19cd3c98d7841be41b6adeab06
+  https://app.spark.finance/assets/index-BP2MoS4A.js  sha256=f5e407edfb1f343be778ad51de4a8f63619c2b4376703d672d8de453c55865cc
+  https://app.spark.finance/assets/chunk-CTevuMJI.js  sha256=6d2fa03e21132c11378a66951f0d7df652c44f8a8dab221ee6f76e37a2147ce3
+  https://app.spark.finance/assets/utils-CewXJ7VC.js  sha256=a17ffebfa2d9fb8cbc751c9fb83afa7b915836cf5c94abb96c98bb60a14e4885
+  https://app.spark.finance/assets/ccip-BlpEuSOF.js  sha256=1e42a446567ee2f9c555b5fcfe37c86bd4adee93546b55e56914faba6563066a
+  https://app.spark.finance/assets/secp256k1-CmIreW07.js  sha256=826d116bdd192f5ff132c8da34cf7bee2f30f9590de6eeedf1de2add4398ee6b
+  https://app.spark.finance/assets/_esm-BKZ19U0D.js  sha256=01cc1b0ab06a4c09fb490f1f1dff2a821d84d2bf0fb10a28fbde9a5e8b177313
+  https://app.spark.finance/assets/ModalController-D4yX5U5g.js  sha256=c678bf246f6c6b8ca4f1088242e1218f91b2181aef075c4ec972289b27827dee
+  https://app.spark.finance/assets/events-Dl3aR8K6.js  sha256=794b7779bf2674a3228c027c5ee46f7f3594f1f169611bafe51d5effc3a86f38
+  https://app.spark.finance/assets/wui-text-Ddv3oayP.js  sha256=302d103bba6ac5d2f5ce8992dadfa09a0977e619f854d6cd8c09834dfae9ab98
+  https://app.spark.finance/assets/ConstantsUtil-C1cvy1ya.js  sha256=fc0205f78dab12de45912c700208949555bcd7224c5f2ad916a81b0d12558d0e
+  https://app.spark.finance/assets/if-defined-BFEeLdWh.js  sha256=8e8a094629fb70c648209f4094790756c96e37d5518a078cac0fa32f01d2d06c
+  https://app.spark.finance/assets/wui-image-BF_cRkZ4.js  sha256=05f2f8be8dee43ef01fc0640c55ef790691c7948c05c35dec4501b1c0dd40a96
+  https://app.spark.finance/assets/wui-icon-box-C-L_V4iZ.js  sha256=e04d460e9d7ba87cb68e0432a9f4bcd2143361f5397410eebb50e6e442364fa6
+  https://app.spark.finance/assets/ref-ClzwWaQb.js  sha256=61a7d7693bdb7f06af44ce9522d29f955891d0948b9c33a1cb4b9ca295afbc95
+  https://app.spark.finance/assets/dist-WA8H4k2d.js  sha256=fb289eadf8a15d818791ba179619c8756f5c4a26d91f64c78230350101148592
+  https://app.spark.finance/assets/esm-CEDHmkZl.js  sha256=9aa66f039ff6ef70203e20f20b20d92f0ad503b6cb6ba94aea74ef593c756ca5
+  https://app.spark.finance/assets/dist-BV2sA6Ma.js  sha256=85ae049f90df49747f21fdf170ea3c246228482177411a43e3e09585e57f5edd
+  https://app.spark.finance/assets/dist-BdYbHAMk.js  sha256=843661c0c4c5edfa4c0797e26158270fd93b32f27a41ed7b72a5201a75cf43eb
+  https://app.spark.finance/assets/features-DWzLHBCY.js  sha256=5fe7167d842d8e28ead1e7c9d6f5cd72278051d15de84d38772224c3c5f08014
+  https://app.spark.finance/assets/embedded-wallet-Dg14mKBK.js  sha256=308a15ea9b105ad637a99098d747ee8dd68c4cab69414c6b97c0dfbfaa4a40db
+  https://app.spark.finance/assets/email-BQmHoWFh.js  sha256=bdfad4b42f8ce97aa5e1f1d9820441cd4ffbb3c8398eb04a79a86b4f9ceaf7b6
+  https://app.spark.finance/assets/w3m-email-otp-widget-Bt1mFc0H.js  sha256=0effc437dbf30147d1edf5d0896d1669d11bd2961c333b34acfc50411c967d7d
+  https://app.spark.finance/assets/socials-CTA9dUZT.js  sha256=254a66b289f55f2749ed813c171c55a39a973a1bcb423636179e26e3d5a085ad
+  https://app.spark.finance/assets/swaps-CN1M9lFo.js  sha256=80bd59aa76af8f25e28dc09a24e0b05e9fcdab408abb5b5a3c8c738d2aaed491
+  https://app.spark.finance/assets/wui-token-button-DydPxdqO.js  sha256=4f44cbfcf09052f3677e4f0cf2d4f80ec888232d397ccdfcef07e3689bf89625
+  https://app.spark.finance/assets/send-DFmmI3x9.js  sha256=7f2f8f4dba1909e297002d223d2269c8cb8e5c4d96d233fbb8905f57d9a356cd
+  https://app.spark.finance/assets/wui-input-amount-UBaaaWNf.js  sha256=ced7031db4201e149cfc7de584188ab3fde96c8ebc51a519d38d7c9271cc82bb
+  https://app.spark.finance/assets/receive-Bb5O707Z.js  sha256=0dd11351bf4de81d66334cfe2de8058c1fc62789678393ac07cee886b0a6225e
+  https://app.spark.finance/assets/onramp-D6oD4QoY.js  sha256=c61c136295ff4aa01c7ff1780b7215854fdae734199798d685b2b1ab3f7b76f8
+  https://app.spark.finance/assets/wui-image-Dh34z3rS.js  sha256=c082756fa4def43553d0d8a3497be23093a63b2d075a2483e3aa9d9ad250a479
+  https://app.spark.finance/assets/pay-with-exchange-D5uNlCcX.js  sha256=6f38ab4884d62562881c1c4fb72f73ca64762f9390509d274de16cce8aec6cc7
+  https://app.spark.finance/assets/transactions-CbQ1YTJQ.js  sha256=9c8b9b2b844ce7f750d2cfc7edca97ec30b7b2fee4d0e87b57ec78ab1abbb9a7
+  https://app.spark.finance/assets/exports-Db-Bed3Z.js  sha256=b15b608bef5b7c4af94d39894a68005e75a467ae0c3fb4606babea88c1ad19a3
+  https://app.spark.finance/assets/data-capture-C0dK5n2r.js  sha256=1e313e9cd9eaabbfd65a9f399dcbf152382b60a7fe0e672b0e9d3ba4d84e6aa5
+  https://app.spark.finance/assets/w3m-modal-CkCFMJGE.js  sha256=64830788f04ce8278d08377a406ceec537da0ece3d52be3d954705f635ef670d
+  https://app.spark.finance/assets/PhArrowCircleDown-R74s-uN0.js  sha256=b2c5c47717eef55792394e2a3cb4aadeb7ebb17ff367c1cacbcb9e4415116b42
+  https://app.spark.finance/assets/property-B2KNK-b8.js  sha256=271b85cb692de33ae06f7c1f4e367ece032fed5edf11e5556554cefb38adfe12
+  https://app.spark.finance/assets/PhArrowClockwise-BCaFod9X.js  sha256=7d7e64d1e9ef2e4e7079a623c6c7a9668c9932e87282c9261715d793d8fe4044
+  https://app.spark.finance/assets/PhArrowDown-bEQkACVU.js  sha256=fd594c7beb2ebd1dc83448ad8e8d5180babceac44038178bf5d94679adcdf43b
+  https://app.spark.finance/assets/PhArrowLeft-BnWVvAWK.js  sha256=b03bec6db158b29212166fe12f8f092bdd81975586696e0fd4acb12d7816cb66
+  https://app.spark.finance/assets/PhArrowRight-CMkb9LHu.js  sha256=066f6947699124f26d74a0156c88b4229f6ab2adbe574c5147106949ddd03dd4
+  https://app.spark.finance/assets/PhArrowSquareOut-CUvsNIkJ.js  sha256=4d4f0d3c1ec128de95aa91bfeacb90c184277b4ed31bacbe545555ecbb26c410
+  https://app.spark.finance/assets/PhArrowsDownUp-BP1g68yR.js  sha256=7f5e1431a041e750b78bdeff235a2ff6057275fb325394cfc4de31eac96ec882
+  https://app.spark.finance/assets/PhArrowsLeftRight-D37txl08.js  sha256=932fa2aff9c3681eb29e49e910725924f8f53b93946d538e7a266c1ddd60ca6e
+  https://app.spark.finance/assets/PhArrowUp-DdvieBIh.js  sha256=4707d6a292474162333a76fd88d85de32350556a7c0e4daa4db2bdbe87f23aea
+  https://app.spark.finance/assets/PhArrowUpRight-D5iytSif.js  sha256=6b42097feb7c6f362faaaf60f4d31b53fc03928ccac131866053ef1ac6b0bdfc
+  https://app.spark.finance/assets/PhArrowsClockwise-C_5kkrs5.js  sha256=14d07736591255b5bb72abf590432b41cf549ec8fcc9df029f7502854d6b2131
+  https://app.spark.finance/assets/PhBank-RL0ovVvp.js  sha256=2a52e7909bef60007230509926c2db17822f72d1b75f1b8bbd035ce3d28522d6
+  https://app.spark.finance/assets/PhBrowser-BUo3Uzgp.js  sha256=937b0fe82b69d10cae4830025d997f821d52755db7713a34d077f281471aecba
+  https://app.spark.finance/assets/PhCaretDown-C9csxO5V.js  sha256=be8b29d1a31e431ac8e3a31422a2308c896a271b2149f7936eacc74c29f886d3
+  https://app.spark.finance/assets/PhCaretLeft-DDq6ehLk.js  sha256=5ac727f6df3623f3cb0b75784ad3004c48b609cf3a4815e829855e202b14a846
+  https://app.spark.finance/assets/PhCaretRight-zWn2uc4j.js  sha256=74cb0f11b10168439457b8cd18d607caa0176689f44b638859f08c0c0bdd7d78
+  https://app.spark.finance/assets/PhCaretUp-DHSgoinU.js  sha256=7f1f905f217dbba421a462589595f4d3894d7c5629cfa8eebed2158b873773d0
+  https://app.spark.finance/assets/PhCheck-Cu5WubTW.js  sha256=1dce6cb38e522cbb9b999b1a2a47cfeed58e2c2a0b4207af164e9d418394ac0d
+  https://app.spark.finance/assets/PhCircleHalf-DBYQVynL.js  sha256=6e64abc5827c6dcd84debbf8fd3a41d2f125aaecdc67a3ac8f03c46acabecfe2
+  https://app.spark.finance/assets/PhClock-CJC-baH-.js  sha256=05b87750eeb05c683d1e5e2fd921aa3ac0d16a793b0a571a8d7dc4cc5bac3c2d
+  https://app.spark.finance/assets/PhCompass-Dm1-WzXY.js  sha256=696b3e1a1a0fe7bf6b3c5a2689c439e4a81add5ec02eb74c8e1bd0eb65a9b9eb
+  https://app.spark.finance/assets/PhCopy-bOjLJMT2.js  sha256=b622ddc8cd9fbd7422677d290c3849d7b16d01f563f58fdbd9e143cc46681dd4
+  https://app.spark.finance/assets/PhCreditCard-NRYfaoft.js  sha256=d2415fdea816e6bb7d96bad39402f2a7e2929fd87377a86bda6fd7bc2e05a69b
+  https://app.spark.finance/assets/PhCurrencyDollar-DAfWsZHi.js  sha256=5e156a37413d25534f54c1e666dbaebed96b51043e6eec4639b111979ea7135e
+  https://app.spark.finance/assets/PhDesktop-BwTK-7xt.js  sha256=d129a5a1af09e9f4610076452657a4c990db567c25767808e930becd67ca1523
+  https://app.spark.finance/assets/PhDeviceMobile-mAWO-iss.js  sha256=6c4270e3a05f56e1970b7d1ab898c5b0cca81dfb5d93593a9814071adb18b14d
+  https://app.spark.finance/assets/PhDotsThree-BDVK0fTh.js  sha256=ee263faee9dc3c820589d42fa7ad9a361c9911b6835249874998526b8cf9938a
+  https://app.spark.finance/assets/PhVault-BMW-PkWw.js  sha256=0aff38210c9df0170ed6020af557921a66a2ad0407f6301cb98b6e04a3ae175a
+  https://app.spark.finance/assets/PhEnvelope-D15W654G.js  sha256=7fbd9aa3daba46a43e3e381d27a46921487c7cdc00cb540f35a685072af3f015
+  https://app.spark.finance/assets/PhFunnelSimple-C_skKfEn.js  sha256=181c17c5b4757860370628ed1e7f59e1087f6307e26bbdcd62f3aba54020bf33
+  https://app.spark.finance/assets/PhGlobe-D6l47u6T.js  sha256=0116de8efe8bdf53b58f9a4bfd71741e543e27b96262af0d89d8342d0d4d4ef2
+  https://app.spark.finance/assets/PhIdentificationCard-CLq5Cgxx.js  sha256=beb5b4b4904f3f7ff22f6e826e1e15882cf676e6f8289e60ba61986d16cc5cc0
+  https://app.spark.finance/assets/PhImage-DY2KNiYJ.js  sha256=98ede9e777771d7a2afe86889da436b85c8e14a491fa83c47fbe09aac2142a7c
+  https://app.spark.finance/assets/PhInfo-p-iegCJe.js  sha256=c14ff9fc69894bd116bcb7d9efb3b54ff2b844aaf399b42739261775443df20e
+  https://app.spark.finance/assets/PhLightbulb-GP5Uhj0z.js  sha256=9599a55fc6f8e2581ee3d7691e1bf203b7825adeef4be184b95871948e4bf21f
+  https://app.spark.finance/assets/PhMagnifyingGlass-B5HcDQGw.js  sha256=f82fb81a22295326ef67861c87acf8dba4b2db80742d7e0b4b9ee7ad5d0ce4fc
+  https://app.spark.finance/assets/PhPaperPlaneRight-GksOhuh8.js  sha256=d6679e9db533263e6550908fdfe04c67c82a75e1b446cde81f70cead95ee0937
+  https://app.spark.finance/assets/PhPlus-DgWI7oMx.js  sha256=f4ab0e9133ca191633705fde527c726fa949120f636228693ddb5da57aa4da72
+  https://app.spark.finance/assets/PhPower-Dd3dJLA4.js  sha256=c67bc16c41a74a361efbe192fb8dcaccf6865dc3cc07ee5e2dc7de8abaa1a560
+  https://app.spark.finance/assets/PhPuzzlePiece-CmZZ8UX_.js  sha256=867c5c8ed612b6a59e82b7e0fe479587f45ae600f9743fafec0c1ea6ad8e686e
+  https://app.spark.finance/assets/PhQrCode-Bk7Sm76y.js  sha256=4cab7fb052d65d437077f3bf57c87ee596bce4c3d98be38c0ad4b49a5517fef7
+  https://app.spark.finance/assets/PhQuestion-BW80BkVl.js  sha256=64e4f23e3090024005a68b9416516dc28649442a97afe55985231e26cbe004c9
+  https://app.spark.finance/assets/PhQuestionMark-BDny1rqT.js  sha256=cc2a22dc18eedab7543a8da537f25f22cf7d10dde4c5b81d833336eb240e81c7
+  https://app.spark.finance/assets/PhSealCheck-Du7Dq5Hv.js  sha256=f34a767cdb05fadf6a9f9b3bed1e5271a9dc499b18c6f0137b5814f04dbfd23e
+  https://app.spark.finance/assets/PhSignOut-CAOealr2.js  sha256=e1158f0bcc29a47d5bdbad2cab010b6d47eda03655ebfc29a11c6d6114fc0484
+  https://app.spark.finance/assets/PhSpinner-DfgtI5Yc.js  sha256=9306f93c22974213ce9e45a7236deda80eaa2a623affc41847053cb348242710
+  https://app.spark.finance/assets/PhTrash-qUmxuuxm.js  sha256=6abe2b88ff104625b6c453d6417ed2e71b36130a590a3290bf842410c8de3679
+  https://app.spark.finance/assets/PhUser-Cr9kakF9.js  sha256=14be442e334f76f87a127fa3fd89dd3786c005ca88cbae9489d880dafee9f13e
+  https://app.spark.finance/assets/PhWallet-Ch73DE6k.js  sha256=1bef5cd229ddfff113c2af6cd64adec638fe24264954a0156eaceec906a40e33
+  https://app.spark.finance/assets/PhWarning-BR_PgnrJ.js  sha256=b99eee311cae4c093ca4c2a4df7c2cd6b7401d8cd829d98068f2ca5fd7255637
+  https://app.spark.finance/assets/PhWarningCircle-A7DvBRdZ.js  sha256=5ca2191e96194cabb22c8e37a4b9c392b921fba05791ae5d0bccdc786ced4112
+  https://app.spark.finance/assets/PhX-t4Jxz4Xn.js  sha256=0acdb567f3adecf5f982b73f2c9421ec5efcc9fdf2554e91b71fe1dc035aa4f9
 
 signals:
   [strong] geo: geo endpoint — 1 file(s)
-      /assets/index-BoLd_7-U.js: ch IP address`);let{ip:n}=await t.json(),r=await fetch(`${e}/ip/status?ip=${n}`);if(!r.ok)throw Error(`Could not fetch VPN status`);let{countryCode:i,
+      /assets/index-BP2MoS4A.js: ch IP address`);let{ip:n}=await t.json(),r=await fetch(`${e}/ip/status?ip=${n}`);if(!r.ok)throw Error(`Could not fetch VPN status`);let{countryCode:i,
   [strong] geo: block text — 1 file(s)
-      /assets/index-BoLd_7-U.js: I6.Content,{children:[(0,B6.jsx)(I6.Header,{children:` Page not available in your region `}),(0,B6.jsxs)(I6.Description,{children:[`We're sorry but the page is not avai
+      /assets/index-BP2MoS4A.js: p6.Content,{children:[(0,_6.jsx)(p6.Header,{children:` Page not available in your region `}),(0,_6.jsxs)(p6.Description,{children:[`We're sorry but the page is not avai
   [weak] geo: geo-block words — 1 file(s)
-      /assets/index-BoLd_7-U.js: s:gf,token_address:gf,token_price:uv.nullish(),proof:vr(dv),restricted_country_codes:vr(Mn()),amount_normalized:uv}))})),x4e,ED,DD,S4e,OD=e((()=>{Q_(),x4e={4
+      /assets/index-BP2MoS4A.js: s:Qd,token_address:Qd,token_price:L_.nullish(),proof:mr(R_),restricted_country_codes:mr(Nn()),amount_normalized:L_}))})),s3e,c3e,l3e,u3e,FD=e((()=>{w_(),s3e=
   [strong] screening: screening call — 1 file(s)
-      /assets/index-BoLd_7-U.js: n uvn(e,t){if(!t)throw Error(`Missing auth URL`);let n=`${t}/address/status?address=${e}`,r=!0;if(e){let e=await fetch(n);if(e.ok)r=(await e.json()).addres
+      /assets/index-BP2MoS4A.js: n ebn(e,t){if(!t)throw Error(`Missing auth URL`);let n=`${t}/address/status?address=${e}`,r=!0;if(e){let e=await fetch(n);if(e.ok)r=(await e.json()).addres
   [strong] vpn: VPN detection — 1 file(s)
-      /assets/index-BoLd_7-U.js: throw Error(`Could not fetch VPN status`);let{countryCode:i,isConnectedToVpn:a}=xHt.parse(await r.json());return{countryCode:i,isConnectedToVpn:a}}function
+      /assets/index-BP2MoS4A.js: throw Error(`Could not fetch VPN status`);let{countryCode:i,isConnectedToVpn:a}=qWt.parse(await r.json());return{countryCode:i,isConnectedToVpn:a}}function
   [weak] vpn: VPN words — 1 file(s)
-      /assets/index-BoLd_7-U.js: }/ip/status?ip=${n}`);if(!r.ok)throw Error(`Could not fetch VPN status`);let{countryCode:i,isConnectedToVpn:a}=xHt.parse(await r.json());return
+      /assets/index-BP2MoS4A.js: }/ip/status?ip=${n}`);if(!r.ok)throw Error(`Could not fetch VPN status`);let{countryCode:i,isConnectedToVpn:a}=qWt.parse(await r.json());return

@@ -158,6 +158,7 @@ export const en = {
     notFound: 'Interface not found',
     notFoundText: (id: string) => `There is no interface with id “${id}” in the catalog.`,
     back: 'Back to the monitor',
+    loading: 'Loading the record…',
     all: 'All interfaces',
     legacyTitle: 'Legacy version',
     otherVersions: 'Other versions of this protocol',

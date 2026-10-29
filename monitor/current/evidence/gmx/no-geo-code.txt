@@ -1,7 +1,7 @@
 check: gmx/no-geo-code
 about: No geo-IP lookup or country block in the frontend
 source: https://github.com/gmx-io/gmx-interface/tree/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c
-checked_at: 2026-10-11T21:04:41Z
+checked_at: 2026-10-28T22:38:05Z
 fetched: https://codeload.github.com/gmx-io/gmx-interface/tar.gz/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c
 sha256: acf4c536472547a11c96c50c3402aef7b44054cebf3a3816ed1a324665b860f3
 --------------------------------------------------------------------------------

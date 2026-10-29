@@ -1,7 +1,7 @@
 check: compound-v2/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://v2-app.compound.xyz/#terms
-checked_at: 2026-10-11T21:17:09Z
+checked_at: 2026-10-28T22:54:07Z
 fetched: https://raw.githubusercontent.com/compound-finance/palisade/02d5b227029987bf840d095f05885f5cea906fb6/src/elm/Strings/Terms.elm
 sha256: 28196ba2ed817cc7d7ef2fe8f544d1f3f3eaee1f95bdccf43c6cdd0f6eff56bd
 http_status: 200

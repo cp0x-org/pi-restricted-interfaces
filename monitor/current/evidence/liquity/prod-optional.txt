@@ -1,7 +1,7 @@
 check: liquity/prod-optional
 about: Production JS: the optional blocking settings ship unset (BLOCKING_LIST:void 0)
 source: https://liquity.app
-checked_at: 2026-10-11T21:15:37Z
+checked_at: 2026-10-28T22:52:31Z
 http_status: 200
 --------------------------------------------------------------------------------
 scripts:
@@ -28,7 +28,7 @@ scripts:
   https://liquity.app/_next/static/chunks/7608-822d6e323741f461.js  sha256=4754659381d51d334d643ac99655e3a577a578bb3e89d38d5ce5eae6f0070ba4
   https://liquity.app/_next/static/chunks/app/page-f0d9452147156665.js  sha256=caccb7cce14e9c6d55dd184d0cc570e1c05daa68bad1a8ea28b762eadb52a635
   https://liquity.app/_next/static/chunks/polyfills-42372ed130431b0a.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
-  https://cloud.umami.is/script.js  sha256=91a876d767646fd5b7701b6fabf97f8a99ae53b94e7e5b58d465bad1e5d763e0
+  https://cloud.umami.is/script.js  sha256=8104cfafda3cc8286be4f63d6c6e841d163e99bfb8f1eca2f9069fed8814168d
   https://liquity.app/_next/static/chunks/webpack-6e2c2eb14f7a6d68.js  sha256=87997fc69acbb6c19b28c4c005850b5e40a648f061be10ee8e0f08f51017ed18
 
 matches:

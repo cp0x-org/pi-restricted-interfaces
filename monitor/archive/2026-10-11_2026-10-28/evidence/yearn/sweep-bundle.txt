@@ -1,0 +1,25 @@
+check: yearn/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://yearn.fi
+checked_at: 2026-10-11T21:15:17Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://yearn.fi (HTTP 200)
+scripts (14):
+  https://yearn.fi/_next/static/immutable/chunks/0vn_c-qtmgve7.js  sha256=34c29ad6438bf544b8c9e4865d00a95f0851ebb5efba09a4306f4e722683307e
+  https://yearn.fi/_next/static/immutable/chunks/3h5p-q3jqyzb8.js  sha256=86a8a8a8ad546401767cd6011232a2353157dfadf6bc6ff3fe30391a59945f60
+  https://yearn.fi/_next/static/immutable/chunks/12fmbqx9yrtlv.js  sha256=0e62b124e69126246ec9e1603d535a677bb184a2deece23f4341651c26cf28fb
+  https://yearn.fi/_next/static/immutable/chunks/turbopack-2fu739is4uppc.js  sha256=bb72597d0beb90c033a767b91fbe2194a1ebd01d9861f3b422a8516eddd5fe3e
+  https://yearn.fi/_next/static/immutable/chunks/3mp4zpxk_f503.js  sha256=b65654724cdee8c63e01d808d30c13539ddeee5b0cd4ae2e5bbe22b931921dc7
+  https://yearn.fi/_next/static/immutable/chunks/3k2xcmgm4koz-.js  sha256=851ae8f41349df3d6710641428aff1df7f8fdcffae7912d6415532d6f55a7f74
+  https://yearn.fi/_next/static/immutable/chunks/2zdb-2ncl3bl1.js  sha256=40b257fd3979269d4925a9ba7d4c9f92966b36bd1a871a7470bf0b40ca5b1b11
+  https://yearn.fi/_next/static/immutable/chunks/10_yjqipzegf3.js  sha256=2648b62784b0ca9473cd3800936d82ce0b5f0b70adde61cb9578540581e0269d
+  https://yearn.fi/_next/static/immutable/chunks/2hagrmbpf3ubc.js  sha256=48c72f9cfa679891efe0222ddd43aa3809075104f9e926875c693d2bfb5e3078
+  https://yearn.fi/_next/static/immutable/chunks/252lozu7wp9-l.js  sha256=e4a6ccabec16732d0fbd2314db7cc598d70e4bb136275943b6fd1a2db5e9ef79
+  https://yearn.fi/_next/static/immutable/chunks/1d3fay67wu0mx.js  sha256=e743348ede1e8dcf989d3f09ff0569a962d58808832c09b547cb4e124942ed35
+  https://yearn.fi/_next/static/immutable/chunks/2k-8-jmak2-4b.js  sha256=16831e59348b7a36d5cda1a7885b64ebaf203935321a1be4d005f06f94442f72
+  https://yearn.fi/_next/static/immutable/chunks/0c0hxoamwjsbw.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
+  https://yearn.fi/_next/static/immutable/chunks/2zqsbm8s85161.js  sha256=2530de10810d785f883895182c2049e0a16f0d8e2cfcd73cb7b497e71448cae1
+
+signals:

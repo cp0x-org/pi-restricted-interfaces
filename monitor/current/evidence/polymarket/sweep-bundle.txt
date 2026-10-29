@@ -1,119 +1,123 @@
 check: polymarket/sweep-bundle
 about: Production HTML and JavaScript of the official app, searched for access-restriction signals
 source: https://polymarket.com
-checked_at: 2026-10-11T21:11:36Z
+checked_at: 2026-10-28T22:47:33Z
 http_status: 200
 via: proxy US
 --------------------------------------------------------------------------------
 page: https://polymarket.com (HTTP 200)
-scripts (97):
+scripts (101):
   https://polymarket.com/_next/static/immutable/chunks/2irx8-dc66xp9.js  sha256=0d37debb866cacd5b859b0d06f97b060bd87e8845f88c6a72b088d40e72dc6e7
   https://polymarket.com/_next/static/immutable/chunks/22i7s7vd5fqdc.js  sha256=bf4b80b57d2f740ffe8918e8211ca8aca0602581da90604719ce13d3c2bd0a1a
-  https://polymarket.com/_next/static/immutable/chunks/2-irt7hfgokvj.js  sha256=bda308c3d1cab64acea1e93f8337afc2b0e00f76c73b1aa6ad364ba3f979cc5d
-  https://polymarket.com/_next/static/immutable/chunks/turbopack-157tnz22cberu.js  sha256=6af3e9a63af917b07db2f30133285a24c1690072f7a3aa6c30a51752f0b5655e
-  https://polymarket.com/_next/static/immutable/chunks/3qxkdwxwyp2n8.js  sha256=8cd3b42b8162fb2ccc37b40cc6c9adfaec8896cdb4f6d2da581230d0277ac3f1
-  https://polymarket.com/_next/static/immutable/chunks/40sq636unwm7n.js  sha256=ff547f27fab7ff15a01262bd0713ba449c37b751a8f21c3af9d3560da8709257
-  https://polymarket.com/_next/static/immutable/chunks/2j3yyrgt2qqse.js  sha256=3f43bac8d694ab09f645ad3010c659b85cf2158e9981a7b3c7bbdcf89b9ae643
-  https://polymarket.com/_next/static/immutable/chunks/1skhn0b1_a9o1.js  sha256=439ddc99688f3f4b86888fc91bb3b42e57eba324dbe3049310eb5d999ace471a
-  https://polymarket.com/_next/static/immutable/chunks/1i1wpsukgb2e7.js  sha256=ee35480f10507f6ab94b36358210e01c5ed7d3f1d13711c8c25f478d8a72afcf
-  https://polymarket.com/_next/static/immutable/chunks/2pkwvhbih8oip.js  sha256=12da3e31c11e88e2b419c60b6dbae65f712672fd820162ca97060c899013272c
-  https://polymarket.com/_next/static/immutable/chunks/2rtimugq-m5_n.js  sha256=410826c0e114f140551ea52a4c7b5b557007aa978bc9edb827ba4262bdfd4e62
+  https://polymarket.com/_next/static/immutable/chunks/437snqaedacui.js  sha256=73f5508be8185ae566f38665b1a89d07d4ab1f2ac3b0afd1269fd9d9448a681c
+  https://polymarket.com/_next/static/immutable/chunks/turbopack-2a_06icsgph5f.js  sha256=6025d93396675065ccc40f010afd552cb8a1107498a2f019d5a93fbb6affad52
+  https://polymarket.com/_next/static/immutable/chunks/1pvzqcruq6397.js  sha256=7422bc80ef9f200b1e5258caa91cee3312a4fed1ded1a4a06771962d62fb320b
+  https://polymarket.com/_next/static/immutable/chunks/0-tc3rg_t9x9_.js  sha256=08960e481fefea9659bdc88f4ca28034b1af2d7cdcbf1c3e254b7af421652c55
+  https://polymarket.com/_next/static/immutable/chunks/0gj3llwqmsu-9.js  sha256=69e1c08e9872207c8eba5eb98b1989b2c100abae8d6b82237d3ef9f748c62df8
+  https://polymarket.com/_next/static/immutable/chunks/2lp8778j96vbe.js  sha256=84b3bf851beab52d2d47c43b94f49c7e47609d5891889a4653de19f3ee75c570
+  https://polymarket.com/_next/static/immutable/chunks/32rpmdtyeai21.js  sha256=2400d84cedefdca8a99a7938752cf60d64c394e2d5eb881260c10b0b6a59d1bc
+  https://polymarket.com/_next/static/immutable/chunks/00_65rfgr2tw4.js  sha256=690b7ce20e47a66b7df0b27121ccd6eccd7b76934046f87f73643795c40e913d
+  https://polymarket.com/_next/static/immutable/chunks/1fmmyq06i00lf.js  sha256=3c66c59c034f8de411f1697df3471d7096de2b4c4d8aec2590e553ea25604092
+  https://polymarket.com/_next/static/immutable/chunks/1a_j9q0brmf30.js  sha256=9b937aa3d7947aae3bbe6c74c09f4c007f2bc4586c7d1de302d660fd403e54a2
   https://polymarket.com/_next/static/immutable/chunks/3ys2pis8xlg2o.js  sha256=68bb4135eb83cb19d0385d2bc5e764076c641512bc00646982468bbdef00de66
-  https://polymarket.com/_next/static/immutable/chunks/42aqa1apztb4w.js  sha256=9d15bbca5be5d11787f16195377dad242ea77241e53b2447bd2ba4098065eba1
-  https://polymarket.com/_next/static/immutable/chunks/09hec0e4xp2f3.js  sha256=0a9fb0b9c228f0b4f48e188e865fb0a9fad6b212e7ca21a050c76acdca56884b
-  https://polymarket.com/_next/static/immutable/chunks/1zc533xux-7jh.js  sha256=536bc67a37c4223482ae4d83f255817ec61553cc2c1bd6f419889d8f9b091546
-  https://polymarket.com/_next/static/immutable/chunks/1bw86dk136z4w.js  sha256=9003e3bf2ea40d3525f65480b0ed6ec7e768e976c7d5b26b9549597214a3ba62
-  https://polymarket.com/_next/static/immutable/chunks/2-mhi2y4s8myu.js  sha256=3b7303f39fc8d9aeae8979c927ba3d855dc46a56780a0047f6fae023d3a16545
-  https://polymarket.com/_next/static/immutable/chunks/1v-jkqjqw1ujk.js  sha256=5bf4a821fc25f7920292b70bec53a3babf341be33dd23c2fa7c2222e3c1ee74c
-  https://polymarket.com/_next/static/immutable/chunks/2vp9g2ff686e5.js  sha256=15242d4edd3d0b9cc54b753ddbe4176fe62649cecae0f9077f26d8f7de5f04f2
+  https://polymarket.com/_next/static/immutable/chunks/03_gnx06d-fjs.js  sha256=e0e844b04878e8c4d2b71881b71d055efdf2685cf0546ebfbd44ef740b97e426
   https://polymarket.com/_next/static/immutable/chunks/32kpbfcxgotu7.js  sha256=ac2df7a227f69c556d23ba78f6480153c33201062353f78bfdcf7b9df0f81a79
-  https://polymarket.com/_next/static/immutable/chunks/3ppmymth2pv3w.js  sha256=76a181054066277b54d371531b303432651634e1c64656161f2bc9ebf654a50c
-  https://polymarket.com/_next/static/immutable/chunks/21lxs7sc1k1uf.js  sha256=0008eaacb354a13daf5d432e89963b8325b082782b7c6c46250086cf99114d6a
-  https://polymarket.com/_next/static/immutable/chunks/0gwn6zzzccihc.js  sha256=f2e3f1ba4f6deb0cf745ae62b9d4f273fd83773f634706ec0251ff26564383db
-  https://polymarket.com/_next/static/immutable/chunks/1aesdu27a981q.js  sha256=8963c4538c2fb5ffd14142b27b72b8c86a0db6f228215d6ee3afc2da7c225c6f
-  https://polymarket.com/_next/static/immutable/chunks/3t8e--t17c6ov.js  sha256=72606b3482f3f5ed022b465c7237dee874a52cf2bcc512494f89d979439d506a
-  https://polymarket.com/_next/static/immutable/chunks/007fonngao2uk.js  sha256=e9e47d6222a387abf7d4dc036f6ca604b711b3e2f5d977e8dd49e7e68054551c
-  https://polymarket.com/_next/static/immutable/chunks/34kowpy2425eg.js  sha256=597a5ad622fc2b9513319543fcaa18bfe5bb77ffccb30b4a319d1105b2c8ded9
-  https://polymarket.com/_next/static/immutable/chunks/0opnp9-avs1cm.js  sha256=143ed2bfde7159be5e4ccf831e86ebb904f53a581148aa80d71f0dd70a5b689a
-  https://polymarket.com/_next/static/immutable/chunks/3x9ofvi5e2ot8.js  sha256=773703cc844cce3a8d1330364db7d54b8eda0df92fc9b8995f220634b3f78e90
-  https://polymarket.com/_next/static/immutable/chunks/3m3rbtpbvbav0.js  sha256=62db857d2aa36e8da088fc854990aacc46c0fe55ba5529bd101d7a9c67cc1d50
-  https://polymarket.com/_next/static/immutable/chunks/2x9j6b54zsp_t.js  sha256=747dce5c3783a472e55ac96e552b37e33b79f50439ef15fa1f122b01c33b7b58
-  https://polymarket.com/_next/static/immutable/chunks/03w6pfeppj745.js  sha256=e07ec094dda6b6c67bf748803eba70a229543297e7741ff320ea9bcca406d8db
-  https://polymarket.com/_next/static/immutable/chunks/1g7k61d79fh5g.js  sha256=71a7ae136d17ca8a4d567da49832062aa491dd04c8b72c7b207ddadebe045005
-  https://polymarket.com/_next/static/immutable/chunks/04unlffz87122.js  sha256=e8d68ea9ed8a1646983cc94cffa0aa1eb0ce95523c31a7a6c584ab9fcea3e14c
-  https://polymarket.com/_next/static/immutable/chunks/0gndtmouob3cs.js  sha256=29b00deb9508221dc7edaa98e7e947f4d5fcdc04bdead048328513dc23d227da
-  https://polymarket.com/_next/static/immutable/chunks/1y7yzkpdrtqr6.js  sha256=d64260779b95784314cc5eea82dd837cdf0a00aadc9086986414400232a22bd9
-  https://polymarket.com/_next/static/immutable/chunks/42_zygx540e79.js  sha256=17f43c4ab9b0794bf423df455f6a51a2df4a87c0c1cd2871f81635dd488023b8
-  https://polymarket.com/_next/static/immutable/chunks/3e3uogo93m35g.js  sha256=826922c72deb00dc0efb21a56a3bf641a444d4898ccdf6d1b0fe18e5fb731155
-  https://polymarket.com/_next/static/immutable/chunks/25jq68z0mor2m.js  sha256=333b491448f46fac94eb033ea6c3b01e4cdc002e1cee7bd8aa339db929f02058
-  https://polymarket.com/_next/static/immutable/chunks/4169m5e1tr_95.js  sha256=2c528b9fc6a2a093f83bddece5a1b4b4efa8154b5da26e94465ce3a06f3c9cf7
-  https://polymarket.com/_next/static/immutable/chunks/2mzi_j2t_6aj3.js  sha256=6775f846f9a1cab1f26efaf0cb6ae4cefed405e8e3fd0ff18604399acbf2c60b
-  https://polymarket.com/_next/static/immutable/chunks/08bij596qih3c.js  sha256=d97cf262491121b1b16398b3b2edf5ad949d33fb621451c25378732ac61e44ab
-  https://polymarket.com/_next/static/immutable/chunks/3vbwgjw_i283y.js  sha256=f8a9fd075c5d416f540b1ccadb5a4130a560ebcfbef12a40746aa1de222a79c8
-  https://polymarket.com/_next/static/immutable/chunks/2kocjq9bkmjgl.js  sha256=b03ba0d434e80bde1d5640a42cc8c6c3aa9fb3201119048b52dcf0df8447fc56
-  https://polymarket.com/_next/static/immutable/chunks/2j2ajwyra388v.js  sha256=689e84fc3038a2a9e67bf94b140764a1dbe1eab800a9900d7b404a963be87858
-  https://polymarket.com/_next/static/immutable/chunks/3wkgsy0zqgdsi.js  sha256=f51df0e9f54423bc29aa09de150b4916c9a409c636757aca4d247980b8429961
-  https://polymarket.com/_next/static/immutable/chunks/2sx-puju_sk2p.js  sha256=de131f2534b6a63cd3c09ccc2194bade04ab63dfa7bec2c0149dbc89ca5916b5
-  https://polymarket.com/_next/static/immutable/chunks/3dcqz4io8v2x8.js  sha256=babfc6edd40d9b18b501167ab78b37d3ab0864536b0d5c5d6eebd439792d0f26
-  https://polymarket.com/_next/static/immutable/chunks/0k-3_1gj7sufn.js  sha256=87654b048a89afd5bff53b663a6ce69ac820be16694dd581820190ac754136a8
-  https://polymarket.com/_next/static/immutable/chunks/32_pzcg12sl6u.js  sha256=049d8f60d672bc150ff852bf276a94ce710993d8f12d8ec62b147947341629e9
-  https://polymarket.com/_next/static/immutable/chunks/3zzet5aqha5a-.js  sha256=af4cafd24b0b51847fbf0e27118ce79fcac53acf37b06af705a41f7ec8ca70ea
+  https://polymarket.com/_next/static/immutable/chunks/0op-q6-1ko0fa.js  sha256=76483bb52e05a021e1c2fe3ced3f265259684b3fd7310f77487c2a757cad4b45
+  https://polymarket.com/_next/static/immutable/chunks/2rtsiq5zeqk0i.js  sha256=6834e5e17ae7d114797268229d5c9c7fce364074a04926be41f0ebb6731ef13e
+  https://polymarket.com/_next/static/immutable/chunks/0xgv28k013m_b.js  sha256=f724f2923f5a47cf1217a1238fc1bf27bc42c2f34f417dc874b4e7d12981a686
+  https://polymarket.com/_next/static/immutable/chunks/3kz42budayhdm.js  sha256=852c7c508c96284a9950ce45482c7e1a49bfd0567942945bb9ead7bf4767ea47
+  https://polymarket.com/_next/static/immutable/chunks/3om7z4-2a5d_l.js  sha256=e475d25f5ab4b141d5342eaed807a2ae05d54e9180b4b72d76ed2909fbc675c2
+  https://polymarket.com/_next/static/immutable/chunks/00dkbj4hqz0pw.js  sha256=a4af99e3bbcfcca24f1143a54acf0d2893a02092a6692a9a27edb66d34ce64f5
+  https://polymarket.com/_next/static/immutable/chunks/2jpzf61xjijct.js  sha256=8ec5a844103635f9960a6ee1e212653d39c1f479de3e7770e68946ae28799c75
+  https://polymarket.com/_next/static/immutable/chunks/0dqaggbjtwnwn.js  sha256=40b89b27e33bd13a8b8feb339464b638ed6b7e8dc7e810f828fa2d69d8d7c252
+  https://polymarket.com/_next/static/immutable/chunks/0-d294qxwjz61.js  sha256=874a7f27f85a25db17f120b0329649ba1b148411e700830510a139aff4d547b7
+  https://polymarket.com/_next/static/immutable/chunks/09hec0e4xp2f3.js  sha256=0a9fb0b9c228f0b4f48e188e865fb0a9fad6b212e7ca21a050c76acdca56884b
+  https://polymarket.com/_next/static/immutable/chunks/0um7luv9zh5f1.js  sha256=670398b9e1083dec1f8ce8df02d2f8ef43751d168c1dc3eb3ed7ba77b23b5916
+  https://polymarket.com/_next/static/immutable/chunks/015e_34whml6g.js  sha256=8f539a4bf0ec789dd6c9acde47fb23462386cdf81fec5267721f18075e5f0ca8
+  https://polymarket.com/_next/static/immutable/chunks/06y27bn6h3j9t.js  sha256=1e8666b004b8e19b476d885278e7a6ec365adf6f492c0643d962584711c0422a
+  https://polymarket.com/_next/static/immutable/chunks/1pnu44vuyy_r9.js  sha256=446d2db0d554ca33c374c8b9ad84009275555edfce8025c6462a3cf8ee0b46d8
+  https://polymarket.com/_next/static/immutable/chunks/1jxm5qdy5gviq.js  sha256=7798a6f2fc4427eb2a261a09d0097c2b558c4538e0c22ed5beceb705beae32a6
+  https://polymarket.com/_next/static/immutable/chunks/1p2nw4a_2f-5_.js  sha256=2a04173587499c5f85fb71e1261dbdf04d5e9d800b4149530c7d1b1bdb2f9ecd
+  https://polymarket.com/_next/static/immutable/chunks/2csldevci8_fv.js  sha256=40e08bdf987f34972a8949f1e872dad1563ee42d1eaa4bbf65a502717df64fcc
+  https://polymarket.com/_next/static/immutable/chunks/09stqyqsjmfiy.js  sha256=3d8fc804906f32113e4dcb3585f2f6839dc9585de23f64c8e2067097ccb5c6e2
+  https://polymarket.com/_next/static/immutable/chunks/3n9wjon04ct13.js  sha256=8fb1d24ad1de9e4ca5b3bd71f737715ee4179bed8c1ff0842ebed170e83273e1
+  https://polymarket.com/_next/static/immutable/chunks/1h2adedq8bc0p.js  sha256=862e0fad34ad34fad7bd618a243e92132d3c9db6cd63b701eb3ecf1b2d9a5cb6
+  https://polymarket.com/_next/static/immutable/chunks/2-nlomr7bbgbl.js  sha256=0125018439b7fd97be7567e53daff996f6149cac870547925851794fbe8be564
+  https://polymarket.com/_next/static/immutable/chunks/3jneg4llru39c.js  sha256=a3000395fe3fbbc3ccf208776b307266f76d5785d01e2f82c1bade21edd1bcaf
   https://polymarket.com/_next/static/immutable/chunks/345fmv4qcfldv.js  sha256=cca99624bc35324a0290e6444c9221c5c80e623cd9008fd78419a9ebc24430bc
-  https://polymarket.com/_next/static/immutable/chunks/0c4n810-47yae.js  sha256=65fe6400b005e3a3b32054c8a87cf83d3529e0d7fb13b2305a39e1227820614e
-  https://polymarket.com/_next/static/immutable/chunks/09nqjltmqnlpw.js  sha256=72634512c45ce8b06ae49079e8c87ce8c7d5971eef923814e24d75bfa957cbd2
-  https://polymarket.com/_next/static/immutable/chunks/3a98fsmqm4k62.js  sha256=2fab401c468a2080f467b17726e68dd3c011ba8e01d662ba61454833c8f8fcdd
-  https://polymarket.com/_next/static/immutable/chunks/3ivap2s233vr-.js  sha256=69f222e95560170c872cf00db0ff1a5cf07f39c06b464fd3449e784c96096e29
-  https://polymarket.com/_next/static/immutable/chunks/18k2qs59a3g4p.js  sha256=977f300aa52d90bd48802e3d9ba66c9ee3f5e9148301f66ee76b01ac3a045bc6
-  https://polymarket.com/_next/static/immutable/chunks/0umdgfbl7c6e9.js  sha256=2d79470c4c91b04880171977bac8503f48068e7dca766bb197d1e42eceeaf4cc
-  https://polymarket.com/_next/static/immutable/chunks/0akycvngsrn0_.js  sha256=5b3ccb3f5a91d90867841a717dd3d8f2ca301f684b094ad88713855178c66762
-  https://polymarket.com/_next/static/immutable/chunks/3ln5fmzs9cdgl.js  sha256=c9fc7806b946d20b1b9b55fdbd6f556b1dd1c1e9f48119d442507f45d31c5edf
-  https://polymarket.com/_next/static/immutable/chunks/1p22osl0qqm-7.js  sha256=12460b404147c43a169acb5a190faed695c6b0c1bb3b6032d24e9f58f6efd7a7
-  https://polymarket.com/_next/static/immutable/chunks/07mqc_h_3ayst.js  sha256=1a818b5cdea8a0f9d1cbffef2e5d76323fbc989bb819ada4fa7f356d9a17c4de
-  https://polymarket.com/_next/static/immutable/chunks/0ddgzxtvyg51e.js  sha256=b7d3bf7b83823ff397956ab48d1968bdf00d66f4a53d046143e53f14fc1d5f85
-  https://polymarket.com/_next/static/immutable/chunks/1jd_q35oi_g7p.js  sha256=bdca377e56cce4639c757bcfb7cd47079bbe4955408c6a0d2ebaeb246d759227
-  https://polymarket.com/_next/static/immutable/chunks/0ddm-bf9_5gph.js  sha256=68235b7c6a327d6815fd56a10e9dc5ed24150c8402a4aab51f0e04a8316b994a
-  https://polymarket.com/_next/static/immutable/chunks/129vy1sxoqtkm.js  sha256=509c191ddbf2709f0a424350c824c6dd434ea29f9e607aaee9b63983d407a510
-  https://polymarket.com/_next/static/immutable/chunks/1l7z2zn1jldwl.js  sha256=31ef59b0b0b9cc13118a95285ec661e5bb1f81d208330bd5a3a49adc28ce25d6
-  https://polymarket.com/_next/static/immutable/chunks/20wqol-qrbtx7.js  sha256=422d267598edf71f4def100700131a03c41653341fd82bdf3619085ed9e4706e
-  https://polymarket.com/_next/static/immutable/chunks/0g66gwjzrec52.js  sha256=cd6e4036b10cd06e2640add7d5d36fe13978d7a7b813bc0ec4bc401b3b59881f
-  https://polymarket.com/_next/static/immutable/chunks/04gv8msv20cps.js  sha256=5d72faa85fb024d295e71c6201d42486732211b71bb937126d6d76fa1a41262a
-  https://polymarket.com/_next/static/immutable/chunks/2xh9ri6f-nur1.js  sha256=74507d7fd83490289c3ebe23a8f8d1559ef4ad260633a2c2620b144661224c27
-  https://polymarket.com/_next/static/immutable/chunks/03z8iho0fusgy.js  sha256=fb732b21debbe6d9a7049be3ce5cccfb4e83fe0b4cb77aa394df09c810954c3b
-  https://polymarket.com/_next/static/immutable/chunks/1eskryh1z_q_e.js  sha256=1c6e13009177533cfcd8f6a333cb3e78f60599be4dae2b70499551228329c682
+  https://polymarket.com/_next/static/immutable/chunks/39wr5y41v5yt1.js  sha256=ba434eca2c25b5e96029a8d92fdbe78df7fd1c6ce1851b8d45aa5791aefd7f23
+  https://polymarket.com/_next/static/immutable/chunks/37p1reizba15i.js  sha256=e0295c97cee1252e62cd89267173b3aef313e4a95cf4a7c08e57b4c0d0be4ac3
+  https://polymarket.com/_next/static/immutable/chunks/1yiq4xe_so26j.js  sha256=0fbfee4dc7a73bb7365f0ec83435705024fd85cf6c278fbb26a4ae37b6cd3c86
+  https://polymarket.com/_next/static/immutable/chunks/123ern1zsikra.js  sha256=b40123db4ef4c7defdd6918a4e010427d42e889d6787d6066ec5c478a1874c46
+  https://polymarket.com/_next/static/immutable/chunks/4169m5e1tr_95.js  sha256=2c528b9fc6a2a093f83bddece5a1b4b4efa8154b5da26e94465ce3a06f3c9cf7
+  https://polymarket.com/_next/static/immutable/chunks/1otwhrhc5b3r9.js  sha256=6e243d42dc380ce877335e7d9d419f4a6d65e1315998c0f9ac298373784bad60
+  https://polymarket.com/_next/static/immutable/chunks/3bl45m1itc2b7.js  sha256=862980e296f5939f9646c18cadb704edaf50aa7888dee0592f7dbceda84c87ad
+  https://polymarket.com/_next/static/immutable/chunks/2kebnbwue623q.js  sha256=e1e12ffd1180918b2e9ca9d11c4332cada0e6e0295a26484bc23f865152b5ca3
+  https://polymarket.com/_next/static/immutable/chunks/2mcihklf2kdo-.js  sha256=c39e0d792bf2de519e41070d9989f1d94a41784154ab26084816737dd7532182
+  https://polymarket.com/_next/static/immutable/chunks/0opnp9-avs1cm.js  sha256=143ed2bfde7159be5e4ccf831e86ebb904f53a581148aa80d71f0dd70a5b689a
+  https://polymarket.com/_next/static/immutable/chunks/3fghtblsy86w3.js  sha256=1cc83cb940b5685572226692c4d7e3cc68c550a2cec0c27b51ab4e015f8b6e50
+  https://polymarket.com/_next/static/immutable/chunks/32_pzcg12sl6u.js  sha256=049d8f60d672bc150ff852bf276a94ce710993d8f12d8ec62b147947341629e9
+  https://polymarket.com/_next/static/immutable/chunks/1h6pe29zqohmr.js  sha256=a0e6eb43400762dad07ca4b56ea69dd87e23f86aef51f2d95720efa5d3aec7dc
+  https://polymarket.com/_next/static/immutable/chunks/07ihc-xmcieto.js  sha256=47ac31d4571e7002117106f4ca32af4077811b3a29b7198a732f37c2534d418a
+  https://polymarket.com/_next/static/immutable/chunks/103argkv6dmed.js  sha256=29419c6ee1514e5de7475885c1b3b06a4f157f186fc4d8731090cee8e412b758
+  https://polymarket.com/_next/static/immutable/chunks/13lr466pachn3.js  sha256=e7d2c1ca3958ce0bbd9cf7277d929a5df4d1b7ec2d93d2fe346c8e47a01b8812
+  https://polymarket.com/_next/static/immutable/chunks/2rxcy6n95d5fx.js  sha256=9ed63264ef1113282756adaf0d12a761cc5623560c27528ce53c4227dada9a6e
+  https://polymarket.com/_next/static/immutable/chunks/0vys5q1nzqyfq.js  sha256=3aec416295fdb2110eb71c6dee6bde7cb923a32e01a60fb80668d5191fd6ca31
+  https://polymarket.com/_next/static/immutable/chunks/0y1ivk7ppce32.js  sha256=7de09cb3504d29fe07100c53a9f016e67b6947ac595621c4adf0f4aae87fd847
+  https://polymarket.com/_next/static/immutable/chunks/0zabnm8dz_bx0.js  sha256=28824c7091af14f134101c53ec3911fff925e5a87d139951a730adb31d1f4f83
+  https://polymarket.com/_next/static/immutable/chunks/43_9d97-w93lf.js  sha256=12f7d5a2b1ae642a1959fb126e85cfcb8917896df08d52a92010abd30effc2fe
+  https://polymarket.com/_next/static/immutable/chunks/2by80l70ofym1.js  sha256=32d8b7af0d6ffe2b0b42a8067e1e72860ffd21c3169ce1e5e587485af0546452
+  https://polymarket.com/_next/static/immutable/chunks/26lh3bigjrv4t.js  sha256=95c056b14b04bea1c1b490dffa67001c4b70d333b5ef2c109452ef7d826d0b58
+  https://polymarket.com/_next/static/immutable/chunks/2g83k1tla65pk.js  sha256=9afa24fad01766a65ea45613ed83044e2e08f6465242c3e67ee58cc9c7c5b034
+  https://polymarket.com/_next/static/immutable/chunks/42ddbyha7fz56.js  sha256=6a25e599cc08a8466402411a6eb714f47045b079cb93ac4b905854e18b4580da
+  https://polymarket.com/_next/static/immutable/chunks/1rbb94st10ao3.js  sha256=3cf40880b8d4f360864ec79675d0c10ec21fa25aac1e47a24cf22c7470aafc29
+  https://polymarket.com/_next/static/immutable/chunks/2ap_hcq59trp_.js  sha256=0d34ecfb9076f48621e1d9420052eedc8125aca25973a896d221c47fbca1165a
+  https://polymarket.com/_next/static/immutable/chunks/3dr6g3h5htexg.js  sha256=125d463a2c3d3ca1355a3623662b17b8a7050ecdbc1fe9d48201d281372e1e23
+  https://polymarket.com/_next/static/immutable/chunks/3lcu4b74cyiel.js  sha256=4e7510077de0aa8fe92f970a918f4117de65010f4bd77718dbbe23314882d136
+  https://polymarket.com/_next/static/immutable/chunks/161k9k5xl4rn7.js  sha256=3b95fed9d80b76a9956c050551df618b88ccf9ce6b21481918cd268b417caab9
+  https://polymarket.com/_next/static/immutable/chunks/0ee9vzrv73s-7.js  sha256=3d5be1a0d672a7288876336ea20541bc1b4f32a255f6e3439dbb17967150aec1
+  https://polymarket.com/_next/static/immutable/chunks/1y9oqkj_91vso.js  sha256=9ad8bea9582d5e24dfa919622322b3bfbc694e400b5c0915a37fc34a9dad4cb9
+  https://polymarket.com/_next/static/immutable/chunks/1w6em5te3ow0q.js  sha256=d7b10862352b82b586c65107a69deba857cdfa789e83b6f8b20e1c8e79a3494b
+  https://polymarket.com/_next/static/immutable/chunks/0_8t3613xjc9n.js  sha256=d4bd869b0216385825e7ff7104f87e8eabf39ba90836549c00f8b96c8deae6bb
+  https://polymarket.com/_next/static/immutable/chunks/32e_sfr2zt0fs.js  sha256=fc9b93c918a9345a2ef6e95c61e8c3f6eaec88e7cfe017cd8b1212e2abe1ae17
+  https://polymarket.com/_next/static/immutable/chunks/383b1w8uattty.js  sha256=687e7dc7d454edd01c59df6911f30ac39fc57e0425ad0971aa4b7ac8c4e61208
+  https://polymarket.com/_next/static/immutable/chunks/0lbrr5p5tndy7.js  sha256=48ba572e7ff9c6a1906812aa165de32918326f896dbbbf463639b489d40cc6f6
+  https://polymarket.com/_next/static/immutable/chunks/0rmzumqwenut3.js  sha256=4d4441473aeaee5c9d1f3681a6457e974cc8f30d10159e147da1e52b0d0105ad
+  https://polymarket.com/_next/static/immutable/chunks/2vuooy-8e8ydb.js  sha256=753851eb90ea1d1eadd9099b9c0b24c59299246077953289b06b3873ec47c418
+  https://polymarket.com/_next/static/immutable/chunks/34yvgjrlvawd3.js  sha256=dc866a6ce2b5ed9694133feb02ed95af358ddf97b21c9817a2a21065f3a315d5
   https://polymarket.com/_next/static/immutable/chunks/24mpi023ipeba.js  sha256=6c26356875dbf7112b06d2f83ec57b0bb4b0e25536fc8c3d13f56c1bc8a8126a
-  https://polymarket.com/_next/static/immutable/chunks/0ctukz6y3plhj.js  sha256=042dc80fa3830b7a3da0d6044b1a89a280a4ad4c8ea1ef9db8a8d6698f0f8587
-  https://polymarket.com/_next/static/immutable/chunks/3um1bvmap9_o_.js  sha256=db086ecffa94658f73a50934b20dbe271d8edb1e1b9922a532f0433cf96d2b43
-  https://polymarket.com/_next/static/immutable/chunks/00igzg0v-gixl.js  sha256=cbb832cbc8badc90cd2d41b566ec311090721fe7b82f16ceb18150f86e97c497
-  https://polymarket.com/_next/static/immutable/chunks/2_zulwttebkjs.js  sha256=ff956b179ad028d554cd8f3dce61454d44536b442c0493fa4defc8042ace73b8
-  https://polymarket.com/_next/static/immutable/chunks/0x-10mxse548r.js  sha256=2af0abe37fd456d7aaf4d58aec12977a53814189cbf407099a47deff6dcad30f
-  https://polymarket.com/_next/static/immutable/chunks/2-b0t38yoo1cl.js  sha256=743eabce929eb2be68df53c1b5222904ff12c7ba1f2fea70e08f28637832de23
-  https://polymarket.com/_next/static/immutable/chunks/27qu7qjdnlmmn.js  sha256=bca9f110854f8d5eb5032b7293d450d68214197d0aecc6b91dd6618243be0886
-  https://polymarket.com/_next/static/immutable/chunks/1grf93fe18pvm.js  sha256=01491447304636f2ad26a0b06eab308c83212172eb8e018aa152622cdb63248b
-  https://polymarket.com/_next/static/immutable/chunks/3f2bjaa7rl1g2.js  sha256=f6bcf4d9a0b7509e2925a53bafb25468a678f4a57adba6fa8346d572db77c02a
-  https://polymarket.com/_next/static/immutable/chunks/1hxqvttk_6eue.js  sha256=8c296a682740ad6e4f0e80ea1f25623ddbc5368b5988fc151ac29d72b0c02de2
-  https://polymarket.com/_next/static/immutable/chunks/3lh9gcyo8_vtu.js  sha256=f86b3860d93fa57aa1129e0142a84fdd51c35febcc4e441d8063b46886626f92
-  https://polymarket.com/_next/static/immutable/chunks/19ixii2-w_e5g.js  sha256=524b5239ec352dc0f5c3ad360d84ae2cf7952bb705e071088ad94f7432d3cfe1
-  https://polymarket.com/_next/static/immutable/chunks/1xe6jakkjdwc8.js  sha256=78e36cca8d0670789ee00f26a3d5fb2b1bb04d474ba4184ef7435938eb83b743
-  https://polymarket.com/_next/static/immutable/chunks/4261ftatvs__b.js  sha256=6a8d3ae76b01b1d5913f221e0d701c7be9fcee4607051e058eab15510f062120
-  https://polymarket.com/_next/static/immutable/chunks/15b8byvalfe_l.js  sha256=8272b9c81f7e7629253c9aa8ae41ef0d4e2ba7576dde71ed8463aa322a0c8985
+  https://polymarket.com/_next/static/immutable/chunks/0-p2px7g-fik4.js  sha256=c2ca59ebf4ab1cde2f17c0bc34e5f9a33a416c49b735574b8630af8335ecdfb0
+  https://polymarket.com/_next/static/immutable/chunks/2hii5jccsdk2y.js  sha256=0b1689493c66ed77132a9525fe5df0fef1d754f72710906d9425d5540e482023
+  https://polymarket.com/_next/static/immutable/chunks/1qxmm6ijoxy4i.js  sha256=0e37e906f86c7358c83dc64f7528d1df87711d61374892fb747a55b9b4391130
+  https://polymarket.com/_next/static/immutable/chunks/1k8s0gml70q9g.js  sha256=214f48fa4bd29f3f46fc3e980591f45dc6ffa32cc1f35556086ed063e6d59e68
+  https://polymarket.com/_next/static/immutable/chunks/21-2ib6rx54kl.js  sha256=80ac70c11f246ef3e2df66ddedac6f68a5c26a5096cebda070bbd14519c0637d
+  https://polymarket.com/_next/static/immutable/chunks/1cqbo79ueamxn.js  sha256=b03023ab19bb36ef882ebe2c986e9ae3109615c625851f402934127666e75787
+  https://polymarket.com/_next/static/immutable/chunks/01hq4g7tawlwy.js  sha256=1216f9a7f3510d848864b25a491aff27b73d3d5f6ece58e9c79b22e58c53ac1e
+  https://polymarket.com/_next/static/immutable/chunks/0daujl03c942g.js  sha256=b220558689f338a25d90e261bd64a75eccd6e2805153539cadb59be18ff5bbbb
+  https://polymarket.com/_next/static/immutable/chunks/0nrkwb5ij15-r.js  sha256=687f4b4566aa31bd6e2d70e1400c79dac791999913647e02c37fe270d873b7b5
+  https://polymarket.com/_next/static/immutable/chunks/1su_g7v7nopgz.js  sha256=6c2130b652dc6e6043839c036cbf9378d1cf68199993b6f8946e759f86941f5d
   https://polymarket.com/_next/static/immutable/chunks/1_pn0ct5nxt1e.js  sha256=6063b19d851143a7ce78bf28bc02773d238e0e93eedf7cf6cc81f4da45795d6f
-  https://polymarket.com/_next/static/immutable/chunks/01tb-8222vf_-.js  sha256=490c19e4f56c12e55a8c398f26d55d0dbe737701a907eb18b550f9c2cc45bb62
-  https://polymarket.com/_next/static/immutable/chunks/06pkhirzt5wgb.js  sha256=d9b63423a2572b7ec9c8397f932b21c0196f2f89e055cf3c6969eca45022d723
+  https://polymarket.com/_next/static/immutable/chunks/3f2bjaa7rl1g2.js  sha256=f6bcf4d9a0b7509e2925a53bafb25468a678f4a57adba6fa8346d572db77c02a
+  https://polymarket.com/_next/static/immutable/chunks/3vjagdwrtzk21.js  sha256=482348a3b79495ab6d76fa382013f98a2b90c5a058384090cc230b39814190f6
+  https://polymarket.com/_next/static/immutable/chunks/2739db_ad1gr_.js  sha256=1962d42efc3b8cde41dd510b6a03201b1522d8deb7e7eadd006d3fbc21364706
+  https://polymarket.com/_next/static/immutable/chunks/0k61ip11zp6ov.js  sha256=0c4c9daf7dc0d053eff6abea880a961b14529c582410b36526402290bdb4eed6
+  https://polymarket.com/_next/static/immutable/chunks/0ay2n5zllkx8m.js  sha256=87b8cbf3400120e383de981542251b61e8ea34e6d121aa2afe8e1335017c6277
+  https://polymarket.com/_next/static/immutable/chunks/09hkduiduf65m.js  sha256=2762d14a855534702a528ccdc820b14652f043b1116f252527234ccb08f794b7
+  https://polymarket.com/_next/static/immutable/chunks/1-p7ngl4kju71.js  sha256=396a64815c0b179e65ac1fd2eae77faef0adf1092ec69e3ea0a373fb9e485239
+  https://polymarket.com/_next/static/immutable/chunks/0-f0t-rlklsz0.js  sha256=78aa021d5be19a2361c821a13da89efd40c0a0be011350bd01f696ac9548d1d7
   https://polymarket.com/_next/static/immutable/chunks/0c0hxoamwjsbw.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
-  https://polymarket.com/_next/static/immutable/chunks/2tj0rvwgl7h5b.js  sha256=aed9a57aa3b6a4a013ad0f433b6d09a1889a6939645cea53a053367d8fa9a3ef
-  https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920  sha256=3e5bc7ca508f5d5aa7255341243840c8d2b70c8aea323800b51610df3f5a8a2c
-  https://polymarket.com/_next/static/immutable/chunks/2hkvw861k-qkk.js  sha256=e78e2e25ff0407fbe3327b5a854b67f97f961b72358b826bb940001555509084
-  https://polymarket.com/_next/static/immutable/chunks/1y-hadaj9ypk1.js  sha256=61e1b7d4a8d7ece399e372d0d43aacf0dcf9ba5d39ac0b5e9033c227b4745450
+  https://polymarket.com/_next/static/immutable/chunks/31sgh6lgxpj6j.js  sha256=2a153996a803ee5fc5322f835143abf6bccd45354edb88d1b6a58617725a2a6d
+  https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092  sha256=637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e
 
 signals:
   [strong] geo: geo endpoint — 1 file(s)
-      /_next/static/immutable/chunks/07mqc_h_3ayst.js: ){try{let e=await (0,iv.retryWithBackoff)(()=>ip.axios.get("/api/geo").then(({data:e})=>(0,ih.convertGeoApiResponseToGeo)(e)))();ib.logger.debug("[G
+      /_next/static/immutable/chunks/2kebnbwue623q.js: ){try{let e=await (0,ax.retryWithBackoff)(()=>ap.axios.get("/api/geo").then(({data:e})=>(0,ah.convertGeoApiResponseToGeo)(e)))();av.logger.debug("[G
   [strong] geo: block text — 1 file(s)
       / (HTML and inline scripts): Restrictions\":{\"tradingUnavailableInRegion\":\"Trading is not available in your region.\",\"depositingUnavailableInRegion\":\"Depositing is not available in your regi
   [weak] geo: geo-block words — 13 file(s)
       / (HTML and inline scripts): ['data-theme'],});}catch(e){}}();</script><script id="pm-us-geoblock-prepaint">!function(){try{if(/googlebot|adsbot|bingbot|duckduckbot|baiduspider|
-      /_next/static/immutable/chunks/40sq636unwm7n.js: .2,"GAMMA_API_URL",0,"https://gamma-api.polymarket.com","IS_GEOBLOCKING_ACTIVE",0,!0,"LIVE_DATA_WEBSOCKET_URL",0,h,"MAGIC_KEY",0,s,"MATIC_CONFIG",0,
-      /_next/static/immutable/chunks/1aesdu27a981q.js: .2,"GAMMA_API_URL",0,"https://gamma-api.polymarket.com","IS_GEOBLOCKING_ACTIVE",0,!0,"LIVE_DATA_WEBSOCKET_URL",0,C,"MAGIC_KEY",0,i,"MATIC_CONFIG",0,
+      /_next/static/immutable/chunks/0-tc3rg_t9x9_.js: ,0,A,"DEFI_GATEWAY_URL",0,_,"DUST_DISPLAY_FACTOR",0,1.2,"IS_GEOBLOCKING_ACTIVE",0,!0,"LIVE_DATA_WEBSOCKET_URL",0,R,"MAGIC_KEY",0,s,"MATIC_CONFIG",0,
+      /_next/static/immutable/chunks/2jpzf61xjijct.js: ,canCreateApiKey:!0,canApprove:!0,canCancelOrders:!0};e.s(["GEOBLOCKED_COUNTRIES",0,[{code:"AR",name:"Argentina"},{code:"AU",name:"Australia"},{code
   [weak] screening: screening words — 1 file(s)
       / (HTML and inline scripts): n.\",\"restrictedJurisdictions\":\"The US, Ontario, GB, and OFAC sanctioned territories are restricted jurisdictions.\",\"restrictedRegionsDocsL
   [weak] vpn: VPN words — 1 file(s)

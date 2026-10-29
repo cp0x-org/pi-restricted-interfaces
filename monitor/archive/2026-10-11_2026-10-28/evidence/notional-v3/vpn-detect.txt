@@ -1,0 +1,119 @@
+check: notional-v3/vpn-detect
+about: detect.notional.finance: a non-200 answer marks the visitor as 'VPN'
+source: https://v3.notional.finance
+checked_at: 2026-10-11T21:15:43Z
+http_status: 200
+--------------------------------------------------------------------------------
+scripts:
+  https://v3.notional.finance/runtime.66cb622986fd1db0.js  sha256=363743f895c1056c3c9df3f876bcbfd24d5de34019b47a8f9f7c02293f98a539
+  https://v3.notional.finance/polyfills.2bafc8ba2a152c05.js  sha256=2ba463041afdc47fec4cff9d7fa7ef92c588bd10cf88ef0dbb9d2a5f8d1806fc
+  https://v3.notional.finance/main.00a437cad7319876.js  sha256=f7cd9166a2154ed157d502628171ed53e1e4041ee8fdd53b14baba0b4b79d727
+  https://v3.notional.finance/auto-track.7899f763ffd42fa3.js  sha256=12df92336cebc0c971b7a1bf3e166ad8ca753c27ac6b982b85ee095c18e4202f
+  https://v3.notional.finance/328.8496f95ee5fbc27b.js  sha256=9306ff1be5af03db4a3cbd79fbaf6a97af8289c2f0dce1656fc3c0a4ae7357a1
+  https://v3.notional.finance/349.c4cf1ff4ebf26fef.js  sha256=76031bc3c884e9414e3d5eb77c5f5fd793bde8871339a211e3ac7df7c22b2662
+  https://v3.notional.finance/379.64fa6ecdfa627829.js  sha256=1b4ab37b7beff149bf908715c1a56cb6118703b04ac27f66de46131d7b15cd21
+  https://v3.notional.finance/469.2b228cdd4262a38e.js  sha256=33f85e371e5c1d16dcdeb3ada5260fd3bbbbe32e17f9d20e56f3e1cc47baf19f
+  https://v3.notional.finance/remoteMiddleware.c28175c3c9f93876.js  sha256=43baa189c5b88c37e5c27c321488eab8811ee5e2c2c966ee45efab04362588ce
+  https://v3.notional.finance/698.b7933ac72298a37b.js  sha256=70a779db0e518c84d4bae98b3a36237e57519a7e64cfb276e2d5aaee142bf388
+  https://v3.notional.finance/824.b8b44d5dbf900a47.js  sha256=148900e9a8e86936d85ee95df5f1d6eef5b8adb33e51601d22a9373df650eb8c
+  https://v3.notional.finance/920.0a6537ad91804038.js  sha256=4e7d14fa8b2c2b30b4c5864185cf0ee47a2b0d061d599bc8587248caf74e4b65
+  https://v3.notional.finance/1019.19a17f47d8792ed3.js  sha256=79ddf5796847e86ff05f1532c800fb44a8a96be6f872eb157ebf03073b7578ab
+  https://v3.notional.finance/1231.06e617966497fe8f.js  sha256=68f06466988ad1ec7348dfb1cf610cb561c1a7c1a7d7e814caa30248ac02fbdd
+  https://v3.notional.finance/1249.c0d3c60c64d58feb.js  sha256=ea3479aa317ae395eb02287f9c172d7e7de4c080696add5ed0ff68b860e9cba5
+  https://v3.notional.finance/1267.e54bf754d9c32715.js  sha256=af1ec5d9f7c333b55c5f8cf5ad8e65480c47e0c135f9390215b56c89b6f33332
+  https://v3.notional.finance/1283.10afd5e38609ee35.js  sha256=d80380d1ca51b35bae1bd52fd45497addf34b6e771a1af7eee8dea958404ccb0
+  https://v3.notional.finance/1318.8b9cdaf4f172f710.js  sha256=ceb64a7d476514f324c8bdf82bb99540d72035a4bd941af3d78bb747754f10c7
+  https://v3.notional.finance/1347.f39797942a7da67b.js  sha256=e90c02c85c0e9034b0b4dd03240117c594089fc3999efb065f95bb6cfa90794d
+  https://v3.notional.finance/1412.12761aa580745ec2.js  sha256=58a6a33766ce130bd937555c57d72374ab8a9caba6ab10e530d1524ae2d97581
+  https://v3.notional.finance/1459.6231b2396195f32d.js  sha256=350802b9321ce51582279709416525b1733e71cb3554afe6c552774babac235c
+  https://v3.notional.finance/1555.9e8e09868d6b20b6.js  sha256=398ffaed1bf2e847ce12b7172252dc28d1add385c4cbcce493e04d7fb211222a
+  https://v3.notional.finance/1738.34b73c84c2ebd58a.js  sha256=cbd003f2a8306d5ad6adff557406d74ef61019300df885d5d14fc916c0838aa3
+  https://v3.notional.finance/1825.3f393b54297942a6.js  sha256=ff52898e09a673f003029d74a7e14955a260010f580053cc09436f88099ddbe6
+  https://v3.notional.finance/common.31ad752bebd208a8.js  sha256=c4df16dfae8407f65e472f097253c75d77ed9b625e8fb28c075a70020bac20b1
+  https://v3.notional.finance/2106.3a5e2e5a5ae304e7.js  sha256=d33c264d2d8abf671251425310023abbcaff8943c08aa0c39e131f3fdd20b7b5
+  https://v3.notional.finance/2148.b1ff25036a415d3a.js  sha256=3a9a6f8072492755f9093d298fa013d280f98ae68b32a9112ffc611cde8853c3
+  https://v3.notional.finance/2240.63cee617c3d91676.js  sha256=c8d2066aafa659e3de77b064079c9323258c8304ce06b463d890e1529477e02e
+  https://v3.notional.finance/2317.89f9f29b33ac8ec4.js  sha256=c9aabd6e330eb943698be78e7c386c838ba87124b125662faa79dbb9966081f7
+  https://v3.notional.finance/2365.b8ef5f91b38abaea.js  sha256=575716d8ab5251bc420f046fabaec53029f0c60fcf01f73b4fbc1cc96e98a223
+  https://v3.notional.finance/2529.608390fb72a224cf.js  sha256=55358b791acf91ce37a1c73aadf04e91699553c38f9f4f020c1670f2b4e5c61b
+  https://v3.notional.finance/2546.cd227700c521e03c.js  sha256=b49db8c2fcad52e51be34ab97da96473922b7a09800ac783d550ab94db057e10
+  https://v3.notional.finance/2653.8b377deec435d703.js  sha256=c8cd758a4c9f1ce336509bfaf4e0ae4d31e63adb49b83639987f65754953c04c
+  https://v3.notional.finance/2745.149d95cfe72c37bb.js  sha256=3800e2e7cd65419edc0612a140990a3e1246f175bcc00c6e8ae00dfacdc49d46
+  https://v3.notional.finance/2956.fc7175cfe6ee4edb.js  sha256=0b7a27516882ba9596057384a615484396133f54eca32a1bbf3a197b204a8c1b
+  https://v3.notional.finance/2958.03cb31843f230158.js  sha256=5713a7a7182859661dbeed7c4150c08a0d8f0ed4d45278d31d573f2e80eb629b
+  https://v3.notional.finance/3027.1834b096fd9e23ad.js  sha256=a27f0dc00f4668063d7ba2cccbe54391080b1cfac4fe60ff0afde2ab66af106b
+  https://v3.notional.finance/schemaFilter.9f377aaf1920de34.js  sha256=848620f428ca54b1222e148cd64d007a41334bb61657c48759659cd2bccccf1b
+  https://v3.notional.finance/3127.924d32880ac4a4cc.js  sha256=9007f0276c68870861a7afe8a7fc571dedc1e8e729fd5c2afce2d54413220761
+  https://v3.notional.finance/3328.7dc380c475b75fab.js  sha256=6fe1367d743a17df1e04b37b5ea3e25a8d699ea6243668dc1374ec3de3440cd9
+  https://v3.notional.finance/3454.76dd9eed3fecad74.js  sha256=85498d4ffea4193714f775499f150bc74dbc0cea4d55f0c76d4c67d13be3d664
+  https://v3.notional.finance/3517.6d37ddd6f7ec2378.js  sha256=79993a887c9742ff948af218ee82e564523dff618d1c6a49d540a1975b459d1d
+  https://v3.notional.finance/3561.691c2e50bee3c876.js  sha256=c2f3c9cbec40551b7634c7cb71a15aee54f46370018d289a523ee6a02351747a
+  https://v3.notional.finance/3710.11962a2f3eacaac8.js  sha256=ca681e33ea7dbbf3584db34945943306fe4222ae1b2115c9d3ff5200c3922081
+  https://v3.notional.finance/3859.0daea0db9bd0961f.js  sha256=27b8947f4e1142491d3162d9b34ed38b119381214229a28e6a1832d749c37e35
+  https://v3.notional.finance/3899.9b0fbce8cf2523d9.js  sha256=1da047540b975a66e4f7173ff20d1266dfaed8ebd2293080f73378766e72437c
+  https://v3.notional.finance/4027.983301fab25797c8.js  sha256=f10947cc7161dcc5a756ddab2026a220dffeebba0505423b7e835a15bf0ce044
+  https://v3.notional.finance/4326.8b2fc3ac9a307abb.js  sha256=00243bcb5d32fbad2d5ba5ed26ab2d98260102e4d1fe829e57fc02c10d348244
+  https://v3.notional.finance/4365.78ad8c7720d4ce5e.js  sha256=7de6075509e3f75fb3411d7c86bd6e6f32d5d609ae8dcedefd927d847efacd92
+  https://v3.notional.finance/4407.0fefb2980343659b.js  sha256=2c188845aedca2f1abbd328642beabf121101b137b84aa96ad69f7ec26c42b8c
+  https://v3.notional.finance/4524.c1821ed93644ee11.js  sha256=bf40967559dbf07e4d58b89a27a6e032f1867991f84948360397f9b23a5c885e
+  https://v3.notional.finance/4718.1aee3c976605e21e.js  sha256=1dff12c4259561b04cbb67fa8f6799eff46c2073aa27984d4da6c8c34fda1cab
+  https://v3.notional.finance/4809.ce312cc1875e0d3e.js  sha256=5b498e60ee5b3edb1f91babedf5da69bdcb2a73f5bb8eb3972ac5b3aec78c755
+  https://v3.notional.finance/4820.227b30bec4067b7b.js  sha256=10915ba720fbee53a8628bd977b2e8f527240e7f99766b95616f213f15063790
+  https://v3.notional.finance/4916.77fbf3dfb843215a.js  sha256=12aea58c4e3f93a9100261177fe2764be08b4f0de5c53c4790e24c8d5050e17d
+  https://v3.notional.finance/4953.599a68b961ab92ec.js  sha256=d870916cf7086e8e0e48d257632e005619c242d380333e3569e42f9e9bf3aa45
+  https://v3.notional.finance/ajs-destination.afbc929fdc009d03.js  sha256=859a5a66150e315ffaca0b849e9528a6158207811e47d62898a20c15f4a34948
+  https://v3.notional.finance/5153.c62d84b4d6acf889.js  sha256=56b27b17ec5e63dba8f72eec541c6c63d1b1626504d988471b1fe26978273a94
+  https://v3.notional.finance/5273.be2257c47c10820f.js  sha256=1faf487875723def47c63e3799c8d2a995a2f97bce75aa8b3ab14eefcfebd309
+  https://v3.notional.finance/5351.e2dc15bf08d5898e.js  sha256=d499d5396dc8c9d1ee4546cb84c5676a46dfc36e63a16ab4ff9e9b10cf03a3c4
+  https://v3.notional.finance/5423.f7bd9e2e7b6e1ae4.js  sha256=9a56cc167e149b79c420684be9c1bcfd7fe3c4f33d2c8c1e8b842518a7aacd07
+  https://v3.notional.finance/5632.cf1d5e08b6e44aee.js  sha256=0b0a52198076d462bb7f04ad71af444e75c961d187a9e034aa6285da42a70e48
+  https://v3.notional.finance/5634.a698461224bdd6de.js  sha256=9abb42a30df63132fa8df55cd2f89c9f018cb46d896cc2fe2ef20df344eb9a9d
+  https://v3.notional.finance/6123.6343c4be034f2686.js  sha256=85f7d74699b95a45ca5ee123237f8bee96f5714a6c92b52daff246551ee92917
+  https://v3.notional.finance/6371.d3d3392014eed8de.js  sha256=75ce5a2962916401b94a47a2c07bff50aa4ca2fadedd181e3a548d8527d8ef0f
+  https://v3.notional.finance/6403.1cfdf1d7b1a65f2a.js  sha256=5e5b152dab28510293a45333e579760527d0e34690cae84ed3e353c98d8e0c3d
+  https://v3.notional.finance/6489.3f8a7053653fed8b.js  sha256=9ccb4fa10b1d20865eff99662ecec75c69e578f75c45f4d4c060cd9837b32997
+  https://v3.notional.finance/6605.c440055872f145c9.js  sha256=96a867dbcbb92d42f7d33ddcb45a592f85bfad79b824821f92c4dbaed3f7af5b
+  https://v3.notional.finance/6658.b34fd7b4453030c5.js  sha256=6cc5b77153221366739e05a285c0008cecf258474380cdac9f64731fb63a10c8
+  https://v3.notional.finance/6679.6cab80d6b7c134ac.js  sha256=5039f042c3ab6ce1c3366c26a575f709669c1d1fe455107d9de4a8bb2418deca
+  https://v3.notional.finance/6697.df9f48912c7f3e2f.js  sha256=df494daf7f9c60704c4c8a5f649b0fc5ade193e2bd98a86e57e6c5659485b35f
+  https://v3.notional.finance/6706.fc47b97f26f01774.js  sha256=8d59a376a0e0d279c910ccd2c58a20aaca967b38abf1fde45ef277f4ea365078
+  https://v3.notional.finance/6749.480f3d1a662785e0.js  sha256=622f44a0834e84179e9427e4d4c68eb668f4bad9facd94e066fc9b28d9d2e2ed
+  https://v3.notional.finance/6760.ffe9d9ab5eed72ce.js  sha256=24e3ca5702e95f1f8e3c84e8b348e920671d5ba883f6619a38b15789a19792be
+  https://v3.notional.finance/6872.ec3bbc5ca513b87f.js  sha256=3c489210d86a2040835cd4306366e0f8d753421036c54fab8187c4ef4056c2c6
+  https://v3.notional.finance/6913.70f07fa2c8462b34.js  sha256=c56c936292ddf77cb1f8cfe6e26f6f3078c804d5e4f49b7bd84b986a6b5324cd
+  https://v3.notional.finance/6968.f27ebd8e82697fb0.js  sha256=783d69efb407077819d747fe289c47b5b07c77d78b3499e8d15000703d7d2f02
+  https://v3.notional.finance/7192.d076a6526dfe67e4.js  sha256=28cd972927c278a12badee6f72bd619c7d96f3ca2cc7050795372cf9a50f9bd6
+  https://v3.notional.finance/7345.b41c0d5e190c1fba.js  sha256=2d859332a7e3efd847813c70ee1c132ca1ad1ab9bcae49f82a28a469b1a62ecd
+  https://v3.notional.finance/7499.d03f9e41dd4c7853.js  sha256=d6c6ce04dcfaa1a13dc51746b340f0e89331e0bde26917e0c5a936e438a9c7fe
+  https://v3.notional.finance/7504.3e786d73240b09bb.js  sha256=2c5a16764643cc117d80f79670cf511c536d59390c4c0c84ae0a174d54288291
+  https://v3.notional.finance/queryString.0b5a401ee06b5d17.js  sha256=843743c96857fdbfa14214b8ec528232b8adc422606de74eec3347c88f175fa5
+  https://v3.notional.finance/7647.f068d6cf4697b5ea.js  sha256=85fe42ed3c372c9dccf8ec3f4d4d01a611788ed7d4df988295eb434c306299db
+  https://v3.notional.finance/7661.7ad847afcd8ade3f.js  sha256=2cb359b95912535eca762625474f16b0fc26dab7a876e3b468bd5b481e256fff
+  https://v3.notional.finance/7723.b30d4cd5065b13b5.js  sha256=5b729ef673f5a754c5d90c0ce86a3b2d04885b4f51a4eade49eb3af7b370833e
+  https://v3.notional.finance/7975.03844605c188bebe.js  sha256=749fee63813c4bfedb2b56592c2a3e6531b2ad4c1735787ef3294577d2d2a53a
+  https://v3.notional.finance/8038.49d12b5dda004269.js  sha256=a0e751c9e1685eb4b084793bb60aded4a5aef42b8e550c9238c029f6b38dbcdb
+  https://v3.notional.finance/8208.3a02c74666d091bb.js  sha256=247b9855f31195755c985fc375f577a3df30bebb5054b2246506075a8b8a1e22
+  https://v3.notional.finance/8326.7e837ca9f9204dff.js  sha256=5db075786b65b6457a996f843f314b5b3e93d577cc97e1e633b45aa793b1b059
+  https://v3.notional.finance/8349.0b78012cfaa2ffc3.js  sha256=b713d8f4506a9acf7845f1188985675d20ef003f504c1c42f7920637b8c35422
+  https://v3.notional.finance/8473.45aaabab3109307b.js  sha256=472ce33a8bf1d7591c45e46bc1d754696f3e64e8686d2396b06018a0a49ff06f
+  https://v3.notional.finance/8803.377e358909296b52.js  sha256=bf3b2f5cab08d2cd9fd02abfc9f5567fa14af868685851988de1e1e8b0fbe431
+  https://v3.notional.finance/8828.b620a6bc2be6f6ad.js  sha256=25ea9da22a29632e6cb6d48170d1d238e06a6a53e195b8af990fa7c7db8dafc5
+  https://v3.notional.finance/8887.6f14f1a9ae079b8c.js  sha256=baf1f07c3ba08be1599b0d24c0ae7a46cee3b7271d0b995c0609c009619f8d21
+  https://v3.notional.finance/8938.847c834d0e73c35f.js  sha256=91777a021e827b99977212e6949e1e2299415f1a2423e27ae38625c9b4ebb2bb
+  https://v3.notional.finance/tsub-middleware.f0f49b04ab26a2be.js  sha256=3f479c68a361ed463941878c9f9023cf1a89aafb060e525caef1747b7123436e
+  https://v3.notional.finance/9062.31ab4d6f1a0efbe4.js  sha256=5c8d6201c73c203b6a4b8025ee0194ec02cbaecdb5befe99a4d5ccc5093c6de2
+  https://v3.notional.finance/9198.65a6be6820a8d730.js  sha256=ba15754f950bc6f0f89b809489116c17e128e194852f3b5a7028be35dba6ec78
+  https://v3.notional.finance/9276.a15c04b8da9f74a8.js  sha256=57e08486543334c52af87a5886d0789be01da569ae7edb9e84fb249cc88ddd7c
+  https://v3.notional.finance/9346.f65842e57ecc3c80.js  sha256=c71af70a7251dd20e64b79ae054edc5485441ff2edc6486cdb5cf1a1c02f4530
+  https://v3.notional.finance/9435.141c57a277e8ccd5.js  sha256=f5405cbbe9b7420be60427cf3a846282ee16ac456545a33c54fc1432347d7442
+  https://v3.notional.finance/9536.5ab376119b6206c2.js  sha256=860b662ff2bc9ad77b73d6aec2e6bd44b404302e9a405079ad0d40bf12b972ba
+  https://v3.notional.finance/9641.d117fc898ee92b6c.js  sha256=77ad9aedd877ea12690b18a5b1d425dc24564302615944911b79c5d2d82b6edf
+  https://v3.notional.finance/9688.fbdaa039e4de3ca1.js  sha256=0faa74d8f15866786fce42180a0de4aa665f0d7a64934d567fb424b7488c2f65
+  https://v3.notional.finance/legacyVideos.95104e5a78cb5433.js  sha256=4bd08eb01903f36b2050cd4fc15d76eece7f55885d37c0b2e3c56a3af0fd56d7
+  https://v3.notional.finance/9704.a50a125967dc43d6.js  sha256=ca054804421a72f77842eb0491feb3b7557af1e71f0b387e7da87ad0b353b717
+  https://v3.notional.finance/9913.fdc6d41cf23a8a7c.js  sha256=016b2606af413ff2f8eaee39dfe47dfd0db06b40735f8cded784bf27ce1ba3c6
+  https://v3.notional.finance/9977.cf27144bca517524.js  sha256=1ab19c3b775e74556267dfbe659f3ad41579dad0deb5e673b58c64d7b38469e5
+
+matches:
+  https://v3.notional.finance/main.00a437cad7319876.js: …work:n});i&&a.setProvider(i),e.networkAccounts.set(n,a)}));const a=yield fetch("https://detect.notional.finance/").catch((()=>({status:403})));console.log("[DEBUG] VPN Check: ",a.status);const r=yield fetch("https://api.…
+  https://v3.notional.finance/main.00a437cad7319876.js: …()));console.log("[DEBUG] Geo IP Country: ",JSON.stringify(r)),e.country=200!==a.status?"VPN":r.country,e.isSanctionedAddress=yield n(t),e.isStarterBoostUser=yield async function(e){const t=await _A();return null==t?void…

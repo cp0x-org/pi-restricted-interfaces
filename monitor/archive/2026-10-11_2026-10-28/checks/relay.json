@@ -1,0 +1,45 @@
+{
+  "id": "relay",
+  "name": "Relay",
+  "targets": {
+    "app": "https://relay.link",
+    "repo": null,
+    "terms": null,
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "screening-api",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Relay's public endpoint /sanctioned/{address} answers sanctioned:true for the SDN wallet and false for the control",
+      "source": {
+        "method": "GET",
+        "url": "https://api.relay.link/sanctioned/{address}"
+      },
+      "expect_sdn": [
+        "^status: 200$",
+        "\"sanctioned\":\\s*true"
+      ],
+      "expect_control": [
+        "^status: 200$",
+        "\"sanctioned\":\\s*false"
+      ]
+    },
+    {
+      "id": "screening-docs",
+      "type": "page",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Relay compliance docs: sanctions screening with Chainalysis, HackBounty and Hermod",
+      "source": {
+        "url": "https://docs.relay.link/security/compliance",
+        "kind": "docs"
+      },
+      "expect": [
+        "Chainalysis"
+      ]
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 check: spark/screening-trm-report
 about: Press report (Aug 2023): Spark is said to use TRM Labs to block wallets
 source: https://cointelegraph.com/news/makerdao-spark-protocol-block-vpn-users-controversy
-checked_at: 2026-10-11T21:19:00Z
+checked_at: 2026-10-28T22:56:57Z
 fetched: https://cointelegraph.com/news/makerdao-spark-protocol-block-vpn-users-controversy
-sha256: 445e9dc97ebc3551e11b51362e521bf9468190de63ae52600aac9f419f440dc9
+sha256: b825d63d311ba1eeca6643114e223c5d3a2ac5e9372bbcac730c139ce9717d85
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
@@ -14,21 +14,21 @@ News
 Markets Features
 Research Opinion Podcasts Newsletters Commissioned
 About
-DOGE $0.08621 0.15%
-TRX $0.3301 0.20%
-LINK $13.16 0.50%
-ZEC $1,246.32 1.59%
-ADA $0.2501 1.44%
-XRP $1.39 0.59%
-ETH $2,517.55 0.37%
-BTC $83,315.60 0.34%
-XMR $537.46 1.91%
-BNB $750.64 0.05%
-XLM $0.2017 2.25%
-SOL $110.08 0.24%
-HYPE $85.54 0.08%
-Written by Brayden Lindrea staff writer Edited by Felix Ng staff editor
-Written by Brayden Lindrea staff writer
+DOGE $0.07986 1.40%
+TRX $0.3298 0.54%
+LINK $11.82 2.53%
+ZEC $1,313.68 0.25%
+ADA $0.2060 0.27%
+XRP $1.32 0.07%
+ETH $2,360.71 0.49%
+BTC $81,276.90 0.50%
+XMR $600.91 1.29%
+BNB $756.63 1.52%
+XLM $0.1729 1.71%
+SOL $102.52 1.25%
+HYPE $80.92 0.77%
+Written by Brayden Lindrea former writer Edited by Felix Ng staff editor
+Written by Brayden Lindrea former writer
 Edited by Felix Ng staff editor
 Controversy as MakerDAO’s Spark Protocol blocks users with VPNs
 Latest News Published Aug 7, 2023
@@ -62,35 +62,35 @@ Dai
 Maker
 Blockchain
 More on the subject
-Dragonfly partner rejects ‘bunker mode’ doomerism, calls for proactive blockchain measures
-Oct 9, 2026
+Aviva Investors launches tokenized share class of $29B Sterling fund on XRP Ledger
+Oct 26, 2026
 Zoltan Vardai
-Trump administration outlines quantum, AI initiatives in $6B science push
-Oct 9, 2026
-Ezra Reguerra
-‘No going back’ for institutions moving toward tokenized onchain future, says Fidelity
-Oct 8, 2026
+Netanyahu floats use of blockchain as solution to potential financial sanctions
+Oct 25, 2026
+Robert Lakin
+China targets 2030 for its national blockchain network buildout
+Oct 23, 2026
+Yohan Yun
+Aviva Investors launches tokenized share class of $29B Sterling fund on XRP Ledger
+Oct 26, 2026
 Zoltan Vardai
-Dragonfly partner rejects ‘bunker mode’ doomerism, calls for proactive blockchain measures
-Oct 9, 2026
-Zoltan Vardai
-Trump administration outlines quantum, AI initiatives in $6B science push
-Oct 9, 2026
-Ezra Reguerra
-‘No going back’ for institutions moving toward tokenized onchain future, says Fidelity
-Oct 8, 2026
-Zoltan Vardai
+Netanyahu floats use of blockchain as solution to potential financial sanctions
+Oct 25, 2026
+Robert Lakin
+China targets 2030 for its national blockchain network buildout
+Oct 23, 2026
+Yohan Yun
 Editor's choice
-Saylor teases Strategy Bitcoin buying after ending September with STRC buybacks
-Ledger confirms unauthorized hardware implant, says losses may exceed $86M
-France is world’s most dangerous place for Bitcoiners: 90 attacks in 7 months
-Crypto Biz: Wealthy investors are buying crypto, but their advisers aren’t sold
-Coldcard says it’s investigating how phishing link appeared on its X account
+Google Cloud outlines MPC service for institutional Bitcoin custody
+Bitcoin price bounce rejected at 50-day trend line ahead of FOMC, earnings
+Cybersecurity’s Black October: How to protect yourself
+Settlement concerns prompt Euronext to halt CoinShares’ Zcash ETP ahead of debut
+DTCC unit launches tokenization services
 News Latest News Markets Bitcoin Ethereum Altcoins Blockchain Regulation
 Magazine All Articles Features Crypto People Hodler's Digest Asia Express AI Eye Crypto Culture Crypto Around the World Reviews
 Commissioned Articles Press Releases Research Special Projects
 Ecosystem Formula Accelerator Decentralization Guardians Events LONGITUDE Event CT Connect
-About About Cointelegraph Podcasts Newsletters Editorial Policy Ads Disclosure Financial Risk Disclaimer
+About About Cointelegraph History of Cointelegraph Podcasts Newsletters Editorial Policy Ads Disclosure Financial Risk Disclaimer
 Cointelegraph is committed to providing independent, high-quality journalism across the crypto, blockchain, AI, and fintech industries.
 All news, reviews, and analyses are produced with full journalistic independence and integrity. For more details on our standards and processes, please read our Editorial Policy .
 © Cointelegraph 2013 - 2026 Terms of Service and Privacy Policy

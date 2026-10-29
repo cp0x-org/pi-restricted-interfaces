@@ -1,0 +1,225 @@
+check: usual/geo-terms
+about: The Terms bar Prohibited Persons (residents or nationals of a long list of countries); no technical geo-block described
+source: https://docs.usual.money/resources-and-ecosystem/legal-documentation/terms-of-services
+checked_at: 2026-10-11T21:19:02Z
+fetched: https://docs.usual.money/resources-and-ecosystem/legal-documentation/terms-of-services
+sha256: f8e569681fa54110ca7d3d31c9822f8401e2913a60d1e6df6f773ceaa2e39c21
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+Terms of Services | Usual Docs
+Usual Docs
+⌘ Ctrl k
+Usual Docs
+Start Here
+What is Usual?
+Why Usual?
+FAQ
+Usual Products
+Deposits & Withdrawals
+Stablecoins
+Yield Products
+Synthetic
+Governance Token
+Resources & Ecosystem
+Roadmap
+Smart Contracts
+Tech Docs
+Audits
+Whitepaper
+Legal Documentation
+Legal Notice
+Privacy Policy
+Terms of Services
+Analytics
+Risk Policy
+Usual Backers
+Media Assets
+Factsheets
+Powered by GitBook
+On this page
+For the complete documentation index, see llms.txt . This page is also available as Markdown .
+Copy
+On this page
+Resources & Ecosystem
+Legal Documentation
+Terms of Services
+Usual Protocol
+TERMS OF USE AND SERVICES
+Date of the latest revision: 03/21/2025
+PLEASE READ THESE TERMS OF USE AND SERVICE CAREFULLY BEFORE USING THE SERVICES. BY USING THE SERVICES, YOU AGREE TO BE LEGALLY AND UNCONDITIONALLY BOUND BY THESE TERMS. APPART FROM THESE TERMS, ALL INFORMATION PROVIDED IN CONNECTION WITH YOUR ACCESS AND USE OF THE INTERFACE AND THE SERVICES IS FOR INFORMATIONAL PURPOSES ONLY. ADDU DRAWS THE ATTENTION OF USERS TO THE RISKS INHERENT IN THE USE OF CRYPTO ASSETS AND BLOCKCHAIN TECHNOLOGY. BEFORE USING THE PROTOCOL, PLEASE READ SECTION 4.3 CAREFULLY. BEFORE MAKING ANY FINANCIAL, LEGAL, TECHNICAL, OR OTHER DECISIONS INVOLVING CRYPTO ASSETS AND/OR THE SERVICES, YOU SHOULD SEEK INDEPENDENT PROFESSIONAL ADVICE FROM A LICENSED AND QUALIFIED INDIVIDUAL IN THE APPROPRIATE AREA.
+1. PURPOSE OF THIS DOCUMENT
+1.1 General information
+The Usual Protocol, as well as other related Interfaces (as defined below) are provided by Association de Développement de la DAO Usual, a French law association having its registered office located at 10, rue de la Paix, 75002 Paris, and registered with INSEE under SIREN number 925 013 245 ("ADDU" or the “Association”) and its affiliates ("we," "us," "our").
+The Interface, as defined below, provides information and resources about the fundamentals of the protocol called "Usual" that permits, among other things, the generation of stablecoins, transactions using smart contracts, and the staking of cryptographic assets (the "Protocol").
+The purpose of these terms of use (the "Terms") is to define:
+the terms and conditions of use applicable to the user (the "User," "you," or "your"), when using our websites or any other related interface (the "Interface"),
+the terms and conditions applicable to any other features, tools, materials, or other services offered from time to time on the Interface (the "Services").
+1.2 Definitions
+ADDU: means the User's co-contracting party, the Association de Développement de la DAO Usual (ADDU), a French law association having its registered office located at 10, rue de la Paix, 75002 Paris, and registered with INSEE under SIREN number 925 013 245, developing and organizing the Usual DAO, composed of Usual Token holders.
+Airdrop: means the process of distribution of tokens for free to Users who have participated in an airdrop through a dedicated interface, such operation which may be carried out by ADDU at its own discretion.
+AML (Anti Money Laundering): means laws, regulations, and procedures designed to prevent the use of financial systems for the purposes of concealing, disguising, or transforming illegal proceeds derived from criminal activities, financing terrorism, or other illicit activities. As provided in Article 4.1 of these Termes. Users expressly warrant that they are not involved in any activities or transactions that violates AML laws or regulations, and that they will not use the Protocol to facilitate money laundering, terrorist financing, or any other illegal or prohibited activities. Users further agree to comply with any applicable AML requirements in their jurisdiction and acknowledge that the Association may take measures to ensure compliance with AML regulations, wherever possible, given the decentralized nature of the Protocol.
+Crypto assets: means tokens used by Users as a currency and unit of value (coins), such as bitcoin (BTC), Ethereum (ETH), or stablecoins, which aim to maintain a fixed parity with a traditional currency; or tokens with a utility function (utility tokens), granting access rights to products or services offered by the issuer.
+Connect wallet: means the tab on the Interface available to Users to connect their noncustodial wallet. A non-custodial wallet is a type of cryptocurrency wallet that gives Users full control over their Crypto assets, as they hold the private keys. Unlike custodial wallets, where a third party manages the private keys on behalf of the user, non-custodial wallets allow Users to store, send, and receive Crypto assets without relying on an intermediary. This type of wallet may be considered more secure because it eliminates the risks associated with third-party custodians, but it also requires Users to take responsibility for safeguarding their private keys to avoid losing access to their Crypto assets. As specified below, ADDU or any affiliate company may not be liable in such cases where the User loses access to their Crypto assets due to the loss or mismanagement of private keys.
+Contact address: means the email address to which the User may request information: support@usual.company
+Interfaces: means the website: https://usual.money and the front end to the Protocol: https://app.usual.money/
+Jurisdiction: means France, as provided in Article 8.9 of these Terms.
+Prohibited Person: means a person who is a resident or national of the following countries: Afghanistan, Albania, Angola, Azerbaijan, Bosnia Herzegovina, Bahamas, Barbados, Burma, Botswana, Burkina Faso, Burundi, Cayman Islands, Cambodia, Cameroon, Crimea (Ukraine), Chad, China, Congo, Democratic Republic of Congo, Cuba, Ethiopia, Eritrea, Fiji, Palau, Ghana, Guinea, Guinea-Bissau, Haiti, Iran, Iraq, Jamaica, Jordan, Lao People's Democratic Republic, Uganda, Liberia, Libya, Madagascar, Mali, Malta, Morocco, Mozambique, Nicaragua, Nigeria, North Korea, Pakistan, Panama, Philippines, Puerto Rico, Russia, Senegal, Somalia, Sri Lanka, Sudan, Syria, Tajikistan, Trinidad and Tobago, Turkey, Turkmenistan, United States, Uzbekistan, Vanuatu, Venezuela, Virgin Islands, Yemen, Zimbabwe and any resident or national of a country otherwise subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a terrorist-supporting country, and (ii) are not listed on any U.S. Government list of prohibited or restricted parties.
+Prohibited US Person: means a person who is a resident or national of the United States of America.
+USD0: means a liquid deposit token distributed to Users in exchange of deposit eligible on chain assets into the Protocol. For more information, please consult the following link: https://docs.usual.money/usual-products/usd0-stablecoin (information with no contractual value).
+USD0++: means a token distributed to Users who use USD0 in various ways, such as contributing liquidity or locking USD0 and who would then be distributed Usual Tokens if made available by ADDU. For more information, please consult the following link: https://docs.usual.money/usual-products/usd0++-enhanced-tbill (information with no contractual value).
+Usual DAO: means the Usual decentralized autonomous organization.
+Usual Labs: means Up Only Co, a software company contributing to the development of the Protocol, registered at 1, rue de Stockholm, 75008 Paris, with the Commercial and Companies Register of Paris under number 919 540 427.
+Usual Tokens: means the Protocol's governance tokens which may be released by ADDU at its own discretion. Its primary utility lies in empowering Usual Tokens holders to participate directly in the governance processes of the Usual DAO, effectively granting them a say in decision-making and the future direction of the Protocol. This means that Usual Tokens holders may have the opportunity to vote on proposals, decide upon the development roadmap, and contribute to key decisions that shape the Protocol’s evolution. However, such rights do not constitute ownership or equity in the Association or Usual Labs and may not grant Usual Tokens holders any legal rights to participate in the formal governance of the Association or Usual Labs, such as shareholder rights. For more information, please consult the following link: https://docs.usual.money/usual-products/usual-governance-token (information with no contractual value).
+2. ACCEPTANCE OF TERMS – CHANGE OF TERMS
+Before using any of the Services, you must first agree to these Terms. By accessing the Services, you expressly confirm that you fully and irrevocably agree to these Terms. If you do not agree to any part of these Terms, you must cease using the Services.
+You also agree that your personal data and electronic communications on the Interface will be processed in accordance with our privacy policy, which is incorporated herein by reference and available at (https://gitbook.usual.money/ressources-and-ecosystem/privacy-policy).
+To the maximum extent permitted by applicable law, we reserve the right, at our sole discretion, to modify or replace the Terms at any time. The most current version of these Terms will be posted and accessible via the Interface. You are responsible for reviewing and familiarizing yourself with such modifications
+You will be deemed to have accepted all modifications and revisions by continuing to use any of the Services.
+You may contact us with questions about your use of the Services at contact@usualprotocol.com. When you communicate with us electronically, you consent to receive communications from us electronically.
+3. SERVICES
+3.1 Information on the Protocol
+The Interface is provided as an informational resource about the fundamentals of the Protocol, which is a decentralized finance (“DeFi”) infrastructure, community-governed Protocol deployed on multiple blockchain networks and systems, and provides information about the wider Usual ecosystem, governance, community, and various interfaces and integrations to the Protocol.
+The Protocol is based on:
+an open-source solution for which anyone can permissionlessly build or suggest improvement; and
+a set of Smart Contracts developed in a modular approach and operating on the Ehtereum blockchain.
+The Protocol enable Users to:
+deposit assets via its front end: Users deposit eligible on chain assets into the Protocol in exchange of USD0 tokens and representing the initial value of the deposit within the Protocol.
+earning rewards: Users may utilize USD0 in various ways, such as contributing liquidity or locking USD0 in exchange of USD0++. By doing so, Users may be distributed Usual Tokens.
+governance: Users may – when the Usual Tokens will be released which may be carried out by ADDU at its own discretion – be able to utilize Usual Tokens to participate in the governance of the Protocol.
+All information provided in connection with your access and use of the Interface and the Services is for informational purposes only.
+You should not take, or refrain from taking, any action based on the information contained on the Interface or any other information that we make available at any time, including blog posts, data, articles, links to third-party content, Discord content, news feeds, tutorials, tweets, and videos. Before making any financial, legal, technical, or other decisions involving crypto assets and/or the Services, you should seek independent professional advice from a licensed and qualified individual in the appropriate area.
+3.2 We are software developers in the Protocol ecosystem
+The Protocol is deployed on multiple blockchain-based networks, and ADDU is not responsible for the operation of such networks.
+It is important to understand that neither we nor any affiliated entity is a party to any transaction on the blockchain networks underlying the Protocol; we do not have possession, custody, or control over any crypto assets appearing on the Services; and we do not have possession, custody, or control over any User’s funds. Further, we do not store, send, or receive any crypto assets. You understand that when you interact with any Protocol smart contracts, you retain control over your crypto assets at all times. The private key associated with the wallet address from which you transfer crypto assets is the only private key that can control the crypto assets you transfer into the smart contracts.
+3.3 License to use our Services
+We grant you a license to use our Service. Contingent upon your ongoing compliance with these Terms, we grant you a personal, worldwide, revocable, non-exclusive, and non-assignable license to use the software provided as part of our Services. The only purpose of this license is to allow you to use and enjoy the Services solely as permitted by these Terms.
+We own any and all rights, titles, and interests in and to the Services, including, without limitation, any and all copyrights to any content, code, data, or other materials that you may access or use on or through the Services; except as expressly set forth herein, your use of or access to the Services does not grant you any ownership or other rights therein.
+We may use and share your feedback. Any comments, bug reports, ideas, or other feedback that you may provide about our Services on the Contact address, including suggestions on how we might improve our Services, are entirely voluntary. You agree that we are free to use or not use any feedback that we receive from you as we see fit, including copying and sharing such feedback with third parties, without any obligation to you.
+3.4 Fees
+Absence of ADDU’s fees. ADDU does not – itself – charge any fees to Users for the use of Services or the Interface. Apart from providing the Usual front end through the Interface, the Association does not provide any Services per se to Users or deliver, hold, and/or receive payment for crypto assets.
+Gas fees. However, note that in connection with your use of the Services, you agree to bear all costs necessary to conduct a transaction on the blockchain, such as gas fees. We attempt to provide accurate cost information, but this information is highly volatile and can change quickly without Users necessarily being aware of these changes.
+4. USER’S REPRESENTATIONS & WARRANTIES AND ACKNOWLEDGEMENTS
+4.1 User’s representations & warranties
+You hereby represent and warrant, at all times during the use of the Services, that you:
+Comply at all times with the laws (including notably AML regulations):
+Your use conforms with and does not breach the laws and in particular any applicable law in the jurisdiction in which you are located, including notably AML regulations, and you will not be using the Services for, nor will promote or facilitate, illegal activity (including, without limitation, money laundering, financing terrorism, tax evasion, buying or selling illegal drugs, contraband, counterfeit goods, or illegal weapons).
+You are not engaged in any illegal trade, money laundering activities, or activities related to the financing of terrorism and will not be exploiting the Services for any unauthorized commercial purpose.
+Neither you nor the geographical locality in which you reside or are domiciled or located are the subject of economic sanctions from the United Nations, the United States of America, or the European Union.
+Neither you nor any of your affiliates is owned or controlled by a sanctioned person or involved in any transaction, transfer, or conduct that is likely to result in you or your affiliates becoming a sanctioned person or people.
+Neither you nor any of your affiliates is a politically exposed person.
+You will not use the Services for any fraudulent or dishonest purpose.
+You will not harvest or otherwise collect information from the Services for any unauthorized purpose.
+You will not attempt to conceal any non-compliance by you with any laws or these Terms by using a VPN or proxy or any other method or use the Services under false or fraudulent pretenses or otherwise being deceitful.
+Are not a Prohibited US Person or a Prohibited Person:
+In using this Interface, you confirm that you are not located in, incorporated or otherwise established in, or a citizen or resident of a jurisdiction listed hereabove in Article 1.2.
+You represent and warrant that you are not a citizen or resident of such prohibited jurisdictions, as listed hereabove in Article 1.2 and You agree not to use the Services if you are located in, or a resident of such jurisdictions.
+Shall not affect the functionality or operation of the Services:
+You will not upload or transmit viruses, worms, Trojan horses, time bombs, cancel bots, spiders, malware, or any other type of malicious code that will or may be used in any way that may affect the functionality or operation of the Services.
+You will not interfere with or circumvent the security features of the Services or any third party’s systems, networks, or resources used in the provision of Services.
+You will not engage in any attack, hack, denial-of-service attack, interference, or exploit of any smart contract in connection with the use of the Service (and operations performed by a user that are technically permitted by a smart contract may nevertheless be a violation of our Agreement, including these Terms, and the law) nor engage in any anticompetitive behavior or other misconduct.
+Are aware of related risks:
+By utilizing the Services or interacting with the Interface in any way, you represent that you perfectly understand the inherent risks associated with smart contracts and cryptographic systems (included but not limited to the volatility of cryptocurrencies, risk of regulatory actions, risks of technical issues) as disclosed thereafter and warrant that you have a very good understanding of the usage of cryptographic assets.
+Shall not do any trolling activities:
+You will act toward us with respect and integrity and will not subject us to any abusive or disrespectful acts, including trolling on social media.
+You will not interfere with other users’ access to or use of the Services.
+Have the legal capacity and sufficient experience to use the Services:
+You are of the legal age of majority in your jurisdiction as is required and of sufficient mental age, maturity, and capacity to accept these Terms and use the Services.
+You are fully able and competent to enter into the terms, conditions, obligations, affirmations, representations, and warranties set forth in these Terms and to abide by and comply with these Terms.
+You have knowledge of and experience in the crypto asset space and are familiar with the functioning and intricacies of crypto assets including ERC20 tokens and with decentralized finance and decentralized exchanges and markets.
+You further represent that you are legally permitted to use the Services in your jurisdiction. You further represent that you are responsible for ensuring compliance with the laws of your jurisdiction and you acknowledge and expressly agree that we shall not be liable for your compliance with such laws.
+No breach of Intellectual Property Rights:
+Your use of the Services does not and will not violate any intellectual property rights. You will not engage in transactions involving items that infringe or violate any copyright, trademark, right of publicity or privacy or any other proprietary right under the law, including but not limited to sales, distribution, or access to counterfeit music, movies, software, or other licensed materials without the appropriate authorization from the rights holder; use of our intellectual property, name, or logo, including the use of our trade or service marks, without express consent from us or in a manner that otherwise harms ADDU; any action that implies an untrue endorsement by or affiliation with ADDU.
+You will not attempt to or actually copy or make unauthorized use of all or any portion of the Services, including by attempting to reverse compile, reformatting or framing, disassemble, reverse engineer any part of the Services.
+Take your own responsibility:
+You make your own independent decisions in the way you are using the Services.
+You are fully and solely responsible for the security of your wallet(s) and passwords, seed phrases, and private keys. If you provide or make available your passwords, seed phrases, or private keys to anyone else, you are fully and solely responsible for any consequent use of these.
+You are fully and solely responsible for obtaining your own independent legal, financial, accounting, and tax advice.
+4.2 User’s Acknowledgements
+By your continuing use of the Services, you acknowledge:
+Decentralization of the Protocol:
+The Protocol is fully decentralized. All transactions entered into by Protocol users are carried out by them on a peer-to-peer basis and ADDU has no control over such transactions.
+No agency, advisory or partnership:
+We do not represent the buyer, seller, liquidity provider, offeror of tokens, or any participant or transacting party on the Protocol.
+You alone are responsible for securing your private keys. We do not have access to your private keys. Due to the non-custodial and decentralized nature of the technology, we are not intermediaries, agents, advisors, or custodians, and we do not have a fiduciary relationship or obligation to you regarding any other decisions or activities that you affect when using our Services. We neither are accountants, tax advisors, legal representatives, or financial advisors of the Protocol.
+You acknowledge that we, for the avoidance of doubt, do not have any information regarding any users, users’ identities, or services beyond what is available or obtainable publicly via the blockchain. We are not responsible for any activities you engage in when using Services, and you should understand the risks associated with crypto assets, blockchain technology generally, and our Services.
+All contributors to the ecosystem around the Protocol are independent of us, and we will not have and do not assume any liability or responsibility for their actions or omissions.
+We have no control over the Protocol’s operations:
+The Protocol is deployed on multiple blockchain-based networks, and we are not responsible for the operation of such networks.
+The software underlying blockchain networks on which the Protocol is deployed, including, for example, the Ethereum blockchain, is open source, which means that anyone can use, utilize, and build on top of it. By using the Services, you acknowledge and agree (i) that we are not responsible for the operation of the blockchain-based software and networks underlying the Protocol, (ii) that there exists no guarantee of the functionality, security, or availability of that software and networks, and (iii) that the underlying blockchain-based networks are subject to sudden changes in operating rules, such as those commonly referred to as “forks”.
+No recommendations:
+By participating in the Protocol, you acknowledge that you are doing so on the basis of your own enquiry, without solicitation or inducement by ADDU.
+No information published on the Protocol about any of the crypto assets, trading strategies, or other financial strategies should be construed as being a promotion, solicitation, recommendation, or marketing of any kind in relation to any of these, and we have no knowledge of the financial circumstances or objectives of any Protocol’s user or any expertise in what might constitute sensible financial practice for them.
+There is no assurance, representation, or warranty that your use of the Services:
+will provide a profit;
+will not incur significant losses; or
+will attain your commercial or other objectives.
+Automated collection and disbursement of proceeds by smart contracts:
+You agree to the automated collection and disbursement of proceeds by smart contracts. You acknowledge and agree that all transactions accessed through the Services will be automatically processed using one or more blockchain-based smart contracts. By engaging in transactions using the Services, you acknowledge and consent to the automatic processing of all transactions in connection with using the Services. You further acknowledge and agree that the applicable smart contract will dictate how the funds of a transaction and ownership of crypto assets are distributed.
+4.3 Assumption of risks
+The Association draws the attention of Users to the risks inherent in the use of crypto assets and blockchain technology. Before using the Protocol, please read this section carefully.
+Risks inherent to blockchain activities
+We do not own or control any of the underlying software through which blockchain networks are formed. In general, the underlying software for blockchain networks tends to be open source such that anyone can use, copy, modify, and distribute it. By using the Services, you acknowledge and agree (i) that we are not responsible for the operation of the underlying software and networks that there exists no guarantee of functionality, security, or availability of such software and networks; and (ii) that crypto assets are highly volatile because of a range of factors which include, but are not limited to, rate of adoption, speculation, technology changes, security risks, contagion risks, systematic risks, legal and regulatory changes, and factors affecting their supply (such as the mining, minting, or issuing of new tokens, airdrops, the burning of tokens, and blockchain forks).
+You understand that Ethereum and other blockchain technologies and associated crypto assets, currencies, or tokens are highly volatile due to many factors including but not limited to adoption, speculation, technology, and security risks. You also acknowledge that the cost of transacting on such technologies is variable and may increase at any time causing an impact on any activities taking place on the Ethereum blockchain. You acknowledge these risks and represent that the Association cannot be held liable for such fluctuations or increased costs.
+Regulatory risks:
+The Services could be impacted by one or more regulatory inquiries or regulatory action, which could impede or limit the ability of ADDU to continue to develop, or which could impede or limit your ability to access or use the Services or Ethereum blockchain, including access to the Interface
+Risk of information inaccuracy:
+Although it is intended to provide accurate and timely information on the Interface, the Interface or relevant tools may not always be entirely accurate, complete, or current and may also include technical inaccuracies or typographical errors. In an effort to continue to provide you with as complete and accurate information as possible, information may be changed or updated from time to time without notice, including, without limitation, information regarding our policies. Accordingly, you should verify all information before relying on it, and all decisions based on information contained on the Interface or relevant tools are your sole responsibility and the Association shall have no liability for such decisions. Links to third-party materials (including, without limitation, websites) may be provided as a convenience but are not controlled by any entity. You acknowledge and agree that we are not responsible for any aspect of the information, content, or services contained in any third-party materials or on any third-party sites accessible or linked to the Interface or available via other relevant tools.
+No representation is made as to the accuracy, completeness, or appropriateness for any particular purpose of any pricing information distributed via the Interface.
+Non-private data and data storage:
+A widespread belief is that transactions involving blockchains are anonymous. In fact, a central feature of blockchains and thus, blockchain-based transactions, is that they are transparent. Your public key and your wallet address, which you need to buy or sell items on the blockchain, are visible to anyone. To the extent your public key or wallet address can be linked back to you, it would be possible for someone to determine your identity and the crypto assets you own. You therefore acknowledge that your activity relating to using is not private and may be visible to third parties, including on public blockchains.
+Disruptions and cyber risks:
+The functioning of the Services may be disrupted from time to time because of system overloads, software or hardware issues, power outages, errors, or instability in experimental features or issues with the functioning of other services and software on which the Interface is dependent.
+Users face the risk of cybersecurity events, which may negatively affect the operation of the Services and their availability.
+Users accept that we have no liability to them for any losses arising from any such disruptions or cybersecurity events and that we do not warrant that their use will be error-free or uninterrupted.
+Users acknowledge that it is their responsibility to ensure that any hardware and software and access credentials they use to access the Services and their wallets are kept secure. Users acknowledge that we are not liable for any security breaches or other failings of any such systems.
+5. DISCLAIMER OF WARRANTIES – LIABILITY
+5.1 No right of withdrawal
+Consumer Users – within the meaning of the Consumer Code – expressly acknowledge and agree that the Services are to be carried out immediately.
+Therefore, under these Terms, Users that are considered as consumers – within the meaning of the Consumer Code – expressly waive their right of withdrawal, should such right exist, and give their express consent for the execution of the Terms and the Services before the end of the right of withdrawal.
+Therefore, these Terms are concluded as soon as they are accepted by the User, without both Parties having to wait for the expiration of the withdrawal period.
+5.2 No warranties by ADDU
+You expressly understand and agree that your use of the Services and/or the Interface is at your sole risk. The Services (including the Interface) are provided "as is" and "as available," without warranties of any kind, either express or implied, including, without limitation, implied warranties of merchantability, fitness for a particular purpose, or non-infringement. You acknowledge and expressly agree that we have no control over, and no duty to take any action regarding: which users gain access to or use the Services; what effects the content of the Interface may have on you; how you may interpret or use the content of the Interface.
+There are no warranties that access to the Interface and/or the Services will be continuous, uninterrupted, timely, or secure, that the information made available via, contained on, or used by the Interface, will be accurate, reliable, complete, or current, or that the Services will be free from errors, defects, viruses, or other harmful material. You acknowledge and expressly accept that the Interface and/or the Services (a) may contain bugs, errors, and defects, (b) may function improperly or be subject to periods of downtime and unavailability, (c) may result in total or partial loss or corruption of data, and (d) may be modified at any time, including through the release of subsequent versions, all with or without notice to you.
+No advice, information, or statement that any contributor to the Protocol makes should be treated as creating any warranty concerning the Services.
+We do not endorse, guarantee, or assume responsibility for any advertisements, offers, or statements made by third parties concerning the Services or the Interface.
+You acknowledge and expressly agree that we are not responsible for transferring, safeguarding, or maintaining your private keys or any crypto currency associated therewith. If you lose, mishandle, or have stolen associated crypto currency private keys, you acknowledge and expressly agree that you may not be able to recover associated crypto assets, and that we are not responsible for such loss. You acknowledge and expressly agree that we are not responsible for any loss, damage, or liability arising from your failure to comply with the terms hereunder.
+5.3 Limitation of Liability
+You acknowledge and expressly agree that you assume full responsibility for your use of the Services and/or the Interface. You acknowledge and expressly agree that any information you send or receive during your use of the Services and/or the Interface may not be secure and may be intercepted or acquired by unauthorized parties. You acknowledge and expressly agree that your use of the Services and/or the Interface is at your own risk.
+Recognizing such, you understand and agree that, to the fullest extent permitted by applicable Law, we will not be liable to you for any direct, indirect, incidental, special, consequential, punitive, exemplary, or other damages of any kind, including without limitation damages for loss of profits, goodwill, use, data, or other tangible or intangible losses or any other damages based on contract, tort, strict liability, or any other theory (even if we had been advised of the possibility of such damages), resulting from:
+the Services and/or the Interface;
+the use or the inability to use the Services and/or the Interface;
+unauthorized access to or alteration of your transmissions or data;
+statements or conduct of any third party on the Services and/or the Interface;
+any actions we take or fail to take as a result of communications you send to us;
+errors;
+technical malfunctions;
+failures, including public utility or telephone outages;
+omissions, interruptions, latency, deletions, or defects of any device or network, providers, or software (including, but not limited to, those that do not permit participation in the Services);
+any injury or damage to computer equipment;
+inability to fully access the Services and/or the Interface or any other website;
+theft, tampering, destruction, or unauthorized access to, images or other content of any kind;
+data that is processed late or incorrectly or is incomplete or lost;
+typographical, printing, or other errors, or any combination thereof; or
+any other matter relating to the Services and/or the Interface.
+The Association shall not be liable for any losses, damages, or liabilities arising directly or indirectly from any unauthorized access, breach, or hack of the underlying Protocol, or any third-party software, hardware, or services utilized by the User. The User acknowledges and agrees that decentralized finance (DeFi) protocols and blockchain technology involve inherent risks, including potential vulnerabilities in the Protocol or the User Devices, which may result in partial or total loss of funds. The Association does not guarantee the security or functionality of the Protocol, and it is the User's sole responsibility to take all necessary precautions to protect their assets and private keys.
+ADDU may, at its sole discretion, decide to conduct an Airdrop of Usual tokens to eligible Users. Participation in the Airdrop is not guaranteed, and ADDU reserves the right to modify, suspend, or cancel the Airdrop at any time, without notice or liability.
+ADDU shall not be liable for any losses, damages, or liabilities arising from the User’s failure to receive, claim, or secure the distributed Usual tokens, including, but not limited to, losses due to technical issues, user errors, incorrect wallet addresses, third-party service failures, or unauthorized access to the User’s wallet. The User acknowledges that participation in the Airdrop involves inherent risks and accepts full responsibility for securing any tokens received.
+5.4 Indemnification
+You agree to release and to indemnify, defend, and hold harmless ADDU and its affiliates, from and against any and all losses, liabilities, expenses, damages, costs (including attorneys' fees, fees or penalties imposed by any regulatory authority and court costs) claims, or actions of any kind whatsoever arising or resulting from your use of the Services and/or the Interface, your violation of these Terms, your violation of any Law, rule, or regulation, or the rights of any third party, and any of your acts or omissions that implicate publicity rights, defamation, or invasion of privacy.
+6. LIMITATION OF PARTICIPATION – TERMINATION – ACCOUNT CLOSURE
+6.1 Termination by Us
+To the maximum extent permitted by applicable law, we may at any time and without liability, terminate, suspend, or limit your use of the Services, including, but not limited to, where: (a) we reasonably suspect you of acting in breach of these Terms and/or all other applicable terms; (b) we are required to do so by applicable Law, regulation, or any court or other authority to which the use of the Services is subject to in any jurisdiction; (c) we suspect that your use of the Services is potentially connected to any unlawful activities (including but not limited to money laundering, terrorism financing, and fraudulent activities); (d) we have concerns that the Services are being used in a fraudulent or unauthorized manner.
+You shall not be entitled to any payment, compensation, or damages whatsoever from us in relation to any suspension, limitation, or termination of your use of the Services for any reason whatsoever. Any suspension, limitation, or termination of your use of the Services for any reason whatsoever shall not release you from any liability or responsibility on your part, which at the time of such suspension, limitation, or termination, has already accrued.
+The rights of suspension, limitation, and termination under these Terms shall be without prejudice to any other rights or remedies which we may have (whether under these Terms, applicable law, or otherwise).
+6.2 Consequences of Termination
+You will no longer be entitled nor able to use the Services.
+7. PROCESSING OF PERSONAL DATA
+The data protection and cookie policy is available at https://gitbook.usual.money/ressources-and-ecosystem/privacy-policy.
+8. GENERAL PROVISIONS
+8.1 Third-Party Links
+The Interface may provide, or third parties may provide, links to other websites, applications, or resources. Because we have no control over such sites, applications, and resources, you acknowledge and expressly agree that we are not responsible for the availability of such external sites, applications, or resources, and do not endorse and are not responsible or liable for any content, advertising, products, or other materials on or available from such sites or resources.
+You further acknowledge and agree that we shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such site or resource
+Previous Privacy Policy
+Next Analytics
+Last updated 8 months ago

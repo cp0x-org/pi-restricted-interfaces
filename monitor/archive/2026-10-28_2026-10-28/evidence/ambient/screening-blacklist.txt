@@ -1,0 +1,9 @@
+check: ambient/screening-blacklist
+about: Hardcoded OFAC address list in the frontend; a listed wallet is disconnected and sent to ofac.treasury.gov
+source: https://github.com/CrocSwap/ambient-ts-app/blob/90e569a9bbcab62907c7713ce25c6ab5b0246baf/src/ambient-utils/constants/blacklist.ts#L1
+checked_at: 2026-10-28T22:37:57Z
+fetched: https://raw.githubusercontent.com/CrocSwap/ambient-ts-app/90e569a9bbcab62907c7713ce25c6ab5b0246baf/src/ambient-utils/constants/blacklist.ts
+sha256: 22652001ce74c35f25ea7203c4f076d3b032bf98608ba61782d335b6c115dfec
+--------------------------------------------------------------------------------
+L1: const ofacBlacklist = [
+L6:     '0x098b716b8aaf21512996dc57eb0615e2383e2f96',

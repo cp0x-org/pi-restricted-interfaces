@@ -9,18 +9,19 @@ dataset and keep the history of versions.
                (added and removed countries are listed in CHANGES.md). A failed, erroring or skipped check never
                changes the catalog: it is listed under "needs review" instead, as is a counted claim without a check.
   3. build     the monitor:build command from package.json with meta.generated = scan date: regenerates
-               src/data/interfaces.json (what the site shows) and monitor/out/*
+               the site files in src/data/ (what the site shows) and monitor/out/*
   4. compare   research/combine.py: the table rebuilt from the checks, compared with the new site dataset
   5. versions  monitor/current/ (the version the site shows) moves to monitor/archive/<scanned>_<archived>/ and the
                new run is written to monitor/current/: VERSION.json, CHANGES.md, table.csv, report.md, the check
                results, the evidence, the check definitions and a copy of the catalog
+  6. publish   monitor/scripts/publish.py: the site files go to dataset/current/, the previous ones to dataset/archive/
 
 Usage (from pi-restrict-interface/):
   python3 -I monitor/scripts/update.py              # pnpm monitor:update
   python3 -I monitor/scripts/update.py --dry-run    # run the checks, print what would change, write nothing
   python3 -I monitor/scripts/update.py --no-sync    # record a version without touching monitor/data/interfaces.json
   python3 -I monitor/scripts/update.py --reuse      # reuse research/out from the last run instead of checking again
-Afterwards: read monitor/current/CHANGES.md, run `pnpm build`, commit monitor/, research/checks/ and src/data/.
+Afterwards: read monitor/current/CHANGES.md, run `pnpm build`, commit monitor/, research/checks/, src/data/ and dataset/.
 """
 import argparse, csv, json, os, shlex, shutil, subprocess, sys
 from collections import OrderedDict
@@ -394,7 +395,11 @@ def main():
     print(f"=== version {version} written to {rel(CURRENT)}: {info['reproduced']} of {info['site_interfaces']} reproduced, "
           f"{info['catalog_changes']} catalog change(s), {info['needs_review']} item(s) need review, "
           f"{info['sweep_findings']} sweep finding(s), {info['not_checked']} source(s) not checkable")
-    print("next: read monitor/current/CHANGES.md, then `pnpm build` and commit monitor/, research/checks/ and src/data/")
+
+    print("\n=== publish")
+    if call([sys.executable, "-I", os.path.join(HERE, "publish.py")]):
+        sys.exit("publish failed; run `pnpm monitor:publish` after fixing it")
+    print("next: read monitor/current/CHANGES.md, then `pnpm build` and commit monitor/, research/checks/, src/data/ and dataset/")
 
 
 if __name__ == "__main__":

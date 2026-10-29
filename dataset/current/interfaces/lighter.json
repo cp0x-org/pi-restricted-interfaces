@@ -1,0 +1,1730 @@
+{
+  "id": "lighter",
+  "name": "Lighter",
+  "description": "Lighter is a perpetual futures exchange built as a zk-rollup: order matching and liquidations run off-chain and are verified on-chain with zero-knowledge proofs. Deposits settle through its Ethereum contract, and the app also takes deposits from other EVM networks through a universal deposit address.",
+  "description_zh": "Lighter 是一个以 zk-rollup 形式构建的永续合约交易所：订单撮合和清算在链下运行，并通过零知识证明在链上验证。存款通过其以太坊合约结算，应用还可通过通用存款地址接收来自其他 EVM 网络的存款。",
+  "category": "Perps",
+  "chains": "Lighter (zk L2)",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "BNB Chain",
+    "Polygon",
+    "Optimism",
+    "Avalanche",
+    "HyperEVM",
+    "Arc",
+    "Monad",
+    "Robinhood Chain"
+  ],
+  "url": "https://app.lighter.xyz",
+  "referral_url": "https://app.lighter.xyz/?referral=CP0XCOOL",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "US",
+      "CA",
+      "GB",
+      "UA",
+      "CN",
+      "RU",
+      "BY",
+      "SY",
+      "VE",
+      "CU",
+      "MM",
+      "SD"
+    ],
+    "close_only": [],
+    "method": "The API rejects requests with geo_restriction_not_allowed (\"You are accessing Lighter from a restricted jurisdiction\") and the app shows a geo-blocked banner; the Terms log the IP to enforce access restrictions. The blocked countries are those where GET /api/v1/geoLocation answered error 20558 to the live probe (see the observations; 2026-10-12: 14 of 62 countries, among them US, CA, GB, RU, UA, CN); the Terms name 14 jurisdictions."
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "tos_only",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://lighter.xyz/terms",
+    "updated": "2025-12-29",
+    "us": "yes",
+    "us_scope": "",
+    "restricted": "US, Canada, UK, China, North Korea, Russia, Ukraine, Cuba, Iran, Venezuela, Sudan, Belarus, Myanmar, Syria",
+    "restricted_codes": [
+      "US",
+      "CA",
+      "GB",
+      "CN",
+      "KP",
+      "RU",
+      "UA",
+      "CU",
+      "IR",
+      "VE",
+      "SD",
+      "BY",
+      "MM",
+      "SY"
+    ]
+  },
+  "notes": "Closed frontend; SDKs are open. The geo restriction is an API error code the app turns into a banner. Wallet login goes through Dynamic, whose public project settings carry enableExternalWalletOnTransactionSanctions: true (effect not verified).",
+  "live": [],
+  "geo_endpoints": [],
+  "api_probes": [
+    {
+      "name": "geoLocation",
+      "method": "GET",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "note": "The API's geo check, polled by the app; error 20558 turns into the geo-blocked banner.",
+      "flags": [
+        "code"
+      ],
+      "rules": [
+        {
+          "match": "\"code\"\\s*:\\s*20558",
+          "state": "blocked",
+          "note": "API error 20558 geo_restriction_not_allowed"
+        },
+        {
+          "match": "^HTTP 200\\b",
+          "state": "ok",
+          "note": "code 200: no geo restriction"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    "app.lighter.xyz bundle: geo_restriction_not_allowed, geo-blocked banner",
+    "https://lighter.xyz/terms",
+    "https://apidocs.lighter.xyz/docs/deposits-transfers-and-withdrawals"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "C",
+  "restrictions": {
+    "count": 12,
+    "countries": 12,
+    "mechanisms": []
+  },
+  "category_group": "perps",
+  "chain_tags": [
+    "other"
+  ],
+  "observations": [
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:18:41Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:18:38Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:57:04Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:57:01Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:21Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:18Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:38:47Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:38:44Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:26Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:23Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:32Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:22Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:46:04Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 400,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "blocked",
+      "flags": {
+        "code": 20558
+      },
+      "note": "geoLocation: API error 20558 geo_restriction_not_allowed"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:46:02Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:59Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 400,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "blocked",
+      "flags": {
+        "code": 20558
+      },
+      "note": "geoLocation: API error 20558 geo_restriction_not_allowed"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:57Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:58Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 400,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "blocked",
+      "flags": {
+        "code": 20558
+      },
+      "note": "geoLocation: API error 20558 geo_restriction_not_allowed"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:56Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:06:02Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:06:00Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:09:55Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:09:52Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:57Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:55Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:57Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 400,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "blocked",
+      "flags": {
+        "code": 20558
+      },
+      "note": "geoLocation: API error 20558 geo_restriction_not_allowed"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:06:00Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:57Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:51:35Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 400,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "blocked",
+      "flags": {
+        "code": 20558
+      },
+      "note": "geoLocation: API error 20558 geo_restriction_not_allowed"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:51:32Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:39Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:37Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:46Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:44Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:57Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:55Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:19Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 400,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "blocked",
+      "flags": {
+        "code": 20558
+      },
+      "note": "geoLocation: API error 20558 geo_restriction_not_allowed"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:17Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:34Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:32Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:18Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:15Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:25:09Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:25:07Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:19:23Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:19:20Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:33Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:30Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:53Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:50Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:48Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:32:15Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:32:11Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:39:34Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:39:31Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:36:24Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:36:21Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:09Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:02Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:59:13Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:59:10Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:59:07Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:59:05Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:11:10Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:11:07Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:41Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 400,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "blocked",
+      "flags": {
+        "code": 20558
+      },
+      "note": "geoLocation: API error 20558 geo_restriction_not_allowed"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:39Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:54Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:51Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:30:46Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:30:43Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:37:47Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:37:43Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:04:47Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:04:44Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:11:20Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:11:18Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:29:05Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:29:03Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:31Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:28Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:16Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:14Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:45:25Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 400,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "blocked",
+      "flags": {
+        "code": 20558
+      },
+      "note": "geoLocation: API error 20558 geo_restriction_not_allowed"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:45:22Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:19:20Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:19:16Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:02:32Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 400,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "blocked",
+      "flags": {
+        "code": 20558
+      },
+      "note": "geoLocation: API error 20558 geo_restriction_not_allowed"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:15:23Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:24Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:22Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:01:41Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:01:38Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:51:08Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 400,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "blocked",
+      "flags": {
+        "code": 20558
+      },
+      "note": "geoLocation: API error 20558 geo_restriction_not_allowed"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:51:06Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:25:42Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:25:39Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:56Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:53Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:38:17Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:38:13Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:15:24Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 400,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "blocked",
+      "flags": {
+        "code": 20558
+      },
+      "note": "geoLocation: API error 20558 geo_restriction_not_allowed"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:15:22Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:57Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 400,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "blocked",
+      "flags": {
+        "code": 20558
+      },
+      "note": "geoLocation: API error 20558 geo_restriction_not_allowed"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:54Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:51:12Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 400,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "blocked",
+      "flags": {
+        "code": 20558
+      },
+      "note": "geoLocation: API error 20558 geo_restriction_not_allowed"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:51:10Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:25:09Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:25:06Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:33Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:30Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:38:27Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:38:25Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:56Z",
+      "kind": "api",
+      "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "http_status": 200,
+      "final_url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+      "ui_state": "ok",
+      "flags": {
+        "code": 200
+      },
+      "note": "geoLocation: code 200: no geo restriction"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:53Z",
+      "kind": "site",
+      "url": "https://app.lighter.xyz",
+      "http_status": 200,
+      "final_url": "https://app.lighter.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

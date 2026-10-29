@@ -1,0 +1,96 @@
+check: spark/geo-us-report
+about: Press report (Aug 2023): Spark restricts United States users
+source: https://cointelegraph.com/news/makerdao-spark-protocol-block-vpn-users-controversy
+checked_at: 2026-10-28T22:56:57Z
+fetched: https://cointelegraph.com/news/makerdao-spark-protocol-block-vpn-users-controversy
+sha256: b825d63d311ba1eeca6643114e223c5d3a2ac5e9372bbcac730c139ce9717d85
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+Controversy as MakerDAO’s Spark Protocol blocks users with VPNs
+Ecosystem
+English
+News
+Markets Features
+Research Opinion Podcasts Newsletters Commissioned
+About
+DOGE $0.07986 1.40%
+TRX $0.3298 0.54%
+LINK $11.82 2.53%
+ZEC $1,313.68 0.25%
+ADA $0.2060 0.27%
+XRP $1.32 0.07%
+ETH $2,360.71 0.49%
+BTC $81,276.90 0.50%
+XMR $600.91 1.29%
+BNB $756.63 1.52%
+XLM $0.1729 1.71%
+SOL $102.52 1.25%
+HYPE $80.92 0.77%
+Written by Brayden Lindrea former writer Edited by Felix Ng staff editor
+Written by Brayden Lindrea former writer
+Edited by Felix Ng staff editor
+Controversy as MakerDAO’s Spark Protocol blocks users with VPNs
+Latest News Published Aug 7, 2023
+Users attempting to access Spark Protocol with a virtual private network will not be able to, sparking criticism from supporters of privacy.
+MakerDAO, one of the early pioneers of decentralized finance, has sparked criticism over its decision to block virtual private network (VPN) users from accessing its recently launched lending platform, Spark Protocol.
+At the time of writing, VPN users that attempt to access the Spark Protocol website will be met with an error: “Accessing this website via VPN is not allowed.”
+Cointelegraph tested accessing the site with Australian and Singapore-based VPNs and was met with the warning. Source: Spark Protocol
+The measure appears to be linked to Maker’s attempt to restrict United States users from accessing the crypto lending platform, discussed in a May 9 update to Spark Protocol’s terms of service warns against the use of VPNs to circumvent the block.
+Spark Protocol’s terms of service prohibits U.S. users from using a VPN to conceal their U.S. residency. Source: Spark Protocol
+In an Aug. 6 tweet, DeFi analyst Chris Blec was among those saying he was “disgusted” with the decision, highlighting it effectively acts as a blanket ban on VPNs across the globe, not just in the U.S.
+“It’s one thing to block US residents. It’s a whole other thing to block anyone in the entire world who is using a VPN for privacy,” said Blec, adding it is an “actual war on privacy.”
+https://t.co/jQMBepF1j7 — Chris Blec (@ChrisBlec) August 6, 2023
+Blec, a self-proclaimed decentralization and privacy advocate, also took shot at MakerDAO’s creator Rune Christensen and the firm’s other developers in a response tweet, stating that they have prioritized profits over user privacy:
+“The root of the problem here is that these developers are putting profit over principle. They’re putting their bank account balance ahead of your privacy and your rights.”
+Cointelegraph has reached out to MakerDAO for comment, but did not receive an immediate response.
+Related: MakerDAO increases DAI yield in bid to boost demand
+Launched in May, the Spark Protocol supposedly offers users up to 8% in annual returns by lending DAI. The lending platform was created as a soft fork of Aave v3 by Phoenix Labs, a blockchain research and development firm launched by MakerDAO.
+Prior to lending cryptocurrencies in Spark Protocol, users must agree that they are not using a VPN. Source: Spark Protocol
+Spark Protocol is said to use TRM’s blockchain intelligence services to block wallets from Spark Protocol that engage in legally prohibited conduct.
+Magazine: Joe Lubin — The truth about ETH founders split and ‘Crypto Google’
+Subscribe to daily byte-sized crypto news from Cointelegraph
+Subscribe
+Cointelegraph is committed to independent, transparent journalism. This news article is produced in accordance with Cointelegraph’s Editorial Policy and aims to provide accurate and timely information. Readers are encouraged to verify information independently.
+Business
+DAO
+Lending
+VPN
+Stablecoin
+MakerDAO
+Dai
+Maker
+Blockchain
+More on the subject
+Aviva Investors launches tokenized share class of $29B Sterling fund on XRP Ledger
+Oct 26, 2026
+Zoltan Vardai
+Netanyahu floats use of blockchain as solution to potential financial sanctions
+Oct 25, 2026
+Robert Lakin
+China targets 2030 for its national blockchain network buildout
+Oct 23, 2026
+Yohan Yun
+Aviva Investors launches tokenized share class of $29B Sterling fund on XRP Ledger
+Oct 26, 2026
+Zoltan Vardai
+Netanyahu floats use of blockchain as solution to potential financial sanctions
+Oct 25, 2026
+Robert Lakin
+China targets 2030 for its national blockchain network buildout
+Oct 23, 2026
+Yohan Yun
+Editor's choice
+Google Cloud outlines MPC service for institutional Bitcoin custody
+Bitcoin price bounce rejected at 50-day trend line ahead of FOMC, earnings
+Cybersecurity’s Black October: How to protect yourself
+Settlement concerns prompt Euronext to halt CoinShares’ Zcash ETP ahead of debut
+DTCC unit launches tokenization services
+News Latest News Markets Bitcoin Ethereum Altcoins Blockchain Regulation
+Magazine All Articles Features Crypto People Hodler's Digest Asia Express AI Eye Crypto Culture Crypto Around the World Reviews
+Commissioned Articles Press Releases Research Special Projects
+Ecosystem Formula Accelerator Decentralization Guardians Events LONGITUDE Event CT Connect
+About About Cointelegraph History of Cointelegraph Podcasts Newsletters Editorial Policy Ads Disclosure Financial Risk Disclaimer
+Cointelegraph is committed to providing independent, high-quality journalism across the crypto, blockchain, AI, and fintech industries.
+All news, reviews, and analyses are produced with full journalistic independence and integrity. For more details on our standards and processes, please read our Editorial Policy .
+© Cointelegraph 2013 - 2026 Terms of Service and Privacy Policy

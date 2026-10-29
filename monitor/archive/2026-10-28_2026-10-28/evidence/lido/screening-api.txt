@@ -1,0 +1,22 @@
+check: lido/screening-api
+about: Lido's /api/validation answers isValid:false for the sanctioned wallet and true for the control
+source: https://stake.lido.fi/api/validation?address={address}
+checked_at: 2026-10-28T22:57:12Z
+--------------------------------------------------------------------------------
+=== sdn (0x098B716B8Aaf21512996dC57EB0615e2383E2f96) ===
+request: GET https://stake.lido.fi/api/validation?address=0x098B716B8Aaf21512996dC57EB0615e2383E2f96
+status: 200
+final_url: https://stake.lido.fi/api/validation?address=0x098B716B8Aaf21512996dC57EB0615e2383E2f96
+header server: cloudflare
+header cf-ray: a51d89c0a8286277-OTP
+header content-type: application/json; charset=utf-8
+body: {"isValid":false}
+
+=== control (0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed) ===
+request: GET https://stake.lido.fi/api/validation?address=0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed
+status: 200
+final_url: https://stake.lido.fi/api/validation?address=0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed
+header server: cloudflare
+header cf-ray: a51d89c27e03b0fa-OTP
+header content-type: application/json; charset=utf-8
+body: {"isValid":true}

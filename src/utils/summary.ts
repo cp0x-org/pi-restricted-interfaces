@@ -1,6 +1,6 @@
 // Aggregates for the Summary tab (also used by the build-time prerender, so imports stay relative).
 import { LEVELS } from '../types/restrictions';
-import type { CountryToken, InterfaceEntry, Layer, Level, MechanismKind } from '../types/restrictions';
+import type { CountryToken, InterfaceRow, Layer, Level, MechanismKind } from '../types/restrictions';
 
 /** Enforced = confirmed or reported; ToS only = written in the terms, not enforced; none = checked, not found (or off by default). */
 export const MECHANISM_STATES = ['enforced', 'tos_only', 'none', 'unknown'] as const;
@@ -65,7 +65,7 @@ interface Summary {
 
 const ENFORCED = ['yes', 'reported'];
 
-function mechanismState(e: InterfaceEntry, kind: MechanismKind): MechanismState {
+function mechanismState(e: InterfaceRow, kind: MechanismKind): MechanismState {
   if (kind === 'vpn') {
     const s = e.vpn.s;
     return s === 'detect' || s === 'block' ? 'enforced' : s === 'tos_only' ? 'tos_only' : s === 'unknown' ? 'unknown' : 'none';
@@ -85,7 +85,7 @@ const VENDOR_RE: [Provider, RegExp][] = [
 const LIST_RE = /hardcoded|hard-coded|bundled blacklist|blacklist|blocklist|local list|static list|ofac list/i;
 
 /** Screening providers named in the record; a list-only check is "list", anything unnamed is "undisclosed". */
-function screeningProviders(e: InterfaceEntry): Provider[] {
+function screeningProviders(e: InterfaceRow): Provider[] {
   const text = e.screening.provider || '';
   const found: Provider[] = VENDOR_RE.filter(([, re]) => re.test(text)).map(([p]) => p);
   if (LIST_RE.test(text)) found.push('list');
@@ -99,7 +99,7 @@ function emptyLevels(): Record<Level, number> {
   return Object.fromEntries(LEVELS.map((l) => [l, 0])) as Record<Level, number>;
 }
 
-function groupRow(key: string, rows: InterfaceEntry[]): GroupRow {
+function groupRow(key: string, rows: InterfaceRow[]): GroupRow {
   const levels = emptyLevels();
   rows.forEach((e) => (levels[e.level] += 1));
   const rated = rows.filter((e) => e.level !== 'n/a');
@@ -126,7 +126,7 @@ const byPermissionless = (a: GroupRow, b: GroupRow): number =>
  * Summary over the current interfaces (legacy versions are left out so a protocol is not counted twice).
  * Networks with fewer than `minNetwork` interfaces are dropped from the network breakdown.
  */
-export function buildSummary(all: InterfaceEntry[], minNetwork = 5): Summary {
+export function buildSummary(all: InterfaceRow[], minNetwork = 5): Summary {
   const items = all.filter((e) => e.lifecycle !== 'legacy');
   const overall = groupRow('all', items);
 
@@ -156,9 +156,9 @@ export function buildSummary(all: InterfaceEntry[], minNetwork = 5): Summary {
     new Set(e.tos.restricted_codes).forEach((tok) => (row(tok).tos += 1));
   });
 
-  const byCategory = new Map<string, InterfaceEntry[]>();
+  const byCategory = new Map<string, InterfaceRow[]>();
   items.forEach((e) => byCategory.set(e.category_group, [...(byCategory.get(e.category_group) ?? []), e]));
-  const byNetwork = new Map<string, InterfaceEntry[]>();
+  const byNetwork = new Map<string, InterfaceRow[]>();
   items.forEach((e) => e.networks.forEach((n) => byNetwork.set(n, [...(byNetwork.get(n) ?? []), e])));
 
   const restrictedItems = items.filter((e) => e.restrictions.count > 0);

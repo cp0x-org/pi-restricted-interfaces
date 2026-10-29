@@ -1,24 +1,24 @@
 check: aave/screening-api
 about: Aave's /api/preflight-compliance answers result:false for the sanctioned wallet and true for the control
 source: https://app.aave.com/api/preflight-compliance/?address={address}
-checked_at: 2026-10-11T21:19:03Z
+checked_at: 2026-10-28T22:57:07Z
 --------------------------------------------------------------------------------
 === sdn (0x098B716B8Aaf21512996dC57EB0615e2383E2f96) ===
 request: GET https://app.aave.com/api/preflight-compliance/?address=0x098B716B8Aaf21512996dC57EB0615e2383E2f96
 status: 200
 final_url: https://app.aave.com/api/preflight-compliance/?address=0x098B716B8Aaf21512996dC57EB0615e2383E2f96
 header server: cloudflare
-header cf-ray: a490e69a7fe5c9d4-OTP
+header cf-ray: a51d89937dc8b685-OTP
 header content-type: application/json; charset=utf-8
-header x-vercel-id: fra1::iad1::llq42-1791753542877-0f0f22a10909
-body: {"result":false,"nextCheck":"2026-10-11T21:43:40.772139476Z"}
+header x-vercel-id: fra1::iad1::qwxtr-1793228224638-73440077c80f
+body: {"result":false,"nextCheck":"2026-10-29T00:57:06.060323073Z"}
 
 === control (0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed) ===
 request: GET https://app.aave.com/api/preflight-compliance/?address=0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed
 status: 200
 final_url: https://app.aave.com/api/preflight-compliance/?address=0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed
 header server: cloudflare
-header cf-ray: a490e69cab7fe40a-OTP
+header cf-ray: a51d899da817ca21-OTP
 header content-type: application/json; charset=utf-8
-header x-vercel-id: fra1::iad1::pmmth-1791753543184-75e11314aeda
-body: {"result":true,"nextCheck":"2026-10-11T21:57:42.130829129Z"}
+header x-vercel-id: fra1::iad1::6lhmf-1793228226212-0aae4e58eac8
+body: {"result":true,"nextCheck":"2026-10-29T00:57:07.093757592Z"}

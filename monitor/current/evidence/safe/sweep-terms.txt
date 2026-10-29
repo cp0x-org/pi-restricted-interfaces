@@ -1,9 +1,9 @@
 check: safe/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://safe.global/terms
-checked_at: 2026-10-11T21:18:28Z
+checked_at: 2026-10-28T22:55:50Z
 fetched: https://safe.global/terms
-sha256: 0fea6f5e9506860cce2d0fdd9214270bee586723ac1d97b35acf61b25dd87e5e
+sha256: 6d7f90d5f8f3f087e146f402cfcf5a3af1b20c43daf329357dfcee0a9e34c6ff
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

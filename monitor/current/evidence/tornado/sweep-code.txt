@@ -1,7 +1,7 @@
 check: tornado/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/tornadocash/tornado-classic-ui/tree/a83fae0772c8da084c0e76b3a756b456f5b9f5bb
-checked_at: 2026-10-11T21:04:21Z
+checked_at: 2026-10-28T22:37:30Z
 fetched: https://codeload.github.com/tornadocash/tornado-classic-ui/tar.gz/a83fae0772c8da084c0e76b3a756b456f5b9f5bb
 sha256: 7cda0f9bbaa221b42ead01532b1369c397d4301cfe26f2ff1e7e235f5d84636c
 --------------------------------------------------------------------------------

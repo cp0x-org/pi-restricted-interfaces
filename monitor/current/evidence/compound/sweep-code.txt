@@ -1,7 +1,7 @@
 check: compound/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/compound-finance/webb3-frontend/tree/5e556e553f223d37842fd91c2eed2f21efb98a6d
-checked_at: 2026-10-11T21:03:01Z
+checked_at: 2026-10-28T22:35:27Z
 fetched: https://codeload.github.com/compound-finance/webb3-frontend/tar.gz/5e556e553f223d37842fd91c2eed2f21efb98a6d
 sha256: 5f8aec0c2fcb1d458b70d56e09345f47ec6ac579e9012efba5ac6abc43f9ec9d
 --------------------------------------------------------------------------------

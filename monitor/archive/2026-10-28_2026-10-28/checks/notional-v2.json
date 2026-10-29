@@ -1,0 +1,48 @@
+{
+  "id": "notional-v2",
+  "name": "Notional V2",
+  "targets": {
+    "app": "https://v2.notional.finance",
+    "repo": null,
+    "terms": null,
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "no-geo",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "no",
+      "about": "The V2 app's JavaScript has no geo-IP lookup or country block",
+      "source": {
+        "url": "https://v2.notional.finance",
+        "scripts": "^https://v2\\.notional\\.finance/(?!.*\\.es5\\.js)",
+        "follow": {
+          "regex": "[{,](\\d+):\"([0-9a-f]{16})\"",
+          "path": "{1}.{2}.js"
+        }
+      },
+      "absent": [
+        "api\\.country\\.is|ipapi\\.co|ipinfo\\.io|freeipapi|ip-api\\.com|cdn-cgi/trace|/geoip\\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)"
+      ]
+    },
+    {
+      "id": "no-screening",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "no",
+      "about": "The V2 app's JavaScript has no wallet-screening call or sanctions list",
+      "source": {
+        "url": "https://v2.notional.finance",
+        "scripts": "^https://v2\\.notional\\.finance/(?!.*\\.es5\\.js)",
+        "follow": {
+          "regex": "[{,](\\d+):\"([0-9a-f]{16})\"",
+          "path": "{1}.{2}.js"
+        }
+      },
+      "absent": [
+        "trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\\w-])|preflight-compliance|/address/status\\b|compliance/screen|/v\\d/check/"
+      ]
+    }
+  ]
+}

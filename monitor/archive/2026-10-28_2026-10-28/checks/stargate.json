@@ -1,0 +1,62 @@
+{
+  "id": "stargate",
+  "name": "Stargate",
+  "targets": {
+    "app": "https://stargate.finance",
+    "repo": null,
+    "terms": "https://stargate.finance/terms",
+    "endpoints": [
+      "https://iris-api.circle.com/v1/publicKeys"
+    ]
+  },
+  "checks": [
+    {
+      "id": "geo-terms",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "tos_only",
+      "about": "The Terms exclude persons located in comprehensively sanctioned jurisdictions (no country list, no technical block verified)",
+      "source": {
+        "url": "https://stargate.finance/terms",
+        "kind": "terms"
+      },
+      "expect": [
+        "located in, incorporated in, or otherwise organized or established in, or resident of, any country, territory, or jurisdiction that is the subject of comprehensive"
+      ]
+    },
+    {
+      "id": "prod-cctp-region",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production JS: before a CCTP transfer the app asks Circle's /v1/publicKeys and throws UsdcCctpRegionRestrictedError when it fails",
+      "source": {
+        "url": "https://stargate.finance"
+      },
+      "expect": [
+        "\"https://iris-api\\.circle\\.com\"",
+        "url:\"/v1/publicKeys\"",
+        "CCTP transfers are not available in your region",
+        "\"validateRegion\""
+      ]
+    },
+    {
+      "id": "circle-api-ua",
+      "type": "live",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Live: Circle's CCTP API refuses a visitor from Ukraine (HTTP 403 'Lockout'), so the CCTP route is refused",
+      "source": {
+        "url": "https://iris-api.circle.com/v1/publicKeys",
+        "country": "UA"
+      },
+      "expect": [
+        "^status: 403$",
+        "Lockout"
+      ],
+      "countries": [
+        "UA"
+      ]
+    }
+  ]
+}

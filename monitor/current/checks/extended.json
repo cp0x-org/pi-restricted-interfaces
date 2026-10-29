@@ -1,0 +1,66 @@
+{
+  "id": "extended",
+  "name": "Extended",
+  "targets": {
+    "app": "https://app.extended.exchange",
+    "repo": null,
+    "terms": "https://docs.extended.exchange/extended-resources/legal/terms-of-use",
+    "endpoints": [
+      "https://api.starknet.extended.exchange/geo"
+    ]
+  },
+  "checks": [
+    {
+      "id": "prod-geo-block",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Production JS: the API error GLOBAL.NOT_AVAILABLE_IN_YOUR_REGION replaces the app with 'Extended is not available in your region'",
+      "source": {
+        "url": "https://app.extended.exchange"
+      },
+      "expect": [
+        "GLOBAL\\.NOT_AVAILABLE_IN_YOUR_REGION",
+        "Extended is not available in your region"
+      ]
+    },
+    {
+      "id": "prod-vpn-geo",
+      "type": "bundle",
+      "claim": "vpn",
+      "status": "detect",
+      "about": "Production JS: GET /geo answering 451 (UnavailableForLegalReasons) with the load balancer's error code VPN is read as a VPN block",
+      "source": {
+        "url": "https://app.extended.exchange"
+      },
+      "expect": [
+        "\\.get\\(`/geo`\\)",
+        "UnavailableForLegalReasons",
+        "\\]===`VPN`\\)return`VPN`"
+      ]
+    },
+    {
+      "id": "geo-restricted-countries",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "tos_only",
+      "about": "Jurisdictions named on Extended's Restricted Countries page (documentation only until a per-country check confirms where the /geo block applies)",
+      "source": {
+        "url": "https://docs.extended.exchange/extended-resources/legal/restricted-countries",
+        "kind": "docs"
+      },
+      "expect": [
+        "including without limitation:"
+      ],
+      "section": {
+        "start": "including without limitation:\\s*\\(A\\)",
+        "end": "; and \\(B\\)"
+      },
+      "exclude": [
+        "China \\(",
+        "Ukraine \\("
+      ],
+      "countries": "names"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 check: aave/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/aave/interface/tree/32cc548b980baadea36cfea5227fc144d3f49958
-checked_at: 2026-10-11T21:02:48Z
+checked_at: 2026-10-28T22:34:57Z
 fetched: https://codeload.github.com/aave/interface/tar.gz/32cc548b980baadea36cfea5227fc144d3f49958
 sha256: 68ceac430250d745871409b23deb6a3b02eb637ed3c71c0ceb7bbc25cd6fa4a6
 --------------------------------------------------------------------------------

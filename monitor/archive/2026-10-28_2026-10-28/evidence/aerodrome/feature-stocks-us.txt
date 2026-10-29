@@ -1,0 +1,203 @@
+check: aerodrome/feature-stocks-us
+about: Tokenized equities on Aerodrome (Base, Aug 2026) are available only to eligible users outside the United States (press)
+source: https://cryptobriefing.com/aerodrome-tokenized-equities-base/
+checked_at: 2026-10-28T22:56:34Z
+fetched: https://cryptobriefing.com/aerodrome-tokenized-equities-base/
+sha256: c5d5b1d32041e8c0bc7f3d908583181e6baafecb3d2f7278b9dde36326cbf5aa
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+Aerodrome expands trading to tokenized global equities on Base
+Skip to content
+Crypto
+Stocks
+Finance
+Prediction markets
+Macro
+AI
+Tech
+Markets
+Newsletter
+System Light Dark
+Log in
+Create account
+Fear & Greed 51 Neutral
+Crypto market $2.77T +0.53% 24h breadth 175 up 78 down Bitcoin $81,306 +0.51% Ethereum $2,362 +0.53% Solana $103 +1.26% XRP $1.33 +0.11% BNB $757 +1.54% Top gainers BICO $0.018 +14.68% BLUR $0.0084 +14.07% PONS $0.290 +12.88% Top losers BLAST $0.000029 −27.74% NIL $0.079 −13.67% OSMO $0.052 −9.06% Stocks NVDA $215 −1.17% TSLA $404 −0.80% AAPL $344 −0.94% MSFT $531 −0.06% COIN $162 +0.76%
+Fear & Greed 51 Neutral
+Crypto market $2.77T +0.53% 24h breadth 175 up 78 down Bitcoin $81,306 +0.51% Ethereum $2,362 +0.53% Solana $103 +1.26% XRP $1.33 +0.11% BNB $757 +1.54% Top gainers BICO $0.018 +14.68% BLUR $0.0084 +14.07% PONS $0.290 +12.88% Top losers BLAST $0.000029 −27.74% NIL $0.079 −13.67% OSMO $0.052 −9.06% Stocks NVDA $215 −1.17% TSLA $404 −0.80% AAPL $344 −0.94% MSFT $531 −0.06% COIN $162 +0.76%
+Advertisement
+Menu
+Search Crypto Briefing
+Crypto
+Stocks
+Finance
+Prediction markets
+Macro
+AI
+Tech
+Markets
+Newsletter
+Crypto sections
+Bitcoin
+Ethereum
+DeFi
+NFTs
+AI agents
+Regulation
+Web3
+Business
+Create account
+Log in
+Appearance System System Light Dark
+Español
+Aerodrome expands trading to tokenized global equities on Base
+Photo: Photo: David Yu / Pexels / Pexels
+The leading DEX on Coinbase's Base network hit $103 million in tokenized stock volume within days of launch, offering 24/7 trading of Nvidia, Apple, Meta, and Alphabet shares onchain.
+by
+Editorial Team
+Sat 29 Aug 2026 · 17:07 EDT
+·
+3 min read
+In Finance
+Share
+this.removeAttribute('data-copied'), 2000);"
+class="w-7 h-7 border border-foreground/30 text-foreground rounded-full flex items-center justify-center hover:bg-muted transition-colors"
+aria-label="Copy link"
+>
+Add us on Google
+Coinbase Global, Inc. (COIN) price
+Full chart and stats
+Loading chart…
+Last close
+$161
+Close-to-close change
++0.9%
+Market cap
+$42.5B (shares as of 2026-06-30)
+P/E (trailing)
+Not meaningful: trailing loss. Diluted EPS −3.79 for 2025-07-01 to 2026-06-30, rolled from reported annual and year-to-date EPS (approximate) SEC filing
+Annual revenue
+$7.2B USD (FY ended 2025-12-31) 10-K
+Annual revenue growth
++9.4% (FY ended 2025-12-31 vs FY ended 2024-12-31) 10-K
+Annual net income
+1,260,327,000 USD (FY ended 2025-12-31, attributable to the company) 10-K
+Annual operating margin
+20.0% (FY ended 2025-12-31)
+Forward P/E
+Unavailable: no dated forecast source
+Gloria daily close for session Oct 27, 2026. Market cap and trailing P/E use this close with the SEC share total and trailing diluted earnings, each dated next to its figure. Annual revenue, revenue growth, net income and margin show their own fiscal period and link the 10-K. Current context may postdate this article.
+Coinbase Global, Inc. and its peers
+Company
+Price
+Market cap
+P/E (trailing)
+Forward P/E
+Annual revenue (USD)
+Annual revenue growth
+Annual net income (USD)
+Operating margin
+Coinbase Global, Inc.
+COIN · Price dated Oct 27, 2026 · tokenized COINx
+$161
+$42.5B
+Not meaningful Loss, diluted EPS −3.79
+to 2026-06-30 · SEC filing
+Unavailable
+$7.2B FY ended 2025-12-31 · 10-K
++9.4% FY ended 2025-12-31 vs 2024-12-31 · 10-K
+1,260,327,000 FY ended 2025-12-31, attributable to the company · 10-K
+20.0% FY ended 2025-12-31
+Strategy Inc
+MSTR · Price dated Oct 27, 2026 · tokenized MSTRx
+$141
+Unavailable
+Not meaningful Loss, diluted EPS −96.98
+to 2026-06-30 · SEC filing
+Unavailable
+$477.2M FY ended 2025-12-31 · 10-K
++3.0% FY ended 2025-12-31 vs 2024-12-31 · 10-K
+−3,848,152,000 FY ended 2025-12-31, attributable to the company · 10-K
+−1,140.8% FY ended 2025-12-31
+Circle Internet Group, Inc.
+CRCL · Price dated Oct 27, 2026 · tokenized CRCLx
+$82
+Unavailable
+16.3
+Unavailable
+$2.7B FY ended 2025-12-31 · 10-K
++63.9% FY ended 2025-12-31 vs 2024-12-31 · 10-K
+−69,508,000 FY ended 2025-12-31, attributable to the company · 10-K
+−3.5% FY ended 2025-12-31
+Bitmine Immersion Technologies, Inc.
+BMNR · Price dated Oct 27, 2026 · tokenized BMNRx
+$22
+$13.0B
+Not meaningful Loss, diluted EPS −4.50
+to 2026-05-31 · SEC filing
+Unavailable
+$6.1M FY ended 2025-08-31 · 10-K
++84.1% FY ended 2025-08-31 vs 2024-08-31 · 10-K
+348,577,000 FY ended 2025-08-31, attributable to the company · 10-K
+7,288.1% FY ended 2025-08-31
+Missing figures stay unavailable. Forward P/E requires a dated source. Annual revenue, revenue growth, net income and margin come from each company's own 10-K, in US dollars, and each row shows that fiscal year. Revenue growth compares the fiscal year with the prior year stated in the same 10-K. Net income is the full year amount attributable to the company, or available to common stockholders where the filing states only that, or consolidated net income. Each row names its basis. Trailing P/E reads "Not meaningful" when the dated trailing diluted EPS is a loss or zero. An operating margin appears only when the filing states both the operating income and the revenue for the same year.
+Sources: SEC filings, Gloria daily closes and CoinGecko. Oldest record refresh: Oct 28, 2026, 4:41 PM EDT. Refresh is not a price or filing date. Each row shows its price date and its annual fiscal period. Peers use industry code and company size, or editorial selection. Market cap multiplies that row price by the company share total the latest SEC filing states for every share class together. Trailing P/E divides it by trailing diluted earnings from SEC filings. Rolled earnings per share are approximate because share counts can change between periods. Both appear only when the SEC data carries its date, so they are estimates at one price date, not synchronized filing valuations. Not investment advice.
+Aerodrome, the dominant decentralized exchange on Coinbase ’s Base blockchain, has gone live with onchain trading pools for tokenized versions of some of the world’s most valuable stocks. Nvidia , Apple , Meta , and Alphabet are now tradeable around the clock as tokenized assets, and traders showed up fast: roughly $103 million in volume flowed through the pools in the days following the August 24 launch.
+Daily trading volume peaked at approximately $27 million, and Aerodrome’s governance token AERO jumped about 11% to roughly $0.53 on the news.
+How the tokenized stocks actually work
+Each tokenized equity, denoted with a “c” suffix (NVDAc, AAPLc, METAc, GOOGLc), represents a 1:1 claim on actual shares held in regulated custody. The custodial framework runs through Alpaca under the Abu Dhabi Global Market (ADGM) regulatory umbrella, meaning every token minted corresponds to a real share sitting in a compliant account somewhere.
+The tokens are built on Coinbase’s B20 standard, which is designed to handle the messy corporate-action stuff that makes traditional equity infrastructure so cumbersome. Stock splits, dividend distributions, and similar events get processed onchain rather than through the labyrinthine back-office plumbing of traditional brokerages.
+Advertisement
+The underlying asset stays in a vault; the digital representation moves freely across DeFi protocols. These tokens can plug into lending protocols like Aave , opening the door to borrowing against equity positions or earning yield by supplying tokenized stock as collateral.
+US residents are excluded. The tokenized equities are available only to eligible users outside the United States.
+The news moving money, markets, and the world—before your day starts.
+Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
+Email address
+Subscribe free
+We respect your privacy. Unsubscribe anytime.
+Liquidity depth and early trading patterns
+Aerodrome positioned itself as the primary liquidity venue for these assets from day one. The deepest initial pool belonged to NVDAc, which launched with approximately $957,000 in liquidity.
+The $103 million in cumulative volume across all four pools in the early days suggests strong demand. Daily figures reached around $25 million in early reports before settling at the $27 million figure cited in more recent data.
+On August 28, four days after launch, a project called Bankr rolled out an AI-agent-powered tool for managing liquidity positions in the tokenized stock pools. The tool lets users issue natural-language commands to adjust their positions, essentially letting someone type “rebalance my NVDAc position” instead of manually interacting with smart contracts.
+Why this matters beyond the numbers
+The 11% surge in AERO’s price reflects the market’s read on what this means for the protocol’s competitive positioning. Coinbase has indicated that more tokenized equities are on the way, suggesting this initial batch of four mega-cap stocks is a proof of concept rather than the final product roster.
+The geographic restriction is the most significant limitation. Excluding US users from onchain equity trading removes the single largest pool of retail equity investors from the addressable market.
+Advertisement
+Disclosure: This article was edited by Editorial Team. For more information on how we create and review content, see our Editorial Policy .
+See how the news affects your money, and why. Tell Crypto Briefing Pro the coins and stocks you hold. It follows the news about them across hundreds of publishers.
+Create a free account
+More in Finance
+See all
+Previous story Polygon discloses security flaws fixed in Austin and Kyoto hard forks
+Solana introduces BP Badges for Breakpoint 2026 attendees 21 min
+DekaBank buys $15.2 million in shares of Bitcoin treasury firm Strategy 47 min
+Bitcoin Core bug lets malicious peers crash Windows and Mac nodes 1 hours
+Aviva Investors tokenizes £50 million share class of Sterling Liquidity Fund on XRP Ledger 1 hours
+CZ warns crypto users to stop clicking email links, even from people they trust 2 hours
+WEF and BCG report says digital asset regulation now reaches far beyond crypto 2 hours
+Crypto and stocks news, every morning.
+Create account
+Log in
+Sections
+Crypto Stocks Finance Prediction markets Macro AI Tech Markets
+Company
+About us Team Contact Newsletter Advertising
+Follow
+X Facebook Telegram LinkedIn
+All content is for informational purposes only and does not constitute investment advice. CryptoBriefing does not provide recommendations to buy, sell, or hold any asset or contract. See our Disclaimer & risk disclosure .
+© Decentral Media and Crypto Briefing® 2026.
+Editorial policy Disclaimer Press release disclaimer Privacy policy RSS Español
+System Light Dark
+The news moving money, markets, and the world—before your day starts.
+Daily. Free. Join 34,000+ readers across crypto, finance, and policy.
+Email address Subscribe free
+×
+Free daily briefing
+Email address Join
+×
+Crypto Briefing Pro
+The news about what you hold
+Follow your stocks and crypto. Read the news about them from hundreds of publishers in Pro.
+Create account
+Not now
+Privacy policy

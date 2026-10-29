@@ -1,7 +1,7 @@
 check: spark/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://app.spark.fi
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
@@ -12,7 +12,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -30,7 +30,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -40,7 +40,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Vercel"
   }
  },
- "US-NY": {
+ "CA": {
   "app": {
    "status": 200,
    "final_url": "https://app.spark.finance/",
@@ -48,7 +48,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -58,7 +58,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Vercel"
   }
  },
- "CA-ON": {
+ "MX": {
   "app": {
    "status": 200,
    "final_url": "https://app.spark.finance/",
@@ -66,7 +66,43 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "CO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -84,7 +120,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -96,20 +132,15 @@ checked_at: 2026-10-11T21:24:23Z
  },
  "DE": {
   "app": {
-   "status": 200,
-   "final_url": "https://app.spark.finance/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Spark: Earn on your stablecoins",
-   "scripts": [
-    "/assets/index-BoLd_7-U.js",
-    "/scripts/theme-init.js"
-   ],
-   "bytes": 3407,
-   "redirects": [
-    "https://app.spark.finance/"
-   ],
-   "server": "Vercel"
+   "status": null,
+   "final_url": "https://app.spark.fi",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
   }
  },
  "FR": {
@@ -120,7 +151,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -138,7 +169,43 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -156,7 +223,43 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -187,7 +290,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -205,7 +308,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -215,7 +318,22 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Vercel"
   }
  },
- "SG": {
+ "SA": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.spark.fi",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": null
+  }
+ },
+ "IL": {
   "app": {
    "status": 200,
    "final_url": "https://app.spark.finance/",
@@ -223,7 +341,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -233,7 +351,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Vercel"
   }
  },
- "HK": {
+ "PK": {
   "app": {
    "status": 200,
    "final_url": "https://app.spark.finance/",
@@ -241,7 +359,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -251,7 +369,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Vercel"
   }
  },
- "JP": {
+ "BD": {
   "app": {
    "status": 200,
    "final_url": "https://app.spark.finance/",
@@ -259,61 +377,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
-    "/scripts/theme-init.js"
-   ],
-   "bytes": 3407,
-   "redirects": [
-    "https://app.spark.finance/"
-   ],
-   "server": "Vercel"
-  }
- },
- "BR": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.spark.finance/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Spark: Earn on your stablecoins",
-   "scripts": [
-    "/assets/index-BoLd_7-U.js",
-    "/scripts/theme-init.js"
-   ],
-   "bytes": 3407,
-   "redirects": [
-    "https://app.spark.finance/"
-   ],
-   "server": "Vercel"
-  }
- },
- "AR": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.spark.finance/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Spark: Earn on your stablecoins",
-   "scripts": [
-    "/assets/index-BoLd_7-U.js",
-    "/scripts/theme-init.js"
-   ],
-   "bytes": 3407,
-   "redirects": [
-    "https://app.spark.finance/"
-   ],
-   "server": "Vercel"
-  }
- },
- "NG": {
-  "app": {
-   "status": 200,
-   "final_url": "https://app.spark.finance/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Spark: Earn on your stablecoins",
-   "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -331,7 +395,218 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "CN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "KR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "TW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.spark.fi",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -349,7 +624,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -367,7 +642,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "page served (client-side gates not evaluated)",
    "title": "Spark: Earn on your stablecoins",
    "scripts": [
-    "/assets/index-BoLd_7-U.js",
+    "/assets/index-*.js",
     "/scripts/theme-init.js"
    ],
    "bytes": 3407,
@@ -375,6 +650,263 @@ checked_at: 2026-10-11T21:24:23Z
     "https://app.spark.finance/"
    ],
    "server": "Vercel"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.spark.finance/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Spark: Earn on your stablecoins",
+   "scripts": [
+    "/assets/index-*.js",
+    "/scripts/theme-init.js"
+   ],
+   "bytes": 3407,
+   "redirects": [
+    "https://app.spark.finance/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.spark.fi",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.spark.fi",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "Spark - Maker-Powered Lending Market",
+   "scripts": [],
+   "bytes": 326403,
+   "redirects": [],
+   "server": "cloudflare"
   }
  }
 }

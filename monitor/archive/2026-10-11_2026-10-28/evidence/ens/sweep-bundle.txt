@@ -1,0 +1,51 @@
+check: ens/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://app.ens.domains
+checked_at: 2026-10-11T21:07:13Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://app.ens.domains (HTTP 200)
+scripts (40):
+  https://plausible.io/js/script.outbound-links.js  sha256=ba438d82e1e33e955987443d0a8b91a4e0a06821fba480929f921f32a0b3e5fd
+  https://app.ens.domains/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js  sha256=0225eb034d024a03bdc90ea6c79f56193662e7c3eee909696298820e517cbb83
+  https://app.ens.domains/_next/static/chunks/webpack-3b0622baffdbb23c.js  sha256=2bc02c1552fe2e70f62c77c5d6fd9b265b75dd74af0e6ceed3a8f8b82155899f
+  https://app.ens.domains/_next/static/chunks/framework-91c74e967f16450c.js  sha256=51b69dcb45b061802fdb5843f4003336b91388d4cb4c3eacb8d4207a8e7765e8
+  https://app.ens.domains/_next/static/chunks/main-41fe0791f4ae3659.js  sha256=c015b4b0713ab8be1ea0f480b8860d59101fe4aba529016e288af05c3a350969
+  https://app.ens.domains/_next/static/chunks/pages/_app-8d0b9cfaad11383f.js  sha256=60c3775521d9cb297519ced23afd2f0b258c471f617bc58a045a1865069505d2
+  https://app.ens.domains/_next/static/chunks/pages/index-cacb97170eddcd3f.js  sha256=3f871842dc8c4de0446931b1df522987d2c83524a7b8c08ec33ad6062ec04459
+  https://app.ens.domains/_next/static/67b917459591440b637ea5f315eabc4229473506/_buildManifest.js  sha256=89989c8b5a7ada5560734396a930d8562b74382358fc538a13c74a9f7cf83a7f
+  https://app.ens.domains/_next/static/67b917459591440b637ea5f315eabc4229473506/_ssgManifest.js  sha256=6f5b4aa00d2f8d6aed9935b471806bf7acef464d0c1d390260e5fe27f800c67e
+  https://static.cloudflareinsights.com/beacon.min.js  sha256=3e5bc7ca508f5d5aa7255341243840c8d2b70c8aea323800b51610df3f5a8a2c
+  https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920  sha256=3e5bc7ca508f5d5aa7255341243840c8d2b70c8aea323800b51610df3f5a8a2c
+  https://app.ens.domains/_next/static/chunks/7219-9afc8af599a84a90.js  sha256=d2981ea46c6c354cff45fd769ea0767f32544348e4a4bd366b6baf9824d44e73
+  https://app.ens.domains/_next/static/chunks/8300-52a13e028fa8b100.js  sha256=3c3d70b7724159cbb683fbfe28d644ad6e2910034d3ca172153daa3fc765624a
+  https://app.ens.domains/_next/static/chunks/pages/404-f122112aa3d3835f.js  sha256=162bc1d3ad642e68089d32915ef5dbb90635df46251d85a579bd443a98dd50a9
+  https://app.ens.domains/_next/static/chunks/pages/_error-c4338ff8d2a45831.js  sha256=85549d509060cc3bec44897d37f54d5e3b58d40ba6bd151e3e19c6051afe512c
+  https://app.ens.domains/_next/static/chunks/pages/address-d3260b56dcfd7aa0.js  sha256=85ceb2faeda87ad2224e8fb9441f1518057ba0868477f76e40d470ee6d176943
+  https://app.ens.domains/_next/static/chunks/pages/ens-v2-066c164a12025ea8.js  sha256=4bd486c1ebf9ae77b2703883794faab561bf05e572b1b1f9bedb895e13de5ea4
+  https://app.ens.domains/_next/static/chunks/pages/import-ade43169468cd9dc.js  sha256=4d9537e610ed5d66536dec666203a3b55330f661ea0796101aa8df4f0bf4bbcc
+  https://app.ens.domains/_next/static/chunks/pages/legacyfavourites-218a7bf5888f71aa.js  sha256=4b1d7fa9f1f3fff3ea1ac628cf1e2c729e99a0ee58d78deda854fb110c69ef4b
+  https://app.ens.domains/_next/static/chunks/4659-f66ebc1202cee016.js  sha256=331cb0049940b0e5ac8ef7a62e8c8d77c39e712e7aadd8a1d51f0c00de54a9b0
+  https://app.ens.domains/_next/static/chunks/pages/my/names-685fb97e78213657.js  sha256=5b6f542b5a1fc7ca40efc012d14cb272dac86686a5ade102df440af05c9bce93
+  https://app.ens.domains/_next/static/chunks/91024-4d91c4cbca40d9af.js  sha256=910c2f69b925ba9fdfce0c585f2949f04ff5e9d4545ed6f5fa32221c4d1af0ce
+  https://app.ens.domains/_next/static/chunks/8504-e058e80c7f8293bd.js  sha256=4b9a135c09c6f1b12ef032fa2a78abe214fdc73cbd380b1873790eee620de357
+  https://app.ens.domains/_next/static/chunks/pages/my/settings-117bad43a8b0d1bc.js  sha256=513f0e865ee5ffcfb71861f1b002a293023f395af9ba938c332d92d66435406a
+  https://app.ens.domains/_next/static/chunks/80732-9eb6726dd70c53ac.js  sha256=48d1965b4dbc898bac08af6c1152f38a4d79674ad43f6fdb2feb3d5ea2b5641c
+  https://app.ens.domains/_next/static/chunks/38739-798d0f1521377e62.js  sha256=509790def85731133fe1f7e10c7ad53adb93f0884449f5963a1d9a5c95b4cb2d
+  https://app.ens.domains/_next/static/chunks/59217-a727a888b66b530c.js  sha256=a42503efffb95b182b37fca68270e345f910effa3fc84c5ab555cacb4e9a2ed7
+  https://app.ens.domains/_next/static/chunks/pages/profile-f0174ccd08ae48a7.js  sha256=0ab6391129d8db8888916c432896d2ed48c50c9f0890671fde4701dfe7cb6a70
+  https://app.ens.domains/_next/static/chunks/61788-5b06503716fd2795.js  sha256=2e3ccf21d5a073bb80fe68ee7afd13d1988ebda81de5bac9689c78b821beab73
+  https://app.ens.domains/_next/static/chunks/17143-8e3ee14ae054e113.js  sha256=527d24034504e816925ab46685f5bf23c61d0bd699c19a5da3400e5d1050fbb0
+  https://app.ens.domains/_next/static/chunks/38909-55e873e7d33dd3eb.js  sha256=311a7ce02e1f77244391a3535055610856bdbf0bbe5c55fda00d17ee46f8ca1f
+  https://app.ens.domains/_next/static/chunks/93885-4404bf5594e1b533.js  sha256=91677d28f6b2598330d470be7d48878d6af8ca3b8f6ed1f566c84812ab0e1b58
+  https://app.ens.domains/_next/static/chunks/pages/register-7415de6e7e9836c6.js  sha256=d1dfcf3bacb1b77cbaf58b8a40632ffd3ab447f3ec68279aaefb594c41637370
+  https://app.ens.domains/_next/static/chunks/23856-646edd08a2b03a88.js  sha256=9e0555ddcbe72c56fa689b7193a096b7fc40abef3d514d59db33ae28357f7fdc
+  https://app.ens.domains/_next/static/chunks/56854-6eef8d8fcb472a70.js  sha256=82f35c61246c8eec795bbc13d47dd6937cd00fa798548fea21dea567b136b424
+  https://app.ens.domains/_next/static/chunks/69126-def31892372f51b5.js  sha256=9c1394beec235938e46ea3f1168cdf519eb7bd9a740474e41d0da88f9c5d0803
+  https://app.ens.domains/_next/static/chunks/24355-5222998accf5735f.js  sha256=38a8187c6c7629438bbeb9144ac3f7416240a03e5cd8baf9c3780e0bf84e1d1c
+  https://app.ens.domains/_next/static/chunks/72298-0be6f0cd85aea34e.js  sha256=2b99c559630f88ddd51095c7a19006e2fa0bcff13d5a64cfe8bf787a20b7e7cf
+  https://app.ens.domains/_next/static/chunks/9651-67e0af29769b9f33.js  sha256=f6779f6093d32ef9ff3fe3e2ff45df57d694e83fa6550d7a67fdef5675e239a7
+  https://app.ens.domains/_next/static/chunks/41313-ae62c633aafcc4cc.js  sha256=afba1c23c5ac4f6814b4b234ab604bbf87d5173bef8579a7afe8c1289ca21f24
+
+signals:

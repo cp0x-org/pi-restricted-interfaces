@@ -1,0 +1,280 @@
+check: centrifuge/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://app.centrifuge.io
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6159,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6133,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6134,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6134,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6134,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6133,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6134,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6133,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6134,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6133,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6133,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6133,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6132,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6134,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6134,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6132,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6134,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6134,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6135,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6134,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.centrifuge.io",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 6133,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ }
+}

@@ -1,0 +1,18 @@
+check: polymarket/geo-us-live
+about: Live: /api/geoblock answers blocked=true to a visitor from the US
+source: https://polymarket.com/api/geoblock from US
+checked_at: 2026-10-11T21:24:40Z
+http_status: 200
+via: proxy
+vantage: {"requested": "US", "seen": ["US", "US", "US"], "org": "AS7922 Comcast Cable Communications, LLC", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
+--------------------------------------------------------------------------------
+{"requested": "US", "seen": ["US", "US", "US"], "org": "AS7922 Comcast Cable Communications, LLC", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
+
+request: GET https://polymarket.com/api/geoblock
+status: 200
+final_url: https://polymarket.com/api/geoblock
+header server: cloudflare
+header cf-ray: a490eed84a412c27-MIA
+header content-type: application/json
+header x-vercel-id: iad1::iad1::khv4b-1791753880377-75f151413073
+body: {"blocked":true,"ip":"73.138.225.153","country":"US","region":"FL"}

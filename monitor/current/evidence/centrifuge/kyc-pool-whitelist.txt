@@ -1,7 +1,7 @@
 check: centrifuge/kyc-pool-whitelist
 about: Centrifuge docs: pool whitelisting includes KYC/AML verification and wallet pre-approval
 source: https://docs.centrifuge.io/user/investor/
-checked_at: 2026-10-11T21:18:48Z
+checked_at: 2026-10-28T22:56:36Z
 fetched: https://web.archive.org/web/20260617135612id_/https://docs.centrifuge.io/user/investor/
 sha256: 338c4deee3bf597303dd8ea549ccdb3c986b3a873978a280ee3117ca28d90f8b
 http_status: 200

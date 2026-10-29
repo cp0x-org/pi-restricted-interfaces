@@ -1,7 +1,7 @@
 check: synapse/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://explorer.synapseprotocol.com/terms
-checked_at: 2026-10-11T21:18:38Z
+checked_at: 2026-10-28T22:56:20Z
 fetched: https://explorer.synapseprotocol.com/terms
 sha256: f9db4d781897346a0ac161cceba77bd0c0b17eb02a06c0fa739465db6281fbc7
 http_status: 200

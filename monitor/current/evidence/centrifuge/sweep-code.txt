@@ -1,7 +1,7 @@
 check: centrifuge/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/centrifuge/apps/tree/0081f8e90c78a687c41ad5140bd6e8ce59bcd747
-checked_at: 2026-10-11T21:03:01Z
+checked_at: 2026-10-28T22:35:25Z
 fetched: https://codeload.github.com/centrifuge/apps/tar.gz/0081f8e90c78a687c41ad5140bd6e8ce59bcd747
 sha256: 4a9852ded3e6e211d1479d043c65e8fc548c5cab5ccf23db93fb36515f360f3a
 --------------------------------------------------------------------------------

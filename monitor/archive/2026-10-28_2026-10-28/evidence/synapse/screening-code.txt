@@ -1,0 +1,9 @@
+check: synapse/screening-code
+about: The bridge UI screens the wallet with screener.omnirpc.io and flags it on risk (or on error)
+source: https://github.com/synapsecns/sanguine/blob/7c8126288846909d65660c4018b042eb5a498d32/packages/synapse-interface/utils/screenAddress.ts#L23
+checked_at: 2026-10-28T22:38:18Z
+fetched: https://raw.githubusercontent.com/synapsecns/sanguine/7c8126288846909d65660c4018b042eb5a498d32/packages/synapse-interface/utils/screenAddress.ts
+sha256: 33abf66e7eb59dc97f19aa25f6d2ab428f2fa1d6b3236504b9c25e1c24315f56
+--------------------------------------------------------------------------------
+L23:   const url = `https://screener.omnirpc.io/fe/address/${address}`
+L34:     if (risk) {

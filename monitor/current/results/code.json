@@ -1,6 +1,6 @@
 {
   "kind": "code",
-  "generated_at": "2026-10-11T21:04:44Z",
+  "generated_at": "2026-10-28T22:38:21Z",
   "meta": {
     "ref": "pinned commits from research/checks"
   },
@@ -15,7 +15,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/aave/interface/tree/32cc548b980baadea36cfea5227fc144d3f49958",
-      "checked_at": "2026-10-11T21:02:48Z",
+      "checked_at": "2026-10-28T22:34:57Z",
       "fetched": "https://codeload.github.com/aave/interface/tar.gz/32cc548b980baadea36cfea5227fc144d3f49958",
       "sha256": "68ceac430250d745871409b23deb6a3b02eb637ed3c71c0ceb7bbc25cd6fa4a6",
       "files_scanned": 922,
@@ -81,7 +81,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/CrocSwap/ambient-ts-app/tree/90e569a9bbcab62907c7713ce25c6ab5b0246baf",
-      "checked_at": "2026-10-11T21:02:51Z",
+      "checked_at": "2026-10-28T22:35:02Z",
       "fetched": "https://codeload.github.com/CrocSwap/ambient-ts-app/tar.gz/90e569a9bbcab62907c7713ce25c6ab5b0246baf",
       "sha256": "e922a0bfc2fdca670e8d7bcc07aeb06267c6947967cded4f4fc99eaf80d2193c",
       "files_scanned": 728,
@@ -191,7 +191,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/balancer/frontend-monorepo/tree/046d0100891916cda92a0aef5a0f2d059bd309d0",
-      "checked_at": "2026-10-11T21:02:54Z",
+      "checked_at": "2026-10-28T22:35:13Z",
       "fetched": "https://codeload.github.com/balancer/frontend-monorepo/tar.gz/046d0100891916cda92a0aef5a0f2d059bd309d0",
       "sha256": "a763e21efaf68de3c4fca31bfd986153db51ed46607966ba66a44909937fe2eb",
       "files_scanned": 1525,
@@ -301,7 +301,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/beefyfinance/beefy-v2/tree/b7098b467950b1ac01dbb248241bbc9bfae72e0b",
-      "checked_at": "2026-10-11T21:02:59Z",
+      "checked_at": "2026-10-28T22:35:22Z",
       "fetched": "https://codeload.github.com/beefyfinance/beefy-v2/tar.gz/b7098b467950b1ac01dbb248241bbc9bfae72e0b",
       "sha256": "55e2f63aa381375d8ad29109b5373374000375341cc1087095afb33ca43ad28c",
       "files_scanned": 1494,
@@ -397,7 +397,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/centrifuge/apps/tree/0081f8e90c78a687c41ad5140bd6e8ce59bcd747",
-      "checked_at": "2026-10-11T21:03:01Z",
+      "checked_at": "2026-10-28T22:35:25Z",
       "fetched": "https://codeload.github.com/centrifuge/apps/tar.gz/0081f8e90c78a687c41ad5140bd6e8ce59bcd747",
       "sha256": "4a9852ded3e6e211d1479d043c65e8fc548c5cab5ccf23db93fb36515f360f3a",
       "files_scanned": 653,
@@ -475,7 +475,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/compound-finance/palisade/tree/02d5b227029987bf840d095f05885f5cea906fb6",
-      "checked_at": "2026-10-11T21:03:01Z",
+      "checked_at": "2026-10-28T22:35:26Z",
       "fetched": "https://codeload.github.com/compound-finance/palisade/tar.gz/02d5b227029987bf840d095f05885f5cea906fb6",
       "sha256": "fe7dd211527b640888048debadc21124a9f819d779e83213b39d20f98ee3aed9",
       "files_scanned": 44,
@@ -494,7 +494,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/compound-finance/webb3-frontend/tree/5e556e553f223d37842fd91c2eed2f21efb98a6d",
-      "checked_at": "2026-10-11T21:03:01Z",
+      "checked_at": "2026-10-28T22:35:27Z",
       "fetched": "https://codeload.github.com/compound-finance/webb3-frontend/tar.gz/5e556e553f223d37842fd91c2eed2f21efb98a6d",
       "sha256": "5f8aec0c2fcb1d458b70d56e09345f47ec6ac579e9012efba5ac6abc43f9ec9d",
       "files_scanned": 201,
@@ -538,7 +538,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/cowprotocol/cowswap/tree/7f861f9d12a0f9b0db33f9b0b1679ec309025120",
-      "checked_at": "2026-10-11T21:03:06Z",
+      "checked_at": "2026-10-28T22:35:33Z",
       "fetched": "https://codeload.github.com/cowprotocol/cowswap/tar.gz/7f861f9d12a0f9b0db33f9b0b1679ec309025120",
       "sha256": "9304cf0c856a85929cff9ebf17c4adec6104fbcbe42bbe22aee65a33cea6e6ec",
       "files_scanned": 3961,
@@ -678,7 +678,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/curvefi/curve-frontend/tree/f8cfaab057efb97dd9b96eac6ce966245cc45b8c",
-      "checked_at": "2026-10-11T21:03:08Z",
+      "checked_at": "2026-10-28T22:35:36Z",
       "fetched": "https://codeload.github.com/curvefi/curve-frontend/tar.gz/f8cfaab057efb97dd9b96eac6ce966245cc45b8c",
       "sha256": "17846e83a1df42620284f94c77a4a659449b18cf2405f28c1ed8bdf8af92cd4f",
       "files_scanned": 1977,
@@ -728,7 +728,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/ensdomains/ens-app/tree/1cc872b5738e811fc416e8fc6ca3671e3cc4454b",
-      "checked_at": "2026-10-11T21:03:08Z",
+      "checked_at": "2026-10-28T22:35:37Z",
       "fetched": "https://codeload.github.com/ensdomains/ens-app/tar.gz/1cc872b5738e811fc416e8fc6ca3671e3cc4454b",
       "sha256": "80efd2acb78e68e0f8f1f852d51e198e988908e7312249494d9737ea05e485a3",
       "files_scanned": 250,
@@ -747,7 +747,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/ensdomains/ens-app-v3/tree/67b917459591440b637ea5f315eabc4229473506",
-      "checked_at": "2026-10-11T21:03:10Z",
+      "checked_at": "2026-10-28T22:35:40Z",
       "fetched": "https://codeload.github.com/ensdomains/ens-app-v3/tar.gz/67b917459591440b637ea5f315eabc4229473506",
       "sha256": "1c414dc63a8d26a1576b5d78d0e2543aa47c3459afa150796ccc903322e20472",
       "files_scanned": 678,
@@ -766,7 +766,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/euler-xyz/euler-lite/tree/43ba73fadda21d943224742286c7c078562e3769",
-      "checked_at": "2026-10-11T21:03:12Z",
+      "checked_at": "2026-10-28T22:35:44Z",
       "fetched": "https://codeload.github.com/euler-xyz/euler-lite/tar.gz/43ba73fadda21d943224742286c7c078562e3769",
       "sha256": "41ba4cc0938c642e46186ee1939d5aee6821251b0d0513ced014d018262774ee",
       "files_scanned": 647,
@@ -965,7 +965,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/gmx-io/gmx-interface/tree/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c",
-      "checked_at": "2026-10-11T21:03:26Z",
+      "checked_at": "2026-10-28T22:36:00Z",
       "fetched": "https://codeload.github.com/gmx-io/gmx-interface/tar.gz/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c",
       "sha256": "acf4c536472547a11c96c50c3402aef7b44054cebf3a3816ed1a324665b860f3",
       "files_scanned": 2691,
@@ -1037,7 +1037,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/jumperexchange/jumper-exchange/tree/eee099c8390dc8841179f80eaed027756a447e66",
-      "checked_at": "2026-10-11T21:03:28Z",
+      "checked_at": "2026-10-28T22:36:03Z",
       "fetched": "https://codeload.github.com/jumperexchange/jumper-exchange/tar.gz/eee099c8390dc8841179f80eaed027756a447e66",
       "sha256": "c223af5dd50ac3526d4e9702c188bca487c6daaa86d753a42b8387522af5298c",
       "files_scanned": 1689,
@@ -1087,7 +1087,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/KyberNetwork/kyberswap-interface/tree/12c16463eb52d1f13f0961daf9445f907adaeb0e",
-      "checked_at": "2026-10-11T21:03:33Z",
+      "checked_at": "2026-10-28T22:36:11Z",
       "fetched": "https://codeload.github.com/KyberNetwork/kyberswap-interface/tar.gz/12c16463eb52d1f13f0961daf9445f907adaeb0e",
       "sha256": "639697e04fe61b7444f01d78e0e67b398ce3e914733eea2923c93a734dd0ae07",
       "files_scanned": 2044,
@@ -1182,7 +1182,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/lidofinance/staking-vault-widget/tree/f258fb091d3ca01e5baf98128d01818e407a7877",
-      "checked_at": "2026-10-11T21:03:33Z",
+      "checked_at": "2026-10-28T22:36:13Z",
       "fetched": "https://codeload.github.com/lidofinance/staking-vault-widget/tar.gz/f258fb091d3ca01e5baf98128d01818e407a7877",
       "sha256": "63a8bbdfacbe827b4b8683a9127e6b2edb9a82e2de28c9a825d975ccfd984e87",
       "files_scanned": 1558,
@@ -1219,7 +1219,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/lidofinance/ethereum-staking-widget/tree/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a",
-      "checked_at": "2026-10-11T21:03:34Z",
+      "checked_at": "2026-10-28T22:36:15Z",
       "fetched": "https://codeload.github.com/lidofinance/ethereum-staking-widget/tar.gz/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a",
       "sha256": "5a3e75d05a0a844cc2fd2d7ed2997ef0c6e2f7458a2f74eee590f40abd824c53",
       "files_scanned": 1544,
@@ -1322,7 +1322,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/liquity/bold/tree/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0",
-      "checked_at": "2026-10-11T21:03:37Z",
+      "checked_at": "2026-10-28T22:36:20Z",
       "fetched": "https://codeload.github.com/liquity/bold/tar.gz/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0",
       "sha256": "dcec1691132a8fc79be26269a48ceb12ec654807e2a1be4a35fab0e74b6f5b7a",
       "files_scanned": 558,
@@ -1396,7 +1396,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/notional-finance/notional-monorepo/tree/cff15de4b098d101b2a023732efd242496c42888",
-      "checked_at": "2026-10-11T21:03:41Z",
+      "checked_at": "2026-10-28T22:36:25Z",
       "fetched": "https://codeload.github.com/notional-finance/notional-monorepo/tar.gz/cff15de4b098d101b2a023732efd242496c42888",
       "sha256": "c0e4574560f915f13365e6b0608db8e1acac567707e6ce0aa30673deb01ca458",
       "files_scanned": 1039,
@@ -1544,7 +1544,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/notional-finance/notional-monorepo/tree/cff15de4b098d101b2a023732efd242496c42888",
-      "checked_at": "2026-10-11T21:03:45Z",
+      "checked_at": "2026-10-28T22:36:29Z",
       "fetched": "https://codeload.github.com/notional-finance/notional-monorepo/tar.gz/cff15de4b098d101b2a023732efd242496c42888",
       "sha256": "c0e4574560f915f13365e6b0608db8e1acac567707e6ce0aa30673deb01ca458",
       "files_scanned": 1039,
@@ -1692,7 +1692,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/QuickSwap/interface-v2/tree/8799993562503860a266feb3d8bf376acc80596a",
-      "checked_at": "2026-10-11T21:03:47Z",
+      "checked_at": "2026-10-28T22:36:33Z",
       "fetched": "https://codeload.github.com/QuickSwap/interface-v2/tar.gz/8799993562503860a266feb3d8bf376acc80596a",
       "sha256": "0b4b9b3a1b3ca14d46e98c943238e491c43f0d41df95fe74c8c134a0ca2c35aa",
       "files_scanned": 863,
@@ -1711,7 +1711,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/safe-global/safe-wallet-monorepo/tree/967145775447eb0375f018ab65d65a15af889412",
-      "checked_at": "2026-10-11T21:03:53Z",
+      "checked_at": "2026-10-28T22:36:40Z",
       "fetched": "https://codeload.github.com/safe-global/safe-wallet-monorepo/tar.gz/967145775447eb0375f018ab65d65a15af889412",
       "sha256": "667c858bfccf71b272e6f76c2a179535470828ba13da996fcdae9b154dfff721",
       "files_scanned": 4279,
@@ -1909,7 +1909,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/jetstreamgg/tarmac/tree/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb",
-      "checked_at": "2026-10-11T21:03:55Z",
+      "checked_at": "2026-10-28T22:36:44Z",
       "fetched": "https://codeload.github.com/jetstreamgg/tarmac/tar.gz/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb",
       "sha256": "c7bfdd47633cd2907df79dd6166a79701ca2d8d070612c072a91ae31b4f24998",
       "files_scanned": 926,
@@ -2108,7 +2108,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/snapshot-labs/sx-monorepo/tree/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef",
-      "checked_at": "2026-10-11T21:03:57Z",
+      "checked_at": "2026-10-28T22:36:50Z",
       "fetched": "https://codeload.github.com/snapshot-labs/sx-monorepo/tar.gz/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef",
       "sha256": "7861337dd1e6fcdd38681d6e532dcc0a25bf3ae1940975b62a9d8c19a7640e7f",
       "files_scanned": 838,
@@ -2173,7 +2173,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/sushi-labs/sushiswap/tree/9520c07dabb425a404544cdaf91c8608dc4b197b",
-      "checked_at": "2026-10-11T21:04:00Z",
+      "checked_at": "2026-10-28T22:36:55Z",
       "fetched": "https://codeload.github.com/sushi-labs/sushiswap/tar.gz/9520c07dabb425a404544cdaf91c8608dc4b197b",
       "sha256": "04122fc3c58e1379bd79868942665243d9507d35b50f388d85463f63b6592a3e",
       "files_scanned": 2824,
@@ -2262,7 +2262,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/synapsecns/sanguine/tree/7c8126288846909d65660c4018b042eb5a498d32",
-      "checked_at": "2026-10-11T21:04:20Z",
+      "checked_at": "2026-10-28T22:37:24Z",
       "fetched": "https://codeload.github.com/synapsecns/sanguine/tar.gz/7c8126288846909d65660c4018b042eb5a498d32",
       "sha256": "c7848d7a5d872c06a3e9cb8181c681c4ceab56a79cb66a4828c300934879dda2",
       "files_scanned": 3076,
@@ -2342,7 +2342,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/tornadocash/tornado-classic-ui/tree/a83fae0772c8da084c0e76b3a756b456f5b9f5bb",
-      "checked_at": "2026-10-11T21:04:21Z",
+      "checked_at": "2026-10-28T22:37:30Z",
       "fetched": "https://codeload.github.com/tornadocash/tornado-classic-ui/tar.gz/a83fae0772c8da084c0e76b3a756b456f5b9f5bb",
       "sha256": "7cda0f9bbaa221b42ead01532b1369c397d4301cfe26f2ff1e7e235f5d84636c",
       "files_scanned": 235,
@@ -2467,7 +2467,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/Uniswap/interface/tree/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada",
-      "checked_at": "2026-10-11T21:04:34Z",
+      "checked_at": "2026-10-28T22:37:49Z",
       "fetched": "https://codeload.github.com/Uniswap/interface/tar.gz/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada",
       "sha256": "f559a054edc96ba5590a291d6504f1a438d64a4745a23803cfd0ffa8c499d24b",
       "files_scanned": 7997,
@@ -2694,7 +2694,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/VenusProtocol/venus-protocol-interface/tree/86ea4f7aefaaff6685aa97306fc05849a519f0f2",
-      "checked_at": "2026-10-11T21:04:36Z",
+      "checked_at": "2026-10-28T22:37:52Z",
       "fetched": "https://codeload.github.com/VenusProtocol/venus-protocol-interface/tar.gz/86ea4f7aefaaff6685aa97306fc05849a519f0f2",
       "sha256": "041b9160ccdfbfe3ff4720dadf96036d2755c5b5e627e6fad65dc4dc2b77c8ec",
       "files_scanned": 1731,
@@ -2782,7 +2782,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/yearn/yearn.fi/tree/ad153cba6e55862634ad6a7b8e8061832a5e91cb",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:37:55Z",
       "fetched": "https://codeload.github.com/yearn/yearn.fi/tar.gz/ad153cba6e55862634ad6a7b8e8061832a5e91cb",
       "sha256": "80887df87b9ec7babe1b7ff5ccf8a5da453a6e7a8f1ed3a0e228da736b061681",
       "files_scanned": 768,
@@ -2801,7 +2801,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/aave/interface/blob/32cc548b980baadea36cfea5227fc144d3f49958/pages/api/preflight-compliance.ts#L58",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:37:56Z",
       "found": [
         {
           "pattern": "COMPLIANCE_API_URL\\}/check/\\$\\{encodeURIComponent\\(address\\)\\}\\?surface=v3",
@@ -2823,7 +2823,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/aave/interface/blob/32cc548b980baadea36cfea5227fc144d3f49958/src/components/AddressBlocked.tsx#L20",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:37:56Z",
       "found": [
         {
           "pattern": "status === 'non-compliant'",
@@ -2877,7 +2877,7 @@
         "ZW"
       ],
       "source": "https://github.com/CrocSwap/ambient-ts-app/blob/90e569a9bbcab62907c7713ce25c6ab5b0246baf/netlify.toml#L81",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:37:57Z",
       "found": [
         {
           "pattern": "# Block all pages for specified countries",
@@ -2904,7 +2904,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/CrocSwap/ambient-ts-app/blob/90e569a9bbcab62907c7713ce25c6ab5b0246baf/src/ambient-utils/constants/blacklist.ts#L1",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:37:57Z",
       "found": [
         {
           "pattern": "const ofacBlacklist = \\[",
@@ -2931,7 +2931,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/CrocSwap/ambient-ts-app/blob/90e569a9bbcab62907c7713ce25c6ab5b0246baf/src/App/hooks/useBlacklist.ts#L9",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:37:57Z",
       "found": [
         {
           "pattern": "checkBlacklist\\(account\\)",
@@ -2963,7 +2963,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/balancer/frontend-monorepo/blob/046d0100891916cda92a0aef5a0f2d059bd309d0/packages/lib/shared/services/hypernative/checkAddressReputation.ts#L30",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:37:58Z",
       "found": [
         {
           "pattern": "https://api\\.hypernative\\.xyz/screener/reputation",
@@ -2990,7 +2990,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/balancer/frontend-monorepo/blob/046d0100891916cda92a0aef5a0f2d059bd309d0/packages/lib/modules/web3/UserAccountProvider.tsx#L18",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:37:58Z",
       "found": [
         {
           "pattern": "/api/wallet-check/",
@@ -3023,7 +3023,7 @@
         "SG"
       ],
       "source": "https://github.com/beefyfinance/beefy-v2/blob/b7098b467950b1ac01dbb248241bbc9bfae72e0b/src/config/restrictions.json#L2",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:37:58Z",
       "found": [
         {
           "pattern": "\"base-tequities\"",
@@ -3045,7 +3045,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/beefyfinance/beefy-v2/blob/b7098b467950b1ac01dbb248241bbc9bfae72e0b/src/features/data/selectors/restrictions.ts#L81",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:37:59Z",
       "found": [
         {
           "pattern": "return 'blocked'; // fail closed on error",
@@ -3072,7 +3072,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/compound-finance/webb3-frontend/blob/5e556e553f223d37842fd91c2eed2f21efb98a6d/src/helpers/sanctions.ts#L1",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:37:59Z",
       "found": [
         {
           "pattern": "export function isSanctioned\\(address: string\\): boolean",
@@ -3099,7 +3099,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/compound-finance/webb3-frontend/blob/5e556e553f223d37842fd91c2eed2f21efb98a6d/src/contexts/Web3Context.tsx#L278",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:37:59Z",
       "found": [
         {
           "pattern": "isSanctioned\\(writeWeb3\\.account\\)",
@@ -3172,7 +3172,7 @@
         "NO"
       ],
       "source": "https://github.com/cowprotocol/cowswap/blob/7f861f9d12a0f9b0db33f9b0b1679ec309025120/libs/core/src/cms/consts.ts#L13",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:38:00Z",
       "found": [
         {
           "pattern": "export const RESTRICTED_COUNTRIES = \\[",
@@ -3199,7 +3199,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/cowprotocol/cowswap/blob/7f861f9d12a0f9b0db33f9b0b1679ec309025120/apps/cowswap-frontend/src/modules/rwa/state/geoDataAtom.ts#L21",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:38:00Z",
       "found": [
         {
           "pattern": "fetch\\('https://api\\.country\\.is'\\)",
@@ -3221,7 +3221,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/cowprotocol/services/blob/a9c2f4ebddd75c9b2b0b0cab980479468adcbe0f/crates/order-validation/src/banned/mod.rs#L1",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:38:01Z",
       "found": [
         {
           "pattern": "hardcoded list \\+ optional Chainalysis Oracle",
@@ -3253,7 +3253,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/curvefi/curve-frontend/blob/f8cfaab057efb97dd9b96eac6ce966245cc45b8c/packages/evm-ui/src/widgets/Legal/components/tabs/Terms.tsx#L70",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:38:01Z",
       "found": [
         {
           "pattern": "We reserve the right to technically restrict the access to the Website and the content provided thereon based on your geographical location",
@@ -3275,7 +3275,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/curvefi/curve-frontend/tree/f8cfaab057efb97dd9b96eac6ce966245cc45b8c",
-      "checked_at": "2026-10-11T21:04:38Z",
+      "checked_at": "2026-10-28T22:38:01Z",
       "fetched": "https://codeload.github.com/curvefi/curve-frontend/tar.gz/f8cfaab057efb97dd9b96eac6ce966245cc45b8c",
       "sha256": "17846e83a1df42620284f94c77a4a659449b18cf2405f28c1ed8bdf8af92cd4f",
       "files_scanned": 1961,
@@ -3293,7 +3293,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/curvefi/curve-frontend/tree/f8cfaab057efb97dd9b96eac6ce966245cc45b8c",
-      "checked_at": "2026-10-11T21:04:39Z",
+      "checked_at": "2026-10-28T22:38:02Z",
       "fetched": "https://codeload.github.com/curvefi/curve-frontend/tar.gz/f8cfaab057efb97dd9b96eac6ce966245cc45b8c",
       "sha256": "17846e83a1df42620284f94c77a4a659449b18cf2405f28c1ed8bdf8af92cd4f",
       "files_scanned": 1977,
@@ -3311,7 +3311,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/ensdomains/ens-app/tree/1cc872b5738e811fc416e8fc6ca3671e3cc4454b",
-      "checked_at": "2026-10-11T21:04:39Z",
+      "checked_at": "2026-10-28T22:38:02Z",
       "fetched": "https://codeload.github.com/ensdomains/ens-app/tar.gz/1cc872b5738e811fc416e8fc6ca3671e3cc4454b",
       "sha256": "80efd2acb78e68e0f8f1f852d51e198e988908e7312249494d9737ea05e485a3",
       "files_scanned": 250,
@@ -3329,7 +3329,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/ensdomains/ens-app/tree/1cc872b5738e811fc416e8fc6ca3671e3cc4454b",
-      "checked_at": "2026-10-11T21:04:39Z",
+      "checked_at": "2026-10-28T22:38:02Z",
       "fetched": "https://codeload.github.com/ensdomains/ens-app/tar.gz/1cc872b5738e811fc416e8fc6ca3671e3cc4454b",
       "sha256": "80efd2acb78e68e0f8f1f852d51e198e988908e7312249494d9737ea05e485a3",
       "files_scanned": 250,
@@ -3347,7 +3347,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/ensdomains/ens-app-v3/tree/67b917459591440b637ea5f315eabc4229473506",
-      "checked_at": "2026-10-11T21:04:39Z",
+      "checked_at": "2026-10-28T22:38:02Z",
       "fetched": "https://codeload.github.com/ensdomains/ens-app-v3/tar.gz/67b917459591440b637ea5f315eabc4229473506",
       "sha256": "1c414dc63a8d26a1576b5d78d0e2543aa47c3459afa150796ccc903322e20472",
       "files_scanned": 678,
@@ -3365,7 +3365,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/ensdomains/ens-app-v3/tree/67b917459591440b637ea5f315eabc4229473506",
-      "checked_at": "2026-10-11T21:04:39Z",
+      "checked_at": "2026-10-28T22:38:02Z",
       "fetched": "https://codeload.github.com/ensdomains/ens-app-v3/tar.gz/67b917459591440b637ea5f315eabc4229473506",
       "sha256": "1c414dc63a8d26a1576b5d78d0e2543aa47c3459afa150796ccc903322e20472",
       "files_scanned": 678,
@@ -3383,7 +3383,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/server/middleware/geo-gate.ts#L56",
-      "checked_at": "2026-10-11T21:04:39Z",
+      "checked_at": "2026-10-28T22:38:02Z",
       "found": [
         {
           "pattern": "SANCTIONED_COUNTRIES\\.includes\\(country\\)",
@@ -3438,7 +3438,7 @@
         "ZW"
       ],
       "source": "https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/entities/country-constants.ts#L3",
-      "checked_at": "2026-10-11T21:04:39Z",
+      "checked_at": "2026-10-28T22:38:03Z",
       "found": [
         {
           "pattern": "export const SANCTIONED_COUNTRIES",
@@ -3460,7 +3460,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/docs/geo-blocking.md#L21",
-      "checked_at": "2026-10-11T21:04:39Z",
+      "checked_at": "2026-10-28T22:38:03Z",
       "found": [
         {
           "pattern": "Blocked \\(Hard Block\\)",
@@ -3487,7 +3487,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/server/utils/screening.ts#L75",
-      "checked_at": "2026-10-11T21:04:39Z",
+      "checked_at": "2026-10-28T22:38:04Z",
       "found": [
         {
           "pattern": "/v3/compliance/address-screening",
@@ -3519,7 +3519,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/server/middleware/geo-gate.ts#L48",
-      "checked_at": "2026-10-11T21:04:39Z",
+      "checked_at": "2026-10-28T22:38:04Z",
       "found": [
         {
           "pattern": "if \\(edge\\.vpnIsUsed === true\\)",
@@ -3546,7 +3546,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/gmx-io/gmx-interface/tree/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c",
-      "checked_at": "2026-10-11T21:04:41Z",
+      "checked_at": "2026-10-28T22:38:05Z",
       "fetched": "https://codeload.github.com/gmx-io/gmx-interface/tar.gz/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c",
       "sha256": "acf4c536472547a11c96c50c3402aef7b44054cebf3a3816ed1a324665b860f3",
       "files_scanned": 2691,
@@ -3564,7 +3564,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/gmx-io/gmx-interface/tree/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:07Z",
       "fetched": "https://codeload.github.com/gmx-io/gmx-interface/tar.gz/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c",
       "sha256": "acf4c536472547a11c96c50c3402aef7b44054cebf3a3816ed1a324665b860f3",
       "files_scanned": 2691,
@@ -3582,7 +3582,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/KyberNetwork/kyberswap-interface/blob/12c16463eb52d1f13f0961daf9445f907adaeb0e/apps/kyberswap-interface/src/hooks/useRestrictedTokens.ts#L27",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:08Z",
       "found": [
         {
           "pattern": "getUserCountryCode\\(\\)",
@@ -3609,7 +3609,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/KyberNetwork/kyberswap-interface/blob/12c16463eb52d1f13f0961daf9445f907adaeb0e/apps/kyberswap-interface/src/utils/sendTransaction.ts#L52",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:08Z",
       "found": [
         {
           "pattern": "export async function ensureNotBlacklisted",
@@ -3636,7 +3636,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/lidofinance/staking-vault-widget/tree/f258fb091d3ca01e5baf98128d01818e407a7877",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:08Z",
       "fetched": "https://codeload.github.com/lidofinance/staking-vault-widget/tar.gz/f258fb091d3ca01e5baf98128d01818e407a7877",
       "sha256": "63a8bbdfacbe827b4b8683a9127e6b2edb9a82e2de28c9a825d975ccfd984e87",
       "files_scanned": 1558,
@@ -3654,7 +3654,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/lidofinance/staking-vault-widget/blob/f258fb091d3ca01e5baf98128d01818e407a7877/pages/api/validation.ts#L57",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:08Z",
       "found": [
         {
           "pattern": "`/v2/check/\\$\\{validatedAddress\\}`",
@@ -3676,7 +3676,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/lidofinance/staking-vault-widget/blob/f258fb091d3ca01e5baf98128d01818e407a7877/providers/address-validation-provider.tsx#L111",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:09Z",
       "found": [
         {
           "pattern": "API enabled \\+ success → return API\\.isValid",
@@ -3705,7 +3705,7 @@
         "US"
       ],
       "source": "https://github.com/lidofinance/ethereum-staking-widget/blob/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a/REMOTE_CONFIG_MANIFEST.json#L35",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:09Z",
       "found": [
         {
           "pattern": "\"geo\":\\s*\\{\\s*\"limited\"",
@@ -3727,7 +3727,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/lidofinance/ethereum-staking-widget/blob/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a/utilsApi/geo-handler.ts#L12",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:10Z",
       "found": [
         {
           "pattern": "const CF_COUNTRY_HEADER = 'cf-ipcountry'",
@@ -3754,7 +3754,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/lidofinance/ethereum-staking-widget/blob/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a/pages/api/validation.ts#L51",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:10Z",
       "found": [
         {
           "pattern": "secretConfig\\.validationAPI \\+ `/v\\$\\{version\\}/check/\\$\\{validatedAddress\\}`",
@@ -3776,7 +3776,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/lidofinance/ethereum-staking-widget/blob/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a/utilsApi/geo-handler.ts#L11",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:10Z",
       "found": [
         {
           "pattern": "`T1` for Tor exit nodes",
@@ -3803,7 +3803,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/liquity/bold/blob/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0/frontend/app/src/comps/Blocking/Blocking.tsx#L5",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:10Z",
       "found": [
         {
           "pattern": "BLOCKING_VPNAPI",
@@ -3835,7 +3835,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/liquity/bold/blob/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0/frontend/app/src/comps/Blocking/Blocking.tsx#L5",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:10Z",
       "found": [
         {
           "pattern": "BLOCKING_LIST",
@@ -3862,7 +3862,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/liquity/bold/blob/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0/frontend/app/src/env.ts#L119",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:11Z",
       "found": [
         {
           "pattern": "BLOCKING_LIST: v\\.optional\\(",
@@ -3908,7 +3908,7 @@
         "US"
       ],
       "source": "https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/packages/shared/notionable-hooks/src/use-geoip-block.ts#L38",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:11Z",
       "found": [
         {
           "pattern": "SanctionedCountries\\.find\\(\\(s\\) => s === country\\)",
@@ -3935,7 +3935,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/notional-finance/notional-monorepo/blob/cff15de4b098d101b2a023732efd242496c42888/packages/notionable/src/account/communities.ts#L114",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:12Z",
       "found": [
         {
           "pattern": "0x40c57923924b5c5c5455c48d93317139addac8fb",
@@ -3962,7 +3962,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/XLabs/portal-bridge-ui/blob/10744b90e48444f8da054aaa9c07518fb9eaf997/apps/connect/src/providers/sanctions.ts#L13",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:12Z",
       "found": [
         {
           "pattern": "export const TRM_URL",
@@ -3989,7 +3989,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/QuickSwap/interface-v2/tree/8799993562503860a266feb3d8bf376acc80596a",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:12Z",
       "fetched": "https://codeload.github.com/QuickSwap/interface-v2/tar.gz/8799993562503860a266feb3d8bf376acc80596a",
       "sha256": "0b4b9b3a1b3ca14d46e98c943238e491c43f0d41df95fe74c8c134a0ca2c35aa",
       "files_scanned": 863,
@@ -4007,7 +4007,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/QuickSwap/interface-v2/tree/8799993562503860a266feb3d8bf376acc80596a",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:12Z",
       "fetched": "https://codeload.github.com/QuickSwap/interface-v2/tar.gz/8799993562503860a266feb3d8bf376acc80596a",
       "sha256": "0b4b9b3a1b3ca14d46e98c943238e491c43f0d41df95fe74c8c134a0ca2c35aa",
       "files_scanned": 863,
@@ -4025,7 +4025,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/components/common/GeoblockingProvider/index.tsx#L8",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:13Z",
       "found": [
         {
           "pattern": "fetch\\(AppRoutes\\.swap, \\{ method: 'HEAD' \\}\\)",
@@ -4057,7 +4057,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/config/constants.ts#L145",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:13Z",
       "found": [
         {
           "pattern": "CHAINALYSIS_OFAC_CONTRACT = '0x40c57923924b5c5c5455c48d93317139addac8fb'",
@@ -4079,7 +4079,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/hooks/useSanctionedAddress.ts#L15",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:14Z",
       "found": [
         {
           "pattern": "useGetIsSanctionedQuery\\(isRestricted && wallet \\? wallet\\.address",
@@ -4101,7 +4101,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/ui/context/ConnectedContext.tsx#L454",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:14Z",
       "found": [
         {
           "pattern": "if \\(vpnData\\?\\.isRestrictedRegion\\) return 'region-restricted'",
@@ -4123,7 +4123,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/hooks/authentication/useVpnCheck.ts#L15",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:14Z",
       "found": [
         {
           "pattern": "fetch\\(`\\$\\{authUrl\\}/ip/status`\\)",
@@ -4145,7 +4145,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/geo-config/routeGuard.ts#L29",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:15Z",
       "found": [
         {
           "pattern": "export async function requireModuleEnabled",
@@ -4172,7 +4172,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/hooks/authentication/useRestrictedAddressCheck.ts#L42",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:15Z",
       "found": [
         {
           "pattern": "/address/status\\?address=\\$\\{address\\}",
@@ -4194,7 +4194,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/ui/context/ConnectedContext.tsx#L462",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:15Z",
       "found": [
         {
           "pattern": "if \\(authData\\?\\.addressAllowed === false\\) return 'wallet-blocked'",
@@ -4216,7 +4216,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/ui/hooks/useTermsSignatureGate.tsx#L40",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:15Z",
       "found": [
         {
           "pattern": "checks for VPN use or location within the US",
@@ -4243,7 +4243,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/snapshot-labs/sx-monorepo/blob/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef/apps/ui/src/views/Terms.vue#L13",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:16Z",
       "found": [
         {
           "pattern": "Prohibited Jurisdictions",
@@ -4270,7 +4270,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/snapshot-labs/sx-monorepo/tree/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef/apps/ui",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:16Z",
       "fetched": "https://codeload.github.com/snapshot-labs/sx-monorepo/tar.gz/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef",
       "sha256": "7861337dd1e6fcdd38681d6e532dcc0a25bf3ae1940975b62a9d8c19a7640e7f",
       "files_scanned": 411,
@@ -4288,7 +4288,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/snapshot-labs/sx-monorepo/tree/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef/apps/ui",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:16Z",
       "fetched": "https://codeload.github.com/snapshot-labs/sx-monorepo/tar.gz/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef",
       "sha256": "7861337dd1e6fcdd38681d6e532dcc0a25bf3ae1940975b62a9d8c19a7640e7f",
       "files_scanned": 411,
@@ -4322,7 +4322,7 @@
         "VE"
       ],
       "source": "https://github.com/sushi-labs/sushiswap/blob/9520c07dabb425a404544cdaf91c8608dc4b197b/apps/web/src/lib/robinhood/restricted-countries.ts#L3",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:16Z",
       "found": [
         {
           "pattern": "ROBINHOOD_STOCK_TOKEN_RESTRICTED_COUNTRIES",
@@ -4344,7 +4344,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/sushi-labs/sushiswap/blob/9520c07dabb425a404544cdaf91c8608dc4b197b/apps/web/src/lib/wagmi/systems/checker/stock-token-region.tsx#L101",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:17Z",
       "found": [
         {
           "pattern": "useCountryCode\\(\\)",
@@ -4371,7 +4371,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/sushi-labs/sushiswap/blob/9520c07dabb425a404544cdaf91c8608dc4b197b/apps/web/src/lib/wagmi/components/sanctioned-address-dialog.tsx#L28",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:17Z",
       "found": [
         {
           "pattern": "https://api\\.trmlabs\\.com/public/v1/sanctions/screening",
@@ -4403,7 +4403,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/synapsecns/sanguine/blob/7c8126288846909d65660c4018b042eb5a498d32/packages/synapse-interface/utils/screenAddress.ts#L23",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:18Z",
       "found": [
         {
           "pattern": "https://screener\\.omnirpc\\.io/fe/address/\\$\\{address\\}",
@@ -4430,7 +4430,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/packages/uniswap/src/features/transactions/swap/hooks/useGeoRestrictionMode.ts#L50",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:19Z",
       "found": [
         {
           "pattern": "useIsFeatureGated\\(GatedFeature\\.ISSUER_SPECIFIC_RWA\\)",
@@ -4457,7 +4457,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/packages/compliance/src/client.ts#L47",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:19Z",
       "found": [
         {
           "pattern": "export async function screenAddress\\(",
@@ -4489,7 +4489,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/apps/web/src/hooks/useAccountRiskCheck.ts#L9",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:19Z",
       "found": [
         {
           "pattern": "useIsBlockedAddress\\(",
@@ -4516,7 +4516,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/VenusProtocol/venus-protocol-interface/blob/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/clients/api/queries/useGetPools/applyCountryCodeToPools/index.ts#L22",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:20Z",
       "found": [
         {
           "pattern": "tokenMetadata\\?\\.restrictedCountries\\?\\.includes\\(countryCode\\)",
@@ -4543,7 +4543,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/VenusProtocol/venus-protocol-interface/blob/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/clients/api/queries/useGetIpLocation/getIpLocation/index.ts#L11",
-      "checked_at": "2026-10-11T21:04:43Z",
+      "checked_at": "2026-10-28T22:38:20Z",
       "found": [
         {
           "pattern": "https://free\\.freeipapi\\.com/api/json",
@@ -4565,7 +4565,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/yearn/yearn.fi/tree/ad153cba6e55862634ad6a7b8e8061832a5e91cb",
-      "checked_at": "2026-10-11T21:04:44Z",
+      "checked_at": "2026-10-28T22:38:20Z",
       "fetched": "https://codeload.github.com/yearn/yearn.fi/tar.gz/ad153cba6e55862634ad6a7b8e8061832a5e91cb",
       "sha256": "80887df87b9ec7babe1b7ff5ccf8a5da453a6e7a8f1ed3a0e228da736b061681",
       "files_scanned": 768,
@@ -4583,7 +4583,7 @@
       "outcome": "pass",
       "countries": [],
       "source": "https://github.com/yearn/yearn.fi/tree/ad153cba6e55862634ad6a7b8e8061832a5e91cb",
-      "checked_at": "2026-10-11T21:04:44Z",
+      "checked_at": "2026-10-28T22:38:21Z",
       "fetched": "https://codeload.github.com/yearn/yearn.fi/tar.gz/ad153cba6e55862634ad6a7b8e8061832a5e91cb",
       "sha256": "80887df87b9ec7babe1b7ff5ccf8a5da453a6e7a8f1ed3a0e228da736b061681",
       "files_scanned": 768,

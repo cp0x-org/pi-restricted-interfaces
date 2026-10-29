@@ -1,0 +1,26 @@
+{
+  "id": "usual",
+  "name": "Usual",
+  "targets": {
+    "app": "https://app.usual.money",
+    "repo": null,
+    "terms": "https://docs.usual.money/resources-and-ecosystem/legal-documentation/terms-of-services",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-terms",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "tos_only",
+      "about": "The Terms bar Prohibited Persons (residents or nationals of a long list of countries); no technical geo-block described",
+      "source": {
+        "url": "https://docs.usual.money/resources-and-ecosystem/legal-documentation/terms-of-services",
+        "kind": "terms"
+      },
+      "expect": [
+        "Prohibited Person: means a person who is a resident or national of the following countries"
+      ]
+    }
+  ]
+}

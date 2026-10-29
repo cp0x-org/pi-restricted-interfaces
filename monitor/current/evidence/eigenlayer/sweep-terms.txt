@@ -1,7 +1,7 @@
 check: eigenlayer/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://docs.eigencloud.xyz/eigencloud/legal/terms-of-service
-checked_at: 2026-10-11T21:17:21Z
+checked_at: 2026-10-28T22:54:17Z
 fetched: https://web.archive.org/web/9999id_/https://docs.eigencloud.xyz/eigencloud/legal/terms-of-service
 sha256: 01005ada851c9e9769796b6f72a9003165a37ac14cc8590aab40d61f2ecfa73c
 http_status: 200

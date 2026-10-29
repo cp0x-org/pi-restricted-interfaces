@@ -1,0 +1,20 @@
+check: venus/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/VenusProtocol/venus-protocol-interface/tree/86ea4f7aefaaff6685aa97306fc05849a519f0f2
+checked_at: 2026-10-28T22:37:52Z
+fetched: https://codeload.github.com/VenusProtocol/venus-protocol-interface/tar.gz/86ea4f7aefaaff6685aa97306fc05849a519f0f2
+sha256: 041b9160ccdfbfe3ff4720dadf96036d2755c5b5e627e6fad65dc4dc2b77c8ec
+--------------------------------------------------------------------------------
+repository: https://github.com/VenusProtocol/venus-protocol-interface/tree/86ea4f7aefaaff6685aa97306fc05849a519f0f2
+files scanned: 1731
+
+signals:
+  [strong] geo: geo-IP service — 1 file(s)
+      https://github.com/VenusProtocol/venus-protocol-interface/blob/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/clients/api/queries/useGetIpLocation/getIpLocation/index.ts#L11  tryCode: string; } export const IP_API_URL = 'https://free.freeipapi.com/api/json'; export const getIpLocation = async (): Promise<GetIpLocationOut
+  [weak] geo: geo-block words — 3 file(s)
+      https://github.com/VenusProtocol/venus-protocol-interface/blob/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/clients/api/queries/useGetPools/applyCountryCodeToPools/index.ts#L22  toLowerCase()]; const isRestricted = !!tokenMetadata?.restrictedCountries?.includes(countryCode); const isGated = !!tokenMetadata?.gatedCountrie
+      https://github.com/VenusProtocol/venus-protocol-interface/blob/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/clients/api/queries/useGetPools/useGetPoolsQuery/getPools/getApiPools/index.ts#L96  okenPrices: ApiTokenPrice[]; gatedCountries?: string[]; restrictedCountries?: string[]; } export interface GetApiPoolsResponse { result: ApiPool[];
+      https://github.com/VenusProtocol/venus-protocol-interface/blob/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/pages/FixedTermVaultTermsOfUse/index.tsx#L41  pation share. </li> <li> <strong>&quot;Restricted Jurisdiction&quot;</strong> means the United States of America (including its territ
+  [weak] screening: screening words — 2 file(s)
+      https://github.com/VenusProtocol/venus-protocol-interface/blob/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/pages/FixedTermVaultTermsOfUse/index.tsx#L51  tioned Person&quot;</strong> means any person listed on the OFAC Specially Designated Nationals and Blocked Persons List, or any consoli
+      https://github.com/VenusProtocol/venus-protocol-interface/blob/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/pages/TermsOfUse/index.tsx#L61  are not: (a) subject to economic sanctions administered by OFAC, EU, UN, or other applicable authorities; (b) located in, or a resident o

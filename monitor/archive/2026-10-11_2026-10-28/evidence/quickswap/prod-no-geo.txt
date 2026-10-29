@@ -1,0 +1,51 @@
+check: quickswap/prod-no-geo
+about: Production JS of QuickSwap: no geo-IP lookup or country block
+source: https://dapp.quickswap.exchange
+checked_at: 2026-10-11T21:15:44Z
+http_status: 200
+--------------------------------------------------------------------------------
+scripts:
+  https://dapp.quickswap.exchange/_next/static/chunks/3223f137-59a2fdb0a9d9801d.js  sha256=70b45f85d754e158b6b209b08fe669922531d2e8d58630c3de19a0f3fdde0679
+  https://dapp.quickswap.exchange/_next/static/chunks/128f1141-7a10b7f2d11f661f.js  sha256=6cfb2e8a892e3a62dbe1655cf5ade48c92113b8258a8b05566a249b913326cf0
+  https://dapp.quickswap.exchange/_next/static/chunks/5081-4aa13b3be0d3bbf4.js  sha256=1eb5bb8d1cc9bf486bc5a5e3c7fbae9c4840a9a89786da46fe81525cb07c5943
+  https://dapp.quickswap.exchange/_next/static/chunks/main-app-1a2e4bbfcb82d6db.js  sha256=fef970a0058e8e0178ad7fdb11aa2eff5da8bb24dcb9641c28febcaa03c88d0b
+  https://dapp.quickswap.exchange/_next/static/chunks/app/layout-98b8d3d884e0922f.js  sha256=22baeff99385e82bb692cc47b0bf4a356bf0ae1d0154aed06ac9c0f0f4041718
+  https://dapp.quickswap.exchange/_next/static/chunks/7152-dcf28b99eaf6fa39.js  sha256=3c6a9e97795c9f00cd8d812bb8a902df6f8d6f65d95e459d6e386c4c69083691
+  https://dapp.quickswap.exchange/_next/static/chunks/4498-913022d0dace62ae.js  sha256=4114c6f253437ea2a6ffeb19a5ffde9924ad6bc65778dc089fcda1163841e7f7
+  https://dapp.quickswap.exchange/_next/static/chunks/738-4fd9767e806f0b2f.js  sha256=bab5667847f83c5908cc67f59902c1fbfe6a09cca19a99028542edbed454974f
+  https://dapp.quickswap.exchange/_next/static/chunks/app/error-d7ba0827ce86f6ea.js  sha256=abe5fc05618fa060cf6b74edd83fbf7ba2e6caec4a5589180e3e43fbe3643a80
+  https://dapp.quickswap.exchange/_next/static/chunks/62111114-4c3ff87b60b3d33f.js  sha256=b844b284803e9a5cfbb572426688b7d825c7535185dd6a0b2914a07a64b1c896
+  https://dapp.quickswap.exchange/_next/static/chunks/6da3d7d3-7940e24fb223c049.js  sha256=b74abf3a53b207fe0d740204ccd28596214baf3069ca86b3958f14e3a93654bb
+  https://dapp.quickswap.exchange/_next/static/chunks/8283-a37f474684106527.js  sha256=ad1e448a49264047c51c9950f9a62aadee82db7a63df00caf98aa8f8d5b975e3
+  https://dapp.quickswap.exchange/_next/static/chunks/805-03516b36db9ff2c3.js  sha256=8e916ec43da2528f8f0cd5106b70f2e8fea0636162976d1af9a9c7a706dc41a3
+  https://dapp.quickswap.exchange/_next/static/chunks/431-a13d351f5b5c166f.js  sha256=8ebcde1ecdd84e0929c7e528b993b0a5c32c0a730dd3450b0955d36d3398e3af
+  https://dapp.quickswap.exchange/_next/static/chunks/7595-47657a522296cd3a.js  sha256=328f05ca8fcc4649374e8560ef07bbf38526825afd2cd72f7680b02f1389fd13
+  https://dapp.quickswap.exchange/_next/static/chunks/5803-96bfb9d4dd5b191e.js  sha256=4605f6601f6daeb6de5916f66acc5c0a9ba93f5b536273759796e405ad899f12
+  https://dapp.quickswap.exchange/_next/static/chunks/4702-8ad25e03c3d5af02.js  sha256=1f60e3f67103a2808868fc7c39b921690f0e5806f2be1dba8376143056eab22d
+  https://dapp.quickswap.exchange/_next/static/chunks/8640-80cb4e1a5797ebc1.js  sha256=7067c38a58c4b92be2ebe78225a11e7862187ff238a479dc946bd6ecefe971d2
+  https://dapp.quickswap.exchange/_next/static/chunks/app/not-found-66781848d4376d82.js  sha256=f5492e31de7f836fbe5a2b6bdc984204165862a1a6839123bf84432a18ec3c36
+  https://dapp.quickswap.exchange/_next/static/chunks/9528-339b69fc46df89a9.js  sha256=27a5a9d015348ba52b2a1c267231cb3397aef8dc20e41dc203b29657a1678e6f
+  https://dapp.quickswap.exchange/_next/static/chunks/4720-add5fd667e5041f2.js  sha256=9e8e3b8f0114166b05a4cccaed2a34972c14a3d934a78ffbe4f185198e20598f
+  https://dapp.quickswap.exchange/_next/static/chunks/4348-ea8dc0a61ed7e289.js  sha256=4d3f4a33368f13a5217e963cfe0452d56a26dc231ed8ab00c84a4ffac2bb62ff
+  https://dapp.quickswap.exchange/_next/static/chunks/7229-eaebbb39248bf9a4.js  sha256=e172504d17f292063f9c88821e36b15e8b1eb0042ba60bf7f75a0cab098c9d04
+  https://dapp.quickswap.exchange/_next/static/chunks/5024-7a305cb953bea5c2.js  sha256=c8ed692a57f2cefacf2d2d947d80d69cc2480887bdd069c28bd8d75fb162c4da
+  https://dapp.quickswap.exchange/_next/static/chunks/app/swap/page-adc105ee2feaee01.js  sha256=1647f391e52b2ac43bf0b78363c252e03ac59bdeea6b8d72a708920e361ef722
+  https://dapp.quickswap.exchange/_next/static/chunks/app/global-error-3929bb9006ad8be6.js  sha256=1ee4c7542e4082b05c7993c1a9e4ef705470227af3d93b2c98e127f4f8d322fa
+  https://dapp.quickswap.exchange/_next/static/chunks/polyfills-42372ed130431b0a.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
+  https://dapp.quickswap.exchange/_next/static/chunks/webpack-605ed32a4cb94af2.js  sha256=7d14c3b4ac09e6e07053728e13118854bbff2a93e52bf8025a01731d922203e7
+  https://static.cloudflareinsights.com/beacon.min.js  sha256=3e5bc7ca508f5d5aa7255341243840c8d2b70c8aea323800b51610df3f5a8a2c
+  https://dapp.quickswap.exchange/_next/static/chunks/753-da8eaaccf0c7bdfc.js  sha256=b171788417121b64d25356416e1e122b7c1520f815709efdfb35cf59d3c0b66c
+  https://dapp.quickswap.exchange/_next/static/chunks/9883-8e7bae702273b3a5.js  sha256=16ac4b2f57fa15efa338fe4e7eb0d418da5471fa4bbb7faa2b6adffe74298131
+  https://dapp.quickswap.exchange/_next/static/chunks/1046-da83fe68be9dfa6e.js  sha256=df3a3901806cee11c374a7ad86fad5a8b1425698466fed21f0093b788029632b
+  https://dapp.quickswap.exchange/_next/static/chunks/7813-dee82579f0972342.js  sha256=cd6d987cf4d40dcca2c942bcf1f0d90879a5343db9274bd7fdb8794ebb2e63ed
+  https://dapp.quickswap.exchange/_next/static/chunks/3023-58bb5cbed650845b.js  sha256=3f8ccdb2a857e44424e45af460f3457e781c35b61070f3c98d9ae55d34eb74d7
+  https://dapp.quickswap.exchange/_next/static/chunks/01257293-cc83c04804665a2d.js  sha256=34d2b94961eeffc105ac1b1bc15f1b58b577c2b1f313885e6b35e99538339073
+  https://dapp.quickswap.exchange/_next/static/chunks/6788-776be7417400ab03.js  sha256=b47bac3543910f6d7b267b7c94fbf3e7d10f89e6ba7c54e3ae893be379d77b64
+  https://dapp.quickswap.exchange/_next/static/chunks/3093-34e18235e71cae70.js  sha256=386ec454609df6e839a3d5e1667ccaf1f6fe5c8290f65910583e4a961cbadcbd
+  https://dapp.quickswap.exchange/_next/static/chunks/2390-b54b15ff124281b8.js  sha256=0443495c922e4e478a3c4b7670d6b6ebfbca0ea8e622c7a47df3b7a53b947e1a
+  https://dapp.quickswap.exchange/_next/static/chunks/3194-be3a8c3eeeefc188.js  sha256=b0d069f26a6aef7432809eac247550d7f3f2c1555ef24bbdf3e6ae050fe10d91
+  https://dapp.quickswap.exchange/_next/static/chunks/7498-d8a4576f91c3b5b3.js  sha256=e4b5c407c80e65fa02402fa0e353cd2c10b714f9129c21d4f1e06a10367b2b49
+  https://dapp.quickswap.exchange/_next/static/chunks/1889-f51f3abb105db852.js  sha256=15dbc66824ee68591defed84d2a2d4049c97e669bfa43af38bd428912d5a3df1
+
+matches:
+  none

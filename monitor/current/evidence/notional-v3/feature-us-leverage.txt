@@ -1,7 +1,7 @@
 check: notional-v3/feature-us-leverage
 about: Leveraged products are disabled in the US and for VPN users
 source: https://v3.notional.finance
-checked_at: 2026-10-11T21:15:43Z
+checked_at: 2026-10-28T22:52:37Z
 http_status: 200
 --------------------------------------------------------------------------------
 scripts:

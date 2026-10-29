@@ -1,7 +1,7 @@
 {
   "meta": {
     "schema_version": 2,
-    "generated": "2026-10-11",
+    "generated": "2026-10-28",
     "sanctioned_test_address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
     "sanctioned_test_address_note": "Ronin bridge exploiter (Lazarus Group), OFAC SDN since 2022-04-14. Control address: 0x2222...2222 / 0x1111...1111",
     "live_check_egress": "US datacenter (Polymarket /api/geoblock reported country=US, region=OH; Beefy /geo/country = US)",
@@ -45,7 +45,7 @@
           "UA"
         ],
         "close_only": [],
-        "method": "Code has no site-level geo-block. 2025 reports said the whole of Ukraine was blocked through 'third-party providers'"
+        "method": "The interface gateway (interface.gateway.uniswap.org) the app reads all its data from answers HTTP 409 ACCESS_DENIED to some countries, and app.uniswap.org itself is refused there; the code has no site-level geo-block. The countries are those of the live probe (see the observations; 2026-10-12: CU, IR). 2025 reports said the whole of Ukraine was blocked through 'third-party providers'; from Ukraine the gateway answered on 2026-10-12."
       },
       "geo_feature": {
         "s": "yes",
@@ -69,12 +69,35 @@
         "updated": "2024-03-21",
         "us": "no",
         "us_scope": "",
-        "restricted": "generic: comprehensive/regional US sanctions",
+        "restricted": "The Terms name no country: users must not be citizens, residents or organized in a jurisdiction or territory under comprehensive country-wide, territory-wide or regional US sanctions (support.uniswap.org Terms of Service, read on 2026-10-12 from the Wayback copy of 2026-09-19).",
         "restricted_codes": []
       },
       "notes": "Screening and the RWA gate are calls to the Uniswap entry gateway. Routing (Trading API) goes through the same gateway and needs an API key.",
       "live": [],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "gateway",
+          "method": "GET",
+          "url": "https://interface.gateway.uniswap.org/v2/uniswap.explore.v1.ExploreStatsService/ExploreStats?connect=v1&encoding=json&message=%7B%22chainId%22%3A%221%22%7D",
+          "headers": {
+            "Origin": "https://app.uniswap.org"
+          },
+          "note": "A read-only call to the interface gateway every page makes (explore statistics); the gateway refuses whole countries with ACCESS_DENIED.",
+          "rules": [
+            {
+              "match": "ACCESS_DENIED",
+              "state": "blocked",
+              "note": "the interface gateway answers ACCESS_DENIED (HTTP 409): the app has no data from this country"
+            },
+            {
+              "match": "\"stats\"",
+              "state": "ok",
+              "note": "the gateway answers"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "packages/compliance/src/client.ts",
         "packages/compliance/src/screenAddressQuery.ts",
@@ -192,9 +215,7 @@
       },
       "notes": "Geo checks and screening run in the browser; no backend of their own is involved. Perps use the Hyperliquid API, which checks the IP on its side.",
       "live": [],
-      "geo_endpoints": [
-        "https://www.sushi.com/api/geolocation"
-      ],
+      "geo_endpoints": [],
       "evidence": [
         "apps/web/src/lib/wagmi/components/sanctioned-address-dialog.tsx",
         "apps/web/src/lib/robinhood/restricted-countries.ts",
@@ -724,7 +745,7 @@
           "VN"
         ],
         "close_only": [],
-        "method": "Cloudflare edge: HTTP 403 'country is currently restricted in accordance with our Terms of Use'. Observed from Vietnam (2 networks, 2026-10-12); the other Terms countries are sanctioned jurisdictions that are not probed."
+        "method": "Cloudflare edge: HTTP 403 'Access from your country is currently restricted in accordance with our Terms of Use', for the site and for the aggregator API the app quotes with (aggregator-api.kyberswap.com). The countries are those of the live probe (see the observations; 2026-10-12: BY, CU, IR, MM, RU, VE, VN)."
       },
       "geo_feature": {
         "s": "yes",
@@ -772,6 +793,29 @@
         "Blackjack: sanctioned -> blacklisted:true (reason 2, since 2023-12); control -> blacklisted:false"
       ],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "aggregator route",
+          "method": "GET",
+          "url": "https://aggregator-api.kyberswap.com/ethereum/api/v1/routes?tokenIn=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&tokenOut=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amountIn=1000000000000000000",
+          "note": "The route quote the app requests for a swap (ETH -> USDC on Ethereum); Cloudflare refuses it by country with the same page as the site.",
+          "flags": [
+            "code"
+          ],
+          "rules": [
+            {
+              "match": "restricted in accordance with our Terms",
+              "state": "blocked",
+              "note": "Cloudflare: 'Access from your country is currently restricted in accordance with our Terms of Use'"
+            },
+            {
+              "match": "\"code\"\\s*:\\s*0",
+              "state": "ok",
+              "note": "a route is quoted"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "apps/kyberswap-interface/src/services/blackjack.ts",
         "apps/kyberswap-interface/src/utils/sendTransaction.ts",
@@ -1182,7 +1226,7 @@
         "s": "unknown",
         "countries": [],
         "close_only": [],
-        "method": ""
+        "method": "The price API the app quotes with (api.velora.xyz/prices) answers an empty HTTP 403 to some countries, so no swap can be quoted there; the landing page itself is served. The countries are those of the live probe (see the observations; 2026-10-12: BY, CU, IQ, IR, LY, MM, RU, SD, SY, ZW)."
       },
       "geo_feature": {
         "s": "unknown",
@@ -1219,11 +1263,31 @@
           "UA-LPR"
         ]
       },
-      "notes": "Closed. The Velora API is public.",
+      "notes": "Closed. The Velora API is public. Closed frontend; the geo-block sits in the price API (api.velora.xyz), not on the page: without JavaScript the site looks open everywhere.",
       "live": [
         "WebFetch (US): normal page"
       ],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "price route",
+          "method": "GET",
+          "url": "https://api.velora.xyz/prices?srcToken=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&destToken=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&amount=1000000000000000000&srcDecimals=18&destDecimals=6&network=1&side=SELL",
+          "note": "The price route the app requests for a swap (ETH -> USDC on Ethereum); the API answers an empty HTTP 403 to some countries.",
+          "rules": [
+            {
+              "match": "^HTTP 403\\b",
+              "state": "blocked",
+              "note": "the price API refuses the country (empty HTTP 403): the app cannot quote a swap"
+            },
+            {
+              "match": "\"priceRoute\"",
+              "state": "ok",
+              "note": "a price route is quoted"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "https://velora.xyz/tos"
       ],
@@ -1330,15 +1394,31 @@
       "repo_status": "open (may lag prod)",
       "repo_last_commit": "2026-07-23",
       "geo_site": {
-        "s": "no",
+        "s": "yes",
         "countries": [],
         "close_only": [],
-        "method": ""
+        "method": "Cloudflare refuses the whole site (and api.jumper.xyz) with its block page, without geo wording; the countries are those of the live probe (see the observations; 2026-10-12: CU, IR, SY, the only ones of 62 refused, so a country rule)."
       },
       "geo_feature": {
-        "s": "no",
-        "countries": [],
-        "scope": ""
+        "s": "yes",
+        "countries": [
+          "US",
+          "AF",
+          "BY",
+          "CA",
+          "CU",
+          "IR",
+          "KP",
+          "LY",
+          "MM",
+          "RU",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "UA"
+        ],
+        "scope": "RWA-based Jumper Earn opportunities (the pages under /earn/<campaign>): the app asks api.jumper.xyz/v1/geo-gates which gates apply to the visitor's country (Cloudflare geolocation) and replaces the gated pages with 'Access unavailable in your region'. The country list is the gates' own Countries field (2026-10-12); the live probe confirms the gate from 13 of 62 countries, the other three are refused by Cloudflare before the API answers."
       },
       "vpn": {
         "s": "tos_only",
@@ -1384,6 +1464,39 @@
         "LI.FI /v1/quote: SDN fromAddress -> 422, control -> quote OK"
       ],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "geo-gates",
+          "method": "GET",
+          "url": "https://api.jumper.xyz/v1/geo-gates",
+          "headers": {
+            "Origin": "https://jumper.xyz",
+            "Referer": "https://jumper.xyz/"
+          },
+          "note": "The app asks which geo gates apply to the visitor's country (Cloudflare geolocation); a gate with Outcome=block replaces the pages under its PathPrefix (RWA Earn opportunities).",
+          "flags": [
+            "meta.country",
+            "meta.source"
+          ],
+          "rules": [
+            {
+              "match": "\"Outcome\"\\s*:\\s*\"block\"",
+              "state": "feature_limited",
+              "note": "a geo gate applies: the Earn pages under its PathPrefix show 'Access unavailable in your region'"
+            },
+            {
+              "match": "\"data\"\\s*:\\s*\\[\\s*\\]",
+              "state": "ok",
+              "note": "no geo gate for this country"
+            },
+            {
+              "match": "^HTTP 403\\b",
+              "state": "blocked",
+              "note": "Cloudflare refuses the request from this country (the landing page jumper.xyz is refused the same way)"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "src/components/TermsOfBusiness/lists.tsx",
         "https://li.fi/legal/terms-and-conditions/"
@@ -1883,6 +1996,21 @@
         "WebFetch (US): normal page"
       ],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "tickers",
+          "method": "GET",
+          "url": "https://arbitrum-api.gmxinfra.io/prices/tickers",
+          "note": "Read-only price API the app uses; a control for a protocol without a server-side geo check.",
+          "rules": [
+            {
+              "match": "^HTTP 200\\b",
+              "state": "ok",
+              "note": "price API served"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "landing/src/pages/TermsAndConditions/TermsAndConditions.tsx"
       ],
@@ -1892,63 +2020,104 @@
     {
       "id": "hyperliquid",
       "name": "Hyperliquid",
-      "description": "Hyperliquid is a layer-1 blockchain with a fully on-chain order book for perpetual futures and spot trading, plus the HyperEVM smart-contract environment; HYPE is its native token.",
-      "description_zh": "Hyperliquid 是一条一层区块链，内置完全链上的永续合约与现货订单簿，并提供 HyperEVM 智能合约环境；HYPE 是其原生代币。",
+      "description": "Hyperliquid is a layer-1 blockchain with a fully on-chain order book for perpetual futures and spot trading, plus the HyperEVM smart-contract environment; HYPE is its native token. The official app takes USDC deposits from Arbitrum.",
+      "description_zh": "Hyperliquid 是一条一层区块链，内置完全链上的永续合约与现货订单簿，并提供 HyperEVM 智能合约环境；HYPE 是其原生代币。官方应用接受来自 Arbitrum 的 USDC 存款。",
       "category": "Perps",
       "chains": "Hyperliquid L1",
-      "networks": [],
+      "networks": [
+        "Arbitrum",
+        "HyperEVM"
+      ],
       "url": "https://app.hyperliquid.xyz",
+      "referral_url": "https://app.hyperliquid.xyz/join/CP0X",
       "frontend_repo": null,
       "repo_state": "closed",
       "repo_status": "closed",
       "repo_last_commit": null,
       "geo_site": {
         "s": "yes",
-        "countries": [
-          "US",
-          "CA-ON"
-        ],
+        "countries": [],
         "close_only": [],
-        "method": "IP check (US, Ontario, sanctioned jurisdictions — the latter not enumerated); info API has legalCheck {user} -> restrictions/ipAllowed"
+        "method": "The app calls the info API legalCheck for the visitor's IP; restrictions 'a' (BlockActions) disables trading and the app shows \"Not available in your jurisdiction\". IP geolocation by IPdata (Privacy Policy). The blocked countries are those where legalCheck answered 'a' to the live probe (see the observations; 2026-10-12: US, US-NY, CA-ON, CU, IR, MM, SY); Terms 1.6 name the United States and Ontario (plus unnamed sanctioned territories)."
       },
       "geo_feature": {
-        "s": "unknown",
+        "s": "yes",
         "countries": [],
-        "scope": ""
+        "scope": "Outcome markets (contracts that settle on the outcome of an event) are hidden where legalCheck answers 'o' (HideOutcomes) or 'u' (Uk: outcome markets hidden plus the app's UK-specific flow). The countries are those of the live probe (see the observations; 2026-10-12: 19 of 62 countries, among them DE, FR, GB, JP, SG, CA)."
       },
       "vpn": {
         "s": "tos_only",
-        "note": ""
+        "note": "Terms forbid VPNs or proxies to conceal location."
       },
       "screening": {
-        "s": "unknown",
-        "provider": "legalCheck takes the user address",
+        "s": "yes",
+        "provider": "Chainalysis (the app's 'flagged by Chainalysis' banner) via info API legalCheck userAllowed",
         "layer": "api",
-        "fail": null,
+        "fail": "unknown",
         "fail_note": ""
       },
       "asset_filter": "",
       "tos": {
         "url": "https://app.hyperliquid.xyz/terms",
-        "updated": "2026-06-15 (secondary)",
+        "updated": "2026-06-15",
         "us": "yes",
         "us_scope": "",
-        "restricted": "US, Ontario + sanctioned",
+        "restricted": "Terms 1.6: United States, Ontario (Canada), persons in sanctioned jurisdictions (not named) and their citizens",
         "restricted_codes": [
           "US",
           "CA-ON"
         ]
       },
-      "notes": "The check is the legalCheck call of the info API; builder-code frontends (Sushi and others) call it themselves. The trading API does not refuse orders on that basis.",
+      "notes": "The app asks the info API legalCheck with the connected wallet (or a placeholder address): the answer carries userAllowed (wallet screening) and restrictions for the visitor's IP. Builder-code frontends call legalCheck themselves. The country list is not published in code; the bundled Terms 1.6 name it.",
       "live": [
-        "WebFetch (US): metadata only, no JS"
+        "api.hyperliquid.xyz/info legalCheck (2026-10-12): SDN -> userAllowed:false; control -> userAllowed:true"
       ],
       "geo_endpoints": [],
-      "evidence": [
-        "sushi-labs/sushiswap apps/web/src/lib/perps/info/use-legal-check.ts",
-        "https://www.datawallet.com/crypto/is-hyperliquid-available-in-the-usa"
+      "api_probes": [
+        {
+          "name": "legalCheck",
+          "method": "POST",
+          "url": "https://api.hyperliquid.xyz/info",
+          "body": {
+            "type": "legalCheck",
+            "user": "0x4FaEC93ff98ab58bacb93dDA550bcB8294e590eE"
+          },
+          "note": "The IP check the app runs on load, with the app's own placeholder address.",
+          "flags": [
+            "restrictions",
+            "userAllowed"
+          ],
+          "rules": [
+            {
+              "match": "\"restrictions\"\\s*:\\s*\"a\"",
+              "state": "blocked",
+              "note": "restrictions=a (BlockActions): the app disables trading"
+            },
+            {
+              "match": "\"restrictions\"\\s*:\\s*\"o\"",
+              "state": "feature_limited",
+              "note": "restrictions=o (HideOutcomes): the app hides outcome markets"
+            },
+            {
+              "match": "\"restrictions\"\\s*:\\s*\"u\"",
+              "state": "feature_limited",
+              "note": "restrictions=u (Uk): the app hides outcome markets and runs its UK flow"
+            },
+            {
+              "match": "\"restrictions\"\\s*:\\s*\"n\"",
+              "state": "ok",
+              "note": "restrictions=n: no IP restriction"
+            }
+          ]
+        }
       ],
-      "confidence": "low",
+      "evidence": [
+        "app.hyperliquid.xyz bundle: legalCheck call, BlockActions=`a`, 'Not available in your jurisdiction'",
+        "app.hyperliquid.xyz bundle: TermsOfUse 1.6, PrivacyPolicy (geo-blocking by IP address using IPdata)",
+        "https://app.hyperliquid.xyz/terms",
+        "https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-start-trading"
+      ],
+      "confidence": "high",
       "alternatives": []
     },
     {
@@ -2027,9 +2196,7 @@
       "live": [
         "WebFetch (US): normal page"
       ],
-      "geo_endpoints": [
-        "https://geolocation.drift-labs.workers.dev/"
-      ],
+      "geo_endpoints": [],
       "evidence": [
         "velocity-exchange/velocity-common: common-ts/src/utils/geoblock/index.ts, common-ts/src/constants/geoblockList.ts, react/src/hooks/useGeoBlocking.tsx"
       ],
@@ -2066,7 +2233,7 @@
         "countries": [
           "US"
         ],
-        "scope": "Stock and index pairs: the app asks gTrade's geoblock API (wrkr.randomdegenerator.xyz/main/api/geo) for per-group flags and blocks the pairs of a flagged group. From the US stocks and indices are flagged; from 20 other countries tested on 2026-10-12 none are."
+        "scope": "Stock and index pairs: the app asks gTrade's geoblock API (wrkr.randomdegenerator.xyz/main/api/geo) for per-group flags and blocks the pairs of a flagged group. The flagged groups by country are those of the live probe (see the observations; 2026-10-12, 62 countries: stocks and indices in US, CU, IR, SY)."
       },
       "vpn": {
         "s": "tos_only",
@@ -2095,8 +2262,34 @@
         "wrkr.randomdegenerator.xyz/main/api/geo (2026-10-12): US -> stocks:true, indices:true; RO GB DE FR NL CA JP AU SG HK KR IN AE TR UA BR AR NG -> all false",
         "WebFetch (US): normal page"
       ],
-      "geo_endpoints": [
-        "https://wrkr.randomdegenerator.xyz/main/api/geo"
+      "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "geo",
+          "method": "GET",
+          "url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+          "note": "gTrade's geoblock API: a market group set to true has its pairs blocked in the app.",
+          "flags": [
+            "country",
+            "features.stocks",
+            "features.indices",
+            "features.forex",
+            "features.crypto",
+            "features.commodities"
+          ],
+          "rules": [
+            {
+              "match": "\"(stocks|indices|forex|crypto|commodities)\"\\s*:\\s*true",
+              "state": "feature_limited",
+              "note": "a market group is flagged: its pairs are blocked"
+            },
+            {
+              "match": "\"features\"\\s*:",
+              "state": "ok",
+              "note": "no market group flagged"
+            }
+          ]
+        }
       ],
       "evidence": [
         "gains.trade bundle: useGeoblock hook ('geoblock-features', features[group] === true blocks the pair)",
@@ -2109,21 +2302,34 @@
     {
       "id": "lighter",
       "name": "Lighter",
-      "description": "Lighter is a perpetual futures exchange built as a zk-rollup: order matching and liquidations run off-chain and are verified on-chain with zero-knowledge proofs.",
-      "description_zh": "Lighter 是一个以 zk-rollup 形式构建的永续合约交易所：订单撮合和清算在链下运行，并通过零知识证明在链上验证。",
+      "description": "Lighter is a perpetual futures exchange built as a zk-rollup: order matching and liquidations run off-chain and are verified on-chain with zero-knowledge proofs. Deposits settle through its Ethereum contract, and the app also takes deposits from other EVM networks through a universal deposit address.",
+      "description_zh": "Lighter 是一个以 zk-rollup 形式构建的永续合约交易所：订单撮合和清算在链下运行，并通过零知识证明在链上验证。存款通过其以太坊合约结算，应用还可通过通用存款地址接收来自其他 EVM 网络的存款。",
       "category": "Perps",
       "chains": "Lighter (zk L2)",
-      "networks": [],
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "BNB Chain",
+        "Polygon",
+        "Optimism",
+        "Avalanche",
+        "HyperEVM",
+        "Arc",
+        "Monad",
+        "Robinhood Chain"
+      ],
       "url": "https://app.lighter.xyz",
+      "referral_url": "https://app.lighter.xyz/?referral=CP0XCOOL",
       "frontend_repo": null,
       "repo_state": "closed",
       "repo_status": "closed",
       "repo_last_commit": null,
       "geo_site": {
-        "s": "tos_only",
+        "s": "yes",
         "countries": [],
         "close_only": [],
-        "method": "ToS: IP logging for enforcement"
+        "method": "The API rejects requests with geo_restriction_not_allowed (\"You are accessing Lighter from a restricted jurisdiction\") and the app shows a geo-blocked banner; the Terms log the IP to enforce access restrictions. The blocked countries are those where GET /api/v1/geoLocation answered error 20558 to the live probe (see the observations; 2026-10-12: 14 of 62 countries, among them US, CA, GB, RU, UA, CN); the Terms name 14 jurisdictions."
       },
       "geo_feature": {
         "s": "unknown",
@@ -2147,7 +2353,7 @@
         "updated": "2025-12-29",
         "us": "yes",
         "us_scope": "",
-        "restricted": "US, CA, UK, CN, KP, RU, UA, CU, IR, VE, SY (+SD, BY, MM)",
+        "restricted": "US, Canada, UK, China, North Korea, Russia, Ukraine, Cuba, Iran, Venezuela, Sudan, Belarus, Myanmar, Syria",
         "restricted_codes": [
           "US",
           "CA",
@@ -2159,19 +2365,42 @@
           "CU",
           "IR",
           "VE",
-          "SY",
           "SD",
           "BY",
-          "MM"
+          "MM",
+          "SY"
         ]
       },
-      "notes": "Closed. SDKs are open.",
-      "live": [
-        "WebFetch (US): normal page"
-      ],
+      "notes": "Closed frontend; SDKs are open. The geo restriction is an API error code the app turns into a banner. Wallet login goes through Dynamic, whose public project settings carry enableExternalWalletOnTransactionSanctions: true (effect not verified).",
+      "live": [],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "geoLocation",
+          "method": "GET",
+          "url": "https://mainnet.zklighter.elliot.ai/api/v1/geoLocation",
+          "note": "The API's geo check, polled by the app; error 20558 turns into the geo-blocked banner.",
+          "flags": [
+            "code"
+          ],
+          "rules": [
+            {
+              "match": "\"code\"\\s*:\\s*20558",
+              "state": "blocked",
+              "note": "API error 20558 geo_restriction_not_allowed"
+            },
+            {
+              "match": "^HTTP 200\\b",
+              "state": "ok",
+              "note": "code 200: no geo restriction"
+            }
+          ]
+        }
+      ],
       "evidence": [
-        "https://lighter.xyz/terms"
+        "app.lighter.xyz bundle: geo_restriction_not_allowed, geo-blocked banner",
+        "https://lighter.xyz/terms",
+        "https://apidocs.lighter.xyz/docs/deposits-transfers-and-withdrawals"
       ],
       "confidence": "high",
       "alternatives": []
@@ -2352,6 +2581,74 @@
         "POST pro.aave.com/api/geo from RO (2026-10-10): USDC and WETH on Ethereum -> isGeoblocked=false"
       ],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "asset geoblock",
+          "method": "POST",
+          "url": "https://pro.aave.com/api/geo",
+          "body": {
+            "tokens": [
+              {
+                "chainId": 1,
+                "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+              },
+              {
+                "chainId": 1,
+                "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+              },
+              {
+                "chainId": 1,
+                "address": "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f"
+              },
+              {
+                "chainId": 1,
+                "address": "0x6c3ea9036406852006290770BEdFcAbA0e23A0e8"
+              },
+              {
+                "chainId": 1,
+                "address": "0x8292Bb45bf1Ee4d140127049757C2E0fF06317eD"
+              },
+              {
+                "chainId": 1,
+                "address": "0xC139190F447e929f090Edeb554D95AbB8b18aC1C"
+              },
+              {
+                "chainId": 1,
+                "address": "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497"
+              },
+              {
+                "chainId": 1,
+                "address": "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3"
+              },
+              {
+                "chainId": 1,
+                "address": "0x43415eB6ff9DB7E26A15b704e7A3eDCe97d31C4e"
+              },
+              {
+                "chainId": 1,
+                "address": "0x14d60E7FDC0D71d8611742720E4C50E7a974020c"
+              },
+              {
+                "chainId": 1,
+                "address": "0x1aBaEA1f7C830bD89Acc67eC4af516284b1bC33c"
+              }
+            ]
+          },
+          "note": "The app asks which assets are geoblocked for the visitor (11 Ethereum assets: USDC, WETH, GHO, PYUSD, RLUSD, USDtb, sUSDe, USDe, USTB, USCC, EURC).",
+          "rules": [
+            {
+              "match": "\"isGeoblocked\"\\s*:\\s*true",
+              "state": "feature_limited",
+              "note": "an asset is geoblocked: the app hides or disables it"
+            },
+            {
+              "match": "\"areAssetsGeoblocked\"",
+              "state": "ok",
+              "note": "none of the probed assets is geoblocked"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "https://aave.com/blog/aave-pro-user-guide",
         "https://aave.com/terms-of-service",
@@ -2392,7 +2689,7 @@
         "s": "tos_only",
         "countries": [],
         "close_only": [],
-        "method": "ToS: IP-based geo-blocking"
+        "method": "app.compound.xyz answers HTTP 403 with a geo-block notice to some countries (the Terms reserve IP-based geo-blocking). The countries are those of the live probe (see the observations; 2026-10-12: CD, IQ, MM, SD, SS, ZW; four sanctioned countries got Cloudflare's block page without geo wording)."
       },
       "geo_feature": {
         "s": "no",
@@ -2455,7 +2752,7 @@
         "s": "tos_only",
         "countries": [],
         "close_only": [],
-        "method": "Privacy notice: automated geo-blocking and sanctions screening of IP-derived location may restrict access; no country list in the bundle"
+        "method": "v2-app.compound.xyz answers HTTP 403 with a geo-block notice to some countries (the privacy notice describes automated geo-blocking of the IP-derived location). The countries are those of the live probe (see the observations; 2026-10-12: CD, IQ, MM, SS, ZW; four sanctioned countries got Cloudflare's block page without geo wording)."
       },
       "geo_feature": {
         "s": "no",
@@ -2594,7 +2891,7 @@
           "US"
         ],
         "close_only": [],
-        "method": "2023: 'Accessing this website via VPN is not allowed'; US block per 2023 reports"
+        "method": "app.spark.finance answers HTTP 403 with a geo-block notice to some countries; the app's own /ip/status check (api-v2.spark.finance) returns the country and a VPN flag for the list in the code. The countries are those of the live probe (see the observations; 2026-10-12: 18 of 61, among them UA, RU, BY, IR, CU, SY, VE, AF, LB). 2023 reports: 'Accessing this website via VPN is not allowed', US block."
       },
       "geo_feature": {
         "s": "unknown",
@@ -3292,9 +3589,7 @@
         "notional.finance bundle (2026-10-10): api.notional.finance/geoip + sanctions list incl. US -> /blocked; no VPN detector; app reads registry-v4.notional.finance",
         "WebFetch (US): metadata only (block is client-side)"
       ],
-      "geo_endpoints": [
-        "https://api.notional.finance/geoip"
-      ],
+      "geo_endpoints": [],
       "evidence": [
         "packages/shared/notionable-hooks/src/use-geoip-block.ts",
         "packages/notionable/src/account/communities.ts",
@@ -3539,14 +3834,14 @@
         "s": "no",
         "countries": [],
         "close_only": [],
-        "method": ""
+        "method": "stake.lido.fi/api/geo answers HTTP 403 'Access to our services from your current location is unavailable' to some countries and the app shows the same warning. The countries are those of the live probe (see the observations; 2026-10-12: CU, IR, SY)."
       },
       "geo_feature": {
         "s": "yes",
         "countries": [
           "US"
         ],
-        "scope": "/api/geo (cf-ipcountry): full|limited; remote config geo.limited=[US] -> Earn vaults; Tor/unknown -> limited"
+        "scope": "/api/geo (cf-ipcountry): full|limited; remote config geo.limited=[US] -> Earn vaults; Tor/unknown -> limited Live: /api/geo answers availability=limited from the US (2026-10-12; staking disabled, withdrawals stay), full elsewhere."
       },
       "vpn": {
         "s": "detect",
@@ -3581,8 +3876,35 @@
       "live": [
         "WebFetch (US): normal page"
       ],
-      "geo_endpoints": [
-        "https://stake.lido.fi/api/geo"
+      "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "geo",
+          "method": "GET",
+          "url": "https://stake.lido.fi/api/geo",
+          "note": "The availability the app reads on load: full, or limited (staking disabled, only withdrawals), or a 403 'Access to our services from your current location is unavailable'.",
+          "flags": [
+            "country",
+            "availability"
+          ],
+          "rules": [
+            {
+              "match": "\"availability\"\\s*:\\s*\"limited\"",
+              "state": "feature_limited",
+              "note": "availability=limited: staking is disabled, withdrawals stay"
+            },
+            {
+              "match": "from your current location is unavailable",
+              "state": "blocked",
+              "note": "HTTP 403: 'Access to our services from your current location is unavailable'"
+            },
+            {
+              "match": "\"availability\"\\s*:\\s*\"full\"",
+              "state": "ok",
+              "note": "availability=full"
+            }
+          ]
+        }
       ],
       "evidence": [
         "utilsApi/geo-handler.ts",
@@ -3751,7 +4073,7 @@
           "UA"
         ],
         "close_only": [],
-        "method": "2024 reports: IP blocks on the EIGEN claim site (US, CA, CN, CU, KP, IR, VE). 2026-10-12: app.eigenlayer.xyz answers visitors from Ukraine (2 networks) with 'RESTRICTED: The application is not available to persons in your jurisdiction'."
+        "method": "app.eigenlayer.xyz replaces the app with 'ACCESS RESTRICTED: The application is not available to persons in your jurisdiction' (HTTP 200). The countries are those of the live probe (see the observations; 2026-10-12: CU, IR, RU, SY, UA; from the other countries the page answered HTTP 500 to a request without JavaScript). 2024 reports: IP blocks on the EIGEN claim site (US, CA, CN, CU, KP, IR, VE)."
       },
       "geo_feature": {
         "s": "unknown",
@@ -3775,7 +4097,7 @@
         "updated": "2025-12-15",
         "us": "no",
         "us_scope": "",
-        "restricted": "generic US-embargoed",
+        "restricted": "The Terms name no country: users must not be located or organized in any US-embargoed country or region, or one designated 'terrorist supporting' (docs.eigencloud.xyz Terms of Service, Wayback copy of 2026-09-17).",
         "restricted_codes": []
       },
       "notes": "Closed.",
@@ -3897,7 +4219,7 @@
         "s": "tos_only",
         "countries": [],
         "close_only": [],
-        "method": "ToS mentions geo-blocks"
+        "method": "app.pendle.finance answers HTTP 451 (Unavailable For Legal Reasons) to some countries; the Terms mention geo-blocks. The countries are those of the live probe (see the observations; 2026-10-12: BY, CU, IR, SD, SY, ZW)."
       },
       "geo_feature": {
         "s": "tos_only",
@@ -3978,7 +4300,7 @@
           "US"
         ],
         "close_only": [],
-        "method": "302 -> ethena.fi/restricted ('not available in your country' / high-risk wallet); confirmed live from the US, the ToS list (33 jurisdictions) is not live-verified"
+        "method": "302 -> ethena.fi/restricted ('not available in your country' / high-risk wallet); confirmed live from the US and 15 more countries on 2026-10-12 (see the observations; the Terms list 33 jurisdictions)"
       },
       "geo_feature": {
         "s": "yes",
@@ -4201,9 +4523,7 @@
       "live": [
         "api.beefy.finance/geo/country (US) -> {country: US}"
       ],
-      "geo_endpoints": [
-        "https://api.beefy.finance/geo/country"
-      ],
+      "geo_endpoints": [],
       "evidence": [
         "src/config/restrictions.json",
         "src/features/data/selectors/restrictions.ts",
@@ -4880,8 +5200,56 @@
         "updated": "2026-08-11",
         "us": "yes",
         "us_scope": "",
-        "restricted": "40 countries + 7 regions (help center, revision of 2026-08-14)",
-        "restricted_codes": []
+        "restricted": "Section 2.1.4 of the Terms forbids using the platform from restricted locations and bypassing them with a VPN; the list itself is the help-center article 'Geographic Restrictions' (revision of 2026-08-14): 40 blocked countries (the article's heading says 39) and 7 blocked regions (four Canadian provinces, Crimea, Donetsk, Luhansk).",
+        "restricted_codes": [
+          "AU",
+          "BE",
+          "BY",
+          "BR",
+          "BI",
+          "CF",
+          "CD",
+          "CU",
+          "DE",
+          "ET",
+          "FR",
+          "GB",
+          "IE",
+          "IR",
+          "IQ",
+          "IT",
+          "JP",
+          "KP",
+          "LB",
+          "LY",
+          "MM",
+          "MT",
+          "NI",
+          "NL",
+          "NZ",
+          "PL",
+          "RU",
+          "SG",
+          "SK",
+          "SO",
+          "SS",
+          "SD",
+          "SY",
+          "TW",
+          "TH",
+          "UM",
+          "US",
+          "VE",
+          "YE",
+          "ZW",
+          "CA-AB",
+          "CA-BC",
+          "CA-ON",
+          "CA-QC",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR"
+        ]
       },
       "notes": "The CLOB API itself is geo-blocked for the main tiers, not only the website.",
       "live": [
@@ -4933,7 +5301,7 @@
         "s": "no",
         "countries": [],
         "close_only": [],
-        "method": ""
+        "method": "The Safe Client Gateway (safe-client.safe.global), which the app loads every Safe, balance and transaction from, is refused by CloudFront (HTTP 403) in some countries; the page itself loads and then shows 'Access Restricted'. The countries are those of the live probe (see the observations; 2026-10-12: BY, CU, RU)."
       },
       "geo_feature": {
         "s": "yes",
@@ -4957,7 +5325,7 @@
         "updated": "2025-10",
         "us": "no",
         "us_scope": "",
-        "restricted": "generic EU/US sanctions",
+        "restricted": "The Terms name no country: users must not be citizens, residents or members of any jurisdiction subject to EU or US economic sanctions (safe.global/terms, section 17, read 2026-10-12).",
         "restricted_codes": []
       },
       "notes": "Only native integrations are restricted (swap via CoW, stake via Kiln and so on). The core wallet is permissionless.",
@@ -4965,6 +5333,32 @@
         "WebFetch (US): normal page"
       ],
       "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "client gateway",
+          "method": "GET",
+          "url": "https://safe-client.safe.global/v1/chains?limit=1",
+          "headers": {
+            "Origin": "https://app.safe.global"
+          },
+          "note": "The Safe Client Gateway the app loads every Safe, balance and transaction from; CloudFront refuses it by country, and the app then shows 'Access Restricted'.",
+          "flags": [
+            "count"
+          ],
+          "rules": [
+            {
+              "match": "The request could not be satisfied",
+              "state": "blocked",
+              "note": "CloudFront refuses the gateway (HTTP 403): the app cannot load any Safe"
+            },
+            {
+              "match": "\"count\"\\s*:",
+              "state": "ok",
+              "note": "the gateway answers"
+            }
+          ]
+        }
+      ],
       "evidence": [
         "apps/web/src/components/common/GeoblockingProvider/index.tsx",
         "apps/web/src/hooks/useSanctionedAddress.ts",
@@ -5464,7 +5858,7 @@
         "s": "unknown",
         "countries": [],
         "close_only": [],
-        "method": ""
+        "method": "superstate.com answers HTTP 403 'Access restricted: Access to this site is not permitted from your location'. The countries are those of the live probe (see the observations; 2026-10-12: AF, BY, CU, IR, LB, MM, RU, SY, VE)."
       },
       "geo_feature": {
         "s": "yes",
@@ -5493,7 +5887,7 @@
         "updated": "unknown",
         "us": "partial",
         "us_scope": "USTB/USCC: US accredited investors / qualified purchasers",
-        "restricted": "Only investors in supported countries (allowlist of roughly 22-29 countries, updated regularly)",
+        "restricted": "An allowlist, not a blocklist: Superstate Funds are offered only to Qualified Purchasers in 29 supported countries (docs 'Getting started', 2026-10: US, AU, BM, BS, VG, CA, KY, CY, FR, GE, DE, GI, HK, IT, IE, JE, LU, MH, MX, PA, PL, SC, SG, ES, KN, KR, CH, AE, GB); tokenized equities to investors in supported countries. No named restricted country, so no restricted codes.",
         "restricted_codes": []
       },
       "notes": "Closed frontend. USTB transfers to non-allowlisted addresses revert at the contract level.",
@@ -5596,7 +5990,7 @@
         "s": "unknown",
         "countries": [],
         "close_only": [],
-        "method": ""
+        "method": "universe.kelpdao.xyz/rseth/geoData answers isRestricted=true for the visitor's IP and the app shows 'Not available in your region'. The countries are those of the live probe (see the observations; 2026-10-12: 16 of 61, among them US, GB, CA, IR, CU, SY, VE)."
       },
       "geo_feature": {
         "s": "yes",
@@ -5629,7 +6023,7 @@
         "updated": "2025",
         "us": "no",
         "us_scope": "",
-        "restricted": "No named jurisdictions; sanctions-list representations only",
+        "restricted": "The Terms name no country: users must not be located, organized, citizens or residents in a country or territory subject to sanctions by OFAC, the UN, the EU, HM Treasury, the HKMA or the MAS (kerneldao.com/kelp/terms-of-service, clause (m), read 2026-10-12).",
         "restricted_codes": []
       },
       "notes": "Closed frontend; deposits and withdrawals use public contracts. The Gain vault gate is decided by Kelp's geoData API.",
@@ -6143,6 +6537,277 @@
           "url": "https://tornado.cp0x.com"
         }
       ]
+    },
+    {
+      "id": "variational",
+      "name": "Variational",
+      "aka": "Omni",
+      "description": "Variational is a peer-to-peer derivatives protocol on Arbitrum that clears and settles trades on-chain. Its first app, Omni, lets users trade perpetuals on crypto and traditional markets from a single cross-margined USDC account, with the Omni Liquidity Provider quoting and taking the other side of every trade.",
+      "description_zh": "Variational 是 Arbitrum 上的点对点衍生品协议，在链上清算和结算交易。其首个应用 Omni 让用户在单一全仓 USDC 账户中交易加密货币和传统市场的永续合约，由 Omni 流动性提供者（OLP）为每笔交易报价并作为对手方。",
+      "category": "Perps",
+      "chains": "Arbitrum",
+      "networks": [
+        "Arbitrum"
+      ],
+      "url": "https://omni.variational.io",
+      "referral_url": "https://omni.variational.io/?ref=OMNICP0X",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [],
+        "close_only": [],
+        "method": "Cloudflare answers \"access restricted\" (the app reloads into the Cloudflare block page) and the /banner API flags isRestrictedJurisdiction. Which countries get the block is not confirmed yet: the Restricted Persons page names 19 territories (and bars US and Canadian persons); a per-country check is pending."
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "tos_only",
+        "note": "Terms: \"Disguise your location through IP proxying, VPN or other methods\" is prohibited."
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.variational.io/legal/terms-of-use",
+        "updated": "2026-09-11",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "Restricted Persons page: Crimea, Donetsk, Luhansk and Sevastopol, Cuba, Iran, North Korea, Sudan, Syria, Canada, the US and its territories (Micronesia, Guam, Marshall Islands, Northern Mariana Islands, Puerto Rico, Palau, US Minor Outlying Islands, US Virgin Islands), Taiwan; also US and Canadian persons",
+        "restricted_codes": [
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-LPR",
+          "CU",
+          "IR",
+          "KP",
+          "SD",
+          "SY",
+          "CA",
+          "US",
+          "FM",
+          "GU",
+          "MH",
+          "MP",
+          "PR",
+          "PW",
+          "UM",
+          "VI",
+          "TW"
+        ]
+      },
+      "notes": "Closed SvelteKit frontend. The block runs at Cloudflare: a request answered with 'access restricted' makes the app reload into the block page, and the /banner API carries isRestrictedJurisdiction. Deposits are USDC on Arbitrum.",
+      "live": [],
+      "geo_endpoints": [],
+      "evidence": [
+        "omni.variational.io bundle: isRestrictedJurisdiction, /access restricted/i reload",
+        "https://docs.variational.io/legal/restricted-persons",
+        "https://docs.variational.io/legal/terms-of-use",
+        "https://docs.variational.io/omni/getting-started-with-omni"
+      ],
+      "confidence": "high",
+      "alternatives": []
+    },
+    {
+      "id": "extended",
+      "name": "Extended",
+      "description": "Extended is a hybrid perpetual futures exchange: orders are matched off-chain and trades settle on Starknet, with settlement moving to Circle's Arc from 2026-10-22. USDC is the collateral, and the app takes deposits and withdrawals on several EVM networks and on Starknet.",
+      "description_zh": "Extended 是一个混合式永续合约交易所：订单在链下撮合，交易在 Starknet 上结算，自 2026-10-22 起结算迁移到 Circle 的 Arc。USDC 是抵押品，应用支持在多个 EVM 网络和 Starknet 上存取款。",
+      "category": "Perps",
+      "chains": "Starknet (settlement moves to Arc from 2026-10-22)",
+      "networks": [
+        "Ethereum",
+        "Arbitrum",
+        "Base",
+        "Arc",
+        "Polygon",
+        "Avalanche",
+        "BNB Chain"
+      ],
+      "url": "https://app.extended.exchange",
+      "referral_url": "https://app.extended.exchange/join/CP0X",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [],
+        "close_only": [],
+        "method": "GET /geo answers 451 for a restricted region and the app replaces itself with \"Extended is not available in your region\" (API error GLOBAL.NOT_AVAILABLE_IN_YOUR_REGION). The blocked countries are those where /geo answered 451 to the live probe (see the observations); the Restricted Countries page names 16 jurisdictions."
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "detect",
+        "note": "GET /geo answers 451 with the load balancer's error code VPN."
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.extended.exchange/extended-resources/legal/terms-of-use",
+        "updated": "2026-10-08",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "Restricted Countries page: Afghanistan, Canada, Hong Kong, Cuba, Iran, North Korea, Russia, Syria, Seychelles, Crimea, Donetsk, Kherson, Luhansk and Zaporizhzhia, the UK, the US",
+        "restricted_codes": [
+          "AF",
+          "CA",
+          "HK",
+          "CU",
+          "IR",
+          "KP",
+          "RU",
+          "SY",
+          "SC",
+          "UA-Crimea",
+          "UA-DPR",
+          "UA-Kherson",
+          "UA-LPR",
+          "UA-Zaporizhzhia",
+          "GB",
+          "US"
+        ]
+      },
+      "notes": "Closed frontend. The app asks api.starknet.extended.exchange/geo on load; a 451 answer blocks the app, and the load balancer's error code tells a VPN from a restricted region. GET api.starknet.extended.exchange/geo answered {\"status\": \"OK\"} from Singapore, Brazil and France on 2026-10-12.",
+      "live": [],
+      "geo_endpoints": [
+        "https://api.starknet.extended.exchange/geo"
+      ],
+      "evidence": [
+        "app.extended.exchange bundle: GET /geo, UnavailableForLegalReasons, LbErrorCode VPN, 'Extended is not available in your region'",
+        "https://docs.extended.exchange/extended-resources/legal/restricted-countries",
+        "https://docs.extended.exchange/extended-resources/legal/terms-of-use",
+        "https://docs.extended.exchange/extended-resources/account-operations/deposits-and-withdrawals",
+        "https://docs.extended.exchange/about-extended/migration-from-starknet-to-arc"
+      ],
+      "confidence": "high",
+      "alternatives": []
+    },
+    {
+      "id": "aster",
+      "name": "Aster",
+      "description": "Aster is a decentralized exchange for perpetual futures and spot trading, with order books running on Aster Chain, its own privacy-focused layer 1 for derivatives. The app takes deposits from BNB Chain, Ethereum, Arbitrum, Solana and Sui.",
+      "description_zh": "Aster 是一个去中心化的永续合约与现货交易所，订单簿运行在其自有的、注重隐私的衍生品一层链 Aster Chain 上。应用接受来自 BNB Chain、以太坊、Arbitrum、Solana 和 Sui 的存款。",
+      "category": "Perps",
+      "chains": "Aster Chain, BNB Chain, Ethereum, Arbitrum, Solana, Sui",
+      "networks": [
+        "BNB Chain",
+        "Ethereum",
+        "Arbitrum"
+      ],
+      "url": "https://www.asterdex.com",
+      "referral_url": "https://www.asterdex.com/en/referral/jjrfpd",
+      "frontend_repo": null,
+      "repo_state": "closed",
+      "repo_status": "closed",
+      "repo_last_commit": null,
+      "geo_site": {
+        "s": "yes",
+        "countries": [],
+        "close_only": [],
+        "method": "POST /bapi/futures/v1/public/future/web3/common-check-ip returns {isBlocked, orderLimit, country}: isBlocked refuses the wallet connection (\"Service not available in your region\"), orderLimit leaves only closing positions and withdrawals. The countries are those of the live probe (see the observations; 2026-10-12: isBlocked in BY, CD, CU, IQ, IR, SD, SS, SY, ZW; orderLimit, that is close-only, in the US); the Terms name 11 Prohibited Jurisdictions."
+      },
+      "geo_feature": {
+        "s": "unknown",
+        "countries": [],
+        "scope": ""
+      },
+      "vpn": {
+        "s": "unknown",
+        "note": ""
+      },
+      "screening": {
+        "s": "tos_only",
+        "provider": "",
+        "layer": null,
+        "fail": null,
+        "fail_note": ""
+      },
+      "asset_filter": "",
+      "tos": {
+        "url": "https://docs.asterdex.com/resources/terms-and-conditions",
+        "updated": "2026-02-25",
+        "us": "yes",
+        "us_scope": "",
+        "restricted": "Prohibited Jurisdictions: US, Canada, UK, China, North Korea, Russia, Ukraine, Cuba, Iran, Venezuela, Syria",
+        "restricted_codes": [
+          "US",
+          "CA",
+          "GB",
+          "CN",
+          "KP",
+          "RU",
+          "UA",
+          "CU",
+          "IR",
+          "VE",
+          "SY"
+        ]
+      },
+      "notes": "Closed frontend. The IP check is a public API call the app makes before connecting a wallet; the answer names the country but the mapping of countries to isBlocked and orderLimit is server-side. The IP check answered isBlocked:false and orderLimit:false from Singapore, Brazil and France on 2026-10-12.",
+      "live": [],
+      "geo_endpoints": [],
+      "api_probes": [
+        {
+          "name": "common-check-ip",
+          "method": "POST",
+          "url": "https://www.asterdex.com/bapi/futures/v1/public/future/web3/common-check-ip",
+          "body": {
+            "sourceCode": ""
+          },
+          "note": "The IP check the app makes before connecting a wallet.",
+          "flags": [
+            "data.country",
+            "data.isBlocked",
+            "data.orderLimit"
+          ],
+          "rules": [
+            {
+              "match": "\"isBlocked\"\\s*:\\s*true",
+              "state": "blocked",
+              "note": "isBlocked: the app refuses to connect a wallet"
+            },
+            {
+              "match": "\"orderLimit\"\\s*:\\s*true",
+              "state": "close_only",
+              "note": "orderLimit: only closing positions and withdrawals"
+            },
+            {
+              "match": "\"isBlocked\"\\s*:\\s*false",
+              "state": "ok",
+              "note": "isBlocked=false, orderLimit=false"
+            }
+          ]
+        }
+      ],
+      "evidence": [
+        "www.asterdex.com bundle: common-check-ip, dex-ip-blocked, 'Only closing positions and withdrawals are available'",
+        "https://docs.asterdex.com/resources/terms-and-conditions",
+        "https://docs.asterdex.com/aster-chain/overview",
+        "https://docs.asterdex.com/overview/smart-contracts"
+      ],
+      "confidence": "high",
+      "alternatives": []
     }
   ]
 }

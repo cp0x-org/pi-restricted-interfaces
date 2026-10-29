@@ -1,0 +1,9 @@
+check: balancer/screening-block
+about: UserAccountProvider calls /api/wallet-check and sets isBlocked for an unauthorized address
+source: https://github.com/balancer/frontend-monorepo/blob/046d0100891916cda92a0aef5a0f2d059bd309d0/packages/lib/modules/web3/UserAccountProvider.tsx#L18
+checked_at: 2026-10-11T21:04:38Z
+fetched: https://raw.githubusercontent.com/balancer/frontend-monorepo/046d0100891916cda92a0aef5a0f2d059bd309d0/packages/lib/modules/web3/UserAccountProvider.tsx
+sha256: 990779de6808499dc67fe6e20911d822ca1a9a4ce0fa84d8da7e4d16f13cde11
+--------------------------------------------------------------------------------
+L18:     const res = await fetch(`/api/wallet-check/${address}`, { cache: 'no-store' })
+L76:       setIsBlocked(!isAuthorized)

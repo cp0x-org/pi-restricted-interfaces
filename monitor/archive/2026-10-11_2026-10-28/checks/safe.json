@@ -1,0 +1,79 @@
+{
+  "id": "safe",
+  "name": "Safe",
+  "targets": {
+    "app": "https://app.safe.global",
+    "repo": {
+      "repo": "safe-global/safe-wallet-monorepo",
+      "ref": "967145775447eb0375f018ab65d65a15af889412"
+    },
+    "terms": "https://safe.global/terms",
+    "endpoints": [],
+    "code_ignore": "AUTO_GENERATED/|scripts/api-schema/",
+    "code_ignore_why": "generated client of the whole Safe gateway API (incl. a community-campaign eligibility endpoint with isVpn) that the web app does not call"
+  },
+  "checks": [
+    {
+      "id": "feature-geoblocking",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "HEAD /swap returns 403 for OFAC-sanctioned countries; the app then hides swap, stake and earn",
+      "source": {
+        "repo": "safe-global/safe-wallet-monorepo",
+        "ref": "967145775447eb0375f018ab65d65a15af889412",
+        "path": "apps/web/src/components/common/GeoblockingProvider/index.tsx"
+      },
+      "expect": [
+        "fetch\\(AppRoutes\\.swap, \\{ method: 'HEAD' \\}\\)",
+        "res\\.status === 403",
+        "OFAC sanctioned countries"
+      ]
+    },
+    {
+      "id": "screening-oracle-address",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Chainalysis Sanctions Oracle contract used for the wallet check",
+      "source": {
+        "repo": "safe-global/safe-wallet-monorepo",
+        "ref": "967145775447eb0375f018ab65d65a15af889412",
+        "path": "apps/web/src/config/constants.ts"
+      },
+      "expect": [
+        "CHAINALYSIS_OFAC_CONTRACT = '0x40c57923924b5c5c5455c48d93317139addac8fb'"
+      ]
+    },
+    {
+      "id": "screening-hook",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "useSanctionedAddress() checks both the connected wallet and the Safe account",
+      "source": {
+        "repo": "safe-global/safe-wallet-monorepo",
+        "ref": "967145775447eb0375f018ab65d65a15af889412",
+        "path": "apps/web/src/hooks/useSanctionedAddress.ts"
+      },
+      "expect": [
+        "useGetIsSanctionedQuery\\(isRestricted && wallet \\? wallet\\.address"
+      ]
+    },
+    {
+      "id": "prod-oracle",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Production JS: Chainalysis oracle address, isSanctioned ABI and the 'Blocked address' screen",
+      "source": {
+        "url": "https://app.safe.global"
+      },
+      "expect": [
+        "\"0x40c57923924b5c5c5455c48d93317139addac8fb\"",
+        "name:\"isSanctioned\"",
+        "title:\"Blocked address\""
+      ]
+    }
+  ]
+}

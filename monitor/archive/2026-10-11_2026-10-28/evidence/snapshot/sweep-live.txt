@@ -1,0 +1,282 @@
+check: snapshot/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://snapshot.box
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://snapshot.box",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Snapshot",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 1848,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "GB": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "DE": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "FR": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "NL": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "PL": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "UA": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "TR": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AE": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "SG": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "HK": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "JP": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "BR": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AR": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "NG": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "VN": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "GE": {
+  "app": {
+   "status": null,
+   "final_url": "https://snapshot.box",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ }
+}

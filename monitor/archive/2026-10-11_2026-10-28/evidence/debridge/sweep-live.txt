@@ -1,0 +1,380 @@
+check: debridge/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://app.debridge.finance
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.debridge.finance",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.debridge.com/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "deBridge | Instant Cross-Chain Swaps & Transfers",
+   "scripts": [
+    "main-*.js",
+    "polyfills-*.js"
+   ],
+   "bytes": 12715,
+   "redirects": [
+    "https://app.debridge.com/"
+   ],
+   "server": "cloudflare"
+  }
+ }
+}

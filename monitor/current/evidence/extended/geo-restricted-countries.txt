@@ -1,0 +1,64 @@
+check: extended/geo-restricted-countries
+about: Jurisdictions named on Extended's Restricted Countries page (documentation only until a per-country check confirms where the /geo block applies)
+source: https://docs.extended.exchange/extended-resources/legal/restricted-countries
+checked_at: 2026-10-28T22:56:40Z
+fetched: https://docs.extended.exchange/extended-resources/legal/restricted-countries
+sha256: 89e97827f98be41e99495fcaac9fa2c94574e051f96a0eb54ece1764ca8d069e
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+Restricted Countries | Extended Documentation
+Extended Documentation
+⌘ Ctrl k
+Extended Documentation
+ABOUT EXTENDED
+Overview & Vision
+Technical Architecture
+Team
+Migration from Starknet to Arc
+EXTENDED Resources
+Trading
+Account Operations
+Vault
+Money Market
+Referrals and Affiliates
+Builder Codes
+Points Program
+More
+Legal
+Terms of Use
+Statement of Risk
+Restricted Countries
+Privacy Policy
+Trading Competitions
+Extended API
+API Documentation
+Powered by GitBook
+On this page
+For the complete documentation index, see llms.txt . This page is also available as Markdown .
+Copy
+On this page
+EXTENDED Resources
+Legal
+Restricted Countries
+Access to the Extended Protocol website, API, and services (defined by the Terms of Use ) is not available to Restricted Persons.
+“Restricted Persons” includes any individual or entity residing in, located in, incorporated in, or with a registered office in any jurisdiction in which access to or use of the Extended Protocol is restricted, including without limitation:
+(A) Afghanistan, Canada, China (Hong Kong), Cuba, Iran, Iraq, Yemen, North Korea, Russia, Syria, Seychelles, Ukraine (Crimea, Donetsk, Kherson, Luhansk and Zaporizhzhia), Panama, the United Kingdom and the United States of America; and
+(B) any other individual or entity whose access to or use of the Extended Protocol, website, API, and services would be contrary to any applicable law or regulatory requirement.
+Restricted Persons must not access or use the Extended Protocol website or services.
+This page may be updated from time to time.
+Please refer to the Terms of Use for further details regarding access to the Extended Protocol.
+Previous Statement of Risk
+Next Privacy Policy
+Last updated 3 hours ago
+
+--- section the countries were read from ---
+including without limitation:
+(A) Afghanistan, Canada,  Hong Kong), Cuba, Iran, Iraq, Yemen, North Korea, Russia, Syria, Seychelles,  Crimea, Donetsk, Kherson, Luhansk and Zaporizhzhia), Panama, the United Kingdom and the United States of America; and
+(B) any other individual or entity whose access to or use of the Extended Protocol, website, API, and services would be contrary to any applicable law or regulatory requirement.
+Restricted Persons must not access or use the Extended Protocol website or services.
+This page may be updated from time to time.
+Please refer to the Terms of Use for further details regarding access to the Extended Protocol.
+Previous Statement of Risk
+Next Privacy Policy
+Last updated 3 hours ago

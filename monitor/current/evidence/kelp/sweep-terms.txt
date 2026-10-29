@@ -1,9 +1,9 @@
 check: kelp/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://kerneldao.com/kelp/terms-of-service/
-checked_at: 2026-10-11T21:17:45Z
+checked_at: 2026-10-28T22:54:50Z
 fetched: https://kerneldao.com/kelp/terms-of-service/
-sha256: 83004c352bcf103bd8c9f39fb17370e175a7ebd8ea4bd5c54f01b58eda24dcf1
+sha256: c9645ac0fe8bac4245e0f2b0fc91fcdf3d2392b3a4b230e867c518aa88bf1dfe
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

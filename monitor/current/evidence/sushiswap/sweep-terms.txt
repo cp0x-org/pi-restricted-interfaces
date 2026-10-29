@@ -1,11 +1,11 @@
 check: sushiswap/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://www.sushi.com/legal/terms-of-service
-checked_at: 2026-10-11T21:18:38Z
-fetched: https://www.sushi.com/legal/terms-of-service
-sha256: f290cb9da00348d2b27bcbe9098885919d34fe6df474fec1cdb80bc6f0c3d968
+checked_at: 2026-10-28T22:56:20Z
+fetched: https://web.archive.org/web/9999id_/https://www.sushi.com/legal/terms-of-service
+sha256: 68a40ffaa3a0e84cb463d36b4cc0dd7b8e2b90b083ccf69d417ad347d3b24317
 http_status: 200
-via: live
+via: archive
 --------------------------------------------------------------------------------
 countries: DZ BO BY UA-Crimea CU UA-DPR CD IR IQ CI LR LY UA-LPR ML MM NP KP SO SD SY TN VE YE ZW US GB
 
@@ -28,17 +28,16 @@ Use the Services if you are a Restricted Person (or on their behalf);
 Terms of Service | Sushi 🍣
 Trade
 Perps
-Launchpad
 Explore
 Positions
 Stake
-Sushi Holdings Ltd.- Terms of Service
-Last modified: August 12, 2026
+Sushi Labs - Terms of Service
+Last modified: September 24, 2024
 Acceptance of the Terms of Use; Eligible Users
 THE SERVICES (AS DEFINED HEREIN) WERE NOT DEVELOPED FOR, AND ARE NOT OFFERED TO PERSONS OR ENTITIES WHO RESIDE IN, ARE CITIZENS OF, ARE LOCATED IN, ARE INCORPORATED IN, OR HAVE A REGISTERED OFFICE OR PRINCIPAL PLACE OF BUSINESS IN ANY RESTRICTED JURISDICTION OR COUNTRY SUBJECT TO ANY SANCTIONS OR RESTRICTIONS PURSUANT TO ANY APPLICABLE LAW, INCLUDING ALGERIA, BOLIVIA, BELARUS, THE CRIMEA REGION, CUBA, DONETSK, THE DEMOCRATIC REPUBLIC OF CONGO, IRAN, IRAQ, IVORY COAST, LIBERIA, LIBYA, LUHANSK, MALI, MYANMAR (BURMA), NEPAL, NORTH KOREA, SOMALIA, SUDAN, SYRIA, TUNISIA, VENEZUELA, YEMEN, ZIMBABWE, OR ANY OTHER COUNTRY TO WHICH THE UNITED STATES, THE UNITED KINGDOM, THE EUROPEAN UNION OR ANY OTHER JURISDICTION EMBARGOES GOODS OR IMPOSES SIMILAR SANCTIONS, OR ANY JURISDICTIONS IN WHICH THE TRANSACTING OF CRYPTOCURRENCIES IS PROHIBITED OR RESTRICTED IN ANY FORM OR MANNER (COLLECTIVELY, THE “ RESTRICTED JURISDICTIONS ” AND EACH A “ RESTRICTED JURISDICTION ”) OR ANY PERSON OWNED, CONTROLLED, LOCATED IN OR ORGANIZED UNDER THE LAWS OF ANY RESTRICTED JURISDICTION OR AFFILIATED WITH ANY SUCH PERSON, OR ANYONE LISTED ON A SANCTIONS LIST BY THE UNITED STATES, THE UNITED KINGDOM, THE EUROPEAN UNION OR ANY OTHER JURISDICTION (COLLECTIVELY, “ RESTRICTED PERSONS ”). THERE ARE NO EXCEPTIONS. IF YOU ARE A RESTRICTED PERSON OR LOCATED IN A RESTRICTED JURISDICTION, THEN DO NOT USE OR ATTEMPT TO USE THE SERVICES. USE OF ANY TECHNOLOGY OR MECHANISM, SUCH AS A VIRTUAL PRIVATE NETWORK (“ VPN ”), TO CIRCUMVENT OR ATTEMPT TO CIRCUMVENT THE RESTRICTIONS SET FORTH HEREIN IS STRICTLY PROHIBITED.
 BY USING THE SERVICES, YOU REPRESENT THAT (1) YOU ARE NOT A RESTRICTED PERSON; AND (2) YOU (INCLUDING, IF APPLICABLE, YOUR INDIVIDUAL OWNERS, REPRESENTATIVES, EMPLOYEES, OR ANY OTHER PERSON WITH ACCESS TO YOUR ACCOUNT) WILL NOT COORDINATE, CONDUCT OR CONTROL (INCLUDING BY, IN SUBSTANCE OR EFFECT, MAKING DECISIONS WITH RESPECT TO) YOUR USE OF THE SERVICES FROM WITHIN ANY RESTRICTED JURISDICTION.
 YOU ACKNOWLEDGE, UNDERSTAND AND AGREE THAT YOU ARE NOT PERMITTED TO MODIFY, DISASSEMBLE, DECOMPILE, ADAPT, ALTER, TRANSLATE, REVERSE ENGINEER OR CREATE DERIVATIVE WORKS OF THE SERVICES TO MAKE THEM AVAILABLE TO ANY RESTRICTED PERSONS OR ANYONE IN A RESTRICTED JURISDICTION.
-‍These Terms of Service, together with our Privacy Policy , incorporated herein by this reference, and any documents and additional terms they expressly incorporate by reference, which includes any other terms and conditions or other agreement that Sushi Holdings Ltd. (“ Company ”, “ we ” or “ us ”) posts publicly or makes available (collectively, these “ Terms of Service ”), are entered into between Company and you concerning your use of, and access to our website located at Sushi.com (the “ Website ”) and the decentralized exchange available through the Website (the “ DEX ”, and together with the Website, the “ Services ”).
+‍These Terms of Service, together with our Privacy Policy , incorporated herein by this reference, and any documents and additional terms they expressly incorporate by reference, which includes any other terms and conditions or other agreement that Sushi Labs (“ Company ”, “ we ” or “ us ”) posts publicly or makes available (collectively, these “ Terms of Service ”), are entered into between Company and you concerning your use of, and access to our website located at Sushi.com (the “ Website ”) and the decentralized exchange available through the Website (the “ DEX ”, and together with the Website, the “ Services ”).
 If you engage with the Services under authority from a different party or on another party’s behalf, then “ you ” (and its variants, including “ your ,” “ yours ,” etc.) as used herein refers to that person on whose behalf the Services are used (e.g., an employer). If the person engaging with our Services is an individual, acting in their own individual capacity, then “ you ” (and its variants) refers to that individual. If you have anyone using the Services on your behalf, you agree that you are responsible for the actions and inactions of all such persons, as they were your own.
 Please read these Terms of Service carefully, as they govern your use of the Services. These Terms of Service expressly cover your rights and obligations, and our disclaimers and limitations of legal liability, relating to your use of, and access to, the Services. By using the Services, you accept and agree to be bound by and to comply with these Terms of Service. If you do not agree to these Terms of Service, then you must not access or use the Services.
 NEITHER WE NOR OUR SERVICE PROVIDERS ARE RESPONSIBLE FOR ANY ACTIVITIES THAT YOU ENGAGE IN WHEN USING ANY ONLINE SERVICES OR BLOCKCHAIN TECHNOLOGIES THAT WE DO NOT PROVIDE YOU. YOU ACKNOWLEDGE AND AGREE THAT WE DO NOT CREATE, CONTROL, OR HAVE ANY RESPONSIBILITY OR LIABILITY FOR, ANY ALTERNATIVE FRONT-ENDS THAT YOU OR OTHER USERS MAY UTILIZE IN CONNECTION WITH THE SERVICES. WE HEREBY DISCLAIM ANY AND ALL RISKS ASSOCIATED WITH THE USE OF SUCH ALTERNATE FRONT-ENDS. YOU AGREE TO DEFEND, INDEMNIFY US AND HOLD US HARMLESS FROM AND AGAINST ANY ALL LIABILITY ARISING IN CONNECTION WITH YOUR USE OF ALTERNATIVE FRONT-ENDS.
@@ -170,7 +169,3 @@ Entire Agreement
 The Terms of Service and our Privacy Policy constitute the sole and entire agreement between you and Company regarding the Services and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, regarding the Services.
 Your Comments and Questions
 All other feedback, comments, requests for technical support, and other communications relating to the Services should be directed to: contact@sushi.com
-Cookie Policy
-More By clicking on “Accept all cookies”, you consent to the storage of cookies on your device and the associated processing of your personal data by Sushi Labs and our partners to improve website navigation, analyse website usage and conduct surveys. You can revoke your consent at any time via the “Manage cookie preferences” button.
-For further information on our data processing and cookies, please visit our Privacy Policy and our Cookie Policy .
-Accept all cookies Manage cookie preferences Reject all non-essential cookies

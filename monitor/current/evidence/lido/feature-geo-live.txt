@@ -1,17 +1,17 @@
 check: lido/feature-geo-live
 about: Live: stake.lido.fi/api/geo answers availability=limited to a visitor from the US
 source: https://stake.lido.fi/api/geo from US
-checked_at: 2026-10-11T21:24:39Z
+checked_at: 2026-10-28T23:07:54Z
 http_status: 200
 via: proxy
-vantage: {"requested": "US", "seen": ["US", "US", "US"], "org": "AS7922 Comcast Cable Communications, LLC", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
+vantage: {"requested": "US", "seen": ["US", "US", "US"], "org": "AS701 Verizon Business", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
 --------------------------------------------------------------------------------
-{"requested": "US", "seen": ["US", "US", "US"], "org": "AS7922 Comcast Cable Communications, LLC", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
+{"requested": "US", "seen": ["US", "US", "US"], "org": "AS701 Verizon Business", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
 
 request: GET https://stake.lido.fi/api/geo
 status: 200
 final_url: https://stake.lido.fi/api/geo
 header server: cloudflare
-header cf-ray: a490eed08fa5e62b-IAD
+header cf-ray: a51d9970bc7f0d33-EWR
 header content-type: application/json; charset=utf-8
 body: {"country":"US","availability":"limited"}

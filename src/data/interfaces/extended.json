@@ -1,0 +1,1672 @@
+{
+  "id": "extended",
+  "name": "Extended",
+  "description": "Extended is a hybrid perpetual futures exchange: orders are matched off-chain and trades settle on Starknet, with settlement moving to Circle's Arc from 2026-10-22. USDC is the collateral, and the app takes deposits and withdrawals on several EVM networks and on Starknet.",
+  "description_zh": "Extended 是一个混合式永续合约交易所：订单在链下撮合，交易在 Starknet 上结算，自 2026-10-22 起结算迁移到 Circle 的 Arc。USDC 是抵押品，应用支持在多个 EVM 网络和 Starknet 上存取款。",
+  "category": "Perps",
+  "chains": "Starknet (settlement moves to Arc from 2026-10-22)",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Arc",
+    "Polygon",
+    "Avalanche",
+    "BNB Chain"
+  ],
+  "url": "https://app.extended.exchange",
+  "referral_url": "https://app.extended.exchange/join/CP0X",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "US",
+      "CA",
+      "GB",
+      "HK",
+      "RU",
+      "SY",
+      "IR",
+      "CU",
+      "AF",
+      "YE"
+    ],
+    "close_only": [],
+    "method": "GET /geo answers 451 for a restricted region and the app replaces itself with \"Extended is not available in your region\" (API error GLOBAL.NOT_AVAILABLE_IN_YOUR_REGION). The blocked countries are those where /geo answered 451 to the live probe (see the observations); the Restricted Countries page names 16 jurisdictions."
+  },
+  "geo_feature": {
+    "s": "unknown",
+    "countries": [],
+    "scope": ""
+  },
+  "vpn": {
+    "s": "detect",
+    "note": "GET /geo answers 451 with the load balancer's error code VPN."
+  },
+  "screening": {
+    "s": "tos_only",
+    "provider": "",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://docs.extended.exchange/extended-resources/legal/terms-of-use",
+    "updated": "2026-10-08",
+    "us": "yes",
+    "us_scope": "",
+    "restricted": "Restricted Countries page: Afghanistan, Canada, Hong Kong, Cuba, Iran, North Korea, Russia, Syria, Seychelles, Crimea, Donetsk, Kherson, Luhansk and Zaporizhzhia, the UK, the US",
+    "restricted_codes": [
+      "AF",
+      "CA",
+      "HK",
+      "CU",
+      "IR",
+      "KP",
+      "RU",
+      "SY",
+      "SC",
+      "UA-Crimea",
+      "UA-DPR",
+      "UA-Kherson",
+      "UA-LPR",
+      "UA-Zaporizhzhia",
+      "GB",
+      "US"
+    ]
+  },
+  "notes": "Closed frontend. The app asks api.starknet.extended.exchange/geo on load; a 451 answer blocks the app, and the load balancer's error code tells a VPN from a restricted region. GET api.starknet.extended.exchange/geo answered {\"status\": \"OK\"} from Singapore, Brazil and France on 2026-10-12.",
+  "live": [],
+  "geo_endpoints": [
+    "https://api.starknet.extended.exchange/geo"
+  ],
+  "evidence": [
+    "app.extended.exchange bundle: GET /geo, UnavailableForLegalReasons, LbErrorCode VPN, 'Extended is not available in your region'",
+    "https://docs.extended.exchange/extended-resources/legal/restricted-countries",
+    "https://docs.extended.exchange/extended-resources/legal/terms-of-use",
+    "https://docs.extended.exchange/extended-resources/account-operations/deposits-and-withdrawals",
+    "https://docs.extended.exchange/about-extended/migration-from-starknet-to-arc"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "C",
+  "restrictions": {
+    "count": 11,
+    "countries": 10,
+    "mechanisms": [
+      "vpn"
+    ]
+  },
+  "category_group": "perps",
+  "chain_tags": [
+    "starknet"
+  ],
+  "observations": [
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:22:31Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:22:28Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:01:26Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 451,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 451"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:01:22Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:09:52Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:09:48Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:09Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:05Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:55Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:52Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:49:06Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:49:02Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:11:13Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 451,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 451"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:11:10Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:48:07Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 451,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 451"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:48:05Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:09:42Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:09:39Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:16:17Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:16:12Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:22Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:20Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:37:09Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:11:10Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:11:06Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:57:21Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 451,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 451"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:57:17Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:32Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:29Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:15:18Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:15:15Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:29Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:27Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:56Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 451,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 451"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:53Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:48:29Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:48:26Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:35:08Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 451,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 451"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:35:04Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:29:14Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:29:11Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:23:13Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:23:10Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:27:47Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:27:43Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:56:26Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 451,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 451"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:56:23Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:33Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:29Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:36:20Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:36:17Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:43:17Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:43:14Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:40:53Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:40:50Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:01:18Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:01:13Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:40Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:36Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:01:32Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:01:29Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:16:01Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:15:58Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:58:34Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:58:31Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:08:45Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:08:43Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:35:16Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:35:13Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:42:17Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:42:14Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:08:16Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:08:13Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:44Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:41Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:33:42Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:33:39Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:26:30Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:26:27Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:16:27Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:16:24Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:15Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 451,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 451"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:12Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:22:38Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:22:35Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:12:29Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:12:25Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:18:16Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:18:13Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:35:17Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:35:15Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:06:25Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:06:21Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:54:32Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 451,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 451"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:54:29Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:29:39Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:29:36Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:37Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:33Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:42:57Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:42:54Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:18:06Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:18:04Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:08:41Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 451,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 451"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:08:38Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:54:30Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:54:27Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:06:48Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 451,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "HTTP 451"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:06:45Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:41:51Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:41:48Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:08:02Z",
+      "kind": "geo_endpoint",
+      "url": "https://api.starknet.extended.exchange/geo",
+      "http_status": 200,
+      "final_url": "https://api.starknet.extended.exchange/geo",
+      "ui_state": "ok",
+      "flags": {
+        "status": "OK"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:07:59Z",
+      "kind": "site",
+      "url": "https://app.extended.exchange",
+      "http_status": 200,
+      "final_url": "https://app.extended.exchange",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

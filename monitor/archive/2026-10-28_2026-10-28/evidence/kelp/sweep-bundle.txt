@@ -1,0 +1,62 @@
+check: kelp/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://kerneldao.com/kelp
+checked_at: 2026-10-28T22:43:48Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://kerneldao.com/kelp/ (HTTP 200)
+scripts (45):
+  https://www.googletagmanager.com/gtag/js?id=G-B0SCCEBFR8  sha256=3fa085ad8abf5e5c60c25cddd09aeb897ef84c40771dda603057226a5e5e7a76
+  https://kerneldao.com/kelp/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js  sha256=0225eb034d024a03bdc90ea6c79f56193662e7c3eee909696298820e517cbb83
+  https://kerneldao.com/kelp/_next/static/chunks/webpack-42cdd95247a6d2c2.js  sha256=02aa8ab49394297edab185e49faae5cbf9445090d43f701d7c1e5c0c88730b6a
+  https://kerneldao.com/kelp/_next/static/chunks/framework-d0e473f04ea43a56.js  sha256=25eb38e8f764555b9c4050fde1eac67d84f5e7d85900b02956f0fa90fc5144f2
+  https://kerneldao.com/kelp/_next/static/chunks/main-ecfce3d7169e4fff.js  sha256=3be3586c12617d0aeebd9b841ca1b9c55a69c71a7603dd86d504be67fd9e3b9a
+  https://kerneldao.com/kelp/_next/static/chunks/pages/_app-e9e943a2afdef35e.js  sha256=21812d653c7ba855e3d1306235d8ea83c4e5882792fe49968cf9d0fd0464311e
+  https://kerneldao.com/kelp/_next/static/chunks/9005-2305c0f557a3350c.js  sha256=6823feee0cad5f8f4278cec1e758c46b630530574462cb82da7d6a0d4d9a44b5
+  https://kerneldao.com/kelp/_next/static/chunks/pages/index-3b24635591e50b7c.js  sha256=2caffe8372edbe5aa531d505adaee789d5375540faad6c5fa5c73ce6f4140889
+  https://kerneldao.com/kelp/_next/static/Cw1_qW9MHzDpCD445JmGf/_buildManifest.js  sha256=61425fe9dff53b5d3fb63aa28884d5f96090c8fffbafcfcef296795ede5ad0c7
+  https://kerneldao.com/kelp/_next/static/Cw1_qW9MHzDpCD445JmGf/_ssgManifest.js  sha256=cf661781f08a52514201867c9f7f0d2e348a6eb578d08aeea298df9adf211252
+  https://kerneldao.com/kelp/_next/static/chunks/3715-f7242063446f90b4.js  sha256=649d56b6a7b1d5fb56ca7bb8eb3cbddf24f6728bc4e13e9ff8503f9883d928d6
+  https://kerneldao.com/kelp/_next/static/chunks/pages/404-8beb9ae5a287ec4e.js  sha256=a54dcc6440d7446ff1ee83f8ae69263ff63adfe29dd03f34c98ee64bec2e66d2
+  https://kerneldao.com/kelp/_next/static/chunks/pages/_error-d743ab327fd23a67.js  sha256=bad56c298d1e7ca2a9861597e95aa99d5685f8848dc3f4d109c2befc1a4e527c
+  https://kerneldao.com/kelp/_next/static/chunks/pages/avs-55da1cb73e786b34.js  sha256=8dc28afc3ca418982774266142569a081742b4645120c6bcd3aa0fb75ce157e5
+  https://kerneldao.com/kelp/_next/static/chunks/pages/blocked-5914f5825653c380.js  sha256=946f8f0dc24c93f61a5dafbd6bb83d4951020d16aa426f797fdf76c7e494d18f
+  https://kerneldao.com/kelp/_next/static/chunks/pages/bridge-wrap-2810999a287e61fc.js  sha256=b7612aa60bb8b7913d1c0ca393d88ab9ace2d33fc851895f2d3be63e74011d16
+  https://kerneldao.com/kelp/_next/static/chunks/pages/bridge-wrap-ageth-90fdad993e292ad6.js  sha256=d8c493a5be9b36f332143d665e80095fe4be7b235b58fef86a38bea010b11e04
+  https://kerneldao.com/kelp/_next/static/chunks/6371-6f77c49879f129ef.js  sha256=7c4d33a745121ca583be6bfd19d32dc97a819a85633e54b55f671c7d1584a2bb
+  https://kerneldao.com/kelp/_next/static/chunks/pages/claim-kep-0cace861ab7f75c4.js  sha256=915f2df221f4dfb3a75f1a9784983434b825bb1ffb7d069001b8041be78f14f6
+  https://kerneldao.com/kelp/_next/static/chunks/0b308cfb-34c8bfcd034ef74e.js  sha256=0902fb83e46452469d5facc565954674541ebc266aa6fce987b56e4bce9f164b
+  https://kerneldao.com/kelp/_next/static/chunks/pages/defi-9a2ca23a002f607b.js  sha256=094bbaebd7d339997906a1012b14290a409de6d75f550b49819cf12b5039fa83
+  https://kerneldao.com/kelp/_next/static/chunks/pages/gain-aff687d9a1994910.js  sha256=6f2fc4b71a1c28a7a82ea9d52d7288920a50402bdc9aeeb1d9d925665dd8e12c
+  https://kerneldao.com/kelp/_next/static/chunks/pages/gain/airdrop-gain-0d62ddcadfea17be.js  sha256=1a12d7c3da739f6f146057337a94f3519669f2c4cdb5d4dd66a2df814d21049e
+  https://kerneldao.com/kelp/_next/static/chunks/pages/gain/growth-vault-853a86676cd8eda4.js  sha256=5ee2d08a717a044d22d53efdc471b3e673aebfbaed939dc87f14d946cae94a57
+  https://kerneldao.com/kelp/_next/static/chunks/pages/gain/stable-vault-8e2cdb28f0623c17.js  sha256=df18d514a9eacd91164d46a87e8d41768e89c3d15a3de0360e321b619e8a7d59
+  https://kerneldao.com/kelp/_next/static/chunks/pages/institutions-cf99755d824c06fc.js  sha256=608104f65ce814648aa1fb22e944b0c535ca472af0186e2b7dd5d41c488253e5
+  https://kerneldao.com/kelp/_next/static/chunks/pages/privacy-policy-9ee8bf3974776edb.js  sha256=a7eb6f648e8d04f0c0883d47a3ddf40781210103b452735aaa6d33a5b0aa8a52
+  https://kerneldao.com/kelp/_next/static/chunks/75fc9c18-aed841209b00d2e1.js  sha256=16c9ac09ef520ba6cb95e665b5f7c8fe16e00676d3d6587ab9affb6dea59a114
+  https://kerneldao.com/kelp/_next/static/chunks/8254-33ace48baf22c971.js  sha256=6a9881a613651bad612fbc06a910f4fad8d35109d2053fed0ad50b2234d9d88c
+  https://kerneldao.com/kelp/_next/static/chunks/pages/restake-5abfc7cc5f0c3470.js  sha256=c655fc76be893cbce904f8019f6f47b0ab56fa4cf5e7296f1cbab03c54415771
+  https://kerneldao.com/kelp/_next/static/chunks/pages/terms-of-service-b63f0d5e898c01e5.js  sha256=2b4ea72a5a26808e9b33cf70b7dea17dabe7d28273a381610acfb09f0bad345e
+  https://kerneldao.com/kelp/_next/static/chunks/pages/wrap-8ecec7647ebce856.js  sha256=f02af6246ab0ccd668a5ef1e1ffd360bad94be6c8bf4ac9fde8671458b15452b
+  https://kerneldao.com/kelp/_next/static/chunks/pages/xtragain-389b2895d5fd5768.js  sha256=d81b68c38a9323fbe15a2ed51ad8751ae86fd72c409aba318ed24e47e39d0e59
+  https://kerneldao.com/kelp/_next/static/chunks/pages/xtragain/mm-6e82915daa260aec.js  sha256=2109176f205726e92da18698f8003774fdc9fa20285fa03509068038fcbc646a
+  https://kerneldao.com/kelp/_next/static/chunks/7713-335b7fe544a98df3.js  sha256=7d007c59a08665a1c1d78f2988eaac64aaacc2bd2ee0e438051980a2639cc46e
+  https://kerneldao.com/kelp/_next/static/chunks/7255-746cd51535a2786b.js  sha256=7153918a6355be524e60d5f33144fe381ac438b0749b10fd9f8cfbcbf5f41dad
+  https://kerneldao.com/kelp/_next/static/chunks/7779ef99-34013614a52790f0.js  sha256=ff5aa134aadeefc3edf52cc96401f6e6c4e95dd99622b5393bb9686405cbb180
+  https://kerneldao.com/kelp/_next/static/chunks/9934-c9ee07ba6d91e7af.js  sha256=bd8c84e443814d72b31769cdfd16745edaa99e8a6c6603c938384cc2f7c67fd3
+  https://kerneldao.com/kelp/_next/static/chunks/7887-9257ba47bffac6b2.js  sha256=2e305c03389fc53ca8dc085ccb2017b06a05bdcd1d87dc1abb8f9a2d15799e9e
+  https://kerneldao.com/kelp/_next/static/chunks/d7eeaac4-24dc1685b218704c.js  sha256=c96534ba7cc06748f25f8beff82290893cbcb28e1d8064c44514334c912ec2fd
+  https://kerneldao.com/kelp/_next/static/chunks/ee8b1517-d73743820e34f8fb.js  sha256=52fc1a666c3976e01bdd01ead883c76fe44ee4338af4807b76680649c61f0dae
+  https://kerneldao.com/kelp/_next/static/chunks/2237-99387242f0aebc55.js  sha256=26a2cfe98621aa37124de74d6fc517b22bbea09626305a1e7b54621d25b0f05a
+  https://kerneldao.com/kelp/_next/static/chunks/5984-7a73b962d99d3ddc.js  sha256=73a29d9536c4b75dca3b980d88ec57c518772c6fa43a4b2d47f6736ce168a669
+  https://kerneldao.com/kelp/_next/static/chunks/8639-a42494c2af8399e6.js  sha256=48cacfae9958a63420ba13f8102c8b87114894953e3172bbce5e16fb78ea65a5
+  https://kerneldao.com/kelp/_next/static/chunks/1394-847a630bac28eb85.js  sha256=e53d138b553049f98a33896dc08400afc0d5c64537e8c4c4fe328d4a6ac15d98
+
+signals:
+  [strong] geo: block text — 1 file(s)
+      /kelp/_next/static/chunks/pages/blocked-5914f5825653c380.js: lg:text-3xl font-bold text-center mb-2 font-sans",children:"Not available in your region"}),(0,a.jsx)(d.ZT,{type:"body",color:"textSecondary",className:"text-sm sm:text
+  [weak] geo: geo-block words — 1 file(s)
+      /kelp/_next/static/chunks/pages/blocked-5914f5825653c380.js: urce",{media:"(min-width: 1536px)",srcSet:(0,p.CB)("/assets/geoblock/desktop-xl.avif")}),(0,a.jsx)("source",{media:"(min-width: 1024px)",srcSet:(0,p
+  [weak] kyc: KYC words — 1 file(s)
+      /kelp/_next/static/chunks/pages/_app-e9e943a2afdef35e.js: vGKlY9v/0P/6ZJFNx1RE4lbc7FIB4ofvpcIiMymDiC7YO2Xq8h9gRFvn2R4/kyc++RRDlOHj/EUvE54WilUFax9LWrtJhm1rIqQwUCDFFNaRiV4SnZXFpQe7evSUff/QxjFQPQC00o+Xxb/

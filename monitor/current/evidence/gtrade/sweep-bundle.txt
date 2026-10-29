@@ -1,33 +1,36 @@
 check: gtrade/sweep-bundle
 about: Production HTML and JavaScript of the official app, searched for access-restriction signals
 source: https://gains.trade
-checked_at: 2026-10-11T21:08:16Z
+checked_at: 2026-10-28T22:43:08Z
 http_status: 200
 via: direct
 --------------------------------------------------------------------------------
 page: https://gains.trade (HTTP 200)
-scripts (51):
+scripts (54):
   https://gains.trade/_next/static/chunks/polyfills-42372ed130431b0a.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
-  https://gains.trade/_next/static/chunks/webpack-f68b4194fbee7b31.js  sha256=02cccc0d22904afc02d80aa56dcd816d56ac3cb4b2f7e3e14ac58f5381900376
+  https://gains.trade/runtime-config.js  sha256=86e67867a050d012894218a15a07cafe59b850758539f209389fdbf155a45a24
+  https://gains.trade/_next/static/chunks/webpack-f0bbda5e7ba55a8e.js  sha256=a9e34493e515e9861590911609a0d562275923ed1661a5125d9477dd46e1e692
   https://gains.trade/_next/static/chunks/framework-652c0ef2d519d915.js  sha256=411ea4d8642515316694722b89eaef433ed066ec58b56fef7eaf4e730000db38
-  https://gains.trade/_next/static/chunks/main-d112a05fb1380c93.js  sha256=8bf4ba9cd0d00d7c9421c3977034d8a05654610c4242a6349260f7b935b8256d
-  https://gains.trade/_next/static/chunks/pages/_app-94e7ede00382d550.js  sha256=7aa3500c42ef5b98e0789b8361a64455deabd9cf6f0e3f4c4cdf78e90431fa6d
-  https://gains.trade/_next/static/chunks/pages/index-46de25edf462e544.js  sha256=b635482924d45902ea0d9f662892e8bc646d92bac9dc81c8f486a3d486d25f6c
-  https://gains.trade/_next/static/7b2e064/_buildManifest.js  sha256=ab9c57484a13a5a9a232c23240e16b3ffb2e2373ab44384ebeafe10e4e85fbe1
-  https://gains.trade/_next/static/7b2e064/_ssgManifest.js  sha256=c18e126af9a23285c33fae686c2bae3c37afac787d32141a4d80a8788bda63e3
+  https://gains.trade/_next/static/chunks/main-dddc83cd39a8ae87.js  sha256=bcd04f97af7912b248aeb612435f19cfd7db323c6e63b41147a5eb53df22ca39
+  https://gains.trade/_next/static/chunks/pages/_app-30c08122310271fe.js  sha256=82f3303aeb17ebfeb2c8635deed7cccf157a969e127bedbe93ef7ca4bdc3f478
+  https://gains.trade/_next/static/chunks/5284-82781888bfb90e00.js  sha256=b03679a1ad63bb0d1f55f7f4e3e2ea562eb6f667f3ffb21f584b13094c0f014e
+  https://gains.trade/_next/static/chunks/9088-42fe42943bebb020.js  sha256=0be6f43b57373ac7dc9f799ed700afc42c5039c62567a4955fc148f679862a36
+  https://gains.trade/_next/static/chunks/pages/index-ddd2372306526c0e.js  sha256=0b0ba0aec2d657188192cf49c621dc9439de62f2564b9545dd979993314c0944
+  https://gains.trade/_next/static/5a54843/_buildManifest.js  sha256=8e8300b6ec411c8599cbcee32b95c25a85edecf9001eac7d990d41949ec757bb
+  https://gains.trade/_next/static/5a54843/_ssgManifest.js  sha256=c18e126af9a23285c33fae686c2bae3c37afac787d32141a4d80a8788bda63e3
   https://gains.trade/_next/static/chunks/pages/404-6e1d3e25225da09f.js  sha256=65c05c1e4dba16979fc6fd170919a9b6048fcd59ccb0d810ab3e034a6cb81c27
   https://gains.trade/_next/static/chunks/pages/_error-3ebb49ff232eebb6.js  sha256=b8721caf213d5efadac14446c2dbacf8a16bc9186ef34106bf040d263dfdc5db
   https://gains.trade/_next/static/chunks/pages/bridge-39d07dd4569b6b2b.js  sha256=75a91df790729bd4b786728b6a13467768733ca5ac25454060504c0571961c21
   https://gains.trade/_next/static/chunks/pages/components-testing-917d591521f0b27c.js  sha256=cc357a5f5f66d7c5d93f0b50ba9bde967b040845a35dbef8ad5f97b567776275
   https://gains.trade/_next/static/chunks/pages/contest-c7afe1be598faf7c.js  sha256=1b985c5641d9bddf2061afb0336b4decd4cd40886f18d7c36038696104c9b5f7
-  https://gains.trade/_next/static/chunks/pages/contests-56eca4af8c4ad3df.js  sha256=6c178f9f4904c4a5bbf5739457c55051d82b7dd219c5d3b54c75b76a7a6265f8
-  https://gains.trade/_next/static/chunks/pages/contests/view-edd56f065049ad78.js  sha256=587c59531ea43b706ea083729bfbb8324b416f0ab800287f0cacab943c37451a
+  https://gains.trade/_next/static/chunks/pages/contests-01136658ce63b7c9.js  sha256=fcec83a75b97d17e960f0e2df7ac1a3cdebb3b21f754da6f5bd90eb370f0e7b6
+  https://gains.trade/_next/static/chunks/pages/contests/view-25189b0b743e5df7.js  sha256=fdb82dcf7328925362751371df5ae8a922c1e9353b30ecf741c1b9f05a9f7358
   https://gains.trade/_next/static/chunks/pages/decentralized-trading-099fba17a28fceee.js  sha256=ccb759681019f3e61503950095551e1add287747f2bc6b2b255d0b6d076e9b89
-  https://gains.trade/_next/static/chunks/pages/gns-1978832892185d10.js  sha256=96fcbc377d455c643f47d0d1a9e52a458ed17cf7e87c1fee08492f0f9b76a4b0
-  https://gains.trade/_next/static/chunks/pages/holiday-discount-95171b6ec696baf3.js  sha256=324cab614e8726e51782e80d15e902ea34606761bea6399c4dc68d3f1f3e068e
-  https://gains.trade/_next/static/chunks/pages/leaderboard-dcbc8d2998969b82.js  sha256=5e0282b285ed6f33bbea187cd0ef5e273bc2b247f270d7de3b12bc1501eab5e1
-  https://gains.trade/_next/static/chunks/pages/leaderboard/rewards-bfbe53ecc2b6832a.js  sha256=a2d779875925440cdc5dda52738109774bc312778a1942d182f70977a2eee192
-  https://gains.trade/_next/static/chunks/pages/mobile-app-3a6072a7832a1aef.js  sha256=f672d377a1aa638920b18b90f8b4fce6037e3d1c572e4b558c38ec29a2708681
+  https://gains.trade/_next/static/chunks/pages/gns-917eb601b32addf6.js  sha256=8375a00f9ee16a011e26f68e944581299a019cb5c15f353d78bd2958d67c60a2
+  https://gains.trade/_next/static/chunks/pages/holiday-discount-39850c076a3bcc29.js  sha256=efe727480063d8c50f65c6762a1854e1b500da1eebc1a9e40b2772dc6bf2d4f1
+  https://gains.trade/_next/static/chunks/pages/leaderboard-dd06080cccf7011f.js  sha256=5908d04ff3e546d01dcdfa8a7c05fc1a92f638b3587c5fe2f25b40add2b46a24
+  https://gains.trade/_next/static/chunks/pages/leaderboard/rewards-a280dcf37112b553.js  sha256=41f515942b85a2947171fa19f8b28cd272861e3186f3fb001e8f5ea1794e9d66
+  https://gains.trade/_next/static/chunks/pages/mobile-app-534870d43c7474e6.js  sha256=cf6298635168cb2ffb61fc3f572ff4643f812b55ec4ddcfe61cc2d6796b57869
   https://gains.trade/_next/static/chunks/pages/nft-redemption-f30595a83f43f420.js  sha256=15d3df38460ccb2a747b9ce0c01d9c56ea16aa40aeaacc1181dee82bdc4534d6
   https://gains.trade/_next/static/chunks/pages/onramp-280cdd2e35bc462d.js  sha256=ef3ab999603276fe89f26f131cd07d2648b848be88488a16a85565359c7f9af2
   https://gains.trade/_next/static/chunks/pages/otc-b5f284f028c08a0f.js  sha256=2cae34c26b8e191cbacc3791b50f968f27ab5a2a3298ad1b2a821e969fc9fdb9
@@ -37,42 +40,43 @@ scripts (51):
   https://gains.trade/_next/static/chunks/pages/portfolio/gns-discounts-c036b8e29a6deb44.js  sha256=dae141a3742fac6c9dccfb6015534b78b41504e4b073e38fdd26f6b0a6e5b3cb
   https://gains.trade/_next/static/chunks/pages/portfolio/history-85d1152d999a10e2.js  sha256=f4694bbdafe080e08b94d1855d12bb005c8dfb0a58af260e2808bd8d632ffcd4
   https://gains.trade/_next/static/chunks/pages/portfolio/rewards-636bfb4e38a6f6d2.js  sha256=b451e27c92dfc338b7822048764eb1ae1a709e7c5eed963f3eb3191477509440
-  https://gains.trade/_next/static/chunks/pages/referrals-448a97eca179e4a2.js  sha256=7c00f78c6bf57f77a67a1ee5d03dc69cdd090161ba0a9b430239dace620f8835
-  https://gains.trade/_next/static/chunks/pages/referred-21aff6616a43c1c2.js  sha256=a12719aee90fe0f8b1f2b16ca45294f831661c3f3a4703451dbed0c58772db27
-  https://gains.trade/_next/static/chunks/pages/staking-9ef8c0e4dbbb8e6c.js  sha256=b7605e260bd5debd2975541d7943b6c57d24550efd9afaa899bf2e8989bbd2e0
+  https://gains.trade/_next/static/chunks/pages/referrals-ac5db66052fea6ee.js  sha256=3ab6360425561e82d92300c67b43c8865311a46ed84251d19e832d29f1734008
+  https://gains.trade/_next/static/chunks/pages/referred-50ead74da87ee195.js  sha256=6bbf39b5cc9c6d06f4ce19da048ba42131816fd2daf05625bae16c71974b1b0b
+  https://gains.trade/_next/static/chunks/pages/staking-db3e4475206a8c70.js  sha256=727314fa5a4e38136f156d98e82bc5e20b363f88758727e260626a3210485963
   https://gains.trade/_next/static/chunks/pages/staking-legacy-313fe7b165eb2c44.js  sha256=3315fc7c31cd27e409bf0d4dfbd6706abdf3bb9cf838083e2fcaa91770490aae
   https://gains.trade/_next/static/chunks/pages/stats-3653adf53caa0346.js  sha256=c9b719cb9b90e377b045e72a23176a45b516c0f79ab2440bfe10905273426aa0
-  https://gains.trade/_next/static/chunks/pages/stats/burn-2eb5238ef211a5fa.js  sha256=e1311ad93bb22c9759c292062073d07349acb2b5529a0ffddb807ef735ac8e47
+  https://gains.trade/_next/static/chunks/pages/stats/burn-3ff17585eaaad4f5.js  sha256=ba970650d155a9e04be70130ae8bdc9d010ac74bd99b3c29187a4209ee0cfaeb
   https://gains.trade/_next/static/chunks/pages/stats/leaderboard-d4d4d7f0152bcd40.js  sha256=7c6ccfe02540ccef561518a7bdc5a83fe7c25773532787138f9d26c6eec15898
   https://gains.trade/_next/static/chunks/pages/stats/leaderboard/rewards-266d1665272e0d85.js  sha256=875f8d48645c73df5243ebc3a38ba4ff3213cd67a296858896f7aea41a350b4b
-  https://gains.trade/_next/static/chunks/pages/stats/overview-120d2f2f7956a8de.js  sha256=b3986dd349de86a807a1d85da433c10416a26a321e0d9acad35dcc985f3202ef
+  https://gains.trade/_next/static/chunks/pages/stats/overview-ada203ea388fc15c.js  sha256=f0f5b764aec29d8772e7b8882c5e8c91e81e32f887a21d10f8afead06bb660be
   https://gains.trade/_next/static/chunks/pages/stats/trader-d0b5105806b3e4e4.js  sha256=15480e7cd689a0c917b5fecd18a3d98196783e8d6b0e06246fa2e6e6c59fb656
-  https://gains.trade/_next/static/chunks/pages/stats/trades/24h-2870c825f8b7d70e.js  sha256=27878ffeb6e0f3ede0658e9bc5d42f8e989e0a9347fcc643306a64fde6981769
-  https://gains.trade/_next/static/chunks/pages/terms-of-service-6a29032fd79b52b0.js  sha256=5ffd93bf41283051521c78b1965448725b04bf746752d07ef0031e88a9a6bb2e
+  https://gains.trade/_next/static/chunks/pages/stats/trades/24h-20e6480672416ff1.js  sha256=d8503d49d8abb979751acc3d3c98abe8b910e553d08efbed12dc382f5f177898
+  https://gains.trade/_next/static/chunks/pages/terms-of-service-9fccc577772ce919.js  sha256=e2c2bec940bae401ec60fc65cceec551a181a4cb3ec3ac4028bbeb13cb7f32ca
   https://gains.trade/_next/static/chunks/pages/testnet-trading-b640be4e89fb67d2.js  sha256=7f62b3d534f5b2c46e024f945191be265a771f13056553199697f1672efaf8cc
-  https://gains.trade/_next/static/chunks/pages/trader-2fe72b6c9aee11b6.js  sha256=84afca3ba7ecd387f1b7998934111535317aebf9021c26d6a1957ce580335c53
+  https://gains.trade/_next/static/chunks/pages/trader-7f93c56400551f52.js  sha256=a1739a07b618963391f42b89da8e17423eacce3ab86336f10fd80e94daf33c5b
   https://gains.trade/_next/static/chunks/4023-ddd5280ba810450d.js  sha256=7697565b1997855eb49b79f18af0c9ea32aa12ae899f930581beb076eb79bd33
-  https://gains.trade/_next/static/chunks/pages/trading-1c56f7a49075a874.js  sha256=f0a0e3f031375648670a28f14b07b3bd4a498b961f70cfb135774dd46f63884e
+  https://gains.trade/_next/static/chunks/pages/trading-a6be56fe4fd987d9.js  sha256=5455c0dcefad1e40895dd58832bdf8c7b2f56ec05920aba5cce63ccbc0e45985
   https://gains.trade/_next/static/chunks/pages/vault-01ba7ef8b7901aad.js  sha256=62fcaa90e2346f33f79dd42cc23d80afd2af9025381c82bb8dc9dd494a92fb99
   https://gains.trade/_next/static/chunks/pages/vaults-9142838d2a2d047c.js  sha256=0370e6c05491e0996976788b3b6ef162871f6f975f746896ce1910ad9e21ee57
-  https://gains.trade/_next/static/chunks/3533-4eb646c14cc53891.js  sha256=46e026811838274609e351a7c19825ee9db940e3e2eb31c3b93b620ba8721aa9
-  https://gains.trade/_next/static/chunks/873-827d64a305a09ea6.js  sha256=d917def9680a3dcc1bc2b9c033fb166f689e232416402895bedb35179dbd3dad
-  https://gains.trade/_next/static/chunks/9278-b8755ab072afaf25.js  sha256=b39d884b75aef5c98f24796c6cabb7fe12e53b01276549a4e661d62dcd1c6b3a
+  https://gains.trade/_next/static/chunks/3533-9db58be56f2af7d7.js  sha256=4b31b18b46028ae58a26646605a080b2c4f19e6b9bc1802996e250a95b029e18
+  https://gains.trade/_next/static/chunks/873-c0d6130b8c29d76f.js  sha256=fb65382a2d345523b11c3e65cfd5364ec1e79564dc4d3926378cc94c96644044
+  https://gains.trade/_next/static/chunks/9278-7df10c33d6b5c41f.js  sha256=ff019baf10356009340d6d9db3d070f40064dc761508247cc7da31695664e8bb
 
 signals:
   [strong] geo: geo-IP service — 1 file(s)
-      /_next/static/chunks/pages/_app-94e7ede00382d550.js: serIpViaMoonpay:done"),a}async function Kw(){let e="https://ipapi.co/json",n=await fetch(e);if(!n.ok)throw Error(n.statusText);let a=await n.json();
+      /_next/static/chunks/pages/_app-30c08122310271fe.js: serIpViaMoonpay:done"),a}async function Kw(){let e="https://ipapi.co/json",n=await fetch(e);if(!n.ok)throw Error(n.statusText);let a=await n.json();
   [strong] geo: geo endpoint — 1 file(s)
-      /_next/static/chunks/pages/_app-94e7ede00382d550.js: async()=>{try{let e="https://wrkr.randomdegenerator.xyz/main/api/geo";if(!e)throw Error("Geoblock API URL is not configured");let n=await fetch(e);i
+      /_next/static/chunks/pages/_app-30c08122310271fe.js: async()=>{try{let e="https://wrkr.randomdegenerator.xyz/main/api/geo";if(!e)throw Error("Geoblock API URL is not configured");let n=await fetch(e);i
   [strong] geo: block text — 1 file(s)
-      /_next/static/chunks/pages/_app-94e7ede00382d550.js: unavailable. Change network or try again later.",forbidden:"Access restricted. Complete verification to continue.",insufficientFunds:"Insufficient funds. Red
+      /_next/static/chunks/pages/_app-30c08122310271fe.js: unavailable. Change network or try again later.",forbidden:"Access restricted. Complete verification to continue.",insufficientFunds:"Insufficient funds. Red
   [weak] geo: geo-block words — 2 file(s)
-      /_next/static/chunks/pages/_app-94e7ede00382d550.js: e)}var ie=(e,n,a)=>Math.min(Math.max(e,n),a),it=((E=it||{}).BlockedCountries="blocked_countries",E.AddressBlacklist="address_blacklist",E.ShowPoweredTagl
-      /_next/static/chunks/pages/terms-of-service-6a29032fd79b52b0.js: sses or IP addresses that may indicate use of the Site from prohibited jurisdictions or by sanctioned persons or other Prohibited Uses. Except as required by appli
+      /_next/static/chunks/pages/_app-30c08122310271fe.js: e)}var ie=(e,n,a)=>Math.min(Math.max(e,n),a),it=((k=it||{}).BlockedCountries="blocked_countries",k.AddressBlacklist="address_blacklist",k.ShowPoweredTagl
+      /_next/static/chunks/pages/terms-of-service-9fccc577772ce919.js: sses or IP addresses that may indicate use of the Site from prohibited jurisdictions or by sanctioned persons or other Prohibited Uses. Except as required by appli
   [weak] screening: screening words — 2 file(s)
-      /_next/static/chunks/pages/_app-94e7ede00382d550.js: t accessible to users located in the United States or other OFAC-sanctioned regions","positionSize":"Position Size","priceChange":"Price Change"
-      /_next/static/chunks/pages/terms-of-service-6a29032fd79b52b0.js: rative functions of or pertaining to government such as the sanctions lists maintained by Panama, the United Nations Security Council, the U.S. government
+      /_next/static/chunks/pages/_app-30c08122310271fe.js: t accessible to users located in the United States or other OFAC-sanctioned regions","positionSize":"Position Size","priceChange":"Price Change"
+      /_next/static/chunks/pages/terms-of-service-9fccc577772ce919.js: rative functions of or pertaining to government such as the sanctions lists maintained by Panama, the United Nations Security Council, the U.S. government
   [weak] vpn: VPN words — 1 file(s)
-      /_next/static/chunks/pages/_app-94e7ede00382d550.js: ion. Switch network (for example mobile data), turn off any VPN or ad-blocker, then try again."}}'),ey=JSON.parse('{"gnsDiscounts":{"title":"GN
-  [weak] kyc: KYC words — 1 file(s)
-      /_next/static/chunks/pages/_app-94e7ede00382d550.js: itingForKYC",context:gL(gR({},e.context),{requiredActions:["kyc"]}),error:null};case"SUCCESS":return{type:"completed",context:gL(gR({},e.contex
+      /_next/static/chunks/pages/_app-30c08122310271fe.js: ion. Switch network (for example mobile data), turn off any VPN or ad-blocker, then try again."}}'),eb=JSON.parse('{"gnsDiscounts":{"title":"GN
+  [weak] kyc: KYC words — 2 file(s)
+      / (HTML and inline scripts): div class="FinalCta_kicker__ILkjh">Up to 1000× leverage. No KYC. No custody.</div><h2 class="FinalCta_title__y0Zu9">Start winning.</h2><p class
+      /_next/static/chunks/pages/_app-30c08122310271fe.js: itingForKYC",context:bL(bR({},e.context),{requiredActions:["kyc"]}),error:null};case"SUCCESS":return{type:"completed",context:bL(bR({},e.contex

@@ -1,0 +1,109 @@
+{
+  "id": "uniswap",
+  "name": "Uniswap",
+  "targets": {
+    "app": "https://app.uniswap.org",
+    "repo": {
+      "repo": "Uniswap/interface",
+      "ref": "7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada"
+    },
+    "terms": "https://uniswap.org/terms-of-service",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-ukraine-report",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "reported",
+      "about": "Press report (Oct 2025): the Uniswap Labs front-end blocks Ukraine-based IP addresses (asset selection fails)",
+      "source": {
+        "url": "https://blockworks.com/news/uniswap-labs-blocked-ukraine",
+        "kind": "press",
+        "archive": "https://web.archive.org/web/20260515232741/https://blockworks.com/news/uniswap-labs-blocked-ukraine"
+      },
+      "expect": [
+        "front-end is still blocking Ukraine-based IP addresses"
+      ],
+      "countries": [
+        "UA"
+      ]
+    },
+    {
+      "id": "feature-rwa-gate",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Swap marks RWA tokens as restricted when the compliance API gates the caller's region (GatedFeature.ISSUER_SPECIFIC_RWA)",
+      "source": {
+        "repo": "Uniswap/interface",
+        "ref": "7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada",
+        "path": "packages/uniswap/src/features/transactions/swap/hooks/useGeoRestrictionMode.ts"
+      },
+      "expect": [
+        "useIsFeatureGated\\(GatedFeature\\.ISSUER_SPECIFIC_RWA\\)",
+        "isRWARegionBlocked && isRWA \\? 'restricted'"
+      ]
+    },
+    {
+      "id": "screening-client",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "screenAddress() asks the Uniswap compliance API (Entry Gateway) whether a wallet must be blocked",
+      "source": {
+        "repo": "Uniswap/interface",
+        "ref": "7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada",
+        "path": "packages/compliance/src/client.ts"
+      },
+      "expect": [
+        "export async function screenAddress\\(",
+        "client\\.screenAddress\\(",
+        "return response\\.block"
+      ]
+    },
+    {
+      "id": "screening-modal",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "A blocked EVM or Solana wallet gets the BlockedAccount modal",
+      "source": {
+        "repo": "Uniswap/interface",
+        "ref": "7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada",
+        "path": "apps/web/src/hooks/useAccountRiskCheck.ts"
+      },
+      "expect": [
+        "useIsBlockedAddress\\(",
+        "ModalName\\.BlockedAccount"
+      ]
+    },
+    {
+      "id": "prod-rwa-gate",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production JS: the RWA region gate (GatedFeature ISSUER_SPECIFIC_RWA) is shipped",
+      "source": {
+        "url": "https://app.uniswap.org"
+      },
+      "expect": [
+        "ISSUER_SPECIFIC_RWA"
+      ]
+    },
+    {
+      "id": "prod-screening",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Production JS: the screenAddress query module and the BlockedAccount modal are shipped",
+      "source": {
+        "url": "https://app.uniswap.org"
+      },
+      "expect": [
+        "screenAddressQuery",
+        "BlockedAccount:\"blocked-account\""
+      ]
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 check: superstate/feature-eligibility
 about: Superstate docs: funds only for Qualified Purchasers in supported countries; equities only in supported countries
 source: https://docs.superstate.com/introduction-to-superstate/onboarding
-checked_at: 2026-10-11T21:19:01Z
+checked_at: 2026-10-28T22:56:58Z
 fetched: https://docs.superstate.com/introduction-to-superstate/onboarding
-sha256: 4cb160db766d1e73600f55ccdf235e41147349550ec51648681920f78269a4de
+sha256: 2381eb7ff88e8c3ddda43a5c618a5e30a22e4d4a1200e144059d49fca2e4a8fd
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
@@ -65,7 +65,7 @@ Allowlist : Choose the wallet addresses authorized to hold your tokenized equiti
 Payout Destination : Choose the bank account or wallet address where you can receive payouts when redeeming eligible tokenized fund.
 Previous Welcome to Superstate
 Next Required documents
-Last updated 3 months ago
+Last updated 4 months ago
 Create an account
 Fund administrator created accounts
 Applications

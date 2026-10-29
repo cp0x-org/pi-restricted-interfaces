@@ -1,0 +1,8 @@
+check: compound/screening-use
+about: Web3Context refuses a sanctioned account
+source: https://github.com/compound-finance/webb3-frontend/blob/5e556e553f223d37842fd91c2eed2f21efb98a6d/src/contexts/Web3Context.tsx#L278
+checked_at: 2026-10-11T21:04:38Z
+fetched: https://raw.githubusercontent.com/compound-finance/webb3-frontend/5e556e553f223d37842fd91c2eed2f21efb98a6d/src/contexts/Web3Context.tsx
+sha256: 922751fa3d055a86211fec55358be1dcdd3b224ec49413cb33792334d2eb5eb4
+--------------------------------------------------------------------------------
+L278:   if (writeWeb3.account !== undefined && isSanctioned(writeWeb3.account)) {

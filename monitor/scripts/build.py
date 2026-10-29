@@ -3,11 +3,12 @@
 
 Usage:
   python3 -I monitor/scripts/build.py monitor/data/interfaces.json monitor/templates/report_template.md monitor/out \
-      --ui src/data/interfaces.json
+      --observations monitor/data/observations.json --export src/data --chains evm
 
-Outputs: <outdir>/report.md, <outdir>/interfaces.csv, and with --ui the dataset consumed by the web app
-(entries + computed level / category_group / chain_tags, meta + regions). Deterministic: no timestamps.
-Python >= 3.9, stdlib only.
+Outputs: <outdir>/report.md, <outdir>/interfaces.csv and <outdir>/tos_vs_probe.md (the Terms' country lists against the
+probe's findings, tos_vs_probe.py) over the whole catalog (the collected data, derived), and with
+--export the files the web app loads (export.py: monitor.json + interfaces/<id>.json), which are then compared with the
+collected data (check_export.py); a mismatch fails the build. Deterministic: no timestamps. Python >= 3.9, stdlib only.
 """
 import argparse, csv, json, os, re, sys
 from collections import Counter, OrderedDict
@@ -373,7 +374,8 @@ def render_report(items, template):
 
 
 def check_api_probes(iid, probes):
-    """api_probes[]: {name, method, url, body?, note?, flags?[], rules?[{match, state, note?}]}, one per URL."""
+    """api_probes[]: {name, method, url, body?, headers?, note?, flags?[], rules?[{match, state, note?}]}, one per URL;
+    {ip} in the URL is the proxy's exit IP at probe time."""
     if not isinstance(probes, list):
         raise Invalid(f"{iid}: api_probes must be a list")
     urls = set()
@@ -389,6 +391,8 @@ def check_api_probes(iid, probes):
         urls.add(p["url"])
         if "body" in p and (p.get("method") != "POST" or not isinstance(p["body"], (dict, list))):
             raise Invalid(f"{w}.body is a JSON object or array, for POST only")
+        if "headers" in p and not (isinstance(p["headers"], dict) and all(isinstance(k, str) and isinstance(x, str) for k, x in p["headers"].items())):
+            raise Invalid(f"{w}.headers must be an object of strings")
         if not isinstance(p.get("flags", []), list) or not all(isinstance(f, str) for f in p.get("flags", [])):
             raise Invalid(f"{w}.flags must be a list of JSON paths or header:<name>")
         for k, rule in enumerate(p.get("rules", [])):
@@ -470,32 +474,29 @@ def csv_row(i):
             i.get("version", ""), lifecycle(i), i.get("lifecycle_note", ""), i.get("family", "")]
 
 
-def ui_dataset(data, observations, ui_chains=None):
-    """Dataset for the web app. With ui_chains (e.g. {"evm"}) only interfaces carrying one of those chain tags are exported,
-    plus, for "evm", apps on their own chain whose networks[] lists EVM networks; defunct interfaces are never exported.
-    The report and CSV always cover the whole catalog."""
-    meta = OrderedDict(data["meta"])
-    meta["regions"] = OrderedDict(REGIONS)
-    meta["catalog_total"] = len(data["interfaces"])
-    meta["defunct_hidden"] = [display_name(i) for i in data["interfaces"] if lifecycle(i) == "defunct"]
-    meta["scope"] = "EVM networks, plus apps whose official interface lists EVM networks" if ui_chains == {"evm"} else ("chains: " + ", ".join(sorted(ui_chains)) if ui_chains else "all interfaces")
-    by_iface = latest_observations(observations, probe_targets(data))
-    items = []
+def load_collected(catalog_path, observations_path):
+    """The collected data as every output sees it: the validated catalog with the countries the probe saw restricted added
+    to each entry (observed.py; the catalog file itself is not touched, so a later run that sees a country open again
+    simply stops adding it), and the validated observation store. Returns (data, observations, warnings, added)."""
+    with open(catalog_path, encoding="utf-8") as fh:
+        data = json.load(fh, object_pairs_hook=OrderedDict)
+    try:
+        warnings = validate(data)
+        observations = load_observations(observations_path, {i["id"] for i in data["interfaces"]})
+    except Invalid as e:
+        sys.exit(f"invalid data: {e}")
+    seen = observed.found(observations, probe_targets(data))
+    items, added = [], OrderedDict()
     for i in data["interfaces"]:
-        # An app on its own chain is shown when its official interface lists EVM networks (deposits, an EVM side chain).
-        if ui_chains and not (set(chain_tags(i)) & ui_chains) and not ("evm" in ui_chains and i["networks"]):
-            continue
-        if lifecycle(i) == "defunct":
-            continue
-        e = OrderedDict(i)
-        e["lifecycle"] = lifecycle(i)
-        e["level"] = level(i)
-        e["restrictions"] = restrictions(i)
-        e["category_group"] = category_group(i)
-        e["chain_tags"] = chain_tags(i)
-        e["observations"] = by_iface.get(i["id"], [])
+        e, add = observed.apply(i, seen.get(i["id"], {}))
         items.append(e)
-    return OrderedDict([("meta", meta), ("interfaces", items)])
+        if add:
+            added[i["id"]] = add
+    data = OrderedDict(data, interfaces=items)
+    for i in items:
+        if i["geo_site"]["s"] == "yes" and not i["geo_site"]["countries"] and not i["geo_site"]["close_only"]:
+            warnings.append(f"{i['id']}: geo_site.s=yes but no countries listed or observed")
+    return data, observations, warnings, added
 
 
 def dump_json(obj, path):
@@ -510,33 +511,15 @@ def main():
     ap.add_argument("src")
     ap.add_argument("template")
     ap.add_argument("outdir")
-    ap.add_argument("--ui", help="write the web app dataset (entries + computed fields) to this path")
-    ap.add_argument("--ui-chains", help="comma-separated chain tags to keep in the UI dataset, e.g. evm (report/CSV stay complete)")
-    ap.add_argument("--observations", help="monitor/data/observations.json from probe.py (latest verified ones go to the UI dataset; "
+    ap.add_argument("--export", help="write the files the web app loads (monitor.json, interfaces/<id>.json) into this directory, "
+                                     "then compare them with the collected data")
+    ap.add_argument("--chains", help="comma-separated chain tags to keep on the site, e.g. evm (report/CSV stay complete)")
+    ap.add_argument("--observations", help="monitor/data/observations.json from probe.py (the latest verified ones go to the site; "
                                            "observed blocks are counted, see observed.py)")
     args = ap.parse_args()
 
-    with open(args.src, encoding="utf-8") as fh:
-        data = json.load(fh, object_pairs_hook=OrderedDict)
-    try:
-        warnings = validate(data)
-        observations = load_observations(args.observations, {i["id"] for i in data["interfaces"]})
-    except Invalid as e:
-        print(f"invalid data: {e}", file=sys.stderr)
-        sys.exit(1)
-    # Countries the probe saw restricted are counted everywhere below (site dataset, report, CSV); the catalog file is not
-    # touched, so the next probe run that sees them open again simply stops adding them.
-    seen = observed.found(observations, probe_targets(data))
-    items, added = [], OrderedDict()
-    for i in data["interfaces"]:
-        e, add = observed.apply(i, seen.get(i["id"], {}))
-        items.append(e)
-        if add:
-            added[i["id"]] = add
-    data = OrderedDict(data, interfaces=items)
-    for i in items:
-        if i["geo_site"]["s"] == "yes" and not i["geo_site"]["countries"] and not i["geo_site"]["close_only"]:
-            warnings.append(f"{i['id']}: geo_site.s=yes but no countries listed or observed")
+    data, observations, warnings, added = load_collected(args.src, args.observations)
+    items = data["interfaces"]
     for w in warnings:
         print(f"warning: {w}", file=sys.stderr)
     for iid, add in added.items():
@@ -554,11 +537,23 @@ def main():
         w.writerow(CSV_COLS)
         for i in items:
             w.writerow(csv_row(i))
-    if args.ui:
-        ui_chains = set(args.ui_chains.split(",")) if args.ui_chains else None
-        ui = ui_dataset(data, observations, ui_chains)
-        dump_json(ui, args.ui)
-        print(f"ui dataset: {len(ui['interfaces'])} of {len(items)} interfaces ({ui['meta']['scope']}; defunct hidden: {len(ui['meta']['defunct_hidden'])})")
+    import tos_vs_probe  # noqa: E402
+    tos_vs_probe.write(data, observations, os.path.join(args.outdir, "tos_vs_probe.md"))
+    if args.export:
+        import check_export, export  # noqa: E402 - the site files are a separate stage with their own scripts
+        chains = set(args.chains.split(",")) if args.chains else None
+        monitor, entries, removed = export.write_site(data, observations, args.export, chains)
+        print(f"site: {len(entries)} of {len(items)} interfaces -> {os.path.join(args.export, 'monitor.json')} + "
+              f"{len(entries)} files in {os.path.join(args.export, 'interfaces')}/ ({monitor['meta']['scope']}; "
+              f"defunct hidden: {len(monitor['meta']['defunct_hidden'])}" + (f"; {removed} stale removed" if removed else "") + ")")
+        problems = check_export.check(args.src, args.observations, args.export, chains, quiet=True)
+        if problems:
+            print(f"export check: {len(problems)} mismatch(es) between the site files and the collected data", file=sys.stderr)
+            for p in problems:
+                print("  ! " + p, file=sys.stderr)
+            sys.exit(1)
+        print(f"export check: OK, the site files match the collected data ({sum(len(r['observed']) for r in monitor['interfaces'])} "
+              f"country verdicts on the dashboard, {sum(len(e['observations']) for e in entries)} observations on the pages)")
 
     print(stats)
     print("providers:", prov_line)

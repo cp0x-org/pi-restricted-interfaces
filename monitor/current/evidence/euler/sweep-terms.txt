@@ -1,9 +1,9 @@
 check: euler/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://www.euler.finance/terms
-checked_at: 2026-10-11T21:17:27Z
+checked_at: 2026-10-28T22:54:24Z
 fetched: https://www.euler.finance/terms
-sha256: 9d828572f0e13c80da538b675eb93524124a9c03fdce821e70a4b4c8de13673b
+sha256: b2cff654c349a5894fb50ecdfbc765514ab67239e5c7fea1a92bc7dda5f2fa52
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

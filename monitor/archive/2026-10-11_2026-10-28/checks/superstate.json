@@ -1,0 +1,42 @@
+{
+  "id": "superstate",
+  "name": "Superstate",
+  "targets": {
+    "app": "https://superstate.com",
+    "repo": null,
+    "terms": "https://docs.superstate.com/introduction-to-superstate/onboarding",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "feature-eligibility",
+      "type": "page",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Superstate docs: funds only for Qualified Purchasers in supported countries; equities only in supported countries",
+      "source": {
+        "url": "https://docs.superstate.com/introduction-to-superstate/onboarding",
+        "kind": "docs"
+      },
+      "expect": [
+        "Only available to Qualified Purchasers in supported countries",
+        "Available to all investors in supported countries"
+      ]
+    },
+    {
+      "id": "kyc-allowlist",
+      "type": "page",
+      "claim": "kyc",
+      "status": "yes",
+      "about": "Superstate docs: required investor application to verify eligibility, and an allowlist of wallets authorized to hold the tokens",
+      "source": {
+        "url": "https://docs.superstate.com/introduction-to-superstate/onboarding",
+        "kind": "docs"
+      },
+      "expect": [
+        "Investing Entity Application \\(required\\)",
+        "Allowlist\\s*:\\s*Choose the wallet addresses authorized to hold"
+      ]
+    }
+  ]
+}

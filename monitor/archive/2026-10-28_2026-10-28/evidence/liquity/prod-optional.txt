@@ -1,0 +1,36 @@
+check: liquity/prod-optional
+about: Production JS: the optional blocking settings ship unset (BLOCKING_LIST:void 0)
+source: https://liquity.app
+checked_at: 2026-10-28T22:52:31Z
+http_status: 200
+--------------------------------------------------------------------------------
+scripts:
+  https://liquity.app/_next/static/chunks/7b351144-7acb04183866cb4a.js  sha256=03ad385d72a43134ddf8fe25efccb6b5a49fe94d796baab87da00abfaf6111e0
+  https://liquity.app/_next/static/chunks/9377-df1e3d3ddeef5fd2.js  sha256=c780905f9f7e35cb1e79f365419a68d364dc445c33ea4c81e1cf20aac83019e9
+  https://liquity.app/_next/static/chunks/main-app-5de56f2edad546e5.js  sha256=40543e1ef9f3f038722fd91be55081b32fb6e2a6164bf19e94da37b0357a3b56
+  https://liquity.app/_next/static/chunks/6f9c372c-0a1ad879f22c6866.js  sha256=e4db4fb2fdce8a640b4585772626f0f1fd21fd7d3037d09c3a1523db15d6de66
+  https://liquity.app/_next/static/chunks/2dfbe79c-f433cbad36808f51.js  sha256=ed2fd609df5fd321c37d5461d0f5bf4dc1a91c3e4d7d569c6ee02d0be94bfbee
+  https://liquity.app/_next/static/chunks/9453-6797faf4da9e4fbc.js  sha256=dc78dbcb15169359f6ad3c4ae04bd64183268b534b0a07cd1f0bf76c1307fe7e
+  https://liquity.app/_next/static/chunks/2758-ff559930ff7cfe5d.js  sha256=918679dedcc420416acf5526f84aea4f7d40925c89f7b7b212a71043c73107ce
+  https://liquity.app/_next/static/chunks/8370-5885b07419139df6.js  sha256=82753bcde20cbeeaa82820aff4a7afb12a6ae4a561645199d8e6a429f3e1124c
+  https://liquity.app/_next/static/chunks/6650-acaffb79a9aa6638.js  sha256=4dafed4bcba1ebe08ad9118a61a079302e3ecd42dc326e3da45152fa490a601f
+  https://liquity.app/_next/static/chunks/7749-752b28f535218ca8.js  sha256=4cdac84e6be39606c59b22949b9d58851955fd317a59acf157b7370e7c6c6f24
+  https://liquity.app/_next/static/chunks/7743-c21d1ebff8d2d203.js  sha256=49ccd01721538b16f5e3d8ad23c99f018b34cf156c2f75aecfb31456029b85e5
+  https://liquity.app/_next/static/chunks/8479-6ad1d68d9ccfce5f.js  sha256=cb3983934eed579246a3b136acdf3856dc2e5412cd166f9f7be17e6cae1161b9
+  https://liquity.app/_next/static/chunks/6477-3095af060061c9b5.js  sha256=080c785cbc1175a93180f47dff81971f9c3c0fd1f48d64ee068759684e5668a3
+  https://liquity.app/_next/static/chunks/8569-bb87fbfe1059a469.js  sha256=d171482396d0bb24a29c415d8d821a2cff41c49fc801a8cc714fc974cb5396e4
+  https://liquity.app/_next/static/chunks/9746-85065dd2797f6849.js  sha256=e1fb9084d7671a1cebbe6032edea6901061cb3da444363f70defcbb1578ea46e
+  https://liquity.app/_next/static/chunks/1343-d11356bfb2414407.js  sha256=fb607fcb682434ee4a2d543b3c5b1cd919b61a5f8e4727466202a5d65f75ca73
+  https://liquity.app/_next/static/chunks/7186-cb58c2780d154a12.js  sha256=76063b5060555d8d5cde47bb108f052abf97af950896920d8185c0a5ac546382
+  https://liquity.app/_next/static/chunks/app/layout-97738d4e27a56544.js  sha256=600c61738a8f071bdf79111c1c66642213f720a2225721c3c4f46b5f13ec44f5
+  https://liquity.app/_next/static/chunks/app/error-2c057b57e090c382.js  sha256=e26e281c864dda1a25d7064160ee70e5534d863103cda37a9911c635731c0f48
+  https://liquity.app/_next/static/chunks/app/not-found-ac51da5cfe58baf7.js  sha256=fc39345eae4d95334c9c4f7dbe38e4ae4c4ec29996dee00187783b7f0899d75c
+  https://liquity.app/_next/static/chunks/7608-822d6e323741f461.js  sha256=4754659381d51d334d643ac99655e3a577a578bb3e89d38d5ce5eae6f0070ba4
+  https://liquity.app/_next/static/chunks/app/page-f0d9452147156665.js  sha256=caccb7cce14e9c6d55dd184d0cc570e1c05daa68bad1a8ea28b762eadb52a635
+  https://liquity.app/_next/static/chunks/polyfills-42372ed130431b0a.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
+  https://cloud.umami.is/script.js  sha256=8104cfafda3cc8286be4f63d6c6e841d163e99bfb8f1eca2f9069fed8814168d
+  https://liquity.app/_next/static/chunks/webpack-6e2c2eb14f7a6d68.js  sha256=87997fc69acbb6c19b28c4c005850b5e40a648f061be10ee8e0f08f51017ed18
+
+matches:
+  https://liquity.app/_next/static/chunks/app/layout-97738d4e27a56544.js: …null,(0,c.Q)({address:null!==s.BLOCKING_LIST&&void 0!==s.BLOCKING_LIST?s.BLOCKING_LIST:void 0,abi:[{inputs:[{internalType:"address",name:"",type:"address"}],name:"isBlacklisted",outputs:[{internalType:"bool",name:"",type…
+  https://liquity.app/_next/static/chunks/6477-3095af060061c9b5.js: …IT_URL:()=>A,APP_VERSION:()=>I,APP_VERSION_URL:()=>R,BLOCKING_LIST:()=>L,BLOCKING_VPNAPI:()=>E,CHAIN_BLOCK_EXPLORER:()=>M,CHAIN_CONTRACT_ENS_REGISTRY:()=>x,CHAIN_CONTRACT_ENS_RESOLVER:()=>S,CHAIN_CONTRACT_MULTICALL:()=>O…

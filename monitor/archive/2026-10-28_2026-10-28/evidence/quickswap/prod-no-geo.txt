@@ -1,0 +1,48 @@
+check: quickswap/prod-no-geo
+about: Production JS of QuickSwap: no geo-IP lookup or country block
+source: https://dapp.quickswap.exchange
+checked_at: 2026-10-28T22:52:38Z
+http_status: 200
+--------------------------------------------------------------------------------
+scripts:
+  https://dapp.quickswap.exchange/_next/static/chunks/3223f137-59a2fdb0a9d9801d.js  sha256=70b45f85d754e158b6b209b08fe669922531d2e8d58630c3de19a0f3fdde0679
+  https://dapp.quickswap.exchange/_next/static/chunks/128f1141-7a10b7f2d11f661f.js  sha256=6cfb2e8a892e3a62dbe1655cf5ade48c92113b8258a8b05566a249b913326cf0
+  https://dapp.quickswap.exchange/_next/static/chunks/5081-d4f1e0e090f72b4f.js  sha256=2687ae48413f5e52bc77069f1ab462a19ca8881150f4c28a7d25832609b67c14
+  https://dapp.quickswap.exchange/_next/static/chunks/main-app-202e6e40b91a8f4b.js  sha256=f4359a5075b6a5f9299cbc23331539a2c7e8b4f87431d5721ea8a8d4af383443
+  https://dapp.quickswap.exchange/_next/static/chunks/app/layout-88c000419c70ebd7.js  sha256=0b3f187279ba0a16087a9d68466294bab7ff7f16f162e2b029108b4e219803fe
+  https://dapp.quickswap.exchange/_next/static/chunks/4577-6ccd5a1d502050c8.js  sha256=5b7e6ee59ddd92e3b3b4c275fbab83db975dae1fee7c68588bb4be5bfaaeb480
+  https://dapp.quickswap.exchange/_next/static/chunks/738-92914acd3271ef55.js  sha256=ee8f154b2f1455cd96bd74019408dff7dcac3ec8a446644edc209986e4138696
+  https://dapp.quickswap.exchange/_next/static/chunks/app/error-f3ae4935becd9140.js  sha256=d6dfa370833e310ad0b16ef0776ea5dd2ac397c3e270d74c17574b99e79e2c78
+  https://dapp.quickswap.exchange/_next/static/chunks/62111114-4c3ff87b60b3d33f.js  sha256=b844b284803e9a5cfbb572426688b7d825c7535185dd6a0b2914a07a64b1c896
+  https://dapp.quickswap.exchange/_next/static/chunks/6da3d7d3-7940e24fb223c049.js  sha256=b74abf3a53b207fe0d740204ccd28596214baf3069ca86b3958f14e3a93654bb
+  https://dapp.quickswap.exchange/_next/static/chunks/8283-09d4f216be0d7da6.js  sha256=aae311a1110b64a6555cfc6dad7ef3b1774677ff62c2a41f8fb544336da95bac
+  https://dapp.quickswap.exchange/_next/static/chunks/805-f2ae3b7fe74d96ff.js  sha256=dde9478ec72aa11b6e117321b1ca7f644c6026c5751d248416e082f11b84b7ec
+  https://dapp.quickswap.exchange/_next/static/chunks/431-a13d351f5b5c166f.js  sha256=8ebcde1ecdd84e0929c7e528b993b0a5c32c0a730dd3450b0955d36d3398e3af
+  https://dapp.quickswap.exchange/_next/static/chunks/7595-47657a522296cd3a.js  sha256=328f05ca8fcc4649374e8560ef07bbf38526825afd2cd72f7680b02f1389fd13
+  https://dapp.quickswap.exchange/_next/static/chunks/5803-5c20e62a0c8dafd3.js  sha256=f88df8406ef27f42f1b453c3c031c20621c4377674c452b5a9832975378fcd31
+  https://dapp.quickswap.exchange/_next/static/chunks/4702-5e841d217a350df4.js  sha256=564237995eefd46656edc184099e77aaeb2b7206689eae42e672cad16846b530
+  https://dapp.quickswap.exchange/_next/static/chunks/8640-c87796f59b84c896.js  sha256=5f778f97cc90ace84e95ee14d0e7eec9af3dee79dc06fdd3b96dc442011ac68b
+  https://dapp.quickswap.exchange/_next/static/chunks/app/not-found-8b1d2955650b8422.js  sha256=f3cb78aabc65f46d7971dadee45646b1dd75fbf3413f8f23fe3663b91b3d2a2e
+  https://dapp.quickswap.exchange/_next/static/chunks/9528-339b69fc46df89a9.js  sha256=27a5a9d015348ba52b2a1c267231cb3397aef8dc20e41dc203b29657a1678e6f
+  https://dapp.quickswap.exchange/_next/static/chunks/4720-add5fd667e5041f2.js  sha256=9e8e3b8f0114166b05a4cccaed2a34972c14a3d934a78ffbe4f185198e20598f
+  https://dapp.quickswap.exchange/_next/static/chunks/4348-ea8dc0a61ed7e289.js  sha256=4d3f4a33368f13a5217e963cfe0452d56a26dc231ed8ab00c84a4ffac2bb62ff
+  https://dapp.quickswap.exchange/_next/static/chunks/7229-524a806272c7b74f.js  sha256=25d7f112613df7e6686917dd772be830555349aa5ba063211f450092b5813547
+  https://dapp.quickswap.exchange/_next/static/chunks/6083-4f66aaad57288688.js  sha256=7a70987d3ccd3e6ad1ef03eb6c8f1211906636072dadf4886ec1bb9e3d727b11
+  https://dapp.quickswap.exchange/_next/static/chunks/app/swap/page-5fe92af855607db6.js  sha256=f46d572ac6d4c8639abd7e95e0293b1a03fd41ec24b5e10b7f4d44d10ec079b7
+  https://dapp.quickswap.exchange/_next/static/chunks/app/global-error-3929bb9006ad8be6.js  sha256=1ee4c7542e4082b05c7993c1a9e4ef705470227af3d93b2c98e127f4f8d322fa
+  https://dapp.quickswap.exchange/_next/static/chunks/polyfills-42372ed130431b0a.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
+  https://dapp.quickswap.exchange/_next/static/chunks/webpack-ebefeebcc77c39c8.js  sha256=3e83f049bf723706ae12e8c6b8e31c3945ca7f0d0a384594040371a19a312222
+  https://static.cloudflareinsights.com/beacon.min.js  sha256=637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e
+  https://dapp.quickswap.exchange/_next/static/chunks/753-da8eaaccf0c7bdfc.js  sha256=b171788417121b64d25356416e1e122b7c1520f815709efdfb35cf59d3c0b66c
+  https://dapp.quickswap.exchange/_next/static/chunks/1046-998bb5d59bd9bdce.js  sha256=be242c32993cc4b7396f21a121b99f5ade8b957410f59b01929962946399188e
+  https://dapp.quickswap.exchange/_next/static/chunks/7813-dee82579f0972342.js  sha256=cd6d987cf4d40dcca2c942bcf1f0d90879a5343db9274bd7fdb8794ebb2e63ed
+  https://dapp.quickswap.exchange/_next/static/chunks/3023-c82beb2d8a230178.js  sha256=eb20e8115edb8a82228cebaef9caa83dddde08d7fbe03a840bb21b79b00803b8
+  https://dapp.quickswap.exchange/_next/static/chunks/6788-776be7417400ab03.js  sha256=b47bac3543910f6d7b267b7c94fbf3e7d10f89e6ba7c54e3ae893be379d77b64
+  https://dapp.quickswap.exchange/_next/static/chunks/3093-34e18235e71cae70.js  sha256=386ec454609df6e839a3d5e1667ccaf1f6fe5c8290f65910583e4a961cbadcbd
+  https://dapp.quickswap.exchange/_next/static/chunks/8775-4801c727b0f54f14.js  sha256=c6e343bdbc7bb6ad6602e7aeb503cae60a2eaa6f2ec4500d28d4a74d5d1e65c0
+  https://dapp.quickswap.exchange/_next/static/chunks/3194-be3a8c3eeeefc188.js  sha256=b0d069f26a6aef7432809eac247550d7f3f2c1555ef24bbdf3e6ae050fe10d91
+  https://dapp.quickswap.exchange/_next/static/chunks/7498-d8a4576f91c3b5b3.js  sha256=e4b5c407c80e65fa02402fa0e353cd2c10b714f9129c21d4f1e06a10367b2b49
+  https://dapp.quickswap.exchange/_next/static/chunks/1889-81963f28a7279dcc.js  sha256=9aeaf0457bcc7e58a75d53a9b777d21961a17e7b68193841ba9d6bf95d4cc49a
+
+matches:
+  none

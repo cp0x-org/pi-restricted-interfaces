@@ -1,0 +1,8 @@
+check: venus/feature-geoip
+about: The visitor's country comes from free.freeipapi.com
+source: https://github.com/VenusProtocol/venus-protocol-interface/blob/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/clients/api/queries/useGetIpLocation/getIpLocation/index.ts#L11
+checked_at: 2026-10-28T22:38:20Z
+fetched: https://raw.githubusercontent.com/VenusProtocol/venus-protocol-interface/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/clients/api/queries/useGetIpLocation/getIpLocation/index.ts
+sha256: 16ad9741c46f7753fa098cbe72c299ef2969fd9fed1a4f4b381dc34730057be8
+--------------------------------------------------------------------------------
+L11: export const IP_API_URL = 'https://free.freeipapi.com/api/json';

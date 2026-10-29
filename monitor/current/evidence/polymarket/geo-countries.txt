@@ -1,7 +1,7 @@
 check: polymarket/geo-countries
 about: Help center: countries completely restricted from accessing Polymarket
 source: https://help.polymarket.com/en/articles/13364163-geographic-restrictions
-checked_at: 2026-10-11T21:18:59Z
+checked_at: 2026-10-28T22:56:56Z
 fetched: https://web.archive.org/web/20261006180258id_/https://help.polymarket.com/en/articles/13364163-geographic-restrictions
 sha256: 90c309cd8d7b45c5b8c6a451b6c408df3059357396314f647736f6f2ed0b0ef2
 http_status: 200

@@ -1,0 +1,1815 @@
+{
+  "id": "kelp",
+  "name": "Kelp DAO",
+  "description": "Kelp DAO issues rsETH, a liquid restaking token: users deposit ETH or liquid-staking tokens that are restaked through EigenLayer and other restaking layers, and receive rsETH to use across DeFi. Kelp is part of the Kernel DAO ecosystem.",
+  "description_zh": "Kelp DAO 发行流动性再质押代币 rsETH：用户存入 ETH 或流动性质押代币，这些资产通过 EigenLayer 等再质押层进行再质押，用户获得可在 DeFi 中使用的 rsETH。Kelp 属于 Kernel DAO 生态。",
+  "category": "Liquid restaking",
+  "chains": "Ethereum, Arbitrum, Base, Optimism, Linea, Scroll",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Optimism",
+    "Linea",
+    "Scroll"
+  ],
+  "url": "https://kerneldao.com/kelp",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "US",
+      "CA",
+      "GB",
+      "BY",
+      "SY",
+      "VE",
+      "CU",
+      "MM",
+      "LY",
+      "ZW",
+      "CD"
+    ],
+    "close_only": [],
+    "method": "universe.kelpdao.xyz/rseth/geoData answers isRestricted=true for the visitor's IP and the app shows 'Not available in your region'. The countries are those of the live probe (see the observations; 2026-10-12: 16 of 61, among them US, GB, CA, IR, CU, SY, VE)."
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [
+      "US",
+      "GB",
+      "CA"
+    ],
+    "scope": "Gain vaults (growth, airdrop and stable vault pages): the app asks universe.kelpdao.xyz/rseth/geoData and sends a visitor with isRestricted:true to /blocked ('Not available in your region'). Restricted from the US, the UK and Canada in the 2026-10-12 test; open from 15 other countries; the full list is not published."
+  },
+  "vpn": {
+    "s": "unknown",
+    "note": ""
+  },
+  "screening": {
+    "s": "tos_only",
+    "provider": "Users represent they are not sanctioned (OFAC, UN, EU, UK, HKMA, MAS); access may be blocked under the AML provisions",
+    "layer": null,
+    "fail": null,
+    "fail_note": ""
+  },
+  "kyc": {
+    "s": "tos_only",
+    "layer": null,
+    "scope": "Terms allow KYC/AML checks at the operator's discretion or when required by law."
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://kerneldao.com/kelp/terms-of-service/",
+    "updated": "2025",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "The Terms name no country: users must not be located, organized, citizens or residents in a country or territory subject to sanctions by OFAC, the UN, the EU, HM Treasury, the HKMA or the MAS (kerneldao.com/kelp/terms-of-service, clause (m), read 2026-10-12).",
+    "restricted_codes": []
+  },
+  "notes": "Closed frontend; deposits and withdrawals use public contracts. The Gain vault gate is decided by Kelp's geoData API.",
+  "live": [
+    "universe.kelpdao.xyz/rseth/geoData (2026-10-12): US, US-NY, GB, CA, CA-ON -> isRestricted:true; RO DE FR NL UA TR AE SG JP AU BR HK KR -> false"
+  ],
+  "geo_endpoints": [
+    "https://universe.kelpdao.xyz/rseth/geoData"
+  ],
+  "evidence": [
+    "kerneldao.com/kelp bundle: geoData request and the redirect of /gain/*-vault/ pages to /blocked",
+    "https://universe.kelpdao.xyz/rseth/geoData",
+    "https://kerneldao.com/kelp/terms-of-service/"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "C",
+  "restrictions": {
+    "count": 12,
+    "countries": 11,
+    "mechanisms": [
+      "geo_feature"
+    ]
+  },
+  "category_group": "staking",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": [
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:55Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "United Arab Emirates",
+        "countryCode": "AE",
+        "region": "Dubai"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:52Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:00:43Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Afghanistan",
+        "countryCode": "AF",
+        "region": "Kabul"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:00:39Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:09:11Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Argentina",
+        "countryCode": "AR",
+        "region": "Buenos Aires"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:09:08Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:43:22Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Australia",
+        "countryCode": "AU",
+        "region": "Victoria"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:43:18Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:17Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Bangladesh",
+        "countryCode": "BD",
+        "region": "Dhaka Division"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:14Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:48:37Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "blocked",
+      "flags": {
+        "isRestricted": true,
+        "country": "Belarus",
+        "countryCode": "BY",
+        "region": "Minsk City"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:48:34Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:36Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "blocked",
+      "flags": {
+        "isRestricted": true,
+        "country": "Canada",
+        "countryCode": "CA",
+        "region": "Quebec"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:33Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:47:39Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "blocked",
+      "flags": {
+        "isRestricted": true,
+        "country": "Canada",
+        "countryCode": "CA",
+        "region": "Ontario"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:47:36Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:09:08Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "blocked",
+      "flags": {
+        "isRestricted": true,
+        "country": "Congo (DRC)",
+        "countryCode": "CD",
+        "region": "Kinshasa City"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:09:05Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:15:26Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Central African Republic",
+        "countryCode": "CF",
+        "region": "Bangui"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:15:22Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:02Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Switzerland",
+        "countryCode": "CH",
+        "region": "Zurich"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:16:59Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:36:21Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "China",
+        "countryCode": "CN",
+        "region": "Shandong"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "CN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:36:17Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:22Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Colombia",
+        "countryCode": "CO",
+        "region": "Bogota D.C."
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:18Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:56:32Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "blocked",
+      "flags": {
+        "isRestricted": true,
+        "country": "Cuba",
+        "countryCode": "CU",
+        "region": "Havana"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:56:29Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:03Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Germany",
+        "countryCode": "DE",
+        "region": "Hesse"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:01Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:54Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Spain",
+        "countryCode": "ES",
+        "region": "Andalusia"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:52Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:06Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "France",
+        "countryCode": "FR",
+        "region": "Occitanie"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:04Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:31Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "blocked",
+      "flags": {
+        "isRestricted": true,
+        "country": "United Kingdom",
+        "countryCode": "GB",
+        "region": "England"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:28Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:47:55Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Georgia",
+        "countryCode": "GE",
+        "region": "Tbilisi"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:47:52Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:34:33Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Hong Kong",
+        "countryCode": "HK",
+        "region": "Kwai Tsing District"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:34:29Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:38Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Indonesia",
+        "countryCode": "ID",
+        "region": "Jakarta"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:35Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:22:45Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Israel",
+        "countryCode": "IL",
+        "region": "Haifa"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:22:42Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:26:55Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "India",
+        "countryCode": "IN",
+        "region": "Uttar Pradesh"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:26:50Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:55:48Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:06Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Italy",
+        "countryCode": "IT",
+        "region": "Emilia-Romagna"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:04Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:35:40Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Japan",
+        "countryCode": "JP",
+        "region": "Tokyo"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:35:37Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:42:43Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Kenya",
+        "countryCode": "KE",
+        "region": "Nairobi County"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:42:40Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:40:15Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "South Korea",
+        "countryCode": "KR",
+        "region": "Gyeonggi-do"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:40:12Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:00:06Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Kazakhstan",
+        "countryCode": "KZ",
+        "region": "Zhambyl"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:00:03Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:02:56Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Lebanon",
+        "countryCode": "LB",
+        "region": "Beirut"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:02:53Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:01:09Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "blocked",
+      "flags": {
+        "isRestricted": true,
+        "country": "Libya",
+        "countryCode": "LY",
+        "region": "Tripoli"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:01:07Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:15:12Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Mali",
+        "countryCode": "ML",
+        "region": "Bamako"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:15:09Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:58:01Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "blocked",
+      "flags": {
+        "isRestricted": true,
+        "country": "Myanmar",
+        "countryCode": "MM",
+        "region": "Yangon"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:57:58Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:08:14Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Mexico",
+        "countryCode": "MX",
+        "region": "Puebla"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:08:11Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:34:38Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Malaysia",
+        "countryCode": "MY",
+        "region": "Kuala Lumpur"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:34:34Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:41:40Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Nigeria",
+        "countryCode": "NG",
+        "region": "FCT"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:41:36Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:07:43Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Nicaragua",
+        "countryCode": "NI",
+        "region": "Managua Department"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:07:41Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:24Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "The Netherlands",
+        "countryCode": "NL",
+        "region": "Utrecht"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:22Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:33:02Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Philippines",
+        "countryCode": "PH",
+        "region": "Metro Manila"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:32:56Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:25:45Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Pakistan",
+        "countryCode": "PK",
+        "region": "Sindh"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:25:40Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:16:08Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Poland",
+        "countryCode": "PL",
+        "region": "Mazovia"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:16:06Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:49:06Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Russia",
+        "countryCode": "RU",
+        "region": "Ulyanovsk Oblast"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:49:04Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:22:06Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Saudi Arabia",
+        "countryCode": "SA",
+        "region": "Riyadh Region"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:22:03Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:11:00Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:43Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:34:43Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Singapore",
+        "countryCode": "SG",
+        "region": "South West"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:34:39Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:05:43Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "South Sudan",
+        "countryCode": "SS",
+        "region": "Central Equatoria"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:05:40Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:49Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "blocked",
+      "flags": {
+        "isRestricted": true,
+        "country": "Syria",
+        "countryCode": "SY",
+        "region": "Dimashq"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:46Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:29:01Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Thailand",
+        "countryCode": "TH",
+        "region": "Chon Buri"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:58Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:01Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Turkey",
+        "countryCode": "TR",
+        "region": "Istanbul"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:20:58Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:42:17Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Taiwan",
+        "countryCode": "TW",
+        "region": "Taipei City"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:42:13Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:43Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Ukraine",
+        "countryCode": "UA",
+        "region": "Kyiv City"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:41Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:08:07Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "blocked",
+      "flags": {
+        "isRestricted": true,
+        "country": "United States",
+        "countryCode": "US",
+        "region": "Connecticut"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:08:04Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:59Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "blocked",
+      "flags": {
+        "isRestricted": true,
+        "country": "Venezuela",
+        "countryCode": "VE",
+        "region": "Distrito Federal"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:56Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:06:19Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "Yemen",
+        "countryCode": "YE",
+        "region": "Aden"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:06:16Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:41:20Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "ok",
+      "flags": {
+        "isRestricted": false,
+        "country": "South Africa",
+        "countryCode": "ZA",
+        "region": "KwaZulu-Natal"
+      },
+      "note": "no restriction flag"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:41:17Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:07:26Z",
+      "kind": "geo_endpoint",
+      "url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "http_status": 200,
+      "final_url": "https://universe.kelpdao.xyz/rseth/geoData",
+      "ui_state": "blocked",
+      "flags": {
+        "isRestricted": true,
+        "country": "Zimbabwe",
+        "countryCode": "ZW",
+        "region": "Harare"
+      },
+      "note": "flag true"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:07:22Z",
+      "kind": "site",
+      "url": "https://kerneldao.com/kelp",
+      "http_status": 200,
+      "final_url": "https://kerneldao.com/kelp/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

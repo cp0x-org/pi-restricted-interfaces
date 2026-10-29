@@ -1,0 +1,553 @@
+check: beefy/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://app.beefy.com
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "RO"
+   },
+   "body": "{\"country\":\"RO\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "US"
+   },
+   "body": "{\"country\":\"US\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "US"
+   },
+   "body": "{\"country\":\"US\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "CA"
+   },
+   "body": "{\"country\":\"CA\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "GB"
+   },
+   "body": "{\"country\":\"GB\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "DE"
+   },
+   "body": "{\"country\":\"DE\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "FR"
+   },
+   "body": "{\"country\":\"FR\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "NL"
+   },
+   "body": "{\"country\":\"NL\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "PL"
+   },
+   "body": "{\"country\":\"PL\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "UA"
+   },
+   "body": "{\"country\":\"UA\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "NL"
+   },
+   "body": "{\"country\":\"NL\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "FR"
+   },
+   "body": "{\"country\":\"FR\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "SG"
+   },
+   "body": "{\"country\":\"SG\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "HK"
+   },
+   "body": "{\"country\":\"HK\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "JP"
+   },
+   "body": "{\"country\":\"JP\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "BR"
+   },
+   "body": "{\"country\":\"BR\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "BR"
+   },
+   "body": "{\"country\":\"BR\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "NG"
+   },
+   "body": "{\"country\":\"NG\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "SG"
+   },
+   "body": "{\"country\":\"SG\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "KZ"
+   },
+   "body": "{\"country\":\"KZ\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.beefy.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Beefy",
+   "scripts": [
+    "/assets/js/entry-index-*.js"
+   ],
+   "bytes": 3930,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://api.beefy.finance/geo/country": {
+   "status": 200,
+   "final_url": "https://api.beefy.finance/geo/country",
+   "state": "ok",
+   "flags": {
+    "country": "GE"
+   },
+   "body": "{\"country\":\"GE\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ }
+}

@@ -1,0 +1,34 @@
+check: lido/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://stake.lido.fi
+checked_at: 2026-10-11T21:08:58Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://stake.lido.fi (HTTP 200)
+scripts (17):
+  https://stake.lido.fi/runtime/window-env.js  sha256=5a698047fd4f333d4da7d9c7fca1bff54ca0657eb31a073515199d6ffd3bd779
+  https://stake.lido.fi/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js  sha256=0225eb034d024a03bdc90ea6c79f56193662e7c3eee909696298820e517cbb83
+  https://stake.lido.fi/_next/static/chunks/webpack-dc705d2976bb396e.js  sha256=d229a2b30829d726a18e9d05cfdc8fca0be5726bc34227a56664b5f43dc15422
+  https://stake.lido.fi/_next/static/chunks/framework-b338f11e54b60304.js  sha256=a3d1941f0bb308cfb4b350ce3849003345a0ff216c24357de339de7cfcbd33c8
+  https://stake.lido.fi/_next/static/chunks/main-b3afb5f6f5ec3c6b.js  sha256=5faa704b64297c075b20bdc08558b509deaa3fccfcc7c73b69900cce8e56c53d
+  https://stake.lido.fi/_next/static/chunks/pages/_app-babccd9cc6803f08.js  sha256=756a4df74c53ee1263347d37bfb671bf4bf9b7dd71d217cdeafc3f32b687d3f3
+  https://stake.lido.fi/_next/static/chunks/pages/index-845ad84fa6a2e0d5.js  sha256=598b9335045c655707ff5582302e97f061a5cc003852225b7be557e2a4cdc6b7
+  https://stake.lido.fi/_next/static/6ee927e3/_buildManifest.js  sha256=db753b75e5f05cb951da1c2a40a21581700045687fb4d574ce4fc2cf1495bcaa
+  https://stake.lido.fi/_next/static/6ee927e3/_ssgManifest.js  sha256=e0382280c8d7d90e35d7efbc813fda7014d32103dd217ec21440e51959cd2118
+  https://stake.lido.fi/_next/static/chunks/pages/404-6234ca7079c091ed.js  sha256=899c49ff58fdf53ffcbb1d823110d24d63a5df7b270042e2dd70a77bf90f423b
+  https://stake.lido.fi/_next/static/chunks/pages/500-7ba25b481292f592.js  sha256=a9f8453017bd61015b6ff325d412fe5a16ff1aef3f743d157058d4f8ced5c615
+  https://stake.lido.fi/_next/static/chunks/pages/_error-24ba6fb4accf36ad.js  sha256=797a38edd29907205509f78e78ed2e595b3e7f005bb9b038c887a17aa24593d5
+  https://stake.lido.fi/_next/static/chunks/pages/earn-7b842829adc96c32.js  sha256=e4e6ba6364b9b8b73bcbf23c10ce9e11d7f199b66028dac05ee83760865b5826
+  https://stake.lido.fi/_next/static/chunks/pages/rewards-8c4c85652470a6e3.js  sha256=59954993e17ed389b5006e4bba4de5d7a56de7b383125e193044e05d43720bc8
+  https://stake.lido.fi/_next/static/chunks/pages/settings-96e61b2251286568.js  sha256=21fdb452f49e4932187fad7f3411d5f3361c4488ea142bf95d63f25e9df9e6c2
+  https://stake.lido.fi/_next/static/chunks/2997-c894dee13f7d6a3d.js  sha256=8f8297c6ef36a903264d3d0cb9a44fd90208c5f73ba49b1910e37b41d5e654f1
+  https://stake.lido.fi/_next/static/chunks/4548-807291873a516bd1.js  sha256=04a2b1ccbb4e4e785b1822cee1958c23b8669591bb6c30eb08d3cc20ad42e107
+
+signals:
+  [strong] geo: block text — 1 file(s)
+      /_next/static/chunks/4548-807291873a516bd1.js: (0,s.jsx)(c,{state:n,centered:!0,limitedText:"This vault is not available in your region. Withdrawals remain available for funds deposited earlier."})}):(0,s.jsx)(s.Fra
+  [weak] geo: geo-block words — 1 file(s)
+      /_next/static/chunks/4548-807291873a516bd1.js: S. persons, U.S. residents, or individuals located in other restricted jurisdictions."," ",(0,ye.jsx)(i.rUS,{href:`${r.vc.rootOrigin}/earn/risk-disclosures`,childr
+  [weak] kyc: KYC words — 1 file(s)
+      /_next/static/chunks/pages/_app-babccd9cc6803f08.js: 61Gleuc+/p+Q7c/h3OetWGv6/ryKsyDapz1Psex9h7g9OvHIJHNil+7X+Nf+kyB/r2KxUdx/+odOw5747e4wB59muxLb/p/1+ZEy8DjP5d8YJ6889/yzS5Q+XX+kVnXk/wD1/fjoTj3xU29

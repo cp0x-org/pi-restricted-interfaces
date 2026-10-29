@@ -1,7 +1,7 @@
 check: safe/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/safe-global/safe-wallet-monorepo/tree/967145775447eb0375f018ab65d65a15af889412
-checked_at: 2026-10-11T21:03:53Z
+checked_at: 2026-10-28T22:36:40Z
 fetched: https://codeload.github.com/safe-global/safe-wallet-monorepo/tar.gz/967145775447eb0375f018ab65d65a15af889412
 sha256: 667c858bfccf71b272e6f76c2a179535470828ba13da996fcdae9b154dfff721
 --------------------------------------------------------------------------------

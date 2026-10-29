@@ -1,7 +1,7 @@
 check: usual/sweep-bundle
 about: Production HTML and JavaScript of the official app, searched for access-restriction signals
 source: https://app.usual.money
-checked_at: 2026-10-11T21:14:28Z
+checked_at: 2026-10-28T22:51:16Z
 http_status: 200
 via: direct
 --------------------------------------------------------------------------------

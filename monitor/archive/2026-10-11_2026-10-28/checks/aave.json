@@ -1,0 +1,80 @@
+{
+  "id": "aave",
+  "name": "Aave",
+  "targets": {
+    "app": "https://app.aave.com",
+    "repo": {
+      "repo": "aave/interface",
+      "ref": "32cc548b980baadea36cfea5227fc144d3f49958"
+    },
+    "terms": "https://aave.com/terms-of-service",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "screening-preflight",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "/api/preflight-compliance forwards the wallet to a private compliance API (COMPLIANCE_API_URL/check/{address})",
+      "source": {
+        "repo": "aave/interface",
+        "ref": "32cc548b980baadea36cfea5227fc144d3f49958",
+        "path": "pages/api/preflight-compliance.ts"
+      },
+      "expect": [
+        "COMPLIANCE_API_URL\\}/check/\\$\\{encodeURIComponent\\(address\\)\\}\\?surface=v3"
+      ]
+    },
+    {
+      "id": "screening-overlay",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "A non-compliant wallet (or a compliance error) gets a full-screen blocked overlay",
+      "source": {
+        "repo": "aave/interface",
+        "ref": "32cc548b980baadea36cfea5227fc144d3f49958",
+        "path": "src/components/AddressBlocked.tsx"
+      },
+      "expect": [
+        "status === 'non-compliant'",
+        "status === 'error'",
+        "AddressBlockedModal"
+      ]
+    },
+    {
+      "id": "prod-preflight",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Production JS: the wallet is sent to /api/preflight-compliance and a 'non-compliant' state is handled",
+      "source": {
+        "url": "https://app.aave.com"
+      },
+      "expect": [
+        "fetch\\(\"/api/preflight-compliance/\\?address=\"",
+        "\"non-compliant\""
+      ]
+    },
+    {
+      "id": "screening-api",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Aave's /api/preflight-compliance answers result:false for the sanctioned wallet and true for the control",
+      "source": {
+        "method": "GET",
+        "url": "https://app.aave.com/api/preflight-compliance/?address={address}"
+      },
+      "expect_sdn": [
+        "^status: 200$",
+        "\"result\":\\s*false"
+      ],
+      "expect_control": [
+        "^status: 200$",
+        "\"result\":\\s*true"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+check: variational/geo-restricted-persons
+about: Territories named on Variational's Restricted Persons page (documentation only until a per-country check confirms where the block applies)
+source: https://docs.variational.io/legal/restricted-persons
+checked_at: 2026-10-28T22:57:04Z
+fetched: https://docs.variational.io/legal/restricted-persons
+sha256: 6bbdc7697ed7098b760fe90464e80cbf07216df30eb18d24ca6ba15e312344ac
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+Restricted Persons | Variational Docs
+Variational Docs
+⌘ Ctrl k
+Home Discord Twitter More
+Variational Docs
+Getting Started
+What Is Variational
+Why Build Variational
+Core Contributors
+Roadmap
+Official Links
+Variational Protocol
+Overview
+Key Concepts
+Omni
+About Omni
+Getting Started with Omni
+The Omni Liquidity Provider (OLP)
+Trading
+Rewards
+On-Chain Trader Rewards Campaign
+Earnings Week PnL Card Competition
+Pro
+About Pro
+Technical Documentation
+API
+Trade and Transfer History
+Mainnet Contracts
+Audits
+Partners
+Bug Bounties
+Token
+$VAR
+More
+Media Kit
+Getting Help (Support)
+Additional Resources
+Legal
+Terms of Use
+Privacy Policy
+Restricted Persons
+Powered by GitBook
+On this page
+For the complete documentation index, see llms.txt . This page is also available as Markdown .
+Copy
+On this page
+Legal
+Restricted Persons
+Variational does not provide products or services to:
+Any person (natural or legal) who is not Eligible as defined in our Terms of Service ; or,
+Any person (natural or legal) or territory that is the subject of economic sanctions or other trade or export restrictions imposed or administered by the United States, the European Union, the United Kingdom, Singapore or the United Nations. These restricted territories are currently:
+Crimea, Donetsk, Luhansk, and Sevastopol regions of Ukraine
+Cuba
+Iran
+North Korea
+Sudan
+Syria
+Canada
+United States
+Micronesia (US associated territory)
+Guam (US associated territory)
+Marshall Islands (US associated territory)
+Northern Mariana Islands (US associated territory)
+Puerto Rico (US associated territory)
+Palau (US associated territory)
+US Minor Outlying Islands
+US Virgin Islands
+Taiwan
+Any person (natural or legal) that is a
+“U.S. person” (as defined under U.S. securities and commodity futures laws) or
+“Canadian person” (as defined under Canadian law)
+All of the above are referred to as “Restricted Persons.” None of the above are eligible to utilize Variational’s products and services. By using Variational's products and services, you represent and warrant to Variational on an ongoing basis that you are not a Restricted Person.
+Last updated: April 20, 2026
+Previous Privacy Policy
+Last updated 1 month ago
+
+--- section the countries were read from ---
+These restricted territories are currently:
+Crimea, Donetsk, Luhansk, and Sevastopol  
+Cuba
+Iran
+North Korea
+Sudan
+Syria
+Canada
+United States
+Micronesia (US associated territory)
+Guam (US associated territory)
+Marshall Islands (US associated territory)
+Northern Mariana Islands (US associated territory)
+Puerto Rico (US associated territory)
+Palau (US associated territory)
+US Minor Outlying Islands
+US Virgin Islands
+Taiwan

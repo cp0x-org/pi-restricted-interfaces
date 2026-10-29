@@ -1,7 +1,7 @@
 check: sushiswap/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/sushi-labs/sushiswap/tree/9520c07dabb425a404544cdaf91c8608dc4b197b
-checked_at: 2026-10-11T21:04:00Z
+checked_at: 2026-10-28T22:36:55Z
 fetched: https://codeload.github.com/sushi-labs/sushiswap/tar.gz/9520c07dabb425a404544cdaf91c8608dc4b197b
 sha256: 04122fc3c58e1379bd79868942665243d9507d35b50f388d85463f63b6592a3e
 --------------------------------------------------------------------------------

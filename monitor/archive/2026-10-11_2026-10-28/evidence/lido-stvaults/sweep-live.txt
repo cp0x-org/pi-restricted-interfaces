@@ -1,0 +1,490 @@
+check: lido-stvaults/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://stvaults.lido.fi
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stvaults.lido.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "My Vaults | stVaults | Lido",
+   "scripts": [
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/index-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/fca7439f/_buildManifest.js",
+    "/_next/static/fca7439f/_ssgManifest.js",
+    "/runtime/window-env.js"
+   ],
+   "bytes": 131758,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ }
+}

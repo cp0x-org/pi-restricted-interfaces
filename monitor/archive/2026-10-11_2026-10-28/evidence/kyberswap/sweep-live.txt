@@ -1,0 +1,318 @@
+check: kyberswap/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://kyberswap.com
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 403,
+   "final_url": "https://kyberswap.com",
+   "state": "blocked",
+   "why": "HTTP 403 with geo wording",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [],
+   "bytes": 3271,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": null,
+   "final_url": "https://kyberswap.com",
+   "state": "error",
+   "why": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://kyberswap.com",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "KyberSwap - Limitless Access To DeFi",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 163296,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ }
+}

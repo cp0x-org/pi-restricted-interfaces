@@ -1,0 +1,20 @@
+check: hyperliquid/screening-legalcheck
+about: Hyperliquid's info API legalCheck, which the app calls for the connected wallet, answers userAllowed:false for the sanctioned wallet and true for the control (the app then shows the 'flagged by Chainalysis' banner and disables actions)
+source: POST https://api.hyperliquid.xyz/info
+checked_at: 2026-10-28T22:57:07Z
+--------------------------------------------------------------------------------
+=== sdn (0x098B716B8Aaf21512996dC57EB0615e2383E2f96) ===
+request: POST https://api.hyperliquid.xyz/info
+status: 200
+final_url: https://api.hyperliquid.xyz/info
+header server: nginx/1.30.3
+header content-type: application/json
+body: {"acceptedTerms":false,"userAllowed":false,"restrictions":"n"}
+
+=== control (0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed) ===
+request: POST https://api.hyperliquid.xyz/info
+status: 200
+final_url: https://api.hyperliquid.xyz/info
+header server: nginx/1.22.1
+header content-type: application/json
+body: {"acceptedTerms":false,"userAllowed":true,"restrictions":"n"}

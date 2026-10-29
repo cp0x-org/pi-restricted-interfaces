@@ -1,14 +1,14 @@
 check: stargate/geo-terms
 about: The Terms exclude persons located in comprehensively sanctioned jurisdictions (no country list, no technical block verified)
 source: https://stargate.finance/terms
-checked_at: 2026-10-11T21:19:00Z
+checked_at: 2026-10-28T22:56:58Z
 fetched: https://stargate.finance/terms
-sha256: c4e4283212dc4ecdbcd98dc0b3b84762a315b575a55187890df2c139ff0ba2f0
+sha256: ace1bdd1c4aa786b43ec7fbf9102dcc6661914a700083fa477d5f22917dc7f40
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
 Terms of Service | Stargate Finance
-Stake Overview Value Transfer API Resources
+Convert STG Overview Value Transfer API Resources
 Terms of Use
 Last Updated: September 17, 2025
 1. Introduction
@@ -127,7 +127,7 @@ You agree that the laws of the Cayman Islands, without regard to principles of c
 These Terms, and the Privacy Policy, constitute the entire agreement between you and us with respect to the subject matter hereof. These Terms supersedes any and all prior or contemporaneous written and oral agreements, communications and other understandings (if any) relating to the subject matter of the terms. The information provided on the Website is not intended for distribution to or use by any person or entity in any jurisdiction or country where such distribution or use would be contrary to law or regulation or which would subject us to any registration requirement within such jurisdiction or country. Accordingly, those persons who choose to use or access the Website from other locations do so on their own initiative and are solely responsible for compliance with local laws, if and to the extent local laws are applicable.
 Start Swapping
 Stargate
-Transfer Earn Stake Overview
+Transfer Earn Convert STG Overview
 Developers
 Github Docs
 Learn

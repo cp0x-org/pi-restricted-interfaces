@@ -1,7 +1,7 @@
 check: ambient/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/CrocSwap/ambient-ts-app/tree/90e569a9bbcab62907c7713ce25c6ab5b0246baf
-checked_at: 2026-10-11T21:02:51Z
+checked_at: 2026-10-28T22:35:02Z
 fetched: https://codeload.github.com/CrocSwap/ambient-ts-app/tar.gz/90e569a9bbcab62907c7713ce25c6ab5b0246baf
 sha256: e922a0bfc2fdca670e8d7bcc07aeb06267c6947967cded4f4fc99eaf80d2193c
 --------------------------------------------------------------------------------

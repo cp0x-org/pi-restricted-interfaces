@@ -1,0 +1,90 @@
+check: aster/prod-check-ip
+about: Production JS: the app asks common-check-ip and, for a blocked region, refuses the wallet connection (dex-ip-blocked) or leaves only closing positions and withdrawals
+source: https://www.asterdex.com/en/trade/pro/futures/BTCUSDT
+checked_at: 2026-10-28T22:52:10Z
+http_status: 200
+--------------------------------------------------------------------------------
+scripts:
+  https://static2.asterdexfx.com/assets/index-BfbGeRT6.js  sha256=07638407ee8dfad355e399c4020786c705e6249f513ed4099b01a132a3a9d9b1
+  https://static.asterdexfx.com/cloud-futures/static/chart/tradingview/en/charting_library_32_a4_2/charting_library.js  sha256=2acc8e8852ad1a3b92bcad2e6285a57f956380336ce7cff1eca300697938af9c
+  https://static2.asterdexfx.com/assets/rolldown-runtime-BG2f4sTM.js  sha256=6cca086e94082e4bf068b37df0975262aae960892417619c2d94b5f27058f428
+  https://static2.asterdexfx.com/assets/react-DSX1zQmw.js  sha256=6a5133cfea5084551159bc0f41dea0d9e88e2a3102512aafefb5c71efbf0397d
+  https://static2.asterdexfx.com/assets/react-dom-BMWCcW4o.js  sha256=16119a7e92fb133ae7679176ec1ad6d820478c1bcf000ea1f5902b287cee1a8d
+  https://static2.asterdexfx.com/assets/dist-BUfkktfc.js  sha256=c7876bbdeb836923d50c3173e593eec94182028b763b13d2e4eb256ef9d4d0f5
+  https://static2.asterdexfx.com/assets/eventemitter3-BUHEOQAw.js  sha256=1cabc288f05f7bbdfa5d3b7a12d83c4f7d19a527387a637d8993df7e93334992
+  https://static2.asterdexfx.com/assets/axios-D6tnAeid.js  sha256=6198d9a199f2216c57d11cec836e861fd48535f639380376faa7a35dce6d439e
+  https://static2.asterdexfx.com/assets/jsx-runtime-CqqR4vFp.js  sha256=18a18a960333c904bc8174976827b39f61efcfeda8b5efdc72c33614094d0d21
+  https://static2.asterdexfx.com/assets/with-selector-Bq34v2-Z.js  sha256=991791530bdfba0a7c731845da77eb65458b8caf28f7dd8b4024087f67d7ad9e
+  https://static2.asterdexfx.com/assets/esm-Ci4Ss6x_.js  sha256=2857b9ec04a09288feaa4874935cbc66a56619337132f0bab9334b2f6067d025
+  https://static2.asterdexfx.com/assets/module-oHIyZ_9A.js  sha256=ccfb16354e881cd8f87601be34a698bc9bac334d506d006e6ebe8e8479925016
+  https://static2.asterdexfx.com/assets/google-analytics-tHH5TlX7.js  sha256=6bb92bfc8ffb45c1f7993c0c6a15fd1476bb272ad93a85b1408fc73df5728c87
+  https://static2.asterdexfx.com/assets/exports-wdfgE2CK.js  sha256=780aae8bb2c099f2205e5fac3e311bcd33c8bc988e4ea07bae412cc675cb4b0d
+  https://static2.asterdexfx.com/assets/utils-BQDqUyqs.js  sha256=290d2df0eaca4038be45096f5cb66d69ac0f1d41ee0a972b0ede7f878a08aebb
+  https://static2.asterdexfx.com/assets/sha3-BYhM00Ia.js  sha256=844e833d43efd339e38b873706d471da3815a014d3fe6b74899df58f848a7fac
+  https://static2.asterdexfx.com/assets/preload-helper-CmAIhwrc.js  sha256=5061a83e654c5411f8702ad31631babff9d95cfa5b561056e72fbadf2ca1747f
+  https://static2.asterdexfx.com/assets/ccip-Ccd9Rbsm.js  sha256=4be69c0ab13f261f81b1562e76a275bbff37b66cc9fec1f4043343ce384ee329
+  https://static2.asterdexfx.com/assets/hmac-DIg-GtfY.js  sha256=8d5d7d127218219598fc7eebfedf9e862b6910a4d815777c83e062a2dc508089
+  https://static2.asterdexfx.com/assets/sha256-0XgssXBk.js  sha256=50dc1bc0f2489562af933ef14ece6dbf9b4a804e7c72b052c28e21a5c25946f4
+  https://static2.asterdexfx.com/assets/utils-CxaohkDJ.js  sha256=7d2e35028d95fad45339dca1ed8f24645d66d7ad827f6d71e345cce4bbce7546
+  https://static2.asterdexfx.com/assets/secp256k1-CnKl2lO5.js  sha256=508d0b1d1718043951e10acd35ecb37b5ecac6cb5df79ef77d13d732e1f82bc8
+  https://static2.asterdexfx.com/assets/_esm-BUlOksfg.js  sha256=0209b489db9dc169a84bd25954daa3025ab647160059c4032f20951e68cbf678
+  https://static2.asterdexfx.com/assets/chains-vt6RboIV.js  sha256=a744ef5b8a9e84dcbd88d78d57f52ebb532eead16b3417c2bc56ebdf36a42c31
+  https://static2.asterdexfx.com/assets/actions-B8LPiNzx.js  sha256=42f0412b0848e8fce4db4e51dc864103860e67c818405bfe998c771b4d9fa61e
+  https://static2.asterdexfx.com/assets/bytes-DswUCu3p.js  sha256=9dcaa142308aec05ad073174c4d56136e06ca2024e644c8277798c6037fe6172
+  https://static2.asterdexfx.com/assets/esm-CHGpbmeh.js  sha256=282150566d8ed00d35f9ca3fe2e7e92ed7f7c63d881031827a4c33c98f2f5ccc
+  https://static2.asterdexfx.com/assets/ccip-BgPlDcVe.js  sha256=764434a0ee7307f54093de2e2578709c93f9f61e304ca4781aad97bbc28b349c
+  https://static2.asterdexfx.com/assets/context-DEETNFc9-C3N91caC.js  sha256=b54cae6ac1297b31dc879e8e5f4bd9b68c8ca6b8ef29eda81b25a7afebb6d6be
+  https://static2.asterdexfx.com/assets/dist-OYVUa3G5.js  sha256=62d3e866f4fe45a62fc83e00242ed3be1e5db9abc970cf5a1f863651946e85c6
+  https://static2.asterdexfx.com/assets/useActiveWallet-Cid7Y-Qy-BLF_xXvk.js  sha256=5f403d778d9805a9edfefd5bad80f9d4770d44e8c12a31fb9a8cb5bdaf59e600
+  https://static2.asterdexfx.com/assets/index-Cu-Fhbrp-CBnpVORM.js  sha256=1746b2980a5d17806013bf802c7f28cda41d9ed19f7c63438bbab65e0641b31c
+  https://static2.asterdexfx.com/assets/sha3-p-QDWwhJ.js  sha256=29f543145f0f1d2ad2b667764256ffdfec5491ab4c6ae08d8f447685a5f292f4
+  https://static2.asterdexfx.com/assets/clsx.m-BBN1EmyO.js  sha256=6da77d9e8c331bbc8506b6597b519720b8451e269500399fd6f09664f673aa82
+  https://static2.asterdexfx.com/assets/browser-ponyfill-DdiwEaF0.js  sha256=090cf7ffddd08fee353c58df6fc06d5d66dd760f0034e3fb7a29e57c54ec6370
+  https://static2.asterdexfx.com/assets/index.es-CNPIVhFB.js  sha256=39898078c2a77e3c3117b37119ec597e5937b459e7e53895f3bbb6e95fcdb0b1
+  https://static2.asterdexfx.com/assets/dist-Dob6xFFk.js  sha256=5ecee92797b87ea811043146d4634e2cb2386817459e501deac1d329e13792ef
+  https://static2.asterdexfx.com/assets/quick-format-unescaped-BO6N50Hp.js  sha256=289ff8dd0b94b4cadef8e5207a62346d9f189b1cdef22c8c4baa902616dfbccc
+  https://static2.asterdexfx.com/assets/paths-BH8W4zMc-Dy_kxsfy.js  sha256=295d5922074bd0ef72f1a921eb2eb596ef1562d7b37a439c62b6b87e76528bdc
+  https://static2.asterdexfx.com/assets/PrivyPluginContext-DA-yS5vO-fKttte2c.js  sha256=acc654165db61b0cc9cf8048eb4a384071f54da756fe73388ac593660cd8f19a
+  https://static2.asterdexfx.com/assets/toViemAccount-Cy6jgXI2-DznRLEto.js  sha256=ab5fab1eca2e5e5ad71225e8551b2bd1713ccb6318c643b92634f5940cff6c70
+  https://static2.asterdexfx.com/assets/get-entropy-details-for-user-Bq7nAeEf-COnCsd-L.js  sha256=4cfc3d73137acde294c8c2fe9e7258f6fa6c4c1ff961118ea14cf1a8ed0b264e
+  https://static2.asterdexfx.com/assets/modal-context-BAV3sQpp-Y1dJtALN.js  sha256=e01192bbaa74a14fbf32f5b09a14a227df92de18595fda4cba038247dfbb1149
+  https://static2.asterdexfx.com/assets/usePrivy-WvWzevM9-D_Zcv2A8.js  sha256=431520528ad43d07816d8ff1f89176dcc3ec25580aeea748492faaa3dde233fe
+  https://static2.asterdexfx.com/assets/use-deposit-address-BxngCd-N-BblPhcu0.js  sha256=e8e0b1b6fc1d5ba980e29a21f3cd772a31aca3a7b75ec46dc02abc0416e33439
+  https://static2.asterdexfx.com/assets/esm-onsfUp_0.js  sha256=3a01c31decfc6101dfbd415f8ed8e93a65dc5da0ce5d4d296ac573ce330b7caa
+  https://static2.asterdexfx.com/assets/index.browser-BfeaBAPx.js  sha256=e4db05faa446d2283782869591a465748450494d408ef9dcd449aca26eed254c
+  https://static2.asterdexfx.com/assets/index-wGOlH2Wi-B0Gy1k_i.js  sha256=a90dc7c7bafb9d52749f0ec5279e483fc8e7c5b3c178e288baed86350722622d
+  https://static2.asterdexfx.com/assets/tslib.es6-DeiRS-DA.js  sha256=cb064160f33fb3a93deb473941b05e7326e09041c02f1911f3d14c6b73d6104f
+  https://static2.asterdexfx.com/assets/esm-hwcpUeWr.js  sha256=9424f4c96cab2c3f546def2842f8c8570b589e37ce50d05c4c53519e2e544a9e
+  https://static2.asterdexfx.com/assets/constants-7b_68dtV.js  sha256=596dbccf47b0abe07a5490702268cdb1a510da82a890ea73bee765757d40761b
+  https://static2.asterdexfx.com/assets/locales-TWA1MgkI.js  sha256=342d1527d80d50d8351f639dd77b9d054e4d7d88563d39cad58f15eed5c6edff
+  https://static2.asterdexfx.com/assets/fmp-pgCZXBGl.js  sha256=722f596255c35d780ae3d22835270dc9e6d6e13be4bd31d885d09a3079ba44cc
+  https://static2.asterdexfx.com/assets/useTheme-BFfTcA6w.js  sha256=d5ab52a9012b25972168b3f1d53435c630ea1bd8b80225ab66bc1aaa8c808119
+  https://static2.asterdexfx.com/assets/config-CHyngUCq.js  sha256=c598494c3928b7836e6bc35bbc8850910122da62c16c293f5e72214ce34a6df3
+  https://static2.asterdexfx.com/assets/esm-browser-C0cYqEUL.js  sha256=f4072c13a589d69c0f63f7406f78075d9d16d9953030d4e5518adae04a416fc2
+  https://static2.asterdexfx.com/assets/_isIterateeCall-DZ_4DL1K.js  sha256=010bf5df056fbf24f1adbf7179519375dafd9fed7fc33b8832ff65c3397f2695
+  https://static2.asterdexfx.com/assets/_baseEach-DRysFOxn.js  sha256=58ea399723f0b3e455be85bd92ffa3b1cd86e963db6352e664830ef35f37559f
+  https://static2.asterdexfx.com/assets/_baseRest-DXARo9Bl.js  sha256=0b6b1e248acaf3f70ce4673e1c024fbe90705fe2169269278cb748c0eba3eccc
+  https://static2.asterdexfx.com/assets/sortBy-Cm2d6WBc.js  sha256=e1862dc4721bed423c0b87c438d5d7812c2b1685efc5cf99ad602336d96b03db
+  https://static2.asterdexfx.com/assets/utils-D2lDd5yr.js  sha256=1c10b8a0336dd3b1a7d1300b3a9d041083a7cec11eaa0953d0adfb966d85c2d2
+  https://static2.asterdexfx.com/assets/i18n-CCCJmobh.js  sha256=79bfb73f4a6f0d556b816f3d53412afb17e655bd96316454b2c91fb30eb50463
+  https://static2.asterdexfx.com/assets/styles-OlZRbDBO.js  sha256=7d02dfd568fa43e8de8dc71bc654000db82ccbdfbba050fd7045e05738e5acc4
+  https://static2.asterdexfx.com/assets/_-_locale_.vaults._vaultAddress-BcFw5lvp.js  sha256=deb56edf6573c69059ea39839841ec9edfb03ab852a7677b2bf39f1fc905dd81
+  https://static2.asterdexfx.com/assets/config-B85INyOj.js  sha256=e5962af9dd291a2955c984b2208e70b0e54d1022289cf315fd846932bc6ae2bf
+  https://static2.asterdexfx.com/assets/shallow-C-0G-f3M.js  sha256=e2c3b0bb109bab9d4434c251c93b1cd7d61a9ea4779eb5cfe45e8e904920ec7f
+  https://static2.asterdexfx.com/assets/common-DDZmzimM.js  sha256=90bc10d7eec55d66dea0d01ed1e232ce9f92d3df1c814585d093f3a010ee2cd5
+  https://static2.asterdexfx.com/assets/number-DbEEKpj5.js  sha256=179b129f343620b1f4c73fb26dd2e29e3ab81d3352702e369fa8eb12cbb786a2
+  https://static2.asterdexfx.com/assets/useFuturesProWsStore-cmHhoTjS.js  sha256=75d4ea2377dcab26ed0a80806dc82f6b7bc64fe061ed6c305767a5fe7eb4f671
+  https://static2.asterdexfx.com/assets/useQueryTicker24Hr-BoCtiQIT.js  sha256=9d07a9284e0b1017695da165ee4ce7fc07ef721c7199e02dcc6772713dce9255
+  https://static2.asterdexfx.com/assets/useQueryFuturesProducts-CfxZJHlu.js  sha256=64575c45af2b59952d4df124cc51c1ea3bf925786ba374d39509bf980b93384e
+  https://static2.asterdexfx.com/assets/charts-BWn80ZDZ.js  sha256=6d6bb27de8cf49d15f9749262ec8d4e791177597ceaf31ef2112742d886cc2e2
+  https://static2.asterdexfx.com/assets/constants-CqQz52WT.js  sha256=d63504b83fc491cf41c36b0c1bcc2a8e27d2e485678ce0df35a97b8cfe09c3f3
+  https://static2.asterdexfx.com/assets/useUserChartSettings-DE7yO3mz.js  sha256=6a57b66386e57b47e8283081daace9fe4e6f944a2339807ed567e953da2e6b4e
+  https://static2.asterdexfx.com/assets/chartLoadTracking-BWy7Wanp.js  sha256=9562208b74f7b61862db07a8c704a17037eaf37a06912548f29790b58b55b0c7
+  https://static2.asterdexfx.com/assets/colorPerferenceStore-D7qhd1-P.js  sha256=9147513a1889e58da6a4cf13d79f39647e6c7eba4ae3407776ee2a1e34ef308c
+  https://static2.asterdexfx.com/assets/getPrecision-CP0zPiPc.js  sha256=029050b5a2bd36bd6cc1e3937d9e4fa32ea2c6d71fe52a71d2f2a4220ca912c2
+  https://static2.asterdexfx.com/assets/chartContainer-h1G6f_EJ.js  sha256=6f2d8dd29a8cbeb3700febe0ed8fb442faf30179437fd262465a5e83f269b78d
+  https://static2.asterdexfx.com/assets/startChartEarlyBoot-BrGMtg8G.js  sha256=66e912cac1f59ee7982e6adb43b75904f276d233ee9a1938db1833ddb6a916c1
+  https://static2.asterdexfx.com/assets/_-_locale_.trade.strategy._strategyType._symbol-BQrajXxq.js  sha256=8cde621793ea4c62a911d72ea181c5160f23df21aa9890e1d53787c0416e74cd
+
+matches:
+  https://static2.asterdexfx.com/assets/esm-hwcpUeWr.js: …sourceCode?e.sourceCode:``,$(Q.post(`/bapi/futures/v1/public/future/web3/common-check-ip`,t))})})),kqe,Aqe,jqe=e((()=>{R7(),kqe=function(e,t,n,r){function i(e){return e instanceof n?e:new n(function(t){t(e)})}return new(…

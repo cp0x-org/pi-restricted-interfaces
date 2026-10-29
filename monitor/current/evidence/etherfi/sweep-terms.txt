@@ -1,7 +1,7 @@
 check: etherfi/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://www.ether.fi/legal/terms-of-use
-checked_at: 2026-10-11T21:17:26Z
+checked_at: 2026-10-28T22:54:23Z
 fetched: https://web.archive.org/web/9999id_/https://www.ether.fi/legal/terms-of-use
 sha256: c9fa1d894cb6565a3ddc662c19a47bc0fefc89bbe4e3130ffae052b471c68285
 http_status: 200

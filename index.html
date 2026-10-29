@@ -7,6 +7,17 @@
         <link rel="icon" href="/favicon.png" />
         <link rel="apple-touch-icon" href="/og-image.png" />
         <meta name="author" content="cp0x" />
+        <!-- Google Analytics, off on localhost -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-G824LXXGBP"></script>
+        <script>
+            if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function gtag() { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                // SPA: page views are sent by the app (src/utils/analytics.ts via src/seo/usePageMeta.ts), the first one included
+                gtag('config', 'G-G824LXXGBP', { send_page_view: false });
+            }
+        </script>
         <!-- Page-specific tags. Rewritten per route at build time (src/seo/prerender.ts) and at runtime (src/seo/usePageMeta.ts). -->
         <!--seo:head-->
         <title>DeFi Interface Restrictions Monitor | cp0x</title>

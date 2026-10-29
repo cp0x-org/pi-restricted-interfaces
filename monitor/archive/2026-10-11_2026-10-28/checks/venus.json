@@ -1,0 +1,62 @@
+{
+  "id": "venus",
+  "name": "Venus",
+  "targets": {
+    "app": "https://app.venus.io",
+    "repo": {
+      "repo": "VenusProtocol/venus-protocol-interface",
+      "ref": "86ea4f7aefaaff6685aa97306fc05849a519f0f2"
+    },
+    "terms": "https://app.venus.io/#/terms-of-use",
+    "endpoints": [],
+    "terms_fallback": "https://github.com/VenusProtocol/venus-protocol-interface/blob/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/pages/TermsOfUse/index.tsx"
+  },
+  "checks": [
+    {
+      "id": "feature-asset-countries",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Pools are filtered per asset by restrictedCountries / gatedCountries from the Venus API for the visitor's country",
+      "source": {
+        "repo": "VenusProtocol/venus-protocol-interface",
+        "ref": "86ea4f7aefaaff6685aa97306fc05849a519f0f2",
+        "path": "apps/evm/src/clients/api/queries/useGetPools/applyCountryCodeToPools/index.ts"
+      },
+      "expect": [
+        "tokenMetadata\\?\\.restrictedCountries\\?\\.includes\\(countryCode\\)",
+        "tokenMetadata\\?\\.gatedCountries\\?\\.includes\\(countryCode\\)"
+      ]
+    },
+    {
+      "id": "feature-geoip",
+      "type": "code",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "The visitor's country comes from free.freeipapi.com",
+      "source": {
+        "repo": "VenusProtocol/venus-protocol-interface",
+        "ref": "86ea4f7aefaaff6685aa97306fc05849a519f0f2",
+        "path": "apps/evm/src/clients/api/queries/useGetIpLocation/getIpLocation/index.ts"
+      },
+      "expect": [
+        "https://free\\.freeipapi\\.com/api/json"
+      ]
+    },
+    {
+      "id": "prod-asset-countries",
+      "type": "bundle",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Production JS: per-asset restrictedCountries / gatedCountries and the freeipapi lookup",
+      "source": {
+        "url": "https://app.venus.io"
+      },
+      "expect": [
+        "restrictedCountries\\?\\.includes\\(",
+        "gatedCountries\\?\\.includes\\(",
+        "https://free\\.freeipapi\\.com/api/json"
+      ]
+    }
+  ]
+}

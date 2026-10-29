@@ -1,0 +1,12 @@
+check: ambient/prod-blacklist
+about: Production JS: the OFAC address list (incl. the Ronin exploiter) and the redirect to ofac.treasury.gov
+source: https://ambient.finance
+checked_at: 2026-10-11T21:15:20Z
+http_status: 200
+--------------------------------------------------------------------------------
+scripts:
+  https://ambient.finance/assets/index-C4YoGpvK.js  sha256=12813c8f9ea050cc5260ef7d783eda9ec4346cc9eaf11ece2955b3c643f3587b
+
+matches:
+  https://ambient.finance/assets/index-C4YoGpvK.js: …822efe5ad0eae55517cf5dc544251.0x0931ca4d13bb4ba75d9b7132ab690265d749a5e7.0x098b716b8aaf21512996dc57eb0615e2383e2f96.0x0ee5067b06776a89ccc7dc8ee369984ad7db5e06.0x12de548f79a50d2bd05481c8515c1ef5183666a9.0x175d44451403edf2…
+  https://ambient.finance/assets/index-C4YoGpvK.js: …sconnectUser:t}=(0,H.useContext)(aJ);(0,H.useEffect)(()=>{e&&FV(e)&&(t(),location.replace(`https://ofac.treasury.gov`))},[e])}var sin=e=>{let[t,n]=(0,H.useState)([]);return(0,H.useEffect)(()=>{n(sKt(e))},[e]),t},cin=[{na…

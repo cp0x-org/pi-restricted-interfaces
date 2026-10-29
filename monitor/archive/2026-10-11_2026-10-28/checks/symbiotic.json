@@ -1,0 +1,33 @@
+{
+  "id": "symbiotic",
+  "name": "Symbiotic",
+  "targets": {
+    "app": "https://app.symbiotic.fi",
+    "repo": null,
+    "terms": null,
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "prod-region-block",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Production JS: the country from cloudflare.com/cdn-cgi/trace is compared with a list; listed countries get the UNSUPPORTED REGION modal",
+      "source": {
+        "url": "https://app.symbiotic.fi"
+      },
+      "expect": [
+        "fetch\\(`https://www\\.cloudflare\\.com/cdn-cgi/trace`\\)",
+        "\\.includes\\(t\\.loc\\)",
+        "UNSUPPORTED REGION"
+      ],
+      "section": {
+        "start": "\\[`CU`,`IR`,`KP`",
+        "end": "\\]"
+      },
+      "countries": "codes",
+      "case": true
+    }
+  ]
+}

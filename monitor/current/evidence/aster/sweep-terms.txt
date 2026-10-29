@@ -1,0 +1,240 @@
+check: aster/sweep-terms
+about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
+source: https://docs.asterdex.com/resources/terms-and-conditions
+checked_at: 2026-10-28T22:52:48Z
+fetched: https://docs.asterdex.com/resources/terms-and-conditions
+sha256: 721a0bfa7c724f029a1460a7940178a3d7118f2c05215434c9965ba25bb895ab
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+countries: US CA GB CN KP RU UA CU IR VE SY
+
+clauses:
+  geofencing: None
+  vpn: None
+  screening: None
+  sanctions: or territory that is subject to comprehensive country-wide or regional economic sanctions or has been designated as "terrorist supporting" by the United Nations or the governmental authority of the European U
+  us_persons: None
+  kyc: changes to ensure ongoing compliance with these eligibility requirements. 2.3. Identity Verification: a. We may implement limited identity verification procedures to comply with applicable regulations. b. You agree to pr
+
+--- restriction paragraphs ---
+c.The Services are not available to, and you are expressly prohibited from using them if you reside in, are located in, are incorporated in, or have a registered office or principal place of business in any of the following jurisdictions (each a "Prohibited Jurisdiction"): the United States of America, Canada, the United Kingdom, China, North Korea, Russia, Ukraine, Cuba, Iran, Venezuela, or Syria. This prohibition extends to any jurisdiction or territory that is subject to comprehensive country-wide or regional economic sanctions or has been designated as "terrorist supporting" by the United Nations or the governmental authority of the European Union, United Kingdom, or the United States.
+d.You further represent and warrant that you are not a "Prohibited Person." A "Prohibited Person" includes any individual or entity who: a. is the subject of economic or trade sanctions or otherwise appears on any list of prohibited or restricted parties administered or enforced by any governmental authority (including, but not limited to, the U.S. Department of the Treasury’s list of Specially Designated Nationals, the U.S. Department of Commerce Denied Persons List Entity List, the E.U. Consolidated List of persons, and the U.K. Consolidated List of Financial Sanctions Targets); b. is located in, a resident of, or organized in a Prohibited Jurisdiction as defined above; or c. is owned or controlled, directly or indirectly, by any persons or entities listed in subsections (a) or (b).
+h. To engage in transactions with individuals or entities located in, or controlled by persons in, countries or territories subject to comprehensive U.S. sanctions.
+
+--- full text ---
+Terms & Conditions | Aster
+⌘ Ctrl k
+OVERVIEW
+What is Aster?
+Roadmap
+Smart Contracts
+Audit Reports
+Getting Started
+Deposit & Withdrawal Guide
+Login via Web3 Wallet
+Login via Email Address
+Aster Mobile App Overview
+Help
+$ASTER Token
+Overview
+Tokenomics
+Aster Open Standards
+Aster Open Standards
+AOS-1 Spot Listing
+AOS-2 Perpetual Listing
+AOS3 Asset Management (Vault)
+ASTER CHAIN
+Overview
+Staking
+Testnet
+Governance
+Trading
+Perpetuals
+Shield Mode
+Prediction
+Spot
+Sub Accounts
+1001x
+OTC trading
+Aster vault
+USDF STABLECOIN
+Overview
+Earn
+Overview
+USD1 RWA Boost: Phase 1
+USD1 RWA Boost: Phase 1
+PROGRAM & REWARDS
+VIP Program
+Referral Program
+Trade & Earn
+Rocket Launch
+Aster Code
+Points & Campaigns
+For Developers
+Aster API
+Resources
+Official Links
+Media Kit
+Terms & Conditions
+Privacy Policy
+Powered by GitBook
+On this page
+For the complete documentation index, see llms.txt . This page is also available as Markdown .
+Copy
+On this page
+Resources
+Terms & Conditions
+Last updated: February 25, 2026.
+1. Introduction and Acceptance of Terms
+1.1. Welcome to Aster ("Aster," "we," "us," or "our"). These Terms and Conditions ("Terms") constitute a legally binding agreement governing your access to and use of the Aster platform, including our website (with all features as described therein), decentralized applications, APIs, and any related services (collectively, the "Services").
+1.2. By accessing or using any part of our Services, including specific features, you acknowledge that you have read, understood, and agree to these Terms, our Privacy Policy, all other applicable policies and guidelines posted on our platform, and any additional rules or guidelines presented within specific features of the Services. If you do not agree with any provision of these Terms, you are prohibited from accessing or using our Services.
+2. Eligibility and Account Access
+2.1. Eligibility:
+a.You must be at least 18 years old to use our Services.
+b.You must have the legal capacity to enter into these Terms.
+c.The Services are not available to, and you are expressly prohibited from using them if you reside in, are located in, are incorporated in, or have a registered office or principal place of business in any of the following jurisdictions (each a "Prohibited Jurisdiction"): the United States of America, Canada, the United Kingdom, China, North Korea, Russia, Ukraine, Cuba, Iran, Venezuela, or Syria. This prohibition extends to any jurisdiction or territory that is subject to comprehensive country-wide or regional economic sanctions or has been designated as "terrorist supporting" by the United Nations or the governmental authority of the European Union, United Kingdom, or the United States.
+d.You further represent and warrant that you are not a "Prohibited Person." A "Prohibited Person" includes any individual or entity who: a. is the subject of economic or trade sanctions or otherwise appears on any list of prohibited or restricted parties administered or enforced by any governmental authority (including, but not limited to, the U.S. Department of the Treasury’s list of Specially Designated Nationals, the U.S. Department of Commerce Denied Persons List Entity List, the E.U. Consolidated List of persons, and the U.K. Consolidated List of Financial Sanctions Targets); b. is located in, a resident of, or organized in a Prohibited Jurisdiction as defined above; or c. is owned or controlled, directly or indirectly, by any persons or entities listed in subsections (a) or (b).
+e.You represent and warrant that your stated location is accurate and that you will not use any means to circumvent location restrictions.
+f.You must promptly update your information if your residency or location changes to ensure ongoing compliance with these eligibility requirements.
+2.3. Identity Verification:
+a. We may implement limited identity verification procedures to comply with applicable regulations.
+b. You agree to provide accurate and complete information if requested for identity verification purposes.
+c. We reserve the right to refuse or limit Services to any User who does not comply with our identity verification requests.
+2.4. Account Security:
+a. You must implement strong security practices to protect your connected wallet, including using a secure device and avoiding phishing scams.
+b. You must notify us immediately of any unauthorized use of your connected wallet or any other breach of security.
+c. We reserve the right to suspend your access to the Services if we suspect any security breaches or unauthorized access.
+d. We reserve the right to suspend your access to the Services if we suspect it is being used for any illegal or unauthorized purpose.
+2.5. Ongoing Compliance and Monitoring:
+a. You agree to remain compliant with all eligibility requirements and account obligations throughout your use of the Services.
+b. We reserve the right to monitor your use of the Services for compliance with these Terms and applicable laws.
+3. Services and Trading Rules
+3.1 General Description:
+a. We provide a decentralized platform for Users to engage in activities related to cryptocurrencies and digital assets.
+b. While Aster facilitates access to decentralized protocols and tools, you acknowledge and agree that you are solely responsible for your interactions with underlying blockchains, smart contracts, and decentralized applications accessible via the Services. Aster does not operate or control the underlying blockchain networks or smart contracts, nor does it provide custodial services for your Digital Assets.
+c. The specific features and functionalities of our Services are described on our Platform, but they do not constitute a guarantee of availability or performance.
+d. The specific cryptocurrencies and digital assets supported on our platform may change from time to time at our sole discretion.
+e. We do not guarantee the availability of any specific service or functionality and reserve the right to modify, suspend, or discontinue any aspect of the Services at any time without liability.
+f. We may experience periods of downtime or unavailability of the Services, whether planned or unplanned, and shall not be liable for any losses incurred as a result.
+g. Aster shall not be liable for any losses, damages, or disruptions caused by technical issues, connectivity problems, or actions of third parties beyond our reasonable control. This includes, but is not limited to, issues with underlying blockchain networks, smart contract vulnerabilities, or the actions of other decentralized protocol participants.
+3.2. Trading Rules:
+a. You agree to comply with all trading rules and policies posted on our platform.
+b. We reserve the right to modify or suspend trading rules at any time without prior notice.
+c. You are responsible for understanding and complying with all applicable trading rules.
+3.3. Order Execution:
+a. You acknowledge that order execution is not guaranteed and may be subject to liquidity, market conditions, and technical factors.
+b. We reserve the right to refuse any order or cancel any trade that we believe violates our policies or applicable regulations.
+3.4. Trading Limitations:
+a. We may impose limits on trading volume, position sizes, or number of open positions at our discretion.
+b. We may suspend trading or delist any cryptocurrency at any time without prior notice.
+3.5. Market Integrity:
+a. You agree not to engage in any form of market manipulation, including but not limited to pump and dump schemes, wash trading, or spoofing.
+b. We actively monitor for suspicious trading activity and reserve the right to investigate and take appropriate action, including suspension of access to the Services.
+3.6. Regulatory Changes
+a. You acknowledge that the regulatory landscape governing cryptocurrencies and blockchain technology is uncertain and subject to rapid change. Aster reserves the right to modify, suspend, or discontinue any aspect of the Services, or to amend these Terms, at any time and in its sole discretion, in order to comply with new or existing laws, regulations, policies, or governmental guidance, or in response to regulatory inquiries or actions. Such modifications may affect the availability, functionality, or features of the Services, or the types of Digital Assets supported.
+4. Fees and Payments
+4.1. Fee Structure:
+a. You agree to pay all applicable fees associated with the use of our Services.
+b. Our fee structure is published on our website and may be updated from time to time.
+c. Fees may include trading fees, withdrawal fees, and any other charges related to our Services.
+d. All fees are non-refundable unless otherwise expressly stated in our fee schedule or policies.
+e. We reserve the right to charge fees for maintaining inactive access, as detailed in our fee schedule.
+4.2. Payment of Fees:
+a. Fees will be deducted automatically from your trading proceeds.
+b. You are responsible for ensuring sufficient funds are available to cover all fees.
+4.3. Changes to Fees:
+We reserve the right to change our fee structure at any time. Changes will be effective upon posting to the platform or as otherwise specified.
+4.4. Taxes:
+You are solely responsible for determining and paying any applicable taxes on your cryptocurrency transactions and holdings. We do not provide tax advice, and you should consult with a tax professional regarding your specific situation.
+4.5. Fee Calculation Errors:
+In the event of an error in fee calculation, we reserve the right to correct such error and adjust the fees accordingly. You agree to cooperate with us in resolving any such errors.
+In the event that you fail to pay any fees when due, you agree to reimburse us for all reasonable costs and expenses incurred in connection with the collection of such overdue amounts, including, but not limited to, attorneys' fees.
+5. Swaps and Transfers
+5.1. You may swap supported cryptocurrencies using our Services. The specific cryptocurrencies supported, as well as swap methods, limits, fees, and processing times, are detailed on our Platform.
+5.2. Transfers must be initiated from wallets that you own and control. We are not responsible for transfers sent to incorrect addresses, incorrect networks, or unsupported cryptocurrencies.
+5.3. We may delay or refuse transfers if we suspect fraudulent activity or violations of our Terms or applicable laws.
+5.4. All cryptocurrency transactions are irreversible once initiated. You are responsible for ensuring the accuracy of all transfer information.
+5.5. We reserve the right to impose limits on transfer amounts, frequency, and methods, as well as to establish additional conditions for transfers, at our sole discretion.
+Aster shall not be liable for any losses resulting from incorrect or incomplete transfer information provided by the user.
+6. Intellectual Property and Prohibited Uses
+6.1. Intellectual Property:
+a. The Aster platform, including its original content, features, and functionality, is owned by Aster and protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
+b. You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our platform without our prior written consent.
+c. You agree not to reverse engineer, decompile, or disassemble any portion of the Services, or attempt to derive the source code or underlying ideas or algorithms of the Services.
+6.2. Prohibited Uses. You agree not to use the Services:
+a. In any way that violates any applicable law or regulation.
+b. To impersonate or attempt to impersonate Aster, an Aster employee, or any other User.
+c. To engage in any other conduct that restricts or inhibits anyone's use of the Services.
+d. To attempt to gain unauthorized access to any part of the Services or any connected systems.
+e. To use any automated means, including bots, scrapers, or spiders, to access or use the Services without our express permission.
+f. To introduce any viruses, trojan horses, worms, logic bombs, or other malicious or technologically harmful material.
+g. For illegal activities.
+h. To engage in transactions with individuals or entities located in, or controlled by persons in, countries or territories subject to comprehensive U.S. sanctions.
+i. In any manner that could damage, disable, overburden, or impair our servers or networks, or interfere with any other party's use and enjoyment of the Services.
+j. You agree not to use the Services for any purpose that is harmful, abusive, discriminatory, or otherwise objectionable.
+7. Risk Disclosure and Disclaimers
+YOU ACKNOWLEDGE AND AGREE THAT TRADING CRYPTOCURRENCIES AND DIGITAL ASSETS INVOLVES SIGNIFICANT RISKS, INCLUDING, BUT NOT LIMITED TO, MARKET VOLATILITY, LIQUIDITY RISK, REGULATORY RISK, SECURITY RISKS, SMART CONTRACT RISK, LEVERAGED TRADING RISK, FLASH CRASH RISK, FORK RISK, AND DELISTING RISK. YOU MAY LOSE THE ENTIRE VALUE OF YOUR INVESTMENTS. PAST PERFORMANCE IS NOT INDICATIVE OF FUTURE RESULTS.
+WE DO NOT PROVIDE INVESTMENT ADVICE OR RECOMMENDATIONS. ANY INFORMATION PROVIDED ON OUR PLATFORM IS FOR INFORMATIONAL PURPOSES ONLY AND SHOULD NOT BE CONSTRUED AS FINANCIAL ADVICE. YOU SHOULD CONSULT WITH A QUALIFIED PROFESSIONAL BEFORE MAKING ANY INVESTMENT DECISIONS.
+YOUR USE OF THE SERVICES, AND ANY ASSETS OR FUNDS YOU DEPOSIT, IS ENTIRELY AT YOUR OWN RISK. YOU ARE SOLELY RESPONSIBLE FOR EVALUATING THE MERITS AND RISKS ASSOCIATED WITH THE USE OF OUR SERVICES AND FOR ANY DECISIONS YOU MAKE BASED ON SUCH EVALUATION.
+Aster shall not be liable for any losses resulting from changes in market conditions, government regulations, or other events beyond our control.
+8. Limitation of Liability
+To the fullest extent permitted by law, Aster shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or other intangible losses, resulting from your access to or use of or inability to access or use the Services.
+Our liability to you for any cause whatsoever and regardless of the form of the action will at all times be limited to the amount paid, if any, by you to us for the Services during the term of membership.
+In no event shall Aster be liable for any losses, damages, or liabilities arising out of or related to events beyond our reasonable control, including but not limited to acts of God, governmental actions, war, terrorism, or other force majeure events.
+To the fullest extent permitted by law, Aster shall not be liable for any actions taken or decisions made based on information provided on the Platform, including but not limited to trading signals, market analysis, or educational content.
+Aster shall not be liable for any losses, damages, or liabilities arising out of or related to your use of third-party services or websites linked to from the Platform. Your use of such third-party services or websites is at your own risk.
+Aster shall not be liable for any losses, damages, or liabilities arising out of or related to the suspension of your access to the Services.
+9. Indemnification
+You agree to defend, indemnify, and hold harmless Aster, its affiliates, licensors, and service providers from any claims, liabilities, damages, judgments, awards, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of your use of the Services, violation of these Terms, or violation of any third-party rights.
+10. Modifications to the Platform and Terms
+We reserve the right to modify or discontinue the Platform, or any part thereof, at any time without notice. We may also modify these Terms at any time by posting the revised Terms on the Platform. It is your responsibility to check these Terms periodically for changes. We recommend that you review these Terms each time you access or use the Services to ensure that you understand the most current terms and conditions.
+We may make minor changes to these Terms without prior notice. Your continued use of the Platform following such changes constitutes your acceptance of the revised Terms.
+In the event of significant changes to these Terms, we will provide reasonable notice to you, which may include posting a prominent notice on the Platform, or providing an in-app notification.
+Your continued use of the Platform following such notice constitutes your acceptance of the revised Terms. For the purposes of these Terms, 'continued use' shall mean any access to or use of the Services after the effective date of the revised Terms, including but not limited to connecting your wallet, engaging in trading activity, or otherwise utilizing any feature or functionality of the Platform. Continued use also includes failing to disconnect your wallet within a reasonable time (e.g., 30 days) after receiving notice of the changes. If you do not agree to the revised Terms, you must discontinue your use of the Platform and disconnect your wallet.
+11. Termination and Access Suspension
+11.1. Termination by User:
+You may discontinue your use of the Services at any time by disconnecting your wallet.
+You are responsible for any fees or obligations incurred prior to disconnecting your wallet.
+11.2. Suspension by Aster:
+We reserve the right to suspend your access to the Services immediately, without prior notice or liability, for any reason whatsoever, including but not limited to a breach of these Terms, violation of applicable laws, or any conduct that we deem harmful to the Platform or its users.
+In the event of suspension, your right to use the Services will immediately cease.
+11.3. Effects of Suspension:
+Upon suspension, you must cease all use of the Services.
+Any provisions of these Terms that by their nature should survive termination shall survive termination.
+We reserve the right to retain your information and transaction data as necessary to comply with legal and regulatory requirements, prevent fraud, and enforce our agreements.
+12. Governing Law and Dispute Resolution
+12.1. Governing Law:
+These Terms shall be governed by and construed in accordance with the laws of Hong Kong, without regard to its conflict of law provisions.
+12.2. Mandatory Arbitration:
+Any dispute, controversy, or claim arising out of or relating to these Terms, the Services, or any breach thereof, which cannot be resolved amicably, shall be referred to and finally resolved by arbitration administered by the Hong Kong International Arbitration Centre (HKIAC) in accordance with the HKIAC Administered Arbitration Rules in force when the Notice of Arbitration is submitted. The seat of arbitration shall be Hong Kong. The language of the arbitration shall be English. The number of arbitrators shall be one. The decision of the arbitrator shall be final and binding on both parties.
+12.3 Class Action Waiver:
+You agree to waive any right to participate in a class action lawsuit or class-wide arbitration against Aster.
+You agree to waive any right to a jury trial in connection with any dispute arising under these Terms.
+13. Force Majeure
+We shall not be liable for any failure to perform our obligations under these Terms if such failure is caused by events beyond our reasonable control, including but not limited to acts of God, war, terrorism, riots, embargoes, strikes, natural disasters, governmental actions, cyberattacks, or other technological disruptions.
+14. Assignment
+You may not assign these Terms without our prior written consent. We may assign these Terms at any time without notice to you.
+15. Entire Agreement
+These Terms constitute the entire agreement between you and Aster regarding the use of the Platform and supersede all prior or contemporaneous communications and proposals, whether oral or written, between you and us.
+16. Contact
+If you have any questions about these Terms, please contact us at: contact@asterdex.com.
+Previous Media Kit
+Next Privacy Policy
+Last updated 8 months ago
+1. Introduction and Acceptance of Terms
+2. Eligibility and Account Access
+3. Services and Trading Rules
+4. Fees and Payments
+5. Swaps and Transfers
+6. Intellectual Property and Prohibited Uses
+7. Risk Disclosure and Disclaimers
+8. Limitation of Liability
+9. Indemnification
+10. Modifications to the Platform and Terms
+11. Termination and Access Suspension
+12. Governing Law and Dispute Resolution
+13. Force Majeure
+14. Assignment
+15. Entire Agreement
+16. Contact

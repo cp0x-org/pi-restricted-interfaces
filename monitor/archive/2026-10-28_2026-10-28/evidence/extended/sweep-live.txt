@@ -1,0 +1,1459 @@
+check: extended/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://app.extended.exchange
+checked_at: 2026-10-28T23:07:44Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 451,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "blocked",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "CA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 451,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "blocked",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "MX": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "CO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 451,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "blocked",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": null,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 451,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "blocked",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "CN": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.extended.exchange",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "KR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "TW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 451,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "blocked",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 451,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "blocked",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 451,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "blocked",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 451,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "blocked",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 451,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "blocked",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 451,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "blocked",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 451,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "blocked",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.extended.exchange",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Extended",
+   "scripts": [
+    "/assets/index-*.js",
+    "/registerSW.js",
+    "/scripts/generate-*.js"
+   ],
+   "bytes": 16209,
+   "redirects": [],
+   "server": "AmazonS3"
+  },
+  "https://api.starknet.extended.exchange/geo": {
+   "status": 200,
+   "final_url": "https://api.starknet.extended.exchange/geo",
+   "state": "ok",
+   "flags": {},
+   "body": "{\"status\": \"OK\"}",
+   "redirects": [],
+   "server": "awselb/2.0"
+  }
+ }
+}

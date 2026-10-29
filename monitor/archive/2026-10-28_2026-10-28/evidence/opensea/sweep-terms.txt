@@ -1,0 +1,293 @@
+check: opensea/sweep-terms
+about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
+source: https://opensea.io/tos
+checked_at: 2026-10-28T22:55:11Z
+fetched: https://opensea.io/tos
+sha256: 500d0785fcd964749e7531c8bf01b909c4dd9eaa88a243fdd691be61aa8f9f6e
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+countries: US
+
+clauses:
+  geofencing: None
+  vpn: None
+  screening: None
+  sanctions: ications is not a condition of using the Platform. 3.5 Compliance with Laws and Sanctions By using the Platform, you represent and warrant that you will comply with all applicable laws, including local, state
+  us_persons: None
+  kyc: None
+
+--- restriction paragraphs ---
+Users must be at least 18 years old to use the Platform. If you are between 13 and 18 years old (between 16 and 18 years old if you are located in the European Economic Area), you may only use OpenSea with a parent or guardian’s Account, provided they approve and oversee your use. OpenSea strictly prohibits access by users under 13 years old (under 16 years old in the European Economic Area).
+You are located in, ordinarily resident in, or organized under the laws of a U.S.-sanctioned country.
+You are owned or controlled, directly or indirectly, by any person or entity subject to sanctions or located in, ordinarily resident in, or organized under the laws of a U.S.-sanctioned country.
+Any of your officers, managers, directors, shareholders, or authorized representatives are subject to sanctions or are located in, ordinarily resident in, or organized under the laws of a U.S.-sanctioned country, or are owned or controlled, directly or indirectly, by any person subject to such sanctions.
+
+--- full text ---
+Platform Terms of Service | OpenSea
+OpenSea Mobile is live: Trade everything, together. Get the app
+Sign in
+Home
+Explore Collections
+Tokens
+Perps
+Trading Cards
+Feed Activity More
+Drops
+Rewards
+Tools
+Beta
+Studio
+Profile
+Settings
+Resources
+Search
+Sign in
+Platform Terms of Service
+Last Updated: October 20, 2026
+OpenSea is owned and operated by Ozone Networks, Inc., doing business as OpenSea (“OpenSea,” “we,” “us,” or “our”). These Platform Terms of Service (“Terms”) govern your use of our technology and services, which include the OpenSea website(s), APIs, mobile applications, and all related tools, features, and functionalities (collectively, the “Platform”).
+For purposes of these Terms:
+“NFT” refers to a non-fungible token or similar digital item that is secured and authenticated on a public blockchain. NFTs are generally governed by smart contracts that define ownership and transferability.
+“Use” includes accessing, viewing, interacting with, or otherwise engaging with the Platform, whether passively or actively. This encompasses actions such as visiting the Platform, browsing content, creating an Account, preparing blockchain orders, or utilizing any services or features.
+“You” refers to any user of the Platform. If you are using the Platform on behalf of an entity, “you” also includes the entity.
+Important: Please Read Carefully
+THESE TERMS CONTAIN IMPORTANT INFORMATION ABOUT YOUR LEGAL RIGHTS, REMEDIES, AND OBLIGATIONS. THE “ARBITRATION AGREEMENT” SECTION BELOW CONTAINS A MANDATORY ARBITRATION AGREEMENT AND A CLASS ACTION WAIVER. EXCEPT FOR CERTAIN DISPUTES DESCRIBED IN THAT SECTION, YOU AND OPENSEA AGREE TO RESOLVE ALL DISPUTES BY BINDING, FINAL, AND INDIVIDUAL ARBITRATION, AND YOU WAIVE YOUR RIGHT TO A TRIAL BY JURY AND YOUR RIGHT TO PARTICIPATE IN A CLASS ACTION OR CLASS-WIDE ARBITRATION. PLEASE READ THAT SECTION CAREFULLY.
+By signing up, clicking to accept or agree to these Terms, or using the Platform, you confirm that you agree to these Terms. If you do not agree, you may not use the Platform.
+1. What OpenSea Is (and Isn’t)
+OpenSea operates as a peer-to-peer web3 platform that helps users discover and directly interact with blockchain-based items, including NFTs and other tokens, as well as engage with other participants across public blockchains. OpenSea is not a wallet provider, exchange, broker, dealer, financial institution, payments processor, money services business, or creditor.
+We do not have custody or control over the digital tokens, blockchains, or third parties you engage with, nor do we execute or facilitate purchases, transfers, or sales of NFTs or other tokens.
+2. Updates to the Terms
+OpenSea reserves the right to modify these Terms at any time, at our sole discretion. If material changes are made, we will provide reasonable notice, such as updating the “Last Updated” date at the top of these Terms or providing a notice through the Platform. By continuing to use the Platform after changes are made, you confirm your acceptance of the revised Terms.
+It is your responsibility to periodically review the Terms to ensure you understand the latest terms and conditions that apply to your use of the Platform.
+3. Using the Platform 3.1 Your Account
+Your blockchain address serves as your identity on OpenSea. Your OpenSea account (“Account”) is linked to your blockchain address and displays the NFTs associated with it.
+3.2 Eligibility
+Users must be at least 18 years old to use the Platform. If you are between 13 and 18 years old (between 16 and 18 years old if you are located in the European Economic Area), you may only use OpenSea with a parent or guardian’s Account, provided they approve and oversee your use. OpenSea strictly prohibits access by users under 13 years old (under 16 years old in the European Economic Area).
+If you are using the Platform on behalf of an entity, such as a company or other organization, then you represent and warrant that:
+You are authorized to bind the entity to these Terms.
+You agree to these Terms on behalf of the entity.
+3.3 Wallets and Account Security
+You must use a third-party wallet to engage in blockchain transactions. OpenSea does not operate, maintain, or have any custody or control over wallets or their contents. You are solely responsible for securing your wallet, including keeping your credentials and seed phrase confidential. If you encounter wallet issues, you must contact your wallet provider. You can create a non-custodial, embedded wallet within the Platform through a third-party wallet provider, Privy. That wallet is a third-party wallet: it is provided by the third-party provider, not by OpenSea, and OpenSea does not operate, maintain, or have custody or control over the wallet, its contents, or the associated private key. Your creation and use of that embedded wallet is governed by the separate Wallet & Onramp Terms of Use , which constitute a binding agreement between you and Sea Trove LLC, a wholly owned subsidiary of Ozone Networks, Inc. For the avoidance of doubt, OpenSea is not the provider of the embedded wallet.
+Your Account security is your responsibility. OpenSea is not liable for any actions or omissions by you or others that may compromise your Account. If you suspect any security issues related to your Account or the Platform, you agree to notify OpenSea immediately by contacting Support here .
+3.4 Electronic and Promotional Communications
+By creating an Account, you consent to receive electronic communications from OpenSea, including emails, push notifications, text messages, and other forms of communication. These communications may include:
+Transactional and account-related notices (e.g., updates about your Account or activity on the Platform).
+Promotional communications that we believe may be of interest to you.
+You acknowledge that consenting to receive promotional communications is not a condition of using the Platform.
+3.5 Compliance with Laws and Sanctions
+By using the Platform, you represent and warrant that you will comply with all applicable laws, including local, state, federal, and international regulations.
+You agree not to use the Platform, or otherwise enable access to the Platform, if:
+You are located in, ordinarily resident in, or organized under the laws of a U.S.-sanctioned country.
+You are subject to sanctions imposed by the U.S. Government, any other government, or the United Nations.
+You are owned or controlled, directly or indirectly, by any person or entity subject to sanctions or located in, ordinarily resident in, or organized under the laws of a U.S.-sanctioned country.
+Any of your officers, managers, directors, shareholders, or authorized representatives are subject to sanctions or are located in, ordinarily resident in, or organized under the laws of a U.S.-sanctioned country, or are owned or controlled, directly or indirectly, by any person subject to such sanctions.
+You transact with or on behalf of individuals or entities subject to sanctions or otherwise falling into any of the categories above.
+These representations must remain true for the duration of your use of the Platform. You further agree not to enable access to or use of the Platform for any natural or legal person that falls into any of the categories above.
+OpenSea may require you to provide additional information and documents in certain circumstances, such as upon request by the government or to comply with applicable laws or regulations. OpenSea may restrict or disable your Account until these requests are satisfied. Failure to provide complete and accurate information may result in permanent access restrictions.
+3.6 Platform Disruptions and Modifications
+OpenSea reserves the right in our sole discretion to modify, suspend, or discontinue, temporarily or permanently, the Platform (or any features or parts thereof, including the API) at any time and without prior notice, without liability as a result. OpenSea also reserves the right to disable your Account and reassign your username and associated URLs at our discretion.
+3.7 User Conduct
+You are solely responsible for your conduct and the content you create, display, or distribute on or through the Platform. You agree that you will not violate any law, contract, intellectual property or other third-party right, and that you are solely responsible for your conduct and content, in connection with using the Platform.
+In addition to all responsibilities and obligations outlined elsewhere in these Terms, you also agree:
+To do your own research (DYOR) before interacting with or transacting in any NFT, token, or other digital item displayed on the Platform.
+Not to use or attempt to use another user’s account without their authorization.
+Not to impersonate another person or entity.
+Not to claim an OpenSea username with the intention of reselling it, misleading others, or deriving another user’s goodwill (“name squatting”).
+Not to distribute spam, including by sending unwanted NFTs to other users, or to use the Platform or its data for unsolicited advertising or direct marketing, including email, SMS, or telemarketing campaigns.
+Not to use the Platform or any software, API, or functionality to damage, disrupt, or overburden the Platform’s operations.
+Not to circumvent or attempt to circumvent access controls, rate limits, traffic filters, or measures OpenSea uses to block certain blockchain addresses, including by using unauthorized tools, multiple IP addresses, or obfuscating traffic sources.
+Not to employ automated tools (e.g., scrapers, bots, crawlers) to access, extract, or manipulate Platform data without authorization.
+Not to reverse engineer, decompile, or disassemble the Platform, or bypass measures designed to prevent or limit access to specific areas, code, or functionality.
+Not to circumvent OpenSea’s fee structures or attempt to resell the Platform or its features.
+Not to manipulate metrics (e.g., artificially inflating views, favorites, rankings, or performance or profit-and-loss figures) to alter search results or the visibility of items or collections.
+Not to manipulate prices, commit fraud, or engage in deceptive or misleading practices.
+Not to promise or guarantee investment returns or describe any token, NFT, or other digital item as risk-free; to post content you were paid or compensated to post without clearly and conspicuously disclosing that compensation; to falsely claim that you are a licensed or professional financial, investment, or trading advisor; or to misrepresent your holdings, position, or trading performance.
+Not to buy, sell, or transfer stolen or fraudulently obtained items or NFTs.
+Not to create or display content that promotes hate, violence, self-harm, or illegal activities, including child sexual exploitation or doxing.
+3.8 Enforcement; No Duty to Police
+OpenSea may, in its sole discretion and without notice, monitor, review, restrict, block, remove, or disable access to any content, digital item, or activity on or through the Platform. Nothing in these Terms imposes on OpenSea any obligation to do so, and OpenSea disclaims any duty to police or enforce these Terms or any law on your behalf. You acknowledge and agree that:
+OpenSea’s ability to take such actions does not create any obligation to take them.
+OpenSea will not be liable to you or any third party for choosing to act or not to act under this subsection.
+You waive and release any claim, demand, or cause of action arising from OpenSea’s exercise, or failure to exercise, these rights.
+3.9 Additional Terms
+Some features, programs, and services on the Platform are subject to additional terms that OpenSea publishes for them (“Additional Terms”). OpenSea will identify Additional Terms as terms that apply to the feature, program, or service, and will make them available on the Platform or link to them where you use it. By using a feature, program, or service that is subject to Additional Terms, you agree to those Additional Terms, which are incorporated into these Terms by reference.
+If Additional Terms conflict with these Terms, the Additional Terms govern that feature, program, or service, except that Additional Terms do not modify the “Arbitration Agreement” section. OpenSea may update Additional Terms in the same manner as these Terms, as described in “Updates to the Terms.”
+Help Center articles, FAQs, and other support or educational content are provided for information only, unless they are Additional Terms or a policy that these Terms incorporate by reference. That content does not modify these Terms or create obligations for OpenSea beyond those stated in these Terms.
+3.10 Rewards Programs
+OpenSea may offer programs and promotions that give eligible users rewards, fee discounts, or other benefits, such as a referral program or a one-time reward (each, a “Rewards Program”). Each Rewards Program is subject to these Terms and to any Additional Terms that OpenSea publishes for it.
+OpenSea may change, suspend, or end any Rewards Program at any time, including its eligibility criteria, reward rates, discount rates, eligible transactions, and claim methods.
+OpenSea may withhold, adjust, or cancel rewards you have not yet claimed, recover rewards you have already claimed (including by deducting them from future rewards), and end your participation in any Rewards Program if OpenSea determines that (a) you violated these Terms, including the applicable Additional Terms, (b) you engaged in fraud, manipulation, or abuse, such as self-referral, wash trading, or using multiple accounts or wallets to earn rewards, or (c) you received a reward because of an error, or if applicable law requires it.
+Rewards you have not claimed have no cash value and cannot be sold, transferred, or exchanged. Rewards do not give you any ownership, equity, or other interest in OpenSea. You are responsible for any taxes on rewards you receive, as described under “Tax Obligations” in the “Assumption of Risk” section.
+4. OpenSea’s Ownership of the Platform 4.1 OpenSea’s Intellectual Property
+All proprietary elements of the Platform are owned by OpenSea. This includes:
+The Platform’s “look and feel,” such as text, graphics, images, logos, page headers, button icons, URLs, scripts, and other design elements that make up the Platform.
+Digital content, including the OpenSea logo, designs, text, graphics, pictures, data, software, sound files, and other files.
+OpenSea’s trademarks, service marks, and trade dress.
+The selection, arrangement, and presentation of all such materials.
+OpenSea and its licensors retain all rights to these materials, including the exclusive right to create derivative works. You may not:
+Copy, imitate, or use OpenSea’s name, logo, trademarks, or service marks.
+Use metatags or other hidden text that reference “OpenSea” or its intellectual property.
+4.2 License to Use the Platform
+OpenSea grants you a limited, nonexclusive, nontransferable, nonsublicensable, and personal license to access and use the Platform, subject to your compliance with these Terms. This includes:
+Accessing and displaying any software, content, or materials made available by OpenSea solely for your personal, non-commercial use as permitted under these Terms.
+Downloading a copy of the OpenSea mobile application to your device solely to enable your use of the Platform.
+This license is strictly limited to your lawful use of the Platform. OpenSea does not grant any ownership rights through this license, and your use of content linked to or associated with NFTs, NFT collections, or other digital items is subject to any applicable rights set forth by the seller or creator of the NFT or such other digital item.
+4.3 Third-Party Intellectual Property
+All other trademarks and intellectual property mentioned on or integrated by the Platform are the property of their respective owners. This includes:
+Trademarks, logos, and other intellectual property associated with third-party creators of NFTs or related content.
+Smart contracts and other software code deployed by third parties.
+OpenSea does not claim ownership over such third-party intellectual property and disclaims responsibility for their operation, functionality, or legality. Reference to third-party products, services, or content on the Platform does not imply endorsement, sponsorship, or recommendation by OpenSea.
+5. Third-Party Content
+The Platform may display content created by third parties or link to third-party websites, applications, code, or other content (“Third-Party Content”). OpenSea uses the CoinGecko API, which is the property of Gecko Labs Pte. Ltd., to display Third-Party Content about fungible tokens on the Platform.
+OpenSea does not control, endorse, or review Third-Party Content and is not responsible for it. You are cautioned that third-party applications may be decentralized or “open” in nature, where no recourse is available.
+By using or relying on Third-Party Content, you do so entirely at your own risk. OpenSea provides access to Third-Party Content as a convenience and makes no warranties or representations regarding its functionality, availability, or reliability. You bear sole responsibility for verifying the legitimacy, authenticity, and legality of NFTs or other digital items you purchase.
+Additionally, we cannot guarantee that any NFT or digital item visible on OpenSea will remain visible or available for purchase, sale, or transfer. Creators, sellers, and buyers are solely responsible for the content and metadata associated with their NFTs or other digital items.
+5.1 External Profiles
+The Platform may display profiles (“External Profiles”) compiled from information that a person has made public on another digital asset trading or community platform (a “Source Platform”). An External Profile does not indicate that the person uses OpenSea, has agreed to these Terms, or endorses OpenSea. OpenSea is not affiliated with, sponsored by, or endorsed by any Source Platform. Information in External Profiles is Third-Party Content: OpenSea does not create, verify, or endorse it; it may be inaccurate, incomplete, or out of date; and you rely on it at your own risk. If you claim an External Profile, the license in “Your Content and License to OpenSea; Feedback” applies to its content, including OpenSea’s display of that content before you claimed it.
+Any person, whether or not they have an Account, can ask us to stop displaying an External Profile about them, as described in our Privacy Policy . Rights-holders may report intellectual-property concerns about External Profile content under our Prohibited Content and Disputed Items Policy .
+5.2 Public Blockchains and Third-Party Transactions
+As a peer-to-peer web3 service, OpenSea helps you explore NFTs and other digital items created by third parties and interact with public blockchains and blockchain applications, which are not owned by OpenSea. Public blockchains facilitate the creation, transfer, and ownership of NFTs and other digital items, but OpenSea does not control or guarantee the availability, functionality, or permanence of these networks or the NFTs or other digital items existing on them.
+These Terms govern only your use of OpenSea’s Platform. NFTs and other digital items exist on public blockchains and are purchased, sold, and transferred outside of OpenSea.
+Sellers are responsible for determining and establishing the price of NFTs and other digital items, including applicable taxes, mint counts, and minting mechanics. OpenSea does not control or set these terms.
+For its services, OpenSea may receive certain fees. However, OpenSea does not set, collect, enforce, or determine other costs or fees associated with buying or selling NFTs or other digital items, including but not limited to:
+Creator earnings or royalties.
+Blockchain transaction fees (commonly referred to as “gas fees”).
+Payment processor or other third-party fees.
+These fees are paid directly to third parties, such as creators, sellers, or blockchain validators, and OpenSea cannot refund these amounts.
+NFTs and other digital items may also be subject to specific terms and conditions set by their creators, sellers, or buyers (referred to as “NFT Terms”). These terms, which may include rights and obligations associated with NFT content, are not established or enforced by OpenSea. For example:
+Buyers, sellers, and creators are solely responsible for communicating, agreeing to, and enforcing any such NFT Terms.
+It is your responsibility to review and comply with any applicable NFT Terms.
+5.3 Intellectual Property Violations, Illegal Content, and Other Disputed Items
+OpenSea complies with applicable laws regarding illegal content, including intellectual property violations and stolen NFTs. To report illegal content or submit DMCA and DSA takedown notices, review and follow the instructions in our Prohibited Content and Disputed Items Policy.
+OpenSea facilitates the discovery of and interactions with blockchain-based items, including NFTs. However, OpenSea does not adjudicate disputes regarding the ownership, authenticity, or legality of any item listed or transacted on the platform. If a dispute arises concerning an item, such disputes will be handled in accordance with our Prohibited Content and Disputed Items Policy , which may include restricting the visibility or transferability of the item on the platform.
+Users acknowledge and agree that OpenSea’s actions to address disputes are based solely on our internal policies and are not determinations of ownership or legal rights.
+OpenSea reserves the right to restrict or remove visibility of NFT collections, individual NFTs, related metadata, or other digital assets or related content at its discretion, including for legal compliance, policy enforcement, or other reasons. You acknowledge that such restrictions may impact the accessibility and perceived value of an NFT or other digital item.
+6. Your Information, Content, and Grant of License to OpenSea 6.1 Privacy Policy
+Please refer to our Privacy Policy for information about how we collect, use, and share information from or about you, including information about you that we obtained from a Source Platform before you created an Account (“Your Information”). By using the Platform, you acknowledge that you have read our Privacy Policy and you expressly consent to the collection, use, and disclosure of Your Information in accordance with the Privacy Policy.
+6.2 Your Content and License to OpenSea; Feedback
+You are solely responsible for any content you create, submit, post, promote, or display on or through the Platform, as well as for compliance with applicable laws, regulations, and these Terms. This includes ensuring the legality, authenticity, and accuracy of all metadata associated with your NFTs and digital items.
+By posting or submitting content, you represent and warrant that:
+You have all necessary rights, licenses, consents, permissions, power, and authority to grant OpenSea the license described below.
+Your content does not violate any intellectual property rights, publicity rights, or other third-party rights, and does not contain material that violates any laws.
+By using the Platform in conjunction with creating, submitting, posting, promoting, or displaying content (including compliance with OpenSea’s metadata standards), you grant OpenSea a worldwide, non-exclusive, sublicensable, transferable, royalty-free license to:
+Use, copy, reproduce, modify, create derivative works of, distribute, publicly display, and perform your content for current and future business purposes, including providing, promoting, and improving the Platform.
+This license extends to any text, materials, images, files, communications, comments, feedback, suggestions, ideas, concepts, questions, data, or other content you post, as well as any digital files, art, or materials linked to or associated with NFTs or other digital items displayed on the Platform.
+This license survives any termination of your access to the Platform to the extent necessary for content you have already made public or that OpenSea has displayed, distributed, or aggregated.
+Note : OpenSea does not claim ownership of your content, other than Feedback as defined below. The license you grant allows us to use and display your content to operate and improve our Platform, but ownership remains with you.
+We welcome feedback, comments, and suggestions for improvements to the Platform (“Feedback”). You acknowledge and expressly agree that any contribution of Feedback grants OpenSea full and sole right, title, or interest in any such Feedback. You agree that OpenSea may use and disclose Feedback in any manner and for any purpose whatsoever without further notice or compensation to you and without retention by you of any proprietary or other right or claim.
+7. API Terms
+This section governs your access to or use of any OpenSea programming interfaces, developer tools, and other related documentation and materials that we make available (collectively, the “API”). By using the API, you agree to comply with the Terms and any additional guidelines OpenSea may publish, including in its Developer Documentation .
+You agree to join OpenSea in our mission of building a composable and decentralized web3 ecosystem by reciprocating and offering us equivalent levels of access to your data through, if any, your application programming interfaces, developer tools, or otherwise.
+You must provide appropriate attribution to OpenSea on your site or in your product or services, for example by linking to the OpenSea website when displaying NFTs or other digital assets, where appropriate, in each case subject to any instructions or guidelines we may provide.
+7.1 Restrictions on API Use
+You may not:
+Commercialize the API or any data, information, or content made available or transmitted via the API (such data, information, or content, “API Data”) without OpenSea’s express written permission. Your use of or access to the API or API Data will be considered “commercial” if you earn money as part of a product or service that you are selling, re-selling, or otherwise monetizing.
+Remove or alter legal notices (including copyright, trademarks, or other proprietary rights) contained in or on materials you receive or access in connection with the API or API Data.
+Share, distribute, sell, rent, lend, or transfer API access or keys or API Data to third parties, whether on a stand-alone basis or otherwise, without our express written permission.
+Falsify API usage data (or your intended or stated use) or obscure the origin of API calls.
+Copy, adapt, reformat, or otherwise modify the API or create derivative works of the API.
+Exceed, disable, interfere with, circumvent, or attempt to circumvent (including by aggregating accounts or creating multiple API keys) API limits or security measures, including rate limits or authentication controls.
+Use API Data for advertising, marketing, or monetization via data brokers or ad networks.
+Implement features or business practices, or use the API or API Data in a way that, in OpenSea’s determination, may harm the reputation or relationships of OpenSea.
+You may not access or use the API or API Data in any manner that would be deemed a breach or an alleged breach of the “User Conduct” section or any other portion of these Terms.
+7.2 Compliance & Security Obligations
+If API Data is deleted, suspended, withheld, modified, disabled, delisted, or otherwise removed from OpenSea’s service, you will make all reasonable efforts to delete or modify such API Data as soon as possible, and in any case within 24 hours, unless prohibited by applicable law or regulation or with the express written permission of OpenSea.
+If you become aware of actual or potential security vulnerabilities in your integration of the API, you must immediately notify OpenSea and promptly work to resolve the issue.
+You certify that you, your officers, directors, shareholders, and affiliates are and will remain in compliance with all applicable import, re-import, sanctions, anti-boycott, export, and re-export control laws and regulations.
+8. Liability, Disclaimers, and Indemnification 8.1 Disclaimers
+Your use of the Platform is at your own risk. The Platform is provided on an AS IS and AS AVAILABLE basis, and OpenSea expressly disclaims all warranties, whether express or implied, including but not limited to:
+The Platform’s fitness for a particular purpose, merchantability, title, and non-infringement.
+The accuracy, reliability, completeness, or availability of the Platform (including any of its features), or the accuracy, legality, or availability of any NFTs, digital items, or other content displayed on the Platform.
+The security of the Platform, including protection from viruses, hacking, or other harmful elements.
+The uninterrupted or error-free operation of the Platform.
+That the Platform or associated content will meet your expectations.
+OpenSea disclaims responsibility for any loss, including any losses resulting from:
+User errors, such as mistyped blockchain addresses or incorrectly constructed transactions.
+Server failures, unauthorized access, or third-party attacks, including phishing or malware.
+Irreversible blockchain transactions or issues related to public blockchain functionality, including forks and technical node issues.
+Vulnerabilities, failures, or abnormal behavior of other software (e.g., smart wallets).
+You further acknowledge and agree that OpenSea is not registered with the U.S. Securities and Exchange Commission because it does not offer securities services, nor is OpenSea registered with the U.S. Commodity Futures Trading Commission because it does not offer futures or derivatives services. You acknowledge further that OpenSea is not registered or licensed with any other financial regulatory or similar authority, and no such authority has reviewed or approved OpenSea’s Platform or services. You acknowledge that NFTs, cryptocurrency, and other digital tokens are not subject to protections or insurance provided by the Federal Deposit Insurance Corporation or the Securities Investor Protection Corporation.
+Any commentary, opinions, notes, ratings, or performance information that users post or that OpenSea displays or aggregates from other sources are the views of the persons who authored them, not of OpenSea. They are not investment, financial, legal, or tax advice, and do not constitute an endorsement, recommendation, or offer by OpenSea to buy, sell, or hold any token, NFT, or digital item. OpenSea does not verify, adopt, or guarantee this information. Any performance or profit-and-loss figures reflect a single point in time, may be inaccurate or out of date, and do not indicate future results. You rely on such information at your own risk.
+8.2 Assumption of Risk
+By using the Platform, you acknowledge and accept the following risks, in addition to risks described elsewhere in these Terms:
+NFT and Crypto Volatility: NFTs and cryptocurrencies are high risk. The value of NFTs, cryptocurrencies, and other digital items is subjective and highly volatile. You understand that you may lose money. Don’t purchase NFTs or cryptocurrencies unless you’re prepared to lose all your money.
+Ecosystem Risks: The utility and value of NFTs and other digital items depend on the adoption and growth of blockchain ecosystems, which may fail to develop as anticipated.
+Regulatory Risks: The regulatory landscape for NFTs, cryptocurrency, and blockchain technologies is uncertain and may negatively affect the Platform or the utility of NFTs and other digital items.
+Tax Obligations: You are solely responsible for determining, withholding, reporting, and remitting any applicable taxes arising from your transactions on the Platform, including your NFT and token sales, purchases, swaps, transfers, or other digital item transactions, and you agree to indemnify OpenSea in connection with any such taxes. This responsibility extends to any taxes that may be associated with other activities on the Platform, such as those related to any Rewards Programs or other promotional programs or any other benefits you may receive related to your use of the Platform. OpenSea does not provide tax advice and does not determine the taxability of any rewards or transactions. OpenSea will not be liable for any of your tax obligations.
+Internet and Security Risks: Using the Platform may expose you to risks such as internet disruptions, malicious attacks, or unauthorized access to your wallet or Account.
+Content Visibility: OpenSea reserves the right to hide or make inaccessible collections, contracts, or items affected by these risks or other issues. This includes items that become unviewable or inaccessible due to blockchain-related issues.
+8.3 Limitation of Liability
+To the fullest extent permitted by law:
+OpenSea, its affiliates, and its service providers shall not be liable for any indirect, incidental, special, or consequential damages, including but not limited to lost profits, revenue, data, or goodwill, arising out of or related to your use of the Platform.
+OpenSea’s and its affiliates’ total liability for any claims arising out of or related to these Terms or your use of the Platform shall not exceed the greater of:
+$5,000, or
+The amount OpenSea directly received from you in connection with the transaction that gave rise to the claim.
+The limitations above apply even if the stated remedy fails of its essential purpose.
+Exceptions: Some jurisdictions may not allow the exclusion or limitation of liability for certain damages, so these limitations may not apply to you.
+8.4 Indemnification
+By using the Platform, you agree, to the fullest extent permitted by law, to indemnify, defend, and hold harmless OpenSea and its affiliates, and its and their respective employees, directors, contractors, service providers, agents, and representatives (collectively, the “OpenSea Parties”) from and against all claims, damages, losses, liabilities, and expenses (including reasonable legal fees) arising out of or relating to:
+Your use or misuse of the Platform, including but not limited to feedback or content you provide through the Platform, your engagement with NFTs, other digital items and other content visible on the Platform, and your interactions with other users.
+Your breach of these Terms or applicable laws.
+Your violation of the rights of third parties, including intellectual property or contractual rights.
+Your negligence or willful misconduct.
+Disputes over ownership or validity of NFTs and other digital items visible on OpenSea.
+You agree to notify OpenSea promptly of any claims and to cooperate with OpenSea in defending such claims. OpenSea reserves the right to assume exclusive control of the defense and settlement of any claims.
+9. Arbitration Agreement
+Please read this section, setting forth the Arbitration Agreement carefully. It affects your legal rights by requiring that you and OpenSea resolve any and all disputes with OpenSea through binding arbitration rather than in court, subject to the limited exceptions described below. This section applies to disputes between you and OpenSea and does not govern disputes between users or third parties. OpenSea does not provide dispute resolution services for disagreements between users or third parties, which must be resolved independently.
+9.1 Agreement to Arbitrate and Informal Dispute Resolution
+You agree that any dispute, controversy, or claim arising out of or related to your use of the Platform, products sold or distributed through the Platform, or your relationship with OpenSea will be resolved on an individual basis exclusively through binding arbitration, except:
+Small Claims Court: Claims that qualify may be resolved in small claims court, provided they remain on an individual basis.
+Intellectual Property Claims: Claims involving intellectual property infringement or misuse may be resolved in a court of proper jurisdiction.
+Both you and OpenSea agree to make good-faith efforts to resolve disputes informally before initiating arbitration or other legal proceedings.
+Before commencing arbitration, you must initiate an informal dispute resolution process by sending a written notice describing your claim and desired resolution to:
+OpenSea, Attn: Legal Department
+66 W Flagler St, Suite 929
+Miami, FL 33130, USA
+Both parties agree to meet and confer (via telephone, videoconference, or in person) to attempt to resolve the dispute in good faith. The statute of limitations and any filing deadlines will be tolled during this process. If the dispute is not resolved within 30 days, either party may proceed with arbitration, small claims court, or legal claims for intellectual property issues.
+9.2 Delegation and Arbitrator Authority
+Any dispute between OpenSea and you regarding the construction, interpretation, or application of this Arbitration Agreement, including the enforceability, severability, revocability, scope, or validity of this Arbitration Agreement, shall be decided by an arbitrator and not by a court or judge.
+The arbitrator has the exclusive authority to:
+Determine the scope and enforceability of this arbitration agreement.
+Resolve disputes related to the interpretation, applicability, or formation of this agreement.
+The arbitrator may award the same relief on an individual basis that a court could award, including monetary damages and injunctive relief. All decisions are final and binding.
+9.3 Arbitration Process, Waiver of Jury Trial, and Class Action Waiver
+Rules and Forum: Arbitration will be conducted by JAMS, an alternative dispute resolution provider, under its Streamlined Arbitration Rules (for claims under $250,000) or Comprehensive Arbitration Rules (for claims above $250,000). JAMS rules are available at jamsadr.com or by calling 800-352-5267.
+Filing and Costs: If JAMS is unavailable, the parties will select an alternative arbitral forum. OpenSea will pay JAMS filing and administrative fees for claims under $10,000, unless (a) your claim results in a judgment smaller than OpenSea’s prior settlement offer or (b) the arbitrator deems the claim frivolous.
+Hearing Format: Arbitration may be conducted via telephone, videoconference, written submissions, or in person at a mutually agreed location.
+Jury Trial Waiver: By agreeing to this arbitration agreement, you waive your constitutional and statutory rights to sue in court and have a trial before a judge or jury.
+Class Action Waiver: All claims must be brought on an individual basis. Claims of more than one party cannot be arbitrated or consolidated without written consent from all parties. Class arbitrations are expressly prohibited.
+If a court finds that this class action waiver is unenforceable for a specific claim, that claim must be litigated in court, while other claims proceed in arbitration.
+The Federal Arbitration Act governs the interpretation and enforcement of this arbitration agreement. Judgments rendered by the arbitrator may be entered in any court with proper jurisdiction.
+9.4 Severability, Survival, and Modification
+If any part of this arbitration agreement is found invalid or unenforceable, that part will be severed, and the remainder will remain in effect. This arbitration agreement survives termination of your relationship with OpenSea.
+If OpenSea makes material changes to this arbitration agreement, you may reject the changes within 30 days of their effective date by notifying OpenSea in writing at:
+OpenSea, Attn: Legal Department
+66 W Flagler St, Suite 929
+Miami, FL 33130, USA
+If you reject the changes, the prior version of this arbitration agreement will remain in effect.
+9.5 Governing Law and Venue
+These Terms and your access to and use of the Platform shall be governed by and construed and enforced in accordance with the laws of the State of New York (without regard to conflict of law rules or principles of the State of New York, or any other jurisdiction that would cause the application of the laws of any other jurisdiction). The United Nations Convention on Contracts for the International Sale of Goods does not apply.
+Any dispute between the parties that is not subject to arbitration as set forth in “Arbitration Agreement” or cannot be heard in small claims court, shall be resolved in the state or federal courts of Miami-Dade County in the State of Florida, and the United States, respectively, sitting in the State of Florida.
+10. Termination
+OpenSea reserves the right to suspend, restrict, disable, terminate, or delete your Account or your access to the Platform (in whole or in part) at any time, with or without notice, and for any or no reason. If your Account is terminated, you will not be entitled to any refunds for amounts already paid to OpenSea.
+All licenses granted to you under these Terms will terminate automatically if you breach these Terms. OpenSea shall not be liable for any damages or obligations arising from such termination.
+All provisions of these Terms that by their nature should survive termination, including but not limited to ownership, indemnification, disclaimers, limitations of liability, dispute resolution, and export compliance, will remain in effect.
+11. Miscellaneous Terms
+If any provision of these Terms is found to be invalid or unenforceable, that provision will be severed, and the remaining provisions will remain in full force and effect.
+You agree that any breach of these Terms may result in irreparable harm to OpenSea, for which monetary damages would not be an adequate remedy. OpenSea is entitled to seek equitable relief, including injunctive relief, without the need to post a bond or provide additional security.
+If you are a California resident, in accordance with Cal. Civ. Code § 1789.3, you may report complaints to the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs by contacting them in writing at 1625 North Market Blvd., Suite N 112 Sacramento, CA 95834, or by telephone at (800) 952-5210.
+These Terms, along with any Additional Terms and policies incorporated by reference, constitute the entire agreement between you and OpenSea regarding your use of the Platform and supersede all prior agreements or understandings.
+You may not assign or transfer your rights under these Terms without OpenSea’s prior written consent. OpenSea may freely assign its rights and obligations.
+The failure of either party to assert any right or enforce any provision shall not constitute a waiver of that right or provision.
+Section headings are for reference only and do not affect the interpretation of these Terms. For purposes of these Terms, (a) the words “include,” “includes,” and “including” will be deemed to be followed by the words “without limitation”; (b) the word “or” is not exclusive; (c) the words “herein,” “hereof,” “hereby,” “hereto,” and “hereunder” refer to these Terms as a whole; and (d) unless the context otherwise requires, defined terms in the singular shall include their plural forms, and defined terms in the plural shall include their singular forms. Unless the context otherwise requires, references in these Terms: (x) to “Sections” refer to the sections of these Terms; (y) to an agreement, instrument, or other document means such agreement, instrument, or other document as amended, supplemented, and modified from time to time to the extent permitted by the provisions thereof; and (z) to a statute means such statute as amended from time to time and includes any successor legislation thereto and any regulations promulgated thereunder. These Terms will be construed without regard to any presumption or rule requiring construction or interpretation against the party drafting an instrument or causing any instrument to be drafted.
+You are responsible for providing the necessary device, internet connection, and other services to use the OpenSea mobile application (“App”). OpenSea does not guarantee compatibility with all devices or geographic availability. For users accessing OpenSea via iOS, Apple’s Standard End User License Agreement (“EULA”) applies in addition to these Terms of Service. In the event of a conflict between these Terms and Apple’s EULA, Apple’s EULA will govern solely with respect to the use of OpenSea on iOS devices.
+Except as explicitly provided in these Terms or Apple’s EULA (e.g., Apple as a third-party beneficiary for App Store-related terms), these Terms are intended solely for the benefit of the parties and do not create rights for third parties.
+Aggregating
+Networks
+Platform Terms
+Wallet & Onramp Terms
+Privacy Policy
+Support
+Collector Pro
+Crypto USD
+Crypto USD

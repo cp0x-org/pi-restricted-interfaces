@@ -1,0 +1,47 @@
+{
+  "id": "centrifuge",
+  "name": "Centrifuge",
+  "targets": {
+    "app": "https://app.centrifuge.io",
+    "repo": {
+      "repo": "centrifuge/apps",
+      "ref": "0081f8e90c78a687c41ad5140bd6e8ce59bcd747"
+    },
+    "terms": "https://centrifuge.io/terms",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "feature-pool-jurisdictions",
+      "type": "page",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Centrifuge docs: pools may require jurisdictional restrictions before investment (set per pool)",
+      "source": {
+        "url": "https://docs.centrifuge.io/user/investor/",
+        "kind": "docs",
+        "archive": "https://web.archive.org/web/20260617135612/https://docs.centrifuge.io/user/investor/"
+      },
+      "expect": [
+        "Some pools require whitelisting before investment or redemption",
+        "Jurisdictional restrictions"
+      ]
+    },
+    {
+      "id": "kyc-pool-whitelist",
+      "type": "page",
+      "claim": "kyc",
+      "status": "yes",
+      "about": "Centrifuge docs: pool whitelisting includes KYC/AML verification and wallet pre-approval",
+      "source": {
+        "url": "https://docs.centrifuge.io/user/investor/",
+        "kind": "docs",
+        "archive": "https://web.archive.org/web/20260617135612/https://docs.centrifuge.io/user/investor/"
+      },
+      "expect": [
+        "KYC/AML verification",
+        "Wallet pre-approval"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,843 @@
+check: aster/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://www.asterdex.com/en/trade/pro/futures/BTCUSDT
+checked_at: 2026-10-28T23:07:44Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "CA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "MX": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "CO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "CN": {
+  "app": {
+   "status": null,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "error",
+   "why": "URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "KR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "TW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": null,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "error",
+   "why": "URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "LB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.asterdex.com/en/trade/pro/futures/BTCUSDT",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Aster - The next-gen perp DEX for all traders",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 14323,
+   "redirects": [],
+   "server": null
+  }
+ }
+}

@@ -1,7 +1,7 @@
 check: rocketpool/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://stake.rocketpool.net
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
@@ -40,7 +40,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "US-NY": {
+ "CA": {
   "app": {
    "status": 200,
    "final_url": "https://stake.rocketpool.net",
@@ -58,7 +58,43 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "CA-ON": {
+ "MX": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7369,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7369,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CO": {
   "app": {
    "status": 200,
    "final_url": "https://stake.rocketpool.net",
@@ -96,20 +132,15 @@ checked_at: 2026-10-11T21:24:23Z
  },
  "DE": {
   "app": {
-   "status": 200,
+   "status": null,
    "final_url": "https://stake.rocketpool.net",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
-   "scripts": [
-    "/static/js/index.*.js",
-    "/static/js/lib-router.*.js",
-    "/static/js/lib-vue.*.js",
-    "/static/js/m.*.js"
-   ],
-   "bytes": 7377,
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
    "redirects": [],
-   "server": "cloudflare"
+   "server": null
   }
  },
  "FR": {
@@ -148,7 +179,79 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7377,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7377,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
  "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7377,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7377,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SE": {
   "app": {
    "status": 200,
    "final_url": "https://stake.rocketpool.net",
@@ -210,6 +313,145 @@ checked_at: 2026-10-11T21:24:23Z
     "/static/js/lib-vue.*.js",
     "/static/js/m.*.js"
    ],
+   "bytes": 7377,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7377,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7377,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7377,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7377,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 403,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Just a moment...",
+   "scripts": [],
+   "bytes": 5698,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7362,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7362,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
    "bytes": 7362,
    "redirects": [],
    "server": "cloudflare"
@@ -241,12 +483,25 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "HTTP 403 anti-bot challenge",
    "title": "Just a moment...",
    "scripts": [],
-   "bytes": 5730,
+   "bytes": 5719,
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "JP": {
+ "CN": {
+  "app": {
+   "status": 403,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Just a moment...",
+   "scripts": [],
+   "bytes": 5719,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KR": {
   "app": {
    "status": 200,
    "final_url": "https://stake.rocketpool.net",
@@ -264,7 +519,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "BR": {
+ "TW": {
   "app": {
    "status": 200,
    "final_url": "https://stake.rocketpool.net",
@@ -277,27 +532,22 @@ checked_at: 2026-10-11T21:24:23Z
     "/static/js/lib-vue.*.js",
     "/static/js/m.*.js"
    ],
-   "bytes": 7369,
+   "bytes": 7362,
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "AR": {
+ "AU": {
   "app": {
-   "status": 200,
+   "status": null,
    "final_url": "https://stake.rocketpool.net",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
-   "scripts": [
-    "/static/js/index.*.js",
-    "/static/js/lib-router.*.js",
-    "/static/js/lib-vue.*.js",
-    "/static/js/m.*.js"
-   ],
-   "bytes": 7377,
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
    "redirects": [],
-   "server": "cloudflare"
+   "server": null
   }
  },
  "NG": {
@@ -318,15 +568,38 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "VN": {
+ "ZA": {
   "app": {
-   "status": 403,
+   "status": 200,
    "final_url": "https://stake.rocketpool.net",
-   "state": "challenge",
-   "why": "HTTP 403 anti-bot challenge",
-   "title": "Just a moment...",
-   "scripts": [],
-   "bytes": 5730,
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7377,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7377,
    "redirects": [],
    "server": "cloudflare"
   }
@@ -350,6 +623,293 @@ checked_at: 2026-10-11T21:24:23Z
   }
  },
  "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7377,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7369,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7369,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 403,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4911,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7377,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7369,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4912,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7369,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 403,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4911,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7362,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 403,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4912,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": null,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4909,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": null,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 403,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4910,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Rocket Pool - Decentralised Ethereum Liquid Staking Protocol",
+   "scripts": [
+    "/static/js/index.*.js",
+    "/static/js/lib-router.*.js",
+    "/static/js/lib-vue.*.js",
+    "/static/js/m.*.js"
+   ],
+   "bytes": 7369,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 403,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4912,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 403,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4909,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 403,
+   "final_url": "https://stake.rocketpool.net",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4908,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ML": {
   "app": {
    "status": 200,
    "final_url": "https://stake.rocketpool.net",

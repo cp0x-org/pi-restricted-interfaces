@@ -1,7 +1,7 @@
 check: lido/vpn-tor
 about: Tor exit nodes (Cloudflare country T1) are treated as unresolved and get the limited experience
 source: https://github.com/lidofinance/ethereum-staking-widget/blob/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a/utilsApi/geo-handler.ts#L11
-checked_at: 2026-10-11T21:04:43Z
+checked_at: 2026-10-28T22:38:10Z
 fetched: https://raw.githubusercontent.com/lidofinance/ethereum-staking-widget/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a/utilsApi/geo-handler.ts
 sha256: e4e63e94123802ef811a4d6725f6b386e7dbdf9dbc1d229d2d1b353d08688bbd
 --------------------------------------------------------------------------------

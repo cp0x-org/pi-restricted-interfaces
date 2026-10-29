@@ -1,7 +1,7 @@
 check: matcha/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://matcha.xyz/terms
-checked_at: 2026-10-11T21:17:53Z
+checked_at: 2026-10-28T22:55:01Z
 fetched: https://web.archive.org/web/9999id_/https://matcha.xyz/terms
 sha256: f04551142f7d29223650c4ad59b7cd377972cec185152074de5786c8d9bf4ada
 http_status: 200

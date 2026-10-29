@@ -1,7 +1,7 @@
 check: cowswap/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://cow.fi/legal/cowswap-terms
-checked_at: 2026-10-11T21:17:15Z
+checked_at: 2026-10-28T22:54:11Z
 fetched: https://web.archive.org/web/9999id_/https://cow.fi/legal/cowswap-terms
 sha256: ce9339e944ba2d525e18de935e55a917d8c6cf33de3c8ed0965e7580397f67e2
 http_status: 200

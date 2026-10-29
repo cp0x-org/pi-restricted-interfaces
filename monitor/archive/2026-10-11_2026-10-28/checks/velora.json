@@ -1,0 +1,11 @@
+{
+  "id": "velora",
+  "name": "Velora",
+  "targets": {
+    "app": "https://app.velora.xyz",
+    "repo": null,
+    "terms": "https://velora.xyz/tos",
+    "endpoints": []
+  },
+  "checks": []
+}

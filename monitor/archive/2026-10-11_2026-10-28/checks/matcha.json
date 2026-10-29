@@ -1,0 +1,30 @@
+{
+  "id": "matcha",
+  "name": "Matcha",
+  "targets": {
+    "app": "https://matcha.xyz",
+    "repo": null,
+    "terms": "https://matcha.xyz/terms",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-russia-report",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "reported",
+      "about": "Press report (Mar 2022): Matcha blocks trades from Russia ('Region Unsupported')",
+      "source": {
+        "url": "https://www.theblock.co/linked/137962/dex-aggregator-matcha-geoblocks-trades-from-russia",
+        "kind": "press",
+        "archive": "https://web.archive.org/web/20250425030220/https://www.theblock.co/linked/137962/dex-aggregator-matcha-geoblocks-trades-from-russia"
+      },
+      "expect": [
+        "Matcha had begun blocking trades from Russia"
+      ],
+      "countries": [
+        "RU"
+      ]
+    }
+  ]
+}

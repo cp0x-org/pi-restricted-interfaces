@@ -150,7 +150,7 @@ adds it to the interface's `geo_site` / `geo_feature` lists in the site dataset,
 under "Blocked countries" and in the rating (`monitor/scripts/observed.py`; `research/combine.py` counts the same).
 The catalog file itself is not changed. A region is not added when its whole country is counted, a country listed as
 close-only stays close-only, and an `ok` never removes a country (client-side gates are not evaluated). Commit
-`monitor/data/observations.json`, `src/data/interfaces.json` and `monitor/out/` together.
+`monitor/data/observations.json`, `src/data/` and `monitor/out/` together.
 
 **One exit IP per country.** Port `7000` without a session rotates the IP on every request, so the vantage check
 would verify one address and the targets would be asked from others. Geolocation databases disagree on some ranges
@@ -181,7 +181,9 @@ an API. `api_probes[]` in `data/interfaces.json` asks that API directly from eve
 ]
 ```
 
-- `method` is `GET` or `POST`; `body` (POST only) is sent as JSON. Only read-only calls: no keys, signatures or orders.
+- `method` is `GET` or `POST`; `body` (POST only) is sent as JSON; `headers` are sent as given (an `Origin` the API
+  insists on). `{ip}` in the URL becomes the proxy's exit IP for APIs that take the address to check as a parameter; the
+  observation keeps the template URL and the IP is not recorded. Only read-only calls: no keys, signatures or orders.
 - `rules` are regexes matched in order against `HTTP <status>`, the response headers (`name: value`, lower case) and
   the body; the first match gives the state (`ok`, `blocked`, `close_only`, `feature_limited`, `challenge`, `unknown`)
   and the note. Without a match the answer is read like a geo endpoint (451, a 403 with geo wording, JSON flags).
@@ -203,11 +205,31 @@ probed. Probes on 2026-10-12:
 | Aave Pro | `POST pro.aave.com/api/geo` with 11 Ethereum assets | an asset with `isGeoblocked: true` (feature-limited) |
 | dYdX | geo endpoint `indexer.dydx.trade/v4/height` | header `geo-origin-status: restricted` on every indexer answer |
 | Extended | geo endpoint `api.starknet.extended.exchange/geo` | HTTP 451 |
+| KyberSwap | `GET aggregator-api.kyberswap.com/ethereum/api/v1/routes` | Cloudflare 403 'Access from your country is currently restricted in accordance with our Terms of Use' (RU, BY, CU, VN on 2026-10-12) |
+| Velora | `GET api.velora.xyz/prices` | an empty HTTP 403 (RU, BY, CU, SY on 2026-10-12): no quote |
+| Jumper | `GET api.jumper.xyz/v1/geo-gates` with `Origin: https://jumper.xyz` | a gate with `Outcome: block` for the visitor's country: the Earn pages under its `PathPrefix` are replaced by 'Access unavailable in your region' (feature-limited); Cloudflare refuses the whole site from CU and SY |
+| Lido | `GET stake.lido.fi/api/geo` | `availability: limited` (staking disabled, withdrawals stay: US), or HTTP 403 'Access to our services from your current location is unavailable' (IR) |
+| Uniswap | `GET interface.gateway.uniswap.org/.../ExploreStats` with `Origin: https://app.uniswap.org` | HTTP 409 `ACCESS_DENIED`: the interface gateway refuses the country (CU, IR on 2026-10-12) |
+| Safe | `GET safe-client.safe.global/v1/chains` with `Origin: https://app.safe.global` | CloudFront refuses the client gateway (HTTP 403 'The request could not be satisfied'): the app cannot load any Safe (BY, CU, RU on 2026-10-12) |
 
 Not testable over HTTP: Variational answers every request without a browser with a Cloudflare challenge, even its
 `/api/banner`; it needs the browser probe (P4). Drift's `geolocation.drift-labs.workers.dev` only returns the country
 (the list is in the app's code) and was removed from `geo_endpoints`; the build drops observations of endpoints that
-are no longer probed.
+are no longer probed. Checked and left out on 2026-10-12: Spark's `api-v2.spark.finance/api/v1/ip/status?ip=` and
+Notional's `/geoip` return the country (and, for Spark, a VPN flag) while the restricted list sits in the app's code;
+1inch's `/v1.0/location` likewise (the app's `isTradeRestrictedUser` compares the country with a list in its code);
+Sky's `api.sky.money` cannot be reached through the Decodo tunnel; LI.FI `li.quest/v1/quote`, Across
+`app.across.to/api/suggested-fees`, Jupiter `lite-api.jup.ag`, Relay `api.relay.link` and CoW `api.cow.fi/mainnet/api/v1/quote`
+answered every country alike. For the same reason SushiSwap's `/api/geolocation`, Beefy's `/geo/country` and Notional's
+`/geoip` were taken out of `geo_endpoints` (they return the country, the list is in the app): PancakeSwap, CoW (per token
+list), Beefy (per vault), Lombard (`/app/country.json` + ipinfo.io) and Symbiotic (`/cdn-cgi/trace`) keep their lists in
+the code too. Orca and Jito answer sanctioned countries with Cloudflare's block page (recorded as `unknown`: a firewall
+rule without geo wording); Eigenlayer's 'ACCESS RESTRICTED ... not available to persons in your jurisdiction' page is
+read as a block by the landing-page probe, as is Superstate's 403 'Access to this site is not permitted from your
+location'. Ondo, Usual, ENS, OpenSea and Frax serve their landing pages everywhere (Frax answers 13 sanctioned and
+high-risk countries with Cloudflare's block page); Centrifuge answers every request without a browser with that page;
+Snapshot cannot be reached through the Decodo tunnel; Tornado Cash is served from IPFS. The comparison of every
+interface's Terms with what the probe saw is `monitor/out/tos_vs_probe.md` (`pnpm monitor:tos`).
 
 A datacenter run to check VPN detection uses the same script with another proxy:
 

@@ -1,0 +1,1965 @@
+check: gtrade/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://gains.trade
+checked_at: 2026-10-28T23:07:44Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 61716,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "RO"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"RO\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "US"
+   },
+   "body": "{\"features\":{\"stocks\":true,\"indices\":true,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"US\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "CA"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"CA\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MX": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "MX"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"MX\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "AR"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"AR\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "CO"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"CO\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 61716,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "GB"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"GB\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 61716,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "DE"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"DE\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 61716,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "FR"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"FR\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 61716,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "NL"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"NL\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 61716,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "ES"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"ES\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 61716,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "IT"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"IT\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 61716,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "PL"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"PL\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 61716,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "CH"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"CH\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 61716,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "SE"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"SE\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "UA"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"UA\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "TR"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"TR\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "AE"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"AE\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "SA"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"SA\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "IL"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"IL\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "PK"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"PK\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "BD"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"BD\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "VN"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"VN\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "TH"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"TH\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 403,
+   "final_url": "https://gains.trade",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4914,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "PH"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"PH\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "MY"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"MY\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "SG"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"SG\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "HK"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"HK\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CN": {
+  "app": {
+   "status": null,
+   "final_url": "https://gains.trade",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "CN"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"CN\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "KR"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"KR\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "TW"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"TW\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "AU"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"AU\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "NG"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"NG\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "ZA"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"ZA\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "KE"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"KE\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": null,
+   "final_url": "https://gains.trade",
+   "state": "error",
+   "why": "URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "KZ"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"KZ\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "GE"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"GE\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "US"
+   },
+   "body": "{\"features\":{\"stocks\":true,\"indices\":true,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"US\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "CA"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"CA\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": null,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "BY"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"BY\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "CU"
+   },
+   "body": "{\"features\":{\"stocks\":true,\"indices\":true,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"CU\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "SY"
+   },
+   "body": "{\"features\":{\"stocks\":true,\"indices\":true,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"SY\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "VE"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"VE\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": null,
+   "final_url": "https://gains.trade",
+   "state": "error",
+   "why": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": null,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "AF"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"AF\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "IQ"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"IQ\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": null,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "LY"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"LY\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": null,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": null,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "error",
+   "flags": {},
+   "body": "",
+   "redirects": [],
+   "server": null
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "NI"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"NI\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "CD"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"CD\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "CF"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"CF\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "SO"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"SO\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 200,
+   "final_url": "https://gains.trade",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Gains | Home",
+   "scripts": [
+    "./_next/static/5a54843/_buildManifest.js",
+    "./_next/static/5a54843/_ssgManifest.js",
+    "./_next/static/chunks/5284-*.js",
+    "./_next/static/chunks/9088-*.js",
+    "./_next/static/chunks/framework-*.js",
+    "./_next/static/chunks/main-*.js",
+    "./_next/static/chunks/pages/_app-*.js",
+    "./_next/static/chunks/pages/index-*.js",
+    "./_next/static/chunks/polyfills-*.js",
+    "./_next/static/chunks/webpack-*.js",
+    "runtime-*.js"
+   ],
+   "bytes": 62083,
+   "redirects": [],
+   "server": "cloudflare"
+  },
+  "https://wrkr.randomdegenerator.xyz/main/api/geo": {
+   "status": 200,
+   "final_url": "https://wrkr.randomdegenerator.xyz/main/api/geo",
+   "state": "ok",
+   "flags": {
+    "country": "ML"
+   },
+   "body": "{\"features\":{\"stocks\":false,\"indices\":false,\"forex\":false,\"crypto\":false,\"commodities\":false},\"country\":\"ML\"}",
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ }
+}

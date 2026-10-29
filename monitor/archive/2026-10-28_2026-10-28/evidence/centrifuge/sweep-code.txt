@@ -1,0 +1,19 @@
+check: centrifuge/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/centrifuge/apps/tree/0081f8e90c78a687c41ad5140bd6e8ce59bcd747
+checked_at: 2026-10-28T22:35:25Z
+fetched: https://codeload.github.com/centrifuge/apps/tar.gz/0081f8e90c78a687c41ad5140bd6e8ce59bcd747
+sha256: 4a9852ded3e6e211d1479d043c65e8fc548c5cab5ccf23db93fb36515f360f3a
+--------------------------------------------------------------------------------
+repository: https://github.com/centrifuge/apps/tree/0081f8e90c78a687c41ad5140bd6e8ce59bcd747
+files scanned: 653
+
+signals:
+  [weak] geo: geo-block words — 11 file(s)
+      https://github.com/centrifuge/apps/blob/0081f8e90c78a687c41ad5140bd6e8ce59bcd747/centrifuge-app/src/components/Dashboard/Investors/OnboardingSettingsDrawer.tsx#L26  'rxjs' import { KYB_COUNTRY_CODES, KYC_COUNTRY_CODES, RESTRICTED_COUNTRY_CODES, } from '../../../pages/Onboarding/geographyCodes' import { useSelectedP
+      https://github.com/centrifuge/apps/blob/0081f8e90c78a687c41ad5140bd6e8ce59bcd747/centrifuge-app/src/components/InvestRedeem/InvestRedeem.tsx#L134  xt variant="body3"> {metadata?.onboarding?.kybRestrictedCountries?.includes('us') || metadata?.onboarding?.kybRestrictedCountrie
+      https://github.com/centrifuge/apps/blob/0081f8e90c78a687c41ad5140bd6e8ce59bcd747/centrifuge-app/src/pages/Onboarding/KnowYourBusiness/BusinessInformation.tsx#L16  Codes' import { CA_PROVINCE_CODES, RESIDENCY_COUNTRY_CODES, RESTRICTED_COUNTRY_CODES, US_STATE_CODES } from '../geographyCodes' type Props = { formik: For
+  [weak] kyc: KYC words — 12 file(s)
+      https://github.com/centrifuge/apps/blob/0081f8e90c78a687c41ad5140bd6e8ce59bcd747/centrifuge-app/src/components/Dialogs/DataSharingAgreementDialog.tsx#L17  iant="heading2">Consent to data transfer</Text> <Text>KYC and KYB verifications for this pool are performed by Shufti Pro, a third-party
+      https://github.com/centrifuge/apps/blob/0081f8e90c78a687c41ad5140bd6e8ce59bcd747/centrifuge-app/src/components/Tooltips.tsx#L375  bel: '', body: 'You can select the provider you want to KYC/onboard your investors.', }, noneOnboarding: { label: '', body: 'Yo
+      https://github.com/centrifuge/apps/blob/0081f8e90c78a687c41ad5140bd6e8ce59bcd747/centrifuge-app/src/pages/Onboarding/Accreditation.tsx#L12  : boolean().oneOf([true], 'You must confirm that you are an accredited investor'), }) export const ConfirmAccreditationDialog = ({ open, onClose, confir

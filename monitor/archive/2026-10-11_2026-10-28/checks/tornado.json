@@ -1,0 +1,30 @@
+{
+  "id": "tornado",
+  "name": "Tornado Cash",
+  "targets": {
+    "app": "https://tornadocash.eth.limo",
+    "repo": {
+      "repo": "tornadocash/tornado-classic-ui",
+      "ref": "a83fae0772c8da084c0e76b3a756b456f5b9f5bb"
+    },
+    "terms": null,
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "screening-oracle-report",
+      "type": "page",
+      "claim": "screening",
+      "status": "reported",
+      "about": "Press report (Apr 2022): the Tornado Cash UI blocks OFAC-sanctioned addresses with the Chainalysis oracle (current IPFS UI not verified)",
+      "source": {
+        "url": "https://www.theblock.co/post/142081/ethereum-mixer-tornado-cash-now-blocks-sanctioned-addresses",
+        "kind": "press",
+        "archive": "https://web.archive.org/web/20250124101523/https://www.theblock.co/post/142081/ethereum-mixer-tornado-cash-now-blocks-sanctioned-addresses"
+      },
+      "expect": [
+        "uses the Chainalysis oracle"
+      ]
+    }
+  ]
+}

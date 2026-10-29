@@ -1,0 +1,81 @@
+check: morpho/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://app.morpho.org
+checked_at: 2026-10-11T21:09:50Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://app.morpho.org/vaults (HTTP 200)
+scripts (66):
+  https://app.morpho.org/_next/static/immutable/chunks/3q8p1_w0fembe.js  sha256=e4ab04f76545d4d89610553eadeeca65682d81ae6f58c12cb2eeed7bfb54efd5
+  https://app.morpho.org/_next/static/immutable/chunks/2f06ky7cikc9o.js  sha256=fd21f1a0acef14752827cd1e9434e5f47235abd7485b20d0b3ccf0b03b4f0d80
+  https://app.morpho.org/_next/static/immutable/chunks/3s3av5ipwvbud.js  sha256=9e199dd728f39095a59fc3cfdfdcb5ce3145279bcb6225c4aea250d39dc19bea
+  https://app.morpho.org/_next/static/immutable/chunks/1ntlmir0_9-wb.js  sha256=acac086fffcef6c69d229f0f2519221475a17f10322ab3824d3de115c22592a4
+  https://app.morpho.org/_next/static/immutable/chunks/3by42y-1_8wrw.js  sha256=e3e861b580bc56f35f13caa0d3c1005514357f50ffc9bed63d41be36aece52f5
+  https://app.morpho.org/_next/static/immutable/chunks/0ciko_bh5u-5d.js  sha256=0669b4c93c9853e77bff1c070c954921d6198fe17f244b8d8cb541eb6148f79d
+  https://app.morpho.org/_next/static/immutable/chunks/3ksyvol7hq-hc.js  sha256=66ae0e6a02bf2d9e7fae718d53c9bb2e01e2430a3e55b4737ae3e8741d3e6f56
+  https://app.morpho.org/_next/static/immutable/chunks/0ops_bin4jyx4.js  sha256=15d8c8d1528554595fe589eee5202700276efe348fe66d29e63af83f9792672e
+  https://app.morpho.org/_next/static/immutable/chunks/0wwki87ne1a-3.js  sha256=908a94e530c4538efee4b8a6e58b03a764b58623d417faa265b5d7b1faa7f79e
+  https://app.morpho.org/_next/static/immutable/chunks/11bbz0wru4l2s.js  sha256=cab22cd915a5137e02b597223dba5a96a301a01e23ee551f26d6a8626395ed34
+  https://app.morpho.org/_next/static/immutable/chunks/031-k78tsos8d.js  sha256=a274d4c8cd36e5e2030bbb3710d3d7eff3395042ec923fba3710633a91e8119a
+  https://app.morpho.org/_next/static/immutable/chunks/1_le0vuxnwmr9.js  sha256=5a911c82b805de835db20f27bb4b3048e8e838ba5cbb67e88b8d217383ff86f0
+  https://app.morpho.org/_next/static/immutable/chunks/turbopack-2xptctfb8urrh.js  sha256=23b1fa4de3c2db97d5ba18d6568a70eec0de8cba7b2728e51b7ed507c00b1182
+  https://app.morpho.org/_next/static/immutable/chunks/0ogb4got9ljhy.js  sha256=34cf4fa1e1973ae1c1e83fe4cd0e7ccb1706ea53929fe58580253f8d016b2029
+  https://app.morpho.org/_next/static/immutable/chunks/12_gt-8cpk35a.js  sha256=c19c42b27463fd5a5f83a4945cfd47a1c0ee01672b94f4a603776d04be2aa107
+  https://app.morpho.org/_next/static/immutable/chunks/0cz983q8s8whl.js  sha256=e4abdb8f8fbcaca2a55693f4b72c726e830cb7393a444ac046ab37887f0ea7cb
+  https://app.morpho.org/_next/static/immutable/chunks/3msm9ig2ocf58.js  sha256=5269fd6b393d40267e4bf56aa9e4c254f3449a0de9db9263c0227d49228f43ce
+  https://app.morpho.org/_next/static/immutable/chunks/16l-c5drcdyd7.js  sha256=f28c5b02e64231dacf90b2d41351e2dc8b28351beca5ee5a8268c64eb45c317c
+  https://app.morpho.org/_next/static/immutable/chunks/2hytt39_j-xrv.js  sha256=f44f1a382dde184234ee5406b6225ce2910c32085722f48e04a01f1b37e103e6
+  https://app.morpho.org/_next/static/immutable/chunks/0hv3yxxgvnhf-.js  sha256=6009d2f97af6fbe2a5be83d4470b6f8022e574e185c383083aa05df22e9be7b6
+  https://app.morpho.org/_next/static/immutable/chunks/0i0ami0w6nz30.js  sha256=c1a98c2121600517dd5b43ef2f954fbde9bd25a4b7a6a41be9576a984fe79dea
+  https://app.morpho.org/_next/static/immutable/chunks/4350fu3ae20ji.js  sha256=6851193ec321a6e1b7c0f094c70fac51cc050040f95647e1605e48c32423f56a
+  https://app.morpho.org/_next/static/immutable/chunks/29ay4u1i1v0jk.js  sha256=565f20521e29737070315d59958c5b163bd90cb2e180430da34101a22920a0df
+  https://app.morpho.org/_next/static/immutable/chunks/1qjjo-uo-if3r.js  sha256=cc69a3c41c868c6ae65d8a5c032cd5818b47649ffd85c2d5eff400a8a5cb8b54
+  https://app.morpho.org/_next/static/immutable/chunks/0hdj9z7ewx5wm.js  sha256=e395ad2bdbf543ff5a48de01928fed58ca80a35668337a89081d4f4333ed3a02
+  https://app.morpho.org/_next/static/immutable/chunks/1vtf2q3ny1a4c.js  sha256=5df69f4279542e15c88753ecf3be88e8fb1ddef7042807cfe4b7b13d2544b0ee
+  https://app.morpho.org/_next/static/immutable/chunks/3yli2pgz3mt63.js  sha256=4380fa1e4e919e344d61d8b14e6e23e2460a69f4f1f9ab79e6cd8d4d0fa8f242
+  https://app.morpho.org/_next/static/immutable/chunks/28lpijmtcmrnp.js  sha256=d0e386daac805499528c979fc8b0cf9e8c691988b9dd66fa6c6d4169c4f0cbfb
+  https://app.morpho.org/_next/static/immutable/chunks/2t96mb5z9yuzs.js  sha256=00b67147904194922a645c419a3b8773ef2430ee6b0b8bb168aee95066a3459d
+  https://app.morpho.org/_next/static/immutable/chunks/1w00221lv995b.js  sha256=09b6e7f68d482f91a14bd93a3b00d76cc191771a801eb24527396c0e6c23218d
+  https://app.morpho.org/_next/static/immutable/chunks/1wqo65jrzpdl_.js  sha256=fd486931a23b6f5e4ebf59e28e08a082720084dbc4a422e3247dcdfc2a04017c
+  https://app.morpho.org/_next/static/immutable/chunks/1p269n84rq613.js  sha256=5b57298439da078bcafcb3d631bcee3bfa398cad4630e61c5272e10f3592e6da
+  https://app.morpho.org/_next/static/immutable/chunks/36z2rs_qpza0a.js  sha256=5a53393e4e9cff734e69f1f3c5b5eed86f927d4709e220cb38c74a498960016b
+  https://app.morpho.org/_next/static/immutable/chunks/0zekm25nyxirc.js  sha256=7e6f773dd0836692bf115393f7478dccd0de59080ee96a43c30c9d4c181acdc7
+  https://app.morpho.org/_next/static/immutable/chunks/15k73d4mgw7wj.js  sha256=4e1e21f5aade57a76a32d3071535db224e39b03ede94dc5d5d21a2bb6bb18bb9
+  https://app.morpho.org/_next/static/immutable/chunks/2lcx12t2w6jjb.js  sha256=3cb9edfb883f05466dfad1cf597b4f414185f7bdc6788d626e128bf57db03766
+  https://app.morpho.org/_next/static/immutable/chunks/1qc9ed1yz-hw6.js  sha256=6cfc1a7bd36e56b73effb521b492b32d2b38f25b98ea6ba7bf4f111acff8806c
+  https://app.morpho.org/_next/static/immutable/chunks/3a9wrxkwwrud8.js  sha256=901ceb39c942dc4225c0a1f83a635dc40f1be2ee0d41dbb658b4ea7da80944b9
+  https://app.morpho.org/_next/static/immutable/chunks/0w4kqivnno163.js  sha256=8f87ee717bce1aaba5905e0736c363960141d9e102d089deef28d55fef2d5263
+  https://app.morpho.org/_next/static/immutable/chunks/1wcvpbpitebu3.js  sha256=09a9268cdb7aa0db8add3879b01b3763fc53f42afa56dbc67b3889c5853a4dc6
+  https://app.morpho.org/_next/static/immutable/chunks/0mxqjm3i-npus.js  sha256=c5bb41ba2abf31c0bb6823b7de1e6ccf2dce7e1a97e484e4b049a5f93d2f176c
+  https://app.morpho.org/_next/static/immutable/chunks/18co6zy30lg_s.js  sha256=1fca71d3f932485ac48f4cb529e1c33f0b80bb4331d3d78c9797a9094b78cd60
+  https://app.morpho.org/_next/static/immutable/chunks/2gp4g855fktwl.js  sha256=6468c21e465cce0edd220e5874ce3a1f2cd14e6fed2fe17be0c3c3203a07b573
+  https://app.morpho.org/_next/static/immutable/chunks/3f9j569nxjg9e.js  sha256=09e4eab7f327e60683a7e7ddbe1dbde167d0c8017dc9508ee4e8b042d4c67ba1
+  https://app.morpho.org/_next/static/immutable/chunks/3yff9emy-y-xy.js  sha256=c6ff98c26a0b50cca2e489528404119a52e7882c06ac14e7ccec3f0eb57769ca
+  https://app.morpho.org/_next/static/immutable/chunks/3swxbyoob_dbz.js  sha256=ad107d1ba7bb847a9d0b27eb740029f50cd24bed24b6a8a073284fdd5bc19483
+  https://app.morpho.org/_next/static/immutable/chunks/15x1jptb174uo.js  sha256=fafbe1595aa8f04c17239f602c2104b10d12bab00e176883cc3f9aa1bdc40813
+  https://app.morpho.org/_next/static/immutable/chunks/1smxo1ptguoh8.js  sha256=37e141690b0e983b91d06a179ccce96e6a832453d6f1fd86cfe98f8f67cae839
+  https://app.morpho.org/_next/static/immutable/chunks/3se35vajb-386.js  sha256=3089bf4765f3abf471236e8891ef065ed923c47282a0bf349138b0683e047dec
+  https://app.morpho.org/_next/static/immutable/chunks/0ewk78fptf1qg.js  sha256=d20fb89921a10769e59636f8419de90b3b6c90ddb7d95607407f454701707fae
+  https://app.morpho.org/_next/static/immutable/chunks/41_p1pgdcrkz-.js  sha256=7e88f290a99f14908a12d4b11d7f40fb46e4ea7cad27bcc386a023d57d76a362
+  https://app.morpho.org/_next/static/immutable/chunks/0gvwtu4ihy-ha.js  sha256=94931be6865a8b8fc9b0d900a7d9c66876a5d65c26e7b0ebcafdde35247238ff
+  https://app.morpho.org/_next/static/immutable/chunks/2ykrtx1jgvk1b.js  sha256=959ba08ef1fc9b41df7bd249b554b81fa4c90a70edd6e8518ed0274af63a05cc
+  https://app.morpho.org/_next/static/immutable/chunks/2io8_2hzhnzve.js  sha256=ffa2e1de3df3c5b12197f8819e10d2f65253c138677e85c6622418c761a2a1a0
+  https://app.morpho.org/_next/static/immutable/chunks/412iue_g9fl4y.js  sha256=b6c235decd4afd23917cb6357ead19d0edd6891d7421f6f03d21f6240e2c7587
+  https://app.morpho.org/_next/static/immutable/chunks/2xqrsi1rxkduj.js  sha256=b896c217d6c2ad3a6ee9e1fb1f0e7501c090e1e4f09ac30b56be4ada50948b4b
+  https://app.morpho.org/_next/static/immutable/chunks/1g125-23-caxl.js  sha256=57a6e2f3d1cdd8102037b6d48f2bc8bd3d33723a7a841d044f8a43ea799fb498
+  https://app.morpho.org/_next/static/immutable/chunks/2su5sg_cfo8q8.js  sha256=e4b197aa5a35f9c790eac0be661bf9947ab0e5f572638e1a831c121cd2365d3c
+  https://app.morpho.org/_next/static/immutable/chunks/2_8mp0t7fb1na.js  sha256=29ee61d3cfe3e75c384d62f7bd22785a22b4ec5d9d5ab6b2f3d4da74d25970d5
+  https://app.morpho.org/_next/static/immutable/chunks/1xe3g5k41bayq.js  sha256=bd8579caaf76dd6e9374ec01dd4540e506540bec14021819103c9edb938d821b
+  https://app.morpho.org/_next/static/immutable/chunks/2s34-61a45mdy.js  sha256=c5d070f9cac48232e8d5742dbf565c930ae1888e06d31ad7971e64424a1a2dd4
+  https://app.morpho.org/_next/static/immutable/chunks/2iwt-1jk-l711.js  sha256=7b468a4f7045de9a54204a0222a64d27e642f4144795b92f50c23034235acd17
+  https://app.morpho.org/_next/static/immutable/chunks/13n79mfdwch2_.js  sha256=25f563fe5296d5515b02b1d013014b599556c3202d0afb09fd9d734cfdeef7a6
+  https://app.morpho.org/_next/static/immutable/chunks/3-j9crleph8kj.js  sha256=d60f9f1a2cf1ef471e5b2ea0adf3f10cec59d14f2143ee91ef2fec90b1da137b
+  https://app.morpho.org/_next/static/immutable/chunks/0c0hxoamwjsbw.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
+  https://app.morpho.org/_next/static/immutable/chunks/2h506xl8-fqqn.js  sha256=cd240af931c83b2a609aab65427a6f5e9c298de6d48b3c819a68c5019d8603e8
+
+signals:
+  [strong] screening: screening call — 4 file(s)
+      /_next/static/immutable/chunks/0i0ami0w6nz30.js: f=!1,enableAppKitAnalytics:y,metadata:b,featuredWalletIds:A,screenAddressEndpoint:P,queryClient:N,themeMode:U="light",connectionMode:R="discovery"}){if("
+      /_next/static/immutable/chunks/2t96mb5z9yuzs.js: me="ScreeningError"}}async function a(e,t){let{endpoint:r=s.SCREEN_ADDRESS_ROUTE,...n}=t??{},{data:a,error:c}=await i(fetch(r,{...n,method:"POST",headers:
+      /_next/static/immutable/chunks/1w00221lv995b.js: n td(e,t){ek(e,t&&eQ(t))}let tf=(0,T.withDeploymentParam)(l.SCREEN_ADDRESS_ROUTE),tp=e=>{let t=e.connector?.id;return"walletConnect"===t&&e.walletConnectP

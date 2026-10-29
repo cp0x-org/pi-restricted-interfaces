@@ -1,0 +1,31 @@
+{
+  "id": "pancakeswap",
+  "name": "PancakeSwap",
+  "targets": {
+    "app": "https://pancakeswap.finance",
+    "repo": null,
+    "terms": "https://pancakeswap.finance/terms-of-service",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-report",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "reported",
+      "about": "Press report (Feb 2022): PancakeSwap blocks IP addresses from ten jurisdictions from March 9, 2022",
+      "source": {
+        "url": "https://forklog.com/en/pancakeswap-to-block-users-from-ten-jurisdictions/amp",
+        "kind": "press"
+      },
+      "expect": [
+        "block access to its services from IP addresses in ten jurisdictions"
+      ],
+      "section": {
+        "start": "The following jurisdictions were included:",
+        "end": "All of them are"
+      },
+      "countries": "names"
+    }
+  ]
+}

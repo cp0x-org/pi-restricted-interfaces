@@ -1,0 +1,14 @@
+check: ens-legacy/prod-no-geo
+about: Production JS of ENS (legacy): no geo-IP lookup or country block
+source: https://legacy.ens.domains
+checked_at: 2026-10-11T21:15:32Z
+http_status: 200
+--------------------------------------------------------------------------------
+scripts:
+  https://www.googleoptimize.com/optimize.js?id=OPT-KTCR9V9  sha256=6062bc5e2c4ef7e418cd6ec6f374c52edf3316cd05afc8b79f7360e3149369a9
+  https://plausible.io/js/script.outbound-links.js  sha256=ba438d82e1e33e955987443d0a8b91a4e0a06821fba480929f921f32a0b3e5fd
+  https://ens-app.pages.dev/static/js/main.f3ea867b-8b9d9.js  sha256=7e3d89dcf5b5291533fc88b5dbbb8917ee6c988025719e3366143c3dd6c5ac28
+  https://browser.sentry-cdn.com/6.13.2/bundle.min.js  sha256=8974278ea485021f8ff76efd8a518b441478c3b7f4b0c0238068bd680ff67c2a
+
+matches:
+  none

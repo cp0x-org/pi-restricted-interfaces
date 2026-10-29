@@ -1,0 +1,38 @@
+check: pancakeswap/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://pancakeswap.finance
+checked_at: 2026-10-28T22:46:43Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://pancakeswap.finance (HTTP 200)
+scripts (23):
+  https://pancakeswap.finance/_next/static/immutable/chunks/0c0hxoamwjsbw.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
+  https://pancakeswap.finance/_next/static/immutable/chunks/1qr367dqr6-xc.js  sha256=aee8d9389e17f1de9954741373587566bb0a419b21de28539779d8bbf881a357
+  https://pancakeswap.finance/_next/static/immutable/chunks/0thffmuna9cfh.js  sha256=dba50b0c06caa720f28bcdaa934e71997b2dbf07a1f148af9f9b5ad32f2bf89b
+  https://pancakeswap.finance/_next/static/immutable/chunks/3l08oq2n6n87e.js  sha256=414c7f8c84c5a45e3c1f3637cbebf34fbdbc8eece4e5fdabab8ee228947354ff
+  https://pancakeswap.finance/_next/static/immutable/chunks/1r7wo9_8ektgr.js  sha256=43fe6ed40aa3094146bc7e87384d480af78e71a0e5323aee89d0d2ce16b32202
+  https://pancakeswap.finance/_next/static/immutable/chunks/0_0z73hkq0d2t.js  sha256=bebb5163fb7dbe356c823bf9ef09825fb8ba2a64c60eca750df33a49dfcff6e9
+  https://pancakeswap.finance/_next/static/immutable/chunks/23j-qm2gsijsk.js  sha256=e1e155b37a0ec9861c9b54229776174bdeea6d2bd6c2a14da5d08a16269ee074
+  https://pancakeswap.finance/_next/static/immutable/chunks/1_jjiitzt7shy.js  sha256=ff1006e12e34f6bad66fddbd649c6f31f4a7b8af2986183102d871fdd2450b7a
+  https://pancakeswap.finance/_next/static/immutable/chunks/1tb22u8d-dh_w.js  sha256=dfa14e9cf9cc5ca7e4ebcc7033bb49aca6f13176b57236db118903abcb031f98
+  https://pancakeswap.finance/_next/static/immutable/chunks/3f6kuuexrjju-.js  sha256=59db49924cd2f43ca7f766c862372b8ee297a9928b8a1c44fcd7799b241da670
+  https://pancakeswap.finance/_next/static/immutable/chunks/0v_y01csfc44f.js  sha256=3000eb52147e1ba44c8ed2f08e3509c1f898a1629f55ce317d349352a5d75990
+  https://pancakeswap.finance/_next/static/immutable/chunks/393z46o0htc0q.js  sha256=2086d8e97395748ba22e7875d07f830b3789fc63b3ae79e3c6292d1f3f0b8504
+  https://pancakeswap.finance/_next/static/immutable/chunks/0o6f3ujmzqy_9.js  sha256=7f6721d51daaaa7b6393204fb6e4d0c4cb20b5943f0c7c7a2d04bff79ab45af2
+  https://pancakeswap.finance/_next/static/immutable/chunks/1pn4mnc1c0dvj.js  sha256=29192f04220f7cafb1f2dcb277521ac64c6c682dbc8f8fd8c9a18cc78be5fcde
+  https://pancakeswap.finance/_next/static/immutable/chunks/08kaidh_pf4n9.js  sha256=abc92494d285d3a41b0c7e31820f4e7e281639cab8ba571d99ec86c93e8ca777
+  https://pancakeswap.finance/_next/static/immutable/chunks/2m5iyk8sa7w6j.js  sha256=ba5561a50c5c2dad35428ed9a1c1939397019bae16b06c78a82678591e4653c2
+  https://pancakeswap.finance/_next/static/immutable/chunks/359ut1yrzrdd9.js  sha256=aa96f5dff2a925ac091e64893cecf5ba11dea5850588d8f7ab0f17c3e39d26b1
+  https://pancakeswap.finance/_next/static/immutable/chunks/3fyj91zi7dcux.js  sha256=b79743f74996c619e0f0355a7f4796a882775b1f94abf70ca43a51e5ee1fe7bd
+  https://pancakeswap.finance/_next/static/immutable/chunks/turbopack-34bmh2lbcxab6.js  sha256=0a3d0be649a5de7c4502d8699ff6496481fbe4ec265c8953fa507a0cbe834552
+  https://pancakeswap.finance/_next/static/immutable/chunks/2gv6pctzfy0_d.js  sha256=f288659c2f12e95b2a577b40f33571ec8fd5817880a865898404e03596b0befe
+  https://pancakeswap.finance/_next/static/v8hZfU3caALB0CB0B-3Lw/_buildManifest.js  sha256=c3855b0821866b3eb75768521a731b4ce5758bb7927441a7c207c21add3a9902
+  https://pancakeswap.finance/_next/static/v8hZfU3caALB0CB0B-3Lw/_ssgManifest.js  sha256=4643038448fa368968b1d63848a5116a16460be91fc390734636bdcc093b3091
+  https://pancakeswap.finance/_next/static/v8hZfU3caALB0CB0B-3Lw/_clientMiddlewareManifest.js  sha256=5c69218825274195f41abf85d4ad06c8c8d9c33406b3196c7a5ad03457afccc2
+
+signals:
+  [weak] geo: geo-block words — 3 file(s)
+      /_next/static/immutable/chunks/0thffmuna9cfh.js: :[{key:"checkbox",content:u("I confirm that I am not from a prohibited jurisdiction and I am eligible to trade derivatives on this platform.")}],footer:(0,r.jsxs)(
+      /_next/static/immutable/chunks/1r7wo9_8ektgr.js: GEO_BLOCK_LIST||"https://tokens.pancakeswap.finance/rwa/rwa-geo-block-list.json";e.s(["q",0,"https://red.alert.pancakeswap.com/red-api","x",0,"https:
+      /_next/static/immutable/chunks/1_jjiitzt7shy.js: c.l),{listsAtom:h,updateListStateAtom:m,tokenBySymbolAtom:y,geoBlockListAtom:b,fetchGeoBlockListAtom:g,useListStateReady:v,fetchListAtom:k,fetchList

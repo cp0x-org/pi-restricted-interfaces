@@ -1,7 +1,7 @@
 check: notional-v2/no-geo
 about: The V2 app's JavaScript has no geo-IP lookup or country block
 source: https://v2.notional.finance
-checked_at: 2026-10-11T21:15:40Z
+checked_at: 2026-10-28T22:52:34Z
 http_status: 200
 --------------------------------------------------------------------------------
 scripts:

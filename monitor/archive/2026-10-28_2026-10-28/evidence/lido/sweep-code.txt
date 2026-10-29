@@ -1,0 +1,22 @@
+check: lido/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/lidofinance/ethereum-staking-widget/tree/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a
+checked_at: 2026-10-28T22:36:15Z
+fetched: https://codeload.github.com/lidofinance/ethereum-staking-widget/tar.gz/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a
+sha256: 5a3e75d05a0a844cc2fd2d7ed2997ef0c6e2f7458a2f74eee590f40abd824c53
+--------------------------------------------------------------------------------
+repository: https://github.com/lidofinance/ethereum-staking-widget/tree/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a
+files scanned: 1544
+
+signals:
+  [strong] geo: country header — 1 file(s)
+      https://github.com/lidofinance/ethereum-staking-widget/blob/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a/utilsApi/geo-handler.ts#L12  ved and `T1` for Tor exit nodes. const CF_COUNTRY_HEADER = 'cf-ipcountry'; const UNRESOLVED_COUNTRY_CODES = new Set(['XX', 'T1']); const getCountryCode
+  [strong] geo: geo endpoint — 5 file(s)
+      https://github.com/lidofinance/ethereum-staking-widget/blob/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a/.env.example#L50  ABLE_QA_HELPERS=false # ISO 3166-1 alpha-2 country used by /api/geo when the Cloudflare country header # is absent, which is the case anywhere that
+      https://github.com/lidofinance/ethereum-staking-widget/blob/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a/config/groups/cache.ts#L42  age=30, stale-if-error=1200, stale-while-revalidate=30'; // /api/geo answers differ per visitor IP — a shared cache entry would hand one // visitor'
+      https://github.com/lidofinance/ethereum-staking-widget/blob/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a/consts/geo.ts#L2  /** * Contract shared by `/api/geo` and its client hook. * * The wording is deliberately neutral: the API report
+  [strong] geo: block text — 1 file(s)
+      https://github.com/lidofinance/ethereum-staking-widget/blob/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a/features/earn/shared/v2/geo-notice/consts.tsx#L24  > ); export const GEO_LIMITED_CARD_TEXT = 'This vault is not available in your region. Withdrawals remain ' + 'available for funds deposited earlier.'; export con
+  [weak] geo: geo-block words — 2 file(s)
+      https://github.com/lidofinance/ethereum-staking-widget/blob/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a/features/earn/vault-eth/vault-page.tsx#L100  ersons, U.S. residents, or individuals located in other restricted jurisdictions.{' '} <Link href={`${config.rootOrigin}/earn/risk-disclosures`}> See
+      https://github.com/lidofinance/ethereum-staking-widget/blob/7fa7f1a7fec66f4db742b0f2178338c2c2beb54a/features/earn/vault-usd/vault-page.tsx#L98  ersons, U.S. residents, or individuals located in other restricted jurisdictions.{' '} <Link href={`${config.rootOrigin}/earn/risk-disclosures`}> See

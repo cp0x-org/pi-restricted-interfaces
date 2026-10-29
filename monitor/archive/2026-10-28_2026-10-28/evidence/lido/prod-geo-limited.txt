@@ -1,0 +1,30 @@
+check: lido/prod-geo-limited
+about: Production HTML: the remote config shipped to the browser limits these countries
+source: https://stake.lido.fi
+checked_at: 2026-10-28T22:52:31Z
+http_status: 200
+--------------------------------------------------------------------------------
+scripts:
+  https://stake.lido.fi/runtime/window-env.js  sha256=9a8a7458a92728e23e28da6204cd82c25a913e70d04046a3c83f34b624865105
+  https://stake.lido.fi/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js  sha256=0225eb034d024a03bdc90ea6c79f56193662e7c3eee909696298820e517cbb83
+  https://stake.lido.fi/_next/static/chunks/webpack-cec3ee3f4f85b096.js  sha256=939efd9933789faddfa0752dbf033338c5005809c57c3e5c23ef198215a09258
+  https://stake.lido.fi/_next/static/chunks/framework-b338f11e54b60304.js  sha256=a3d1941f0bb308cfb4b350ce3849003345a0ff216c24357de339de7cfcbd33c8
+  https://stake.lido.fi/_next/static/chunks/main-b3afb5f6f5ec3c6b.js  sha256=5faa704b64297c075b20bdc08558b509deaa3fccfcc7c73b69900cce8e56c53d
+  https://stake.lido.fi/_next/static/chunks/pages/_app-afe830ab09362e1d.js  sha256=58c1a8167a0e64adf8b6de1de22dcac7360cab64bed9a079a99ecb220ff81468
+  https://stake.lido.fi/_next/static/chunks/pages/index-08da66345674d626.js  sha256=d875c373c22e70273cbe5dcd94736b7db118b75bd4d145e2da97a3d0c5c8627e
+  https://stake.lido.fi/_next/static/e256fd6d/_buildManifest.js  sha256=6527749536bf382092949ba864c9d267d73dec367f10553f2a3077b1fdabaec7
+  https://stake.lido.fi/_next/static/e256fd6d/_ssgManifest.js  sha256=e0382280c8d7d90e35d7efbc813fda7014d32103dd217ec21440e51959cd2118
+  https://stake.lido.fi/_next/static/chunks/pages/404-6234ca7079c091ed.js  sha256=899c49ff58fdf53ffcbb1d823110d24d63a5df7b270042e2dd70a77bf90f423b
+  https://stake.lido.fi/_next/static/chunks/pages/500-7ba25b481292f592.js  sha256=a9f8453017bd61015b6ff325d412fe5a16ff1aef3f743d157058d4f8ced5c615
+  https://stake.lido.fi/_next/static/chunks/pages/_error-24ba6fb4accf36ad.js  sha256=797a38edd29907205509f78e78ed2e595b3e7f005bb9b038c887a17aa24593d5
+  https://stake.lido.fi/_next/static/chunks/pages/earn-24c5a1d5f1429c55.js  sha256=3eca9b7e1d7437e6aa3ac14f5bb8c3e45d791ccd00a97820c01b5c353fd6a0e5
+  https://stake.lido.fi/_next/static/chunks/pages/rewards-d61ef644888e7d57.js  sha256=dda0216425c15518ef9896c232242695ea8540970966ef2e8f4c292c092f9ced
+  https://stake.lido.fi/_next/static/chunks/pages/settings-96e61b2251286568.js  sha256=21fdb452f49e4932187fad7f3411d5f3361c4488ea142bf95d63f25e9df9e6c2
+  https://stake.lido.fi/_next/static/chunks/7892-965476aedca4c2a8.js  sha256=5a8cc1e00b3f087659b4d946385e15daf379f5069a8228eba00a11a4e9955ad7
+  https://stake.lido.fi/_next/static/chunks/4548-8e46c35556b36c9d.js  sha256=3237eb795a221f736db45e1bff49a00d25735a4f799c455c627d9babf2272d54
+
+matches:
+  https://stake.lido.fi (HTML and inline scripts): …wAfterStake":true},"earnAllocation":{"labelAllowList":[],"hiddenIds":[]},"geo":{"limited":["US"]},"pages":{"/earn":{"shouldDisable":false,"showNew":true,"sections":[]}},"wallets":{"disabled":[]},"api":{"validation":{"ver…
+
+--- section the countries were read from ---
+"geo":{"limited":["US"

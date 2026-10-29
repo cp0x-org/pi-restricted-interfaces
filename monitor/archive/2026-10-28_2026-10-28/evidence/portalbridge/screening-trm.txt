@@ -1,0 +1,9 @@
+check: portalbridge/screening-trm
+about: Portal Bridge UI screens wallets with TRM Labs and blocks sanctioned risk (repository archived; the current site is closed source)
+source: https://github.com/XLabs/portal-bridge-ui/blob/10744b90e48444f8da054aaa9c07518fb9eaf997/apps/connect/src/providers/sanctions.ts#L13
+checked_at: 2026-10-28T22:38:12Z
+fetched: https://raw.githubusercontent.com/XLabs/portal-bridge-ui/10744b90e48444f8da054aaa9c07518fb9eaf997/apps/connect/src/providers/sanctions.ts
+sha256: b40d8d331301770dd892d33a6a2ab299dec5d5b177593a0271f7c6ee637b64d2
+--------------------------------------------------------------------------------
+L13: export const TRM_URL =
+L16: export const RISK_LEVEL_SANCTION: number = 10;

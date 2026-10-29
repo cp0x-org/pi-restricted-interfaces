@@ -1,0 +1,1821 @@
+{
+  "id": "jumper",
+  "name": "Jumper",
+  "aka": "LI.FI",
+  "description": "Jumper is a cross-chain swap and bridge aggregator powered by LI.FI. It compares bridges and DEXs to move and swap assets between EVM chains, Solana, Bitcoin and Sui in a single flow.",
+  "description_zh": "Jumper 是由 LI.FI 驱动的跨链兑换和跨链桥聚合器。它比较各个跨链桥和 DEX，在一个流程中完成 EVM 链、Solana、比特币和 Sui 之间的资产转移与兑换。",
+  "category": "Bridge / aggregator",
+  "chains": "EVM, Solana, BTC, Sui",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Base",
+    "Optimism",
+    "Polygon",
+    "BNB Chain",
+    "Avalanche",
+    "Gnosis",
+    "Linea",
+    "Scroll",
+    "zkSync",
+    "30+ more"
+  ],
+  "url": "https://jumper.xyz",
+  "frontend_repo": "https://github.com/jumperexchange/jumper-exchange",
+  "repo_state": "open",
+  "repo_status": "open (may lag prod)",
+  "repo_last_commit": "2026-07-23",
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "IR",
+      "CU",
+      "SY"
+    ],
+    "close_only": [],
+    "method": "Cloudflare refuses the whole site (and api.jumper.xyz) with its block page, without geo wording; the countries are those of the live probe (see the observations; 2026-10-12: CU, IR, SY, the only ones of 62 refused, so a country rule)."
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [
+      "US",
+      "AF",
+      "BY",
+      "CA",
+      "CU",
+      "IR",
+      "KP",
+      "LY",
+      "MM",
+      "RU",
+      "SO",
+      "SS",
+      "SD",
+      "SY",
+      "UA"
+    ],
+    "scope": "RWA-based Jumper Earn opportunities (the pages under /earn/<campaign>): the app asks api.jumper.xyz/v1/geo-gates which gates apply to the visitor's country (Cloudflare geolocation) and replaces the gated pages with 'Access unavailable in your region'. The country list is the gates' own Countries field (2026-10-12); the live probe confirms the gate from 13 of 62 countries, the other three are refused by Cloudflare before the API answers."
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "LI.FI API (li.quest): /v1/quote for an SDN address -> HTTP 422",
+    "layer": "api",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://jumper.xyz/terms-of-business",
+    "updated": "client-side date (unreliable)",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "BY, CI, Crimea, CU, DPR, IR, IQ, Kherson, LR, LY, LPR, MM, KP, RU, SD, SY, VE, Zaporizhzhia",
+    "restricted_codes": [
+      "BY",
+      "CI",
+      "UA-Crimea",
+      "CU",
+      "UA-DPR",
+      "IR",
+      "IQ",
+      "UA-Kherson",
+      "LR",
+      "LY",
+      "UA-LPR",
+      "MM",
+      "KP",
+      "RU",
+      "SD",
+      "SY",
+      "VE",
+      "UA-Zaporizhzhia"
+    ]
+  },
+  "notes": "Frontend code is clean; routes come from the LI.FI API, which screens addresses (LI.FI's ToS also excludes US persons). URL note: jumper.exchange -> 302.",
+  "live": [
+    "LI.FI /v1/quote: SDN fromAddress -> 422, control -> quote OK"
+  ],
+  "geo_endpoints": [],
+  "api_probes": [
+    {
+      "name": "geo-gates",
+      "method": "GET",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "headers": {
+        "Origin": "https://jumper.xyz",
+        "Referer": "https://jumper.xyz/"
+      },
+      "note": "The app asks which geo gates apply to the visitor's country (Cloudflare geolocation); a gate with Outcome=block replaces the pages under its PathPrefix (RWA Earn opportunities).",
+      "flags": [
+        "meta.country",
+        "meta.source"
+      ],
+      "rules": [
+        {
+          "match": "\"Outcome\"\\s*:\\s*\"block\"",
+          "state": "feature_limited",
+          "note": "a geo gate applies: the Earn pages under its PathPrefix show 'Access unavailable in your region'"
+        },
+        {
+          "match": "\"data\"\\s*:\\s*\\[\\s*\\]",
+          "state": "ok",
+          "note": "no geo gate for this country"
+        },
+        {
+          "match": "^HTTP 403\\b",
+          "state": "blocked",
+          "note": "Cloudflare refuses the request from this country (the landing page jumper.xyz is refused the same way)"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    "src/components/TermsOfBusiness/lists.tsx",
+    "https://li.fi/legal/terms-and-conditions/"
+  ],
+  "confidence": "medium",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "C",
+  "restrictions": {
+    "count": 17,
+    "countries": 15,
+    "mechanisms": [
+      "geo_feature",
+      "screening"
+    ]
+  },
+  "category_group": "bridge",
+  "chain_tags": [
+    "bitcoin",
+    "evm",
+    "solana",
+    "sui"
+  ],
+  "observations": [
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:52Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "AE",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:50Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:56:10Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "feature_limited",
+      "flags": {
+        "meta.country": "AF",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: a geo gate applies: the Earn pages under its PathPrefix show 'Access unavailable in your region'"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:56:07Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:17Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "AR",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:14Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:37:35Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "AU",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:37:31Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:20Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "BR",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:17Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:45:24Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "feature_limited",
+      "flags": {
+        "meta.country": "BY",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: a geo gate applies: the Earn pages under its PathPrefix show 'Access unavailable in your region'"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:45:21Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:01Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "feature_limited",
+      "flags": {
+        "meta.country": "CA",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: a geo gate applies: the Earn pages under its PathPrefix show 'Access unavailable in your region'"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:58Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:14Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "feature_limited",
+      "flags": {
+        "meta.country": "CA",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: a geo gate applies: the Earn pages under its PathPrefix show 'Access unavailable in your region'"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:11Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:05:12Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "CD",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:05:08Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:08:50Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "CF",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:08:47Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:26Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "CH",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:24Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:02Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "CN",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "CN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:30:57Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:42Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "CO",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:38Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:24Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 403,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "geo-gates: Cloudflare refuses the request from this country (the landing page jumper.xyz is refused the same way)"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:20Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 403,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "unknown",
+      "flags": {},
+      "note": "Cloudflare block page without geo wording (a firewall rule: country, network or bot score)"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:04Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "DE",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:02Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:14Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "ES",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:12Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:27Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "FR",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:25Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:09:43Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "GB",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:09:41Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:43:40Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "GE",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:43:38Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:30:28Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "HK",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:30:24Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:16Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "ID",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:13Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:18:42Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "IL",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:18:40Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:20:05Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "IN",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:20:00Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IQ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:56:31Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:49:54Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 403,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "geo-gates: Cloudflare refuses the request from this country (the landing page jumper.xyz is refused the same way)"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:49:51Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated); cdn-cgi/trace loc=DE disagrees with IR"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:46Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "IT",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:44Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:15Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "JP",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:12Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:38:40Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "KE",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:38:37Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:35:24Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "KR",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:35:20Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:48:35Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "KZ",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:48:31Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:58:15Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "LB",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:58:12Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:58:34Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "feature_limited",
+      "flags": {
+        "meta.country": "LY",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: a geo gate applies: the Earn pages under its PathPrefix show 'Access unavailable in your region'"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:58:32Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:10:11Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "ML",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:10:09Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:52:49Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "feature_limited",
+      "flags": {
+        "meta.country": "MM",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: a geo gate applies: the Earn pages under its PathPrefix show 'Access unavailable in your region'"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:04Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "MX",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:01Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:29:33Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "MY",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:29:29Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:36:48Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "NG",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:36:44Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:57Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "NI",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:54Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:51Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "NL",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:50Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:09Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "PH",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:06Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:20:11Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "PK",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:20:07Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:47Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "PL",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:45Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:38Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "feature_limited",
+      "flags": {
+        "meta.country": "RU",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: a geo gate applies: the Earn pages under its PathPrefix show 'Access unavailable in your region'"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:34Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:18:35Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "SA",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:18:33Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:00:43Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "feature_limited",
+      "flags": {
+        "meta.country": "SD",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: a geo gate applies: the Earn pages under its PathPrefix show 'Access unavailable in your region'"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:00:41Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:38Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "SE",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:30:30Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "SG",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:30:27Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:00:37Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "feature_limited",
+      "flags": {
+        "meta.country": "SS",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: a geo gate applies: the Earn pages under its PathPrefix show 'Access unavailable in your region'"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:00:33Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:24Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 403,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "geo-gates: Cloudflare refuses the request from this country (the landing page jumper.xyz is refused the same way)"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:22Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 403,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "unknown",
+      "flags": {},
+      "note": "Cloudflare block page without geo wording (a firewall rule: country, network or bot score)"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:44Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "TH",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:41Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:03Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "TR",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:01Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:37:02Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "TW",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:36:58Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:43Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "feature_limited",
+      "flags": {
+        "meta.country": "UA",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: a geo gate applies: the Earn pages under its PathPrefix show 'Access unavailable in your region'"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:41Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:05Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "feature_limited",
+      "flags": {
+        "meta.country": "US",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: a geo gate applies: the Earn pages under its PathPrefix show 'Access unavailable in your region'"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:02Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:26Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "VE",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:23Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:10Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "VN",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:06Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:02:47Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "YE",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:02:44Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:37:41Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "ZA",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:37:38Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:03Z",
+      "kind": "api",
+      "url": "https://api.jumper.xyz/v1/geo-gates",
+      "http_status": 200,
+      "final_url": "https://api.jumper.xyz/v1/geo-gates",
+      "ui_state": "ok",
+      "flags": {
+        "meta.country": "ZW",
+        "meta.source": "cloudflare"
+      },
+      "note": "geo-gates: no geo gate for this country"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:00Z",
+      "kind": "site",
+      "url": "https://jumper.xyz",
+      "http_status": 200,
+      "final_url": "https://jumper.xyz/",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

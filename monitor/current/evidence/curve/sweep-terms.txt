@@ -1,7 +1,7 @@
 check: curve/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://www.curve.finance/dex/ethereum/legal/?tab=terms
-checked_at: 2026-10-11T21:17:15Z
+checked_at: 2026-10-28T22:54:11Z
 fetched: https://raw.githubusercontent.com/curvefi/curve-frontend/f8cfaab057efb97dd9b96eac6ce966245cc45b8c/packages/evm-ui/src/widgets/Legal/components/tabs/Terms.tsx
 sha256: 7b774341861ef240f08228d47074a63d9fda4b8c048f3eef07c2125e6d97240f
 http_status: 200

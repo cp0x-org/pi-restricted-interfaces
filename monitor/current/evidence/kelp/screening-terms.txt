@@ -1,9 +1,9 @@
 check: kelp/screening-terms
 about: Users represent they are not sanctioned (OFAC, UN, EU, UK, HKMA, MAS); no screening mechanism verified
 source: https://kerneldao.com/kelp/terms-of-service/
-checked_at: 2026-10-11T21:18:53Z
+checked_at: 2026-10-28T22:56:43Z
 fetched: https://kerneldao.com/kelp/terms-of-service/
-sha256: 83004c352bcf103bd8c9f39fb17370e175a7ebd8ea4bd5c54f01b58eda24dcf1
+sha256: c9645ac0fe8bac4245e0f2b0fc91fcdf3d2392b3a4b230e867c518aa88bf1dfe
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

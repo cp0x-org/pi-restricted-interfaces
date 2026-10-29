@@ -1,0 +1,1829 @@
+{
+  "id": "hyperliquid",
+  "name": "Hyperliquid",
+  "description": "Hyperliquid is a layer-1 blockchain with a fully on-chain order book for perpetual futures and spot trading, plus the HyperEVM smart-contract environment; HYPE is its native token. The official app takes USDC deposits from Arbitrum.",
+  "description_zh": "Hyperliquid 是一条一层区块链，内置完全链上的永续合约与现货订单簿，并提供 HyperEVM 智能合约环境；HYPE 是其原生代币。官方应用接受来自 Arbitrum 的 USDC 存款。",
+  "category": "Perps",
+  "chains": "Hyperliquid L1",
+  "networks": [
+    "Arbitrum",
+    "HyperEVM"
+  ],
+  "url": "https://app.hyperliquid.xyz",
+  "referral_url": "https://app.hyperliquid.xyz/join/CP0X",
+  "frontend_repo": null,
+  "repo_state": "closed",
+  "repo_status": "closed",
+  "repo_last_commit": null,
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "US",
+      "CA-ON",
+      "IR",
+      "SY",
+      "CU",
+      "MM",
+      "YE"
+    ],
+    "close_only": [],
+    "method": "The app calls the info API legalCheck for the visitor's IP; restrictions 'a' (BlockActions) disables trading and the app shows \"Not available in your jurisdiction\". IP geolocation by IPdata (Privacy Policy). The blocked countries are those where legalCheck answered 'a' to the live probe (see the observations; 2026-10-12: US, US-NY, CA-ON, CU, IR, MM, SY); Terms 1.6 name the United States and Ontario (plus unnamed sanctioned territories)."
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [
+      "AR",
+      "BR",
+      "CA",
+      "GB",
+      "DE",
+      "FR",
+      "NL",
+      "ES",
+      "IT",
+      "PL",
+      "CH",
+      "TR",
+      "IN",
+      "TH",
+      "SG",
+      "JP",
+      "TW",
+      "AU",
+      "RU"
+    ],
+    "scope": "Outcome markets (contracts that settle on the outcome of an event) are hidden where legalCheck answers 'o' (HideOutcomes) or 'u' (Uk: outcome markets hidden plus the app's UK-specific flow). The countries are those of the live probe (see the observations; 2026-10-12: 19 of 62 countries, among them DE, FR, GB, JP, SG, CA)."
+  },
+  "vpn": {
+    "s": "tos_only",
+    "note": "Terms forbid VPNs or proxies to conceal location."
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "Chainalysis (the app's 'flagged by Chainalysis' banner) via info API legalCheck userAllowed",
+    "layer": "api",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://app.hyperliquid.xyz/terms",
+    "updated": "2026-06-15",
+    "us": "yes",
+    "us_scope": "",
+    "restricted": "Terms 1.6: United States, Ontario (Canada), persons in sanctioned jurisdictions (not named) and their citizens",
+    "restricted_codes": [
+      "US",
+      "CA-ON"
+    ]
+  },
+  "notes": "The app asks the info API legalCheck with the connected wallet (or a placeholder address): the answer carries userAllowed (wallet screening) and restrictions for the visitor's IP. Builder-code frontends call legalCheck themselves. The country list is not published in code; the bundled Terms 1.6 name it.",
+  "live": [
+    "api.hyperliquid.xyz/info legalCheck (2026-10-12): SDN -> userAllowed:false; control -> userAllowed:true"
+  ],
+  "geo_endpoints": [],
+  "api_probes": [
+    {
+      "name": "legalCheck",
+      "method": "POST",
+      "url": "https://api.hyperliquid.xyz/info",
+      "body": {
+        "type": "legalCheck",
+        "user": "0x4FaEC93ff98ab58bacb93dDA550bcB8294e590eE"
+      },
+      "note": "The IP check the app runs on load, with the app's own placeholder address.",
+      "flags": [
+        "restrictions",
+        "userAllowed"
+      ],
+      "rules": [
+        {
+          "match": "\"restrictions\"\\s*:\\s*\"a\"",
+          "state": "blocked",
+          "note": "restrictions=a (BlockActions): the app disables trading"
+        },
+        {
+          "match": "\"restrictions\"\\s*:\\s*\"o\"",
+          "state": "feature_limited",
+          "note": "restrictions=o (HideOutcomes): the app hides outcome markets"
+        },
+        {
+          "match": "\"restrictions\"\\s*:\\s*\"u\"",
+          "state": "feature_limited",
+          "note": "restrictions=u (Uk): the app hides outcome markets and runs its UK flow"
+        },
+        {
+          "match": "\"restrictions\"\\s*:\\s*\"n\"",
+          "state": "ok",
+          "note": "restrictions=n: no IP restriction"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    "app.hyperliquid.xyz bundle: legalCheck call, BlockActions=`a`, 'Not available in your jurisdiction'",
+    "app.hyperliquid.xyz bundle: TermsOfUse 1.6, PrivacyPolicy (geo-blocking by IP address using IPdata)",
+    "https://app.hyperliquid.xyz/terms",
+    "https://hyperliquid.gitbook.io/hyperliquid-docs/onboarding/how-to-start-trading"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "D",
+  "restrictions": {
+    "count": 28,
+    "countries": 26,
+    "mechanisms": [
+      "geo_feature",
+      "screening"
+    ]
+  },
+  "category_group": "perps",
+  "chain_tags": [
+    "hyperliquid"
+  ],
+  "observations": [
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:18:25Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:18:23Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:56:48Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:56:45Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:56Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:54Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:38:27Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:38:24Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:08Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:05Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:03Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "BR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:00Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:45:53Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:45:51Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:45Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:43Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:46Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "blocked",
+      "flags": {
+        "restrictions": "a",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=a (BlockActions): the app disables trading"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:43Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:05:47Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:05:45Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:09:30Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:09:27Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:48Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:46Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:38Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:41Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:05:37Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:51:12Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "blocked",
+      "flags": {
+        "restrictions": "a",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=a (BlockActions): the app disables trading"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:51:08Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:28Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:27Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:36Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:34Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:48Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:46Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:09Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "u",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=u (Uk): the app hides outcome markets and runs its UK flow"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:10:06Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:15Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:44:12Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:05Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:02Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:54Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:51Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:19:11Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:19:09Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:12Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:08Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:33Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "blocked",
+      "flags": {
+        "restrictions": "a",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=a (BlockActions): the app disables trading"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:30Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:30Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:28Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:57Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:52Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:39:19Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:39:16Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:36:06Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:36:03Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:52:20Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:52:16Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:58:56Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:58:53Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:58:57Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:58:55Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:10:53Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:10:50Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:25Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "blocked",
+      "flags": {
+        "restrictions": "a",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=a (BlockActions): the app disables trading"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:22Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:40Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:37Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:30:28Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:30:25Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:37:29Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:37:26Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:04:32Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:04:30Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:11:11Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:11:09Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:49Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:46Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:06Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:03Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:07Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:05Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:45:08Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:45:05Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:19:05Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:19:03Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:02:07Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:15:09Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:15:07Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:10Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:31:08Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:01:21Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:01:18Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:54Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "blocked",
+      "flags": {
+        "restrictions": "a",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=a (BlockActions): the app disables trading"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:52Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:25:27Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:25:24Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:40Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:37Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:37:55Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "feature_limited",
+      "flags": {
+        "restrictions": "o",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=o (HideOutcomes): the app hides outcome markets"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:37:52Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:15:14Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:15:12Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:43Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "blocked",
+      "flags": {
+        "restrictions": "a",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=a (BlockActions): the app disables trading"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:04:41Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:59Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:50:57Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:52Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:49Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:19Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "blocked",
+      "flags": {
+        "restrictions": "a",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=a (BlockActions): the app disables trading"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:17Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:38:14Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:38:11Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:40Z",
+      "kind": "api",
+      "url": "https://api.hyperliquid.xyz/info",
+      "http_status": 200,
+      "final_url": "https://api.hyperliquid.xyz/info",
+      "ui_state": "ok",
+      "flags": {
+        "restrictions": "n",
+        "userAllowed": true
+      },
+      "note": "legalCheck: restrictions=n: no IP restriction"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:03:37Z",
+      "kind": "site",
+      "url": "https://app.hyperliquid.xyz",
+      "http_status": 200,
+      "final_url": "https://app.hyperliquid.xyz",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

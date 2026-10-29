@@ -1,0 +1,10 @@
+check: uniswap/screening-client
+about: screenAddress() asks the Uniswap compliance API (Entry Gateway) whether a wallet must be blocked
+source: https://github.com/Uniswap/interface/blob/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/packages/compliance/src/client.ts#L47
+checked_at: 2026-10-28T22:38:19Z
+fetched: https://raw.githubusercontent.com/Uniswap/interface/7cb227b6abbb9398dd0dc4bf26eb006b3bb05ada/packages/compliance/src/client.ts
+sha256: ac9dc08c7852aaf917baa7d3678ce08ae1a8f634b1c67aeb72cabc2ea775823a
+--------------------------------------------------------------------------------
+L47: export async function screenAddress(
+L51:   const response = await client.screenAddress({
+L55:   return response.block

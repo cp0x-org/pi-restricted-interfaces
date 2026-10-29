@@ -1,0 +1,8 @@
+check: lido-stvaults/screening-validation
+about: /api/validation forwards the wallet to Lido's external validation API ({validationAPI}/v2/check/{address}), as on stake.lido.fi
+source: https://github.com/lidofinance/staking-vault-widget/blob/f258fb091d3ca01e5baf98128d01818e407a7877/pages/api/validation.ts#L57
+checked_at: 2026-10-28T22:38:08Z
+fetched: https://raw.githubusercontent.com/lidofinance/staking-vault-widget/f258fb091d3ca01e5baf98128d01818e407a7877/pages/api/validation.ts
+sha256: 9217c74130a904da262361cad451eb382dae3a7c1cdae4b0a64a944418211d26
+--------------------------------------------------------------------------------
+L57:         ? `/v2/check/${validatedAddress}`

@@ -1,0 +1,21 @@
+check: beefy/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/beefyfinance/beefy-v2/tree/b7098b467950b1ac01dbb248241bbc9bfae72e0b
+checked_at: 2026-10-28T22:35:22Z
+fetched: https://codeload.github.com/beefyfinance/beefy-v2/tar.gz/b7098b467950b1ac01dbb248241bbc9bfae72e0b
+sha256: 55e2f63aa381375d8ad29109b5373374000375341cc1087095afb33ca43ad28c
+--------------------------------------------------------------------------------
+repository: https://github.com/beefyfinance/beefy-v2/tree/b7098b467950b1ac01dbb248241bbc9bfae72e0b
+files scanned: 1494
+
+signals:
+  [strong] geo: geo endpoint — 1 file(s)
+      https://github.com/beefyfinance/beefy-v2/blob/b7098b467950b1ac01dbb248241bbc9bfae72e0b/src/features/data/apis/beefy/beefy-api.ts#L178  t getJson<BeefyGeoCountryResponse>({ url: `${this.api}/geo/country`, // cache bust params: { _: `${Date.now()}.${Math.random().toStrin
+  [weak] geo: geo-block words — 3 file(s)
+      https://github.com/beefyfinance/beefy-v2/blob/b7098b467950b1ac01dbb248241bbc9bfae72e0b/src/features/data/apis/transact/helpers/geo.ts#L3  ntity } from '../../../entities/vault.ts'; import { selectGeoBlockedTokenAndReceiptKeys, selectIsVaultGeoBlockedForUser, tokenKeyOf, } from '.
+      https://github.com/beefyfinance/beefy-v2/blob/b7098b467950b1ac01dbb248241bbc9bfae72e0b/src/features/data/apis/transact/transact.ts#L53  OptionFeeCampaign } from './helpers/fee.ts'; import { filterGeoBlockedOptions } from './helpers/geo.ts'; import { isOptionFeeable } from './helpers/
+      https://github.com/beefyfinance/beefy-v2/blob/b7098b467950b1ac01dbb248241bbc9bfae72e0b/src/features/data/selectors/restrictions.ts#L127  te (loading counts as blocked) */ export const selectIsVaultGeoBlockedForUser = (state: BeefyState, vaultId: VaultEntity['id']) => selectVaultGeoS
+  [weak] vpn: VPN words — 1 file(s)
+      https://github.com/beefyfinance/beefy-v2/blob/b7098b467950b1ac01dbb248241bbc9bfae72e0b/src/config/promos/partners.json#L345  "text": "Carbon is a Decentralized browser with AdBlock, VPN, Crypto Wallet, 100% Privacy and many other features.", "website": "https:/
+  [weak] kyc: KYC words — 1 file(s)
+      https://github.com/beefyfinance/beefy-v2/blob/b7098b467950b1ac01dbb248241bbc9bfae72e0b/src/config/promos/partners.json#L1300  and earn $USDC and $WMATIC. PolyWise is audited by Paladin, KYC'd by rugdoc and has a low risk rating on Rugdoc.", "website": "https://poly

@@ -1,7 +1,7 @@
 check: spark/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://spark.finance/terms-of-use
-checked_at: 2026-10-11T21:18:29Z
+checked_at: 2026-10-28T22:55:51Z
 fetched: https://spark.finance/terms-of-use
 sha256: bfb6eab192e6561faf98fe3d432e694ab7f09667960ff01b52a70395a1639c47
 http_status: 200

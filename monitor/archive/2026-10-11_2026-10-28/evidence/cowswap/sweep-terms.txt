@@ -1,0 +1,240 @@
+check: cowswap/sweep-terms
+about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
+source: https://cow.fi/legal/cowswap-terms
+checked_at: 2026-10-11T21:17:15Z
+fetched: https://web.archive.org/web/9999id_/https://cow.fi/legal/cowswap-terms
+sha256: ce9339e944ba2d525e18de935e55a917d8c6cf33de3c8ed0965e7580397f67e2
+http_status: 200
+via: archive
+--------------------------------------------------------------------------------
+countries: US GB
+
+clauses:
+  geofencing: None
+  vpn: None
+  screening: None
+  sanctions: under the control of, or a national or resident of any jurisdiction subject to sanctions or embargoes by applicable law (including but not limited to those imposed by the United Nations, the European Union,
+  us_persons: None
+  kyc: None
+
+--- restriction paragraphs ---
+You are not located in, under the control of, or a national or resident of any jurisdiction subject to sanctions or embargoes by applicable law (including but not limited to those imposed by the United Nations, the European Union, the United States, and the United Kingdom), or any jurisdiction where your use of the Interface or the Protocol would be illegal or otherwise violate any applicable law.
+
+--- full text ---
+About
+Products
+Learn
+CoW DAO is an open collective of developers, market makers, and community contributors on a mission to protect users from the dangers of DeFi.
+About
+Governance
+Revenue
+Grants
+Careers
+Brand Kit
+Legal
+Bug Bounty
+Products
+CoW Swap
+CoW Protocol
+CoW AMM
+MEV Blocker
+CoW Explorer
+CoW Widget
+Help
+Docs
+Knowledge Base
+Report Scams
+Misc.
+For DAOs
+Token Charts
+MOOOOOOOOOOOOOOOOOO
+MOOOOOOOOOOOOOOOOOO
+© CoW DAO - 2026
+CoW Swap - Terms and Conditions Home Legal CoW Swap - Terms and Conditions
+CoW Swap - Terms and Conditions
+Last updated: July 2025
+Summary of Key Terms (TL;DR)
+We want you to understand how CoW Swap works. This is a short summary of our full Terms and Conditions. Please read the full document, as it is the legally binding agreement.
+You Are in Control: This website (the "Interface") is non-custodial. We never take control of your assets or your private keys. You are 100% responsible for keeping your wallet secure.
+High Risk: Trading digital assets is extremely risky and you could lose all your money. Prices are very volatile. This is not financial advice.
+Distinct Roles: It's important to understand who does what:
+We (The Interface Provider): CoW Hosting Limited and company registered under the laws of the British Virgin Islands and providing this Interface to you to help you access the CoW Protocol.
+CoW Protocol: A separate, decentralized system built on Ethereum Virtual Machin (EVM) compatible and EVM adjacent blockchains (such as but not limited to Ethereum, Gnosis Chain and Ethereum L2 solutions) that executes your trades. We do not control it.
+CoW DAO: The community that governs the CoW Protocol. The DAO is not the Interface provider.
+No Guarantees: The technology is new and complex. Things can go wrong. We provide the Interface "AS IS" without any warranties. There's no guarantee your trades will execute or that you'll get a specific price.
+Your Responsibility: You are responsible for complying with laws and paying your own taxes.
+Binding Agreement: By using this Interface, you agree to these full terms, including important sections on limitation of liability, indemnification, and mandatory arbitration to resolve disputes.
+ARBITRATION NOTICE AND CLASS ACTION WAIVER : EXCEPT FOR CERTAIN TYPES OF DISPUTES DESCRIBED IN SECTION 16 BELOW, YOU AGREE THAT DISPUTES BETWEEN YOU AND US WILL BE RESOLVED BY BINDING, INDIVIDUAL ARBITRATION AND YOU WAIVE YOUR RIGHT TO PARTICIPATE IN A CLASS ACTION LAWSUIT OR CLASS-WIDE ARBITRATION.
+Important prior warnings
+Trading digital assets and using decentralised finance is extremely risky and you could lose all your money. We want you to consider, be aware and understand the risks listed below. This is very important:
+Financial Risks: Interacting with the Interface, such as submitting orders to exchange compatible tokens, involves significant risks of financial loss. You could lose the entire value of your digital assets . The value of digital assets is highly volatile. Prices can fluctuate significantly, and trades are not executed instantly. Carefully consider your objectives, risk tolerance, and experience before trading. This is not financial advice. Consult a qualified professional before making investment decisions.
+Technical and Smart Contract Risks: Interacting with the Interface involves significant technical risks such as potential issues in the software and infrastructure that power DeFi platforms. Since the code is complex and constantly evolving, the software and infrastructure including smart contracts are susceptible to bugs, undiscovered vulnerabilities, hacks, or exploits, which could result in the loss of your digital assets.
+Beware of Scams: Be vigilant against scams. We will never contact you first, ask for your password, private keys, or seed phrase, or ask you to connect your wallet to an unknown third-party application. Always verify the URL https://swap.cow.fi before interacting. We will never ask you for your private key or seed phrase.
+Technical Understanding: Cryptographic assets and blockchain technology require a comprehensive understanding of computer science and cryptography to appreciate the inherent risks. Ensure you understand how the Interface and the CoW Protocol work before using them.
+Blockchain Transactions are Public and Immutable: All transactions on compatible public blockchain are permanently recorded and publicly accessible. They are generally irreversible once confirmed. Sending assets to an incorrect address will likely result in permanent loss. We assume no responsibility for recovering lost assets due to user error.
+Limit of Liability of the Interface Provider: The Interface Provider is not liable for loss any of digital assets
+CoW Swap - Terms and Conditions
+These Terms and Conditions supersedes all earlier versions relating to CoW Swap and associated Services.
+PLEASE READ THESE TERMS AND CONDITIONS CAREFULLY BEFORE USING THE INTERFACE.
+These Terms and Conditions ("Terms") govern your access to and use of the website interfaces located at https://swap.cow.fi (the "Interface"), which is one way but not the only one to access CoW Protocol ("CoW Protocol" or the "Protocol"). These Terms constitute a legally binding agreement between you ("User," "you," or "your") and CoW Hosting Limited and company registered in under the laws of the British Virgin Islands and providing this Interface to you (the "Interface Provider," "we," "us," or "our").
+By accessing, browsing, or using the Interface, or otherwise indicating your acceptance, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy (incorporated herein by reference). If you do not agree to these Terms, you may not access or use the Interface.
+1. Understanding the CoW Ecosystem
+This section explains the different parts of the CoW ecosystem. It is important you understand the difference between the Interface you are using, the Protocol that handles your trades, and the DAO that governs the Protocol.
+1.1. The Interface (This Website)
+What it is : The website located at https://swap.cow.fi is a software application (the "Interface") that gives you one way to access the CoW Protocol.
+Who Provides it : This Interface is operated by CoW Hosting Limited, a company based in the British Virgin Islands (the "Interface Provider," "we," "us").
+Our Role : Our role is limited to providing this Interface. We do not control the underlying CoW Protocol, which is a decentralized system running on public blockchains like Ethereum. This Interface is completely separate from the Protocol itself.
+1.2. CoW Protocol (The Trading System)
+What it is: CoW Protocol ("the Protocol") is a decentralized trading protoco built on Ethereum Virtual Machin (EVM) compatible and EVM adjacent blockchains (such as but not limited to Ethereum, Gnosis Chain and Ethereum L2 solutions) that uses auctions mechanisms to settle trades directly between users ("peer-to-peer") when possible or between user and the Protocol (“peer-to-protocol”)
+How it Works: It uses a network of independent third parties who compete to find the best way to settle your trades (“Solvers”). The Protocol is designed to offer users protection from certain types of Miner Extractable Value (MEV) and allows certain transaction costs to be paid from the tokens you are trading.
+Who Controls it: The Protocol is governed by CoW DAO. You are encouraged to read the official CoW Protocol documentation to fully understand how it works.
+1.3. CoW DAO (The Governance Collective)
+What it is: CoW DAO is a Decentralized Autonomous Organization . Think of it as an unincorporated collective of participants that governs CoW Protocol through its token holders.
+Its Role: CoW DAO's role is to manage the Protocol, not to operate this Interface. It is a separate and distinct entity from us, the Interface Provider.
+1.4. You Are Always in Control of Your Assets (Non-Custodial)
+The Interface and the Protocol are non-custodial. At no time do we, the Protocol, or the DAO ever take custody, possession, or control of your digital assets. You hold your assets and interact with the Protocol directly from your own wallet (like MetaMask or Rabby Wallet). You alone are responsible for the security of your wallet and your private keys or seed phrase.
+2. Eligibility
+2.1 To use the Interface, you represent and warrant that:
+You are at least 18 years old or the age of legal majority in your jurisdiction.
+You have the full right, power, and authority to enter into and comply with these Terms.
+You are not located in, under the control of, or a national or resident of any jurisdiction subject to sanctions or embargoes by applicable law (including but not limited to those imposed by the United Nations, the European Union, the United States, and the United Kingdom), or any jurisdiction where your use of the Interface or the Protocol would be illegal or otherwise violate any applicable law.
+You are not identified as a Specially Designated National (SDN) or placed on any prohibited or restricted party list by any relevant sanctions authority.
+You will not use the Interface if any applicable laws in your country prohibit you from doing so in accordance with these Terms.
+Your use of the Interface will fully comply with all applicable laws and regulations, and you will not use the Interface to conduct, promote, or facilitate any illegal activities.
+3. User Obligations and Conduct
+3.1. Compliance: You agree to use the Interface in compliance with all applicable laws, regulations, and these Terms.
+3.2. Wallet Security: You are solely responsible for maintaining the security and confidentiality of your wallet, including private keys, passwords, and seed phrases. Any activity conducted through your wallet will be deemed to be your activity. The Interface Provider is not responsible for any losses resulting from unauthorized access to or use of your wallet. Never disclose your credentials or seed phrase.
+3.3. Transaction Responsibility: You are solely responsible for all orders submitted and transactions conducted through the Interface using your wallet. You must carefully review all transaction details before submission. Transactions on the blockchain are generally irreversible.
+3.4. Prohibited Activities: You agree not to engage in any of the following activities:
+Violating any laws, regulations, or third-party rights.
+Using the Interface for any illegal or fraudulent purpose, including money laundering or terrorist financing.
+Attempting to interfere with, compromise the security or integrity of, or disrupt the Interface or the CoW Protocol (e.g., introducing viruses, denial-of-service attacks).
+Attempting to gain unauthorized access to the Interface, its servers, or connected databases.
+Using any automated means (bots, scrapers) to access the Interface other than through publicly supported interfaces or APIs, if any, in a manner that disrupts the service.
+Providing false, inaccurate, or misleading information.
+Engaging in any activity that could harm the Interface Provider, other users, or the CoW Protocol.
+Impersonating any person or entity.
+3.5. Taxes: You are solely responsible for determining what, if any, taxes apply to the transactions you conduct through the Interface and the CoW Protocol, and for reporting and remitting the correct taxes to the appropriate tax authorities. You agree not to hold us liable for any tax liability associated with your usage.
+4. Risks Associated with Use
+You acknowledge and agree that accessing and using the Interface and interacting with the CoW Protocol involves significant risks. You assume all risks associated with such use, including, but not limited to:
+4.1. No Financial Advice: Information provided through the Interface is for informational purposes only and does not constitute financial, investment, legal, tax, or other professional advice.
+4.2. Market Volatility: The value of digital assets is highly volatile. You may lose the entire value of your assets. The Interface Provider is not liable for any market losses.
+4.3. Smart Contract Risk: The Interface and the CoW Protocol rely on smart contracts. Smart contracts are susceptible to bugs, vulnerabilities, hacks, or exploits, which could result in the loss of your digital assets. While audits may be performed, they do not guarantee security. The Protocol is in an early development stage, and we do not guarantee an error-free process.
+4.4. Protocol Risks:
+Execution Risk: There is no guarantee that an order submitted to the CoW Protocol will be executed or filled. Solvers may not find a suitable settlement solution, or network conditions may prevent execution.
+Pricing Risk: While CoW Protocol aims for fair prices, there is no guarantee of achieving the best possible price or the exact price displayed at the time of order submission due to market volatility, slippage, and the nature of batch auctions. Prices depend on Solver solutions and available liquidity. We give no price or liquidity guarantee.
+MEV Mitigation: CoW Protocol is designed to mitigate certain types of MEV, but it does not eliminate all forms of MEV or guarantee protection against front-running or sandwich attacks in all scenarios.
+Solver Reliance: The settlement of orders depends on the actions of independent, third-party Solvers. Their performance, availability, or potential malicious behavior could impact order execution.
+CoW Hooks: If utilizing CoW Hooks or similar programmable features, you bear the risk associated with the custom logic implemented, which could have unintended consequences or vulnerabilities.
+4.5. Gasless Transactions Costs: While the aim is often "gasless" submission for the user, the costs associated with blockchain transaction fees are typically factored into the execution price by Solvers or paid from the traded tokens. You are still bearing these costs indirectly.
+4.6. Third-Party Risks: CoW Protocol may interact with third-party protocols (e.g., AMMs) for liquidity. These third-party protocols have their own risks, including smart contract vulnerabilities and liquidity issues, which could impact your trades. Using a third-party wallet involves risks governed by that provider's terms.
+4.7. Regulatory Uncertainty: The regulatory landscape for digital assets, decentralised finance (DeFi), and protocols like CoW Protocol is evolving and uncertain. Changes in regulations could adversely affect the value of your assets, the operation of the Protocol, or your ability to use the Interface.
+4.8. Interface Availability: Access to the Interface may be interrupted, suspended, or unavailable due to maintenance, upgrades, technical issues, or other factors. We do not guarantee uninterrupted access.
+4.9. No Custody: As the Interface is non-custodial, you bear the full responsibility for the security of your wallet and assets. Loss of private keys means irreversible loss of funds.
+4.10. Governance Risks: CoW Protocol is subject to governance by CoW DAO. Token holders may vote on proposals that could materially change the Protocol's operations, fee structures, or core mechanics. These changes may be implemented without prior notice from the Interface Provider and could positively or negatively impact your positions or assets. You assume all risks associated with CoW DAO governance.
+4.11. Upgradability Risks: Certain smart contracts of the CoW Protocol may be upgradable. While upgrades are typically intended to improve the Protocol, they introduce the risk of new bugs or vulnerabilities, or could be executed maliciously by parties who gain control of the upgrade mechanism. We do not warrant or control the security or outcome of any protocol upgrade.
+4.12. Partial-Fill and Intent Expiry Risk
+Intents submitted to CoW Protocol may be partially filled or remain unfilled upon expiry. A partially filled Intent may expose you to price movements on the unexecuted remainder. You are responsible for monitoring the status of each Intent and submitting replacement orders if required.
+5. Understanding Costs and Revenue Mechanisms
+When you use CoW Protocol through this Interface, your trades may be subject to various costs and revenue mechanisms determined by CoW DAO governance (the collective managing the protocol) through its governance mechanism known as CoW Improvement Proposals or third-party partners. These can include:
+Network Costs: Indirect costs related to settling your trade on the blockchain (like gas), usually factored into your execution price by Solvers.
+Price Improvement Share: A potential sharing of extra value generated if your trade executes at a better price than expected. This is a share of the gain , not a typical fee.
+Fees (Protocol-Level): Direct fees set by CoW DAO governance, often based on trade volume or specific networks/tokens, contributing to the protocol's treasury.
+Partner Fees & Revenue-share: Fees that might be applied by third-party applications or widgets that integrate CoW Protocol, potentially shared with CoW DAO.
+Important: The Interface Provider (who provides this specific website) does not set or control these protocol-level costs or revenue shares. They are part of the CoW Protocol's design and governance.
+Please review any cost information displayed on the Interface before confirming your trade. For a detailed explanation of how these mechanisms work, including specific definitions and calculations, please refer to the relevant CoW Improvement Proposal ( CIP ) as may be amended or replaced by subsequent CIPs.
+This specific Interface https://swap.cow.fi is currently free to use, but we reserve the right to introduce our own separate Interface Fees in the future with notice.
+6. User Representations and Warranties
+By using the Interface, you represent and warrant that:
+You have read, understood, and agree to be bound by these Terms.
+You meet all eligibility requirements set forth in Section 2.
+You possess the necessary technical understanding of cryptographic assets, token storage (wallets), blockchain technology, and the CoW Protocol's mechanics (including batch auctions and Solvers) to appreciate the risks involved.
+You understand that transactions on public blockchains are irreversible and public, and you waive any right to erasure or rectification of transaction data recorded on the blockchain.
+Your use of the Interface is legal under the laws of your jurisdiction and any other applicable jurisdiction.
+You will comply with all applicable tax obligations arising from your use of the Interface.
+You are using the Interface at your own risk and assume full responsibility for such use.
+You will not misuse the Interface or introduce malicious code.
+You will not use the Interface for any unlawful or fraudulent activities or to trade assets derived from such activities.
+You do not rely on any statement, representation, or warranty not explicitly set out in these Terms.
+You acknowledge that CoW Protocol is controlled by CoW DAO, an autonomous and unincorporated collective of participants, and you expressly waive any right to claim against the Interface Provider, its affiliates, or its contributors for any actions, changes, or failures of CoW Protocol or CoW DAO.
+7. We Do Not Owe You a Fiduciary Duty
+We are providing you with a software tool, not a personalized financial service. Our relationship is governed only by these Terms. You agree that we do not have a "fiduciary duty" or any special relationship of trust to you. This means we have no legal obligation to act in your best financial interest, beyond the specific obligations written in this document.
+8. Intellectual Property
+The Interface Provider grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to access and use the Interface for its intended purpose, subject to these Terms. The Interface, including its "look and feel," software, text, images, trademarks, service marks, copyrights, patents, and designs, is the property of the Interface Provider or its licensors and is protected by intellectual property laws. The source code of the Interface is released under the GNU General Public License v3.0 (“GPL-3.0”). The underlying CoW Protocol smart contracts are released under GPL-3.0 or such other open-source licences as stated in the relevant repositories. Nothing in these Terms restricts your rights granted by those licences.
+9. Third-Party Services, Integration and Content
+9.1. General Principle
+The Interface may integrate, contain links to, or display content from independent third-party services, protocols, or websites that are not owned, controlled, or operated by the Interface Provider. This includes, but is not limited to:
+Bridging Services : Protocols that allow you to transfer assets between different blockchains;
+Data Sources : Services that provide token prices or other on-chain data; and
+Integrated Protocols : Any other DeFi protocol or application that you can access through the Interface.
+9.2. Our Relationship With Third-Party Providers
+To provide a more comprehensive and convenient user experience, the Interface may feature integrations with select third-party services, such as bridge providers or any other DeFi protocol or application. We may have commercial or technical agreements with these providers to facilitate a seamless integration.
+While we may select these providers based on their public reputation and the features they offer, it is crucial for you to understand the distinct nature of our relationship:
+Independent Services: Each third-party provider is an independent entity that is solely responsible for its own service. Our collaboration for the purpose of integration does not mean we are a single entity or legal partners;
+No Guarantee or Security Audit: Our decision to integrate a third-party service does not constitute an endorsement, a security audit, or a guarantee of its safety or performance. The security and functionality of the third-party service are entirely their responsibility and are governed by their own practices; and
+Your Responsibility Remains: You remain solely responsible for doing your own research (DYOR) on any third-party service before you use it. When you decide to use an integrated service, you are choosing to interact directly with that third party and are subject to their specific terms and risks.
+In short, while we work with third parties to enhance the functionality of the Interface, your relationship and any potential claim remains directly with the third-party provider whose service you choose to use.
+9.3. Your Relationship is with the Third Party
+Your interaction with any third-party service is a relationship solely between you and that third party. By using an integrated third-party service (such as a bridge), you acknowledge and agree that you are bound by that third party's own separate terms and conditions, privacy policy, and fee structures. It is your sole responsibility to review and understand the policies of these third parties before using their services.
+9.4. Assumption of Third-Party Risk
+You explicitly acknowledge and agree that using third-party services integrated into the Interface involves significant risks for which we have no liability. These risks include, but are not limited to:
+The third-party service suffering a bug, exploit, or hack, resulting in the loss of your assets.
+The bridge or other protocol failing to complete your transaction as expected or at all.
+Poor performance, unavailability, or discontinuation of the third-party service.
+You hereby irrevocably waive any right to bring a claim against the Interface Provider and its affiliates for any losses or damages you suffer as a result of your use of any third-party service. Any dispute, claim, or loss must be directed solely to the relevant third party.
+9.5. No Warranties for Third-Party Services
+The disclaimer of warranties in Section 11 of these Terms applies to all third-party services. We provide access to these services on the same "AS IS" and "AS AVAILABLE" basis as the rest of the Interface. We make no promises or guarantees about their security, functionality, or reliability.
+10. Privacy Policy
+Our Privacy Policy, which describes how we collect, use, and share your information, is incorporated into these Terms by reference. By using the Interface, you consent to the collection and use of information as described in the Privacy Policy .
+11. Disclaimers
+The interface is provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied. To the fullest extent permitted by law, the interface provider disclaims all warranties, express, implied, or statutory, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement.
+the interface provider does not warrant that:
+The interface will be uninterrupted, timely, secure, or error-free.
+The results obtained from the use of the interface or the cow protocol will be accurate, reliable, or meet your expectations.
+Any orders submitted will be executed, or executed at a particular price or time.
+The interface or the cow protocol will be free of viruses, bugs, hacks, or other harmful components.
+The cow protocol will provide complete protection against MEV or guarantee the best possible trading price.
+You acknowledge that you are using the interface and interacting with the cow protocol entirely at your own risk.
+12. Limitation of Our Legal Liability
+12.1. A plain English Explanation of this Section: This section is very important as it limits our legal and financial liability to you. By using the Interface, you are agreeing that under no circumstances will we be responsible for any losses or damages you might suffer. The service is provided "AS IS," and you use it entirely at your own risk. This limitation is a core condition of us providing you with access to the Interface.
+12.2. Who is Protected by This Limitation
+Interface Provider (CoW Hosting Limited) and the entire ecosystem, including all of its past, present, and future affiliates, shareholders, directors, officers, employees, agents, contractors, and other participants.
+12.3 WE ARE NOT LIABLE FOR LOSSES ARISING FROM YOUR USE: TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE INTERFACE PROVIDER, ITS AFFILIATES, MEMBERS, PARTICIPANTS, DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, CONTRACTORS, SHAREHOLDERS, LICENSORS, OR ANY CONTRIBUTORS TO THE COW PROTOCOL BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES, OR DAMAGES FOR LOSS OF PROFITS, REVENUE, BUSINESS, GOODWILL, USE, DATA, OR OTHER INTANGIBLE LOSSES (EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES), ARISING OUT OF OR IN CONNECTION WITH:
+YOUR ACCESS TO OR USE OF, OR INABILITY TO ACCESS OR USE, THE INTERFACE OR THE COW PROTOCOL.
+ANY CONDUCT OR CONTENT OF ANY THIRD PARTY, INCLUDING SOLVERS, WIDGET INTEGRATORS, OR OTHER USERS.
+UNAUTHORIZED ACCESS, USE, OR ALTERATION OF YOUR WALLET, TRANSMISSIONS, OR DATA.
+ANY BUGS, VIRUSES, TROJAN HORSES, OR THE LIKE THAT MAY BE TRANSMITTED TO OR THROUGH THE INTERFACE.
+ERRORS, MISTAKES, OR INACCURACIES OF CONTENT OR FUNCTIONALITY.
+ANY LOSSES INCURRED DUE TO SMART CONTRACT VULNERABILITIES, PROTOCOL FAILURES, NETWORK CONGESTION, MARKET VOLATILITY, USER ERROR (E.G., LOST PRIVATE KEYS, INCORRECT TRANSACTIONS), OR ACTIONS OF SOLVERS.
+YOUR RELIANCE ON ANY INFORMATION OR FUNCTIONALITY PROVIDED BY THE INTERFACE.
+ANY ACTIONS, INACTIONS, OR DECISIONS MADE BY COW DAO OR ITS MEMBERS, INCLUDING THROUGH ITS GOVERNANCE PROCESS.
+ANY LOSSES ARISING FROM A PROTOCOL UPGRADE, FORK, OR OTHER GOVERNANCE-APPROVED CHANGE.
+12.4. SCOPE OF LIABILITY WAIVER: THIS LIMITATION OF LIABILITY APPLIES REGARDLESS OF THE LEGAL THEORY IT IS BASED ON, WHETHER IT BE CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, OR BREACH OF STATUTORY DUTY. IT COVERS ALL FORMS OF DAMAGES, INCLUDING INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, AS WELL AS ANY LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL.
+12.5. OUR MAXIMUM LIABILITY: IN THE EVENT THAT ANY COURT OR ARBITRATOR FINDS US LIABLE FOR ANY REASON, OUR TOTAL AGGREGATE LIABILITY TO YOU FOR ALL CLAIMS ARISING OUT OF OR RELATING TO THESE TERMS OR YOUR USE OF THE INTERFACE WILL NOT EXCEED ONE HUNDRED US DOLLARS ($100).
+12.6. EXCLUSIONS FROM THIS LIMITATION: NOTHING IN THESE TERMS IS INTENDED TO EXCLUDE OR LIMIT ANY LIABILITY THAT CANNOT BE LEGALLY EXCLUDED OR LIMITED BY APPLICABLE LAW. THIS INCLUDES LIABILITY FOR DEATH OR PERSONAL INJURY CAUSED BY OUR NEGLIGENCE, OR FOR FRAUD OR FRAUDULENT MISREPRESENTATION.
+13. Indemnification
+You agree to indemnify, defend, and hold harmless the Interface Provider and its affiliates, members, participants, directors, officers, employees, agents, contractors, shareholders, representatives, and any open-source contributors to CoW Protocol from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) that arise from or relate to: (a) your access to or use of the Interface or interaction with CoW Protocol; (b) your violation of these Terms; (c) your violation of any applicable law or the rights of any third party (including intellectual property rights); or (d) any activity conducted through your wallet. We reserve the right, at our own expense, to assume exclusive defense and control of any matter otherwise subject to indemnification by you, in which case you agree to cooperate with us.
+14. Modification of Terms
+We reserve the right to modify or update these Terms at any time in our sole discretion. If we make changes, we will provide notice of such changes, such as by posting the revised Terms on the Interface and updating the "Effective Date" above. Your continued use of the Interface after the effective date of the revised Terms constitutes your acceptance of the changes. If you do not agree to the amended Terms, you must stop using the Interface. Please check these Terms periodically for changes.
+15. Termination and Suspension
+We may, in our sole discretion, suspend, restrict, or terminate your access to all or part of the Interface at any time, for any reason or no reason, including if we suspect you have violated these Terms or applicable laws, without prior notice or liability. Termination will not limit any other rights or remedies we may have. Sections concerning Warnings, Risks, Fees, User Warranties, No Fiduciary Duty, Disclaimers, Limitation of Liability, Indemnification, Governing Law, Dispute Resolution, and Miscellaneous provisions shall survive any termination. Upon termination, your right to use the Interface ceases immediately.
+16. How We Will Handle Legal Disputes
+16.1. Governing Law: These Terms and any dispute or claim arising out of or in connection with them or their subject matter or formation (including non-contractual disputes or claims) shall be governed by and construed in accordance with the substantive laws of the British Virgin Islands (BVI), without regard to its conflict of law principles.
+16.2. Amicable Resolution: In the event of any dispute, controversy, or claim arising out of or relating to these Terms ("Dispute"), you agree to first attempt to resolve the matter amicably by contacting us at legal@cow.fi .
+16.3. Mediation: If the Dispute cannot be resolved amicably within thirty (30) days of notification, the Dispute shall first be referred to mediation proceedings under the International Chamber of Commerce ("ICC") Mediation Rules. The place of mediation shall be Tortolla, British Virgin Islands. The language of the mediation shall be English.
+16.4. Arbitration: If the Dispute has not been settled pursuant to the ICC Mediation Rules within forty (40) days following the filing of a Request for Mediation or within such other period as the parties may agree in writing, such Dispute shall thereafter be finally settled under the Rules of Arbitration of the International Chamber of Commerce by (a) a sole arbitrator where the aggregated value of the claims and counter claim is less than USD 250,000; or (b) three arbitrators in all other cases. The seat of Arbitration shall be Tortolla, British Virgin Islands. The substantive law governing the merits of the Dispute is the law of the British Virgin Islands. The arbitration shall be conducted in English. The Emergency Arbitrator Provisions shall not apply.
+16.5. Waiver of Class Action: TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, YOU AGREE THAT ANY DISPUTE RESOLUTION PROCEEDINGS WILL BE CONDUCTED ONLY ON AN INDIVIDUAL BASIS AND NOT IN A CLASS, CONSOLIDATED, OR REPRESENTATIVE ACTION. YOU EXPRESSLY WAIVE ANY RIGHT TO A TRIAL BY JURY AND RIGHT TO PARTICIPATE IN A CLASS ACTION LAWSUIT.
+16.6. Small-Claims Carve-Out*
+Nothing in this Section prevents either party from seeking relief for an individual claim in a small-claims court of competent jurisdiction, provided that the matter remains on an individual (non-class) basis.
+17. Miscellaneous
+17.1. Entire Agreement: These Terms, together with the Privacy Policy, constitute the entire agreement between you and the Interface Provider regarding your use of the Interface and supersede all prior or contemporaneous understandings, promises, assurances, warranties, representations, or agreements, whether written or oral.
+17.2. Severability: If any provision or part-provision of these Terms is or becomes invalid, illegal, or unenforceable, it shall be deemed modified to the minimum extent necessary to make it valid, legal, and enforceable. If such modification is not possible, the relevant provision or part-provision shall be deemed deleted. Any modification to or deletion of a provision or part-provision under this clause shall not affect the validity and enforceability of the rest of these Terms.
+17.3. No Waiver: Our failure or delay in exercising or enforcing any right or provision of these Terms will not constitute a waiver of such right or provision or any other right or provision.
+17.4. Assignment: You may not assign or transfer any of your rights or obligations under these Terms without our prior written consent. We may assign or transfer our rights and obligations under these Terms without restriction or notice.
+17.5. Headings: Section headings are for convenience only and shall not affect the interpretation of these Terms.
+17.6. Third-Party Beneficiary: You acknowledge and agree that CoW DAO, its members, and any individual or entity that contributes to the open-source CoW Protocol are intended third-party beneficiaries of the following sections: 'Risks Associated with Use' (Section 4), 'Disclaimers' (Section 11), 'Limitation of Liability' (Section 12), and 'Indemnification' (Section 13), and shall have the right to enforce such provisions as if they were a party to these Terms.
+17.7. No Partnership: Nothing in these Terms is intended to, or shall be deemed to, establish any partnership or joint venture between you and us, constitute either party the agent of the other party, or authorize either party to make or enter into any commitments for or on behalf of the other party.
+18. Contact Information
+If you have any questions about these Terms, please contact us at legal@cow.fi .
+By using the https://swap.cow.fi interface, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.
+— End of the Terms

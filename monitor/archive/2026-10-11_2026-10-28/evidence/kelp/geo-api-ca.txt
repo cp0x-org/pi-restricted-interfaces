@@ -1,0 +1,15 @@
+check: kelp/geo-api-ca
+about: Live: Kelp's geoData API answers isRestricted:true to a visitor from Canada
+source: https://universe.kelpdao.xyz/rseth/geoData from CA
+checked_at: 2026-10-11T21:24:37Z
+http_status: 200
+via: proxy
+vantage: {"requested": "CA", "seen": ["CA", "CA", "CA"], "org": "AS577 Bell Canada", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
+--------------------------------------------------------------------------------
+{"requested": "CA", "seen": ["CA", "CA", "CA"], "org": "AS577 Bell Canada", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
+
+request: GET https://universe.kelpdao.xyz/rseth/geoData
+status: 200
+final_url: https://universe.kelpdao.xyz/rseth/geoData
+header content-type: application/json
+body: {"isRestricted":true,"region":"Quebec","countryCode":"CA","country":"Canada"}

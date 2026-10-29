@@ -3,7 +3,7 @@
 
   1. merge  every probe run in monitor/probe/out/ that is not in monitor/data/observations.json yet
             (the same as `probe.py merge` with those files; a run already merged is skipped)
-  2. build  the monitor:build command from package.json: src/data/interfaces.json (what the site shows),
+  2. build  the monitor:build command from package.json: the site files in src/data/ (what the site shows),
             monitor/out/report.md and interfaces.csv; countries the probe saw blocked are counted (observed.py)
 
 Usage (from pi-restrict-interface/):
@@ -59,7 +59,7 @@ def main():
     print("\n=== build")
     if call(build):
         sys.exit("monitor:build failed")
-    print("\nsite data updated: src/data/interfaces.json (restart `pnpm start` if it does not reload)")
+    print("\nsite data updated: src/data/monitor.json and src/data/interfaces/ (restart `pnpm start` if it does not reload)")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 check: velodrome/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://github.com/velodrome-finance/docs/blob/main/content/legal.mdx
-checked_at: 2026-10-11T21:18:46Z
+checked_at: 2026-10-28T22:56:29Z
 fetched: https://raw.githubusercontent.com/velodrome-finance/docs/main/content/legal.mdx
 sha256: 8536d6595e68a277eda3d11bc485c3022ff52a1a5746091dbba9adb3604b94ec
 http_status: 200

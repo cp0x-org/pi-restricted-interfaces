@@ -1,0 +1,34 @@
+check: euler/geo-countries
+about: SANCTIONED_COUNTRIES used by that middleware (Ukraine is commented out)
+source: https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/entities/country-constants.ts#L3
+checked_at: 2026-10-28T22:38:03Z
+fetched: https://raw.githubusercontent.com/euler-xyz/euler-lite/43ba73fadda21d943224742286c7c078562e3769/entities/country-constants.ts
+sha256: bbc06eb562156e6bab8fcf831c6e554085b64c495bd0a7d1ca89f464bfe98853
+--------------------------------------------------------------------------------
+L3: export const SANCTIONED_COUNTRIES: readonly string[] = [
+
+--- section the countries were read from ---
+export const SANCTIONED_COUNTRIES: readonly string[] = [
+  'AF',  
+  'BY',  
+  'CF',  
+  'CU',  
+  'KP',  
+  'CD',  
+  'ET',  
+  'IR',  
+  'IQ',  
+  'LB',  
+  'LY',  
+  'ML',  
+  'MM',  
+  'NI',  
+  'RU',  
+  'SO',  
+  'SS',  
+  'SD',  
+  'SY',  
+   
+  'VE',  
+  'YE',  
+  'ZW',  

@@ -1,7 +1,7 @@
 check: aerodrome/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://github.com/aerodrome-finance/docs/blob/main/content/legal.mdx
-checked_at: 2026-10-11T21:15:48Z
+checked_at: 2026-10-28T22:52:43Z
 fetched: https://raw.githubusercontent.com/aerodrome-finance/docs/main/content/legal.mdx
 sha256: b0c2d350219b2954ea9a149958389daf86b977ae6f6f8d19c048e27d7728c968
 http_status: 200

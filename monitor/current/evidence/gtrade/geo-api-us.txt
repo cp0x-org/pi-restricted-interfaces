@@ -1,17 +1,17 @@
 check: gtrade/geo-api-us
 about: Live: gTrade's geoblock API flags stocks and indices for a visitor from the US
 source: https://wrkr.randomdegenerator.xyz/main/api/geo from US
-checked_at: 2026-10-11T21:24:29Z
+checked_at: 2026-10-28T23:07:49Z
 http_status: 200
 via: proxy
-vantage: {"requested": "US", "seen": ["US", "US", "US"], "org": "AS7922 Comcast Cable Communications, LLC", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
+vantage: {"requested": "US", "seen": ["US", "US", "US"], "org": "AS701 Verizon Business", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
 --------------------------------------------------------------------------------
-{"requested": "US", "seen": ["US", "US", "US"], "org": "AS7922 Comcast Cable Communications, LLC", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
+{"requested": "US", "seen": ["US", "US", "US"], "org": "AS701 Verizon Business", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
 
 request: GET https://wrkr.randomdegenerator.xyz/main/api/geo
 status: 200
 final_url: https://wrkr.randomdegenerator.xyz/main/api/geo
 header server: cloudflare
-header cf-ray: a490ee936f26b13c-DFW
+header cf-ray: a51d994e8d74611c-BOS
 header content-type: application/json
 body: {"features":{"stocks":true,"indices":true,"forex":false,"crypto":false,"commodities":false},"country":"US"}

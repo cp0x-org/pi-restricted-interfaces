@@ -1,0 +1,955 @@
+check: hyperliquid/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://app.hyperliquid.xyz
+checked_at: 2026-10-28T23:07:44Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "CA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "MX": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "CO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "CN": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "error",
+   "why": "URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "KR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "TW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.hyperliquid.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Hyperliquid",
+   "scripts": [
+    "/assets/index-*.js",
+    "/charting_library_v28.5/charting_library/charting_library.js",
+    "/embed/script.js"
+   ],
+   "bytes": 6831,
+   "redirects": [],
+   "server": "AmazonS3"
+  }
+ }
+}

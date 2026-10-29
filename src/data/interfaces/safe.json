@@ -1,0 +1,1724 @@
+{
+  "id": "safe",
+  "name": "Safe{Wallet}",
+  "description": "Safe, formerly Gnosis Safe, is a smart-account wallet that can require several owners to approve each transaction (multisig). Safe{Wallet} is its official interface, with built-in swaps, staking and third-party apps on many EVM networks.",
+  "description_zh": "Safe（原 Gnosis Safe）是一种智能账户钱包，可以要求多位所有者共同批准每笔交易（多签）。Safe{Wallet} 是其官方界面，在众多 EVM 网络上内置兑换、质押和第三方应用。",
+  "category": "Wallet / multisig",
+  "chains": "EVM",
+  "networks": [
+    "Ethereum",
+    "Arbitrum",
+    "Optimism",
+    "Base",
+    "Polygon",
+    "BNB Chain",
+    "Avalanche",
+    "Gnosis",
+    "zkSync",
+    "Linea",
+    "Scroll",
+    "Celo",
+    "Mantle",
+    "Sonic",
+    "Unichain",
+    "World Chain",
+    "Berachain"
+  ],
+  "url": "https://app.safe.global",
+  "frontend_repo": "https://github.com/safe-global/safe-wallet-monorepo/tree/main/apps/web",
+  "repo_state": "open",
+  "repo_status": "open",
+  "repo_last_commit": "2026-10-07",
+  "geo_site": {
+    "s": "yes",
+    "countries": [
+      "BY",
+      "RU",
+      "CU"
+    ],
+    "close_only": [],
+    "method": "The Safe Client Gateway (safe-client.safe.global), which the app loads every Safe, balance and transaction from, is refused by CloudFront (HTTP 403) in some countries; the page itself loads and then shows 'Access Restricted'. The countries are those of the live probe (see the observations; 2026-10-12: BY, CU, RU)."
+  },
+  "geo_feature": {
+    "s": "yes",
+    "countries": [],
+    "scope": "HEAD /swap -> 403 for OFAC countries -> swap/stake/earn/Safe token hidden; the core wallet works"
+  },
+  "vpn": {
+    "s": "no",
+    "note": ""
+  },
+  "screening": {
+    "s": "yes",
+    "provider": "Chainalysis Sanctions Oracle (on-chain) -> feature-level 'Blocked address'",
+    "layer": "frontend",
+    "fail": "unknown",
+    "fail_note": ""
+  },
+  "asset_filter": "",
+  "tos": {
+    "url": "https://safe.global/terms",
+    "updated": "2025-10",
+    "us": "no",
+    "us_scope": "",
+    "restricted": "The Terms name no country: users must not be citizens, residents or members of any jurisdiction subject to EU or US economic sanctions (safe.global/terms, section 17, read 2026-10-12).",
+    "restricted_codes": []
+  },
+  "notes": "Only native integrations are restricted (swap via CoW, stake via Kiln and so on). The core wallet is permissionless.",
+  "live": [
+    "WebFetch (US): normal page"
+  ],
+  "geo_endpoints": [],
+  "api_probes": [
+    {
+      "name": "client gateway",
+      "method": "GET",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "headers": {
+        "Origin": "https://app.safe.global"
+      },
+      "note": "The Safe Client Gateway the app loads every Safe, balance and transaction from; CloudFront refuses it by country, and the app then shows 'Access Restricted'.",
+      "flags": [
+        "count"
+      ],
+      "rules": [
+        {
+          "match": "The request could not be satisfied",
+          "state": "blocked",
+          "note": "CloudFront refuses the gateway (HTTP 403): the app cannot load any Safe"
+        },
+        {
+          "match": "\"count\"\\s*:",
+          "state": "ok",
+          "note": "the gateway answers"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    "apps/web/src/components/common/GeoblockingProvider/index.tsx",
+    "apps/web/src/hooks/useSanctionedAddress.ts",
+    "apps/web/src/config/constants.ts"
+  ],
+  "confidence": "high",
+  "alternatives": [],
+  "lifecycle": "current",
+  "level": "B",
+  "restrictions": {
+    "count": 5,
+    "countries": 3,
+    "mechanisms": [
+      "geo_feature",
+      "screening"
+    ]
+  },
+  "category_group": "wallet",
+  "chain_tags": [
+    "evm"
+  ],
+  "observations": [
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:16Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "AE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:13Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:00:01Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "AF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:59:58Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:08:27Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "AR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:08:24Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:42:28Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "AU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:42:24Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:27:33Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "BD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:27:29Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:48:08Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 403,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "client gateway: CloudFront refuses the gateway (HTTP 403): the app cannot load any Safe"
+    },
+    {
+      "country": "BY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:48:05Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:09:33Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "CA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:09:30Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:47:08Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "CA",
+      "region": "CA-ON",
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:47:05Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:08:31Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "CD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:08:29Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:14:37Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "CF",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:14:34Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:16:35Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "CH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:16:33Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:35:21Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:09:32Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "CO",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:09:29Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:55:32Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 403,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "client gateway: CloudFront refuses the gateway (HTTP 403): the app cannot load any Safe"
+    },
+    {
+      "country": "CU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:55:29Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:35Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "DE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:33Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:28Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "ES",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:14:26Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:45Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "FR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:44Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:04Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "GB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:02Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:47:22Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "GE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:47:20Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:33:52Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "HK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:33:49Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:27:57Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "ID",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:27:54Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:22:14Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "IL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:22:12Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:25:50Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "IN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:25:46Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:55:14Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "IR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:55:11Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:16:24Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "IT",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:16:22Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:34:58Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "JP",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:34:55Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:42:07Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "KE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:42:04Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:39:32Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "KR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:39:29Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:59:28Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "KZ",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:59:26Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:02:15Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "LB",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:02:12Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:00:45Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "LY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:00:43Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:14:21Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "ML",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:14:17Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:57:20Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "MM",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:57:17Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:07:28Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "MX",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:07:25Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:33:54Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "MY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:33:51Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:40:51Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "NG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:40:48Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:07:07Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "NI",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:07:04Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:13:00Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "NL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:12:59Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:32:18Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "PH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:32:15Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:57Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "PK",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:24:54Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:15:47Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "PL",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:15:46Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:48:27Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 403,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "blocked",
+      "flags": {},
+      "note": "client gateway: CloudFront refuses the gateway (HTTP 403): the app cannot load any Safe"
+    },
+    {
+      "country": "RU",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:48:24Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:35Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "SA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:21:32Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:09:30Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "SD",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:09:28Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:18Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "SE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:16Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:34:00Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "SG",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:33:58Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:04:58Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "SS",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:04:55Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:11Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "SY",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:08Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:20Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "TH",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:17Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:20:22Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "TR",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:20:20Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:41:31Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "TW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:41:28Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:17Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "UA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:17:15Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:07:29Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "US",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:07:26Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:26Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "VE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:53:24Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:28:02Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "VN",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:27:59Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:05:44Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "YE",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:05:42Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:40:47Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "ZA",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T21:40:44Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:06:43Z",
+      "kind": "api",
+      "url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "http_status": 200,
+      "final_url": "https://safe-client.safe.global/v1/chains?limit=1",
+      "ui_state": "ok",
+      "flags": {
+        "count": 57
+      },
+      "note": "client gateway: the gateway answers"
+    },
+    {
+      "country": "ZW",
+      "region": null,
+      "proxy_type": "residential",
+      "at": "2026-10-28T22:06:41Z",
+      "kind": "site",
+      "url": "https://app.safe.global",
+      "http_status": 200,
+      "final_url": "https://app.safe.global",
+      "ui_state": "ok",
+      "flags": {},
+      "note": "page served (client-side gates not evaluated)"
+    }
+  ]
+}

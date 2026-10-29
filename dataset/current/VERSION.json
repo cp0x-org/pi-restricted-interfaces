@@ -1,0 +1,13 @@
+{
+  "version": "2026-10-28",
+  "published_at": "2026-10-28T23:44:07Z",
+  "archived_at": null,
+  "previous": "dataset/archive/2026-10-11_2026-10-28",
+  "schema_version": 3,
+  "interfaces": 69,
+  "made_by": "monitor/scripts/publish.py",
+  "files": {
+    "monitor.json": "the dashboard: meta + one row per interface (statuses, country lists, rating, restriction count, per country the probe verdict)",
+    "interfaces/<id>.json": "one interface's whole record: the catalog entry, the computed fields and every latest verified probe observation"
+  }
+}

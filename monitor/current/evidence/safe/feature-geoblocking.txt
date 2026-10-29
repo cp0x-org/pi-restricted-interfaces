@@ -1,7 +1,7 @@
 check: safe/feature-geoblocking
 about: HEAD /swap returns 403 for OFAC-sanctioned countries; the app then hides swap, stake and earn
 source: https://github.com/safe-global/safe-wallet-monorepo/blob/967145775447eb0375f018ab65d65a15af889412/apps/web/src/components/common/GeoblockingProvider/index.tsx#L8
-checked_at: 2026-10-11T21:04:43Z
+checked_at: 2026-10-28T22:38:13Z
 fetched: https://raw.githubusercontent.com/safe-global/safe-wallet-monorepo/967145775447eb0375f018ab65d65a15af889412/apps/web/src/components/common/GeoblockingProvider/index.tsx
 sha256: 2f0769835d1057342759dce500bb723e6566e7c73580532999543b193530b315
 --------------------------------------------------------------------------------

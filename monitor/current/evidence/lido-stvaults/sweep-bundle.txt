@@ -1,7 +1,7 @@
 check: lido-stvaults/sweep-bundle
 about: Production HTML and JavaScript of the official app, searched for access-restriction signals
 source: https://stvaults.lido.fi
-checked_at: 2026-10-11T21:08:55Z
+checked_at: 2026-10-28T22:44:19Z
 http_status: 200
 via: direct
 --------------------------------------------------------------------------------
@@ -9,13 +9,13 @@ page: https://stvaults.lido.fi (HTTP 200)
 scripts (14):
   https://stvaults.lido.fi/runtime/window-env.js  sha256=41a59027e4e4bd44bc691ea9a6daa6ead5e7562855a7023f4e126815aab21be0
   https://stvaults.lido.fi/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js  sha256=0225eb034d024a03bdc90ea6c79f56193662e7c3eee909696298820e517cbb83
-  https://stvaults.lido.fi/_next/static/chunks/webpack-fadcdae9d78e32b9.js  sha256=b45c664177d5d1a4c8706aba6d956381a1ef618abcce126e1c25d559651543b6
+  https://stvaults.lido.fi/_next/static/chunks/webpack-c4a9b6a6b9686543.js  sha256=ad04de414d0bcf598e58fef1f7bb85665632ba472df928e08df09ab58e3e233f
   https://stvaults.lido.fi/_next/static/chunks/framework-b338f11e54b60304.js  sha256=a3d1941f0bb308cfb4b350ce3849003345a0ff216c24357de339de7cfcbd33c8
   https://stvaults.lido.fi/_next/static/chunks/main-dbad44bdaffa8c67.js  sha256=be19ec5507ad02158d275c2b911b980ad628b51e0cb436faf8146611bc63cd26
-  https://stvaults.lido.fi/_next/static/chunks/pages/_app-8d38a8026b80f300.js  sha256=2314edf4d43effd8beab3d894c569fe8aaa2d5c637dd8bf103ed07377d378187
+  https://stvaults.lido.fi/_next/static/chunks/pages/_app-61d2fbeeada5acc4.js  sha256=e265d14cfc7a62d29f35e5e74201b642f3af16531464e20b3f184deeb75a7f54
   https://stvaults.lido.fi/_next/static/chunks/pages/index-cf06e47f6245d14e.js  sha256=535976a86da06df3e1bc1d6d71dcdf1196377764a3df97307c066276619f9ba9
-  https://stvaults.lido.fi/_next/static/fca7439f/_buildManifest.js  sha256=15fb255151b6fc1a71629da1a1b39a4b807892c98735c8085f9900cf5a78e0f5
-  https://stvaults.lido.fi/_next/static/fca7439f/_ssgManifest.js  sha256=5befd63cc49579225ac0a5f238eba918389d8bd48121c3364da3e00132bef51c
+  https://stvaults.lido.fi/_next/static/231035c5/_buildManifest.js  sha256=0b9d18f2e4ecfe3f6aac3ca07004a1f625074a6c60b2b59c07bc1298adb5e211
+  https://stvaults.lido.fi/_next/static/231035c5/_ssgManifest.js  sha256=5befd63cc49579225ac0a5f238eba918389d8bd48121c3364da3e00132bef51c
   https://stvaults.lido.fi/_next/static/chunks/pages/404-102d09ad424fc5e8.js  sha256=2fe8925f98db639ae8a6d25f7838d302b799f1c27f3af6cdb86ae5be451d7e41
   https://stvaults.lido.fi/_next/static/chunks/pages/500-94327ece02a655b0.js  sha256=1bb8ce4d9a8b043e2c08f6428f77675b62c1163edae9a4f4186c3d8804a04471
   https://stvaults.lido.fi/_next/static/chunks/pages/_error-f6d3effbcc922eb7.js  sha256=1398891e3c73691a45ae92c69ca00270500caf8b87ebfeb544ed7a8084fcb2e9

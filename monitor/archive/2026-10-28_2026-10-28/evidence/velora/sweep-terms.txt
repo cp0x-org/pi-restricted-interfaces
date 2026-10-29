@@ -1,0 +1,279 @@
+check: velora/sweep-terms
+about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
+source: https://velora.xyz/tos
+checked_at: 2026-10-28T22:56:30Z
+fetched: https://velora.xyz/tos
+sha256: 5cc6c28bc5a960bfb744e111480e473d1e8522dd05f2163f9a4e776257ab008e
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+countries: CU IR MM KP CN SY UA-Crimea UA-DPR UA-LPR US CA GB
+
+clauses:
+  geofencing: None
+  vpn: None
+  screening: None
+  sanctions: egion that is the subject of comprehensive country-wide or region-wide economic sanctions by the United States of America, Canada, the United Kingdom, or the European Union (collectively, “Sanctioned Territor
+  us_persons: None
+  kyc: None
+
+--- restriction paragraphs ---
+The Services are intended only for access and use by individuals at least eighteen (18) years old (or the age of majority in the applicable user’s jurisdiction). By accessing or using any of the Services, you represent and warrant that you are at least eighteen (18) years of age (or the age of majority in your jurisdiction) with the full authority, right, and capacity to enter into this agreement and abide by all of the terms and conditions of these Terms of Use. If you are not at least eighteen (18) years old (or the age of majority in your jurisdiction), you are prohibited from both the access and usage of the Services.
+a citizen of, located in, incorporated in, or otherwise have a registered office in Cuba, Iran, Myanmar (Burma), North Korea, China, Syria, the regions of Crimea, Donetsk or Luhansk, or any other country or region that is the subject of comprehensive country-wide or region-wide economic sanctions by the United States of America, Canada, the United Kingdom, or the European Union (collectively, “Sanctioned Territories”).
+a person listed on any of the following lists (each a Sanctions List): the Consolidated United Nations Security Council Sanctions List; the Specially Designated Nationals and Blocked Persons List, or the Sectoral Sanctions Identification List maintained by the US Office of Foreign Assets Control (OFAC); or on the European Commission’s consolidated list of Restrictive measures in force or any similar list maintained by, or public announcement of sanctions made by any Sanctions Authority (defined below);
+
+--- full text ---
+Terms Of Use - Velora - Intents-based Trading Protocol
+Trade
+Delta
+Developers
+Blog
+Explorer
+Trade On Velora
+Trade
+Delta
+Developers
+Blog
+Explorer
+Delta Protocol
+Aggregation Protocol
+Widget
+DAO Forum
+Snapshots
+Discord
+For Protocols
+For Wallets
+For Aggregators
+Trade On Velora
+Trade
+Delta
+Developers
+Blog
+Explorer
+Delta Protocol
+Aggregation Protocol
+Widget
+DAO Forum
+Snapshots
+Discord
+For Protocols
+For Wallets
+For Aggregators
+Trade On Velora
+‹ Go back Home
+Terms Of Use
+Apr 1, 2025
+Definitions
+API
+Refers to the Application Programming Interface (“API”) that allows its user to integrate the Service into its own Third-Party Service.
+Company
+Laita Labs Ltd, a company limited by shares, representing the Velora Foundation. When used throughout, Company includes actions implemented by the Velora DAO via governance procedures.
+Cryptocurrency
+Refers to any utility token or digital asset designed to work as a medium of exchange on blockchain and available through the Services.
+Currency
+Refers to any currency being legal tender (euro, dollar, etc.)
+Intellectual Property
+Refers to patents, rights to inventions, copyrights, trademarks, trade names, domain names, database names, software programs, and any other intellectual property rights of Company or licensed to Company.
+Partnership API
+Refers to the API selected by the User with the sharing revenue feature, whose utilization is subject to adherence to the specific provisions included in these T&Cs.
+Section
+Refers to a numbered paragraph section of these Terms.
+Services
+Refers to all the services provided by Company on its Website, through the API, or via direct integration with the smart contracts developed, launched, or maintained by Company.
+Terms of Use (Terms)
+These Terms of Use constitute a legally binding agreement (hereinafter, the "Terms") between you and Company (as defined above) governing your access to and use of the Website and all associated Services.
+Third-Party Services
+Refers to services not directly operated by Company but used to provide the Services, such as decentralized exchanges where the User’s orders are executed through the Services.
+Wallet
+Refers to the Cryptocurrency Wallet of the User and under his/her sole control.
+Website
+Refers to the website velora.xyz, including any subdomains thereof, and any other websites through which Company makes its Services available.
+User
+Refers to any natural person who is at least eighteen (18) years old or legal person using the Services or visiting its website with a full legal capacity and who is not acting for purposes relating to his/her trade, business, craft, or profession.
+You, Your, Yourself
+Refers to you as a User.
+Foreword
+Please read these Terms carefully before using the Services.
+By using the Services or by clicking to accept or agree to the Terms of Use when this option is made available to you, you accept and agree to be bound and abide by these Terms of Use, including our Privacy Policy, found at https://velora.xyz/pp (“Privacy Policy”), which is incorporated herein by reference and as amended from time to time. If you do not agree to these Terms of Use (including the Privacy Policy), you must not access or otherwise use the Services..
+These Terms shall apply from Your first access to the Website and use of the Services and shall remain applicable as long as You continue your use.
+The Services are intended only for access and use by individuals at least eighteen (18) years old (or the age of majority in the applicable user’s jurisdiction). By accessing or using any of the Services, you represent and warrant that you are at least eighteen (18) years of age (or the age of majority in your jurisdiction) with the full authority, right, and capacity to enter into this agreement and abide by all of the terms and conditions of these Terms of Use. If you are not at least eighteen (18) years old (or the age of majority in your jurisdiction), you are prohibited from both the access and usage of the Services.
+By using the Services, You confirm that You have, in Your country, the capacity to contract and to subscribe to the Services, and You are deemed to have read and accepted these Terms exhaustively and unconditionally. In the event You do not accept the whole or part of these Terms, You must immediately stop using the Services.
+By using the Services, You confirm that you are not, nor are you acting on behalf of:
+a citizen of, located in, incorporated in, or otherwise have a registered office in Cuba, Iran, Myanmar (Burma), North Korea, China, Syria, the regions of Crimea, Donetsk or Luhansk, or any other country or region that is the subject of comprehensive country-wide or region-wide economic sanctions by the United States of America, Canada, the United Kingdom, or the European Union (collectively, “Sanctioned Territories”).
+a person having its habitual residence, location, or seat of incorporation in the country or territory where transactions with digital tokens are prohibited or in any manner restricted by applicable laws or regulations or will become so prohibited or restricted at any time after these Terms become effective;
+a person listed on any of the following lists (each a Sanctions List): the Consolidated United Nations Security Council Sanctions List; the Specially Designated Nationals and Blocked Persons List, or the Sectoral Sanctions Identification List maintained by the US Office of Foreign Assets Control (OFAC); or on the European Commission’s consolidated list of Restrictive measures in force or any similar list maintained by, or public announcement of sanctions made by any Sanctions Authority (defined below);
+a person owned or controlled by, or acting on behalf of or for the benefit of, any person on a Sanctions List;
+any person otherwise the target of any sanctions laws, regulations, embargoes, or restrictive measures (Sanctions), as amended from time to time, administered, enacted, or enforced by: the United Nations, the United States, the European Union, or any Member State thereof, or the respective governmental institutions and agencies of any of the foregoing responsible for administering, enacting or enforcing Sanctions, including without limitation, OFAC and the European Commission (each a Sanctions Authority); or
+any person whose participation would cause a breach of the law or requirements of any country or governmental authority, including anti-money laundering regulations or conventions.
+a person under the age of eighteen (18).
+These Terms apply, without restriction or reservation, to any use of the Services by Users on its Website.
+By using the Service, You acknowledge that You are aware of and accept the economic and technical risks linked to the use of blockchain technology and Cryptocurrencies, particularly that :
+Cryptocurrencies are based on blockchain, an emerging technology that may be at risk of failure, bugs, malfunction, breakdown, evolution, or disruption;
+Cryptocurrencies operate on a network without intermediaries and do not benefit from legal tender, unlike currencies issued by central banks;
+The legal framework of Cryptocurrencies varies according to the jurisdiction in which You are located. Cryptocurrencies may be banned or subject to a regulatory framework that could significantly or totally lower their value;
+Cryptocurrencies are digital assets whose value is not inherently guaranteed and depends on unregulated markets (in which fraudulent acts may occur under traditional financial regulation). You are exposed to high risks of loss in the event of a drop in Cryptocurrencies' value;
+The Services may be subject to cyber-attacks (malware, denial of service attacks, Sybil, consensus-based attacks, etc.) and hacking in the course of the whole process, from transmitting Your order to the Third-Party Services to its execution and the validation of transactions on the blockchain.
+If You do not agree to these Terms, You may not use the Website
+These Terms are accessible at any time on the Website and will prevail over any other version or any other contradictory document.
+Services
+Scope
+Company develops, operates, and provides the Services, an online application that enables You to benefit from a Decentralized Exchange's aggregator platform, offering You the best prices on the market regarding token swaps on Ethereum and other blockchains.
+We reserve the right to withdraw or amend the Services and any service or material we provide through the Services, in our sole discretion, without notice. We will not be liable if, for any reason, all or any part of the Services is unavailable at any time or for any period. From time to time, we may restrict access to some parts of the Services, or the entirety of the Services, to users, including registered users.
+As a user of the Velora Protocol, velora.xyz or its affiliate dApps (including app.velora.xyz) may capture the surplus returned by a trade. The details of Protocol Fees can be found at https://docs.velora.xyz/intro-to-velora/velora-overview/protocol-revenue.
+For more information, You are invited to consult our documentation at https://docs.velora.xyz , where all information relating to the Services is available.
+Swap
+The Swap section allows You to place an order executed by Third-Party Services to exchange Cryptocurrencies for other Cryptocurrencies.
+Company does not hold nor take custody of any of Your Cryptocurrencies but solely provides an aggregator Service interacting with Third-Party Services.
+Swap & Transfer
+The Swap and Transfer section allows You to use the above-mentioned Swap service and send the resulting amount to another address. You may not use this feature when the address is controlled by a third party, such as a centralized exchange or a deposit smart contract.
+Incentive Programs
+Company may offer incentive programs to users, including offering compensation to users for services provided to Velora through the ParaBoost and PSP Social Escrow system (“Incentive Programs”). For more information about these programs, see here.
+You are not entitled to participate in any Incentive Programs, nor claim or attempt to claim any incentives, if you are an American or otherwise prohibited by Section 2 of this Agreement from using the Services.
+Company may terminate, suspend, or modify any Incentive Program at any time with or without notice to you.
+You are not entitled to any incentives offered under any Incentive Program, and have no claim against Company for failing to claim them prior to any specified expiration date.
+Support and Complaints
+Support is available through the Website chat or at the email address support@velora.xyz .
+Company has established and maintains an effective procedure for the reasonable and prompt handling of Your complaints and questions linked to the Service. Any complaint or question can be sent to Company at the email address contact@velora.xyz.
+Company undertakes to respond without undue delay, depending on the number of requests in process.
+User's Wallet
+You can connect Your Wallet to the Services, which allows the Services to collect and display Your Wallet information.
+You may, at any time, log off Your Wallet from the Services.
+In order to use the Services, you may be asked to connect a digital asset wallet. Custody and title to the digital assets held in your digital wallet shall at all times remain with you and shall not transfer to Velora. As the owner of such digital assets, you shall bear all risk of loss of such digital assets. We shall have no liability for fluctuations or loss in such digital assets. You retain sole responsibility for any loss of private keys associated with your digital wallet.
+Company endeavors to ensure the security of the Website. Nevertheless, it is Your responsibility to take additional measures to secure the Wallet (e.g., keeping the Wallet locked when not in use).
+Prohibited Uses
+You may use the Services only for lawful purposes and in accordance with these Terms of Use. You agree not to use the Services:
+In any way that violates or assists you in violating any applicable national or international law, rule, statute, regulation, by-law, order, protocol, code, decree, or other directive, requirement, or guideline, including, without limitation, any of the foregoing relating to anti-money laundering, anti-terrorism, and anti-corruption.
+For the purpose of exploiting, harming, or attempting to exploit or harm minors in any way by exposing them to inappropriate content or otherwise.
+To transfer or otherwise use cryptocurrency, blockchain-based assets, or other digital assets that do not legally belong to you or for which you are not otherwise authorized to transfer or otherwise use.
+To engage in improper or abusive trading practices.
+In any way that infringes upon the rights of others, or in any way is illegal, threatening, fraudulent, or harmful, or in connection with any unlawful, illegal, fraudulent, or harmful purpose or activity.
+To engage in any other conduct that restricts or inhibits anyone’s use or enjoyment of the Services, or which, as determined by us, may harm or offend Velora or users of the Services or expose them to liability.
+Additionally, you agree not to:
+Use the Services in any manner that could disable, overburden, damage, or impair the Services or interfere with any other party’s use of the Services, including their ability to engage in real-time activities through the Services.
+Modify, reverse engineer, decompile, prepare derivative works of, disassemble or otherwise attempt to gain access to the source code of the Services.
+Use any robot, spider, or other automatic device, process, or means to access the Services for any purpose, including monitoring or copying any of the material on the Services.
+Use any manual process to monitor or copy any of the material on the Services or for any other unauthorized purpose without our prior written consent.
+Use any device, software, or routine that interferes with the proper working of the Services.
+Introduce any viruses, trojan horses, worms, logic bombs, or other material which is malicious or technologically harmful.
+Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of the Services, the server on which the Services are stored, or any server, computer, or database connected to the Services.
+Attack the Services via a denial-of-service attack or a distributed denial-of-service attack.
+Otherwise, attempt to interfere with the proper working of the Services.
+API Availability
+Company makes available, on request or through the Website, an API giving access to the Services to Third-Party end users. The API allows You to set a fee shared between You and the Service according to a specified rate on the API documentation. API offers You a series of features to customize the service to the end-users.
+The use of the API is subject to the fulfillment of any and all the provisions under these Terms without exception.
+The use of the API is subject to the following conditions:
+To select the relevant configuration;
+To use it for Yourself;
+To use it for a fee-based purpose,
+You agree to select the Partnership API.
+In the event of failure to comply with the above, Company reserves the right to immediately suspend Your use of the Services without prior notice, in the conditions set forth above.
+Pricing
+The Service is delivered without charges, whether on the Website or through the API.
+However, the use of the Partnership API is subject to a fee based on the conditions available via this link.
+Liability of the User
+You guarantee the Services against any breach, exceeding the foreseeable risk, that may result from the Services’ use.
+You undertake to use the Services only following these Terms. You are not authorized to reconstruct the Services, decompile, disassemble or circumvent the technical restrictions they contain, except to the extent that such operations would be permitted by applicable laws. It is also prohibited to lend, rent, lease, resell, transfer or host the Services to or for Third Parties unless expressly authorized by Company.
+While using the Website, You shall refrain from any act and/or omission which could: (i) impair the proper functioning of the Website, especially if it interferes with the use of the Services by other Users; (ii) damage Company’s interests, rights and/or reputation; (iii) damage Third-Parties’ interests, rights and/or reputation (e.g., the Platform); (iv) be contrary to public order; and (v) be deemed and/or held illicit, illegal or amounting to a contractual breach.
+Company reserves the right to suspend Your access to the Services, at any time and by any means, without compensation or prior notice, and to seek damages and other legal remedies if You engage in any conduct or activity that is in violation of these Terms, unlawful, fraudulent or detrimental to other Users or the Services.
+You guarantee Company against any error in the amount of money sent to the Services from Your bank account
+No Warranties
+Nature of the Service
+The Service is provided on an “AS IS” and “AS AVAILABLE” basis, without warranties of any kind, and must be operated under Your exclusive responsibility.
+To the fullest extent permitted by law, Company disclaims any representations and warranties of any kind, whether express, implied, or statutory.
+You acknowledge and agree that Your use of the Services is at your own risk.
+Nature of the information provided on the Website
+To the exception of these Terms, please note that the information on the Website shall not be regarded as information of a contractual nature, and nothing on the Website should be construed as an offer, invitation, or solicitation to buy or to sell, or as an offering of Cryptocurrencies.
+The information available on the Website is provided solely for informational purposes. Even though Company strives to publish complete, accurate, reliable, and up-to-date information on the Website, Company does neither represent nor warrant that such information is ultimately complete, accurate, up-to-date, and/or fitted to Your particular situation as of the date You access it.
+As a result, You shall take any and all steps to check and verify the completeness, accuracy, validity, and suitability of any and all information accessible on the Website.
+Accessibility of the Website
+Company does not warrant that Your access and use of the Website will be uninterrupted, timely, and free from errors, defects, malfunctions, viruses, malicious codes, or other harmful elements of any kind whatsoever.
+Liability of Company
+Limitation of liability
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL LAITA LABS (NOR ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, REPRESENTATIVES OR AFFILIATES) BE LIABLE FOR ANY DIRECT, INDIRECT, PUNITIVE, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSSES ARISING OUT OF, OR IN ANY WAY CONNECTED WITH, YOUR ACCESS TO, DISPLAY ON, OR USE OF THE SERVICES OR WITH THE DELAY OR INABILITY TO ACCESS, DISPLAY, OR USE THE SERVICES (INCLUDING, BUT NOT LIMITED TO (I) USERS ERRORS OR OMISSIONS IN, OR LOSS OR DAMAGE INCURRED AS A RESULT OF THE USE OF ANY CONTENT MADE AVAILABLE THROUGH THE SERVICES, INCLUDING BUT NOT LIMITED TO THE LOSS BY A USER OF THE CONTROL OVER HIS/HER WALLET; (II) PERSONAL INJURY OR PROPERTY DAMAGE, OF ANY NATURE WHATSOEVER, RESULTING FROM ANY ACCESS OR USE OF THE SERVICES; (III) UNAUTHORIZED ACCESS OR USE OF ANY SECURE SERVER OR DATABASE IN OUR CONTROL, OR THE USE OF ANY INFORMATION OR DATA STORED THEREIN; (IV) INTERRUPTION OR CESSATION OF FUNCTION RELATED TO THE SERVICE; (V) UNUSUAL OR ILLEGAL USE OF THE SERVICES OFFERED, BY A THIRD-PARTY OR A USER, INCLUDING IN THE CONTEXT OF TRANSACTIONS CARRIED OUT THROUGH POOLS; (VI) THE PRICES DISPLAYED ON THE WEBSITE, PROVIDED BY THIRD PARTY SERVICES; (VII) ANY IMMATERIAL, INDIRECT, SUCCESSIVE, SPECIAL, EXEMPLARY, PUNITIVE OR CONSEQUENTIAL DAMAGE, ARISING OUT OF OR IN CONNECTION WITH THESE TERMS SUCH AS A COMMERCIAL LOSS, LOSS OF PROFIT OR COMMERCIAL DISORDER; (VIII) EXTERNAL EVENTS OUTSIDE OF COMPANY’S CONTROL, INCLUDING BUT NOT LIMITED TO BREAKDOWNS OR MALFUNCTIONS OF THE SERVICES NOT CAUSED BY COMPANY (CYBERATTACK), BUGS, VIRUSES, REQUIREMENTS AND RISKS INHERENT TO THE PROTOCOL (IN PARTICULAR TECHNICAL FAILURES AND VOLATILITY OF ETH PRICES), (IX) REGULATIONS IN FORCE AND MANDATORY IN THE COUNTRY OF THE USER; AND (X) FORCE MAJEURE EVENTS, WHETHER BASED ON A THEORY OF NEGLIGENCE, CONTRACT, TORT, STRICT LIABILITY, OR OTHERWISE, AND EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+Indemnification
+You agree to indemnify and hold Laita Labs and our affiliates, subsidiaries, and our and their officers, directors, managers, employees, agents, representatives, suppliers, and contractors harmless from any losses, damages, judgments, fines, and costs, including legal fees and expenses, in connection with any claims arising out of or relating to (a) your use of the Services, (b) your violation of any law, rule, statute, regulation, by-law, order, protocol, code, decree, or another directive, requirement, or guideline, (c) any misrepresentations by you, or (d) your breach of these Terms of Use.
+You acknowledge and agree that it is your sole responsibility to evaluate and select the Third Party Service you choose to operate the relevant Service. The Service is solely an intermediary, acting as an aggregation platform for Third Party Services, that transmits the User's orders to such Third Party Services. Company cannot be held liable for any losses resulting from the operation of a Third Party Service.
+No Professional or Fiduciary Duties
+All information provided in connection with your access and use of the Services is for informational purposes only and should not be construed as professional, financial, or legal advice. You should not take, or refrain from taking, any action based on any information contained in the Services or any other information that we make available at any time. Before you make any financial, legal, or other decisions involving the Services, you should seek independent professional advice from an individual who is licensed and qualified in the area for which such advice would be appropriate. These Terms of Use are not intended to, and do not, create or impose any fiduciary duties on us. You further agree that the only duties and obligations that we owe you are those set out expressly in these Terms of Use.
+Intellectual Property
+All Intellectual Property rights on the Website and on any related software, computer code and programs, systems architecture, structure, organization, and source code, whether based on blockchain technology, excluding the Users content, constitute the sole and exclusive property of Company and/or its licensors or suppliers, as applicable.
+Subject to Your strict compliance with these Terms, Company grants You a worldwide, royalty-free, limited, revocable, non-transferable, and revocable license to use the Service. As a result, You shall use the Service for Your personal purposes only, excluding notably any commercial use, total or partial, without the prior written consent of Company.
+Company is the Services’ database producer. Any total or partial representation and/or reproduction and/or extraction and/or use for other purposes of the Website and Services’ content protected by intellectual property rights (including database rights), regardless of the framework and medium used, without the express, prior and written authorization of Company is prohibited.
+These Terms of Use permit you to use the Services for your lawful use only. You must not copy, reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material of the Services, except that your computer may temporarily store copies of such materials in RAM incidental to your accessing and viewing those materials.
+The Velora name, the Velora logo, and all related names, logos, product and service names, designs, and slogans are trademarks of Laita Labs or its affiliates or licensors. You must not use such marks without prior written permission. All other names, logos, product and service names, designs, and slogans on the Website or otherwise displayed through the Services are the trademarks of their respective owners.
+You agree to indemnify, defend, and hold harmless Company, its affiliates, employees, and agents, from and against any and all costs, liabilities, losses, and expenses (including without limitation reasonable attorneys’ fees) resulting from any claim, suit, action, or proceeding brought by any Third-Party against Company, its affiliates, employees or agents alleging Your infringement or misappropriation of any Intellectual Property Rights relating to the delivery or use of the Services.
+Privacy Policy
+For Your perfect information, please note that information enabling to identify You directly or indirectly (hereinafter “Personal Data”) is processed by Company in relation to Your use of the Website, including by means of cookies.
+To know more about the processing of Personal Data implemented by Company, as well as its use of cookies, please refer to the Privacy Policy accessible on the Website.
+Hyperlinks
+The Service may contain links or content from Third-Party Services that may be subject to different terms and conditions and privacy obligations.
+Company shall not be liable for the availability or accuracy of such Third-Party Services or the content, products, or services available from them.
+Links to such Third-Party Services are not an endorsement by the Service of such services.
+In this respect, please note that Company has no control over and does not monitor the content published by these Third-Parties. Consequently, Company shall not be held liable for any content published by any Third-Party whatsoever.
+Links redirecting to the Service are only authorized subject to Company's prior written consent.
+Amendment
+Company reserves the right to modify or stop the accessibility of all or part of the Services and/or the Website and/or the applications at any time.
+We may change these Terms of Use to reflect: (a) changes in applicable laws; (b) regulatory or security requirements; (c) relevant guidance or codes of practice; (d) technical alterations to the Services; (e) improvements for clarity and consistency; or (f) any other reason within our sole discretion. If changes are made to these Terms of Use, we will update the date listed for “Last Modified” at the top of these Terms of Use. We will treat your continued use of the Services as acceptance of any changes made to the Terms of Use from the previous version. If you do not agree with the changes, you should stop using the Services.
+Non-waiver
+Failure by Company at any time to require the other party to perform any of its obligations under these Terms will not affect the right of Company to request their execution thereafter.
+The nullity of any Section of these Terms does not affect the validity and the obligation to respect the other Section.
+Applicable Law and BINDING ARBITRATION
+These Terms and any Dispute arising out of or related to these Terms or your use of the Services shall be governed by and construed in accordance with, in all respects, including as to its validity, interpretation, and effect, the laws of the British Virgin Islands, without giving effect to its principles or rules of conflict of laws to the extent such principles or rules are not mandatorily applicable by statute and would permit or require the application of the laws of another jurisdiction.
+Any dispute, controversy, or claim arising out of or relating to these Terms, or the breach, termination, or invalidity thereof, or your use of the Services in any respect, shall be adjudicated by arbitration in accordance with the BVI International Arbitration Centre Arbitration Rules. The number of arbitrators shall be three. The place of arbitration shall be Road Town, Tortola, British Virgin Islands, unless the Parties agree otherwise. The language to be used in the arbitral proceedings shall be English.
+Compliance with Laws
+You represent and warrant that your use of the Services will comply with all applicable laws, rules and regulations, including, without limitation, data privacy and protection laws, anti-money laundering, anti-terrorism, anti-corruption, export control, and economic sanctions laws and regulations. If you are subject to regulations and you use the Services, we will not be liable if the Services do not meet those requirements.
+Termination
+We may terminate or suspend your access to the Services immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of these Terms of Use. Fees paid by you in relation to the Services are non-refundable. In the case of a cancellation for breach of these Terms of Use, fees will not be refunded. If terminated for any other reason, we may or may not, at our sole discretion, return any fees paid by or on behalf of you at the time of termination with or without reason or justification.
+All provisions of these Terms of Use which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity, and limitations of liability
+Discover more about Velora
+Developed by the team behind ParaSwap, Velora is the most comprehensive and flexible protocol for Decentralized Finance (DeFi). It uses decentralized intents to provide advanced features such as limit orders, super hooks, and chain-abstracted swaps.
+Swap ETH to USDC
+Swap USDC to USDT
+Swap ETH to WBTC
+Integrations
+Blog
+Brand Kit
+Explorer
+Terms Of Use
+Privacy Policy
+Trade
+Dashboard
+Docs
+X
+Telegram
+GitHub
+2026 Velora® All Rights Reserved
+Developed by the team behind ParaSwap, Velora is the most comprehensive and flexible protocol for Decentralized Finance (DeFi). It uses decentralized intents to provide advanced features such as limit orders, super hooks, and chain-abstracted swaps.
+Swap ETH to USDC
+Swap USDC to USDT
+Swap ETH to WBTC
+Integrations
+Blog
+Brand Kit
+Explorer
+Terms Of Use
+Privacy Policy
+Trade
+Dashboard
+Docs
+X
+Telegram
+GitHub
+2026 Velora® All Rights Reserved
+Developed by the team behind ParaSwap, Velora is the most comprehensive and flexible protocol for Decentralized Finance (DeFi). It uses decentralized intents to provide advanced features such as limit orders, super hooks, and chain-abstracted swaps.
+Swap ETH to USDC
+Swap USDC to USDT
+Swap ETH to WBTC
+Integrations
+Blog
+Brand Kit
+Explorer
+Terms Of Use
+Privacy Policy
+Trade
+Dashboard
+Docs
+X
+Telegram
+GitHub
+2026 Velora® All Rights Reserved

@@ -1,0 +1,545 @@
+{
+  "kind": "api",
+  "generated_at": "2026-10-28T22:57:18Z",
+  "meta": {
+    "oracle_preflight": {
+      "rpc": "https://ethereum-rpc.publicnode.com",
+      "sdn_address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "sdn_sanctioned": true,
+      "control_address": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+      "control_sanctioned": false
+    }
+  },
+  "results": [
+    {
+      "check": "aave/screening-api",
+      "interface": "aave",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Aave's /api/preflight-compliance answers result:false for the sanctioned wallet and true for the control",
+      "outcome": "pass",
+      "countries": [],
+      "source": "https://app.aave.com/api/preflight-compliance/?address={address}",
+      "checked_at": "2026-10-28T22:57:07Z",
+      "responses": {
+        "sdn": {
+          "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "url": "https://app.aave.com/api/preflight-compliance/?address=0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "{\"result\":false,\"nextCheck\":\"2026-10-29T00:57:06.060323073Z\"}"
+        },
+        "control": {
+          "address": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "url": "https://app.aave.com/api/preflight-compliance/?address=0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "{\"result\":true,\"nextCheck\":\"2026-10-29T00:57:07.093757592Z\"}"
+        }
+      },
+      "found": [
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "sdn: status: 200"
+        },
+        {
+          "pattern": "\"result\":\\s*false",
+          "line": 8,
+          "text": "sdn: body: {\"result\":false,\"nextCheck\":\"2026-10-29T00:57:06.060323073Z\"}"
+        },
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "control: status: 200"
+        },
+        {
+          "pattern": "\"result\":\\s*true",
+          "line": 8,
+          "text": "control: body: {\"result\":true,\"nextCheck\":\"2026-10-29T00:57:07.093757592Z\"}"
+        }
+      ],
+      "evidence_file": "out/evidence/aave/screening-api.txt"
+    },
+    {
+      "check": "hyperliquid/screening-legalcheck",
+      "interface": "hyperliquid",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Hyperliquid's info API legalCheck, which the app calls for the connected wallet, answers userAllowed:false for the sanctioned wallet and true for the control (the app then shows the 'flagged by Chainalysis' banner and disables actions)",
+      "outcome": "pass",
+      "countries": [],
+      "source": "POST https://api.hyperliquid.xyz/info",
+      "checked_at": "2026-10-28T22:57:07Z",
+      "responses": {
+        "sdn": {
+          "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "url": "https://api.hyperliquid.xyz/info",
+          "method": "POST",
+          "status": 200,
+          "error": null,
+          "answer": "{\"acceptedTerms\":false,\"userAllowed\":false,\"restrictions\":\"n\"}"
+        },
+        "control": {
+          "address": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "url": "https://api.hyperliquid.xyz/info",
+          "method": "POST",
+          "status": 200,
+          "error": null,
+          "answer": "{\"acceptedTerms\":false,\"userAllowed\":true,\"restrictions\":\"n\"}"
+        }
+      },
+      "found": [
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "sdn: status: 200"
+        },
+        {
+          "pattern": "\"userAllowed\":\\s*false",
+          "line": 6,
+          "text": "sdn: body: {\"acceptedTerms\":false,\"userAllowed\":false,\"restrictions\":\"n\"}"
+        },
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "control: status: 200"
+        },
+        {
+          "pattern": "\"userAllowed\":\\s*true",
+          "line": 6,
+          "text": "control: body: {\"acceptedTerms\":false,\"userAllowed\":true,\"restrictions\":\"n\"}"
+        }
+      ],
+      "evidence_file": "out/evidence/hyperliquid/screening-legalcheck.txt"
+    },
+    {
+      "check": "jumper/screening-lifi-quote",
+      "interface": "jumper",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "LI.FI quote API (used by Jumper) refuses a quote for the SDN wallet (HTTP 422) and returns one for the control",
+      "outcome": "pass",
+      "countries": [],
+      "source": "https://li.quest/v1/quote?fromChain=1&toChain=1&fromToken=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&toToken=0xdAC17F958D2ee523a2206206994597C13D831ec7&fromAmount=1000000000&fromAddress={address}",
+      "checked_at": "2026-10-28T22:57:09Z",
+      "responses": {
+        "sdn": {
+          "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "url": "https://li.quest/v1/quote?fromChain=1&toChain=1&fromToken=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&toToken=0xdAC17F958D2ee523a2206206994597C13D831ec7&fromAmount=1000000000&fromAddress=0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "method": "GET",
+          "status": 422,
+          "error": null,
+          "answer": "{\"message\":\"None of the available routes could successfully generate a tx\",\"code\":1001}"
+        },
+        "control": {
+          "address": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "url": "https://li.quest/v1/quote?fromChain=1&toChain=1&fromToken=0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48&toToken=0xdAC17F958D2ee523a2206206994597C13D831ec7&fromAmount=1000000000&fromAddress=0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "{\"type\":\"lifi\",\"id\":\"4894dc8b-28c7-4ee8-b184-ff32595815d8:0\",\"tool\":\"nordstern\",\"toolDetails\":{\"key\":\"nordster…"
+        }
+      },
+      "found": [
+        {
+          "pattern": "^status: 422$",
+          "line": 2,
+          "text": "sdn: status: 422"
+        },
+        {
+          "pattern": "None of the available routes",
+          "line": 7,
+          "text": "sdn: body: {\"message\":\"None of the available routes could successfully generate a tx\",\"code\":1001}"
+        },
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "control: status: 200"
+        },
+        {
+          "pattern": "^body: \\{\"type\":\"lifi\"",
+          "line": 7,
+          "text": "control: …eader cf-ray: a51d89aedfdee4b9-OTP header content-type: application/json body: {\"type\":\"lifi\",\"id\":\"4894dc8b-28c7-4ee8-b184-ff32595815d8:0\",\"tool\":\"nordstern\",\"toolDetails\":{\"key\":\"nordstern\",\"name\":\"Nordstern Finance\",\"…"
+        }
+      ],
+      "evidence_file": "out/evidence/jumper/screening-lifi-quote.txt"
+    },
+    {
+      "check": "kyberswap/screening-blackjack",
+      "interface": "kyberswap",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Blackjack API answers blacklisted:true for the sanctioned wallet and false for the control",
+      "outcome": "pass",
+      "countries": [],
+      "source": "https://blackjack.kyberswap.com/api/v1/check?wallets={address}",
+      "checked_at": "2026-10-28T22:57:10Z",
+      "responses": {
+        "sdn": {
+          "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "url": "https://blackjack.kyberswap.com/api/v1/check?wallets=0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "…1512996dC57EB0615e2383E2f96\", \"blacklisted\":true, \"updatedMs\":\"1702373842393\", \"expiryMs\":\"4102444799999\", \"re…"
+        },
+        "control": {
+          "address": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "url": "https://blackjack.kyberswap.com/api/v1/check?wallets=0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "…4C9b9A09f33669435E7Ef1BeAed\", \"blacklisted\":false, \"updatedMs\":\"1791739723724\", \"reason\":4}]}}"
+        }
+      },
+      "found": [
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "sdn: status: 200"
+        },
+        {
+          "pattern": "\"blacklisted\":\\s*true",
+          "line": 7,
+          "text": "sdn: body: {\"code\":0, \"message\":\"OK\", \"data\":{\"wallets\":[{\"wallet\":\"0x098B716B8Aaf21512996dC57EB0615e2383E2f96\", \"blacklisted\":true, \"updatedMs\":\"1702373842393\", \"expiryMs\":\"4102444799999\", \"reason\":2}]}}"
+        },
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "control: status: 200"
+        },
+        {
+          "pattern": "\"blacklisted\":\\s*false",
+          "line": 7,
+          "text": "control: body: {\"code\":0, \"message\":\"OK\", \"data\":{\"wallets\":[{\"wallet\":\"0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed\", \"blacklisted\":false, \"updatedMs\":\"1791739723724\", \"reason\":4}]}}"
+        }
+      ],
+      "evidence_file": "out/evidence/kyberswap/screening-blackjack.txt"
+    },
+    {
+      "check": "lido-stvaults/screening-api",
+      "interface": "lido-stvaults",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "stVaults /api/validation answers isValid:false for the sanctioned wallet and true for the control",
+      "outcome": "pass",
+      "countries": [],
+      "source": "https://stvaults.lido.fi/api/validation?address={address}",
+      "checked_at": "2026-10-28T22:57:11Z",
+      "responses": {
+        "sdn": {
+          "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "url": "https://stvaults.lido.fi/api/validation?address=0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "{\"isValid\":false}"
+        },
+        "control": {
+          "address": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "url": "https://stvaults.lido.fi/api/validation?address=0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "{\"isValid\":true}"
+        }
+      },
+      "found": [
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "sdn: status: 200"
+        },
+        {
+          "pattern": "\"isValid\":\\s*false",
+          "line": 7,
+          "text": "sdn: body: {\"isValid\":false}"
+        },
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "control: status: 200"
+        },
+        {
+          "pattern": "\"isValid\":\\s*true",
+          "line": 7,
+          "text": "control: body: {\"isValid\":true}"
+        }
+      ],
+      "evidence_file": "out/evidence/lido-stvaults/screening-api.txt"
+    },
+    {
+      "check": "lido/screening-api",
+      "interface": "lido",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Lido's /api/validation answers isValid:false for the sanctioned wallet and true for the control",
+      "outcome": "pass",
+      "countries": [],
+      "source": "https://stake.lido.fi/api/validation?address={address}",
+      "checked_at": "2026-10-28T22:57:12Z",
+      "responses": {
+        "sdn": {
+          "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "url": "https://stake.lido.fi/api/validation?address=0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "{\"isValid\":false}"
+        },
+        "control": {
+          "address": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "url": "https://stake.lido.fi/api/validation?address=0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "{\"isValid\":true}"
+        }
+      },
+      "found": [
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "sdn: status: 200"
+        },
+        {
+          "pattern": "\"isValid\":\\s*false",
+          "line": 7,
+          "text": "sdn: body: {\"isValid\":false}"
+        },
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "control: status: 200"
+        },
+        {
+          "pattern": "\"isValid\":\\s*true",
+          "line": 7,
+          "text": "control: body: {\"isValid\":true}"
+        }
+      ],
+      "evidence_file": "out/evidence/lido/screening-api.txt"
+    },
+    {
+      "check": "relay/screening-api",
+      "interface": "relay",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Relay's public endpoint /sanctioned/{address} answers sanctioned:true for the SDN wallet and false for the control",
+      "outcome": "pass",
+      "countries": [],
+      "source": "https://api.relay.link/sanctioned/{address}",
+      "checked_at": "2026-10-28T22:57:13Z",
+      "responses": {
+        "sdn": {
+          "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "url": "https://api.relay.link/sanctioned/0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "{\"sanctioned\":true}"
+        },
+        "control": {
+          "address": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "url": "https://api.relay.link/sanctioned/0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "{\"sanctioned\":false}"
+        }
+      },
+      "found": [
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "sdn: status: 200"
+        },
+        {
+          "pattern": "\"sanctioned\":\\s*true",
+          "line": 5,
+          "text": "sdn: body: {\"sanctioned\":true}"
+        },
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "control: status: 200"
+        },
+        {
+          "pattern": "\"sanctioned\":\\s*false",
+          "line": 5,
+          "text": "control: body: {\"sanctioned\":false}"
+        }
+      ],
+      "evidence_file": "out/evidence/relay/screening-api.txt"
+    },
+    {
+      "check": "sky/screening-api",
+      "interface": "sky",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Sky compliance API /address/status answers addressAllowed:false for the sanctioned wallet and true for the control",
+      "outcome": "pass",
+      "countries": [],
+      "source": "https://api.sky.money/address/status?address={address}",
+      "checked_at": "2026-10-28T22:57:16Z",
+      "responses": {
+        "sdn": {
+          "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "url": "https://api.sky.money/address/status?address=0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "{\"addressAllowed\":false}"
+        },
+        "control": {
+          "address": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "url": "https://api.sky.money/address/status?address=0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "{\"addressAllowed\":true}"
+        }
+      },
+      "found": [
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "sdn: status: 200"
+        },
+        {
+          "pattern": "\"addressAllowed\":\\s*false",
+          "line": 7,
+          "text": "sdn: body: {\"addressAllowed\":false}"
+        },
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "control: status: 200"
+        },
+        {
+          "pattern": "\"addressAllowed\":\\s*true",
+          "line": 7,
+          "text": "control: body: {\"addressAllowed\":true}"
+        }
+      ],
+      "evidence_file": "out/evidence/sky/screening-api.txt"
+    },
+    {
+      "check": "sushiswap/screening-trm-api",
+      "interface": "sushiswap",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "The TRM Labs public screening API called by the Sushi frontend answers isSanctioned:true for the sanctioned wallet and false for the control",
+      "outcome": "pass",
+      "countries": [],
+      "source": "POST https://api.trmlabs.com/public/v1/sanctions/screening",
+      "checked_at": "2026-10-28T22:57:17Z",
+      "responses": {
+        "sdn": {
+          "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "url": "https://api.trmlabs.com/public/v1/sanctions/screening",
+          "method": "POST",
+          "status": 201,
+          "error": null,
+          "answer": "…21512996dC57EB0615e2383E2f96\",\"isSanctioned\":true}]"
+        },
+        "control": {
+          "address": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "url": "https://api.trmlabs.com/public/v1/sanctions/screening",
+          "method": "POST",
+          "status": 201,
+          "error": null,
+          "answer": "…94C9b9A09f33669435E7Ef1BeAed\",\"isSanctioned\":false}]"
+        }
+      },
+      "found": [
+        {
+          "pattern": "^status: 20[01]$",
+          "line": 2,
+          "text": "sdn: status: 201"
+        },
+        {
+          "pattern": "\"isSanctioned\":\\s*true",
+          "line": 7,
+          "text": "sdn: body: [{\"address\":\"0x098B716B8Aaf21512996dC57EB0615e2383E2f96\",\"isSanctioned\":true}]"
+        },
+        {
+          "pattern": "^status: 20[01]$",
+          "line": 2,
+          "text": "control: status: 201"
+        },
+        {
+          "pattern": "\"isSanctioned\":\\s*false",
+          "line": 7,
+          "text": "control: body: [{\"address\":\"0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed\",\"isSanctioned\":false}]"
+        }
+      ],
+      "evidence_file": "out/evidence/sushiswap/screening-trm-api.txt"
+    },
+    {
+      "check": "synapse/screening-api",
+      "interface": "synapse",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Synapse screener answers risk:true for the sanctioned wallet and risk:false for the control",
+      "outcome": "pass",
+      "countries": [],
+      "source": "https://screener.omnirpc.io/fe/address/{address}",
+      "checked_at": "2026-10-28T22:57:18Z",
+      "responses": {
+        "sdn": {
+          "address": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "url": "https://screener.omnirpc.io/fe/address/0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "{\"risk\":true}"
+        },
+        "control": {
+          "address": "0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "url": "https://screener.omnirpc.io/fe/address/0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed",
+          "method": "GET",
+          "status": 200,
+          "error": null,
+          "answer": "{\"risk\":false}"
+        }
+      },
+      "found": [
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "sdn: status: 200"
+        },
+        {
+          "pattern": "\"risk\":\\s*true",
+          "line": 7,
+          "text": "sdn: body: {\"risk\":true}"
+        },
+        {
+          "pattern": "^status: 200$",
+          "line": 2,
+          "text": "control: status: 200"
+        },
+        {
+          "pattern": "\"risk\":\\s*false",
+          "line": 7,
+          "text": "control: body: {\"risk\":false}"
+        }
+      ],
+      "evidence_file": "out/evidence/synapse/screening-api.txt"
+    }
+  ]
+}

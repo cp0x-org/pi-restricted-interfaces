@@ -1,0 +1,18 @@
+check: polymarket/geo-us-live
+about: Live: /api/geoblock answers blocked=true to a visitor from the US
+source: https://polymarket.com/api/geoblock from US
+checked_at: 2026-10-28T23:07:55Z
+http_status: 200
+via: proxy
+vantage: {"requested": "US", "seen": ["US", "US", "US"], "org": "AS701 Verizon Business", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
+--------------------------------------------------------------------------------
+{"requested": "US", "seen": ["US", "US", "US"], "org": "AS701 Verizon Business", "verified_by": ["api.country.is", "ipinfo.io", "ifconfig.co"], "verified": true, "proxy": "http://gate.decodo.com:7000", "proxy_type": "residential"}
+
+request: GET https://polymarket.com/api/geoblock
+status: 200
+final_url: https://polymarket.com/api/geoblock
+header server: cloudflare
+header cf-ray: a51d99770c322111-EWR
+header content-type: application/json
+header x-vercel-id: iad1::iad1::rq5tr-1793228875377-2dea3887aa3b
+body: {"blocked":true,"ip":"74.105.216.243","country":"US","region":"NJ"}

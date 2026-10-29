@@ -1,7 +1,7 @@
 check: lido-stvaults/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/lidofinance/staking-vault-widget/tree/f258fb091d3ca01e5baf98128d01818e407a7877
-checked_at: 2026-10-11T21:03:33Z
+checked_at: 2026-10-28T22:36:13Z
 fetched: https://codeload.github.com/lidofinance/staking-vault-widget/tar.gz/f258fb091d3ca01e5baf98128d01818e407a7877
 sha256: 63a8bbdfacbe827b4b8683a9127e6b2edb9a82e2de28c9a825d975ccfd984e87
 --------------------------------------------------------------------------------

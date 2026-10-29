@@ -1,7 +1,7 @@
 check: sushiswap/feature-stock-countries
 about: Robinhood stock tokens: list of countries where they are not offered
 source: https://github.com/sushi-labs/sushiswap/blob/9520c07dabb425a404544cdaf91c8608dc4b197b/apps/web/src/lib/robinhood/restricted-countries.ts#L3
-checked_at: 2026-10-11T21:04:43Z
+checked_at: 2026-10-28T22:38:16Z
 fetched: https://raw.githubusercontent.com/sushi-labs/sushiswap/9520c07dabb425a404544cdaf91c8608dc4b197b/apps/web/src/lib/robinhood/restricted-countries.ts
 sha256: 56cf26c4766acd869f90abd5671224b05584d05e59ada739e69b846c44ee9459
 --------------------------------------------------------------------------------

@@ -1,9 +1,9 @@
 check: velora/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://velora.xyz/tos
-checked_at: 2026-10-11T21:18:47Z
+checked_at: 2026-10-28T22:56:30Z
 fetched: https://velora.xyz/tos
-sha256: eee02e17d70cb10a38182826ba336e923c4eb62455f5626e075cf4218eefcb68
+sha256: 5cc6c28bc5a960bfb744e111480e473d1e8522dd05f2163f9a4e776257ab008e
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

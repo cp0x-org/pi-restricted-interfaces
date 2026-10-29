@@ -1,7 +1,7 @@
 check: venus/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://app.venus.io/#/terms-of-use
-checked_at: 2026-10-11T21:18:47Z
+checked_at: 2026-10-28T22:56:30Z
 fetched: https://raw.githubusercontent.com/VenusProtocol/venus-protocol-interface/86ea4f7aefaaff6685aa97306fc05849a519f0f2/apps/evm/src/pages/TermsOfUse/index.tsx
 sha256: 085440143fc93c3d6628719b9de3ee499312a893adaed6c539cfcc54b78fbc65
 http_status: 200

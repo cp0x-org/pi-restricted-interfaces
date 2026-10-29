@@ -1,7 +1,7 @@
 check: frax/kyc-report
 about: LlamaRisk review: full KYC/KYB will be required for minting or redeeming through FraxNet bank and fiat rails
 source: https://llamarisk.com/research/pegkeeper-onboarding-frxusd
-checked_at: 2026-10-11T21:18:53Z
+checked_at: 2026-10-28T22:56:43Z
 fetched: https://llamarisk.com/research/pegkeeper-onboarding-frxusd
 sha256: 1d377090f1b7ccc19449b525a9c3c388aee2b7ddc769fb8999bb55af8e9bcf96
 http_status: 200

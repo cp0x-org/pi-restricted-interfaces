@@ -1,9 +1,9 @@
 check: ondo/feature-usdy-countries
 about: USDY eligibility: persons in the listed jurisdictions (and US persons) may not subscribe, acquire or redeem
 source: https://docs.ondo.finance/general-access-products/usdy/eligibility
-checked_at: 2026-10-11T21:18:55Z
+checked_at: 2026-10-28T22:56:48Z
 fetched: https://docs.ondo.finance/general-access-products/usdy/eligibility
-sha256: 2ff6de2aaa111e11fe8bd24edc9ed986fe60d0d6d13f2f2be8cb69ba91e23a2f
+sha256: 035cc5e74d654ce393f6685175a76f56203fbed6cf89b4281ad19a66dfce8b29
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
@@ -12,6 +12,8 @@ Documentation Index
 Fetch the complete documentation index at: /llms.txt
 Use this file to discover all available pages before exploring further.
 Skip to main content
+Assistant
+Responses are generated using AI and may contain mistakes.
 Ondo Finance home page
 Search...
 ⌘ K Ask Assistant ⌘ I
@@ -111,6 +113,7 @@ Cookies Policy
 Disclaimers
 Ondo Summit 2027 Terms
 On this page
+Back to top
 Jurisdiction-Based Prohibitions:
 Jurisdiction-Based Restrictions:
 USDY
@@ -198,8 +201,6 @@ Rebasing
 Important Notes
 x github
 Powered by This documentation is built and hosted on Mintlify, a developer documentation platform
-Assistant
-Responses are generated using AI and may contain mistakes.
 
 --- section the countries were read from ---
 any jurisdiction listed below ( “Prohibited Persons” ) are prohibited from subscribing for, acquiring or redeeming USDY tokens:

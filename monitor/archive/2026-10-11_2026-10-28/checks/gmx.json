@@ -1,0 +1,71 @@
+{
+  "id": "gmx",
+  "name": "GMX",
+  "targets": {
+    "app": "https://app.gmx.io",
+    "repo": {
+      "repo": "gmx-io/gmx-interface",
+      "ref": "d1708855da1aa085a1d4f17d4fa3ceb3cff1260c"
+    },
+    "terms": "https://gmx.io/terms-and-conditions",
+    "endpoints": [],
+    "terms_fallback": "https://github.com/gmx-io/gmx-interface/blob/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c/landing/src/pages/TermsAndConditions/TermsAndConditions.tsx"
+  },
+  "checks": [
+    {
+      "id": "no-geo-code",
+      "type": "code-scan",
+      "claim": "geo_site",
+      "status": "no",
+      "about": "No geo-IP lookup or country block in the frontend",
+      "source": {
+        "repo": "gmx-io/gmx-interface",
+        "ref": "d1708855da1aa085a1d4f17d4fa3ceb3cff1260c"
+      },
+      "absent": [
+        "api\\.country\\.is|ipapi\\.co|ipinfo\\.io|freeipapi|ip-api\\.com|cdn-cgi/trace|/geoip\\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country|req(uest)?\\.geo\\b"
+      ]
+    },
+    {
+      "id": "no-screening-code",
+      "type": "code-scan",
+      "claim": "screening",
+      "status": "no",
+      "about": "No wallet-screening call or sanctions list in the frontend",
+      "source": {
+        "repo": "gmx-io/gmx-interface",
+        "ref": "d1708855da1aa085a1d4f17d4fa3ceb3cff1260c"
+      },
+      "absent": [
+        "trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\\w-])|preflight-compliance|/address/status\\b|compliance/screen|/v\\d/check/"
+      ]
+    },
+    {
+      "id": "prod-no-geo",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "no",
+      "about": "Production JS of GMX: no geo-IP lookup or country block (the fiat on-ramp screen, whose payment provider says a payment method is not available in your region, is not counted)",
+      "source": {
+        "url": "https://app.gmx.io"
+      },
+      "absent": [
+        "api\\.country\\.is|ipapi\\.co|ipinfo\\.io|freeipapi|ip-api\\.com|cdn-cgi/trace|/geoip\\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country"
+      ],
+      "skip_scripts": "FiatOnramp"
+    },
+    {
+      "id": "prod-no-screening",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "no",
+      "about": "Production JS of GMX: no wallet-screening call or sanctions oracle",
+      "source": {
+        "url": "https://app.gmx.io"
+      },
+      "absent": [
+        "trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\\w-])|preflight-compliance|/address/status\\b|compliance/screen|/v\\d/check/"
+      ]
+    }
+  ]
+}

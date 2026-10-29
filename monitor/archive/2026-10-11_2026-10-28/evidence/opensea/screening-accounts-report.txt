@@ -1,0 +1,224 @@
+check: opensea/screening-accounts-report
+about: Press report (Mar 2022): Iranian accounts were deactivated, incl. artists living abroad
+source: https://www.artnews.com/art-news/news/opensea-deplatforms-iranian-users-us-sanctions-1234621105/
+checked_at: 2026-10-11T21:18:56Z
+fetched: https://www.artnews.com/art-news/news/opensea-deplatforms-iranian-users-us-sanctions-1234621105/
+sha256: 0595d5cdb831dcdf05072bdb57987d843bc4b652c773c0512b0304e883aa39bb
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+OpenSea Deplatforms Iranian Users in Compliance with U.S. Sanctions
+Skip to main content
+Follow Us
+Icon Link
+Plus Icon
+Icon Link
+Plus Icon
+Icon Link
+Plus Icon
+Icon Link
+Plus Icon
+Icon Link
+Plus Icon
+Icon Link
+Plus Icon
+Newsletters
+Plus Icon
+Click to Expand Search Input
+ARTnews
+Est. 1902
+Subscribe
+TO ART IN AMERICA
+Plus Icon
+Click to expand the Mega Menu
+News
+Market
+Artists
+ARTnews Recommends
+Top 200 Collectors
+Digital Issues
+ARTnews Awards
+Art in America
+Plus Icon
+Click to expand the Mega Menu
+Menu
+Read Next
+Julianne Moore’s West Village Home Features Work by Louise Bourgeois, Nan Goldin, and David Armstrong
+ARTnews
+Subscribe
+TO ART IN AMERICA
+Plus Icon
+Click to Expand Search Input
+Home
+ARTnews
+News
+OpenSea Deplatforms Iranian Users in Compliance with U.S. Sanctions: ‘I’ve Been Crying All Day’
+By
+Shanti Escalante-De Mattei
+Plus Icon
+Shanti Escalante-De Mattei
+More Stories by Shanti
+At Amant, ‘Sentient Earth’ Redirects the Corporate Gaze to Climate Change
+Net.Art Pioneer Olia Lialina on the Practice of Preservation
+In ‘Strange Rules,’ an Epic Show with a Bold Vision For What Counts as Art
+View All
+March 4, 2022 4:04pm
+OpenSea logo displayed on a phone screen.
+PHOTO BY JAKUB PORZYCKI/NURPHOTO VIA A
+The crypto has long been touted as a way to make business transactions outside the interference of international governments, but it became clear this week that the space has its limits this week. Over the past couple days, OpenSea , one of the main NFT marketplaces, has been deleting the accounts of users and collectors from Iran, a country that is currently under sanctions from the U.S., with no prior warning or explanation.
+Iranian artist Arefeh Norouzii noticed her account had been deplatformed yesterday when one of her followers told her that they had realized that her OpenSea profile was no longer active. Norouzii went to check and also found nothing there—her NFTs had vanished. While Norouzii can mint them again and sell them on other NFT platforms that have are not currently adhering to the U.S. sanctions, OpenSea is the biggest NFT platform, and selling her work on the site has constituted a large part of her income.
+Related Articles
+Foundation, a Prominent NFT Platform of the 2021 Boom, Shuts Down After Failed Sale
+Ex-Sotheby's CEO Tad Smith Banks on NFTs, Agrees to Buy Collectibles Platform Candy Digital
+“To be honest I’ve been crying all day,” Norouzii wrote in a direct message. “People told me not to worry and gave me hope that this is just a bug. It can’t be a bug, it’s centralization.” Previously, she had sold physical versions of art, but NFTs had changed her life and allowed her to transition to making art full time. Now, she’s uncertain of what the future holds.
+Previously, it was thought that the sanctions had only targeted users whose IP addresses pointed to locations within Iran, and several users suggested that blocked users could just use a VPN, which would mask their true location. However, it soon came out that several Iranian artists who live and work outside Iran were also included in the recent deplatforming, simply because they hold Iranian passports. Parin Heidari, an NFT artist who was highlighted by OpenSea as an “amazing women in the space” has been living outside of Iran for the past 13 years, and still found her account terminated.
+In a tweet on March 3, OpenSea wrote “We’re a US-based company and comply with US sanctions law, meaning we’re required to block people in places on the US sanctions lists from using OpenSea.” That statement did not explain how broadly it would apply its interpretation of who would qualify as being sanctioned under U.S. law.
+When asked for further comment, an OpenSea spokesperson shared the following statement with ARTnews : “OpenSea blocks users and territories on the U.S. sanctions list from using our services—including buying, selling, or transferring NFTs on OpenSea—and our Terms of Service explicitly prohibit sanctioned users or users in sanctioned territories from using our services. We have a zero tolerance policy for the use of our services by sanctioned individuals or entities and people located in sanctioned countries. If we find individuals to be in violation of our sanctions policy, we take swift action to ban the associated accounts.”
+This recent wave of deplatforming by OpenSea comes amid increasing global tensions in the wake of Russia’s invasion of Ukraine, which has caused numerous countries around the world to amplify their sanctions on oligarchs with close ties to Vladimir Putin. Yet it’s unclear why Iranian users, and not other countries on the U.S. sanctions list, were specifically targeted.
+The deplatforming has been greatly distressing to members of the NFT and crypto community. “No one wants to see artists caught between governments and politics,” said Farokh Sarmad, founder of the Web3 media company Rug Radio. “This is why we need true decentralization.”
+On Twitter, Sarmad has been using his large following to engender discussion on recent events and create support systems for affected artists. “We know OpenSea was forced to do this and sadly I won’t be surprised if more platforms are forced to comply,” he said. “But the NFT space has a lot of money and smart people, I’m sure we can figure this out.”
+Others have made the decision to stop using OpenSea in a show of solidarity. “I really can’t justify opensea’s decision now,” wrote NFT influencer Mondoir on Twitter. “They profited from everyone including those people who are now blocked from accessing the platform to become a multi billion dollar company. Their profit came from these very same people. This is not right.”
+Read More About:
+NFTs
+opensea
+Most-Read Stories
+Alex Margo Arden Gets Up Close and Personal With Amy…
+How Defunding the Arts Wrought Civic Disintegration
+Jeff Koons Appears to Be the 'Distinguished Collector'…
+Julianne Moore's West Village Home Features Work by Louise…
+Art in America
+The World's Premier Art Magazine since 1913. Subscribe today and save!
+Subscribe
+Sign Up
+ARTnews
+Sign Up for our Newsletters
+Email
+Subscribe Today
+Sign Up
+By providing your information, you agree to our Terms of Use and our Privacy Policy .
+We use vendors that may also process your information to help provide our services. // This site is protected by reCAPTCHA Enterprise and the Google Privacy Policy and Terms of Service apply.
+Newswire
+RobbReport
+The Soft Power of the Modern Corduroy Suit
+WWD
+Nordstrom Offers Rare Chance to Shop Out-of-Stock Reformation x Alexa Chung Pieces Online
+Sportico
+WNBA Finals Pairs League’s Most and Least Valuable Teams
+IndieWire
+‘The Social Reckoning’ Bombs with $5.5 Million Opening. Why Did Aaron Sorkin’s Facebook Follow-Up Fail at the Box Office?
+Art Media
+About Us
+Accessibility
+Advertise
+PMC Fashion & Luxury
+Legal
+Terms of Use
+Privacy Policy
+California Privacy Rights
+AdChoices
+EU Privacy Preferences
+Your Privacy Choices
+AdChoices
+Subscriber Support
+Subscribe to AiA Magazine
+Purchase Back Issues
+Contact Us
+Connect with Us
+Get our latest stories in the feed of your favorite networks
+Icon Link
+Instagram
+Icon Link
+Instagram
+Icon Link
+Instagram
+Icon Link
+Instagram
+Icon Link
+Instagram
+Icon Link
+Instagram
+Have a Tip?
+We want to hear from you! Send us a tip using our anonymous form.
+Send Us a Tip
+Sign Up
+Stay In The Know
+Subscribe to our newsletters below
+ARTnews
+Art In America Logo
+Icon Link
+Plus Icon
+ARTnews is a part of PMX Global, LLC, a subsidiary of Penske Media Corporation. © 2026 Art Media, LLC. All rights reserved.
+Powered by WordPress.com VIP
+Our Sites
+The American Pavilion
+ARTnews
+Art in America
+Artforum
+Art Week NYC
+Beauty Inc
+Billboard
+Deadline
+Dick Clark Productions
+The Dodo
+Eater
+Flow Space
+FN
+Gold Derby
+Golden Globes
+The Hollywood Reporter
+IndieWire
+Life is Beautiful
+Popsugar
+Punch
+SJ Denim
+Robb Report
+Rolling Stone
+SB Nation
+She Media
+She Knows
+Soaps
+Sourcing Journal
+Sportico
+Stylecaster
+SXSW
+Thrillist
+Variety
+The Verge
+VIBE
+WWD
+Close the menu
+Menu
+ARTnews
+Expand the sub menu
+News
+Market
+Artists
+Reviews
+Digital Issue
+ARTnews Awards
+ARTnews Recommends
+Art In America Logo
+Expand the sub menu
+Features
+Columns
+Reviews
+Interviews
+New Talent
+A.I.A. Guide
+Art Collectors
+Expand the sub menu
+Top 200 Collectors
+Browse the Top 200
+Subscriber Support
+Expand the sub menu
+Subscribe to AiA Magazine
+Purchase back issues
+Contact Us
+Partners
+Expand the sub menu
+Rusudan Petviashvili
+Tennoz Art Week
+Icon Link
+Plus Icon
+ARTnews is a part of PMX Global, LLC, a subsidiary of Penske Media Corporation. © 2026 Art Media, LLC. All rights reserved.
+ad

@@ -1,0 +1,73 @@
+check: superstate/feature-eligibility
+about: Superstate docs: funds only for Qualified Purchasers in supported countries; equities only in supported countries
+source: https://docs.superstate.com/introduction-to-superstate/onboarding
+checked_at: 2026-10-11T21:19:01Z
+fetched: https://docs.superstate.com/introduction-to-superstate/onboarding
+sha256: 4cb160db766d1e73600f55ccdf235e41147349550ec51648681920f78269a4de
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+Getting started | Superstate
+Superstate
+⌘ Ctrl k
+Superstate
+Superstate
+Welcome to Superstate
+Investors
+Getting started
+Required documents
+Investor portal
+Tokenized funds
+Tokenized equities
+Security
+Smart contracts
+API
+Issuers
+Opening Bell
+Integration Partners
+Onboarding API
+Direct Issuance Program
+Powered by GitBook
+On this page
+For the complete documentation index, see llms.txt . This page is also available as Markdown .
+Copy
+On this page
+Investors
+Getting started
+Sign up for Superstate to invest in both on-chain equities and Superstate funds.
+Create an account
+Visit superstate.com/register
+Provide your email and create a nickname for your organization
+Check your email, and click the link in the welcome email to confirm your account
+Fill out your name and create a password
+Add 2FA to secure your account (recommended)
+Eligibility
+Tokenized Equities : Available to all investors in supported countries
+Superstate Funds: Only available to Qualified Purchasers in supported countries with at least $5m in investable assets for individuals, or $25m for institutions.
+Supported countries for Superstate Funds
+United States, Australia, Bermuda, Bahamas, British Virgin Islands, Canada, Cayman Islands, Cyprus, France, Georgia, Germany, Gibraltar, Hong Kong, Italy, Ireland, Jersey, Luxembourg, Marshall Islands, Mexico, Panama, Poland, Seychelles, Singapore, Spain, Saint Kitts and Nevis, South Korea, Switzerland, United Arab Emirates, and United Kingdom.
+Please note that this list is updated regularly.
+Fund administrator created accounts
+Some shareholders will be onboarded directly by the fund administrator of a fund they have subscribed to outside of the Superstate portal. In those cases, the fund administrator may have already created a Superstate account for you.
+If an account was created for you, you can access it by going to Forgot Password and entering the same primary email address you used to register with the administrator (for CUSHY, that's Northern Trust). You'll then be prompted to create a password and set up 2FA, after which you can sign in.
+Applications
+Sign in to the Investor Portal and you'll be prompted to complete two types of applications:
+Investing Entity Application (required) : This application collects information about you as an individual investor or your entity, to verify your eligibility to access either tokenized equities or funds. For a list of documents that we require during this application, please see Required documents
+Fund Applications : Investors who submit proof of accredited investor status may apply to access tokenized funds like USTB or USCC. You may complete applications for each fund to verify your eligibility to invest. Depending on the fund, these applications are either completed directly in the Superstate portal, or from a third-party website of the fund issuer or admin.
+Application Review
+Once you've submitted your entity applications a review process will begin. All entity applications are evaluated based on compliance checks, anti-money laundering (AML) screening, and accreditation status.
+Fund applications are also reviewed carefully for eligibility. The status of fund applications submitted through Superstate can be found in the portal. For fund applications submitted outside of the Superstate portal, please reach out to the corresponding investment manager if you need more information or a status update.
+Following approval, you will receive an email containing the Investment Agreement for final review and signature. Once this is signed, you're ready to start investing.
+Entity Setup
+Before making your first investment, you'll need to configure your Allowlist and Payouts from the Settings page:
+Transaction defaults : Choose the default methods you’ll use to fund purchases and receive payouts.
+Allowlist : Choose the wallet addresses authorized to hold your tokenized equities or tokenized funds.
+Payout Destination : Choose the bank account or wallet address where you can receive payouts when redeeming eligible tokenized fund.
+Previous Welcome to Superstate
+Next Required documents
+Last updated 3 months ago
+Create an account
+Fund administrator created accounts
+Applications
+Application Review
+Entity Setup

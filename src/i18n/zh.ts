@@ -218,6 +218,7 @@ export const zh: Messages = {
     notFound: '未找到该界面',
     notFoundText: (id) => `目录中没有 ID 为“${id}”的界面。`,
     back: '返回监测页',
+    loading: '正在加载记录…',
     all: '全部界面',
     legacyTitle: '旧版界面',
     otherVersions: '该协议的其他版本',

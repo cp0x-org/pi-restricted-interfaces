@@ -1,0 +1,11 @@
+check: ens-legacy/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/ensdomains/ens-app/tree/1cc872b5738e811fc416e8fc6ca3671e3cc4454b
+checked_at: 2026-10-28T22:35:37Z
+fetched: https://codeload.github.com/ensdomains/ens-app/tar.gz/1cc872b5738e811fc416e8fc6ca3671e3cc4454b
+sha256: 80efd2acb78e68e0f8f1f852d51e198e988908e7312249494d9737ea05e485a3
+--------------------------------------------------------------------------------
+repository: https://github.com/ensdomains/ens-app/tree/1cc872b5738e811fc416e8fc6ca3671e3cc4454b
+files scanned: 250
+
+signals:

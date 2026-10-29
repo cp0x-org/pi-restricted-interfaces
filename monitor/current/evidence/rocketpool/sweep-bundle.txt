@@ -1,16 +1,16 @@
 check: rocketpool/sweep-bundle
 about: Production HTML and JavaScript of the official app, searched for access-restriction signals
 source: https://stake.rocketpool.net
-checked_at: 2026-10-11T21:12:01Z
+checked_at: 2026-10-28T22:47:59Z
 http_status: 200
 via: direct
 --------------------------------------------------------------------------------
 page: https://stake.rocketpool.net (HTTP 200)
 scripts (5):
-  https://stake.rocketpool.net/static/js/lib-vue.93579267b5.js  sha256=01544624389e4c7068e67d0c419ca28b9412f46588f78144df0e907e308b2a4b
-  https://stake.rocketpool.net/static/js/lib-router.2ca71fcee6.js  sha256=5077801d09d698f8f85e1fbdecddc0a1c9195c6a1891e8ca5abf3302c596fb89
-  https://stake.rocketpool.net/static/js/m.5d31880537.js  sha256=a0ec6e04b238be3534b3ce43975c2fe17e760f0cbcaf3b3d2ad36f2f85b5082f
-  https://stake.rocketpool.net/static/js/index.48ea5911ba.js  sha256=bfa8490328145af9538b78c73dfd3892206744b4712cf1ff8523de89efa2bd50
-  https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920  sha256=3e5bc7ca508f5d5aa7255341243840c8d2b70c8aea323800b51610df3f5a8a2c
+  https://stake.rocketpool.net/static/js/lib-vue.833d6dffd5.js  sha256=7899f06c7bcf54cb3872c9effc6b29be4c3c75feaca3ec259d04b3363d6fd143
+  https://stake.rocketpool.net/static/js/lib-router.d6a12b3f5b.js  sha256=8abc77a005db75b9f9d10af34d7ba57af6be9fe548f83c63da9bf7d7b3dd8007
+  https://stake.rocketpool.net/static/js/m.7436fe7dd2.js  sha256=4f08e57b828f4aa72c285777c0531fb1f3157d94c28c718703f90b12be0a7e08
+  https://stake.rocketpool.net/static/js/index.2f02b31b7c.js  sha256=9921256c834ef320c6cb8c54db78db5c3a9f8cbe6814e78719fc2ba953c529d2
+  https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092  sha256=637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e
 
 signals:

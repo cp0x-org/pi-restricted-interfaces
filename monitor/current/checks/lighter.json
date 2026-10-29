@@ -1,0 +1,46 @@
+{
+  "id": "lighter",
+  "name": "Lighter",
+  "targets": {
+    "app": "https://app.lighter.xyz",
+    "repo": null,
+    "terms": "https://lighter.xyz/terms",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "prod-geo-restriction",
+      "type": "bundle",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Production JS: the API error geo_restriction_not_allowed ('You are accessing Lighter from a restricted jurisdiction') and the geo-blocked banner",
+      "source": {
+        "url": "https://app.lighter.xyz"
+      },
+      "expect": [
+        "\"geo_restriction_not_allowed\":\"You are accessing Lighter from a restricted jurisdiction\\.\"",
+        "id:`geo-blocked`"
+      ]
+    },
+    {
+      "id": "geo-terms-list",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "tos_only",
+      "about": "Jurisdictions named in the Lighter Terms, which also log the IP to enforce access restrictions (documentation only until a per-country check confirms where the API block applies)",
+      "source": {
+        "url": "https://lighter.xyz/terms",
+        "kind": "terms"
+      },
+      "expect": [
+        "NOT AVAILABLE TO PERSONS OR ENTITIES WHO RESIDE IN",
+        "log your IP address through the Interface in order to enforce access restrictions"
+      ],
+      "section": {
+        "start": "NOT AVAILABLE TO PERSONS OR ENTITIES WHO RESIDE IN",
+        "end": "(?<=OR SYRIA\\.)"
+      },
+      "countries": "names"
+    }
+  ]
+}

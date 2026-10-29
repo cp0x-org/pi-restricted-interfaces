@@ -1,7 +1,7 @@
 check: eigenlayer/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://app.eigenlayer.xyz
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
@@ -42,7 +42,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "US-NY": {
+ "CA": {
   "app": {
    "status": 500,
    "final_url": "https://app.eigenlayer.xyz",
@@ -61,7 +61,45 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "CA-ON": {
+ "MX": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CO": {
   "app": {
    "status": 500,
    "final_url": "https://app.eigenlayer.xyz",
@@ -156,7 +194,83 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
+ "ES": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
  "PL": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SE": {
   "app": {
    "status": 500,
    "final_url": "https://app.eigenlayer.xyz",
@@ -183,8 +297,6 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "block text in the page",
    "title": null,
    "scripts": [
-    "/_next/static/9_NdioMygibuBzb3ewBxM/_buildManifest.js",
-    "/_next/static/9_NdioMygibuBzb3ewBxM/_ssgManifest.js",
     "/_next/static/chunks/2102-*.js",
     "/_next/static/chunks/5102-*.js",
     "/_next/static/chunks/8176-*.js",
@@ -193,7 +305,9 @@ checked_at: 2026-10-11T21:24:23Z
     "/_next/static/chunks/pages/_app-*.js",
     "/_next/static/chunks/pages/_restricted-*.js",
     "/_next/static/chunks/polyfills-*.js",
-    "/_next/static/chunks/webpack-*.js"
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/kjGhiJoSLiC474ekOf2nX/_buildManifest.js",
+    "/_next/static/kjGhiJoSLiC474ekOf2nX/_ssgManifest.js"
    ],
    "bytes": 2856,
    "redirects": [],
@@ -220,6 +334,158 @@ checked_at: 2026-10-11T21:24:23Z
   }
  },
  "AE": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SA": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MY": {
   "app": {
    "status": 500,
    "final_url": "https://app.eigenlayer.xyz",
@@ -276,7 +542,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "JP": {
+ "CN": {
   "app": {
    "status": 500,
    "final_url": "https://app.eigenlayer.xyz",
@@ -295,7 +561,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "BR": {
+ "KR": {
   "app": {
    "status": 500,
    "final_url": "https://app.eigenlayer.xyz",
@@ -314,7 +580,26 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "AR": {
+ "TW": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AU": {
   "app": {
    "status": 500,
    "final_url": "https://app.eigenlayer.xyz",
@@ -352,7 +637,26 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "VN": {
+ "ZA": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KE": {
   "app": {
    "status": 500,
    "final_url": "https://app.eigenlayer.xyz",
@@ -391,6 +695,385 @@ checked_at: 2026-10-11T21:24:23Z
   }
  },
  "GE": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "blocked",
+   "why": "block text in the page",
+   "title": null,
+   "scripts": [
+    "/_next/static/chunks/2102-*.js",
+    "/_next/static/chunks/5102-*.js",
+    "/_next/static/chunks/8176-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/_restricted-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/kjGhiJoSLiC474ekOf2nX/_buildManifest.js",
+    "/_next/static/kjGhiJoSLiC474ekOf2nX/_ssgManifest.js"
+   ],
+   "bytes": 2856,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "blocked",
+   "why": "block text in the page",
+   "title": null,
+   "scripts": [
+    "/_next/static/chunks/2102-*.js",
+    "/_next/static/chunks/5102-*.js",
+    "/_next/static/chunks/8176-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/_restricted-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/kjGhiJoSLiC474ekOf2nX/_buildManifest.js",
+    "/_next/static/kjGhiJoSLiC474ekOf2nX/_ssgManifest.js"
+   ],
+   "bytes": 2856,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "blocked",
+   "why": "block text in the page",
+   "title": null,
+   "scripts": [
+    "/_next/static/chunks/2102-*.js",
+    "/_next/static/chunks/5102-*.js",
+    "/_next/static/chunks/8176-*.js",
+    "/_next/static/chunks/framework-*.js",
+    "/_next/static/chunks/main-*.js",
+    "/_next/static/chunks/pages/_app-*.js",
+    "/_next/static/chunks/pages/_restricted-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js",
+    "/_next/static/kjGhiJoSLiC474ekOf2nX/_buildManifest.js",
+    "/_next/static/kjGhiJoSLiC474ekOf2nX/_ssgManifest.js"
+   ],
+   "bytes": 2856,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 500,
+   "final_url": "https://app.eigenlayer.xyz",
+   "state": "error",
+   "why": "HTTP 500",
+   "title": "Eigenlayer App",
+   "scripts": [
+    "/_next/static/chunks/178a4d11-*.js",
+    "/_next/static/chunks/9564-*.js",
+    "/_next/static/chunks/main-app-*.js",
+    "/_next/static/chunks/polyfills-*.js",
+    "/_next/static/chunks/webpack-*.js"
+   ],
+   "bytes": 11014,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ML": {
   "app": {
    "status": 500,
    "final_url": "https://app.eigenlayer.xyz",

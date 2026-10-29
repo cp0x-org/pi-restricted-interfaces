@@ -1,0 +1,64 @@
+{
+  "id": "synapse",
+  "name": "Synapse",
+  "targets": {
+    "app": "https://bridge.synapseprotocol.com",
+    "repo": {
+      "repo": "synapsecns/sanguine",
+      "ref": "7c8126288846909d65660c4018b042eb5a498d32"
+    },
+    "terms": "https://explorer.synapseprotocol.com/terms",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "screening-code",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "The bridge UI screens the wallet with screener.omnirpc.io and flags it on risk (or on error)",
+      "source": {
+        "repo": "synapsecns/sanguine",
+        "ref": "7c8126288846909d65660c4018b042eb5a498d32",
+        "path": "packages/synapse-interface/utils/screenAddress.ts"
+      },
+      "expect": [
+        "https://screener\\.omnirpc\\.io/fe/address/\\$\\{address\\}",
+        "if \\(risk\\)"
+      ]
+    },
+    {
+      "id": "screening-api",
+      "type": "api",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Synapse screener answers risk:true for the sanctioned wallet and risk:false for the control",
+      "source": {
+        "method": "GET",
+        "url": "https://screener.omnirpc.io/fe/address/{address}"
+      },
+      "expect_sdn": [
+        "^status: 200$",
+        "\"risk\":\\s*true"
+      ],
+      "expect_control": [
+        "^status: 200$",
+        "\"risk\":\\s*false"
+      ]
+    },
+    {
+      "id": "prod-screener",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Production JS: screener.omnirpc.io call and the riskDetected event",
+      "source": {
+        "url": "https://bridge.synapseprotocol.com"
+      },
+      "expect": [
+        "https://screener\\.omnirpc\\.io/fe/address/\\$\\{e\\}",
+        "riskDetected"
+      ]
+    }
+  ]
+}

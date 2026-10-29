@@ -1,9 +1,9 @@
 check: maple/geo-terms
 about: The Interface Terms allow IP-based geofencing of Prohibited Persons (not verified live)
 source: https://docs.maple.finance/legal/interface-terms-of-use-syrupusdc-and-syrupusdt
-checked_at: 2026-10-11T21:18:54Z
+checked_at: 2026-10-28T22:56:44Z
 fetched: https://docs.maple.finance/legal/interface-terms-of-use-syrupusdc-and-syrupusdt
-sha256: 23265a78a222d9983d6d600e5fdd99b8b30342420db73edcf3548901d6c17ef7
+sha256: c137b5de416387144a66438700ea4d7b9bea56d9095198ca248d273c7cc9c5a0
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
@@ -45,19 +45,17 @@ Research and Media
 Additional Resources
 Technical Resources
 Protocol Overview
-Security Overview: Maple Smart Contracts
-Maple Protocol Loans: Overview
-Maple Protocol Pools: Overview
+Releases
+Pools
 Strategies
-Withdrawal Managers
 Singletons
 Admin Functions
-Operations
+Security
 Crosschain Mint/Redeem
-Interfaces
-SYRUP Token
+Contract Interfaces
+SYRUP Token Contracts
 GraphQL API
-SDK
+JavaScript SDK
 Contact Us
 Get in touch
 Maple 1.0

@@ -1,7 +1,7 @@
 check: cowswap/screening-orderbook
 about: The orderbook backend rejects banned users: hardcoded list + Chainalysis oracle + Hermod (zeroShadow)
 source: https://github.com/cowprotocol/services/blob/a9c2f4ebddd75c9b2b0b0cab980479468adcbe0f/crates/order-validation/src/banned/mod.rs#L1
-checked_at: 2026-10-11T21:04:38Z
+checked_at: 2026-10-28T22:38:01Z
 fetched: https://raw.githubusercontent.com/cowprotocol/services/a9c2f4ebddd75c9b2b0b0cab980479468adcbe0f/crates/order-validation/src/banned/mod.rs
 sha256: 94b93592af3c09162f6f2ba7ee3c956ebf8d2b93bbe6fc2dfb0b6c54ed209879
 --------------------------------------------------------------------------------

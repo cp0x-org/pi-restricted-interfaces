@@ -1,9 +1,9 @@
 check: gtrade/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://gains.trade/terms-of-service
-checked_at: 2026-10-11T21:17:44Z
+checked_at: 2026-10-28T22:54:44Z
 fetched: https://gains.trade/terms-of-service
-sha256: a98e72e59bc8af0c41ce25d3ef2214053b3ab83075aae8ad0ffb7d45fe71b8fc
+sha256: 165e223db4f6b428b45c3e6814c3787e94ad1fa7fb92045bdf5d9cc53b3b5205
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
@@ -25,8 +25,7 @@ User is not, (and, if User is an entity, User is not owned or controlled by any 
 
 --- full text ---
 Gains Trade Portfolio Earn Stats More
-Mobile App NEW
-GNS Token
+Mobile App Soon
 TERMS OF SERVICE
 Last updated November 1, 2023
 ATTENTION: USE OF THE SITE FROM OR IN THE UNITED STATES OR UNITED STATES TERRITORIES, OR BY PERSONS WHO ARE US PERSONS OR CURRENTLY OR ORDINARILY LOCATED OR RESIDENT IN THE UNITED STATES OR A UNITED STATES TERRITORY, IS STRICTLY PROHIBITED, REGARDLESS OF THE USER’S IP ADDRESS. UTILIZING A VIRTUAL PRIVATE NETWORK OR OTHER METHOD TO CONCEAL A USER’S UNITED STATES RESIDENCE IS ALSO STRICTLY PROHIBITED AND MAY RESULT IN PERMANENT BLOCKING OF USE OF THE SITE IN CONNECTION WITH BLOCKCHAIN ADDRESSES SUSPECTED OF BEING TIED TO A UNITED STATES RESIDENCE. BY ACCESSING OR USING THIS SITE, THE USER REPRESENTS AND WARRANTS THAT THEY ARE NOT A U.S. PERSON AS DEFINED BY ANY RELEVANT U.S. LAWS AND REGULATIONS. SEE SECTION 5.4 FOR FURTHER DETAIL

@@ -1,7 +1,7 @@
 check: maple/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://app.maple.finance
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
@@ -12,7 +12,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "HTTP 403 anti-bot challenge",
    "title": "Attention Required! | Cloudflare",
    "scripts": [],
-   "bytes": 4876,
+   "bytes": 4875,
    "redirects": [],
    "server": "cloudflare"
   }
@@ -25,7 +25,462 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "HTTP 403 anti-bot challenge",
    "title": "Attention Required! | Cloudflare",
    "scripts": [],
+   "bytes": 4851,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4851,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MX": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4852,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4851,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CO": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4851,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4851,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ES": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
    "bytes": 4849,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4851,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4849,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4851,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4849,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SA": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4849,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4851,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4849,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4852,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4851,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4851,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CN": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4852,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KR": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TW": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4852,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4849,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ZA": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4851,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4848,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4852,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
    "redirects": [],
    "server": "cloudflare"
   }
@@ -56,7 +511,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "GB": {
+ "RU": {
   "app": {
    "status": 403,
    "final_url": "https://app.maple.finance",
@@ -64,51 +519,12 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "HTTP 403 anti-bot challenge",
    "title": "Attention Required! | Cloudflare",
    "scripts": [],
-   "bytes": 4850,
+   "bytes": 4549,
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "DE": {
-  "app": {
-   "status": 403,
-   "final_url": "https://app.maple.finance",
-   "state": "challenge",
-   "why": "HTTP 403 anti-bot challenge",
-   "title": "Attention Required! | Cloudflare",
-   "scripts": [],
-   "bytes": 4873,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "FR": {
-  "app": {
-   "status": 403,
-   "final_url": "https://app.maple.finance",
-   "state": "challenge",
-   "why": "HTTP 403 anti-bot challenge",
-   "title": "Attention Required! | Cloudflare",
-   "scripts": [],
-   "bytes": 4850,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "NL": {
-  "app": {
-   "status": 403,
-   "final_url": "https://app.maple.finance",
-   "state": "challenge",
-   "why": "HTTP 403 anti-bot challenge",
-   "title": "Attention Required! | Cloudflare",
-   "scripts": [],
-   "bytes": 4850,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "PL": {
+ "BY": {
   "app": {
    "status": 403,
    "final_url": "https://app.maple.finance",
@@ -121,7 +537,72 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "UA": {
+ "CU": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4549,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4550,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4850,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4851,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4851,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IQ": {
   "app": {
    "status": 403,
    "final_url": "https://app.maple.finance",
@@ -134,7 +615,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "TR": {
+ "LB": {
   "app": {
    "status": 403,
    "final_url": "https://app.maple.finance",
@@ -142,12 +623,12 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "HTTP 403 anti-bot challenge",
    "title": "Attention Required! | Cloudflare",
    "scripts": [],
-   "bytes": 4847,
+   "bytes": 4848,
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "AE": {
+ "LY": {
   "app": {
    "status": 403,
    "final_url": "https://app.maple.finance",
@@ -160,7 +641,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "SG": {
+ "SS": {
   "app": {
    "status": 403,
    "final_url": "https://app.maple.finance",
@@ -173,7 +654,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "HK": {
+ "ZW": {
   "app": {
    "status": 403,
    "final_url": "https://app.maple.finance",
@@ -186,46 +667,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "JP": {
-  "app": {
-   "status": 403,
-   "final_url": "https://app.maple.finance",
-   "state": "challenge",
-   "why": "HTTP 403 anti-bot challenge",
-   "title": "Attention Required! | Cloudflare",
-   "scripts": [],
-   "bytes": 4850,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "BR": {
-  "app": {
-   "status": 403,
-   "final_url": "https://app.maple.finance",
-   "state": "challenge",
-   "why": "HTTP 403 anti-bot challenge",
-   "title": "Attention Required! | Cloudflare",
-   "scripts": [],
-   "bytes": 4850,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "AR": {
-  "app": {
-   "status": 403,
-   "final_url": "https://app.maple.finance",
-   "state": "challenge",
-   "why": "HTTP 403 anti-bot challenge",
-   "title": "Attention Required! | Cloudflare",
-   "scripts": [],
-   "bytes": 4850,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "NG": {
+ "NI": {
   "app": {
    "status": 403,
    "final_url": "https://app.maple.finance",
@@ -238,7 +680,20 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "VN": {
+ "CD": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.maple.finance",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 4852,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CF": {
   "app": {
    "status": 403,
    "final_url": "https://app.maple.finance",
@@ -251,7 +706,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "KZ": {
+ "SO": {
   "app": {
    "status": 403,
    "final_url": "https://app.maple.finance",
@@ -259,12 +714,12 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "HTTP 403 anti-bot challenge",
    "title": "Attention Required! | Cloudflare",
    "scripts": [],
-   "bytes": 4849,
+   "bytes": 4848,
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "GE": {
+ "ML": {
   "app": {
    "status": 403,
    "final_url": "https://app.maple.finance",
@@ -272,7 +727,7 @@ checked_at: 2026-10-11T21:24:23Z
    "why": "HTTP 403 anti-bot challenge",
    "title": "Attention Required! | Cloudflare",
    "scripts": [],
-   "bytes": 4849,
+   "bytes": 4852,
    "redirects": [],
    "server": "cloudflare"
   }

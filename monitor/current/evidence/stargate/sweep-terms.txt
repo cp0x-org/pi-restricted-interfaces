@@ -1,9 +1,9 @@
 check: stargate/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://stargate.finance/terms
-checked_at: 2026-10-11T21:18:29Z
+checked_at: 2026-10-28T22:55:52Z
 fetched: https://stargate.finance/terms
-sha256: fb3eeab0e4979a674886218f53a1d89c73eb203e06ff5299665d790b83b384c9
+sha256: 5efc5853c87d3a9f2d1bafc7948abcbdc804bdb56f61fe496618390523ed0234
 http_status: 200
 via: live
 --------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ You acknowledge and agree that you are solely responsible for complying with all
 
 --- full text ---
 Terms of Service | Stargate Finance
-Stake Overview Value Transfer API Resources
+Convert STG Overview Value Transfer API Resources
 Terms of Use
 Last Updated: September 17, 2025
 1. Introduction
@@ -142,7 +142,7 @@ You agree that the laws of the Cayman Islands, without regard to principles of c
 These Terms, and the Privacy Policy, constitute the entire agreement between you and us with respect to the subject matter hereof. These Terms supersedes any and all prior or contemporaneous written and oral agreements, communications and other understandings (if any) relating to the subject matter of the terms. The information provided on the Website is not intended for distribution to or use by any person or entity in any jurisdiction or country where such distribution or use would be contrary to law or regulation or which would subject us to any registration requirement within such jurisdiction or country. Accordingly, those persons who choose to use or access the Website from other locations do so on their own initiative and are solely responsible for compliance with local laws, if and to the extent local laws are applicable.
 Start Swapping
 Stargate
-Transfer Earn Stake Overview
+Transfer Earn Convert STG Overview
 Developers
 Github Docs
 Learn

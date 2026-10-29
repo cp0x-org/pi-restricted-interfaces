@@ -12,7 +12,7 @@ pnpm install
 pnpm lint          # eslint + prettier (must be clean)
 pnpm build         # tsc && vite build
 pnpm knip          # unused files/exports (Berry leftovers are expected, see knip.json)
-pnpm monitor:build # regenerate src/data/interfaces.json + monitor/out from monitor/data/interfaces.json (Python 3.9+)
+pnpm monitor:build # regenerate the site files (src/data/monitor.json + src/data/interfaces/<id>.json) + monitor/out from monitor/data, then check them (Python 3.9+)
 BROWSER=none pnpm start   # dev server on http://localhost:3000
 ```
 
@@ -46,7 +46,7 @@ as `executablePath`.
 - Nav tabs are hardcoded in `src/layout/MainLayout/index.tsx` and matched with `pathname.includes(tab.path)`; tab paths must not be substrings of each other.
 - `themes/overrides/Chip.tsx` defaults every Chip to `color="primary" variant="light"`; catalog chips go through `views/monitor/components/ToneChip.tsx`, which sets colour/variant explicitly.
 - Expected external requests: none (no wallet SDKs, no geo/IP lookups, no protocol API calls) — the dataset is static.
-- `src/data/interfaces.json` is generated; edit `monitor/data/interfaces.json` and run `pnpm monitor:build` instead.
+- `src/data/monitor.json` and `src/data/interfaces/*.json` are generated; edit `monitor/data/interfaces.json` and run `pnpm monitor:build` instead. The interface page renders its header from the dashboard row and loads `interfaces/<id>.json` lazily (a spinner with “Loading the record…” until then): wait for the evidence links before counting them.
 
 ## Production build (SEO)
 
@@ -56,13 +56,13 @@ npx serve dist -l 4174 -c ../serve.json           # same serving as the Dockerfi
 curl -s localhost:4174/monitor/aave | grep '<title>'   # page-specific title without JavaScript
 ```
 
-Expect: `/monitor/aave` and `/zh/monitor/aave` → 200 with their own title, `<html lang>`, canonical, hreflang and JSON-LD; `/monitor/aave/` → 301; `/monitor/nope` and
+Expect: `/monitor.json` and `/<id>.json` (e.g. `/aave.json`) → 200 `application/json` with `Access-Control-Allow-Origin: *` (the site data by direct URL, also on the dev server); `/monitor/aave` and `/zh/monitor/aave` → 200 with their own title, `<html lang>`, canonical, hreflang and JSON-LD; `/monitor/aave/` → 301; `/monitor/nope` and
 `/country/UA` → 404 (`404.html`, noindex) while the app still boots and redirects; `/robots.txt`, `/sitemap.xml` (96 URLs with hreflang alternates).
 Accessibility: axe-core (wcag2a/aa + best-practice) should report no violations on /monitor, /monitor/<id>, /methodology.
 
 ## Ready-made smoke script
 
-`.claude/skills/verify/smoke.mjs` drives all flows above (70 checks incl. the /zh pages; `SMOKE_SITE=https://restricted.cp0x.com` checks the canonical domain; expectations read from `src/data/interfaces.json`) and saves screenshots. Run it from a scratch dir that has
+`.claude/skills/verify/smoke.mjs` drives all flows above (70 checks incl. the /zh pages; `SMOKE_SITE=https://restricted.cp0x.com` checks the canonical domain; expectations read from `src/data/monitor.json`) and saves screenshots. Run it from a scratch dir that has
 `playwright-core` installed, with the dev server already running (or `SMOKE_BASE=http://localhost:4174` against the
 production build served as above):
 

@@ -1,7 +1,7 @@
 check: snapshot/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://snapshot.box/#/terms-of-use
-checked_at: 2026-10-11T21:18:28Z
+checked_at: 2026-10-28T22:55:51Z
 fetched: https://raw.githubusercontent.com/snapshot-labs/sx-monorepo/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef/apps/ui/src/views/Terms.vue
 sha256: 46f648ef49eb2add5443302894c1d50cfd40f590aec6cc940d278e65cf1bbebe
 http_status: 200

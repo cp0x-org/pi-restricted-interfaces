@@ -1,0 +1,343 @@
+check: curve-classic/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://classic.curve.finance
+checked_at: 2026-10-11T21:24:23Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "JP": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://classic.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/js/app.*.js",
+    "/js/chunk-vendors.*.js"
+   ],
+   "bytes": 2533,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ }
+}

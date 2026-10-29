@@ -1,0 +1,13 @@
+check: yearn/no-screening-code
+about: No wallet-screening call or sanctions list in the frontend
+source: https://github.com/yearn/yearn.fi/tree/ad153cba6e55862634ad6a7b8e8061832a5e91cb
+checked_at: 2026-10-28T22:38:21Z
+fetched: https://codeload.github.com/yearn/yearn.fi/tar.gz/ad153cba6e55862634ad6a7b8e8061832a5e91cb
+sha256: 80887df87b9ec7babe1b7ff5ccf8a5da453a6e7a8f1ed3a0e228da736b061681
+--------------------------------------------------------------------------------
+files scanned: 768
+patterns that must be absent:
+  trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\w-])|preflight-compliance|/address/status\b|compliance/screen|/v\d/check/
+
+hits:
+  none

@@ -1,7 +1,7 @@
 check: liquity/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/liquity/bold/tree/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0
-checked_at: 2026-10-11T21:03:37Z
+checked_at: 2026-10-28T22:36:20Z
 fetched: https://codeload.github.com/liquity/bold/tar.gz/d262669ef3c4d37bf0544df3bb2624c07b8a5ee0
 sha256: dcec1691132a8fc79be26269a48ceb12ec654807e2a1be4a35fab0e74b6f5b7a
 --------------------------------------------------------------------------------

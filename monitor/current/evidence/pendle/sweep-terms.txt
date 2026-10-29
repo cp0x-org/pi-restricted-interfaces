@@ -1,9 +1,9 @@
 check: pendle/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://docs.pendle.finance/pendle-v2/TermsOfUse
-checked_at: 2026-10-11T21:18:11Z
+checked_at: 2026-10-28T22:55:15Z
 fetched: https://docs.pendle.finance/pendle-v2/TermsOfUse
-sha256: b937cc515e0c02c9eff4637224041d8a9e9cfa827909b69ebbe860adc294eef4
+sha256: ce26d11ab55941efca6e2be266bc7cbc66a09e02c3509878b8892dbe011ee205
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

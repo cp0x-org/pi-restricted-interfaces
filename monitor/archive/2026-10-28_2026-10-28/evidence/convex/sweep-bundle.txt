@@ -1,0 +1,53 @@
+check: convex/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://curve.convexfinance.com
+checked_at: 2026-10-28T22:40:00Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://curve.convexfinance.com/stake (HTTP 200)
+scripts (40):
+  https://curve.convexfinance.com/_next/static/chunks/80c15090-88b8fa035c46689a.js  sha256=b6943e320c40135cc12ee9e3aeb3a6683d5691d056d22c4786d2f609d6b268ca
+  https://curve.convexfinance.com/_next/static/chunks/4108-68681317722e7d65.js  sha256=eba2e42972efbd348fbe5a765b1657d6aa045eef20873cc044a56f1ca461b09a
+  https://curve.convexfinance.com/_next/static/chunks/main-app-c5d8c4257a77dc16.js  sha256=5c0afc49d819859bd56fad6f5b9f37d0c001edc4a3e2d36b778156db041cd4da
+  https://curve.convexfinance.com/_next/static/chunks/2961-504a212fe61a3ae9.js  sha256=811462ab93378b5aa3b3c74872a33d1b80f018de15648539d5271d39b94c7f1f
+  https://curve.convexfinance.com/_next/static/chunks/5616-a1e08e9831a20295.js  sha256=2e80c4f3a5ea850935249d376b42e50b2ead74dbce9d779952564bf32a3aa3da
+  https://curve.convexfinance.com/_next/static/chunks/3169-f9782dfd1d06ff57.js  sha256=9ec7c6398ee8ddae56f4cd7d3698413f02a41fa8c87cdf582845d46a93846f4e
+  https://curve.convexfinance.com/_next/static/chunks/2159-8c8721037de79d84.js  sha256=1ed75a9b6c1bc5f2b7c6eb9bca4af3b58dd07f6160ffc011bad20fdc99bc62f0
+  https://curve.convexfinance.com/_next/static/chunks/8482-0087738c8ff043d0.js  sha256=92f9db6c8885d65b8eaa4eb64024313f657d975b39cc5716b4a9914d02866e92
+  https://curve.convexfinance.com/_next/static/chunks/7119-b49a73bb250b8deb.js  sha256=cdfe0e63e43b2130852f1902d7ee281eaa5faf34ea6ce744d4959e05baee43de
+  https://curve.convexfinance.com/_next/static/chunks/864-a3471b66f29c562a.js  sha256=dbb596b36a48680661137018a2459183bd39680c94e3c6d6f8658cb54da8a07d
+  https://curve.convexfinance.com/_next/static/chunks/7770-9b8eaeb8b007524f.js  sha256=828e84031d88f3aa4313905bf7c5b18850e6f6c8099ae103f6234bb3748d1b64
+  https://curve.convexfinance.com/_next/static/chunks/6265-b930e27e3c33b43a.js  sha256=6b1578700977587e5d01d2178dd4ce273775a42a9be2bce69a3e412f4dfa0702
+  https://curve.convexfinance.com/_next/static/chunks/1555-7677bae45ad6bfbf.js  sha256=a5cbf8d518e7c37e37c4c6e1ac4d91fb3c15946c6634cfa973fc131bbccec4f8
+  https://curve.convexfinance.com/_next/static/chunks/6464-53818d35c5bda714.js  sha256=c1d1cc067d300f5ead00ff1567cadc2fc438848a1aa176b932c01624d0c664c5
+  https://curve.convexfinance.com/_next/static/chunks/624-c9a42fc76354f111.js  sha256=4267e568e2fef88797754fe0545bb8a310dc779750b46788722f5a091e949ad9
+  https://curve.convexfinance.com/_next/static/chunks/1880-f9a6afe27bfbe283.js  sha256=b72d23810de6245985edb193e0e1944d0948fb5f940567b9e9a420a4fb2751a7
+  https://curve.convexfinance.com/_next/static/chunks/5210-09f5dc958e55c6b3.js  sha256=0587b47eb4391c7bebe3a50a4ba28cb427ed49f9a04ddeec67eaa47635bdf749
+  https://curve.convexfinance.com/_next/static/chunks/2607-6067e4218f44a3e3.js  sha256=e19441320ea87c6150a2416a46f9c13138dbf08f12c746d0a8d107522312897a
+  https://curve.convexfinance.com/_next/static/chunks/2600-36fb66fabee25c10.js  sha256=45e80dc5ae820ae823216dc833578953921b4a3e7242f83b524014a5f4da6ba2
+  https://curve.convexfinance.com/_next/static/chunks/4359-43e4854561ab25bc.js  sha256=8731932a18278b8f35290dffea6eebee334e04385525248a27dc787f1e76023f
+  https://curve.convexfinance.com/_next/static/chunks/4168-a4a9d4f45624d8b5.js  sha256=910e705b6cdb1a36642c435c88ec9c3d2730c368ac3ceae1ccad8df856eea721
+  https://curve.convexfinance.com/_next/static/chunks/4893-d999f8f034600e8e.js  sha256=580746e632a3e01c80925bd4e6696665cf56223bdcbbf71c0dcb20672d5a6464
+  https://curve.convexfinance.com/_next/static/chunks/app/layout-8ac471770f705d15.js  sha256=34508216182deeafa4f3639e2543b21861ffe7f7705e8345bc8fc23ecf3a0f44
+  https://curve.convexfinance.com/_next/static/chunks/6065-03de9c77796abce3.js  sha256=a3055c21ae5243f9352d144b9f1e2b1ff5e7f9e3d679115cceb7e755a66b443e
+  https://curve.convexfinance.com/_next/static/chunks/8710-1aa6e4d8bf43e783.js  sha256=73c90af010ab41b2decfc8a0a7a9134fd85321628bb375581549b715f6fe1139
+  https://curve.convexfinance.com/_next/static/chunks/2209-f05f0f6913a8c8ff.js  sha256=bcb0c965384cb86e38845f35aceb736fb7f97dbf284441515c178af7b8698084
+  https://curve.convexfinance.com/_next/static/chunks/6293-4153f0f352d7062b.js  sha256=e086adfe49aed93ec6858d03895fe4f73f87d81fc169169dcb4b72d8399c4c54
+  https://curve.convexfinance.com/_next/static/chunks/7539-d38ff693a788602f.js  sha256=a42d368b436d9a840bd9c1e41784d8a604774c141cdd14365e0465db04abaf22
+  https://curve.convexfinance.com/_next/static/chunks/3621-659374f02877545d.js  sha256=60e4f78213190fa6e5b9dc86213c7a2c49fe6f2c88f79196a535825bfad0c071
+  https://curve.convexfinance.com/_next/static/chunks/4930-2e9b23a9fbafdc1e.js  sha256=e693d47fcc49fce0a41e4ab819ab7a6a4fd663e662e620bebbe9f8e13a554c5b
+  https://curve.convexfinance.com/_next/static/chunks/5358-3882e0fee1fbd1a8.js  sha256=7881622010c39f9cf044d5e905999eb39c836c25b7e2d84eddf28e92fc928f1e
+  https://curve.convexfinance.com/_next/static/chunks/3599-79c37a98e01c4668.js  sha256=69b52bb04e30eee4e36dd40d9ce9e7c10c284fb864be664dd81536a01ca3936d
+  https://curve.convexfinance.com/_next/static/chunks/452-7ff46706b9c44e1f.js  sha256=4b53cbbeb80991b3e23134af71a029c73ac3b5a429cdb7c236f695c4f9be4ebd
+  https://curve.convexfinance.com/_next/static/chunks/4752-6e809082482a32b3.js  sha256=91f808771655db8ad37c3691e21577dd8efc71e010cb0527d52a6481f6a82edb
+  https://curve.convexfinance.com/_next/static/chunks/5897-6e953e465f879c7c.js  sha256=9ce00b2bef84374e3b0d8abefaf99d27e92b14af4386b9a11b8c904ff4252c8e
+  https://curve.convexfinance.com/_next/static/chunks/431-eeb4cfc8fd75cd3d.js  sha256=a71600410a53a081994e44e70623e9ac4a717220b17b69be8025b367049d1a20
+  https://curve.convexfinance.com/_next/static/chunks/7085-0f6ade8e865b74b5.js  sha256=8dd683d6ef4547b2c73a6b39b6a914a51a91b4acdb79fa196aa9501b751f1137
+  https://curve.convexfinance.com/_next/static/chunks/app/stake/page-9c36e21693aa537f.js  sha256=1017a880588ce9a9c28a0b1b5833a8351f04fbba37c36dff4b7f7878f5684dab
+  https://curve.convexfinance.com/_next/static/chunks/polyfills-42372ed130431b0a.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
+  https://curve.convexfinance.com/_next/static/chunks/webpack-a62b0579dcebde94.js  sha256=09256464c4f4084cec70701da3fda0bc2ef3372d7bc59a12e76c30196cd79986
+
+signals:
+  [weak] geo: HTTP 451 text — 1 file(s)
+      /_next/static/chunks/2961-504a212fe61a3ae9.js: o Many Requests",431:"Request Header Fields Too Large",451:"Unavailable For Legal Reasons",500:"Internal Server Error",501:"Not Implemented",502:"Bad Gateway",503:"Servi

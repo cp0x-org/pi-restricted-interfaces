@@ -1,0 +1,13 @@
+check: gmx/no-geo-code
+about: No geo-IP lookup or country block in the frontend
+source: https://github.com/gmx-io/gmx-interface/tree/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c
+checked_at: 2026-10-11T21:04:41Z
+fetched: https://codeload.github.com/gmx-io/gmx-interface/tar.gz/d1708855da1aa085a1d4f17d4fa3ceb3cff1260c
+sha256: acf4c536472547a11c96c50c3402aef7b44054cebf3a3816ed1a324665b860f3
+--------------------------------------------------------------------------------
+files scanned: 2691
+patterns that must be absent:
+  api\.country\.is|ipapi\.co|ipinfo\.io|freeipapi|ip-api\.com|cdn-cgi/trace|/geoip\b|geo-?block|geofenc|restricted[ _-]?(countr|region|jurisdiction)|blocked[ _-]?countr|not available in your (country|region|jurisdiction)|cf-ipcountry|x-vercel-ip-country|req(uest)?\.geo\b
+
+hits:
+  none

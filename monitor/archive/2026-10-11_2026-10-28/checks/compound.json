@@ -1,0 +1,59 @@
+{
+  "id": "compound",
+  "name": "Compound",
+  "targets": {
+    "app": "https://app.compound.xyz",
+    "repo": {
+      "repo": "compound-finance/webb3-frontend",
+      "ref": "5e556e553f223d37842fd91c2eed2f21efb98a6d"
+    },
+    "terms": "https://www.compound.xyz/terms-of-service",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "screening-list",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Hardcoded list of sanctioned addresses, incl. the Tornado Cash router 0x8589…DA16",
+      "source": {
+        "repo": "compound-finance/webb3-frontend",
+        "ref": "5e556e553f223d37842fd91c2eed2f21efb98a6d",
+        "path": "src/helpers/sanctions.ts"
+      },
+      "expect": [
+        "export function isSanctioned\\(address: string\\): boolean",
+        "0x8589427373D6D84E98730D7795D8f6f8731FDA16"
+      ]
+    },
+    {
+      "id": "screening-use",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Web3Context refuses a sanctioned account",
+      "source": {
+        "repo": "compound-finance/webb3-frontend",
+        "ref": "5e556e553f223d37842fd91c2eed2f21efb98a6d",
+        "path": "src/contexts/Web3Context.tsx"
+      },
+      "expect": [
+        "isSanctioned\\(writeWeb3\\.account\\)"
+      ]
+    },
+    {
+      "id": "prod-sanctions-list",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Production JS: the hardcoded sanctioned-address list incl. the Tornado Cash router",
+      "source": {
+        "url": "https://app.compound.xyz"
+      },
+      "expect": [
+        "\"0x8589427373D6D84E98730D7795D8f6f8731FDA16\",\"0x722122dF12D4e14e13Ac3b6895a86e84145b6967\""
+      ]
+    }
+  ]
+}

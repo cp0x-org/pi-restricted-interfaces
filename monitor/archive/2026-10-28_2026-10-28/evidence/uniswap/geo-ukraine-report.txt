@@ -1,0 +1,120 @@
+check: uniswap/geo-ukraine-report
+about: Press report (Oct 2025): the Uniswap Labs front-end blocks Ukraine-based IP addresses (asset selection fails)
+source: https://blockworks.com/news/uniswap-labs-blocked-ukraine
+checked_at: 2026-10-28T22:57:03Z
+fetched: https://web.archive.org/web/20260515232741id_/https://blockworks.com/news/uniswap-labs-blocked-ukraine
+sha256: 8bb7cd08a1ef6f319a6b52a35d8afbbc6b926c2281cb6b5a5f089800cb335a37
+http_status: 200
+via: archive
+--------------------------------------------------------------------------------
+Uniswap Labs front-end remains blocked in Ukraine, frustrating builders - Blockworks
+Analytics Prices Investor Relations Products Advisory Content Events Company
+⌘ K
+home
+news
+Markets
+The Drop
+Uniswap Labs front-end remains blocked in Ukraine, frustrating builders
+The block appears to have been ongoing for over eight months
+by Kate Irwin /
+October 13, 2025 01:28 pm
+Akif CUBUK/Shutterstock modified by Blockworks
+share
+This is a segment from The Drop newsletter. To read full editions, subscribe .
+Six years ago, the Ethereum Foundation declared that “eth2 should be capable of surviving World War 3.”
+But its app layer is clearly not.
+Uniswap Labs’ front-end is still blocking Ukraine-based IP addresses, according to multiple user reports and my own test with a VPN set to the country.
+Ukraine IP addresses are able to see the Uniswap site, but any attempt to select assets results in an error message, which does not occur when using a US IP address.
+Artem Chystiakov, head of Solidity at Distributed Lab, is based in Ukraine and believes Uniswap has misinterpreted US sanctions.
+Newsletter
+Subscribe to The Breakdown
+Subscribe
+“It is clearly stated that no goods, services or technology must be provided to both the so-called DNR/LNR and the Crimea regions of Ukraine. Kyiv and other Ukrainian cities/regions are not mentioned whatsoever,” Chystiakov wrote.
+Loading Tweet..
+OFAC’s website states: “The Office of Foreign Assets Control (OFAC) does not maintain a specific list of countries that US persons cannot do business with.” Instead, it details specific programs and sanctioned persons and companies.
+In the open letter, Chystiakov told Uniswap Labs: “This is absurd. Ukraine, being in the middle of the war, fighting for freedom, and you are limiting the availability of your service on some false regulatory claims.”
+Chystiakov shared a screenshot response from Uniswap Labs’ support team, indicating the issue has been ongoing since at least as early as February this year:
+The date of the response, plus user reports and the date of a Change.org petition , suggests Uniswap Labs has been blocking Ukrainians’ access to its DEX via its front-end for at least a year now.
+Traders suggested using an aggregator instead, though using a VPN would also in theory work to get around the restriction.
+The Uniswap support team’s response from February suggests they’ve taken a blanket approach to adhering to sanctions by blocking entire countries via “third party providers.”
+But Cloudflare, for example, does offer ways to block only certain parts of a country. Posts from the Cloudflare team and community show that Crimea, Donetsk and Luhansk can be blocked individually using specific subregion codes. But a Cloudflare Pro, Business or Enterprise plan is required .
+Uniswap Labs appears to be using Cloudflare, based on ICANN Lookup data, NsLookup, and Cloudflare’s website .
+It’s unclear whether the issue is due to a policy choice, issues with Cloudflare or a financial decision. Data suggests Uniswap Labs saw $118 million in revenue in 2024. The Uniswap Foundation reported $1.11 million in revenue in that same period.
+Error message encountered when using a Ukraine-based IP address
+It’s ironic, of course, that Uniswap’s website bears the slogan “Swap anytime, anywhere,” when that is not really the case.
+Uniswap Labs blocking Ukrainians from using its web app is additionally ironic considering it added a function for users to easily donate to the Ukrainian government via Uniswap back in 2022. Upon checking today, that donate link appears to have since been taken down.
+I’ve reached out to Uniswap Labs for comment, but did not receive a response in time for publication.
+Get the news in your inbox. Explore Blockworks newsletters:
+The Breakdown : Decoding crypto and the markets. Daily.
+0xResearch : Alpha in your inbox. Think like an analyst.
+Tags
+Developers
+Ukraine
+Uniswap Labs
+Newsletter
+The Breakdown
+Decoding crypto and the markets. Daily, with Byron Gilliam.
+Subscribe
+Upcoming Events
+Digital Asset Summit 2026
+Hilton Park Lane
+Tues - Wed, November 10 - 11, 2026
+Blockworks’ Digital Asset Summit (DAS) will feature conversations between the builders, allocators, and legislators who will shape the trajectory of the digital asset ecosystem in the US and abroad.
+buy tickets learn more
+recent research
+Research
+OBEX: Sky's Accelerator for Real-World Yield
+OBEX is the most ambitious manifestation of that strategy to date, carrying a $2.5B USDS deployment mandate. Announced in November 2025, it functions as a structured accelerator (part incubator, part capital allocator) designed to manufacture demand for USDS by directing capital toward institutional-grade, yield-generating RWAs.
+by Nick Carpinito
+/
+news
+Breaking headlines across our core coverage categories.
+more from news
+Select a tab Markets Finance Policy DeFi Business Web3 Forward Guidance Newsletter Opinion Empire Newsletter Lightspeed Newsletter 0xResearch Newsletter People Analysis Sponsored The Drop Podcast The Breakdown Education Supply Shock Announcements Uncategorized Token Holder Report
+Markets Finance Policy DeFi Business Web3 Forward Guidance Newsletter Opinion Empire Newsletter Lightspeed Newsletter 0xResearch Newsletter People Analysis Sponsored The Drop Podcast The Breakdown Education Supply Shock Announcements Uncategorized Token Holder Report
+0xResearch Newsletter Markets
+DePIN and crypto gaming led a surprising end-of-year rebound
+BTC finished the week up 1.6%, while L2s, RWAs and the treasury trade continued to grind lower
+by Kunal Doshi /
+January 2, 2026
+0xResearch Newsletter DeFi
+Canton’s $6T RWA rails and Lighter’s Hyperliquid multiple
+DTCC moves DTC-custodied Treasuries onchain via Canton, while Lighter’s LIT launches trading at a fees multiple in Hyperliquid territory
+by Kunal Doshi & Shaunda Devens /
+January 1, 2026
+The Breakdown
+The long wait for crypto’s “coffee pot” moment
+In the 90s, rapt audiences worldwide watched a coffee pot — will that fascination ever turn to crypto?
+by Byron Gilliam /
+January 1, 2026
+DeFi The Breakdown
+Failure is an option in crypto finance
+Some systems improve by failing — and crypto has no choice
+by Byron Gilliam /
+December 31, 2025
+0xResearch Newsletter
+Yield Basis is making native BTC yield a reality
+Yield Basis introduces an IL-free AMM design that already dominates BTC DEX liquidity
+by Marc Arjoon /
+December 31, 2025
+The Breakdown
+Users are the best investors to have
+Maybe tokenholders don’t need the rights that corporate shareholders have come to expect
+by Byron Gilliam /
+December 31, 2025
+Newsletter
+The Breakdown
+Decoding crypto and the markets. Daily, with Byron Gilliam.
+Subscribe
+Blockworks Research
+Unlock crypto's most powerful research platform.
+Our research packs a punch and gives you actionable takeaways for each topic.
+Subscribe Get in touch
+Blockworks Inc.
+133 W 19th St., New York, NY 10011
+Blockworks Network
+News Podcasts Newsletters Events Roundtables Analytics
+Company
+About Advertise Careers Contact Brand Kit
+Resources & Legal
+Trust & Ethics Privacy Terms of Service Glossary

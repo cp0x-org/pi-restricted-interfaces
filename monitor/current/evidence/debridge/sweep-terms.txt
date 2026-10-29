@@ -1,9 +1,9 @@
 check: debridge/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://docs.debridge.foundation/legal/terms-of-service
-checked_at: 2026-10-11T21:17:16Z
+checked_at: 2026-10-28T22:54:12Z
 fetched: https://docs.debridge.foundation/legal/terms-of-service
-sha256: 3c5323ff424476de1c391fefcfae435d3554dbc325773b99c4516cddbdd0f675
+sha256: 5397b26c9f24351accb6eca065ed94c0a397142ea8e2dd6b9e7f9f3dfd727e97
 http_status: 200
 via: live
 --------------------------------------------------------------------------------

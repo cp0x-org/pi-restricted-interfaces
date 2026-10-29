@@ -1,0 +1,35 @@
+check: euler/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/euler-xyz/euler-lite/tree/43ba73fadda21d943224742286c7c078562e3769
+checked_at: 2026-10-28T22:35:44Z
+fetched: https://codeload.github.com/euler-xyz/euler-lite/tar.gz/43ba73fadda21d943224742286c7c078562e3769
+sha256: 41ba4cc0938c642e46186ee1939d5aee6821251b0d0513ced014d018262774ee
+--------------------------------------------------------------------------------
+repository: https://github.com/euler-xyz/euler-lite/tree/43ba73fadda21d943224742286c7c078562e3769
+files scanned: 647
+
+signals:
+  [strong] geo: country header — 5 file(s)
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/scripts/public-endpoint-parity.mjs#L373  son' } if (/^[A-Z]{2}$/.test(config.geoCountry)) headers['cf-ipcountry'] = config.geoCountry return headers } function diffBodies(baseline, candida
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/server/middleware/cors.ts#L138  = parseAllowedOrigins() } // Strip any client-supplied x-country-code to prevent geo-blocking bypass. // The authoritative value comes from the con
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/server/middleware/geo-gate.ts#L25  s) — clients cannot modify it, and any // client-supplied x-country-code is stripped in cors.ts. The context also // applies the DEV_GEO_COUNTRY fallb
+  [strong] geo: block text — 25 file(s)
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/components/entities/portfolio/PortfolioBorrowItem.vue#L422  "Region restricted" text="This vault is not available in your region" placement="top-start" >
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/components/entities/portfolio/PortfolioEarnItem.vue#L155  tle="Region restricted" text="This vault is not available in your region" placement="top-start" > <span cl
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/components/entities/portfolio/PortfolioSavingItem.vue#L170  tle="Region restricted" text="This vault is not available in your region" placement="top-start" > <span cl
+  [weak] geo: HTTP 451 text — 1 file(s)
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/server/middleware/geo-gate.ts#L43  createError({ statusCode: 451, statusMessage: 'Unavailable For Legal Reasons', }) } // Log VPN/proxy usage for monitoring (do not block -- too many
+  [weak] geo: geo-block words — 48 file(s)
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/.env.example#L8  /edge-presets.ts). Default: none — # no edge-derived trust, geo-blocking off, rate limiting on best-effort # identity. Fork- and preview-friendly, bu
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/app.vue#L18  lsLoadError } = useEulerLabels() const { loadCountry } = useGeoBlock() const { updateBalances, resetBalances } = useWallets() const { isConnected, a
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/components/entities/asset/SwapTokenSelector.vue#L7  ountry, isAssetRestrictedByCountry } from '~/composables/useGeoBlock' import { getExplorerLink } from '~/utils/block-explorer' import { filterSelect
+  [strong] screening: screening call — 9 file(s)
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/.env.example#L59  ould not be in the production CSP CSP_EXTRA_CONNECT_SRC= # Address screening via the data-v3 compliance API (server-side only). # Proxied via /api/internal/
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/composables/useAddressScreen.ts#L6  rt { resetCountryCache } from '~/services/country' import { screenAddress } from '~/services/screening' import { getDefaultPageRoute } from '~/entities/m
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/nuxt.config.ts#L374  rpc/*, // /api/internal/tenderly/*, and /api/internal/screen-address also // stay on this strict fallback. '/**': { headers: {
+  [strong] vpn: VPN detection — 1 file(s)
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/utils/sanitizeApiResponse.ts#L6  GE_INJECTED_KEYS = new Set(['countryCode', 'isProxyOrVpn', 'is_vpn']) /** * Strips CDN-injected geo/VPN metadata keys from a JSON response objec
+  [weak] vpn: VPN words — 11 file(s)
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/.env.example#L7  trusted request headers carry the client IP, country, and # VPN evidence (the mapping lives in utils/edge-presets.ts). Default: none — # no edg
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/components/entities/operation/AcknowledgeTermsModal.vue#L16  ts or services while in any restricted locations, nor use a VPN to mask my location.`, }, { icon: 'globe', text: `I am permitted to
+      https://github.com/euler-xyz/euler-lite/blob/43ba73fadda21d943224742286c7c078562e3769/composables/useAddressScreen.ts#L4  nents' import { detectVpn, resetVpnCache } from '~/services/vpn' import { resetCountryCache } from '~/services/country' import { screenAddress

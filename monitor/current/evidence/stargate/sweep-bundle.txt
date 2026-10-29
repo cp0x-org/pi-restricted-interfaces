@@ -1,52 +1,54 @@
 check: stargate/sweep-bundle
 about: Production HTML and JavaScript of the official app, searched for access-restriction signals
 source: https://stargate.finance
-checked_at: 2026-10-11T21:13:23Z
+checked_at: 2026-10-28T22:49:24Z
 http_status: 200
 via: direct
 --------------------------------------------------------------------------------
 page: https://stargate.finance (HTTP 200)
-scripts (39):
-  https://stargate.finance/_next/static/chunks/2f857eaa-04bf3a084d82eafa.js  sha256=5928a02d01cb7337184cffb859954d8fae4b0c7bd29c054747bd6305c2f12772
-  https://stargate.finance/_next/static/chunks/1322-b442f756a6b4e7da.js  sha256=4e550e3797db7035c4d1dd4290c4e9e36a9298443d5d7f7595889b0847c629e8
-  https://stargate.finance/_next/static/chunks/main-app-e2df26232823c1fc.js  sha256=7d1ef9febbd2dc7157ecbeef06f6e0c0e1be1e41da8cbe261488242622fb3cc9
-  https://stargate.finance/_next/static/chunks/78ca78fd-814f35f7576e3368.js  sha256=ad395bbe0175d5a969617345a35ff776fa53f378aaa42a02201e96a127aae1a7
-  https://stargate.finance/_next/static/chunks/57cf370b-ef56b1d3a64e3282.js  sha256=f5bfd84c5fea3346f2c12d525ee99fa058a38923461e58909934ae54cb9e3188
-  https://stargate.finance/_next/static/chunks/6e6dbd7b-a8fcf80de81a8bac.js  sha256=6433d323866dcbcc732ddc9b0fc1a10f60b823ad240912b506b2036abca7eb9c
-  https://stargate.finance/_next/static/chunks/3088becd-8d1a79eaf9703701.js  sha256=2d0347810c177e9a748b7d9cffda16acb1131d9d2d06ff5b7dc97d80c3ccc344
-  https://stargate.finance/_next/static/chunks/eabff20e-6a04f7a11b149ed5.js  sha256=a2f95b2abab9785bda3061352b06aa886bae4f86b60c008eb55940a2618fddc4
-  https://stargate.finance/_next/static/chunks/312e095f-fb32a1e95b52b233.js  sha256=668a8f0bcdba0787647bac393bee9c10729c04668a854eb199abd9d08e0515c4
-  https://stargate.finance/_next/static/chunks/16e56d9f-f31df606804ec85f.js  sha256=43de3108fceaa7d401906e73bfedcf6bda96b92dcec43a36a06e3d24bca58671
-  https://stargate.finance/_next/static/chunks/892-04d65bb9e70cb543.js  sha256=a59130de9125ebde42c0cd6d843a6103128241d5071d061420c419eb8c32a5b2
-  https://stargate.finance/_next/static/chunks/6221-55ec86e7668dd4a9.js  sha256=60b3134acbfe6d4b583a71d4de0477d5006ac672acce667d2d64f4ddf6f6169c
-  https://stargate.finance/_next/static/chunks/3614-d1015619f014752d.js  sha256=965adfc3139de2f1445b93973909395799f7742db7c166e071e1eff0444065fa
-  https://stargate.finance/_next/static/chunks/8495-6db9782eea0a010c.js  sha256=67be3f58ea1c0196209b6a8ae69470e3f1ae83ab512796f320dbe205083759b3
-  https://stargate.finance/_next/static/chunks/3404-782712c9a79b0762.js  sha256=d2818c650a296b6e820b17f5f32c3320525627fb591e201cda241738b78c4738
-  https://stargate.finance/_next/static/chunks/2491-c618ae89628bd842.js  sha256=85b410b262b9d35d6df4403ec5018fc006e602e0a99ee616d43e7ebd10fc066f
-  https://stargate.finance/_next/static/chunks/7163-af2897d5f8013675.js  sha256=d8bd22d4ea66c784a92b698be5f28d239b86d972ca22f29c0b795f9b38e256c4
-  https://stargate.finance/_next/static/chunks/6752-bba16555b3352261.js  sha256=accf2cd249f8baab272a2f0c4858044b7630326cf2bc6fd14eb9b834202bb802
-  https://stargate.finance/_next/static/chunks/1014-689a73756fba8dd2.js  sha256=e6992f604dc06f534262e3658931b4bb33c2f2c093d95641299a866875feb3e4
-  https://stargate.finance/_next/static/chunks/1766-2af4545592d92c24.js  sha256=6b48df0ced865194996c194845256891f6468f7fe359509f3646082954ebccd2
-  https://stargate.finance/_next/static/chunks/9154-42d3c438ba3d5fb0.js  sha256=ebc6e4bd2ec06d50b183baa4dc2a63b1a22eb5499dd723c32f8670ec1e52e956
-  https://stargate.finance/_next/static/chunks/6318-4399e7552cb4f789.js  sha256=541a7d9e3ef36e97f0234cbc4908cf5058f2bd487256aa29829e1eac55e31f92
-  https://stargate.finance/_next/static/chunks/6325-8b7767dd23f20d45.js  sha256=bf8dcd3c215ab74bf1a5157997e4de37b96fda473852f3d49e42303d3ed89a5d
-  https://stargate.finance/_next/static/chunks/4246-8f0db33941787857.js  sha256=846b2e6614aaba142c1ab5f8d65d8c5cc9867068a7981004f7117eb1833c89b7
-  https://stargate.finance/_next/static/chunks/2193-483898e547eed4a2.js  sha256=4b462af79bb484f13f644fbd9c27764f620f1f1f1f0689c366018060ed341c4e
-  https://stargate.finance/_next/static/chunks/6719-0521e286f3216078.js  sha256=ab71edd6a02cc87ab320abfc122558ebe5c1a515ea1408dc27053a34353e60d1
-  https://stargate.finance/_next/static/chunks/4541-c031fcd3e13d86b4.js  sha256=3746efc38a0bc522558c8dc6720a0c2530e5fdff1bd44cfea1879ef4c942a692
-  https://stargate.finance/_next/static/chunks/app/page-664b6ecfa30a4bbc.js  sha256=2e94b9ef4f03b57e912fbac106064ba3706308eb35fdc69805878b9a353d8721
-  https://stargate.finance/_next/static/chunks/79d50778-d6dc8607583f903a.js  sha256=685c2591103e6054a067d0e2cec5c382b70c17372654ba8c815214af6e1b0b7e
-  https://stargate.finance/_next/static/chunks/4453-4019719f621e262e.js  sha256=22f6312ebd36896774eea247872f01e0af980da58e483d09fedf28b104a73271
-  https://stargate.finance/_next/static/chunks/2584-a9743ded2bab8402.js  sha256=75405fa6990175355c71918a7915cc9481748db9302fd6a876c54cd09e6f7620
-  https://stargate.finance/_next/static/chunks/3258-f4adb3daa351f541.js  sha256=7813ef3119ca3c7b3391753dd20c4dca205b52810c5f69dad80fe4032cc26f60
-  https://stargate.finance/_next/static/chunks/3952-9cb43219c5344c3e.js  sha256=f6be4786e04e18a29569d0ac80542f5740a2b544d01e91932eb8166bcee105b2
-  https://stargate.finance/_next/static/chunks/1405-ed77ae34d958eab7.js  sha256=15a213417786ee7e623325d70e695d2f491b09be24139ccdab67e8465806ab1c
-  https://stargate.finance/_next/static/chunks/app/layout-627da15efb59c67a.js  sha256=ebbc0bcce9325503677c66253c4f807035b501e33bd2ade0f60fa7fc05ddebff
-  https://stargate.finance/_next/static/chunks/app/not-found-1c26dfd7adffad83.js  sha256=5a028d77b769a98ab9e71ba08aabfda2c0de11916ec212f6b618f097a1cdfdbd
+scripts (41):
+  https://stargate.finance/_next/static/chunks/3a7d6412-7ab4d20233abdb1c.js  sha256=9ae22e5c9432a365c35bf7d100a94b8d061013b7e1169fcb64a430c269900c2a
+  https://stargate.finance/_next/static/chunks/9342-7b443819e035ce33.js  sha256=7b208df1bb977862eaea4d354c91715a7c870fb37959c770694713a63cefeabb
+  https://stargate.finance/_next/static/chunks/main-app-776ebe0bc8b8b7de.js  sha256=721b012e3d8af53fae154eb971efe5b530a778e8c586226e3349cd457064acc8
+  https://stargate.finance/_next/static/chunks/78ca78fd-9d93154d57f547e9.js  sha256=b11fe464bbdecb0870a1ed40cca0f2dc1a6c027062ffb854516e1a803013b5e0
+  https://stargate.finance/_next/static/chunks/57cf370b-abd97175212a845e.js  sha256=6aeb58c3cead890dc3c0f7721ecdb9698194459d58b7a6ad75b76bd84cc96ce4
+  https://stargate.finance/_next/static/chunks/72ecc986-a0113813cbc2fcb1.js  sha256=85742717d56a2dde9196eaba637ac757acb2dc547e7b058005adf908afb749aa
+  https://stargate.finance/_next/static/chunks/3088becd-432e083fbf7e1f79.js  sha256=861424768bba380ef7174f352993fdb1516de4a119fe8f042de07c598ae59f09
+  https://stargate.finance/_next/static/chunks/eabff20e-801598fcb3d7c72d.js  sha256=cc3005456cd8c17120bbb54a6612af73f8ec1c83342e1bf9e714d9c712ce9139
+  https://stargate.finance/_next/static/chunks/312e095f-9d5bae70465d1497.js  sha256=4e25e91a834d4b18550e4987aaf26cf659025f1d31977f9d4fc56b6afbe9faa9
+  https://stargate.finance/_next/static/chunks/177be6b2-b47f907502424090.js  sha256=d803ca7e36cb79f56e43c253b123a9aa79ba884017abe8bd109b2f27ca53a7d6
+  https://stargate.finance/_next/static/chunks/6450-f8d54cc0618e53d0.js  sha256=1d48a7d44ed2f1c37e5d97fea93dd1da85d89fb9f0da0b234d492497870898fa
+  https://stargate.finance/_next/static/chunks/6968-41346773da1f18e6.js  sha256=6c2513ca836521b87ea89cc05325d0f8dc11fb83162675efadbb2a0750f94bd1
+  https://stargate.finance/_next/static/chunks/5686-46ffd88fd04abfd2.js  sha256=171041dde22981da3e839171c6f6221279bd1c3077cd42be3234f05656a9483f
+  https://stargate.finance/_next/static/chunks/8204-0914ca5e49bc4082.js  sha256=b37bdf7909d4f77b7ff8cc3c55a9efc9849dff1713f42df644f8a1e982e37266
+  https://stargate.finance/_next/static/chunks/3636-fdcfe77e3e73871e.js  sha256=da9f422f410c1691711d3a9c9d9e3219996e13a31ddbb9073fdfdbb4bad83620
+  https://stargate.finance/_next/static/chunks/111-d46eb2760abd5f1e.js  sha256=4f0a387cd9ae2f1a6529a79655f76b8acf2d038d190620af01a808da8249c75e
+  https://stargate.finance/_next/static/chunks/114-1aec55553c4247e7.js  sha256=0b9a13ddd41769a3de421ee90e20585d5813df96d2b243cc30861ac54f4c77e5
+  https://stargate.finance/_next/static/chunks/9522-9d406f4fc4df3908.js  sha256=d6efdc829715019482c2ab4e259d05fc10c50dcc5a58022690e5165bc49309cb
+  https://stargate.finance/_next/static/chunks/3624-b8f4c3427ad017be.js  sha256=18ec5eb9ce0f25997942d6b2b24448cdcad21b12e8f8de8f3c3f3a7492e7aa47
+  https://stargate.finance/_next/static/chunks/3468-bc0ce59579168172.js  sha256=de460de505e6a8b816d774ca464f362cc5da6097cb8d46f365fa7b35bcd148a9
+  https://stargate.finance/_next/static/chunks/7457-e72b6cd5905049bc.js  sha256=fac5e28471b454b03f39ef463d86c93bf37d26f68eaa61cfe2124aeba496d470
+  https://stargate.finance/_next/static/chunks/2393-b569acd7b8177d92.js  sha256=1f120431eb3afa9a74b2f71749683cf59c9701fcccf7a575a5c1e1bf6a997b97
+  https://stargate.finance/_next/static/chunks/1748-3d7b7f42a0a45880.js  sha256=6920d9bf63c70a9ecf394d6b0ab87947297beee30c399fb703143905764609d5
+  https://stargate.finance/_next/static/chunks/1026-6310da1c8703cb59.js  sha256=023bc96e39688d087daedb7ff3d43619a13a92cda8822a50f260c0739bc919a1
+  https://stargate.finance/_next/static/chunks/6201-617ecbc61bd511d2.js  sha256=6bf10dcf148653b963c81e07c4dc5f61d9b45b4e87609d071c195f92be6b8cac
+  https://stargate.finance/_next/static/chunks/2685-079e14bbb8fdd5ee.js  sha256=d5db9b7922a18feb5026c1290f18226a1577c576d6ce3a1bd31db3b5da684212
+  https://stargate.finance/_next/static/chunks/1822-6d9f1e3d7a9b98c4.js  sha256=d7e41f39de742126fa2a5e45de373590888d3d3c6d748a27a3c9b0f0355597cd
+  https://stargate.finance/_next/static/chunks/9647-323ab3729798bf23.js  sha256=231668fc92fe7ab05cb1c47008712c43aac5fe4c6f8f1308d6e7323f63b01851
+  https://stargate.finance/_next/static/chunks/app/page-0ac460357427a3aa.js  sha256=15ed1f168ef188fd98e484b22207f73075ca4deb876617932972a30dd62c1e15
+  https://stargate.finance/_next/static/chunks/79d50778-305bfce402a6b13e.js  sha256=69e7c9664240193dc53266b638060beec78401460dfc1426a9a87bb8dbd1ec8e
+  https://stargate.finance/_next/static/chunks/4952-79ae1aa280e82347.js  sha256=60c4ab842c2d78e965905cd1890f54dc52adf1271214bd3e53c205e9fb609a72
+  https://stargate.finance/_next/static/chunks/89-ce9d3f566ef708f9.js  sha256=72871427801e4c203c669ae1f4ffb0de529d8d15046847489edd3a4d7371f0c0
+  https://stargate.finance/_next/static/chunks/8744-9bb1e4518196f35b.js  sha256=8c70acad1e4a80fafb4949cad8a5ca9e23e65e5a03850207e4ad411d0b2b1b65
+  https://stargate.finance/_next/static/chunks/5574-4c9af9987d9e1241.js  sha256=5fed4819f3857832306acb2e6b33bc89b00c9e91226d7760fe6118458f8178f1
+  https://stargate.finance/_next/static/chunks/1868-53d870dc3d004181.js  sha256=c0d3f020377ea34770e79a2f1619eca45d00d2eb303f7447bb2fdefd31148e55
+  https://stargate.finance/_next/static/chunks/app/layout-738b122bf39ccb58.js  sha256=e158ce10e9a21fa1576b953ad357d5996a79a003f912170ece8e6dbd5a6899b2
+  https://stargate.finance/_next/static/chunks/app/not-found-5959431d2ae4cbf5.js  sha256=7a417548b8976012763fc39b81a8175156bcaaaa2d2a02d4deb852cf6d65ed6c
   https://stargate.finance/_next/static/chunks/polyfills-42372ed130431b0a.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
-  https://stargate.finance/_next/static/chunks/runtime-bf51c217bfe81630.js  sha256=9ef48bef0ef3e0d61c2e7f0127bcfcf098be78aa8de486a525b2b0df15b08207
-  https://stargate.finance/_next/static/chunks/1498-1f6cc392810e2b02.js  sha256=38faba5e87c298aab9e7fb62586025374ef7edf268040a35d569dd82ea400e7d
+  https://stargate.finance/_next/static/chunks/runtime-ff6fdf83d7c4ea3a.js  sha256=88ec8e87a931288870ad60cce4625197e0e6a9952bb21488d19d742d112c0508
+  https://stargate.finance/_next/static/chunks/8343-30656d5650259861.js  sha256=08276cff0262692bebe530ce7e1501a549d5f4a667261f7e0fb9662a714071a3
+  https://stargate.finance/_next/static/chunks/2215-d87684794dd64ba8.js  sha256=880610f6bb9d9797bb12a5cb7417e78305b919df352cd7d1cfa11925bbc2afff
 
 signals:
   [strong] geo: block text — 1 file(s)
-      /_next/static/chunks/4541-c031fcd3e13d86b4.js: onRestrictedError")}constructor(){super("CCTP transfers are not available in your region, please try a different route."),this.name="UsdcCctpRegionRestrictedError"}},i=
+      /_next/static/chunks/9647-323ab3729798bf23.js: onRestrictedError")}constructor(){super("CCTP transfers are not available in your region, please try a different route."),this.name="UsdcCctpRegionRestrictedError"}},i=

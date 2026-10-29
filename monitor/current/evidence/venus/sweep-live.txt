@@ -1,7 +1,7 @@
 check: venus/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://app.venus.io
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
@@ -14,7 +14,7 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "./assets/index-*.js"
    ],
-   "bytes": 5626,
+   "bytes": 5234,
    "redirects": [
     "https://venus.io/"
    ],
@@ -31,14 +31,14 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "./assets/index-*.js"
    ],
-   "bytes": 5626,
+   "bytes": 5234,
    "redirects": [
     "https://venus.io/"
    ],
    "server": "Vercel"
   }
  },
- "US-NY": {
+ "CA": {
   "app": {
    "status": 200,
    "final_url": "https://venus.io/",
@@ -48,14 +48,14 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "./assets/index-*.js"
    ],
-   "bytes": 5626,
+   "bytes": 5234,
    "redirects": [
     "https://venus.io/"
    ],
    "server": "Vercel"
   }
  },
- "CA-ON": {
+ "MX": {
   "app": {
    "status": 200,
    "final_url": "https://venus.io/",
@@ -65,211 +65,7 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "./assets/index-*.js"
    ],
-   "bytes": 5626,
-   "redirects": [
-    "https://venus.io/"
-   ],
-   "server": "Vercel"
-  }
- },
- "GB": {
-  "app": {
-   "status": 200,
-   "final_url": "https://venus.io/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Venus Protocol",
-   "scripts": [
-    "./assets/index-*.js"
-   ],
-   "bytes": 5626,
-   "redirects": [
-    "https://venus.io/"
-   ],
-   "server": "Vercel"
-  }
- },
- "DE": {
-  "app": {
-   "status": 200,
-   "final_url": "https://venus.io/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Venus Protocol",
-   "scripts": [
-    "./assets/index-*.js"
-   ],
-   "bytes": 5626,
-   "redirects": [
-    "https://venus.io/"
-   ],
-   "server": "Vercel"
-  }
- },
- "FR": {
-  "app": {
-   "status": 200,
-   "final_url": "https://venus.io/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Venus Protocol",
-   "scripts": [
-    "./assets/index-*.js"
-   ],
-   "bytes": 5626,
-   "redirects": [
-    "https://venus.io/"
-   ],
-   "server": "Vercel"
-  }
- },
- "NL": {
-  "app": {
-   "status": 200,
-   "final_url": "https://venus.io/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Venus Protocol",
-   "scripts": [
-    "./assets/index-*.js"
-   ],
-   "bytes": 5626,
-   "redirects": [
-    "https://venus.io/"
-   ],
-   "server": "Vercel"
-  }
- },
- "PL": {
-  "app": {
-   "status": 200,
-   "final_url": "https://venus.io/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Venus Protocol",
-   "scripts": [
-    "./assets/index-*.js"
-   ],
-   "bytes": 5626,
-   "redirects": [
-    "https://venus.io/"
-   ],
-   "server": "Vercel"
-  }
- },
- "UA": {
-  "app": {
-   "status": 200,
-   "final_url": "https://venus.io/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Venus Protocol",
-   "scripts": [
-    "./assets/index-*.js"
-   ],
-   "bytes": 5626,
-   "redirects": [
-    "https://venus.io/"
-   ],
-   "server": "Vercel"
-  }
- },
- "TR": {
-  "app": {
-   "status": 200,
-   "final_url": "https://venus.io/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Venus Protocol",
-   "scripts": [
-    "./assets/index-*.js"
-   ],
-   "bytes": 5626,
-   "redirects": [
-    "https://venus.io/"
-   ],
-   "server": "Vercel"
-  }
- },
- "AE": {
-  "app": {
-   "status": 200,
-   "final_url": "https://venus.io/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Venus Protocol",
-   "scripts": [
-    "./assets/index-*.js"
-   ],
-   "bytes": 5626,
-   "redirects": [
-    "https://venus.io/"
-   ],
-   "server": "Vercel"
-  }
- },
- "SG": {
-  "app": {
-   "status": 200,
-   "final_url": "https://venus.io/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Venus Protocol",
-   "scripts": [
-    "./assets/index-*.js"
-   ],
-   "bytes": 5626,
-   "redirects": [
-    "https://venus.io/"
-   ],
-   "server": "Vercel"
-  }
- },
- "HK": {
-  "app": {
-   "status": 200,
-   "final_url": "https://venus.io/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Venus Protocol",
-   "scripts": [
-    "./assets/index-*.js"
-   ],
-   "bytes": 5626,
-   "redirects": [
-    "https://venus.io/"
-   ],
-   "server": "Vercel"
-  }
- },
- "JP": {
-  "app": {
-   "status": 200,
-   "final_url": "https://venus.io/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Venus Protocol",
-   "scripts": [
-    "./assets/index-*.js"
-   ],
-   "bytes": 5626,
-   "redirects": [
-    "https://venus.io/"
-   ],
-   "server": "Vercel"
-  }
- },
- "BR": {
-  "app": {
-   "status": 200,
-   "final_url": "https://venus.io/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Venus Protocol",
-   "scripts": [
-    "./assets/index-*.js"
-   ],
-   "bytes": 5626,
+   "bytes": 5234,
    "redirects": [
     "https://venus.io/"
    ],
@@ -286,14 +82,14 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "./assets/index-*.js"
    ],
-   "bytes": 5626,
+   "bytes": 5234,
    "redirects": [
     "https://venus.io/"
    ],
    "server": "Vercel"
   }
  },
- "NG": {
+ "CO": {
   "app": {
    "status": 200,
    "final_url": "https://venus.io/",
@@ -303,7 +99,279 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "./assets/index-*.js"
    ],
-   "bytes": 5626,
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
    "redirects": [
     "https://venus.io/"
    ],
@@ -320,7 +388,211 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "./assets/index-*.js"
    ],
-   "bytes": 5626,
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "CN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "KR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "TW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
    "redirects": [
     "https://venus.io/"
    ],
@@ -332,7 +604,7 @@ checked_at: 2026-10-11T21:24:23Z
    "status": null,
    "final_url": "https://app.venus.io",
    "state": "error",
-   "why": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>",
+   "why": "URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>",
    "title": null,
    "scripts": [],
    "bytes": 0,
@@ -350,7 +622,310 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "./assets/index-*.js"
    ],
-   "bytes": 5626,
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.venus.io",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "403: Forbidden",
+   "scripts": [],
+   "bytes": 7255,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.venus.io",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "403: Forbidden",
+   "scripts": [],
+   "bytes": 7255,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://app.venus.io",
+   "state": "unknown",
+   "why": "HTTP 403 without geo wording",
+   "title": "403: Forbidden",
+   "scripts": [],
+   "bytes": 7255,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.venus.io",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.venus.io",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
+   "redirects": [
+    "https://venus.io/"
+   ],
+   "server": "Vercel"
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 200,
+   "final_url": "https://venus.io/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Venus Protocol",
+   "scripts": [
+    "./assets/index-*.js"
+   ],
+   "bytes": 5234,
    "redirects": [
     "https://venus.io/"
    ],

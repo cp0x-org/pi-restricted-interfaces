@@ -1,0 +1,93 @@
+{
+  "id": "ethena",
+  "name": "Ethena",
+  "targets": {
+    "app": "https://app.ethena.fi",
+    "repo": null,
+    "terms": "https://docs.ethena.fi/resources/terms-of-service",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "geo-us-live",
+      "type": "live",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Live: app.ethena.fi redirects a visitor from the US to /restricted",
+      "source": {
+        "url": "https://app.ethena.fi",
+        "country": "US"
+      },
+      "expect": [
+        "final_url: https://(www\\.)?ethena\\.fi/restricted"
+      ],
+      "countries": [
+        "US"
+      ]
+    },
+    {
+      "id": "geo-us-faq",
+      "type": "page",
+      "claim": "geo_site",
+      "status": "yes",
+      "about": "Ethena FAQ: US users are not able to access the application",
+      "source": {
+        "url": "https://docs.ethena.fi/resources/faq",
+        "kind": "docs"
+      },
+      "expect": [
+        "US users are not able to access the application"
+      ],
+      "countries": [
+        "US"
+      ]
+    },
+    {
+      "id": "feature-susde-eea",
+      "type": "page",
+      "claim": "geo_feature",
+      "status": "yes",
+      "about": "Ethena Terms: acquiring sUSDe is not offered to persons resident in the EU or the EEA (the list is from the Terms; per-country enforcement in the app is not verified)",
+      "source": {
+        "url": "https://docs.ethena.fi/resources/terms-of-service",
+        "kind": "terms"
+      },
+      "expect": [
+        "acquisition of sUSDe is not offered to persons with their habitual residence or registered office in the European Union or the European Economic Area"
+      ],
+      "section": {
+        "start": "The acquisition of sUSDe is not offered",
+        "end": "\\."
+      },
+      "countries": "names+groups"
+    },
+    {
+      "id": "screening-restricted-page",
+      "type": "bundle",
+      "claim": "screening",
+      "status": "yes",
+      "about": "The /restricted page served to blocked visitors also covers wallets 'linked to high risk activities'",
+      "source": {
+        "url": "https://ethena.fi/restricted",
+        "scripts": "^https://ethena\\.fi/"
+      },
+      "expect": [
+        "your wallet is linked to high risk activities"
+      ]
+    },
+    {
+      "id": "kyc-whitelist",
+      "type": "page",
+      "claim": "kyc",
+      "status": "yes",
+      "about": "Ethena FAQ: minting addresses must be whitelisted after KYC/AML checks",
+      "source": {
+        "url": "https://docs.ethena.fi/resources/faq",
+        "kind": "docs"
+      },
+      "expect": [
+        "All addresses will need to be whitelisted by the Ethena Protocol after satisfying KYC/AML checks"
+      ]
+    }
+  ]
+}

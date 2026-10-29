@@ -1,0 +1,11 @@
+{
+  "id": "rocketpool",
+  "name": "Rocket Pool",
+  "targets": {
+    "app": "https://stake.rocketpool.net",
+    "repo": null,
+    "terms": null,
+    "endpoints": []
+  },
+  "checks": []
+}

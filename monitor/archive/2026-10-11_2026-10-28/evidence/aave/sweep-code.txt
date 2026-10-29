@@ -1,0 +1,17 @@
+check: aave/sweep-code
+about: All source files of the open frontend repository, searched for access-restriction signals
+source: https://github.com/aave/interface/tree/32cc548b980baadea36cfea5227fc144d3f49958
+checked_at: 2026-10-11T21:02:48Z
+fetched: https://codeload.github.com/aave/interface/tar.gz/32cc548b980baadea36cfea5227fc144d3f49958
+sha256: 68ceac430250d745871409b23deb6a3b02eb637ed3c71c0ceb7bbc25cd6fa4a6
+--------------------------------------------------------------------------------
+repository: https://github.com/aave/interface/tree/32cc548b980baadea36cfea5227fc144d3f49958
+files scanned: 922
+
+signals:
+  [strong] screening: screening call — 1 file(s)
+      https://github.com/aave/interface/blob/32cc548b980baadea36cfea5227fc144d3f49958/src/hooks/compliance/service-compliance.ts#L16  > ERR_TOO_MANY_REDIRECTS. const res = await fetch(`/api/preflight-compliance/?address=${encodeURIComponent(address)}`); const data = await res.json();
+  [weak] screening: screening words — 5 file(s)
+      https://github.com/aave/interface/blob/32cc548b980baadea36cfea5227fc144d3f49958/.env.example#L59  otals for whole-protocol figures TL_API_KEY= PLAIN_API_KEY= COMPLIANCE_API_URL= COMPLIANCE_SECRET= SENTRY_AUTH_TOKEN= # Gas-sponsored voting relay (server
+      https://github.com/aave/interface/blob/32cc548b980baadea36cfea5227fc144d3f49958/pages/_app.page.tsx#L25  'src/hooks/app-data-provider/useAppDataProvider'; import { ComplianceProvider } from 'src/hooks/compliance/compliance'; import { ModalContextProvider } from
+      https://github.com/aave/interface/blob/32cc548b980baadea36cfea5227fc144d3f49958/pages/api/preflight-compliance.ts#L4  nse } from 'next'; import { isAddress } from 'viem'; const COMPLIANCE_API_URL = process.env.COMPLIANCE_API_URL; const COMPLIANCE_SECRET = process.env.COM

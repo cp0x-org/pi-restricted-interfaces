@@ -1,7 +1,7 @@
 check: curve/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://www.curve.finance
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
@@ -14,7 +14,7 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "/assets/index-*.js"
    ],
-   "bytes": 11967,
+   "bytes": 12928,
    "redirects": [],
    "server": "cloudflare"
   }
@@ -29,12 +29,12 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "/assets/index-*.js"
    ],
-   "bytes": 11967,
+   "bytes": 12928,
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "US-NY": {
+ "CA": {
   "app": {
    "status": 200,
    "final_url": "https://www.curve.finance",
@@ -44,12 +44,12 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "/assets/index-*.js"
    ],
-   "bytes": 11967,
+   "bytes": 12928,
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "CA-ON": {
+ "MX": {
   "app": {
    "status": 200,
    "final_url": "https://www.curve.finance",
@@ -59,187 +59,7 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "/assets/index-*.js"
    ],
-   "bytes": 11967,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "GB": {
-  "app": {
-   "status": 200,
-   "final_url": "https://www.curve.finance",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Curve.finance",
-   "scripts": [
-    "/assets/index-*.js"
-   ],
-   "bytes": 11967,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "DE": {
-  "app": {
-   "status": 200,
-   "final_url": "https://www.curve.finance",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Curve.finance",
-   "scripts": [
-    "/assets/index-*.js"
-   ],
-   "bytes": 11967,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "FR": {
-  "app": {
-   "status": 200,
-   "final_url": "https://www.curve.finance",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Curve.finance",
-   "scripts": [
-    "/assets/index-*.js"
-   ],
-   "bytes": 11967,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "NL": {
-  "app": {
-   "status": 200,
-   "final_url": "https://www.curve.finance",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Curve.finance",
-   "scripts": [
-    "/assets/index-*.js"
-   ],
-   "bytes": 11967,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "PL": {
-  "app": {
-   "status": 200,
-   "final_url": "https://www.curve.finance",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Curve.finance",
-   "scripts": [
-    "/assets/index-*.js"
-   ],
-   "bytes": 11967,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "UA": {
-  "app": {
-   "status": 200,
-   "final_url": "https://www.curve.finance",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Curve.finance",
-   "scripts": [
-    "/assets/index-*.js"
-   ],
-   "bytes": 11967,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "TR": {
-  "app": {
-   "status": 200,
-   "final_url": "https://www.curve.finance",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Curve.finance",
-   "scripts": [
-    "/assets/index-*.js"
-   ],
-   "bytes": 11967,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "AE": {
-  "app": {
-   "status": 200,
-   "final_url": "https://www.curve.finance",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Curve.finance",
-   "scripts": [
-    "/assets/index-*.js"
-   ],
-   "bytes": 11967,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "SG": {
-  "app": {
-   "status": 200,
-   "final_url": "https://www.curve.finance",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Curve.finance",
-   "scripts": [
-    "/assets/index-*.js"
-   ],
-   "bytes": 11967,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "HK": {
-  "app": {
-   "status": 200,
-   "final_url": "https://www.curve.finance",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Curve.finance",
-   "scripts": [
-    "/assets/index-*.js"
-   ],
-   "bytes": 11967,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "JP": {
-  "app": {
-   "status": 200,
-   "final_url": "https://www.curve.finance",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Curve.finance",
-   "scripts": [
-    "/assets/index-*.js"
-   ],
-   "bytes": 11967,
-   "redirects": [],
-   "server": "cloudflare"
-  }
- },
- "BR": {
-  "app": {
-   "status": 200,
-   "final_url": "https://www.curve.finance",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "Curve.finance",
-   "scripts": [
-    "/assets/index-*.js"
-   ],
-   "bytes": 11967,
+   "bytes": 12928,
    "redirects": [],
    "server": "cloudflare"
   }
@@ -254,12 +74,12 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "/assets/index-*.js"
    ],
-   "bytes": 11967,
+   "bytes": 12928,
    "redirects": [],
    "server": "cloudflare"
   }
  },
- "NG": {
+ "CO": {
   "app": {
    "status": 200,
    "final_url": "https://www.curve.finance",
@@ -269,7 +89,247 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "/assets/index-*.js"
    ],
-   "bytes": 11967,
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
    "redirects": [],
    "server": "cloudflare"
   }
@@ -284,7 +344,185 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "/assets/index-*.js"
    ],
-   "bytes": 11967,
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CN": {
+  "app": {
+   "status": null,
+   "final_url": "https://www.curve.finance",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "KR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
    "redirects": [],
    "server": "cloudflare"
   }
@@ -294,7 +532,7 @@ checked_at: 2026-10-11T21:24:23Z
    "status": null,
    "final_url": "https://www.curve.finance",
    "state": "error",
-   "why": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>",
+   "why": "URLError: <urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>",
    "title": null,
    "scripts": [],
    "bytes": 0,
@@ -312,7 +550,292 @@ checked_at: 2026-10-11T21:24:23Z
    "scripts": [
     "/assets/index-*.js"
    ],
-   "bytes": 11967,
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 200,
+   "final_url": "https://www.curve.finance",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Curve.finance",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 12928,
    "redirects": [],
    "server": "cloudflare"
   }

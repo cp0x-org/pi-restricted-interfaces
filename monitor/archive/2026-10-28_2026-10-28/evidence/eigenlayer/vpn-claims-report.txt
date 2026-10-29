@@ -1,0 +1,328 @@
+check: eigenlayer/vpn-claims-report
+about: Press report (Apr 2024): proxy and VPN detection and blocking on the EIGEN claim site
+source: https://decrypt.co/228642/eigen-token-airdrop-plan-ethereum-restaking-protocol-eigenlayer
+checked_at: 2026-10-28T22:56:38Z
+fetched: https://decrypt.co/228642/eigen-token-airdrop-plan-ethereum-restaking-protocol-eigenlayer
+sha256: d20222538c8212bdf72598b0eb50cb558eeff03796fe68a9f0b82694a1ca7642
+http_status: 200
+via: live
+--------------------------------------------------------------------------------
+Ethereum Restaking Protocol EigenLayer Reveals Token and Airdrop Plans - Decrypt
+Ethereum Restaking Protocol EigenLayer Reveals Token and Airdrop Plans
+BTC $81,212.00 +0.51%
+ETH $2,358.24 +0.48%
+SOL $102.44 +1.27%
+XRP $1.33 +0.08%
+HYPE $80.91 -0.73%
+BNB $756.11 +1.55%
+USDC $0.99953 +0.02%
+TRX $0.329665 -0.48%
+FIGR_HELOC $1.03 +0.48%
+ZEC $1,310.34 +0.08%
+DOGE $0.079826 +1.46%
+XMR $602.22 -0.93%
+USDS $0.999779 0.00%
+WBT $77.99 +0.52%
+LINK $11.81 +2.51%
+LEO $9.41 +3.96%
+ADA $0.205849 +0.33%
+NEAR $4.73 +0.87%
+XLM $0.172804 +1.66%
+BCH $290.29 -0.50%
+RAIN $0.00697616 -2.91%
+LTC $59.37 +4.24%
+USDE $0.999452 +0.02%
+UNI $7.24 +2.34%
+CC $0.101122 +2.42%
+AVAX $9.00 +0.94%
+USD1 $0.999193 +0.03%
+SUI $0.943933 +1.77%
+GRAM $1.24 +1.44%
+HBAR $0.075156 -1.21%
+XAUT $4,045.97 -0.27%
+USDG $0.999818 0.00%
+PYUSD $0.999809 -0.01%
+TAO $257.32 +1.03%
+SHIB $0.00000497 +1.71%
+QNT $199.95 -0.05%
+ENA $0.208613 +0.04%
+CRO $0.053349 -0.73%
+RLUSD $0.999985 0.00%
+BTW $1.73 -0.80%
+M $1.046 -2.54%
+USDY $1.15 +0.04%
+USYC $1.14 +0.01%
+OKB $111.40 +1.85%
+BUIDL $1.00 0.00%
+PEPE $0.00000504 +10.39%
+AAVE $134.68 +1.74%
+PUMP $0.00451298 +4.28%
+ONDO $0.420992 +0.48%
+USDF $0.995191 +0.02%
+EURSAFO $1.13 +0.20%
+PAXG $4,053.03 -0.26%
+ASTER $0.707349 -0.13%
+DOT $1.016 +1.84%
+MNT $0.505943 -1.51%
+WLFI $0.052127 -0.31%
+WLD $0.437715 +0.43%
+U $0.999214 +0.03%
+MORPHO $2.25 +2.85%
+SKY $0.065411 +0.92%
+USDD $0.998203 +0.26%
+ICP $2.65 +2.49%
+HTX $0.00000162 +0.23%
+BFUSD $0.998982 +0.03%
+BGB $1.88 -0.14%
+USDGO $1.00 +0.01%
+ETC $7.61 -0.10%
+ARB $0.17304 +4.04%
+VVV $23.93 -8.24%
+JST $0.140604 +1.04%
+KCS $7.57 +1.61%
+KAS $0.03739693 +5.98%
+GT $9.83 +1.10%
+POL $0.092026 -0.16%
+JUP $0.28365 +1.74%
+ALGO $0.103713 +0.49%
+RENDER $1.70 +0.41%
+ATOM $1.64 +1.37%
+PI $0.07665 +0.09%
+OUSD $0.999173 -0.13%
+INJ $8.15 +2.75%
+NEXO $0.800359 +1.33%
+FIL $0.917362 +1.96%
+LIT $2.96 -3.55%
+GHO $0.998319 0.00%
+DASH $53.73 -2.47%
+USTB $11.26 +0.01%
+CAKE $2.11 +1.97%
+ZRO $1.70 +1.63%
+ETHFI $0.681481 +2.12%
+NIGHT $0.04046196 -2.75%
+PEARL $1.85 +7.60%
+XDC $0.03292259 -2.46%
+APT $0.701929 +1.37%
+BDX $0.074404 -0.50%
+PYTH $0.074116 +1.69%
+AERO $0.698518 +0.34%
+JAAA $1.054 +0.01%
+STX $0.301259 -0.74%
+VET $0.00642754 -0.48%
+TIA $0.555066 +3.64%
+USD0 $0.998886 +0.01%
+FLR $0.00617282 +1.30%
+CRV $0.338317 +0.06%
+币安人生 $0.526378 +3.17%
+AKE $0.02242166 +3.81%
+EUTBL $1.18 +0.19%
+PENGU $0.00797134 +3.23%
+TUSD $0.99796 +0.05%
+YLDS $0.999244 0.00%
+EURC $1.11 +0.16%
+STABLE $0.02718652 -2.32%
+TRUMP $1.73 +2.21%
+RAY $1.80 +1.30%
+A7A5 $0.01209949 -1.52%
+GRASS $0.676847 -9.14%
+HASH $0.00743918 +0.52%
+FET $0.184682 +1.80%
+VIRTUAL $0.627489 -0.10%
+DRV $0.376266 +2.82%
+SPX $0.399188 +3.16%
+XPL $0.077069 +4.62%
+REUSD $1.11 +0.02%
+BSV $18.07 +3.68%
+SEI $0.053693 +1.96%
+KAU $130.44 +0.11%
+STRK $0.04702029 +1.40%
+BTT $0.00000037 +0.61%
+SOFID $0.999192 +0.02%
+PENDLE $1.99 +0.13%
+Q $0.069422 +28.78%
+OUSG $117.07 +0.01%
+FF $0.094487 -2.82%
+LDO $0.378342 +1.44%
+SUN $0.0162183 +0.35%
+XTZ $0.282804 +1.02%
+APXUSD $0.995665 +0.66%
+FDUSD $0.997657 +0.03%
+UB $0.119535 -0.47%
+GNO $110.78 -0.64%
+OHM $19.22 -0.83%
+PIEVERSE $1.039 -0.32%
+BONK $0.00000317 +3.73%
+KITE $0.116264 -1.89%
+CARDS $0.3046 -2.77%
+USDAI $0.999205 +0.03%
+OP $0.11339 +1.80%
+DCR $14.49 -0.18%
+CFX $0.04838462 +0.50%
+MON $0.02144108 +0.60%
+BP $1.013 +4.69%
+APEPE $0.0000012 -0.17%
+LUNC $0.00004556 +1.25%
+GRT $0.02250581 +0.19%
+SAFO $1.026 +0.01%
+SHFL $0.470689 -0.59%
+AR $3.56 +0.95%
+JTO $0.433407 +0.40%
+JTRSY $1.12 +0.01%
+NFT $0.00000023 +0.40%
+FLOKI $0.00002403 +3.72%
+PC0000031 $1.00 0.00%
+ENS $5.31 +2.38%
+KMNO $0.03806946 -3.43%
+CVX $2.39 +4.16%
+KAIA $0.03416614 -3.77%
+FRAX $0.991653 0.00%
+COMP $21.63 +1.27%
+KOGE $63.39 +0.04%
+BAT $0.1428 -2.34%
+JASMY $0.00425122 -1.07%
+ZBCN $0.00208151 +0.32%
+RUNE $0.624385 -0.73%
+AKT $0.679295 -0.68%
+USX $0.998728 +0.02%
+KAG $54.17 -0.90%
+EIGEN $0.202629 +2.84%
+IOTA $0.04179743 -0.66%
+SYRUP $0.167806 -4.21%
+PONS $0.291359 +10.41%
+EURCV $1.11 +0.17%
+ZAMA $0.07556 -2.43%
+CRVUSD $0.998811 +0.04%
+WIF $0.184233 +2.73%
+FLUID $2.19 -0.17%
+TWT $0.440232 +0.62%
+USAT $0.99827 -0.02%
+S $0.04643635 +0.65%
+MGLO $1.011 0.00%
+THETA $0.177115 -1.51%
+BTSE $1.092 -0.14%
+MET $0.310574 -2.71%
+BEAM $0.0034124 +2.26%
+SPCXB $143.88 -3.50%
+USELESS $0.169614 +6.00%
+USTBL $1.10 +0.01%
+AXS $0.959663 +0.02%
+AUSD $0.998833 +0.01%
+TRAC $0.367781 +0.31%
+PC0000033 $1.00 0.00%
+XCN $0.00407209 +1.48%
+CRCLB $80.39 -0.74%
+STRCX $109.33 +5.14%
+ANVL $0.00179162 -0.39%
+SN51 $31.42 +0.89%
+APYUSD $1.41 +0.56%
+SENT $0.02159075 -1.35%
+GOMINING $0.387014 +3.87%
+MANA $0.079335 +0.83%
+COCO $0.1551 +0.23%
+2Z $0.02935984 +1.12%
+A $0.091312 +0.97%
+BORG $0.154164 +1.30%
+NEO $2.14 +2.76%
+VSN $0.0392351 +0.71%
+GUSD $0.997484 +0.03%
+KNTQ $0.464214 +11.79%
+MX $1.58 +1.87%
+BR $0.47918 -3.44%
+SAND $0.04768882 -0.49%
+NPC $0.01725885 +0.77%
+CHZ $0.01306004 +0.77%
+RAIL $2.26 -8.43%
+JPYC $0.00633116 -0.02%
+XEC $0.00000667 -2.22%
+ZK $0.01216504 +1.18%
+PC0000097 $1.00 0.00%
+FARTCOIN $0.133896 +2.68%
+B $0.133812 -0.90%
+AWE $0.068344 +5.22%
+JPYSC $0.00633714 +0.10%
+CASH $0.999029 +0.03%
+IMX $0.141039 +2.34%
+OZO $0.130776 +0.19%
+MSTRX $143.75 +1.97%
+APE $0.125408 +2.40%
+1INCH $0.088834 +0.65%
+EDGE $0.355749 +4.44%
+AIOZ $0.095781 -0.95%
+BC $0.03822859 -0.40%
+ONYC $1.16 +0.04%
+H $0.057017 +1.69%
+0G $0.197498 -1.66%
+STONK $0.154217 +1.34%
+ATH $0.00595308 +2.06%
+GEOD $0.25844 +4.33%
+SFP $0.237885 -3.34%
+SUPER $0.181217 +1.40%
+Price data by
+Decrypt News Coins
+Ethereum Restaking Protocol EigenLayer Reveals Token and Airdrop Plans
+The Eigen Foundation will begin distributing EIGEN tokens on May 10, but US and VPN users will be blocked.
+By Jason Nelson
+Apr 29, 2024 Apr 29, 2024
+4 min read
+Image: The Eigen Foundation/Twitter
+Create an account to save your articles.
+Add on Google Add Decrypt as your preferred source to see more of our stories on Google.
+The Eigen Foundation, which supports the Ethereum restaking protocol EigenLayer, published details about its upcoming token airdrop on Monday.
+In cryptocurrency, staking refers to locking up crypto holdings to support a blockchain's security, integrity, and efficiency by helping to validate transactions. EigenLayer facilitates Ethereum (ETH) “restaking,” which is the ability to use a single stake across multiple blockchains.
+Based on a snapshot of eligible wallets taken last month, the Eigen Foundation said the EIGEN token airdrop will take place between May 10 and September 7, spanning 120 days. The initial " stakedrop " allocates 5% of the total token supply to users who engaged in staking activities as of March 15.
+Eligibility for the drop includes people who staked directly with EigenLayer or through liquid restaking tokens (LRTs). The first “Season 1” airdrop, the Eigen Foundation said, consists of two phases, with 90% of tokens going to users who meet the initial eligibility requirements and remaining allocation distributed in a later phase.
+“The remaining 10% is for people who interacted with EigenLayer in more complex ways, where determining the appropriate EigenLayer end-user was either not possible or required an opinionated decision,” the group wrote, later posting additional details to Twitter.
+Clarifications with respect to the Season 1, Phase 2 allocations of 10% (approximately 7.77M EIGEN), Pendle, and certain other unresolved (DeFi) contracts.
+– Users of Pendle or any unresolved (DeFi) contract are not penalized in the distribution.
+– 10% is an approximate…
+— Eigen Foundation (@eigenfoundation) April 29, 2024
+There are also restrictions, however. The EigenLayer airdrop terms of service disclose that certain regions will be excluded from participating in the drop, enforced through IP address blocks for regions under international sanctions or “deemed high-risk,” including the United States, Canada, China, Cuba, North Korea, Iran, and Venezuela.
+“To avoid circumvention of our geo-location controls, the organization has implemented proxy and VPN detection and blocking controls, which are designed to prevent Eigen claims by any person detected to be using VPN and similar proxy technologies,” EigenLayer wrote.
+After the initial EIGEN drop, 15% of the total supply is reserved for future drops, the foundation explained.
+Introducing the Eigen Foundation, EIGEN token, and Season 1 Stakedrop! pic.twitter.com/lxEVSbRfVB
+— Eigen Foundation (@eigenfoundation) April 29, 2024
+The Eigen Foundation did not immediately respond to Decrypt’s request for comment.
+EigenLayer was founded in 2021, led by former University of Washington data science professor Sreeram Kannan. In February, the total value locked (TVL) on EigenLayer surpassed $3 billion . $560 million of the deposits to EigenLayer were stETH, the liquid staking token created by Lido Finance .
+The newly launched Eigen Foundation will support research and development on the EigenLayer protocol by funding grants, providing third-party evaluations, and “stewarding continued progress toward greater decentralization.”
+“The new EIGEN token introduces a complementary mechanism that is designed to specifically address ‘intersubjective’ faults—faults that are not possible to address via ETH restaking alone,” the foundation said. “Intersubjective faults are instances of misbehavior that cannot be objectively identified onchain, yet any two reasonable observers would agree that a penalty is deserved.”
+The news of the stakedrop coincides with the release of EigenLayer’s whitepaper that details the structure and tokenomics of the Eigen ecosystem.
+“In the initial phase, the EIGEN token will be non-transferable and non-forkable,” the Eigen Foundation said. “We believe this approach will best support the long-term growth and maturity of the EigenLayer ecosyste
+“Upon completion of this phase, the full functionality of the token, including forkability and transferability, will be enabled,” it continued.
+Edited by Ryan Ozawa .
+Daily Debrief Newsletter
+Start every day with the top news stories right now, plus original features, a podcast, videos and more.
+Email address Join free
+Join 72,000+ readers
+Create an account to save your articles.
+Add on Google Add Decrypt as your preferred source to see more of our stories on Google.
+Your gateway into the world of Web3
+News
+All News
+Editors' Picks
+Business
+AI
+Technology
+Markets
+Deep Dives
+Learn
+Videos
+News Explorer
+Coins
+Bitcoin
+Ethereum
+Solana
+XRP
+All Coins
+About
+Team
+Disclosures
+Manifesto
+Careers
+Jobs
+Partner
+Contact
+Download app
+© 2026 Decrypt Media, Inc. All rights reserved
+Terms of Service
+Privacy Policy
+Code of Conduct

@@ -1,0 +1,13 @@
+check: curve/no-screening-code
+about: No wallet-screening call or sanctions list in the frontend monorepo
+source: https://github.com/curvefi/curve-frontend/tree/f8cfaab057efb97dd9b96eac6ce966245cc45b8c
+checked_at: 2026-10-11T21:04:39Z
+fetched: https://codeload.github.com/curvefi/curve-frontend/tar.gz/f8cfaab057efb97dd9b96eac6ce966245cc45b8c
+sha256: 17846e83a1df42620284f94c77a4a659449b18cf2405f28c1ed8bdf8af92cd4f
+--------------------------------------------------------------------------------
+files scanned: 1977
+patterns that must be absent:
+  trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\w-])|preflight-compliance|/address/status\b|compliance/screen|/v\d/check/
+
+hits:
+  none

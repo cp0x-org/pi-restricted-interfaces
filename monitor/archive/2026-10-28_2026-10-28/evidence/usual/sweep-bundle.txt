@@ -1,0 +1,55 @@
+check: usual/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://app.usual.money
+checked_at: 2026-10-28T22:51:16Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://app.usual.money (HTTP 200)
+scripts (37):
+  https://app.usual.money/_next/static/chunks/59c6eb5a-182401ccf535adae.js  sha256=f9f1bb1a5e8c0981767e7443fbf4862ae9c9b195fb1d42d1a8c93afed0319b49
+  https://app.usual.money/_next/static/chunks/1dd3208c-d259b38f70c6d863.js  sha256=3d03a6a13e60c2dc0bad608e8516e9070786599e6b48d9eae019d37b751698dd
+  https://app.usual.money/_next/static/chunks/2491-08a238dfbd2733c1.js  sha256=fc770509035c34d704e3490fc879af51a67a793dd8c936a1f661a35ca9a8b1dc
+  https://app.usual.money/_next/static/chunks/main-app-eb12190b04c79d47.js  sha256=3499855a1805c23a8b04d43ee22c0081a3a7068f25506f5de02e2399863393fc
+  https://app.usual.money/_next/static/chunks/app/global-error-d38cb71977698706.js  sha256=153766067f0c0833cbe86bae26ee0fdd336b5a3812813020e846cb9c6a828701
+  https://app.usual.money/_next/static/chunks/8bb4d8db-a3b200a348cda174.js  sha256=4b0c46dcbbf9e00b0dc4846a676cacf1a64902dca3018db9823918681b2bbafc
+  https://app.usual.money/_next/static/chunks/7bf36345-0dd294654bd5a895.js  sha256=6230bc2bdf3e33cd7e4433487868d779b9bf7ab96cdef39525c65393cd2fcf07
+  https://app.usual.money/_next/static/chunks/4430-dba756ec7f4ad609.js  sha256=b9cc4d97e33b0314a53dff55cf72631e793108de3414a04d1463bd12a1ac1b1a
+  https://app.usual.money/_next/static/chunks/6340-f55c9c5514621062.js  sha256=6463e6460b0b99b007a3d5348cb7996dc8df02050d1d66e3978b00c9ab01100d
+  https://app.usual.money/_next/static/chunks/3120-25e49b9136caf802.js  sha256=2ca5b04bc530552250c2f839c33124c9924b61398e2e5a6cb9fdf8979cbbc99b
+  https://app.usual.money/_next/static/chunks/9875-4d723a700a704081.js  sha256=4372263eb144c1ad3c1f1422d998772a07e9d76f3e5ed56eef215731d49997b6
+  https://app.usual.money/_next/static/chunks/7002-f1c8adade7a22337.js  sha256=7798ff27e178fa4722e6b3fc8ce3a417a5d5882b1144a53ab149f276be24a277
+  https://app.usual.money/_next/static/chunks/9983-4a87ca5f68bd21b8.js  sha256=d8909edad9df972f6f892b2c73c974e1ef61d979b1a2b897fc15ea4da59504fa
+  https://app.usual.money/_next/static/chunks/5414-078648c333f4fc48.js  sha256=6a79fba59c18cb65b4607d74a1d25e8fcfadaaa32848a9e16d267d174d838478
+  https://app.usual.money/_next/static/chunks/6485-e99e31fb9a3c6bbe.js  sha256=cc3cbc978c0d72e366b23c04c9a9730ad0238daab4fdd3c609c6c1d6aa8d423d
+  https://app.usual.money/_next/static/chunks/7376-bad9088320d8f11d.js  sha256=7a146702cfb811ec26150f33d98229a85d219ac55dca488de71822e843e24600
+  https://app.usual.money/_next/static/chunks/5140-77ad956ea302c3ac.js  sha256=72c414bd816da9ef8961713dd76883eaf2f4d5f009f7171471257011255d6670
+  https://app.usual.money/_next/static/chunks/8786-48f0060a377878fc.js  sha256=1a744b05e60f9dd4c07f6eda0e15fb9abb4518c7237a8971bc28e3b5fdde78ad
+  https://app.usual.money/_next/static/chunks/9565-c09fdd5110f4fa34.js  sha256=55dd84b5592e049af21476fc7abbc8f93dfb634d6d64ad6f9a69bdb7e9dad65d
+  https://app.usual.money/_next/static/chunks/4355-19cfeb95aceaa446.js  sha256=15e75029236912605ee8f6fb31a7c28bb1937f7206c3f7b768347897b34d7925
+  https://app.usual.money/_next/static/chunks/5845-107c9ba10dd709e4.js  sha256=6c10c215c27273a7af165bc275d4922d6de2d0684093e63c76d80615d09b8796
+  https://app.usual.money/_next/static/chunks/4344-74b56a9cb1a7ffce.js  sha256=3481f1896a0a90f56ed12299612d681104c18397b04611952e1d1b8b009cb4bd
+  https://app.usual.money/_next/static/chunks/5906-2a6f63e25cee562b.js  sha256=e6dae63f1f788c7a5a60d541815c427feba812fc6360bfe4c358e3bc1e5af95e
+  https://app.usual.money/_next/static/chunks/8473-99760a62a9436c8c.js  sha256=055c9c5143ffd134510bef9f36942406eb38650cb4fa9175a591bc259cf8dc2a
+  https://app.usual.money/_next/static/chunks/app/page-0e97e2f662c5300f.js  sha256=8d46b44bf0e22e6c5132009627c9fa76d65d3156b9d88fac68ba261601bc0871
+  https://app.usual.money/_next/static/chunks/2853-566aed86a4a2975b.js  sha256=452c77c1511c756b2479a6b8539df4b5e23b55ed1e0999a6ae6ae37af1bf8e9c
+  https://app.usual.money/_next/static/chunks/183-3fdb567a663b67d6.js  sha256=cbfb38a5a1b27ad851c8d0aa0b64c4807d258dfd6a2ebeb1c8970a57fd92febc
+  https://app.usual.money/_next/static/chunks/9235-1b497f7b85fdc7e2.js  sha256=18222be94036b595aed1428e47fdca031a4493068448d166ee5c7b8a55837400
+  https://app.usual.money/_next/static/chunks/8882-d404eb40570326c7.js  sha256=6015879b2e1c97b421b68023e2d416ff8e6dc7c9071725e04471a5f8fe1d92b2
+  https://app.usual.money/_next/static/chunks/2019-e600f6bf3a92f3da.js  sha256=38f3c054095c9230dbbd1522a56a3dea92fe59e499a2441f5deba5f1cb9fe9e0
+  https://app.usual.money/_next/static/chunks/1849-aad3099f45a37517.js  sha256=9da6a1dd6461d88046dc7b910beabe0ea1fc542923b588db3e2e9c6d744c4a15
+  https://app.usual.money/_next/static/chunks/1161-9e851a8eb51c44ad.js  sha256=84cc5557002e9c510296af9944964249dac8f68799dc1df7ebbe9bdfb9f3381e
+  https://app.usual.money/_next/static/chunks/3175-3f93b21f4d3ca8f5.js  sha256=33718a719b982e27617fa5ec9d9febd2e25136fca3c571e4d4a477c4eee1c64c
+  https://app.usual.money/_next/static/chunks/app/layout-0976821f3fa490ed.js  sha256=ac6e57472c03d182ac7b5c295aa0b2bae157918454b94c1fe196054fa69bd1ce
+  https://app.usual.money/_next/static/chunks/app/not-found-e881dc3e0d6de712.js  sha256=13a9b517233805e62943c5e1412e4b1b60964711d45823d36900de6e492011c6
+  https://app.usual.money/_next/static/chunks/polyfills-42372ed130431b0a.js  sha256=0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683
+  https://app.usual.money/_next/static/chunks/webpack-9f293c8387490c26.js  sha256=8420eeea043bea9fbb994f97ad26c128462c49aba519b83d04284cd4072817f7
+
+signals:
+  [weak] screening: screening words — 1 file(s)
+      /_next/static/chunks/app/layout-0976821f3fa490ed.js: void 0===e)throw Error("useCompliance must be used within a ComplianceProvider");return e}},86163:function(e,t,n){"use strict";var a,i,r,s;n.d(t,{h:function()
+  [weak] vpn: VPN words — 1 file(s)
+      /_next/static/chunks/5140-77ad956ea302c3ac.js: "Something went wrong"),x<=0?(b("If you use an adblocker or VPN, try disabling and re-attempting."),w(null)):(b("You did not pass CAPTCHA. Plea
+  [weak] kyc: KYC words — 2 file(s)
+      / (HTML and inline scripts): EURC. Institutions can also access EUR0 through regulated, KYC-enabled contracts.\"},{\"question\":\"How is EUR0 different from other EUR stab
+      /_next/static/chunks/5845-107c9ba10dd709e4.js: ow-open",T="https://t.me/UsualProtocol_bot?start=w46339105--kyc",v="compliance@usual.company",w="https://docs.usual.money/usual-products/usd0-s

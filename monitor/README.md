@@ -3,7 +3,10 @@
 Source of truth: `data/interfaces.json` (schema v2, hand-maintained). Everything else is derived.
 
 ```
-data/interfaces.json ──(build.py)──▶ src/data/interfaces.json   dataset imported by the web app: EVM interfaces, plus apps whose networks[] lists EVM networks (--ui-chains evm), + computed level, restrictions, category_group, chain_tags, observations
+data/interfaces.json ──(build.py)──▶ out/report.md, out/interfaces.csv   the whole catalog, derived (observed blocks counted)
++ data/observations.json  └(export.py)─▶ src/data/monitor.json          the dashboard: one row per interface (EVM interfaces, plus apps whose networks[] lists EVM networks, --chains evm) with the statuses, country lists, rating, restriction count and per country the probe verdict
+                                       src/data/interfaces/<id>.json   one file per interface for its page: the whole entry + computed fields + every latest verified observation
+                          └(check_export.py)─▶ the site files compared with the collected data; a mismatch fails the build
                                  ▶ out/report.md               human-readable report
                                  ▶ out/interfaces.csv          same table for spreadsheets
 ```
@@ -12,7 +15,11 @@ data/interfaces.json ──(build.py)──▶ src/data/interfaces.json   datase
 
 ```bash
 pnpm monitor:sync           # no checks, no network: merge new probe runs from probe/out/ into data/observations.json, then monitor:build
-pnpm monitor:build          # validate data (+ observations, observed blocks counted), regenerate src/data/interfaces.json, out/report.md, out/interfaces.csv
+pnpm monitor:build          # validate data (+ observations, observed blocks counted), regenerate out/report.md, out/interfaces.csv and the site files in src/data, then check them
+pnpm monitor:export         # only the site files (src/data/monitor.json, src/data/interfaces/<id>.json)
+pnpm monitor:publish        # copy the site files to dataset/current/, the previous ones to dataset/archive/ (also the last step of monitor:update)
+pnpm monitor:check          # only the check: ratings, counts, country lists and probe verdicts of the site files vs the collected data
+pnpm monitor:tos            # only out/tos_vs_probe.md: Terms vs probe, per interface
 pnpm monitor:verify         # evidence paths exist in local clones, frontend repos reachable (needs network + repos/)
 pnpm monitor:scan           # ripgrep the cloned frontends for geo/screening signals -> data/scan_raw.json
 pnpm monitor:probe                        # P3: HTTP probe of every interface from the countries of data/countries.json via a proxy -> probe/out/<run>.json
@@ -26,7 +33,7 @@ How to update the site and read the history: [`docs/updating.md`](docs/updating.
 
 To check the published numbers against their primary sources, use [`../research/`](../research/README.md)
 (`pnpm research:all`): one check per counted restriction, rebuilt into the same table and compared with
-`src/data/interfaces.json`. Change `data/interfaces.json` and the matching `research/checks/<id>.json` together.
+`src/data/monitor.json`. Change `data/interfaces.json` and the matching `research/checks/<id>.json` together.
 
 Proxies for `monitor:probe` are configured through `PROBE_PROXY_URL` (template with `{cc}`), see `docs/probing.md` for providers,
 pricing, credentials format and the full workflow.
@@ -48,13 +55,17 @@ git clone --depth 1 --filter=blob:limit=400k https://github.com/<owner>/<repo> m
 |---|---|
 | `data/interfaces.json` | the catalog (57 interfaces), schema v2 |
 | `data/scan_raw.json` | raw ripgrep hits from the last static scan (candidates, not findings) |
-| `scripts/build.py` | validation (enums, ISO country tokens, repo consistency), derived fields, report/CSV/UI export |
+| `scripts/build.py` | validation (enums, ISO country tokens, repo consistency), derived fields, report and CSV; with `--export` it runs the two scripts below |
+| `scripts/export.py` | the files the site loads: `src/data/monitor.json` (dashboard rows) and `src/data/interfaces/<id>.json` (one record per page) |
+| `scripts/publish.py` | copies the site files to `dataset/current/` and keeps the previous versions in `dataset/archive/` (`pnpm monitor:publish`) |
+| `scripts/check_export.py` | recomputes ratings, counts, country lists and probe verdicts from the collected data and compares them with the site files (`pnpm monitor:check`) |
+| `scripts/tos_vs_probe.py` | `out/tos_vs_probe.md`: per interface, the countries the Terms name against the countries the probe saw restricted, and the differences in both directions (`pnpm monitor:tos`, also written by the build) |
 | `scripts/scan.py` | static scan of cloned frontends |
 | `scripts/verify.py` | evidence paths and repo reachability |
 | `scripts/probe.py` | P3 per-country HTTP probe through a proxy (vantage verification, site + geo endpoints, `merge` into the store) |
 | `scripts/observed.py` | which countries the probe saw restricted; `build.py` and `research/combine.py` count them the same way |
 | `scripts/sync.py` | `monitor:sync`: merge new probe runs, then `monitor:build`; no checks, no network |
-| `data/observations.json` | append-only store of probe observations; `build.py` exports the latest verified ones to the site |
+| `data/observations.json` | append-only store of probe observations; `export.py` puts the latest verified ones on the site (one verdict per country on the dashboard, every observation on the interface page) |
 | `docs/probing.md` | how to buy and configure proxies, run the probe and read the results |
 | `templates/report_template.md` | report skeleton with `{{MAIN_TABLE}}`, `{{MECH_TABLE}}`, `{{LIVE_TABLE}}`, `{{STATS}}`, `{{PROVIDERS}}` |
 | `prompts/auditor-agent.md` | prompt for the LLM auditor used in deep checks (schema of its JSON output) |
@@ -91,4 +102,4 @@ Step-by-step guide with a JSON template: [`ADD_PROTOCOL.md`](ADD_PROTOCOL.md).
 
 1. Edit `data/interfaces.json` (keep every claim backed by an `evidence` entry: repo-relative path, URL, or `owner/repo: path`).
 2. `pnpm monitor:build` — fails on schema errors, prints the rating distribution.
-3. Review `out/report.md` and the diff of `src/data/interfaces.json`, then `pnpm build` for the site.
+3. Review `out/report.md` and the diff of `src/data/` (the check at the end of the build must say OK), then `pnpm build` for the site.

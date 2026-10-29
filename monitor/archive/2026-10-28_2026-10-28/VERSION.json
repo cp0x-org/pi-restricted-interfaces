@@ -1,0 +1,66 @@
+{
+  "version": "2026-10-28",
+  "scanned_at": "2026-10-28T23:44:06Z",
+  "archived_at": "2026-10-28T23:44:52Z",
+  "previous": "monitor/archive/2026-10-11_2026-10-28",
+  "site_interfaces": 69,
+  "reproduced": 67,
+  "checks": {
+    "sweep-code": {
+      "pass": 30
+    },
+    "code": {
+      "pass": 53
+    },
+    "code-scan": {
+      "pass": 15
+    },
+    "sweep-bundle": {
+      "pass": 62,
+      "error": 7
+    },
+    "bundle": {
+      "fail": 6,
+      "pass": 58
+    },
+    "sweep-terms": {
+      "skip": 4,
+      "pass": 54,
+      "error": 1
+    },
+    "page": {
+      "pass": 49
+    },
+    "api": {
+      "pass": 10
+    },
+    "sweep-live": {
+      "pass": 69
+    },
+    "live": {
+      "pass": 10
+    }
+  },
+  "check_runs": {
+    "code": "2026-10-28T22:38:21Z",
+    "bundle": "2026-10-28T22:52:41Z",
+    "docs": "2026-10-28T22:57:04Z",
+    "api": "2026-10-28T22:57:18Z",
+    "live": "2026-10-28T23:07:56Z"
+  },
+  "catalog_changes": 0,
+  "needs_review": 11,
+  "sweep_findings": 27,
+  "not_checked": 12,
+  "git_head_before": "348e704",
+  "made_by": "monitor/scripts/update.py",
+  "files": {
+    "CHANGES.md": "what changed since the previous version and what needs review",
+    "table.csv": "the table rebuilt from the checks (rating, restrictions, countries, statuses, comparison with the site)",
+    "report.md": "the same per interface with every check, its source and the matched text",
+    "results/": "raw results of check_code / check_bundle / check_docs / check_api / check_live",
+    "evidence/": "what each check saw: code lines, page text, API responses, proxy vantage",
+    "checks/": "the check definitions used for this version (copy of research/checks/)",
+    "catalog/": "monitor/data/interfaces.json and observations.json, monitor/out/report.md and interfaces.csv of this version"
+  }
+}

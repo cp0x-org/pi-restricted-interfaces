@@ -1,7 +1,7 @@
 check: notional/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://notional.finance/terms
-checked_at: 2026-10-11T21:18:04Z
+checked_at: 2026-10-28T22:55:11Z
 fetched: https://notional.finance
 sha256: 74411c84327a948ad544395c26d0f2e9b5eff6e75f46c463344ca2cc99611573
 http_status: 200

@@ -1,0 +1,47 @@
+{
+  "id": "balancer",
+  "name": "Balancer",
+  "targets": {
+    "app": "https://balancer.fi",
+    "repo": {
+      "repo": "balancer/frontend-monorepo",
+      "ref": "046d0100891916cda92a0aef5a0f2d059bd309d0"
+    },
+    "terms": "https://balancer.fi/terms-of-use",
+    "endpoints": []
+  },
+  "checks": [
+    {
+      "id": "screening-hypernative",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "Wallet reputation is checked with the Hypernative screener (OFAC + up to 3 hops)",
+      "source": {
+        "repo": "balancer/frontend-monorepo",
+        "ref": "046d0100891916cda92a0aef5a0f2d059bd309d0",
+        "path": "packages/lib/shared/services/hypernative/checkAddressReputation.ts"
+      },
+      "expect": [
+        "https://api\\.hypernative\\.xyz/screener/reputation",
+        "OFAC"
+      ]
+    },
+    {
+      "id": "screening-block",
+      "type": "code",
+      "claim": "screening",
+      "status": "yes",
+      "about": "UserAccountProvider calls /api/wallet-check and sets isBlocked for an unauthorized address",
+      "source": {
+        "repo": "balancer/frontend-monorepo",
+        "ref": "046d0100891916cda92a0aef5a0f2d059bd309d0",
+        "path": "packages/lib/modules/web3/UserAccountProvider.tsx"
+      },
+      "expect": [
+        "/api/wallet-check/",
+        "setIsBlocked\\(!isAuthorized\\)"
+      ]
+    }
+  ]
+}

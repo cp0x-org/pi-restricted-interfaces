@@ -1,7 +1,7 @@
 check: sky/geo-ip-status
 about: The app asks the Sky compliance API /ip/status and blocks the whole app for a restricted region
 source: https://github.com/jetstreamgg/tarmac/blob/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/ui/context/ConnectedContext.tsx#L454
-checked_at: 2026-10-11T21:04:43Z
+checked_at: 2026-10-28T22:38:14Z
 fetched: https://raw.githubusercontent.com/jetstreamgg/tarmac/db72c8c98bccbff26e0ecc3ab83db7f6b10209cb/apps/webapp/src/modules/ui/context/ConnectedContext.tsx
 sha256: 010ad1b397d9f7bcf2748bbb14fc665e72e3baca77c0cae80a6d49a2aad4f2ea
 --------------------------------------------------------------------------------

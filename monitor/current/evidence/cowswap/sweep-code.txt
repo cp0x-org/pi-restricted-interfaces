@@ -1,7 +1,7 @@
 check: cowswap/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/cowprotocol/cowswap/tree/7f861f9d12a0f9b0db33f9b0b1679ec309025120
-checked_at: 2026-10-11T21:03:06Z
+checked_at: 2026-10-28T22:35:33Z
 fetched: https://codeload.github.com/cowprotocol/cowswap/tar.gz/7f861f9d12a0f9b0db33f9b0b1679ec309025120
 sha256: 9304cf0c856a85929cff9ebf17c4adec6104fbcbe42bbe22aee65a33cea6e6ec
 --------------------------------------------------------------------------------

@@ -1,0 +1,9 @@
+check: lido-stvaults/screening-fail-open
+about: The app validates every connected address with the API (falls back to a local address file, else lets it through)
+source: https://github.com/lidofinance/staking-vault-widget/blob/f258fb091d3ca01e5baf98128d01818e407a7877/providers/address-validation-provider.tsx#L111
+checked_at: 2026-10-28T22:38:09Z
+fetched: https://raw.githubusercontent.com/lidofinance/staking-vault-widget/f258fb091d3ca01e5baf98128d01818e407a7877/providers/address-validation-provider.tsx
+sha256: bc656deffb2f83d470e9766ccc539c6b349e4989baee0f1daa94d22650039ef0
+--------------------------------------------------------------------------------
+L111:  * 2. API enabled + success → return API.isValid
+L113:  * 4. API enabled + error + NO file → return true (DEFAULT)

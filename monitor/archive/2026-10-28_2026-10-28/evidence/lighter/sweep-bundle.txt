@@ -1,0 +1,282 @@
+check: lighter/sweep-bundle
+about: Production HTML and JavaScript of the official app, searched for access-restriction signals
+source: https://app.lighter.xyz
+checked_at: 2026-10-28T22:44:37Z
+http_status: 200
+via: direct
+--------------------------------------------------------------------------------
+page: https://app.lighter.xyz (HTTP 200)
+scripts (248):
+  https://app.lighter.xyz/assets/index-CmKyNeb_.js  sha256=c8383437325c57f07c18b6a1932d46c9a365f5739c53595d9a00237f56aa6295
+  https://app.lighter.xyz/assets/rolldown-runtime-CzEKHURX.js  sha256=6d009fdc6e00cb8e181d9616721c4aa2b4fdd5e18d08e3e48e81e6028455326c
+  https://app.lighter.xyz/assets/vendor-react-bcTRN7GD.js  sha256=a1839d2daeaf1e52403c54d4ce1c6cc083caab592f9c8852548d80fff3d4b88e
+  https://app.lighter.xyz/assets/vendor-utils-BWusxTSe.js  sha256=8184af942aee116bd8fb313686b84e40f543a416e85a7cb93c46587ccd5370aa
+  https://app.lighter.xyz/assets/vendor-ui-web3-DNF9eLTJ.js  sha256=3b491001192b175851713db4baae4b3bd611d619ccf2b800b1c60ba7a895179c
+  https://app.lighter.xyz/assets/vendor-zklighter-pyJ_oc1Z.js  sha256=0fce22fd921a5668a8e271a6948da1a22a76bf11c9126b495483b081afc9b337
+  https://app.lighter.xyz/assets/dist-DfyFQ-m7.js  sha256=381bbcbd4e16355278c77098bfd7bc034f0644cb3fa0483a64454b1c529a089c
+  https://app.lighter.xyz/assets/cn-S4CpISd_.js  sha256=451a9137d3e1fdb18e22df1cca5c6b56510adc4fd431d7737d0cf98c3d3a5cd5
+  https://app.lighter.xyz/assets/Tooltip-DyQYGTwr.js  sha256=e48a4ea7f75b6b2f81c9acf7ecf96ac55d83df0983a0c2a79a934b092753b506
+  https://app.lighter.xyz/assets/TextButton-5hR3iBB5.js  sha256=6915cae112be82abe66bf00794d1a8f1a38e75f62897abf92ffff5af2c988ac7
+  https://app.lighter.xyz/assets/util-DbN1ZCqm.js  sha256=c6c966d571672b87929846b5eabb5f104308717e4abe5ab5a73ea093309e33a3
+  https://app.lighter.xyz/assets/Analytics-Bu6wJh-Y.js  sha256=fa467fb7229598687e8bec8fa874a845f773fab739b0a64ea0865fcf7a241a95
+  https://app.lighter.xyz/assets/useLayoutPreferencesState-DKpxRphk.js  sha256=cf47163693b78ed2f29edb8eb15b0fb0420c6c8098a214415e0484d95ea4bca5
+  https://app.lighter.xyz/assets/runtime-CpJBqY6D.js  sha256=30657236c93c2bec07a5bb2ac1e47fa4d06696e747bcea5cc231302fff7a9491
+  https://app.lighter.xyz/assets/useAccountExistence-C9_hCh6f.js  sha256=ff1f5bdb15ad107dd1090408a4a024f257b985523048564eba4bf3d912c12ff1
+  https://app.lighter.xyz/assets/Input-Caz0kWev.js  sha256=0d4dbbdd0f3287795d5d9f25616e188228a55c53929e9b63985d50262b3baec1
+  https://app.lighter.xyz/assets/Badge-DSDKI4lc.js  sha256=1b08b5be3ec1a8a9454e70ac7321d7aee99227999ecedc02b782aa188ee3a33c
+  https://app.lighter.xyz/assets/useSignMessage-C8PWGS1B.js  sha256=0a06bcd6a4da739bf66c94eb1ecf05c822cc085de60b31e9eeb65c5bcf6b1fa9
+  https://app.lighter.xyz/assets/Button-DS2odYhl.js  sha256=133697300533c1e2317f13a28679638f68cf74beef2935806fdf09f83e2fab4e
+  https://app.lighter.xyz/assets/useAgentChat-CzyBglbf.js  sha256=00f5f76eae0b4fa6094c31ef226afaf430c25e081bfba6f48bee639a2110658b
+  https://app.lighter.xyz/assets/Modal-Bgnur8qQ.js  sha256=ac8d98f121e1f5bfedd575d16ad22bd6955a845e0e285a5abf91417dccaa2a1d
+  https://app.lighter.xyz/assets/ToggleSwitch-Dn5n-Uqy.js  sha256=a7d973fde16510a508f1b066cea39dc190ec742dd9e81609b36be859a4da4b4e
+  https://app.lighter.xyz/assets/InlineBanner-BmHVu_SV.js  sha256=17343ad878a2e6b5d83c4939d22045c2b9907eacdd24ede3e364607b7fc5b9b9
+  https://app.lighter.xyz/assets/PillTabs-CuXapqF-.js  sha256=4049a9a064c0ddf6c18f987fccea4481810579e8a4132cc3200e3f4677d1b366
+  https://app.lighter.xyz/assets/ToasterContainer-DdGuwyVX.js  sha256=ff62c5a098dabaac95aa785f4eed4b4df0e736897fb5626af17f75a4d2f541ac
+  https://app.lighter.xyz/assets/Skeleton-CsmREe-_.js  sha256=db0674335852310258a1477b3c8980b88b0a268747c2ba0ba8b8fa53097dce96
+  https://app.lighter.xyz/assets/Banners-CkYROpg6.js  sha256=4878cebd8b329a87326db66712ba44ef633296aa5d0da4a9487afdf7dbb17a2f
+  https://app.lighter.xyz/assets/useCancelOrder-BDe7dGx3.js  sha256=9b59a9ba74706060d0826af0eb3ac5f7f62bf51fb1945806ac74e518ff607486
+  https://app.lighter.xyz/assets/usePlaceBOOrder-B8kxOp_1.js  sha256=501e25cd9a05f9a77c2e0cc134e5f9c0add869f347d4a37af19f37e934dd9f7a
+  https://app.lighter.xyz/assets/NoMarketsFound-CzMKfxkk.js  sha256=7c828e8bb1b74186410699175fabf5225f64ee7bf5411b6f11575c2c0ad3ff86
+  https://app.lighter.xyz/assets/marketData-CXSLK-qJ.js  sha256=d1022022c29d9fa519f5315d0380edf24a6f85ffd6951991fb2fc1b1f0ec22f2
+  https://app.lighter.xyz/assets/useIntegratorApproval-XcjlsUHv.js  sha256=0422e8dc789165c31c6008d599ea10da745ac837a44b7dc38f76c4429239af01
+  https://app.lighter.xyz/assets/chartColors-DUfxhp66.js  sha256=f371e84056b182339fa7c7fe08ce28c8cf56e566245be64f75991eace8a4cd89
+  https://app.lighter.xyz/assets/CoinSelector-CcUtSNLt.js  sha256=c1b44b5e92252ceeeb6aeaaf0ddf4181709532eef7cfa5f26d28478e3e52aeb3
+  https://app.lighter.xyz/assets/QuickOrder-MnVleJkv.js  sha256=90b3a4192c240a019bec623ad7aa261450099f8af5ab65cdf3133227e61d4e98
+  https://app.lighter.xyz/assets/FilterToggle-CtjAm1U-.js  sha256=dae873bfce21ffa04bbf952b28fe5066bd38739ad0c552209adcfb5983554b4a
+  https://app.lighter.xyz/assets/shared-VnCohJ8X.js  sha256=8fd75a2c2c5859c928c422345e825e54bdc41d4931799142abcd70004e00b932
+  https://app.lighter.xyz/assets/CheckboxSelector-qZHWGVZn.js  sha256=bcd90b8cc50f65933b6579817198a8045de5a25bfe1818233a5272da96061add
+  https://app.lighter.xyz/assets/usePriceOracle-B51v0XFl.js  sha256=7b3759f14b1becaf577803e1f3d90bd7bf65916144bfc05e17e196dae49691bc
+  https://app.lighter.xyz/assets/StateGlyph-DZALzuFz.js  sha256=2f8f3e76469ce419a5c752bc35b186c5f5073feba8cf330a36062dc23f823852
+  https://app.lighter.xyz/assets/TableEmptyState-QhuftN1A.js  sha256=4dde2fa325fbcf2663d6b936f88f7ca91d5e3d8fcec36a413530112cbba34ec0
+  https://app.lighter.xyz/assets/NoItemsWithFilter-DdzpCqOt.js  sha256=5471aeee06d8eaf7c2d8a34267a70f9b558fe1c82f833ea87f10c38b85dabc04
+  https://app.lighter.xyz/assets/react-virtualized-auto-sizer-WGS2l_hz.js  sha256=e654768180bf9f43b0fd51a0be68c8c91e9ba5d737291f01e922edbe3a36967c
+  https://app.lighter.xyz/assets/MobileExpandableList-BIINgf9m.js  sha256=33f7325e42658c11075ba69b4e4f883fb609aa26e399d82756b42326bb7bff7f
+  https://app.lighter.xyz/assets/NoOrdersText-CHQdZFQi.js  sha256=04028019f88df16f4c0e0a873c9d0a8ef07b1ff5d838d36bd966dcd3d16bb424
+  https://app.lighter.xyz/assets/columnMeta-BXzYhmrW.js  sha256=1b84e1a96302bb0a9ae627a191e5e03ef1b6694b58ec7416c91dc51c78495fbc
+  https://app.lighter.xyz/assets/MobileCollapsibleCards-BgQ-rosi.js  sha256=83758e3f89f80e57bef07328962e9a03fc0564680f4ef70f9f675dc56a125722
+  https://app.lighter.xyz/assets/TradeHistoryTable-DrdtELG4.js  sha256=bf17649894a17cb57892247d9c2ccc26f2a56a1af1d132ff1c61dfe6c9abbc65
+  https://app.lighter.xyz/assets/MarketBadge-Bcv3h_y0.js  sha256=63caeca9384bcc0b66f4bcb6551bbf3f718e41bd57a9accbeda4d4dbd4d0c6f7
+  https://app.lighter.xyz/assets/MarketCell-DYeJdQZf.js  sha256=2b8b48af5724e45faace467146beb73360ff9468d075c05e9d2a307677bd27a4
+  https://app.lighter.xyz/assets/i18next-COfrmogW.js  sha256=3d4320e681965d214a39cbc19937dbec2cbba3d6655ef4055c1aa5c7c75597fc
+  https://app.lighter.xyz/assets/useLinkAccess-BKVQy8jt.js  sha256=2655131d807a5800fc31b73e7b7fb103fe782004cabdce63659158bf5455a7c2
+  https://app.lighter.xyz/assets/ErrorState-BVPYhSw6.js  sha256=c6a5645b4641474b66bd24f379da8ba9f2185ecdcace223fcda220747a868034
+  https://app.lighter.xyz/assets/PageContainer-CFsH3G6d.js  sha256=a331a0c283295632484ad2b9ac4326c83b24d3b0f6dd22d41234133379e3ee39
+  https://app.lighter.xyz/assets/PercentageSlider-mFywwZHz.js  sha256=475ddb16af49ea6a9288578063687c3f001e8d047b53b90bf3f9b88c1de8deac
+  https://app.lighter.xyz/assets/useSafeSorting-DgxR9Ugu.js  sha256=3057f1d515396e5fa101564cb59485bd1f4b29eb655dd5c91609745ffde56513
+  https://app.lighter.xyz/assets/dateRange-DaRdyDE3.js  sha256=e3d669457346a191aa619f7a510bd733a45052bfa15312b6d4d76a713d794640
+  https://app.lighter.xyz/assets/exportRange-C9hYDDRv.js  sha256=c04a2c3af1e892b9e29fb2297fdecad0960c2d04b56d6b811905d21e02afa559
+  https://app.lighter.xyz/assets/SavedFeeCardModal-DWSTtXft.js  sha256=e233b16aeb1703e2f91fb356f6775634d1a7b2ea3fa1108f232071c3093cb92d
+  https://app.lighter.xyz/assets/fundingCountdown-BBVUlgdG.js  sha256=179ef0fcfda7bf00797a8684848f329e9fecf6989bd6be3614d80935860fd6c6
+  https://app.lighter.xyz/assets/RequestMarket-DdsFJnQj.js  sha256=efd76b6d13d87ab0ac76af66e2b2c3088aba5dc42d5b334744dfbcb46145f6d0
+  https://app.lighter.xyz/assets/types-D6_uf5M6.js  sha256=59a3421c423decffcf81945b4a2e244c1e2274c011e9eca54d260ebb4701402e
+  https://app.lighter.xyz/assets/stockFormatting-D5etHwmh.js  sha256=0e522afbf298fada9122230a4dba0d129687822fa5788b693c0ebb13db000a72
+  https://app.lighter.xyz/assets/useTokenCategories-ClNKWeaB.js  sha256=0df56c4646153bda7685ab6b3559a86c8a785140ca44da27ec776f6a811264f1
+  https://app.lighter.xyz/assets/TierChip-39vrYpyj.js  sha256=af43a3ce7f799bc8fb2e896296bb59a99e61beea0fd82e9c20a1413828c1e3a7
+  https://app.lighter.xyz/assets/ChartSkeleton-CFuwKwSJ.js  sha256=2c8358071a002b5fafeed8371479d79190bde822c12167256aa5296ec331cf51
+  https://app.lighter.xyz/assets/subscribeCandleForeground-ljMGJ_OT.js  sha256=b679a19009f5acf902d2fef32873deeda3065bde0bc42b1867210076c986ad04
+  https://app.lighter.xyz/assets/useBOOneTapOrder-DMAMsWwg.js  sha256=ee3e23058cf7549062ae97db26e9dac609f313d87d9b0ed1991795bd60f89c7f
+  https://app.lighter.xyz/assets/ChartEmptyState-zHd0K4gl.js  sha256=49d0db693dab1f61bfc3199ef487f1a7ac06ee6a1898dccc6172c01ee16170b9
+  https://app.lighter.xyz/assets/ActionButtonBlocker-Bti2aQIl.js  sha256=a7370928f3b9141e9da8e1501ebb567af777717d85c8b014746739940101a5d6
+  https://app.lighter.xyz/assets/Textarea-D8WfYKfE.js  sha256=c07015deacf810c8675ea621b196c13349e1b5f10273b169a68cf306087a89c1
+  https://app.lighter.xyz/assets/PageSelector-CzAunXi7.js  sha256=fad7d1c79a1a24ffb3c0a70544e92e5e10462ad6ec9debf7086205af851267b3
+  https://app.lighter.xyz/assets/MobileList-ClmQ3zbh.js  sha256=4614295b27330e8d015cf47ca78ef62d365c58349d652ab4ecb1c6fecb16f019
+  https://app.lighter.xyz/assets/boardWindows-CZmHg1Lo.js  sha256=bf625fae4b3fccf1c3710db108a7e9fb34e0ca2eccfc965a5bc664c59e22e08b
+  https://app.lighter.xyz/assets/formatSigned-C6ZNRvgq.js  sha256=06bf914a7d8e9b6b5a1780d1a26bbebd43fbb8db1a3cec9e45b4ed4ebc070cd9
+  https://app.lighter.xyz/assets/useGuildQueries-B46aUQDV.js  sha256=c046251b11f591299b27b3afb44bd4b6da685b24cecb98f9260256dfd2228510
+  https://app.lighter.xyz/assets/useSignMessagesMutation-DZdxpu3T.js  sha256=0d97f689b7b2e3ddff4730cd4201a3117fb988d97615e7ac41cf6157d69e48e2
+  https://app.lighter.xyz/assets/KLineChart-DYsOWuC_.js  sha256=0f8af6b932cf0c0eeca9aacd3e29a70caa93246d4bd2cf2fa2cbd0d8ab6c606f
+  https://app.lighter.xyz/assets/DepthChart-CisWjpNo.js  sha256=4f291f1b58f7a7c901003de3666688f8941eb9618b2bc108148a6f418bde73bd
+  https://app.lighter.xyz/assets/useEchart-CeHCyFmz.js  sha256=e670f58e4f4da7d3eb9bb4d0866e61a68ee634820a8d1fc37e04c2d60728b04d
+  https://app.lighter.xyz/assets/vendor-charts-B_JwnALG.js  sha256=5497c3df4566bd8d007dd3e6ff9535b02f5b34bba0c9abd85f16cfd25a7fad23
+  https://app.lighter.xyz/assets/FundingRateChart-BebnGSXx.js  sha256=856c3b0089f6bdfb45448ea9d1941baebfb8e0c369096e050240afe67cd4b9c8
+  https://app.lighter.xyz/assets/utils-f0A1WjU4.js  sha256=0b1add4e9108f41d482b20c6936bd7d231f0188ea927d350f733152b0fea21ed
+  https://app.lighter.xyz/assets/StockFinancials-Donf-kMR.js  sha256=1afdb9a6f6a19f3ff37b88cbe8eba9640e5478bad6a93c11891ab8bd26f856ea
+  https://app.lighter.xyz/assets/esm-DEmGnT5R.js  sha256=df2e0bcb16b15e7824947e7b0981d67348f189459845db749d5d4b5a5388c81b
+  https://app.lighter.xyz/assets/StockDividends-DBsGQCes.js  sha256=20f8e6f5a6359114538b23a0a1e5bff8bb30fc56e229d085579cce0f6dbcce89
+  https://app.lighter.xyz/assets/AiChatDock--wz52gDe.js  sha256=9120a91c418a90fdfafd458e90c72b33e9b667b96e4dfa86e46df49c83d6dd4e
+  https://app.lighter.xyz/assets/constants-BfC_QU-r.js  sha256=27fc809069f91940108833a20761bcaf0c89768990d6a6c5cc505b9c58ef9599
+  https://app.lighter.xyz/assets/lib-CUa0saA3.js  sha256=0c33ef2756e0ade914ff8bb5ac14f59a69317b0620dc97b0ba2b7d3bf99d2aac
+  https://app.lighter.xyz/assets/maintenance-B-zqU2bL.js  sha256=7d14dac497a1cc070ef3484e5382df6cdf3ab3ceae62f1bac2d8b117aa37fb6a
+  https://app.lighter.xyz/assets/portfolio-bW2-d1qi.js  sha256=1ce55f6dc194175b9a0549f949db7a9d68ef7ff1cd8a59aa25b8bb38c9ea9200
+  https://app.lighter.xyz/assets/PageShell-BJDhIdoU.js  sha256=6df4dbd4084595ba57c37b8df09e40116a708d24be1a429a8e1cd13e328d8641
+  https://app.lighter.xyz/assets/history-hJ5DN-IY.js  sha256=b74b83b2bea13697a3c1714626a368c16fc61e04d404c67ea93b7a4ae54d6d64
+  https://app.lighter.xyz/assets/PnlCalendarWrapper-0_ZaL9d1.js  sha256=32ad3408f2b135f884d134c176b542a0212280861eedb06948f1fa40471f01a1
+  https://app.lighter.xyz/assets/Line-ZfhYddfD.js  sha256=4c8bab54ed4c6fa6c77073346c2d608512db11ec1f4ef601ed3ca0c12d6bb9cd
+  https://app.lighter.xyz/assets/sub-accounts-4urI8jet.js  sha256=8ef9199fba4ce30109da983b0115dca3fa00c994ad82cca478956c3fd7d1e0c1
+  https://app.lighter.xyz/assets/PageGate-BYrTRgUe.js  sha256=a0dd9fa9452e795f39ae8d8dc48b12c924b59174ec7016c26ce2c0424b8767b8
+  https://app.lighter.xyz/assets/public-pools-CKLv8n0n.js  sha256=fa58f952556f67b7d46e58ddb9562085ed6ebcf7db953eecc41a331e0fc0f1dd
+  https://app.lighter.xyz/assets/useMaxVisibleRows-lvfPloRj.js  sha256=12108cdfb061126f7aae317b735c2abbf1c218a3eede86477e726fa6fd2515c1
+  https://app.lighter.xyz/assets/public-pool-DSmlFL5d.js  sha256=4ac6e9c48f88e992e41123f1ae9abdb25265641560cd1b97af94475e0b95d960
+  https://app.lighter.xyz/assets/PoolPageSkeleton-CS2L1eSI.js  sha256=8d773ed08cfd8b7af5df3a35a811896764d4fb103e1772c1a634d5fa043779f8
+  https://app.lighter.xyz/assets/staking-pool-DtsWYJWv.js  sha256=537de2c23ef97ce54a5c4ba67b8e0c9ebf90999dc8f4a7a74f5cd14932c74478
+  https://app.lighter.xyz/assets/exchange-stats-BCz4Ba4l.js  sha256=486faf411946fcd4f8439446a03605bd9e5cf90990882258bfaf5420e6d79013
+  https://app.lighter.xyz/assets/explorer-sdk-s2iN8yMu.js  sha256=0cd2942883fd50a0c98662ce57574df2902e31dd641bd35bb7971de3dbd6b409
+  https://app.lighter.xyz/assets/util-qr7G69dw.js  sha256=ffc4665e6d8f66c1ce1b13c53a6bb181725553546cabf36fcd0d8cdcdaf91978
+  https://app.lighter.xyz/assets/constants-DzwJvvJf.js  sha256=a6fa8e63190b0979b179e6dd53328d7c37fad21db6691914d9c30bb4fa363c22
+  https://app.lighter.xyz/assets/changelog-ZSENty7L.js  sha256=e26d595eca6aa5901ea0326c8f27ffa84e8c4b197aabee52ba420cd2e8597505
+  https://app.lighter.xyz/assets/ai--OYrVhx4.js  sha256=6fa44f37d26501bbe79736efa284afe93837bbecc2e2c10fb2303990ab27f4bb
+  https://app.lighter.xyz/assets/useCopiedFlag-CrIwMLLX.js  sha256=fe8407f53af1319d6f53a971f8d485157938144050de37661d6590dd81009970
+  https://app.lighter.xyz/assets/design-system-CMd3nLVQ.js  sha256=e7c25d4cdeaa7cbe1e6f47294b72150b50094c8a64082013f89e598faf13b8a2
+  https://app.lighter.xyz/assets/bo-CZsj5jrd.js  sha256=5d25b6bac27a4bc40f3e6aeecc0018dc93f89494593a337a35309435561c7276
+  https://app.lighter.xyz/assets/PriceToBeatMoveLabel-eZwK9l7V.js  sha256=49958ce408e35ade207018beedb8b8cd6882c8eaad7b63c1e9c4649b208c1a80
+  https://app.lighter.xyz/assets/detail-BtHxDhdE.js  sha256=febc1432dc858a9bdf098528914ebf24b151a6f9e11931c28b2b12a63012b353
+  https://app.lighter.xyz/assets/competitions-BZJ6mtud.js  sha256=07457ea214747d1cf0d3b73fb63bcccd2fd6d0ab51308dc81f8c3ba2b304620d
+  https://app.lighter.xyz/assets/CompetitionLeaderboard-BK4SFoky.js  sha256=576eec6495eab9870fc944ebce58d859676d20528036d74c4cbc61d01c1eed18
+  https://app.lighter.xyz/assets/address-CtxVUvdn.js  sha256=ad29d9d155df9c0750818cae74d62531a869877779af2ace819be5e0bcfd6941
+  https://app.lighter.xyz/assets/shared-Bi3yrnuR.js  sha256=23d73482d78e6607d1b5af735cbef558fb05cf49757adf00e4aaf9627d373caa
+  https://app.lighter.xyz/assets/profile-COn_S66a.js  sha256=df2c8f8b45ccf4a36330bb12991331b3240eba3d9c057dc06f0c8e8307ef25e9
+  https://app.lighter.xyz/assets/usePnlLeaderboardQueries-GrIlw6Gr.js  sha256=a8faf671b7ca59333cffcce9a3ed14cfbb4c3ab04d8bd483608d266dab2cb73f
+  https://app.lighter.xyz/assets/PointsLeaderboard-gA6Qua2y.js  sha256=eee8a37b1ae5b437ad25f741c82c7772255be9b56ec612a805a81a885e030579
+  https://app.lighter.xyz/assets/PnlLeaderboard-BIWZCCD0.js  sha256=db92829584dfb1c0c302a43cef7a32577c993b0959b3668d907f9fb2b0fe2fc9
+  https://app.lighter.xyz/assets/blockexplorer-BWg_Xw99.js  sha256=1222f7372f267d1d34047a80f627d8779aa466ba93639b81a36d13b29c987892
+  https://app.lighter.xyz/assets/ExplorerSearch-DiXPHVHR.js  sha256=11ae140545bec9df43ff5f839018942b7e1fbbdee56dadecea2c98abd3a2b0f0
+  https://app.lighter.xyz/assets/StatusProgressCell-BcxwUuE5.js  sha256=907f3e3c2a53f06ea517cc2859e4d18804d0581518a7b25d6b9bf49b865f662c
+  https://app.lighter.xyz/assets/BlocksTable-Bx8emJOy.js  sha256=6b8bb3000a395b8599697a242c0d92418d93663928c6471ce6e837bbaea84ccc
+  https://app.lighter.xyz/assets/types-Cb8OHwoI.js  sha256=c64f893074d9de55bfaa04628c7fe9fe9284fa86384ec16103653f36ab519631
+  https://app.lighter.xyz/assets/MarketsTable-DXmoo_qi.js  sha256=422c81ddf49beeef02bd218b05b254ea7d24f5611b58ed8583732bc564c3692a
+  https://app.lighter.xyz/assets/BatchPage-BNvN8REP.js  sha256=76b916aba8f319dc62701da3d604777547fb8459e52fd06b680dba3ea5fa4158
+  https://app.lighter.xyz/assets/NotFoundExplorer-DSjREXo7.js  sha256=4b1b5d4b353cfcac45ef567c7c258253ab9874983585881a6c8e607764d3c8bb
+  https://app.lighter.xyz/assets/StatusSummary-BGrJ9SJj.js  sha256=3ce11c215d130ff058733a5fe8fd40a631c297c169f9cfdf0975c6f21d6237a2
+  https://app.lighter.xyz/assets/StatusHashLinks-6zCX7yLa.js  sha256=5b9b7941d9f631321f6d640212a56bfeb74968f55ea70f9c4a2d7eef2359b652
+  https://app.lighter.xyz/assets/BlockPage-DsZNFRMY.js  sha256=418347ee6172ac9474b4d75e8c385f0e48aad47c6e97d5be07586b2a811cac23
+  https://app.lighter.xyz/assets/StatCard-UK9nRzf4.js  sha256=7c4f5366f8618e8a46e9f8411cfa34bf77c4daad212245a12236f138c9ff2d81
+  https://app.lighter.xyz/assets/BlockLogsTable-RYMBXYVY.js  sha256=41f4095d11354275299898f300c758834d3c2c4a74a7dfb77adf488fe88850e4
+  https://app.lighter.xyz/assets/MarketPage-tMUS8l5N.js  sha256=84b786c7e88c253d286e45f8975ec9ab801eded0464168507af916bcb5244f49
+  https://app.lighter.xyz/assets/AccountPage-CpUMg2oo.js  sha256=dd78d3427c67b2f88cf255ceb96940efa5a853def84b0e1011b6f0d6e16b6ea3
+  https://app.lighter.xyz/assets/LogPage-Dy5Mzz7A.js  sha256=4fe0d567c430e7e090f6d36dd392715cb8268bdd7795ef56e5f80cca43a90362
+  https://app.lighter.xyz/assets/markets-C2ZTVxOk.js  sha256=d24d6ac2205c53050c468b656539fba860947b0616ae23a69f5f25e80ebaadad
+  https://app.lighter.xyz/assets/TokenCategories-DKmAmSfd.js  sha256=cfe96078ed466333984ed1d1b338c3e9c7ea22ce1ce1eee7ce242f4284802eb3
+  https://app.lighter.xyz/assets/funding-markets-risk-params-B843ZoCS.js  sha256=7a5cdaa5b7ba785a3ba8cc92921e631cbc030c499333bdff7e9f95387b147815
+  https://app.lighter.xyz/assets/quant-Bxxg0o_a.js  sha256=c8ca8f9e0fe1af358ea8ea377266048b23f1cee2adc57e3a79f4bca3f3d27556
+  https://app.lighter.xyz/assets/referrals-DKa8IwIf.js  sha256=7bf0fd38fd370879f826c7a01c130af74d769c6d33f1e97fa55e843b3f44596a
+  https://app.lighter.xyz/assets/apikeys-Bh9y4me3.js  sha256=1a583493f725c087e0bfc31b2cf7644d0f24ebbeb4224b46fb3aefc0ecc9b867
+  https://app.lighter.xyz/assets/read-only-tokens-CNve_2ej.js  sha256=7a293766049f316db143812de384438f8e7b504e69e8676688baa5a31f79ce2f
+  https://app.lighter.xyz/assets/export-CY2bQZmO.js  sha256=c3b61b7d00cd251707e8d1e1595c75904ff900895a094aaebf3c4dd5bfd8c52d
+  https://app.lighter.xyz/assets/gateway-CCdgmzsH.js  sha256=c06cfc59999d4b723aa5982682399175bdd7d222157514e041d94f3237408685
+  https://app.lighter.xyz/assets/announcements-BUVsQTXm.js  sha256=c253e598fa9ea3633fde98f15123093e903fcf4d057c71929e14ad5fadf8643a
+  https://app.lighter.xyz/assets/mobile-app-wallet-connect-DsTDqrwf.js  sha256=a86c4957aa8b1f0476655413f50e3e6d2fb03d28dbb1efb417b8585ca6af8382
+  https://app.lighter.xyz/assets/core-Blj2fqOS.js  sha256=4a96f176bcb72a54676dab15f8714a439b551be3bc81d3e923d7c32e9bb842fc
+  https://app.lighter.xyz/assets/ApiController-kPmi7DAp.js  sha256=e31a592a6a7f0aee0c4e9f1fe017ad76a0b54d17bc28977b866fab7bcb368cac
+  https://app.lighter.xyz/assets/ConstantsUtil-C1wXj80p.js  sha256=be814238267221e6caa066654b2ae25561ebcef77c2f646a79af06fad5b57910
+  https://app.lighter.xyz/assets/AlertController-CMGgMwml.js  sha256=4e3baccd171627c9ef260447083be2529454760c06b3c9679cbd0b0705c8dd5a
+  https://app.lighter.xyz/assets/ConnectorUtil-CfGaJ6HJ.js  sha256=be775bbf3b6a2cfddfd3185a902fe6c21cb2d77696cac6f8017504736e438e42
+  https://app.lighter.xyz/assets/dist-CooU3XWI.js  sha256=e66fe5959b90390e486ead5d3e982c22883805bad2dd47a4205a018c6935b383
+  https://app.lighter.xyz/assets/dist-BWLgxJzG.js  sha256=ae09d8f7bf71d3b46fbbf989b6d1361784b5605808bdc96384a4644b732f023d
+  https://app.lighter.xyz/assets/dist-CfqWN_bx.js  sha256=e31a249d886b3d7dfdb276ebe491eed00cadb5d876c308b731d19985f379d707
+  https://app.lighter.xyz/assets/dist-C64muqAI.js  sha256=bef7bb34d2c7c8906feeaf84da65c072a1ae1453d088eb21a54980d42c6ddd6d
+  https://app.lighter.xyz/assets/browser-q1cINUlX.js  sha256=d2c955aa553067c06f92c2fc61cf815f87c6a9d777baba7a4efdb043daba7387
+  https://app.lighter.xyz/assets/loader-CCgm7rIU.js  sha256=594dc264b0e21167b0d643d95103acbd578a0330756fa2c184ecbf9e810e7681
+  https://app.lighter.xyz/assets/index-de0119fe-CiuETDQP.js  sha256=230a3fc4aeb27ee67d87300bb57d81fbecfe18e705ea7df3613764e50bceefd3
+  https://app.lighter.xyz/assets/connect-evm-D59CUET5.js  sha256=b55ea36ec979500ee6384de643d7ded21fff51d556167218f1c8379768d875df
+  https://app.lighter.xyz/assets/webcrypto-4e8XncxB.js  sha256=4c1ee0e49296fdd8d9ebeec9b1df82166875d33da24de5fdb165987de611f461
+  https://app.lighter.xyz/assets/utils-Cess13Q8.js  sha256=1b4869eead4430bddd77b61855986c7d5ab8ebc8ae65aece7e545bdd427afbdc
+  https://app.lighter.xyz/assets/nodecrypto-jOhcyTdR.js  sha256=39718ba18a8b116e164b89fcdecb351b3e68fa6c62ccae7d5042d5d0e07664a8
+  https://app.lighter.xyz/assets/secp256k1-BUkkirEu.js  sha256=62258cb3fde0e6f07945b53ee44baa1d073d2c6aed618a4b77c11793c659b175
+  https://app.lighter.xyz/assets/ccip-B2jfeJuv.js  sha256=407328d9cbe31dd92501b7bc7a9eb74a12f8f3c19020131d4c70100cc230f2b0
+  https://app.lighter.xyz/assets/resolveError-CUdA5AdZ.js  sha256=1d64ef112b820ec4c99e2323e8a25dd707aa89fdf93095e106b5f587dab89609
+  https://app.lighter.xyz/assets/dist-lXnmV9Tt.js  sha256=76f9e4ed290cf4ed94b111bf44113490797466c7e709813b26879a7e5b1b2e42
+  https://app.lighter.xyz/assets/dist-BwLvq0s1.js  sha256=6cccf66041008b4575aac7c32be5cf64df1a702037812f4028b211ec7f512100
+  https://app.lighter.xyz/assets/backpack-HHGWJLWB-BuJDjN9e.js  sha256=316e543a58048b2d89acb8ed7e50333921ae7dc85a2341c5c1555e5d620da0a2
+  https://app.lighter.xyz/assets/bitgetWallet-CBQAJOIK-BjWrwAzY.js  sha256=9ecd2593ea8f92693987cb6dbc53bc8e0b68f9347d735ded21273d1c00f404a1
+  https://app.lighter.xyz/assets/coinbaseWallet-ICYEIYQD-CzK7LK_K.js  sha256=0e558d8f095f76fc66ad9b8824de616813daeaf2d5915bc5d65ab8b5d84821fe
+  https://app.lighter.xyz/assets/metaMaskWallet-RMHEKBDR-VOF-2Jee.js  sha256=4a61d8c12c2958bcd4b0ddda870f8a063220db59d92b920d2799cda54b76ddd5
+  https://app.lighter.xyz/assets/jupiter-ICN4DJIL-C4JG0OP0.js  sha256=b448fbf513eed1e821e3ab4d3e12dafff58674de13a6d55ddd862376da82cb98
+  https://app.lighter.xyz/assets/okxWallet-GJMKZIND-EQRQ60no.js  sha256=43d0489c23430ccb316ca5db219ab52bdd09e05d851cb82966a9582c01c952d1
+  https://app.lighter.xyz/assets/phantomWallet-LZDJJ5XR-B_qPTSAC.js  sha256=4a13298462bb3af4853e8c96706d199d8f757c6719f41407611e3de59a4641ae
+  https://app.lighter.xyz/assets/solflare-M46C72WA-Qp3e5OTd.js  sha256=9c08ac32744a7bfc895941d2e9427ff66e4b6f535b38a503ca1edcdaf9526cc9
+  https://app.lighter.xyz/assets/trustWallet-2N5TZJGC-C4-i9fBb.js  sha256=b73e39ea5a587138078eac0fd051d94cabed3e361c09d3115ed900a96bd83993
+  https://app.lighter.xyz/assets/rainbowWallet-MFJQCICF-D9MG3hlS.js  sha256=fb2dfb19842e30b439b63fbdacabc074bb393bbc3dcd9ca2dfff980810fe6dc2
+  https://app.lighter.xyz/assets/walletConnectWallet-E4OQJ4DC-DoA3n_qc.js  sha256=e4de5497ac26338a34a2415b8e51c78af8f71ed2e6da101c21285dceddf08a68
+  https://app.lighter.xyz/assets/shadow-css-Cid_aiIy.js  sha256=4feea97a3f29136e786364778c11e746d02764aae5817a1080a079478d1282f1
+  https://app.lighter.xyz/assets/modular-BORV5hSS.js  sha256=13904fbaba534a028c866e30fc0d405851326efba25f568f54f57505ec4c6523
+  https://app.lighter.xyz/assets/thumbmark.esm-I3YLlfeM.js  sha256=fbc3a7c76f64b6f4f2302763ffe1e642b755a37634aebf5736687cf739be343b
+  https://app.lighter.xyz/assets/connect-multichain-BIRrwUJU.js  sha256=c1e5fed435a8c4dbb6f7b934353a14ae2b91247c66854ffa9699a6848b00d112
+  https://app.lighter.xyz/assets/purejs-DYwxS9RN.js  sha256=0d2a7e2ecafce92eb0c340a8243e83a9c671f98e0625fd4b19f4fc71a4388e4a
+  https://app.lighter.xyz/assets/window-D5ltslr3.js  sha256=5fe66a82782e2b4205b8440e34cf3410218c0878a895bf55713e67d994f74795
+  https://app.lighter.xyz/assets/core-Doi_q9mL.js  sha256=ad93d448da4185e7514512316eebead48f8f20f328b236a15a8802728f55fb8f
+  https://app.lighter.xyz/assets/event-DkrM5Ljg.js  sha256=0f915b462e6ac118d6636c86218200f9300ca07c0d86199fc91e51ec05f30478
+  https://app.lighter.xyz/assets/dist-js-uc2umKvx.js  sha256=a0fe26b016fb3e87770d60d0759c1ca55bdcb5e9d9f261ea2312010a168f3b92
+  https://app.lighter.xyz/assets/strategy.worker-DTZcyXia.js  sha256=403fd0112fc08227629dc5c8c9f7d1819a6e6acf392d264044c56a24d0d38200
+  https://app.lighter.xyz/assets/features-CxMb-g6l.js  sha256=30ebd44da7eb78feca21b1baa1991707e322b36d554ff1fe0b4029f0d2c3db31
+  https://app.lighter.xyz/assets/basic-D6jxp0Pn.js  sha256=adfc3c9763b2af4edced839ca0d683de1faf51b2928844b78df763532abf9254
+  https://app.lighter.xyz/assets/wui-ux-by-reown-B3DiJcGC.js  sha256=3b8f56107a9bf925b21f9c8b1a16e3d73d56d752b02fd2c05d6f21bb8d04eda0
+  https://app.lighter.xyz/assets/w3m-modal-CBg-NVQb.js  sha256=8f2f4088c81522fd3724753842315945e1fa273ca156e1bce540039382f721cd
+  https://app.lighter.xyz/assets/_esm-DmxGuALo.js  sha256=706b8a7806a2e920286fbd1664ebe3a5f98880ce016d5b9cbf1572bea19e086f
+  https://app.lighter.xyz/assets/mm-install-modal_2.entry-DZat4nXz.js  sha256=2e8fb4bbb131e530dd85101e9c8dcd901a89775784b1b5eb4992fab51fb892c4
+  https://app.lighter.xyz/assets/PhArrowCircleDown-BDtx1BY9.js  sha256=253e2ea7512ff7d084d89dac525f4476e516ac4c52b057bdfbf40c688a41ed76
+  https://app.lighter.xyz/assets/property-BKskGbtX.js  sha256=0d57d1b9344e75a1fab308ca5d4c9f6fa727f5f5c9566584dffd3c3649703bbc
+  https://app.lighter.xyz/assets/PhArrowClockwise-Cx7vpEta.js  sha256=cfb287d1275cd9ac59ad18f6a5874855605d1e4c1d330a533f1617dd6acad5b1
+  https://app.lighter.xyz/assets/PhArrowDown-BaAp_S0x.js  sha256=777633ee7c1364b600608eb6939bec5b03e2cc41c616a34554fc80a447558fdd
+  https://app.lighter.xyz/assets/PhArrowLeft-DsmP75fD.js  sha256=c36595292ee782830e69e853329dea1f6473e1ab7555dd930e54247263e17c55
+  https://app.lighter.xyz/assets/PhArrowRight-iX_7DWJD.js  sha256=0df510cab13e8cf872f0b0a82750bc49d8f999e83e327b09cddf9bc5b4992bb5
+  https://app.lighter.xyz/assets/PhArrowSquareOut-PuheF0yy.js  sha256=75d6e0608da2d91ba3ba58adcfab40410ab60d9d29212a9944e7258289be0bdd
+  https://app.lighter.xyz/assets/PhArrowsDownUp-Cl1sDY-L.js  sha256=fdda50cce217652e6dfaedffb5df4950f5a38de79fe5337efb40e8cda912704c
+  https://app.lighter.xyz/assets/PhArrowsLeftRight-BFJT8HCA.js  sha256=c6812c062cd5dc285f4833d669b6d8384db321e792a4a1a8b30cfae602b0aad5
+  https://app.lighter.xyz/assets/PhArrowUp-BB38GXjs.js  sha256=eaeca3055b79ff13d3537f0d434a4e88ea4635a9cc1e8bf146d33172397bbbd6
+  https://app.lighter.xyz/assets/PhArrowUpRight-DUkXV-k0.js  sha256=6440b40c3974dc911d62955d7a326740027c8b1cf30738efcccc7c57ec61d968
+  https://app.lighter.xyz/assets/PhArrowsClockwise-DFu9ikZP.js  sha256=f02fe91f960e6abb279443ec9c375cb081c8a050b4dd8ef12b4ecd823932bdcc
+  https://app.lighter.xyz/assets/PhBank-CPSfXAPf.js  sha256=f99d9c2c9c2bb054dd9bd1ebb75da84a21b26a5bc0a9d89df29f40e21c826aff
+  https://app.lighter.xyz/assets/PhBrowser-CLyjnLTS.js  sha256=503a58d3e8a4279daa4c5284098cd2e0a3ea3394656519778bbd049f1bdbfe7c
+  https://app.lighter.xyz/assets/PhCaretDown-CIcVgIOh.js  sha256=6b2be9301020e01e3a4bbed945b8f003ba7c2b853a0c77bae77af9fa72ddb12a
+  https://app.lighter.xyz/assets/PhCaretLeft-CWJpUCbX.js  sha256=bae832c607441b26cf49e7167d59acfdd0cce1bcbea0d19a66bd73a3d03835d6
+  https://app.lighter.xyz/assets/PhCaretRight-BLh7aZO6.js  sha256=81f46287de2cb3ce3dd673d9d79d01f09865e288d3004b27e9d98c9e97100301
+  https://app.lighter.xyz/assets/PhCaretUp-BVbkSnrZ.js  sha256=8df4d36d95bb91434fa0ad49fd7c2d95c3a1effb0fb7034c705b4ce0eb595608
+  https://app.lighter.xyz/assets/PhCheck-NEkD5HUr.js  sha256=eee82a0fa324d1ac0d22085da02d0d356bd2349da3f46c1623b41f1892efb23d
+  https://app.lighter.xyz/assets/PhCircleHalf-Z_g4PqzB.js  sha256=67bb02e8d7b9b421d3af50999ec83e75a658b83abe2fdd342517641b1ae3e37a
+  https://app.lighter.xyz/assets/PhClock-HpUGaMcx.js  sha256=3aa53d9c0a68789407d30fe90028c44030aa391ca15a8f1cf62de3ab4b9d868c
+  https://app.lighter.xyz/assets/PhCompass-CPDNr2Xx.js  sha256=c8e34bb102972a1f4398aebdf522d6b08ec7e28a998c76fdfbab54d354a49ab2
+  https://app.lighter.xyz/assets/PhCopy-Dqrb-GFE.js  sha256=5b5579951301f42d7f880d83878684783c7b5cd9728e381f339097da97c47200
+  https://app.lighter.xyz/assets/PhCreditCard-C4ppZOH_.js  sha256=d787ad1c1875fbf406666b43f36ef0508e554afc1a4b0e41999cdabec4ebcc16
+  https://app.lighter.xyz/assets/PhCurrencyDollar-Biexhd1E.js  sha256=95789c0b46a5b82afc96eb645c6a96d0d36968d9773ce55f6a0e834d1450a2e8
+  https://app.lighter.xyz/assets/PhDesktop-B20BZ1GY.js  sha256=142c2e934b0c0ad5366abb281f89247502f3cfe68ec412657fa77c047cef283a
+  https://app.lighter.xyz/assets/PhDeviceMobile-DkyQFFK0.js  sha256=67b6233b1abe04e2bd96331a7eea910f4bd3ede31ff18e1b86778229a5d5f7eb
+  https://app.lighter.xyz/assets/PhDotsThree-DSfOPJn4.js  sha256=e57a290c932c1b1c26557e8b17494855c217b5a7757f9513af1f9ba50b381c40
+  https://app.lighter.xyz/assets/PhVault-BO5v8Wj_.js  sha256=8a223ce4f7336e07030a5fc150c08cfdf01e41d3d9ed364e61cbbcc52fba0580
+  https://app.lighter.xyz/assets/PhEnvelope-DTrGZjtE.js  sha256=ff3a49baf4b262efe74d1be63edcb691fc046dd777a1094c098413664950d2b3
+  https://app.lighter.xyz/assets/PhFunnelSimple-4UIINxz9.js  sha256=7acb008723c259a9957d8291e4c98b03868e5c036ee55e2dfb06becad9040b12
+  https://app.lighter.xyz/assets/PhGlobe-EMMpV3Jj.js  sha256=5e31bad8e31c27ac924acf7b16d63a72729377f3ef6982e176a8eb13f1e95ef2
+  https://app.lighter.xyz/assets/PhIdentificationCard-Dnup85Vp.js  sha256=a1cb9f8b66b522fc957a57862e275b4c0e866d5e3fdc10be86cf102b12084ad9
+  https://app.lighter.xyz/assets/PhImage-D1Y2f7_Q.js  sha256=2aec6ee6e747698a4023f7d8e270900ade733ffc07e45742a5d2a4e70d4e0908
+  https://app.lighter.xyz/assets/PhInfo-BSKcUASD.js  sha256=abf1788c3360f4060fffd59d9704aa80a6cc7890c33cf8300770727f896ad688
+  https://app.lighter.xyz/assets/PhLightbulb-Rh9YTvS_.js  sha256=29971367aa4b5ac855d2d4f8cc6137a2d3e82087e9f438046bbb78a5ea025d6a
+  https://app.lighter.xyz/assets/PhMagnifyingGlass-DwK2xy4z.js  sha256=07ea93d75de58be6e71de6babe680f1a32da2ffcec77064dc30511a541d19ed8
+  https://app.lighter.xyz/assets/PhPaperPlaneRight-xhBlliQ9.js  sha256=a22eb921d404e7137ded36f9ed3f67fad4bdd54512fb0700012cfa854cb5ba73
+  https://app.lighter.xyz/assets/PhPlus-CSCDS2Y5.js  sha256=936959abf92e742f815faa43588115b112918b942aa5913020e60b13fe7658c6
+  https://app.lighter.xyz/assets/PhPower-A9THBpug.js  sha256=2f6c824a15c8744647820bb89d2c3cf9d90cace64b93e2cf099b7259342e28bf
+  https://app.lighter.xyz/assets/PhPuzzlePiece-Q84_ikeo.js  sha256=4a936a6245173e602b624f0c378195e99e0a70d420e650f2b8c833fa7596145d
+  https://app.lighter.xyz/assets/PhQrCode-DFaNVpjn.js  sha256=ef268da6811e37de089511459923cc381aa19ec2e9efea655b83b1cec21d52f4
+  https://app.lighter.xyz/assets/PhQuestion-DA5PUXZu.js  sha256=0932a74f62e93e7da2d93e21a01ff004fff28c65d0bc6c59fdd670322d4d8f14
+  https://app.lighter.xyz/assets/PhQuestionMark-C1mNz9wW.js  sha256=823a3774c03f918cf9eaeda1a9ec5d47d5264ff78d7179be7a83cab795672e5c
+  https://app.lighter.xyz/assets/PhSealCheck-BHd0IggY.js  sha256=2fe6f80e274fc787672122cf36f99e073d4e9ae7be31a4831284a2e239d9f84a
+  https://app.lighter.xyz/assets/PhSignOut-BvH7zRIy.js  sha256=81343aa70eacb54406ed6ba5b7a938957ef5b92620b45ace2061a70d4f09179f
+  https://app.lighter.xyz/assets/PhSpinner-DaMEpGCN.js  sha256=4280d4d7b1c9cd9c2090cf3f059ecc77f3bc8b2731c145a9e5cf9cc8704a0942
+  https://app.lighter.xyz/assets/PhTrash-Axw1fQcQ.js  sha256=1eba30407dee3682c3a871b820a66b3da39f62069bf6ed597a9f164ba10b2998
+  https://app.lighter.xyz/assets/PhUser-JCFlKkvu.js  sha256=7a545a2b0729c968ecd904b82c55febe921276346d27f70364c49763b3f3f645
+  https://app.lighter.xyz/assets/PhWarning-CoCBjDSU.js  sha256=cab4f20e6f3153eb0b55854c3f936a76330b9f99aa9c333201db0d2e97a3eb93
+  https://app.lighter.xyz/assets/PhWarningCircle-CIo779gT.js  sha256=d98b0206e546a4c0b7f8fd9e17bc9324f312e7d5832e72545059084279f6778e
+  https://app.lighter.xyz/assets/PhX-DUpM5z5f.js  sha256=01fe7852c21ec1252fa175185a9d533fd4c5fb6d7aea57552172f6ff6995aed0
+
+signals:
+  [strong] geo: geo-IP service — 1 file(s)
+      /assets/vendor-ui-web3-DNF9eLTJ.js: unction R2e(){let e=F2e(j2e);try{let t=await fetch(`https://ipapi.co/json`,{signal:e.signal});if(!t.ok)throw Error(t.statusText);let n=await t.json(
+  [strong] geo: geo endpoint — 1 file(s)
+      /assets/vendor-ui-web3-DNF9eLTJ.js: PS:`vipps`};async function K$e({...e}){return Vb({uri:`${Bb}/api/geo/ip-address`,...e})}async function q$e({...e}){return Vb({uri:`${Bb}/api/meld/fi
+  [strong] geo: block text — 1 file(s)
+      /assets/vendor-ui-web3-DNF9eLTJ.js: unavailable. Change network or try again later.`,forbidden:`Access restricted. Complete verification to continue.`,insufficientFunds:`Insufficient funds. Red
+  [weak] geo: geo-block words — 5 file(s)
+      /assets/vendor-ui-web3-DNF9eLTJ.js: 6B5d6224B9234Cd26f98274904":`Polymarket Withdrawal Block`}},blockedcountries:{value:[`AF`,`BY`,`MM`,`CF`,`CU`,`CD`,`IR`,`LB`,`LY`,`NI`,`KP`,`UA`,`SO`,`SS
+      /assets/useAccountExistence-C9_hCh6f.js: urn`creating`;case`KeysDontMatch`:return`authenticate`;case`GeoBlocked`:return null;case`Exists`:return null}};export{Rn as $,Lr as A,Xt as At,Mr as
+      /assets/Banners-CkYROpg6.js: or styles`,`Updated deposit and withdrawal availability for restricted regions`],version:`v6.0.34`},{date:`01/09/2026`,content:[`Updated PnL cards`,`Updated
+  [weak] screening: risk-lookup link — 1 file(s)
+      /assets/vendor-ui-web3-DNF9eLTJ.js: `,e.Shopify=`shopify`,e.Zksync=`zksync`,e.Kraken=`kraken`,e.Blockaid=`blockaid`,e.Passkey=`passkey`,e.Okta=`okta`,e.Sendgrid=`sendgrid`,e.Resend=`re
+  [strong] screening: screening call — 1 file(s)
+      /assets/vendor-ui-web3-DNF9eLTJ.js: on Ain(e){return jin(e)}function jin(e,t){return e==null?e:{addressScreening:K(e,`addressScreening`)?min(e.addressScreening):void 0,jwtDuration:K(e,`jwtDura
+  [weak] screening: screening words — 1 file(s)
+      /assets/vendor-ui-web3-DNF9eLTJ.js: Addresses:K(e,`blockedAddresses`)?e.blockedAddresses:void 0,sanctionCheckId:K(e,`sanctionCheckId`)?e.sanctionCheckId:void 0}}var Oan;(function(e){e.SignI
+  [weak] vpn: VPN words — 2 file(s)
+      /assets/vendor-ui-web3-DNF9eLTJ.js: in":t,"in-berlin":t,"in-brb":t,"in-butter":t,"in-dsl":t,"in-vpn":t,iservschule:t,"mein-iserv":t,schulplattform:t,schulserver:t,"test-iserv":t,k
+      /assets/i18next-COfrmogW.js: emporarily rate limited — this can happen if you’re using a VPN or shared network. Try disabling your VPN or switching networks and try again.`
+  [weak] kyc: KYC words — 3 file(s)
+      /assets/vendor-ui-web3-DNF9eLTJ.js: [`SETTLED`,`EXPIRED`,`CANCELLED`,`FAILED`,`REFUNDED`],b0e=[`KYC/CAPTURE`,`KYC/INPUT_REQUIRED`,`KYC/NO_ACTION_REQUIRED:IN_REVIEW`,`KYC/NO_ACTION
+      /assets/dist-DfyFQ-m7.js: y-Latn":`ky-Latn-TR`,"ky-TR":`ky-Latn-TR`,kya:`kya-Latn-TZ`,kyb:`kyb-Latn-PH`,kyc:`kyc-Latn-PG`,kyd:`kyd-Latn-ID`,kye:`kye-Latn-GH`,kyf:`kyf-La
+      /assets/strategy.worker-DTZcyXia.js: y-Latn":`ky-Latn-TR`,"ky-TR":`ky-Latn-TR`,kya:`kya-Latn-TZ`,kyb:`kyb-Latn-PH`,kyc:`kyc-Latn-PG`,kyd:`kyd-Latn-ID`,kye:`kye-Latn-GH`,kyf:`kyf-La

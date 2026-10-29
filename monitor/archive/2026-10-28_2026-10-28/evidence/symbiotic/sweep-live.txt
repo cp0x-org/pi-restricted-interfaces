@@ -1,0 +1,845 @@
+check: symbiotic/sweep-live
+about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
+source: https://app.symbiotic.fi
+checked_at: 2026-10-28T23:07:44Z
+--------------------------------------------------------------------------------
+{
+ "direct": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "US": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "CA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "MX": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "CO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "CN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "KR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "TW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "KZ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": null,
+   "final_url": "https://app.symbiotic.fi",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.symbiotic.fi/deposit",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Symbiotic Vaults | Collateral, Curators and Fees",
+   "scripts": [],
+   "bytes": 132415,
+   "redirects": [
+    "https://app.symbiotic.fi/deposit"
+   ],
+   "server": "nginx"
+  }
+ }
+}

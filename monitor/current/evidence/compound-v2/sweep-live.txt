@@ -1,7 +1,7 @@
 check: compound-v2/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://v2-app.compound.xyz
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
@@ -46,7 +46,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "US-NY": {
+ "CA": {
   "app": {
    "status": 200,
    "final_url": "https://v2-app.compound.xyz",
@@ -67,7 +67,49 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "CA-ON": {
+ "MX": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CO": {
   "app": {
    "status": 200,
    "final_url": "https://v2-app.compound.xyz",
@@ -172,7 +214,91 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
  "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SE": {
   "app": {
    "status": 200,
    "final_url": "https://v2-app.compound.xyz",
@@ -256,6 +382,174 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
  "SG": {
   "app": {
    "status": 200,
@@ -298,7 +592,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "JP": {
+ "CN": {
   "app": {
    "status": 200,
    "final_url": "https://v2-app.compound.xyz",
@@ -319,7 +613,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "BR": {
+ "KR": {
   "app": {
    "status": 200,
    "final_url": "https://v2-app.compound.xyz",
@@ -340,7 +634,28 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "AR": {
+ "TW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "AU": {
   "app": {
    "status": 200,
    "final_url": "https://v2-app.compound.xyz",
@@ -382,7 +697,28 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "cloudflare"
   }
  },
- "VN": {
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "KE": {
   "app": {
    "status": 200,
    "final_url": "https://v2-app.compound.xyz",
@@ -425,6 +761,333 @@ checked_at: 2026-10-11T21:24:23Z
   }
  },
  "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 403,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 5847,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 5846,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 403,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 5847,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 403,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "challenge",
+   "why": "HTTP 403 anti-bot challenge",
+   "title": "Attention Required! | Cloudflare",
+   "scripts": [],
+   "bytes": 5848,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": null,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "error",
+   "why": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 403,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "blocked",
+   "why": "HTTP 403 with geo wording",
+   "title": null,
+   "scripts": [],
+   "bytes": 51,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 403,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "blocked",
+   "why": "HTTP 403 with geo wording",
+   "title": null,
+   "scripts": [],
+   "bytes": 51,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 403,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "blocked",
+   "why": "HTTP 403 with geo wording",
+   "title": null,
+   "scripts": [],
+   "bytes": 51,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 403,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "blocked",
+   "why": "HTTP 403 with geo wording",
+   "title": null,
+   "scripts": [],
+   "bytes": 51,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://v2-app.compound.xyz",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "Compound",
+   "scripts": [
+    "./static/js/dapp.*.chunk.js",
+    "./static/js/polyfills.*.chunk.js",
+    "./static/js/runtime~dapp.*.js",
+    "./static/js/runtime~polyfills.*.js",
+    "./static/js/vendors~dapp.*.chunk.js",
+    "./static/js/vendors~dapp~polyfills.*.chunk.js",
+    "./static/js/vendors~polyfills.*.chunk.js"
+   ],
+   "bytes": 3575,
+   "redirects": [],
+   "server": "cloudflare"
+  }
+ },
+ "ML": {
   "app": {
    "status": 200,
    "final_url": "https://v2-app.compound.xyz",

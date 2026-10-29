@@ -1,25 +1,22 @@
 check: ens-legacy/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://legacy.ens.domains
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
   "app": {
    "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
+   "final_url": "https://app.ens.domains/",
    "state": "ok",
    "why": "page served (client-side gates not evaluated)",
    "title": "ENS App",
    "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
+    "/assets/index-*.js"
    ],
-   "bytes": 1777,
+   "bytes": 102634,
    "redirects": [
-    "https://ens-app.pages.dev/"
+    "https://app.ens.domains/"
    ],
    "server": "cloudflare"
   }
@@ -27,294 +24,50 @@ checked_at: 2026-10-11T21:24:23Z
  "US": {
   "app": {
    "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
+   "final_url": "https://app.ens.domains/",
    "state": "ok",
    "why": "page served (client-side gates not evaluated)",
    "title": "ENS App",
    "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
+    "/assets/index-*.js"
    ],
-   "bytes": 1777,
+   "bytes": 102634,
    "redirects": [
-    "https://ens-app.pages.dev/"
+    "https://app.ens.domains/"
    ],
    "server": "cloudflare"
   }
  },
- "US-NY": {
+ "CA": {
   "app": {
    "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
+   "final_url": "https://app.ens.domains/",
    "state": "ok",
    "why": "page served (client-side gates not evaluated)",
    "title": "ENS App",
    "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
+    "/assets/index-*.js"
    ],
-   "bytes": 1777,
+   "bytes": 102634,
    "redirects": [
-    "https://ens-app.pages.dev/"
+    "https://app.ens.domains/"
    ],
    "server": "cloudflare"
   }
  },
- "CA-ON": {
+ "MX": {
   "app": {
    "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
+   "final_url": "https://app.ens.domains/",
    "state": "ok",
    "why": "page served (client-side gates not evaluated)",
    "title": "ENS App",
    "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
+    "/assets/index-*.js"
    ],
-   "bytes": 1777,
+   "bytes": 102634,
    "redirects": [
-    "https://ens-app.pages.dev/"
-   ],
-   "server": "cloudflare"
-  }
- },
- "GB": {
-  "app": {
-   "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "ENS App",
-   "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
-   ],
-   "bytes": 1777,
-   "redirects": [
-    "https://ens-app.pages.dev/"
-   ],
-   "server": "cloudflare"
-  }
- },
- "DE": {
-  "app": {
-   "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "ENS App",
-   "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
-   ],
-   "bytes": 1777,
-   "redirects": [
-    "https://ens-app.pages.dev/"
-   ],
-   "server": "cloudflare"
-  }
- },
- "FR": {
-  "app": {
-   "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "ENS App",
-   "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
-   ],
-   "bytes": 1777,
-   "redirects": [
-    "https://ens-app.pages.dev/"
-   ],
-   "server": "cloudflare"
-  }
- },
- "NL": {
-  "app": {
-   "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "ENS App",
-   "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
-   ],
-   "bytes": 1777,
-   "redirects": [
-    "https://ens-app.pages.dev/"
-   ],
-   "server": "cloudflare"
-  }
- },
- "PL": {
-  "app": {
-   "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "ENS App",
-   "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
-   ],
-   "bytes": 1777,
-   "redirects": [
-    "https://ens-app.pages.dev/"
-   ],
-   "server": "cloudflare"
-  }
- },
- "UA": {
-  "app": {
-   "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "ENS App",
-   "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
-   ],
-   "bytes": 1777,
-   "redirects": [
-    "https://ens-app.pages.dev/"
-   ],
-   "server": "cloudflare"
-  }
- },
- "TR": {
-  "app": {
-   "status": null,
-   "final_url": "https://legacy.ens.domains",
-   "state": "error",
-   "why": "URLError: <urlopen error Tunnel connection failed: 502 Bad Gateway or Proxy Error>",
-   "title": null,
-   "scripts": [],
-   "bytes": 0,
-   "redirects": [
-    "https://ens-app.pages.dev/"
-   ],
-   "server": null
-  }
- },
- "AE": {
-  "app": {
-   "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "ENS App",
-   "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
-   ],
-   "bytes": 1777,
-   "redirects": [
-    "https://ens-app.pages.dev/"
-   ],
-   "server": "cloudflare"
-  }
- },
- "SG": {
-  "app": {
-   "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "ENS App",
-   "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
-   ],
-   "bytes": 1777,
-   "redirects": [
-    "https://ens-app.pages.dev/"
-   ],
-   "server": "cloudflare"
-  }
- },
- "HK": {
-  "app": {
-   "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "ENS App",
-   "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
-   ],
-   "bytes": 1777,
-   "redirects": [
-    "https://ens-app.pages.dev/"
-   ],
-   "server": "cloudflare"
-  }
- },
- "JP": {
-  "app": {
-   "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "ENS App",
-   "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
-   ],
-   "bytes": 1777,
-   "redirects": [
-    "https://ens-app.pages.dev/"
-   ],
-   "server": "cloudflare"
-  }
- },
- "BR": {
-  "app": {
-   "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
-   "state": "ok",
-   "why": "page served (client-side gates not evaluated)",
-   "title": "ENS App",
-   "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
-   ],
-   "bytes": 1777,
-   "redirects": [
-    "https://ens-app.pages.dev/"
+    "https://app.ens.domains/"
    ],
    "server": "cloudflare"
   }
@@ -322,39 +75,305 @@ checked_at: 2026-10-11T21:24:23Z
  "AR": {
   "app": {
    "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
+   "final_url": "https://app.ens.domains/",
    "state": "ok",
    "why": "page served (client-side gates not evaluated)",
    "title": "ENS App",
    "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
+    "/assets/index-*.js"
    ],
-   "bytes": 1777,
+   "bytes": 102634,
    "redirects": [
-    "https://ens-app.pages.dev/"
+    "https://app.ens.domains/"
    ],
    "server": "cloudflare"
   }
  },
- "NG": {
+ "CO": {
   "app": {
    "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
+   "final_url": "https://app.ens.domains/",
    "state": "ok",
    "why": "page served (client-side gates not evaluated)",
    "title": "ENS App",
    "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
+    "/assets/index-*.js"
    ],
-   "bytes": 1777,
+   "bytes": 102634,
    "redirects": [
-    "https://ens-app.pages.dev/"
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "GB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "DE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "FR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "NL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "SE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "UA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "TR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "AE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
    ],
    "server": "cloudflare"
   }
@@ -362,19 +381,220 @@ checked_at: 2026-10-11T21:24:23Z
  "VN": {
   "app": {
    "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
+   "final_url": "https://app.ens.domains/",
    "state": "ok",
    "why": "page served (client-side gates not evaluated)",
    "title": "ENS App",
    "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
+    "/assets/index-*.js"
    ],
-   "bytes": 1777,
+   "bytes": 102634,
    "redirects": [
-    "https://ens-app.pages.dev/"
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "SG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "HK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "CN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "KR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "TW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "AU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "NG": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "KE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
    ],
    "server": "cloudflare"
   }
@@ -382,19 +602,16 @@ checked_at: 2026-10-11T21:24:23Z
  "KZ": {
   "app": {
    "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
+   "final_url": "https://app.ens.domains/",
    "state": "ok",
    "why": "page served (client-side gates not evaluated)",
    "title": "ENS App",
    "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
+    "/assets/index-*.js"
    ],
-   "bytes": 1777,
+   "bytes": 102634,
    "redirects": [
-    "https://ens-app.pages.dev/"
+    "https://app.ens.domains/"
    ],
    "server": "cloudflare"
   }
@@ -402,19 +619,339 @@ checked_at: 2026-10-11T21:24:23Z
  "GE": {
   "app": {
    "status": 200,
-   "final_url": "https://ens-app.pages.dev/",
+   "final_url": "https://app.ens.domains/",
    "state": "ok",
    "why": "page served (client-side gates not evaluated)",
    "title": "ENS App",
    "scripts": [
-    "/6.13.2/bundle.min.js",
-    "/js/script.outbound-links.js",
-    "/optimize.js",
-    "/static/js/main.*-8b9d9.js"
+    "/assets/index-*.js"
    ],
-   "bytes": 1777,
+   "bytes": 102634,
    "redirects": [
-    "https://ens-app.pages.dev/"
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
+   ],
+   "server": "cloudflare"
+  }
+ },
+ "ML": {
+  "app": {
+   "status": 200,
+   "final_url": "https://app.ens.domains/",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "ENS App",
+   "scripts": [
+    "/assets/index-*.js"
+   ],
+   "bytes": 102634,
+   "redirects": [
+    "https://app.ens.domains/"
    ],
    "server": "cloudflare"
   }

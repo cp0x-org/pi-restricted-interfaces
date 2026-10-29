@@ -1,0 +1,13 @@
+check: snapshot/no-screening-code
+about: No wallet-screening call or sanctions list in the Snapshot UI (apps/ui)
+source: https://github.com/snapshot-labs/sx-monorepo/tree/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef/apps/ui
+checked_at: 2026-10-11T21:04:43Z
+fetched: https://codeload.github.com/snapshot-labs/sx-monorepo/tar.gz/9790f736a6cff474c710fb7bb7b51f0bbf8d6fef
+sha256: 7861337dd1e6fcdd38681d6e532dcc0a25bf3ae1940975b62a9d8c19a7640e7f
+--------------------------------------------------------------------------------
+files scanned: 411
+patterns that must be absent:
+  trmlabs|chainalysis|0x40c57923924b5c5c5455c48d93317139addac8fb|isSanctioned|hypernative|sanctions?[ _-]?(screen|check)|(?<![A-Za-z])screen[-_]?address|address[ _-]?screening|/sanctioned/|wallet-check(?![\w-])|preflight-compliance|/address/status\b|compliance/screen|/v\d/check/
+
+hits:
+  none

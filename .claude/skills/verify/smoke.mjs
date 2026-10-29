@@ -3,7 +3,8 @@ import { execSync } from 'node:child_process';
 
 const BASE = process.env.SMOKE_BASE || 'http://localhost:3000';
 import { readFileSync } from 'node:fs';
-const DATA = JSON.parse(readFileSync(process.env.SMOKE_DATA || new URL('../../../src/data/interfaces.json', import.meta.url))).interfaces;
+// The dashboard rows (src/data/monitor.json); the interface pages load src/data/interfaces/<id>.json lazily.
+const DATA = JSON.parse(readFileSync(process.env.SMOKE_DATA || new URL('../../../src/data/monitor.json', import.meta.url))).interfaces;
 const N = DATA.length, N_D = DATA.filter((i) => i.level === 'D').length, N_OPEN = DATA.filter((i) => i.frontend_repo).length;
 const PER_PAGE = 100; // MonitorPage default rows per page
 const PAGES = Math.ceil(N / PER_PAGE);
@@ -121,9 +122,12 @@ check('row click -> /monitor/aave', page.url().endsWith('/monitor/aave'));
 const h1 = await page.locator('h1', { hasText: /^Aave V3$/ }).waitFor({ timeout: 10000 }).then(() => 'Aave V3').catch(async () => page.locator('h1').first().textContent());
 check('h1 Aave V3', h1 === 'Aave V3', h1);
 check('Monitor tab still selected on detail', (await page.locator('.MuiTab-root.Mui-selected').textContent()) === 'Monitor');
+// Evidence sits in the interface's own file, loaded after the header renders: wait for the first link.
+await page.locator('a[href^="https://github.com/aave/interface/blob/HEAD/"]').first().waitFor({ timeout: 10000 }).catch(() => {});
 const aaveLinks = await page.locator('a[href^="https://github.com/aave/interface/blob/HEAD/"]').count();
 check('Aave evidence links -> blob/HEAD', aaveLinks >= 3, String(aaveLinks));
 await go('/monitor/uniswap');
+await page.locator('a[href^="https://github.com/Uniswap/interface/blob/main/"]').first().waitFor({ timeout: 10000 }).catch(() => {});
 const uniLinks = await page.locator('a[href^="https://github.com/Uniswap/interface/blob/main/"]').count();
 check('Uniswap evidence links -> blob/main', uniLinks >= 3, String(uniLinks));
 await go('/monitor/morpho');
@@ -192,7 +196,7 @@ check('5 restriction chips', (await page.getByRole('button', { name: STATUS_RE }
 check('UA: rows = sum of restriction chips', (await showing()).total === (await chipSum()), `${(await showing()).total} vs ${await chipSum()}`);
 await go('/monitor?country=US');
 await showAll();
-const expectUS = { Polymarket: /^close-only · (confirmed|observed)$/, Notional: 'blocked · confirmed', Lido: 'feature-limited · confirmed', Ethena: /^blocked · (confirmed|observed)$/ };
+const expectUS = { Polymarket: /^blocked · (confirmed|observed)$/, Notional: 'blocked · confirmed', Lido: 'feature-limited · confirmed', Ethena: /^blocked · (confirmed|observed)$/ };
 for (const [n, exp] of Object.entries(expectUS)) { const got = await statusOf(n); check(`US ${n} = ${exp}`, exp instanceof RegExp ? exp.test(got) : got === exp, got); }
 await go('/monitor?country=CA');
 await showAll();

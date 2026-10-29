@@ -1,7 +1,7 @@
 check: cowswap/sweep-live
 about: The app page (and its geo endpoints) from this machine and from every verified proxy country, compared
 source: https://swap.cow.fi
-checked_at: 2026-10-11T21:24:23Z
+checked_at: 2026-10-28T23:07:44Z
 --------------------------------------------------------------------------------
 {
  "direct": {
@@ -36,7 +36,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Vercel"
   }
  },
- "US-NY": {
+ "CA": {
   "app": {
    "status": 200,
    "final_url": "https://swap.cow.fi",
@@ -52,7 +52,39 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Vercel"
   }
  },
- "CA-ON": {
+ "MX": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "AR": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CO": {
   "app": {
    "status": 200,
    "final_url": "https://swap.cow.fi",
@@ -132,7 +164,71 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Vercel"
   }
  },
+ "ES": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "IT": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
  "PL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SE": {
   "app": {
    "status": 200,
    "final_url": "https://swap.cow.fi",
@@ -196,6 +292,134 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Vercel"
   }
  },
+ "SA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "IL": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "PK": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "BD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "VN": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "TH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "PH": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "MY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
  "SG": {
   "app": {
    "status": 200,
@@ -228,7 +452,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Vercel"
   }
  },
- "JP": {
+ "CN": {
   "app": {
    "status": 200,
    "final_url": "https://swap.cow.fi",
@@ -244,7 +468,7 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Vercel"
   }
  },
- "BR": {
+ "KR": {
   "app": {
    "status": 200,
    "final_url": "https://swap.cow.fi",
@@ -260,7 +484,23 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Vercel"
   }
  },
- "AR": {
+ "TW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "AU": {
   "app": {
    "status": 200,
    "final_url": "https://swap.cow.fi",
@@ -292,7 +532,23 @@ checked_at: 2026-10-11T21:24:23Z
    "server": "Vercel"
   }
  },
- "VN": {
+ "ZA": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "KE": {
   "app": {
    "status": 200,
    "final_url": "https://swap.cow.fi",
@@ -325,6 +581,304 @@ checked_at: 2026-10-11T21:24:23Z
   }
  },
  "GE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "US-NY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CA-ON": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "RU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "BY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CU": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "VE": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "MM": {
+  "app": {
+   "status": null,
+   "final_url": "https://swap.cow.fi",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "AF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "IQ": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "LB": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "LY": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SS": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "ZW": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "NI": {
+  "app": {
+   "status": null,
+   "final_url": "https://swap.cow.fi",
+   "state": "error",
+   "why": "URLError: <urlopen error Tunnel connection failed: 522 Server Error>",
+   "title": null,
+   "scripts": [],
+   "bytes": 0,
+   "redirects": [],
+   "server": null
+  }
+ },
+ "CD": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "CF": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "SO": {
+  "app": {
+   "status": 200,
+   "final_url": "https://swap.cow.fi",
+   "state": "ok",
+   "why": "page served (client-side gates not evaluated)",
+   "title": "CoW Swap | The smartest way to trade cryptocurrencies",
+   "scripts": [
+    "./emergency.js",
+    "./static/index-*.js"
+   ],
+   "bytes": 4167,
+   "redirects": [],
+   "server": "Vercel"
+  }
+ },
+ "ML": {
   "app": {
    "status": 200,
    "final_url": "https://swap.cow.fi",

@@ -1,7 +1,7 @@
 check: ambient/sweep-terms
 about: The Terms (or eligibility page): reachable, countries in restricted-jurisdiction clauses, which kinds of clauses it has
 source: https://ambient.finance/terms
-checked_at: 2026-10-11T21:15:53Z
+checked_at: 2026-10-28T22:52:48Z
 fetched: https://ambient.finance
 sha256: 30e9ff06db77946e6c6af857f7e3b8c13c03f7351b99e1b5076e703b7bed815b
 http_status: 200

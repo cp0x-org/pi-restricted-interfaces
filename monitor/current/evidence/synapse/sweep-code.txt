@@ -1,7 +1,7 @@
 check: synapse/sweep-code
 about: All source files of the open frontend repository, searched for access-restriction signals
 source: https://github.com/synapsecns/sanguine/tree/7c8126288846909d65660c4018b042eb5a498d32
-checked_at: 2026-10-11T21:04:20Z
+checked_at: 2026-10-28T22:37:24Z
 fetched: https://codeload.github.com/synapsecns/sanguine/tar.gz/7c8126288846909d65660c4018b042eb5a498d32
 sha256: c7848d7a5d872c06a3e9cb8181c681c4ceab56a79cb66a4828c300934879dda2
 --------------------------------------------------------------------------------
